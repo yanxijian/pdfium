@@ -3,10 +3,19 @@
 // found in the LICENSE file.
 
 #include "public/fpdf_dict.h"
+
+#include "core/fpdfapi/font/cpdf_font.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
 #include "core/fpdfapi/parser/cpdf_document.h"
 #include "core/fpdfapi/parser/cpdf_string.h"
 #include "fpdfsdk/cpdfsdk_helpers.h"
+<<<<<<< PATCH SET (d5350225f309ca28e891218420b100e852e30b63 Add font dictionary support to the public API)
+#include "public/fpdf_edit.h"
+#include "public/fpdfview.h"
+||||||| BASE      (3bddc0e4a041a934fd9ede2abec81ab4ffa8c3ac Add public APIs to access PDF dictionary objects)
+#include "public/fpdfview.h"
+=======
+>>>>>>> BASE      (9c85f993763c1809d67479ee6afa9fb74309c1cf Add embedder tests for new PDF dictionary public APIs)
 
 extern "C" {
 
@@ -17,6 +26,15 @@ FPDF_GetPageDictionary(FPDF_DOCUMENT doc, int page_index) {
     return nullptr;
   }
   return FPDFDictFromCPDFDict(document->GetPageDictionary(page_index).Get());
+}
+
+FPDF_EXPORT FPDF_DICTIONARY FPDF_CALLCONV
+FPDF_GetFontDictionary(FPDF_FONT font) {
+  CPDF_Font* cpdf_font = CPDFFontFromFPDFFont(font);
+  if (!cpdf_font) {
+    return nullptr;
+  }
+  return FPDFDictFromCPDFDict(cpdf_font->GetFontDict());
 }
 
 FPDF_EXPORT unsigned long FPDF_CALLCONV
