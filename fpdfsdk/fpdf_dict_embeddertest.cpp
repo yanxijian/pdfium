@@ -232,3 +232,46 @@ TEST_F(FPDFDictEmbedderTest, PublicAPIFontDictDeepNavigation) {
   FPDF_DICTIONARY missing_dict = FPDF_DictionaryGetDict(font_dict, "NotAKey");
   EXPECT_EQ(nullptr, missing_dict);
 }
+
+TEST_F(FPDFDictEmbedderTest, GetRootDictionary) {
+  ASSERT_TRUE(OpenDocument("about_blank.pdf"));
+
+  FPDF_DICTIONARY root_dict = FPDF_GetRootDictionary(document());
+  ASSERT_TRUE(root_dict);
+
+  unsigned short buf[64];
+  FPDF_DictionaryGetString(root_dict, "Type", buf, sizeof(buf));
+  EXPECT_EQ(L"Catalog", GetPlatformWString(buf));
+}
+
+TEST_F(FPDFDictEmbedderTest, GetRootDictionaryFromNullDocument) {
+  EXPECT_FALSE(FPDF_GetRootDictionary(nullptr));
+}
+
+TEST_F(FPDFDictEmbedderTest, RootDictionaryNestedLookup) {
+  ASSERT_TRUE(OpenDocument("about_blank.pdf"));
+
+  FPDF_DICTIONARY root_dict = FPDF_GetRootDictionary(document());
+  ASSERT_TRUE(root_dict);
+
+  FPDF_DICTIONARY pages_dict = FPDF_DictionaryGetDict(root_dict, "Pages");
+  ASSERT_TRUE(pages_dict);
+
+  FPDF_RESULT_INT count = FPDF_DictionaryGetInt(pages_dict, "Count");
+  EXPECT_TRUE(count.success);
+  EXPECT_EQ(1, count.value);
+}
+
+TEST_F(FPDFDictEmbedderTest, RootDictionaryNonExistentKeyFails) {
+  ASSERT_TRUE(OpenDocument("about_blank.pdf"));
+
+  FPDF_DICTIONARY root_dict = FPDF_GetRootDictionary(document());
+  ASSERT_TRUE(root_dict);
+
+  unsigned short buf[64];
+  FPDF_DictionaryGetString(root_dict, "NotARealKey", buf, sizeof(buf));
+  EXPECT_EQ(L"", GetPlatformWString(buf));
+
+  FPDF_RESULT_INT fail_res = FPDF_DictionaryGetInt(root_dict, "NotARealKey");
+  EXPECT_FALSE(fail_res.success);
+}

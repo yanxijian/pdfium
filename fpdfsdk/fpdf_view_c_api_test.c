@@ -147,6 +147,7 @@ int CheckPDFiumCApi() {
     CHK(FPDF_DictionaryGetString);
     CHK(FPDF_GetFontDictionary);
     CHK(FPDF_GetPageDictionary);
+    CHK(FPDF_GetRootDictionary);
 
     // fpdf_doc.h
     CHK(FPDFAction_GetDest);

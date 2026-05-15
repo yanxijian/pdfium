@@ -31,6 +31,15 @@ FPDF_GetFontDictionary(FPDF_FONT font) {
   return FPDFDictFromCPDFDict(cpdf_font->GetFontDict());
 }
 
+FPDF_EXPORT FPDF_DICTIONARY FPDF_CALLCONV
+FPDF_GetRootDictionary(FPDF_DOCUMENT doc) {
+  CPDF_Document* document = CPDFDocumentFromFPDFDocument(doc);
+  if (!document) {
+    return nullptr;
+  }
+  return FPDFDictFromCPDFDict(document->GetRoot());
+}
+
 FPDF_EXPORT unsigned long FPDF_CALLCONV
 FPDF_DictionaryGetString(FPDF_DICTIONARY dictionary,
                          FPDF_BYTESTRING key,
