@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2ecabae_0bef25e4",
+        "filename": "core/fxcodec/jbig2/jbig2_image.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-15T21:30:16Z",
+      "side": 1,
+      "message": "nit: add // Returns stride in terms of number of uint32_t pixels.",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 59
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "7d295bd1_61dea34f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/jbig2/jbig2_image.h",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  // Returns stride in terms of number of uint32_t.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "02ff43478c31ec10747e15bbb4948b0669bfc87a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
