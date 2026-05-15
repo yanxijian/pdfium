@@ -34,6 +34,24 @@
       "parentUuid": "da482de1_442ab30f",
       "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f75b7c8f_c345616d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8751
+      },
+      "writtenOn": "2026-05-15T17:31:26Z",
+      "side": 1,
+      "message": "Another thing pikepdf has is NameTree/NumberTree helpers (and I\u0027m guessing pdfium will have something similar internally in its backend) but it might not be a priority in the public API given PDFium usually has higher level APIs e.g. for bookmarks \u0026 page labels.",
+      "parentUuid": "fc180e8e_17a595d8",
+      "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
