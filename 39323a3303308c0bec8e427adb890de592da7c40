@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60b19e49_c73b0b76",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "This should not be the subject line :)\n\nUpdate in the Gerrit web UI, or with `git cl description`, assuming `git cl upload` created this CL.",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4819b642_69951e21",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "This should be last",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70fdd575_e59ed23c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "Please file a bug on crbug.com/pdfium for tracking purposes and use that here.",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f01dc21_0a67dad0",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 694,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "Not needed?",
+      "range": {
+        "startLine": 693,
+        "startChar": 0,
+        "endLine": 694,
+        "endChar": 52
+      },
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d63c90b4_82fa3125",
+        "filename": "fpdfsdk/fpdf_editpath.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "Use Google C++ style naming in new code. e.g. path_point",
+      "range": {
+        "startLine": 222,
+        "startChar": 8,
+        "endLine": 222,
+        "endChar": 18
+      },
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a9ef66d_9c516041",
+        "filename": "fpdfsdk/fpdf_editpath.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T22:36:37Z",
+      "side": 1,
+      "message": "Is this pointer arithmetic safe?",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
