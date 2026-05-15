@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da482de1_442ab30f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-15T13:55:53Z",
+      "side": 1,
+      "message": "Hey guys, added the accessor for the Root dictionary to the public API, unfortunately I haven\u0027t added array/stream reading support yet (correct me if it is in another public API), if it is not present I plan to add it soon. \n\n@geisserml@gmail.com let me know if this helps and feel free to mention any further features you may be interested in seeing added to this public dictionary API. Thanks!",
+      "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
