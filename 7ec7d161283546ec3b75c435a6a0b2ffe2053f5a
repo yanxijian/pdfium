@@ -16,6 +16,24 @@
       "message": "Hey guys, added the accessor for the Root dictionary to the public API, unfortunately I haven\u0027t added array/stream reading support yet (correct me if it is in another public API), if it is not present I plan to add it soon. \n\n@geisserml@gmail.com let me know if this helps and feel free to mention any further features you may be interested in seeing added to this public dictionary API. Thanks!",
       "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc180e8e_17a595d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8751
+      },
+      "writtenOn": "2026-05-15T17:19:16Z",
+      "side": 1,
+      "message": "Thank you very much for doing this work!\n\nYes, array/stream support would be great (I don\u0027t think there\u0027s an API for it yet.)\n\nAlso, low-level write support might be fancy (pikepdf/qpdf provide this capability), but I\u0027m not sure it\u0027s feasible/desired here because that raises questions about validity of the produced PDF.\nThough perhaps you could just declare, if low-level write APIs are used, the caller must ensure the changes form a valid PDF.",
+      "parentUuid": "da482de1_442ab30f",
+      "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
