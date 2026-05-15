@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "863302a7_f34490e6",
+        "filename": "core/fpdfapi/edit/cpdf_pagecontentgenerator_unittest.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-15T18:06:59Z",
+      "side": 1,
+      "message": "Naming style here and below.",
+      "range": {
+        "startLine": 456,
+        "startChar": 29,
+        "endLine": 456,
+        "endChar": 38
+      },
+      "revId": "2a6c6d2fb11c39e4111bd49774e5db29a223b84c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
