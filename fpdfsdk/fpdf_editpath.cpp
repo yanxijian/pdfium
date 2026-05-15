@@ -99,6 +99,57 @@ FPDFPath_GetPathSegment(FPDF_PAGEOBJECT path, int index) {
   return FPDFPathSegmentFromFXPathPoint(&points[index]);
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFPath_GetBezierControlPoints(FPDF_PAGEOBJECT path,
+                                int index,
+                                float* cp1_x,
+                                float* cp1_y,
+                                float* cp2_x,
+                                float* cp2_y) {
+  auto* path_obj = CPDFPathObjectFromFPDFPageObject(path);
+  if (!path_obj || !cp1_x || !cp1_y || !cp2_x || !cp2_y) {
+    return false;
+  }
+
+  pdfium::span<const CFX_Path::Point> points = path_obj->path().GetPoints();
+  if (!fxcrt::IndexInBounds(points, index) || index < 2) {
+    return false;
+  }
+
+  // A cubic Bezier curve is stored as three consecutive Type::kBezier
+  // points: cp1, cp2, endpoint. The caller passes the endpoint's index,
+  // and the two control points are at index - 2 and index - 1.
+  //
+  // Disambiguating "real endpoint" from "first control point of a
+  // back-to-back curve that happens to be preceded by two kBezier
+  // points": count the consecutive Type::kBezier segments strictly
+  // before |index|, stopping at the path's start or the first
+  // non-kBezier predecessor. The current segment is an endpoint
+  // exactly when that count modulo 3 equals 2 (its position within
+  // its curve triplet is the third).
+  if (points[index].type_ != CFX_Path::Point::Type::kBezier) {
+    return false;
+  }
+  int kbezier_before = 0;
+  for (int i = index - 1; i >= 0; --i) {
+    if (points[i].type_ != CFX_Path::Point::Type::kBezier) {
+      break;
+    }
+    ++kbezier_before;
+  }
+  if (kbezier_before % 3 != 2) {
+    return false;
+  }
+
+  const CFX_Path::Point& cp1_point = points[index - 2];
+  const CFX_Path::Point& cp2_point = points[index - 1];
+  *cp1_x = cp1_point.point_.x;
+  *cp1_y = cp1_point.point_.y;
+  *cp2_x = cp2_point.point_.x;
+  *cp2_y = cp2_point.point_.y;
+  return true;
+}
+
 FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDFPath_MoveTo(FPDF_PAGEOBJECT path,
                                                     float x,
                                                     float y) {

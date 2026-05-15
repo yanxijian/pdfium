@@ -1193,6 +1193,46 @@ FPDF_EXPORT int FPDF_CALLCONV FPDFPath_CountSegments(FPDF_PAGEOBJECT path);
 FPDF_EXPORT FPDF_PATHSEGMENT FPDF_CALLCONV
 FPDFPath_GetPathSegment(FPDF_PAGEOBJECT path, int index);
 
+// Experimental API.
+// Get the two cubic Bezier control points for the curve whose endpoint
+// is the segment at |index| in |path|.
+//
+// A cubic Bezier curve is stored as three consecutive
+// FPDF_SEGMENT_BEZIERTO segments: the two control points followed by
+// the curve's endpoint. The caller passes the index of the endpoint
+// segment; this function reads the two preceding segments in |path|
+// and returns their points as the control points. The endpoint
+// position itself is available via FPDFPathSegment_GetPoint() on the
+// segment at |index|.
+//
+// To enumerate every cubic Bezier curve in a path, walk
+// FPDFPath_CountSegments() / FPDFPath_GetPathSegment() while
+// resetting a counter at each non-FPDF_SEGMENT_BEZIERTO segment;
+// every third consecutive FPDF_SEGMENT_BEZIERTO segment is an
+// endpoint, and this function will succeed when called on those
+// indices.
+//
+//   path    - handle to a path.
+//   index   - the index of the curve's endpoint segment in |path|.
+//   cp1_x   - output; the horizontal position of the first control point.
+//   cp1_y   - output; the vertical position of the first control point.
+//   cp2_x   - output; the horizontal position of the second control point.
+//   cp2_y   - output; the vertical position of the second control point.
+//
+// Returns TRUE on success. Returns FALSE without writing the
+// out-params when |path| is not a path, |index| is out of range,
+// any out-param is NULL, or the segments at |index|, |index - 1|,
+// and |index - 2| are not a valid cubic Bezier triplet (i.e. they
+// are not all FPDF_SEGMENT_BEZIERTO with |index| positioned as the
+// third in a run of FPDF_SEGMENT_BEZIERTO points).
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFPath_GetBezierControlPoints(FPDF_PAGEOBJECT path,
+                                int index,
+                                float* cp1_x,
+                                float* cp1_y,
+                                float* cp2_x,
+                                float* cp2_y);
+
 // Get coordinates of |segment|.
 //
 //   segment  - handle to a segment.
