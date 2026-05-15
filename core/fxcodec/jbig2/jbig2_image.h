@@ -85,6 +85,9 @@ class CJBig2_Image {
   pdfium::span<const uint32_t> GetLine32(int32_t y) const;
   pdfium::span<uint32_t> GetLine32(int32_t y);
 
+  // No rounding issues since `stride_` is a multiple of 4.
+  size_t stride32() const { return stride_ / 4; }
+
   bool ComposeToWithRect(CJBig2_Image* pDst,
                          int64_t x,
                          int64_t y,
