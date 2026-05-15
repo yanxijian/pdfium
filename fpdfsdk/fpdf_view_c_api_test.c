@@ -258,6 +258,7 @@ int CheckPDFiumCApi() {
     CHK(FPDFPage_RemoveObject);
     CHK(FPDFPage_SetRotation);
     CHK(FPDFPage_TransformAnnots);
+    CHK(FPDFPathSegment_GetBezierControlPoints);
     CHK(FPDFPathSegment_GetClose);
     CHK(FPDFPathSegment_GetPoint);
     CHK(FPDFPathSegment_GetType);

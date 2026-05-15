@@ -213,6 +213,43 @@ FPDFPathSegment_GetPoint(FPDF_PATHSEGMENT segment, float* x, float* y) {
   return true;
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFPathSegment_GetBezierControlPoints(FPDF_PATHSEGMENT segment,
+                                       float* cp1_x,
+                                       float* cp1_y,
+                                       float* cp2_x,
+                                       float* cp2_y) {
+  auto* pPathPoint = FXPathPointFromFPDFPathSegment(segment);
+  if (!pPathPoint || !cp1_x || !cp1_y || !cp2_x || !cp2_y) {
+    return false;
+  }
+  if (pPathPoint->type_ != CFX_Path::Point::Type::kBezier) {
+    return false;
+  }
+
+  // A cubic Bezier curve is stored as three consecutive
+  // CFX_Path::Point entries of type kBezier: the two control points
+  // followed by the endpoint. FPDF_PATHSEGMENT is a pointer into the
+  // owning path's contiguous std::vector<Point>, so the two
+  // predecessors can be reached via pointer arithmetic when the
+  // segment is the endpoint of the curve. The kBezier type check
+  // below confirms both predecessors are part of the same triplet;
+  // if either is missing (e.g. the segment is itself a control point,
+  // or the path is malformed) the function returns false.
+  const CFX_Path::Point* cp1 = pPathPoint - 2;
+  const CFX_Path::Point* cp2 = pPathPoint - 1;
+  if (cp1->type_ != CFX_Path::Point::Type::kBezier ||
+      cp2->type_ != CFX_Path::Point::Type::kBezier) {
+    return false;
+  }
+
+  *cp1_x = cp1->point_.x;
+  *cp1_y = cp1->point_.y;
+  *cp2_x = cp2->point_.x;
+  *cp2_y = cp2->point_.y;
+  return true;
+}
+
 FPDF_EXPORT int FPDF_CALLCONV
 FPDFPathSegment_GetType(FPDF_PATHSEGMENT segment) {
   auto* pPathPoint = FXPathPointFromFPDFPathSegment(segment);

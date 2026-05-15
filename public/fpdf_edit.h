@@ -1203,6 +1203,49 @@ FPDFPath_GetPathSegment(FPDF_PAGEOBJECT path, int index);
 FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
 FPDFPathSegment_GetPoint(FPDF_PATHSEGMENT segment, float* x, float* y);
 
+// Experimental API.
+// Get the two cubic Bezier control points associated with |segment|.
+//
+// A cubic Bezier curve is stored in the underlying path as three
+// consecutive FPDF_SEGMENT_BEZIERTO points: the two control points
+// followed by the curve's endpoint. This function should be called on
+// the endpoint segment (the third FPDF_SEGMENT_BEZIERTO in the
+// triplet) and returns the coordinates of the two preceding control
+// points. Combined with FPDFPathSegment_GetPoint() on the same
+// segment, the four-point cubic curve can be reconstructed.
+//
+// Identifying which FPDF_SEGMENT_BEZIERTO segments are endpoints is
+// the caller's responsibility. The typical pattern is to walk the
+// path with FPDFPath_CountSegments() + FPDFPath_GetPathSegment() +
+// FPDFPathSegment_GetType(), reset a local counter at each
+// non-FPDF_SEGMENT_BEZIERTO segment, and treat every third consecutive
+// FPDF_SEGMENT_BEZIERTO as an endpoint. Calling this function on a
+// control-point segment may silently return adjacent control points
+// from a back-to-back curve; it can only locally verify that the two
+// predecessors are FPDF_SEGMENT_BEZIERTO, not that the segment marks
+// the end of a triplet boundary.
+//
+//   segment - handle to a segment. Must be of type FPDF_SEGMENT_BEZIERTO
+//             and the curve's endpoint (the third Bezier point in the
+//             triplet).
+//   cp1_x   - output; the horizontal position of the first control point.
+//   cp1_y   - output; the vertical position of the first control point.
+//   cp2_x   - output; the horizontal position of the second control point.
+//   cp2_y   - output; the vertical position of the second control point.
+//
+// Returns TRUE on success. Returns FALSE without writing the
+// out-params when |segment| is NULL, |segment|'s type is not
+// FPDF_SEGMENT_BEZIERTO, any out-param is NULL, or either of the two
+// preceding segments in the underlying path is not also
+// FPDF_SEGMENT_BEZIERTO (e.g. when |segment| is the first control
+// point of a curve that follows a non-Bezier segment).
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFPathSegment_GetBezierControlPoints(FPDF_PATHSEGMENT segment,
+                                       float* cp1_x,
+                                       float* cp1_y,
+                                       float* cp2_x,
+                                       float* cp2_y);
+
 // Get type of |segment|.
 //
 //   segment - handle to a segment.

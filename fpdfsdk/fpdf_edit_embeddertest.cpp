@@ -583,6 +583,117 @@ TEST_F(FPDFEditEmbedderTest, AddPaths) {
   VerifySavedDocumentWithExpectationSuffix("blue_path");
 }
 
+TEST_F(FPDFEditEmbedderTest, GetBezierControlPoints) {
+  // Construct a path with two cubic Bezier curves, then read each
+  // curve back via FPDFPathSegment_GetPoint() and
+  // FPDFPathSegment_GetBezierControlPoints().
+  CreateEmptyDocument();
+  ScopedFPDFPage page(FPDFPage_New(document(), 0, 612, 792));
+  ASSERT_TRUE(page);
+
+  FPDF_PAGEOBJECT path = FPDFPageObj_CreateNewPath(100, 100);
+  ASSERT_TRUE(path);
+  EXPECT_TRUE(FPDFPath_LineTo(path, 150, 150));
+  EXPECT_TRUE(FPDFPath_BezierTo(path, 200, 200, 250, 200, 300, 150));
+  EXPECT_TRUE(FPDFPath_BezierTo(path, 350, 100, 400, 100, 450, 150));
+  EXPECT_TRUE(FPDFPath_Close(path));
+
+  // The underlying path stores one Move + one Line + 3+3 Bezier
+  // points + one closing Line = 9 segments. See CFX_Path::Point.
+  ASSERT_EQ(9, FPDFPath_CountSegments(path));
+
+  // First Bezier curve endpoint is at segment index 4. The two
+  // preceding kBezier points (indices 2 and 3) are its control
+  // points.
+  FPDF_PATHSEGMENT segment = FPDFPath_GetPathSegment(path, 4);
+  ASSERT_TRUE(segment);
+  EXPECT_EQ(FPDF_SEGMENT_BEZIERTO, FPDFPathSegment_GetType(segment));
+  float x;
+  float y;
+  EXPECT_TRUE(FPDFPathSegment_GetPoint(segment, &x, &y));
+  EXPECT_FLOAT_EQ(300.0f, x);
+  EXPECT_FLOAT_EQ(150.0f, y);
+  float cp1_x;
+  float cp1_y;
+  float cp2_x;
+  float cp2_y;
+  EXPECT_TRUE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+  EXPECT_FLOAT_EQ(200.0f, cp1_x);
+  EXPECT_FLOAT_EQ(200.0f, cp1_y);
+  EXPECT_FLOAT_EQ(250.0f, cp2_x);
+  EXPECT_FLOAT_EQ(200.0f, cp2_y);
+
+  // Second Bezier curve endpoint is at segment index 7.
+  segment = FPDFPath_GetPathSegment(path, 7);
+  ASSERT_TRUE(segment);
+  EXPECT_EQ(FPDF_SEGMENT_BEZIERTO, FPDFPathSegment_GetType(segment));
+  EXPECT_TRUE(FPDFPathSegment_GetPoint(segment, &x, &y));
+  EXPECT_FLOAT_EQ(450.0f, x);
+  EXPECT_FLOAT_EQ(150.0f, y);
+  EXPECT_TRUE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+  EXPECT_FLOAT_EQ(350.0f, cp1_x);
+  EXPECT_FLOAT_EQ(100.0f, cp1_y);
+  EXPECT_FLOAT_EQ(400.0f, cp2_x);
+  EXPECT_FLOAT_EQ(100.0f, cp2_y);
+
+  // Calling the function on a control-point segment (index 3, the
+  // second Bezier point in the first triplet) returns false: the
+  // segment two steps back is the kLine at index 1, not a kBezier.
+  segment = FPDFPath_GetPathSegment(path, 3);
+  ASSERT_TRUE(segment);
+  EXPECT_EQ(FPDF_SEGMENT_BEZIERTO, FPDFPathSegment_GetType(segment));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+
+  // Likewise on a non-Bezier segment.
+  segment = FPDFPath_GetPathSegment(path, 0);
+  ASSERT_TRUE(segment);
+  EXPECT_EQ(FPDF_SEGMENT_MOVETO, FPDFPathSegment_GetType(segment));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+
+  // Documented caveat: for back-to-back curves, calling the function
+  // on the first control point of the second curve (index 5)
+  // succeeds with values that look like control points but are
+  // really the second control + endpoint of the previous curve.
+  // The function can only locally verify that the two preceding
+  // segments are kBezier; it cannot tell where a triplet boundary
+  // begins. Callers must walk the path with FPDFPathSegment_GetType()
+  // and reset a per-non-Bezier-segment counter to identify true
+  // endpoints. This case is asserted here as a contract test so the
+  // limitation is regression-checked.
+  segment = FPDFPath_GetPathSegment(path, 5);
+  ASSERT_TRUE(segment);
+  EXPECT_EQ(FPDF_SEGMENT_BEZIERTO, FPDFPathSegment_GetType(segment));
+  EXPECT_TRUE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                    &cp2_x, &cp2_y));
+  // The "control points" returned here are actually points 3 and 4
+  // of the first curve (its second control point and its endpoint),
+  // not (350, 100) / (400, 100).
+  EXPECT_FLOAT_EQ(250.0f, cp1_x);
+  EXPECT_FLOAT_EQ(200.0f, cp1_y);
+  EXPECT_FLOAT_EQ(300.0f, cp2_x);
+  EXPECT_FLOAT_EQ(150.0f, cp2_y);
+
+  // Null inputs return false.
+  segment = FPDFPath_GetPathSegment(path, 4);
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(nullptr, &cp1_x, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, nullptr, &cp1_y,
+                                                     &cp2_x, &cp2_y));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, nullptr,
+                                                     &cp2_x, &cp2_y));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     nullptr, &cp2_y));
+  EXPECT_FALSE(FPDFPathSegment_GetBezierControlPoints(segment, &cp1_x, &cp1_y,
+                                                     &cp2_x, nullptr));
+
+  EXPECT_TRUE(FPDFPage_InsertObject(page.get(), path));
+  EXPECT_TRUE(FPDFPage_GenerateContent(page.get()));
+}
+
 TEST_F(FPDFEditEmbedderTest, ClipPath) {
   // Load document with a clipped rectangle.
   ASSERT_TRUE(OpenDocument("clip_path.pdf"));
