@@ -53,6 +53,18 @@ FPDF_EXPORT FPDF_DICTIONARY FPDF_CALLCONV
 FPDF_GetFontDictionary(FPDF_FONT font);
 
 // Experimental API.
+// Function: FPDF_GetRootDictionary
+//       Gets the root dictionary associated with a document object as an
+//       FPDF_DICTIONARY, which can be passed to helper functions to retrieve
+//       values associated with specific keys.
+// Parameters:
+//       doc - FPDF_DOCUMENT Handle to the document.
+// Return value:
+//       Returns an FPDF_DICTIONARY handle, or nullptr on failure.
+FPDF_EXPORT FPDF_DICTIONARY FPDF_CALLCONV
+FPDF_GetRootDictionary(FPDF_DOCUMENT doc);
+
+// Experimental API.
 // Function: FPDF_DictionaryGetString
 //       Gets a string value associated with a key from a dictionary.
 // Parameters:
