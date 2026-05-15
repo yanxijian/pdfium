@@ -11,6 +11,7 @@
 
 #include <algorithm>
 #include <memory>
+#include <utility>
 
 #include "core/fxcrt/byteorder.h"
 #include "core/fxcrt/check.h"
@@ -191,14 +192,6 @@ pdfium::span<uint8_t> CJBig2_Image::GetLine(int32_t y) {
   return span().subspan(offset.value(), static_cast<size_t>(stride_));
 }
 
-pdfium::span<const uint32_t> CJBig2_Image::GetLine32(int32_t y) const {
-  return fxcrt::reinterpret_span<const uint32_t>(GetLine(y));
-}
-
-pdfium::span<uint32_t> CJBig2_Image::GetLine32(int32_t y) {
-  return fxcrt::reinterpret_span<uint32_t>(GetLine(y));
-}
-
 void CJBig2_Image::CopyLine(pdfium::span<uint8_t> dest,
                             pdfium::span<const uint8_t> src) {
   if (dest.empty()) {
@@ -279,6 +272,27 @@ std::optional<size_t> CJBig2_Image::GetLineOffset(int32_t y) const {
   return static_cast<size_t>(stride_) * static_cast<size_t>(y);
 }
 
+pdfium::span<const uint32_t> CJBig2_Image::GetLines32(int32_t y,
+                                                      int32_t count) const {
+  std::optional<size_t> offset = GetLineOffset(y);
+  if (!offset.has_value()) {
+    return {};
+  }
+  // `GetLineOffset()` verified `y` is in bounds.
+  if (count <= 0 || count > height_ - y) {
+    return {};
+  }
+  return fxcrt::reinterpret_span<const uint32_t>(
+      span().subspan(offset.value(), static_cast<size_t>(stride_) * count));
+}
+
+pdfium::span<uint32_t> CJBig2_Image::GetLines32(int32_t y, int32_t count) {
+  auto lines = std::as_const(*this).GetLines32(y, count);
+  // SAFETY: const_cast<>() doesn't change size.
+  return UNSAFE_BUFFERS(
+      pdfium::span(const_cast<uint32_t*>(lines.data()), lines.size()));
+}
+
 void CJBig2_Image::SubImageFast(uint32_t x,
                                 uint32_t y,
                                 int32_t w,
@@ -311,10 +325,12 @@ void CJBig2_Image::SubImageSlow(uint32_t x,
   // multiple of 4.
   CHECK_GT(elems_to_copy, 0);
   int32_t lines_to_copy = std::min<int32_t>(image->height_, height_ - y);
-  for (int32_t i = 0; i < lines_to_copy; ++i) {
-    pdfium::span<const uint32_t> src =
-        GetLine32(y + i).subspan(static_cast<size_t>(m));
-    pdfium::span<uint32_t> dest = image->GetLine32(i).first(elems_to_copy);
+  pdfium::span<const uint32_t> src_lines = GetLines32(y, lines_to_copy);
+  pdfium::span<uint32_t> dest_lines = image->GetLines32(0, lines_to_copy);
+  CHECK(!dest_lines.empty());
+  while (!dest_lines.empty()) {
+    pdfium::span<const uint32_t> src = src_lines.first(stride32()).subspan(m);
+    pdfium::span<uint32_t> dest = dest_lines.first(elems_to_copy);
     uint32_t saved_src_elem = FromBE32(src.take_first_elem());
     auto [dest_zip, dest_remaining] =
         dest.split_at(std::min(dest.size(), src.size()));
@@ -326,6 +342,8 @@ void CJBig2_Image::SubImageSlow(uint32_t x,
     if (!dest_remaining.empty()) {
       dest_remaining[0] = FromBE32(saved_src_elem << n);
     }
+    src_lines = src_lines.subspan(stride32());
+    dest_lines = dest_lines.subspan(image->stride32());
   }
 }
 
@@ -416,6 +434,10 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
   const uint32_t line_size =
       pdfium::checked_cast<uint32_t>(stride32() - BitIndexToAlignedUint32(xs0));
 
+  pdfium::span<const uint32_t> src_lines = GetLines32(src_start_line, h);
+  pdfium::span<uint32_t> dest_lines = pDst->GetLines32(dest_start_line, h);
+  CHECK(!dest_lines.empty());
+
   enum class ComposeToOp {
     kDestAlignedSrcAlignedSrcGreaterThanDest,
     kDestAlignedSrcAlignedSrcLessThanEqualDest,
@@ -447,52 +469,46 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
   switch (compose_to_op) {
     case ComposeToOp::kDestAlignedSrcAlignedSrcGreaterThanDest: {
       const uint32_t shift = s1 - d1;
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         uint32_t src_val = FromBE32(src.subspan(src_offset).front()) << shift;
         uint32_t& dest_elem = dest.subspan(dest_offset).front();
         dest_elem = FromBE32(
             DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskM));
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
     case ComposeToOp::kDestAlignedSrcAlignedSrcLessThanEqualDest: {
       const uint32_t shift = d1 - s1;
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         uint32_t src_val = FromBE32(src.subspan(src_offset).front()) >> shift;
         uint32_t& dest_elem = dest.subspan(dest_offset).front();
         dest_elem = FromBE32(
             DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskM));
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
     case ComposeToOp::kDestAlignedSrcNotAligned: {
       const uint32_t shift1 = s1 - d1;
       const uint32_t shift2 = 32 - shift1;
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         src = src.subspan(src_offset);
         uint32_t src_val = (FromBE32(src.take_first_elem()) << shift1) |
                            (FromBE32(src.front()) >> shift2);
         uint32_t& dest_elem = dest.subspan(dest_offset).front();
         dest_elem = FromBE32(
             DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskM));
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
@@ -500,13 +516,9 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
       const uint32_t shift1 = s1 - d1;
       const uint32_t shift2 = 32 - shift1;
       const size_t middle_elem_count = GetMiddleElementCount(xd0, xd1);
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         src = src.subspan(src_offset);
         if (d2 != 0) {
           src = src.first(line_size);
@@ -541,18 +553,16 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
           dest_elem = FromBE32(
               DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskR));
         }
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
     case ComposeToOp::kDestNotAlignedSrcEqualToDest: {
       const size_t middle_elem_count = GetMiddleElementCount(xd0, xd1);
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         src = src.subspan(src_offset);
         dest = dest.subspan(dest_offset);
         if (d1 != 0) {
@@ -573,6 +583,8 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
           dest_elem = FromBE32(
               DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskR));
         }
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
@@ -580,13 +592,9 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
       const uint32_t shift1 = d1 - s1;
       const uint32_t shift2 = 32 - shift1;
       const size_t middle_elem_count = GetMiddleElementCount(xd0, xd1);
-      for (int32_t i = 0; i < h; ++i) {
-        pdfium::span<const uint32_t> src = GetLine32(src_start_line + i);
-        pdfium::span<uint32_t> dest = pDst->GetLine32(dest_start_line + i);
-        if (src.empty() || dest.empty()) {
-          return false;
-        }
-
+      while (!dest_lines.empty()) {
+        pdfium::span<const uint32_t> src = src_lines.first(stride32());
+        pdfium::span<uint32_t> dest = dest_lines.first(pDst->stride32());
         src = src.subspan(src_offset);
         if (d2 != 0) {
           src = src.first(line_size);
@@ -618,6 +626,8 @@ bool CJBig2_Image::ComposeToInternal(CJBig2_Image* pDst,
           dest_elem = FromBE32(
               DoComposeWithMask(op, src_val, FromBE32(dest_elem), maskR));
         }
+        src_lines = src_lines.subspan(stride32());
+        dest_lines = dest_lines.subspan(pDst->stride32());
       }
       return true;
     }
