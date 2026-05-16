@@ -131,6 +131,7 @@ pdfium_embeddertest_source_set("embeddertests") {
     "fpdf_attachment_embeddertest.cpp",
     "fpdf_catalog_embeddertest.cpp",
     "fpdf_dataavail_embeddertest.cpp",
+    "fpdf_dict_embeddertest.cpp",
     "fpdf_doc_embeddertest.cpp",
     "fpdf_edit_embeddertest.cpp",
     "fpdf_editimg_embeddertest.cpp",
