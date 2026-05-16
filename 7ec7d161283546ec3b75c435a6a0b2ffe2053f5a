@@ -52,6 +52,24 @@
       "parentUuid": "fc180e8e_17a595d8",
       "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e496e293_5c80ac0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-16T07:07:12Z",
+      "side": 1,
+      "message": "Thanks for the suggestions!\n\nAbout stream and array support (provided there\u0027s no additional API) it is the next CL I plan to try work on.\n\nAbout write support, I agree, its a bit hard to tell if the produced PDF is valid, which is one reason that I thought about making the API immutable for now, although I am happy to explore write support if the team thinks its feasible.\n\nAbout NameTree and NumberTree, not sure about the priority for now.\n\n@thestig@chromium.org @tsepez@chromium.org @andyphan@chromium.org Thoughts on these suggestions and API Feasibility of both the existing Dict APIs, as well as low level write and Name/NumberTree?\n\nFurther @geisserml@gmail.com would suggest you open up issues for this so that the suggestions don\u0027t get lost. Thanks!",
+      "parentUuid": "f75b7c8f_c345616d",
+      "revId": "7ec7d161283546ec3b75c435a6a0b2ffe2053f5a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
