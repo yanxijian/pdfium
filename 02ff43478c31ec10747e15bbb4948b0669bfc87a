@@ -40,6 +40,30 @@
       ],
       "revId": "02ff43478c31ec10747e15bbb4948b0669bfc87a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8a6b73f_790924b7",
+        "filename": "core/fxcodec/jbig2/jbig2_image.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-16T02:01:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2ecabae_0bef25e4",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 59
+      },
+      "revId": "02ff43478c31ec10747e15bbb4948b0669bfc87a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
