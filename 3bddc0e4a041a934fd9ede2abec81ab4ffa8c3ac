@@ -35,6 +35,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e8b6f73_09edd2f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-16T06:54:00Z",
+      "side": 1,
+      "message": "Nevermind, managed to update the chain without too many conflicts. Keeping as is.",
+      "parentUuid": "d082d560_db977df7",
+      "revId": "3bddc0e4a041a934fd9ede2abec81ab4ffa8c3ac",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64cea980_790fc608",
