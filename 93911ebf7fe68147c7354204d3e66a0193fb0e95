@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e42c2c7_08767172",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-16T06:57:01Z",
+      "side": 1,
+      "message": "Hey guys, this is the second bit of the split up (previously 417 line, quite large dictionary CL). Managed to split it a bit and tried to make the CLs a bit smaller. Thanks!",
+      "revId": "93911ebf7fe68147c7354204d3e66a0193fb0e95",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
