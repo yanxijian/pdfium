@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96909d30_4862a5d8",
+        "filename": "fxjs/cjs_document.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 830,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-18T21:44:54Z",
+      "side": 1,
+      "message": "By assigning to `delay_` here, the state is modified even if `form_fill_env_` is null or lacks the `kModifyContent` permission. Consider storing the evaluated boolean in a local variable, and only assigning it to `delay_` after passing the checks (similar to how `set_dirty` was updated).",
+      "range": {
+        "startLine": 830,
+        "startChar": 0,
+        "endLine": 830,
+        "endChar": 0
+      },
+      "revId": "7bc0afdacbd62f11093cf13ca0fff88a732df186",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
