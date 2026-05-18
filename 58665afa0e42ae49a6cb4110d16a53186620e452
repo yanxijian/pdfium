@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a043d74_577c7aa8",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-18T23:48:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f287e63_81a1df5f",
+      "revId": "58665afa0e42ae49a6cb4110d16a53186620e452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "06649f76_68af09fb",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-18T23:44:33Z",
       "side": 1,
       "message": "Remove debug statements?",
+      "revId": "58665afa0e42ae49a6cb4110d16a53186620e452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0c6377e_f3eb4345",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 789,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-18T23:48:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06649f76_68af09fb",
       "revId": "58665afa0e42ae49a6cb4110d16a53186620e452",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
