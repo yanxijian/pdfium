@@ -48,27 +48,28 @@ bool CFFL_CheckBox::OnChar(CPDFSDK_Widget* pWidget,
   switch (nChar) {
     case pdfium::ascii::kReturn:
     case pdfium::ascii::kSpace: {
-      CPDFSDK_PageView* pPageView = pWidget->GetPageView();
-      DCHECK(pPageView);
+      ObservedPtr<CFFL_CheckBox> observed_this(this);
+      CPDFSDK_PageView* page_view = pWidget->GetPageView();
+      DCHECK(page_view);
 
-      // If OnButtonUp() destroys `observed` (the owning CPDFSDK_Widget), its
-      // destructor has already destroyed `this`.
-      ObservedPtr<CPDFSDK_Widget> observed(widget_);
-      if (form_filler_->OnButtonUp(observed, pPageView, nFlags) || !observed) {
+      ObservedPtr<CPDFSDK_Widget> observed_widget(widget_);
+      if (form_filler_->OnButtonUp(observed_widget, page_view, nFlags) ||
+          !observed_this || !observed_this) {
         return true;
       }
-
       CFFL_FormField::OnChar(pWidget, nChar, nFlags);
-
-      CPWL_CheckBox* pWnd = CreateOrUpdatePWLCheckBox(pPageView);
-      if (pWnd && !pWnd->IsReadOnly()) {
-        ObservedPtr<CPWL_CheckBox> pObservedBox(pWnd);
-        const bool is_checked = pWidget->IsChecked();
-        if (pObservedBox) {
-          pObservedBox->SetCheck(!is_checked);
+      CPWL_CheckBox* wnd = CreateOrUpdatePWLCheckBox(page_view);
+      if (wnd && !wnd->IsReadOnly()) {
+        ObservedPtr<CPWL_CheckBox> observed_wnd(wnd);
+        const bool is_checked = pWidget->IsChecked();  // JS re-entrant.
+        if (observed_wnd) {
+          observed_wnd->SetCheck(!is_checked);
         }
       }
-      return CommitData(pPageView, nFlags);
+      if (!observed_this) {
+        return true;
+      }
+      return CommitData(page_view, nFlags);
     }
     default:
       return CFFL_FormField::OnChar(pWidget, nChar, nFlags);
@@ -79,17 +80,22 @@ bool CFFL_CheckBox::OnLButtonUp(CPDFSDK_PageView* pPageView,
                                 CPDFSDK_Widget* pWidget,
                                 Mask<FWL_EVENTFLAG> nFlags,
                                 const CFX_PointF& point) {
+  ObservedPtr<CFFL_CheckBox> observed_this(this);
   CFFL_Button::OnLButtonUp(pPageView, pWidget, nFlags, point);
   if (!IsValid()) {
     return true;
   }
-  ObservedPtr<CPWL_CheckBox> pWnd(CreateOrUpdatePWLCheckBox(pPageView));
-  if (pWnd) {
+  CPWL_CheckBox* wnd = CreateOrUpdatePWLCheckBox(pPageView);
+  if (wnd) {
+    ObservedPtr<CPWL_CheckBox> observed_wnd(wnd);
     // IsChecked() may invalidate check box.
     const bool is_checked = pWidget->IsChecked();
-    if (pWnd) {
-      pWnd->SetCheck(!is_checked);
+    if (observed_wnd) {
+      observed_wnd->SetCheck(!is_checked);
     }
+  }
+  if (!observed_this) {
+    return true;
   }
   return CommitData(pPageView, nFlags);
 }
