@@ -22,6 +22,30 @@
       },
       "revId": "7584fab83953495d81e4da2e1284d090fe63a234",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fe8519c_53739a74",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-18T23:24:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "054caa07_922eda24",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 70
+      },
+      "revId": "7584fab83953495d81e4da2e1284d090fe63a234",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
