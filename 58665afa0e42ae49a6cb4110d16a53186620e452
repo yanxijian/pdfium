@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f287e63_81a1df5f",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-18T23:44:33Z",
+      "side": 1,
+      "message": "Probably also worth noting the two rects have different origins, so future readers understand it is intentional.",
+      "revId": "58665afa0e42ae49a6cb4110d16a53186620e452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06649f76_68af09fb",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 789,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-18T23:44:33Z",
+      "side": 1,
+      "message": "Remove debug statements?",
+      "revId": "58665afa0e42ae49a6cb4110d16a53186620e452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
