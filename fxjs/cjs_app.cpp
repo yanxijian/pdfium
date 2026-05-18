@@ -243,7 +243,6 @@ CJS_Result CJS_App::alert(CJS_Runtime* pRuntime,
       if (i) {
         swMsg += L", ";
       }
-
       swMsg += pRuntime->ToWideStringReentrant(
           pRuntime->GetArrayElementReentrant(carray, i));
     }
