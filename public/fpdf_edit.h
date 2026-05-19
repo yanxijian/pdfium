@@ -12,9 +12,10 @@
 // NOLINTNEXTLINE(build/include_directory)
 #include "fpdfview.h"
 
-#define FPDF_ARGB(a, r, g, b)                                      \
-  ((uint32_t)(((uint32_t)(b)&0xff) | (((uint32_t)(g)&0xff) << 8) | \
-              (((uint32_t)(r)&0xff) << 16) | (((uint32_t)(a)&0xff) << 24)))
+#define FPDF_ARGB(a, r, g, b)                                          \
+  ((uint32_t)(((uint32_t)(b) & 0xff) | (((uint32_t)(g) & 0xff) << 8) | \
+              (((uint32_t)(r) & 0xff) << 16) |                         \
+              (((uint32_t)(a) & 0xff) << 24)))
 #define FPDF_GetBValue(argb) ((uint8_t)(argb))
 #define FPDF_GetGValue(argb) ((uint8_t)(((uint16_t)(argb)) >> 8))
 #define FPDF_GetRValue(argb) ((uint8_t)((argb) >> 16))
@@ -463,6 +464,20 @@ FPDFPageObj_GetMark(FPDF_PAGEOBJECT page_object, unsigned long index);
 // unloading the page.
 FPDF_EXPORT FPDF_PAGEOBJECTMARK FPDF_CALLCONV
 FPDFPageObj_AddMark(FPDF_PAGEOBJECT page_object, FPDF_BYTESTRING name);
+
+// Experimental API.
+// Add an existing content mark to a |page_object|. If consecutive page objects
+// have the same |mark|, the generated PDF will contain a single mark that spans
+// all of them.
+//
+//   page_object - handle to a page object.
+//   mark        - handle to a mark object.
+//
+// Returns true on success, or false on failure. The handles are all owned by
+// the library.
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFPageObj_AddExistingMark(FPDF_PAGEOBJECT page_object,
+                            FPDF_PAGEOBJECTMARK mark);
 
 // Experimental API.
 // Removes a content |mark| from a |page_object|.
