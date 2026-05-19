@@ -12,13 +12,13 @@
 
 #include "core/fxcrt/bytestring.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxcrt/widestring.h"
 #include "v8/include/cppgc/persistent.h"
 #include "v8/include/v8-forward.h"
 #include "v8/include/v8-persistent-handle.h"
 
 class CFXJSE_Class;
 class CFXJSE_HostObject;
-class CFXJSE_Value;
 class CXFA_ThisProxy;
 struct FXJSE_CLASS_DESCRIPTOR;
 
@@ -26,13 +26,20 @@ class CFXJSE_Context {
  public:
   struct ExecutionResult {
     ExecutionResult();
-    ExecutionResult(bool sts, std::unique_ptr<CFXJSE_Value> val);
+    ExecutionResult(v8::Isolate* pIsolate, v8::Local<v8::Value> val, bool sts);
     ExecutionResult(ExecutionResult&& that) noexcept;
     ExecutionResult& operator=(ExecutionResult&& that) noexcept;
     ~ExecutionResult();
 
+    bool IsUndefined() const;
+    bool IsNull() const;
+    bool IsBoolean() const;
+    bool ToBoolean() const;
+    WideString ToWideString() const;
+
+    UnownedPtr<v8::Isolate> isolate;
+    v8::Global<v8::Value> value;
     bool status = false;
-    std::unique_ptr<CFXJSE_Value> value;
   };
 
   static std::unique_ptr<CFXJSE_Context> Create(
