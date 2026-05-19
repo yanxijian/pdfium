@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4caa5413_20e67fe5",
+        "filename": "fxjs/xfa/cfxjse_value.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-19T23:22:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c2f955e_6530df58",
+      "revId": "b8201e011d30fbd2f6cb7dc5cad4079cb8a34f0f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "896c5060_43ee6fcc",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-19T23:16:01Z",
       "side": 1,
       "message": "Extra blank lines here and below.",
+      "revId": "b8201e011d30fbd2f6cb7dc5cad4079cb8a34f0f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e26edfc_7aea612d",
+        "filename": "fxjs/xfa/cfxjse_value.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-19T23:22:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "896c5060_43ee6fcc",
       "revId": "b8201e011d30fbd2f6cb7dc5cad4079cb8a34f0f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
