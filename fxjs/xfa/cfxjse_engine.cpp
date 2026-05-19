@@ -21,7 +21,7 @@
 #include "fxjs/xfa/cfxjse_isolatetracker.h"
 #include "fxjs/xfa/cfxjse_nodehelper.h"
 #include "fxjs/xfa/cfxjse_resolveprocessor.h"
-#include "fxjs/xfa/cfxjse_value.h"
+
 #include "fxjs/xfa/cjx_object.h"
 #include "v8/include/v8-function-callback.h"
 #include "v8/include/v8-function.h"
@@ -75,6 +75,35 @@ namespace {
 
 const char kFormCalcRuntime[] = "pfm_rt";
 
+v8::Local<v8::Function> NewBoundFunction(v8::Isolate* pIsolate,
+                                         v8::Local<v8::Function> hOldFunction,
+                                         v8::Local<v8::Object> hNewThis) {
+  DCHECK(!hOldFunction.IsEmpty());
+  DCHECK(!hNewThis.IsEmpty());
+
+  CFXJSE_ScopeUtil_RootContext scope(pIsolate);
+  v8::Local<v8::Value> rgArgs[2];
+  rgArgs[0] = hOldFunction;
+  rgArgs[1] = hNewThis;
+  v8::Local<v8::String> hBinderFuncSource = fxv8::NewStringHelper(
+      pIsolate, "(function (fn, obj) { return fn.bind(obj); })");
+  v8::Local<v8::Context> hContext = pIsolate->GetCurrentContext();
+  v8::Local<v8::Function> hBinderFunc =
+      v8::Script::Compile(hContext, hBinderFuncSource)
+          .ToLocalChecked()
+          ->Run(hContext)
+          .ToLocalChecked()
+          .As<v8::Function>();
+  v8::Local<v8::Value> hBoundFunction =
+      hBinderFunc->Call(hContext, hContext->Global(), 2, rgArgs)
+          .ToLocalChecked();
+  if (!fxv8::IsFunction(hBoundFunction)) {
+    return v8::Local<v8::Function>();
+  }
+
+  return hBoundFunction.As<v8::Function>();
+}
+
 }  // namespace
 
 CFXJSE_Engine::ResolveResult::ResolveResult() = default;
@@ -101,12 +130,6 @@ CXFA_Object* CFXJSE_Engine::ToObject(v8::Isolate* pIsolate,
   }
 
   return ToObject(FXJSE_RetrieveObjectBinding(value.As<v8::Object>()));
-}
-
-// static.
-CXFA_Object* CFXJSE_Engine::ToObject(v8::Isolate* pIsolate,
-                                     CFXJSE_Value* pValue) {
-  return ToObject(pValue->ToHostObject(pIsolate));
 }
 
 // static
@@ -181,9 +204,9 @@ CFXJSE_Context::ExecutionResult CFXJSE_Engine::RunScript(
     std::optional<WideTextBuffer> wsJavaScript =
         CFXJSE_FormCalcContext::Translate(document_->GetHeap(), wsScript);
     if (!wsJavaScript.has_value()) {
-      auto undefined_value = std::make_unique<CFXJSE_Value>();
-      undefined_value->SetUndefined(GetIsolate());
-      return CFXJSE_Context::ExecutionResult(false, std::move(undefined_value));
+      return CFXJSE_Context::ExecutionResult(
+          false, v8::Global<v8::Value>(GetIsolate(),
+                                       fxv8::NewUndefinedHelper(GetIsolate())));
     }
     btScript = FX_UTF8Encode(wsJavaScript.value().AsStringView());
   } else {
@@ -687,7 +710,7 @@ bool CFXJSE_Engine::QueryVariableValue(CXFA_Script* pScriptNode,
   v8::Local<v8::Value> hVariableValue =
       fxv8::ReentrantGetObjectPropertyHelper(GetIsolate(), pObject, szPropName);
   if (fxv8::IsFunction(hVariableValue)) {
-    v8::Local<v8::Function> maybeFunc = CFXJSE_Value::NewBoundFunction(
+    v8::Local<v8::Function> maybeFunc = NewBoundFunction(
         GetIsolate(), hVariableValue.As<v8::Function>(), pObject);
     if (!maybeFunc.IsEmpty()) {
       *pValue = maybeFunc;

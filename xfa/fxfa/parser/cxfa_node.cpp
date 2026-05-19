@@ -34,9 +34,9 @@
 #include "core/fxcrt/xml/cfx_xmltext.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/fx_font.h"
+#include "fxjs/fxv8.h"
 #include "fxjs/gc/container_trace.h"
 #include "fxjs/xfa/cfxjse_engine.h"
-#include "fxjs/xfa/cfxjse_value.h"
 #include "fxjs/xfa/cjx_node.h"
 #include "xfa/fde/cfde_textout.h"
 #include "xfa/fgas/crt/cfgas_decimal.h"
@@ -2963,10 +2963,10 @@ CXFA_Node::BoolScriptResult CXFA_Node::ExecuteBoolScript(
     iRet = XFA_EventError::kSuccess;
     if (pEventParam->type_ == XFA_EVENT_Calculate ||
         pEventParam->type_ == XFA_EVENT_InitCalculate) {
-      if (!exec_result.value->IsUndefined(context->GetIsolate())) {
-        if (!exec_result.value->IsNull(context->GetIsolate())) {
+      if (!exec_result.IsUndefined(context->GetIsolate())) {
+        if (!exec_result.IsNull(context->GetIsolate())) {
           pEventParam->result_ =
-              exec_result.value->ToWideString(context->GetIsolate());
+              exec_result.ToWideString(context->GetIsolate());
         }
 
         iRet = XFA_EventError::kSuccess;
@@ -2995,8 +2995,8 @@ CXFA_Node::BoolScriptResult CXFA_Node::ExecuteBoolScript(
   }
   context->SetNodesOfRunScript(nullptr);
 
-  return {iRet, exec_result.value->IsBoolean(context->GetIsolate()) &&
-                    exec_result.value->ToBoolean(context->GetIsolate())};
+  return {iRet, exec_result.IsBoolean(context->GetIsolate()) &&
+                    exec_result.ToBoolean(context->GetIsolate())};
 }
 
 std::pair<XFA_FFWidgetType, CXFA_Ui*>
