@@ -33,6 +33,23 @@
       "message": "LTS Sheriff: LGTM.",
       "revId": "aae3e0d455ccb203036aff3e0a69aa21f52037f9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40c14e64_62c64f35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3671645
+      },
+      "writtenOn": "2026-05-19T03:58:48Z",
+      "side": 1,
+      "message": "tsepez@chromium.org Could you please take a look at this CL?",
+      "revId": "aae3e0d455ccb203036aff3e0a69aa21f52037f9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
