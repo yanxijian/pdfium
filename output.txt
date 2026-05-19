@@ -1,0 +1,430 @@
+Note: Google Test filter = FPDFProgressiveRenderEmbedderTest.RenderHighlightWithColorScheme
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FPDFProgressiveRenderEmbedderTest
+[ RUN      ] FPDFProgressiveRenderEmbedderTest.RenderHighlightWithColorScheme
+CFX_Face::New called, face_index=0
+CFX_Face::New: family=NULL, MakeSkTypeface returned 0x7ca75303acc0
+GetCharIndex: code=0, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=1, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=2, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=3, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=4, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=5, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=6, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=7, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=8, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=9, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=10, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=11, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=12, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=13, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=14, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=15, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=16, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=17, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=18, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=19, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=20, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=21, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=22, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=23, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=24, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=25, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=26, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=27, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=28, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=29, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=30, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=31, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=32, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=33, ft=2, sk=0, encoding=1634889070
+GetCharIndex: code=34, ft=7, sk=0, encoding=1634889070
+GetCharIndex: code=35, ft=10, sk=0, encoding=1634889070
+GetCharIndex: code=36, ft=13, sk=0, encoding=1634889070
+GetCharIndex: code=37, ft=1, sk=0, encoding=1634889070
+GetCharIndex: code=38, ft=17, sk=0, encoding=1634889070
+GetCharIndex: code=39, ft=14, sk=0, encoding=1634889070
+GetCharIndex: code=40, ft=6, sk=0, encoding=1634889070
+GetCharIndex: code=41, ft=19, sk=0, encoding=1634889070
+GetCharIndex: code=42, ft=3, sk=0, encoding=1634889070
+GetCharIndex: code=43, ft=8, sk=0, encoding=1634889070
+GetCharIndex: code=44, ft=9, sk=0, encoding=1634889070
+GetCharIndex: code=45, ft=15, sk=0, encoding=1634889070
+GetCharIndex: code=46, ft=11, sk=0, encoding=1634889070
+GetCharIndex: code=47, ft=16, sk=0, encoding=1634889070
+GetCharIndex: code=48, ft=18, sk=0, encoding=1634889070
+GetCharIndex: code=49, ft=4, sk=0, encoding=1634889070
+GetCharIndex: code=50, ft=12, sk=0, encoding=1634889070
+GetCharIndex: code=51, ft=5, sk=0, encoding=1634889070
+GetCharIndex: code=52, ft=20, sk=0, encoding=1634889070
+GetCharIndex: code=53, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=54, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=55, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=56, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=57, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=58, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=59, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=60, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=61, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=62, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=63, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=64, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=65, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=66, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=67, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=68, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=69, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=70, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=71, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=72, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=73, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=74, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=75, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=76, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=77, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=78, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=79, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=80, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=81, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=82, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=83, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=84, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=85, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=86, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=87, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=88, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=89, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=90, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=91, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=92, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=93, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=94, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=95, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=96, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=97, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=98, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=99, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=100, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=101, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=102, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=103, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=104, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=105, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=106, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=107, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=108, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=109, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=110, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=111, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=112, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=113, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=114, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=115, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=116, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=117, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=118, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=119, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=120, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=121, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=122, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=123, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=124, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=125, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=126, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=127, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=128, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=129, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=130, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=131, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=132, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=133, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=134, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=135, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=136, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=137, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=138, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=139, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=140, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=141, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=142, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=143, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=144, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=145, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=146, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=147, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=148, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=149, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=150, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=151, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=152, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=153, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=154, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=155, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=156, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=157, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=158, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=159, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=160, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=161, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=162, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=163, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=164, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=165, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=166, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=167, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=168, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=169, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=170, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=171, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=172, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=173, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=174, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=175, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=176, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=177, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=178, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=179, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=180, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=181, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=182, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=183, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=184, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=185, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=186, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=187, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=188, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=189, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=190, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=191, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=192, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=193, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=194, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=195, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=196, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=197, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=198, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=199, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=200, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=201, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=202, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=203, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=204, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=205, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=206, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=207, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=208, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=209, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=210, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=211, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=212, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=213, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=214, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=215, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=216, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=217, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=218, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=219, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=220, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=221, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=222, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=223, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=224, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=225, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=226, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=227, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=228, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=229, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=230, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=231, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=232, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=233, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=234, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=235, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=236, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=237, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=238, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=239, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=240, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=241, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=242, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=243, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=244, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=245, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=246, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=247, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=248, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=249, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=250, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=251, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=252, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=253, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=254, ft=0, sk=0, encoding=1634889070
+GetCharIndex: code=255, ft=0, sk=0, encoding=1634889070
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=2, ft=623, sk=623
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=7, ft=497, sk=497
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=10, ft=229, sk=229
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=13, ft=527, sk=527
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=1, ft=226, sk=226
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=17, ft=714, sk=714
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=14, ft=348, sk=348
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=6, ft=525, sk=525
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=19, ft=325, sk=325
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=3, ft=487, sk=487
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=8, ft=525, sk=525
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=9, ft=229, sk=229
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=15, ft=391, sk=391
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=11, ft=798, sk=798
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=16, ft=334, sk=334
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=18, ft=433, sk=433
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=4, ft=479, sk=479
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=12, ft=525, sk=525
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=5, ft=525, sk=525
+GetGlyphWidth called
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetUnitsPerEm: ft=2048, sk=2048
+GetGlyphWidth: glyph_index=20, ft=252, sk=252
+CFX_Face destructor called
+[       OK ] FPDFProgressiveRenderEmbedderTest.RenderHighlightWithColorScheme (139 ms)
+[----------] 1 test from FPDFProgressiveRenderEmbedderTest (139 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (239 ms total)
+[  PASSED  ] 1 test.

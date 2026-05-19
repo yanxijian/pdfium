@@ -4,6 +4,7 @@
 
 #include "core/fxge/cfx_face.h"
 
+#include <stdio.h>
 #include <algorithm>
 #include <array>
 #include <limits>
@@ -35,12 +36,13 @@
 
 // Define the following to enable additional runtime checks during
 // the development process.
-// #define PDF_ENABLE_SKIA_TYPEFACE_CHECKS 1
+#define PDF_ENABLE_SKIA_TYPEFACE_CHECKS 1
 #endif
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #include "third_party/skia/include/core/SkFont.h"         // nogncheck
 #include "third_party/skia/include/core/SkFontMetrics.h"  // nogncheck
+#include "third_party/skia/include/core/SkFontTypes.h"    // nogncheck
 #include "third_party/skia/include/core/SkRect.h"         // nogncheck
 #endif
 
@@ -783,11 +785,14 @@ int CFX_Face::GetGlyphTTWidth() const {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
+    font.setHinting(SkFontHinting::kNone);
     uint16_t skia_glyph_index = static_cast<uint16_t>(fontglyph->glyph_index);
     SkScalar width;
     font.getWidths(pdfium::span_from_ref(skia_glyph_index),
                    pdfium::span_from_ref(width));
-    CHECK_EQ(ft_result, static_cast<int>(width + 0.5));
+    const int sk_result =
+        NormalizeFontMetric(static_cast<int64_t>(width + 0.5), GetUnitsPerEm());
+    CHECK_EQ(ft_result, sk_result);
   }
 #endif
   return ft_result;
@@ -819,11 +824,14 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
+    font.setHinting(SkFontHinting::kNone);
     uint16_t skia_glyph_index = static_cast<uint16_t>(glyph_index);
     SkScalar width;
     font.getWidths(pdfium::span_from_ref(skia_glyph_index),
                    pdfium::span_from_ref(width));
-    CHECK_EQ(ft_result, static_cast<int>(width + 0.5));
+    const int sk_result = static_cast<int>(
+        EM_ADJUST(GetUnitsPerEm(), static_cast<int>(width + 0.5)));
+    CHECK_EQ(ft_result, sk_result);
   }
 #endif
   return ft_result;
@@ -840,8 +848,11 @@ int CFX_Face::GetCharIndex(uint32_t code) {
   const int ft_result = FT_Get_Char_Index(GetRec(), code);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
-    CHECK_EQ(static_cast<uint16_t>(ft_result),
-             skia_typeface_->unicharToGlyph(code));
+    FT_CharMap charmap = GetRec()->charmap;
+    if (charmap && charmap->encoding == FT_ENCODING_UNICODE) {
+      CHECK_EQ(static_cast<uint16_t>(ft_result),
+               skia_typeface_->unicharToGlyph(code));
+    }
   }
 #endif
   return ft_result;
