@@ -138,45 +138,48 @@ void DynPropGetterAdapter_MethodCallback(
   }
 }
 
-v8::Global<v8::Value> DynPropGetterAdapter(
+v8::Local<v8::Value> DynPropGetterAdapter(
     v8::Isolate* pIsolate,
     const FXJSE_CLASS_DESCRIPTOR* pClassDescriptor,
     v8::Local<v8::Object> pObject,
     ByteStringView szPropName) {
-  FXJSE_ClassPropType nPropType =
-      pClassDescriptor->dynPropTypeGetter
-          ? pClassDescriptor->dynPropTypeGetter(pIsolate, pObject, szPropName,
-                                                false)
-          : FXJSE_ClassPropType::kProperty;
-  if (nPropType == FXJSE_ClassPropType::kProperty) {
-    if (pClassDescriptor->dynPropGetter) {
-      return v8::Global<v8::Value>(
-          pIsolate,
-          pClassDescriptor->dynPropGetter(pIsolate, pObject, szPropName));
-    }
-  } else if (nPropType == FXJSE_ClassPropType::kMethod) {
-    if (pClassDescriptor->dynMethodCall) {
-      v8::HandleScope hscope(pIsolate);
-      v8::Local<v8::ObjectTemplate> hCallBackInfoTemplate =
-          v8::ObjectTemplate::New(pIsolate);
-      hCallBackInfoTemplate->SetInternalFieldCount(2);
-      v8::Local<v8::Object> hCallBackInfo =
-          hCallBackInfoTemplate->NewInstance(pIsolate->GetCurrentContext())
-              .ToLocalChecked();
-      hCallBackInfo->SetAlignedPointerInInternalField(
-          0, const_cast<FXJSE_CLASS_DESCRIPTOR*>(pClassDescriptor),
-          kDefaultPDFiumTag);
-      hCallBackInfo->SetInternalField(
-          1, fxv8::NewStringHelper(pIsolate, szPropName));
-      return v8::Global<v8::Value>(
-          pIsolate,
-          v8::Function::New(pIsolate->GetCurrentContext(),
-                            DynPropGetterAdapter_MethodCallback, hCallBackInfo,
-                            0, v8::ConstructorBehavior::kThrow)
-              .ToLocalChecked());
-    }
+  if (!pClassDescriptor->dynPropTypeGetter) {
+    return v8::Local<v8::Value>();
   }
-  return v8::Global<v8::Value>();
+
+  FXJSE_ClassPropType nPropType =
+      pClassDescriptor->dynPropTypeGetter(pIsolate, pObject, szPropName, false);
+  if (nPropType == FXJSE_ClassPropType::kProperty) {
+    if (!pClassDescriptor->dynPropGetter) {
+      return v8::Local<v8::Value>();
+    }
+    return pClassDescriptor->dynPropGetter(pIsolate, pObject, szPropName);
+  }
+
+  if (nPropType == FXJSE_ClassPropType::kMethod) {
+    if (!pClassDescriptor->dynMethodCall) {
+      return v8::Local<v8::Value>();
+    }
+    v8::EscapableHandleScope hscope(pIsolate);
+    v8::Local<v8::ObjectTemplate> hCallBackInfoTemplate =
+        v8::ObjectTemplate::New(pIsolate);
+    hCallBackInfoTemplate->SetInternalFieldCount(2);
+    v8::Local<v8::Object> hCallBackInfo =
+        hCallBackInfoTemplate->NewInstance(pIsolate->GetCurrentContext())
+            .ToLocalChecked();
+    hCallBackInfo->SetAlignedPointerInInternalField(
+        0, const_cast<FXJSE_CLASS_DESCRIPTOR*>(pClassDescriptor),
+        kDefaultPDFiumTag);
+    hCallBackInfo->SetInternalField(
+        1, fxv8::NewStringHelper(pIsolate, szPropName));
+    return hscope.Escape(v8::Function::New(pIsolate->GetCurrentContext(),
+                                           DynPropGetterAdapter_MethodCallback,
+                                           hCallBackInfo, 0,
+                                           v8::ConstructorBehavior::kThrow)
+                             .ToLocalChecked());
+  }
+
+  return v8::Local<v8::Value>();
 }
 
 void DynPropSetterAdapter(v8::Isolate* pIsolate,
@@ -185,12 +188,13 @@ void DynPropSetterAdapter(v8::Isolate* pIsolate,
                           ByteStringView szPropName,
                           v8::Local<v8::Value> hValue) {
   DCHECK(pClassDescriptor);
+  if (!pClassDescriptor->dynPropTypeGetter) {
+    return;
+  }
+
   FXJSE_ClassPropType nPropType =
-      pClassDescriptor->dynPropTypeGetter
-          ? pClassDescriptor->dynPropTypeGetter(pIsolate, pObject, szPropName,
-                                                false)
-          : FXJSE_ClassPropType::kProperty;
-  if (nPropType != FXJSE_ClassPropType::kMethod) {
+      pClassDescriptor->dynPropTypeGetter(pIsolate, pObject, szPropName, false);
+  if (nPropType == FXJSE_ClassPropType::kProperty) {
     if (pClassDescriptor->dynPropSetter) {
       pClassDescriptor->dynPropSetter(pIsolate, pObject, szPropName, hValue);
     }
@@ -201,11 +205,12 @@ bool DynPropQueryAdapter(v8::Isolate* pIsolate,
                          const FXJSE_CLASS_DESCRIPTOR* pClassDescriptor,
                          v8::Local<v8::Object> pObject,
                          ByteStringView szPropName) {
-  FXJSE_ClassPropType nPropType = pClassDescriptor->dynPropTypeGetter
-                                      ? pClassDescriptor->dynPropTypeGetter(
-                                            pIsolate, pObject, szPropName, true)
-                                      : FXJSE_ClassPropType::kProperty;
-  return nPropType != FXJSE_ClassPropType::kNone;
+  if (!pClassDescriptor->dynPropTypeGetter) {
+    return false;
+  }
+
+  return pClassDescriptor->dynPropTypeGetter(
+             pIsolate, pObject, szPropName, true) != FXJSE_ClassPropType::kNone;
 }
 
 v8::Intercepted NamedPropertyQueryCallback(
@@ -246,11 +251,10 @@ v8::Intercepted NamedPropertyGetterCallback(
   // SAFETY: required from V8.
   auto szFxPropName =
       UNSAFE_BUFFERS(ByteStringView(*szPropName, szPropName.length()));
-  v8::Global<v8::Value> newValue = DynPropGetterAdapter(
+  v8::Local<v8::Value> newValue = DynPropGetterAdapter(
       info.GetIsolate(), pClass, info.HolderV2(), szFxPropName);
   if (!newValue.IsEmpty()) {
-    info.GetReturnValue().Set(
-        v8::Local<v8::Value>::New(info.GetIsolate(), newValue));
+    info.GetReturnValue().Set(newValue);
   }
   return v8::Intercepted::kYes;
 }
