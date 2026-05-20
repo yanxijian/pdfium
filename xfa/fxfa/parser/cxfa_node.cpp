@@ -34,9 +34,10 @@
 #include "core/fxcrt/xml/cfx_xmltext.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/fx_font.h"
+#include "fxjs/fxv8.h"
 #include "fxjs/gc/container_trace.h"
 #include "fxjs/xfa/cfxjse_engine.h"
-#include "fxjs/xfa/cfxjse_value.h"
+#include "fxjs/xfa/cfxjse_isolatetracker.h"
 #include "fxjs/xfa/cjx_node.h"
 #include "xfa/fde/cfde_textout.h"
 #include "xfa/fgas/crt/cfgas_decimal.h"
@@ -2959,14 +2960,21 @@ CXFA_Node::BoolScriptResult CXFA_Node::ExecuteBoolScript(
   }
 
   XFA_EventError iRet = XFA_EventError::kError;
+  v8::Isolate* pIsolate = context->GetIsolate();
+  CFXJSE_ScopeUtil_IsolateHandleRootContext scope(pIsolate);
+  v8::Local<v8::Value> hValue;
+  if (!exec_result.value.IsEmpty()) {
+    hValue = v8::Local<v8::Value>::New(pIsolate, exec_result.value);
+  }
+
   if (exec_result.status) {
     iRet = XFA_EventError::kSuccess;
     if (pEventParam->type_ == XFA_EVENT_Calculate ||
         pEventParam->type_ == XFA_EVENT_InitCalculate) {
-      if (!exec_result.value->IsUndefined(context->GetIsolate())) {
-        if (!exec_result.value->IsNull(context->GetIsolate())) {
+      if (!hValue.IsEmpty() && !fxv8::IsUndefined(hValue)) {
+        if (!fxv8::IsNull(hValue)) {
           pEventParam->result_ =
-              exec_result.value->ToWideString(context->GetIsolate());
+              fxv8::ReentrantToWideStringHelper(pIsolate, hValue);
         }
 
         iRet = XFA_EventError::kSuccess;
@@ -2995,8 +3003,8 @@ CXFA_Node::BoolScriptResult CXFA_Node::ExecuteBoolScript(
   }
   context->SetNodesOfRunScript(nullptr);
 
-  return {iRet, exec_result.value->IsBoolean(context->GetIsolate()) &&
-                    exec_result.value->ToBoolean(context->GetIsolate())};
+  return {iRet, !hValue.IsEmpty() && fxv8::IsBoolean(hValue) &&
+                    fxv8::ReentrantToBooleanHelper(pIsolate, hValue)};
 }
 
 std::pair<XFA_FFWidgetType, CXFA_Ui*>

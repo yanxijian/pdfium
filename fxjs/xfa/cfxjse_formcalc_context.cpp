@@ -35,7 +35,6 @@
 #include "fxjs/xfa/cfxjse_class.h"
 #include "fxjs/xfa/cfxjse_context.h"
 #include "fxjs/xfa/cfxjse_engine.h"
-#include "fxjs/xfa/cfxjse_value.h"
 #include "fxjs/xfa/cjx_object.h"
 #include "v8/include/v8-container.h"
 #include "v8/include/v8-function-callback.h"
@@ -3071,7 +3070,10 @@ void CFXJSE_FormCalcContext::Eval(
   CFXJSE_Context::ExecutionResult result = pNewContext->ExecuteScript(
       bsScript.AsStringView(), v8::Local<v8::Object>());
 
-  info.GetReturnValue().Set(result.value->DirectGetValue());
+  if (!result.value.IsEmpty()) {
+    info.GetReturnValue().Set(
+        v8::Local<v8::Value>::New(pIsolate, result.value));
+  }
 }
 
 // static
