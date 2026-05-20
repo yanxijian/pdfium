@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf906866_2b6a52da",
+        "filename": "fxjs/xfa/cfxjse_class.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-20T19:09:23Z",
+      "side": 1,
+      "message": "By returning early here, you are changing the original logic. The original code used a ternary operator that defaulted `nPropType` to `FXJSE_ClassPropType::kProperty` when `dynPropTypeGetter` was null. This meant it would fall through and execute the `dynPropGetter` logic if it existed. Returning an empty value here skips calling the getter.",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 147,
+        "endChar": 0
+      },
+      "revId": "ed862742c45fe2bf6abd52a16733d4620ad2d750",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "720936b1_19e01120",
+        "filename": "fxjs/xfa/cfxjse_class.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-20T19:09:23Z",
+      "side": 1,
+      "message": "Similar to `DynPropGetterAdapter`, the original logic defaulted to `FXJSE_ClassPropType::kProperty` if `dynPropTypeGetter` was null, which would then allow `pClassDescriptor-\u003edynPropSetter` to be called. By returning early here, the setter will no longer be called when `dynPropTypeGetter` is missing.",
+      "range": {
+        "startLine": 192,
+        "startChar": 0,
+        "endLine": 192,
+        "endChar": 0
+      },
+      "revId": "ed862742c45fe2bf6abd52a16733d4620ad2d750",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1efce187_882370dc",
+        "filename": "fxjs/xfa/cfxjse_class.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-20T19:09:23Z",
+      "side": 1,
+      "message": "The original condition was `nPropType !\u003d FXJSE_ClassPropType::kMethod`. Changing this to `nPropType !\u003d FXJSE_ClassPropType::kProperty` could change the behavior if `nPropType` evaluates to something other than `kProperty` or `kMethod` (for example, `FXJSE_ClassPropType::kNone`). Since this is a refactoring CL, it\u0027s safer to keep the original logic.",
+      "range": {
+        "startLine": 197,
+        "startChar": 0,
+        "endLine": 197,
+        "endChar": 0
+      },
+      "revId": "ed862742c45fe2bf6abd52a16733d4620ad2d750",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
