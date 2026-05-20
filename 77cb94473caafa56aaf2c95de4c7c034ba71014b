@@ -16,6 +16,23 @@
       "message": "Hey guys, another pretty mechanical cleanup with this enum, decided to rename some of these entries to remove some of these abbreviations.\n\nAlso this enum seems to be outside the class. Perhaps it was #defines before and might not have been moved to the class in the initial CL (unless there is a reason I\u0027m missing).\n\nAnyway, plan to move this into the class in a follow up. Thanks!",
       "revId": "77cb94473caafa56aaf2c95de4c7c034ba71014b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "619e7c88_f98a31a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-20T17:32:19Z",
+      "side": 1,
+      "message": "Tag with `Bug: 42271530`",
+      "revId": "77cb94473caafa56aaf2c95de4c7c034ba71014b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
