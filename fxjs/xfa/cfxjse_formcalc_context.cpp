@@ -3070,9 +3070,9 @@ void CFXJSE_FormCalcContext::Eval(
   CFXJSE_Context::ExecutionResult result = pNewContext->ExecuteScript(
       bsScript.AsStringView(), v8::Local<v8::Object>());
 
-  if (result.value && !result.value->IsEmpty()) {
+  if (!result.value.IsEmpty()) {
     info.GetReturnValue().Set(
-        v8::Local<v8::Value>::New(pIsolate, *result.value));
+        v8::Local<v8::Value>::New(pIsolate, result.value));
   }
 }
 

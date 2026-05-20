@@ -2963,8 +2963,8 @@ CXFA_Node::BoolScriptResult CXFA_Node::ExecuteBoolScript(
   v8::Isolate* pIsolate = context->GetIsolate();
   CFXJSE_ScopeUtil_IsolateHandleRootContext scope(pIsolate);
   v8::Local<v8::Value> hValue;
-  if (exec_result.value && !exec_result.value->IsEmpty()) {
-    hValue = v8::Local<v8::Value>::New(pIsolate, *exec_result.value);
+  if (!exec_result.value.IsEmpty()) {
+    hValue = v8::Local<v8::Value>::New(pIsolate, exec_result.value);
   }
 
   if (exec_result.status) {
