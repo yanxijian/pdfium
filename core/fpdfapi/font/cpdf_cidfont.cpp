@@ -54,7 +54,7 @@ bool IsMetricForCID(const LowHighVal& val, uint16_t cid) {
   return val.low <= cid && cid <= val.high;
 }
 
-constexpr std::array<FX_CodePage, CIDSET_NUM_SETS> kCharsetCodePages = {
+constexpr std::array<FX_CodePage, CIDSet::kNumSets> kCharsetCodePages = {
     FX_CodePage::kDefANSI,
     FX_CodePage::kChineseSimplified,
     FX_CodePage::kChineseTraditional,
@@ -147,10 +147,10 @@ constexpr CIDTransform kJapan1VerticalCIDs[] = {
 
 bool IsValidEmbeddedCharcodeFromUnicodeCharset(CIDSet charset) {
   switch (charset) {
-    case CIDSET_GB1:
-    case CIDSET_CNS1:
-    case CIDSET_JAPAN1:
-    case CIDSET_KOREA1:
+    case CIDSet::kGB1:
+    case CIDSet::kCNS1:
+    case CIDSet::kJapan1:
+    case CIDSet::kKorea1:
       return true;
 
     default:
@@ -213,11 +213,11 @@ void UseCIDCharmap(const RetainPtr<CFX_Face>& face, CIDCoding coding) {
       encoding = fxge::FontEncoding::kJohab;
       break;
     default:
-      encoding = fxge::FontEncoding::kUnicode;
+      encoding = fxge::FontEncoding::CIDSet::kUnicode;
   }
   bool result = face->SelectCharMap(encoding);
   if (!result) {
-    result = face->SelectCharMap(fxge::FontEncoding::kUnicode);
+    result = face->SelectCharMap(fxge::FontEncoding::CIDSet::kUnicode);
   }
   if (!result && face->GetCharMapCount()) {
     face->SetCharMapByIndex(0);
@@ -483,7 +483,7 @@ bool CPDF_CIDFont::Load() {
   }
 
   charset_ = cmap_->GetCharset();
-  if (charset_ == CIDSET_UNKNOWN) {
+  if (charset_ == CIDSet::kUnknown) {
     RetainPtr<const CPDF_Dictionary> pCIDInfo =
         pCIDFontDict->GetDictFor("CIDSystemInfo");
     if (pCIDInfo) {
@@ -491,13 +491,13 @@ bool CPDF_CIDFont::Load() {
           pCIDInfo->GetByteStringFor("Ordering").AsStringView());
     }
   }
-  if (charset_ != CIDSET_UNKNOWN) {
+  if (charset_ != CIDSet::kUnknown) {
     cid2unicode_map_ = font_globals->GetCID2UnicodeMap(charset_);
   }
   RetainPtr<CFX_Face> face = font_.GetFace();
   if (face) {
     if (font_type_ == CIDFontType::kType1) {
-      face->SelectCharMap(fxge::FontEncoding::kUnicode);
+      face->SelectCharMap(fxge::FontEncoding::CIDSet::kUnicode);
     } else {
       UseCIDCharmap(face, cmap_->GetCoding());
     }
@@ -559,7 +559,7 @@ FX_RECT CPDF_CIDFont::GetCharBBox(uint32_t charcode) {
   if (face) {
     rect = face->GetCharBBox(charcode, glyph_index);
   }
-  if (!font_file_ && charset_ == CIDSET_JAPAN1) {
+  if (!font_file_ && charset_ == CIDSet::kJapan1) {
     uint16_t cid = CIDFromCharCode(charcode);
     const CIDTransform* pTransform = GetCIDTransform(cid);
     if (pTransform && !bVert) {
@@ -758,7 +758,7 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
       }
       return index;
     }
-    if (charset_ == CIDSET_JAPAN1) {
+    if (charset_ == CIDSet::kJapan1) {
       if (unicode == '\\') {
         unicode = '/';
 #if !BUILDFLAG(IS_APPLE)
@@ -774,7 +774,7 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
     }
 
     size_t num_charmaps = face->GetCharMapCount();
-    if (!face->SelectCharMap(fxge::FontEncoding::kUnicode)) {
+    if (!face->SelectCharMap(fxge::FontEncoding::CIDSet::kUnicode)) {
       size_t i;
       for (i = 0; i < num_charmaps; i++) {
         uint32_t ret = CharCodeFromUnicodeForEncoding(
@@ -821,7 +821,7 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
       return cid;
     }
 
-    if (charmap.value() == fxge::FontEncoding::kUnicode) {
+    if (charmap.value() == fxge::FontEncoding::CIDSet::kUnicode) {
       WideString unicode_str = UnicodeFromCharCode(charcode);
       if (unicode_str.IsEmpty()) {
         return -1;
@@ -879,7 +879,7 @@ float CPDF_CIDFont::CIDTransformToFloat(uint8_t ch) {
 
 void CPDF_CIDFont::LoadGB2312() {
   base_font_name_ = font_dict_->GetByteStringFor("BaseFont");
-  charset_ = CIDSET_GB1;
+  charset_ = CIDSet::kGB1;
 
   auto* font_globals = CPDF_FontGlobals::GetInstance();
   cmap_ = font_globals->GetPredefinedCMap("GBK-EUC-H");
@@ -897,7 +897,7 @@ void CPDF_CIDFont::LoadGB2312() {
 }
 
 const CIDTransform* CPDF_CIDFont::GetCIDTransform(uint16_t cid) const {
-  if (charset_ != CIDSET_JAPAN1 || font_file_) {
+  if (charset_ != CIDSet::kJapan1 || font_file_) {
     return nullptr;
   }
   const auto* pTransform = std::ranges::lower_bound(

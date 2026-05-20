@@ -210,7 +210,7 @@ std::optional<CPDF_CMap::CodeRange> CPDF_CMapParser::GetCodeRange(
 
 // static
 CIDSet CPDF_CMapParser::CharsetFromOrdering(ByteStringView ordering) {
-  static const std::array<const char*, CIDSET_NUM_SETS> kCharsetNames = {
+  static const std::array<const char*, CIDSet::kNumSets> kCharsetNames = {
       {nullptr, "GB1", "CNS1", "Japan1", "Korea1", "UCS"}};
 
   for (size_t charset = 1; charset < std::size(kCharsetNames); ++charset) {
@@ -218,5 +218,5 @@ CIDSet CPDF_CMapParser::CharsetFromOrdering(ByteStringView ordering) {
       return static_cast<CIDSet>(charset);
     }
   }
-  return CIDSET_UNKNOWN;
+  return CIDSet::kUnknown;
 }
