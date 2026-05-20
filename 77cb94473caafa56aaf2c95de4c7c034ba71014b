@@ -33,6 +33,23 @@
       "message": "Tag with `Bug: 42271530`",
       "revId": "77cb94473caafa56aaf2c95de4c7c034ba71014b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee1d7d3e_940a0860",
+        "filename": "core/fpdfapi/font/cpdf_cidfont.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-20T17:33:28Z",
+      "side": 1,
+      "message": "Can this become an enum class, so names, especially \"kUnknown\", don\u0027t potentially collide with other constants of the same name?",
+      "revId": "77cb94473caafa56aaf2c95de4c7c034ba71014b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
