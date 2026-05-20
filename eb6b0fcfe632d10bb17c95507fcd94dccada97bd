@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43b055f1_c1dad1bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-20T16:56:14Z",
+      "side": 1,
+      "message": "Hey guys, quick mechanical change to replace more static_casts with fxcrt::to_underlying(). Thanks!",
+      "revId": "eb6b0fcfe632d10bb17c95507fcd94dccada97bd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
