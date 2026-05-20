@@ -530,6 +530,18 @@ FPDFTextObj_GetFontSize(FPDF_PAGEOBJECT text, float* size) {
   return true;
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFTextObj_SetFontSize(FPDF_PAGEOBJECT text, float size) {
+  CPDF_TextObject* pTextObj = CPDFTextObjectFromFPDFPageObject(text);
+  if (!pTextObj || size < 0.0f) {
+    return false;
+  }
+
+  pTextObj->mutable_text_state().SetFontSize(size);
+  pTextObj->SetDirty(true);
+  return true;
+}
+
 FPDF_EXPORT unsigned long FPDF_CALLCONV
 FPDFTextObj_GetText(FPDF_PAGEOBJECT text_object,
                     FPDF_TEXTPAGE text_page,
