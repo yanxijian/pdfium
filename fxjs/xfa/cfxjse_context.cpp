@@ -17,13 +17,20 @@
 #include "fxjs/xfa/cfxjse_class.h"
 #include "fxjs/xfa/cfxjse_isolatetracker.h"
 #include "fxjs/xfa/cfxjse_runtimedata.h"
-#include "fxjs/xfa/cfxjse_value.h"
 #include "fxjs/xfa/cjx_object.h"
 #include "v8/include/v8-exception.h"
 #include "v8/include/v8-function.h"
 #include "v8/include/v8-message.h"
 #include "v8/include/v8-script.h"
 #include "xfa/fxfa/parser/cxfa_thisproxy.h"
+
+void FXJSE_ThrowMessage(v8::Isolate* pIsolate, ByteStringView utf8Message) {
+  DCHECK(pIsolate);
+  CFXJSE_ScopeUtil_IsolateHandleRootContext scope(pIsolate);
+  v8::Local<v8::String> hMessage = fxv8::NewStringHelper(pIsolate, utf8Message);
+  v8::Local<v8::Value> hError = v8::Exception::Error(hMessage);
+  pIsolate->ThrowException(hError);
+}
 
 namespace {
 
@@ -243,12 +250,12 @@ CFXJSE_Context::ExecutionResult CFXJSE_Context::ExecuteScript(
       v8::Local<v8::Value> hValue;
       if (hScript->Run(hContext).ToLocal(&hValue)) {
         CHECK(!trycatch.HasCaught());
-        return ExecutionResult(
-            true, std::make_unique<CFXJSE_Value>(GetIsolate(), hValue));
+        return ExecutionResult(true, std::make_unique<v8::Global<v8::Value>>(
+                                         GetIsolate(), hValue));
       }
     }
     return ExecutionResult(
-        false, std::make_unique<CFXJSE_Value>(
+        false, std::make_unique<v8::Global<v8::Value>>(
                    GetIsolate(), CreateReturnValue(GetIsolate(), &trycatch)));
   }
 
@@ -266,7 +273,7 @@ CFXJSE_Context::ExecutionResult CFXJSE_Context::ExecuteScript(
     if (hWrapperFn->Call(hContext, hNewThis, 1, rgArgs).ToLocal(&hValue)) {
       DCHECK(!trycatch.HasCaught());
       return ExecutionResult(
-          true, std::make_unique<CFXJSE_Value>(GetIsolate(), hValue));
+          true, std::make_unique<v8::Global<v8::Value>>(GetIsolate(), hValue));
     }
   }
 
@@ -285,7 +292,7 @@ CFXJSE_Context::ExecutionResult CFXJSE_Context::ExecuteScript(
 #endif  // NDEBUG
 
   return ExecutionResult(
-      false, std::make_unique<CFXJSE_Value>(
+      false, std::make_unique<v8::Global<v8::Value>>(
                  GetIsolate(), CreateReturnValue(GetIsolate(), &trycatch)));
 }
 
@@ -293,7 +300,7 @@ CFXJSE_Context::ExecutionResult::ExecutionResult() = default;
 
 CFXJSE_Context::ExecutionResult::ExecutionResult(
     bool sts,
-    std::unique_ptr<CFXJSE_Value> val)
+    std::unique_ptr<v8::Global<v8::Value>> val)
     : status(sts), value(std::move(val)) {}
 
 CFXJSE_Context::ExecutionResult::ExecutionResult(
