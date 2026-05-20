@@ -145,7 +145,7 @@ static v8::Local<v8::Function> NewBoundFunction(
 }
 
 CFXJSE_Engine::CFXJSE_Engine(CXFA_Document* document, CJS_Runtime* fxjs_runtime)
-    : CFX_V8(fxjs_runtime->GetIsolate()),
+    : CFX_IsolateWrapper(fxjs_runtime->GetIsolate()),
       subordinate_runtime_(fxjs_runtime),
       document_(document),
       js_context_(CFXJSE_Context::Create(fxjs_runtime->GetIsolate(),
