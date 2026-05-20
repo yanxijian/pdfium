@@ -22,6 +22,29 @@
       },
       "revId": "704ac881729b8e416cca41f05c45ff2c3446ce2d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07cd3290_59517d2f",
+        "filename": "fxjs/xfa/cfxjse_engine.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-20T21:23:13Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by autoreview issue finding: Since `v8::Global` is now being instantiated directly on the stack, you can skip the local variable entirely and return it directly, similar to how it\u0027s done in `cfxjse_context.cpp`:\\n```cpp\\n      return CFXJSE_Context::ExecutionResult(\\n          false,\\n          v8::Global\u003cv8::Value\u003e(GetIsolate(),\\n                                fxv8::NewUndefinedHelper(GetIsolate())));\\n```",
+      "range": {
+        "startLine": 209,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 0
+      },
+      "revId": "704ac881729b8e416cca41f05c45ff2c3446ce2d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
