@@ -778,7 +778,7 @@ void CFXJSE_ResolveProcessor::DoPredicateFilter(v8::Isolate* pIsolate,
     {
       CFXJSE_ScopeUtil_IsolateHandleRootContext scope(pIsolate);
       v8::Local<v8::Value> local_val =
-          v8::Local<v8::Value>::New(pIsolate, *exec_result.value);
+          v8::Local<v8::Value>::New(pIsolate, exec_result.value);
       bool_val = fxv8::ReentrantToBooleanHelper(pIsolate, local_val);
     }
     if (!bool_val) {
