@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03977f74_61a4220a",
+        "filename": "fxjs/xfa/cfxjse_resolveprocessor.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 781,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-20T21:05:26Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by autoreview issue finding: It is safer to check whether `exec_result.value` is null or holds an empty `v8::Global` before dereferencing it and creating a `v8::Local`.\n\nIf `exec_result.value` is null, `*exec_result.value` will cause a crash. If the `Global` is empty, `local_val` will be empty, which could lead to a crash when passed to `fxv8::ReentrantToBooleanHelper` (as most V8 functions do not handle empty Locals gracefully).\n\nConsider using the same pattern here as in `cxfa_node.cpp`:\n```cpp\nif (exec_result.value \u0026\u0026 !exec_result.value-\u003eIsEmpty()) {\n  CFXJSE_ScopeUtil_IsolateHandleRootContext scope(pIsolate);\n  v8::Local\u003cv8::Value\u003e local_val \u003d\n      v8::Local\u003cv8::Value\u003e::New(pIsolate, *exec_result.value);\n  bool_val \u003d fxv8::ReentrantToBooleanHelper(pIsolate, local_val);\n}\n```",
+      "range": {
+        "startLine": 781,
+        "startChar": 0,
+        "endLine": 781,
+        "endChar": 0
+      },
+      "revId": "3b4e24a2e6cb4ba40070e3c169624b785feffe1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
