@@ -393,18 +393,30 @@ RetainPtr<CFX_Face> CFX_Face::New(RetainPtr<Retainable> cache_entry,
 }
 
 bool CFX_Face::HasGlyphNames() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return !!(GetRec()->face_flags & FT_FACE_FLAG_GLYPH_NAMES);
 }
 
 bool CFX_Face::IsTtOt() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return !!(GetRec()->face_flags & FT_FACE_FLAG_SFNT);
 }
 
 ByteString CFX_Face::GetFontFormat() {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return ByteString(FT_Get_Font_Format(GetRec()));
 }
 
 bool CFX_Face::IsTricky() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return !!(GetRec()->face_flags & FT_FACE_FLAG_TRICKY);
 }
 
@@ -420,6 +432,9 @@ bool CFX_Face::IsFixedWidth() const {
 
 #if defined(PDF_ENABLE_XFA)
 bool CFX_Face::IsScalable() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return !!(GetRec()->face_flags & FT_FACE_FLAG_SCALABLE);
 }
 #endif
@@ -452,11 +467,20 @@ ByteString CFX_Face::GetFamilyName() const {
     skia_typeface_->getFamilyName(&name);
     CHECK_EQ(ft_result, ByteString(name.c_str()));
   }
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    rust::Str name = skrifa_font_->font->family_name();
+    CHECK_EQ(ft_result, ByteString(name.data(), name.size()));
+  }
+#endif
 #endif
   return ft_result;
 }
 
 ByteString CFX_Face::GetStyleName() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return ByteString(GetRec()->style_name);
 }
 
@@ -489,6 +513,12 @@ uint16_t CFX_Face::GetUnitsPerEm() const {
     CHECK_EQ(ft_result,
              pdfium::checked_cast<uint16_t>(skia_typeface_->getUnitsPerEm()));
   }
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result, pdfium::checked_cast<uint16_t>(
+                            skrifa_font_->font->units_per_em()));
+  }
+#endif
 #endif
   return ft_result;
 }
@@ -503,6 +533,12 @@ int16_t CFX_Face::GetAscender() const {
     // Freetype ascender is often exactly -metrics.fAscent.
     CHECK_EQ(ft_result, static_cast<int16_t>(-metrics.fAscent));
   }
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result,
+             pdfium::checked_cast<int16_t>(skrifa_font_->font->ascent()));
+  }
+#endif
 #endif
   return ft_result;
 }
@@ -517,6 +553,12 @@ int16_t CFX_Face::GetDescender() const {
     // Freetype descender is often exactly -metrics.fDescent.
     CHECK_EQ(ft_result, static_cast<int16_t>(-metrics.fDescent));
   }
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result,
+             pdfium::checked_cast<int16_t>(skrifa_font_->font->descent()));
+  }
+#endif
 #endif
   return ft_result;
 }
@@ -596,6 +638,12 @@ int CFX_Face::GetGlyphCount() const {
   if (skia_typeface_) {
     CHECK_EQ(ft_result, skia_typeface_->countGlyphs());
   }
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result,
+             pdfium::checked_cast<int>(skrifa_font_->font->num_glyphs()));
+  }
+#endif
 #endif
   return ft_result;
 }
@@ -608,6 +656,9 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
     int dest_width,
     FontAntiAliasingMode anti_alias,
     const CFX_SubstFont* subst_font) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_Matrix ft_matrix;
   ft_matrix.xx = matrix.a / 64 * 65536;
   ft_matrix.xy = matrix.c / 64 * 65536;
@@ -734,6 +785,9 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPath(
     int dest_width,
     bool is_vertical,
     const CFX_SubstFont* subst_font) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_FaceRec* rec = GetRec();
   FT_Set_Pixel_Sizes(rec, 0, 64);
   FT_Matrix ft_matrix = {65536, 0, 0, 65536};
@@ -856,6 +910,9 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
 }
 
 ByteString CFX_Face::GetGlyphName(uint32_t glyph_index) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   char name[256] = {};
   FT_Get_Glyph_Name(GetRec(), glyph_index, name, sizeof(name));
   name[255] = 0;
@@ -889,10 +946,16 @@ int CFX_Face::GetCharIndex(uint32_t code) {
 }
 
 int CFX_Face::GetNameIndex(const char* name) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return FT_Get_Name_Index(GetRec(), name);
 }
 
 int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_Int32 args = FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH;
   if (!scale) {
     args |= FT_LOAD_NO_SCALE;
@@ -916,12 +979,18 @@ ByteString CFX_Face::GetPostscriptName() {
 }
 
 CFX_Size CFX_Face::GetPixelSize() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   int pixel_size_x = GetRec()->size->metrics.x_ppem;
   int pixel_size_y = GetRec()->size->metrics.y_ppem;
   return {pixel_size_x, pixel_size_y};
 }
 
 std::optional<FX_RECT> CFX_Face::GetFontGlyphBBox(uint32_t glyph_index) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   if (IsTricky()) {
     int error = FT_Set_Char_Size(GetRec(), 0, 1000 * 64, 72, 72);
     if (error) {
@@ -962,6 +1031,9 @@ std::optional<FX_RECT> CFX_Face::GetFontGlyphBBox(uint32_t glyph_index) {
 }
 
 FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FX_RECT rect;
   FT_FaceRec* rec = GetRec();
   if (IsTricky()) {
@@ -1006,6 +1078,9 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
 }
 
 FX_RECT CFX_Face::GetGlyphBBox() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   const auto* glyph = GetRec()->glyph;
   pdfium::ClampedNumeric<FT_Pos> left = glyph->metrics.horiBearingX;
   pdfium::ClampedNumeric<FT_Pos> top = glyph->metrics.horiBearingY;
@@ -1018,6 +1093,9 @@ FX_RECT CFX_Face::GetGlyphBBox() const {
 
 std::vector<CharCodeAndIndex> CFX_Face::GetCharCodesAndIndices(
     char32_t max_char) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   CharCodeAndIndex char_code_and_index;
   char_code_and_index.char_code = static_cast<uint32_t>(
       FT_Get_First_Char(GetRec(), &char_code_and_index.glyph_index));
@@ -1080,6 +1158,9 @@ pdfium::span<const FT_CharMap> CFX_Face::GetCharMaps() const {
 }
 
 void CFX_Face::SetCharMap(CharMap map) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_Set_Charmap(GetRec(), static_cast<FT_CharMap>(map));
 }
 
@@ -1090,18 +1171,27 @@ void CFX_Face::SetCharMapByIndex(size_t index) {
 }
 
 bool CFX_Face::SelectCharMap(fxge::FontEncoding encoding) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_Error error = FT_Select_Charmap(GetRec(), ToFTEncoding(encoding));
   return !error;
 }
 
 #if defined(PDF_ENABLE_XFA)
 int CFX_Face::GetNumFaces() const {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   return pdfium::checked_cast<int>(GetRec()->num_faces);
 }
 #endif
 
 #if BUILDFLAG(IS_WIN)
 bool CFX_Face::CanEmbed() {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   FT_UShort fstype = FT_Get_FSType_Flags(GetRec());
   return (fstype & (FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING |
                     FT_FSTYPE_BITMAP_EMBEDDING_ONLY)) == 0;
@@ -1142,6 +1232,9 @@ CFX_Face::~CFX_Face() = default;
 void CFX_Face::AdjustVariationParams(int glyph_index,
                                      int dest_width,
                                      int weight) {
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  // No known equivalent.
+#endif
   DCHECK_GE(dest_width, 0);
 
   FT_FaceRec* rec = GetRec();
