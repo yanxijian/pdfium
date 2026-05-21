@@ -1143,8 +1143,25 @@ int CFX_Face::GetNumFaces() const {
 #if BUILDFLAG(IS_WIN)
 bool CFX_Face::CanEmbed() {
   FT_UShort fstype = FT_Get_FSType_Flags(GetRec());
-  return (fstype & (FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING |
-                    FT_FSTYPE_BITMAP_EMBEDDING_ONLY)) == 0;
+  bool ft_result = (fstype & (FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING |
+                              FT_FSTYPE_BITMAP_EMBEDDING_ONLY)) == 0;
+
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  bool skrifa_result = false;
+  uint16_t fs_type = 0;
+  pdfium::span<const uint8_t> data = GetData();
+  if (skrifa::get_os2_fs_type(
+          rust::Slice<const uint8_t>(data.data(), data.size()), fs_type)) {
+    // FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING = 0x0002
+    // FT_FSTYPE_BITMAP_EMBEDDING_ONLY = 0x0200
+    skrifa_result = (fs_type & (0x0002 | 0x0200)) == 0;
+  }
+  CHECK_EQ(ft_result, skrifa_result);
+#endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#endif  // defined(PDF_ENABLE_FONTATIONS)
+
+  return ft_result;
 }
 #endif
 
