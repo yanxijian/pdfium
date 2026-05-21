@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a086d39b_3bcdddd8",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 726,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-21T20:17:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36e2a896_d826d2e6",
+      "range": {
+        "startLine": 726,
+        "startChar": 0,
+        "endLine": 726,
+        "endChar": 0
+      },
+      "revId": "9357653c07ac31d4f5da72318a3c17152135bb19",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2cb3d51_7cecc6a0",
@@ -47,6 +71,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "faf03763_7c2320a2",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 820,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-21T20:17:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2cb3d51_7cecc6a0",
+      "range": {
+        "startLine": 820,
+        "startChar": 0,
+        "endLine": 820,
+        "endChar": 0
+      },
+      "revId": "9357653c07ac31d4f5da72318a3c17152135bb19",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f927d09_3b19e0c0",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-04-21T23:03:37Z",
       "side": 1,
       "message": "You don\u0027t need to include `cxx.h` here since `PsFont` is only used as a pointer and you\u0027ve already forward-declared it immediately below. Removing this will prevent polluting all files that include `cfx_face.h` with the large `cxx.h` header.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 0
+      },
+      "revId": "9357653c07ac31d4f5da72318a3c17152135bb19",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7916d354_f6675d89",
+        "filename": "core/fxge/cfx_face.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-21T20:17:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f927d09_3b19e0c0",
       "range": {
         "startLine": 42,
         "startChar": 0,
