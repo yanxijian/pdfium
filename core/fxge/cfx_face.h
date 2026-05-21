@@ -27,12 +27,8 @@
 #endif
 
 #if defined(PDF_ENABLE_FONTATIONS)
-struct SkrifaFontHolder;
+#include "third_party/rust/cxx/v1/cxx.h"
 #endif
-
-namespace fxge {
-enum class FontEncoding : uint32_t;
-}
 
 class CFX_GlyphBitmap;
 class CFX_Path;
@@ -41,6 +37,14 @@ class CFX_SubstFont;
 #if defined(PDF_USE_SKIA)
 class SkTypeface;
 #endif
+
+#if defined(PDF_ENABLE_FONTATIONS)
+struct SkrifaFontHolder;
+#endif
+
+namespace fxge {
+enum class FontEncoding : uint32_t;
+}  // namespace fxge
 
 class CFX_Face final : public Retainable, public Observable {
  public:
