@@ -375,6 +375,7 @@ test("pdfium_embeddertests") {
   sources = [ "testing/embedder_test_main.cpp" ]
   deps = [
     ":pdfium_embeddertest_deps",
+    "brotli:embeddertests",
     "core/fpdfapi/edit:embeddertests",
     "core/fpdfapi/parser:embeddertests",
     "core/fpdfapi/render:embeddertests",

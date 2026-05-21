@@ -1,0 +1,28 @@
+# Copyright 2026 The PDFium Authors
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/sanitizers/sanitizers.gni")
+import("//build_overrides/build.gni")
+import("../pdfium.gni")
+import("../testing/test.gni")
+
+pdfium_embeddertest_source_set("embeddertests") {
+  pdfium_root_dir = ".."
+  testonly = true
+  sources = [ "brotli_embeddertest.cpp" ]
+  deps = [
+    "../:pdfium_public_headers",
+    "../core/fdrm",
+    "../core/fxcrt",
+    "../core/fxge",
+    "../fpdfsdk",
+    "../third_party/brotli",
+  ]
+  configs = [
+    "../:pdfium_strict_config",
+    "../:pdfium_noshorten_config",
+    ":pdfium_test_config",
+  ]
+  visibility = [ "../*" ]
+}
