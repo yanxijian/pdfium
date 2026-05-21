@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "219f6537_9e9ec9f7",
+        "filename": "brotli/BUILD.gn",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-21T16:25:29Z",
+      "side": 1,
+      "message": "The code probably should go in core/fxcodec/brotli.",
+      "revId": "bc78cf9eca2f674ebf4865cddf23df6816c30768",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
