@@ -78,7 +78,7 @@ mod skrifa_ffi {
     }
 
     unsafe extern "C++" {
-        include!("outlines.h");
+        include!("core/fxge/skrifa/src/outlines.h");
 
         fn run(font_path: &str);
     }
@@ -209,6 +209,7 @@ impl PsFont<'_> {
     fn code_to_gid(&self, code: u8) -> u32 {
         let gid = match self {
             Self::Type1(type1) => type1.encoding().and_then(|encoding| encoding.map(code)),
+            Self::Cff(cff) => cff.encoding.as_ref().and_then(|encoding| encoding.map(code)),
             Self::Cff(cff) => cff.encoding.as_ref().and_then(|encoding| encoding.map(code)),
             Self::Error => return 0,
         };
