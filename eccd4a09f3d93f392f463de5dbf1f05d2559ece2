@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77c93375_ea947bd8",
+        "filename": "core/fxge/DEPS",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-21T23:32:42Z",
+      "side": 1,
+      "message": "Replace line 2.",
+      "revId": "eccd4a09f3d93f392f463de5dbf1f05d2559ece2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
