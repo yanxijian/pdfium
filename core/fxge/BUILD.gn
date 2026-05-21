@@ -220,6 +220,15 @@ source_set("fxge") {
     configs -= [ "//build/config/win:lean_and_mean" ]
   }
 
+  if (pdf_enable_fontations) {
+    deps += [
+      ":skrifa_cxx",
+      ":skrifa_cxx_cpp",
+      "//build/rust:cxx_cppdeps",
+    ]
+    configs += [ ":skrifa_cxx_config" ]
+  }
+
   visibility = [ "../../*" ]
 }
 

@@ -78,7 +78,11 @@ mod skrifa_ffi {
     }
 
     unsafe extern "C++" {
+<<<<<<< HEAD
+        include!("core/fxge/skrifa/src/outlines.h");
+=======
         include!("outlines.h");
+>>>>>>> refs/remotes/origin/main
 
         fn run(font_path: &str);
     }
@@ -106,6 +110,26 @@ pub fn new_ps_font(data: &[u8]) -> Box<PsFont<'_>> {
         let meta = cff.metadata();
         let charset = cff.charset();
         let encoding = cff.encoding();
+<<<<<<< HEAD
+        let subfonts = (0..cff.num_subfonts())
+            .map(|i| cff.subfont(i, &[]).ok())
+            .collect();
+        let unicode_cmap = if let Some(charset) = charset.as_ref() {
+            Some(PsCharmap::from_glyph_names(charset.iter().filter_map(
+                |(gid, sid)| Some((gid, core::str::from_utf8(cff.string(sid)?).ok()?)),
+            )))
+        } else {
+            None
+        };
+        PsFont::Cff(CffFont {
+            font: cff,
+            meta,
+            charset,
+            encoding,
+            unicode_cmap,
+            subfonts,
+        })
+=======
         let subfonts = (0..cff.num_subfonts()).map(|i| cff.subfont(i, &[]).ok()).collect();
         let unicode_cmap = if let Some(charset) = charset.as_ref() {
             Some(PsCharmap::from_glyph_names(charset.iter().filter_map(|(gid, sid)| {
@@ -115,6 +139,7 @@ pub fn new_ps_font(data: &[u8]) -> Box<PsFont<'_>> {
             None
         };
         PsFont::Cff(CffFont { font: cff, meta, charset, encoding, unicode_cmap, subfonts })
+>>>>>>> refs/remotes/origin/main
     } else if let Ok(type1) = Type1Font::new(data) {
         PsFont::Type1(type1)
     } else {
@@ -131,7 +156,15 @@ impl PsFont<'_> {
     fn name(&self) -> &str {
         match self {
             Self::Type1(type1) => type1.name().unwrap_or_default(),
+<<<<<<< HEAD
+            Self::Cff(cff) => cff
+                .meta
+                .as_ref()
+                .and_then(|meta| meta.name())
+                .unwrap_or_default(),
+=======
             Self::Cff(cff) => cff.meta.as_ref().and_then(|meta| meta.name()).unwrap_or_default(),
+>>>>>>> refs/remotes/origin/main
             Self::Error => "",
         }
     }
@@ -139,9 +172,17 @@ impl PsFont<'_> {
     fn family_name(&self) -> &str {
         match self {
             Self::Type1(type1) => type1.family_name().unwrap_or_default(),
+<<<<<<< HEAD
+            Self::Cff(cff) => cff
+                .meta
+                .as_ref()
+                .and_then(|meta| meta.family_name())
+                .unwrap_or_default(),
+=======
             Self::Cff(cff) => {
                 cff.meta.as_ref().and_then(|meta| meta.family_name()).unwrap_or_default()
             }
+>>>>>>> refs/remotes/origin/main
             Self::Error => "",
         }
     }
@@ -157,7 +198,15 @@ impl PsFont<'_> {
     fn ascent(&self) -> f32 {
         let bbox = match self {
             Self::Type1(type1) => type1.bbox(),
+<<<<<<< HEAD
+            Self::Cff(cff) => cff
+                .meta
+                .as_ref()
+                .map(|meta| meta.bbox())
+                .unwrap_or_default(),
+=======
             Self::Cff(cff) => cff.meta.as_ref().map(|meta| meta.bbox()).unwrap_or_default(),
+>>>>>>> refs/remotes/origin/main
             Self::Error => return 0.0,
         };
         bbox.y_max.to_f32()
@@ -166,7 +215,15 @@ impl PsFont<'_> {
     fn descent(&self) -> f32 {
         let bbox = match self {
             Self::Type1(type1) => type1.bbox(),
+<<<<<<< HEAD
+            Self::Cff(cff) => cff
+                .meta
+                .as_ref()
+                .map(|meta| meta.bbox())
+                .unwrap_or_default(),
+=======
             Self::Cff(cff) => cff.meta.as_ref().map(|meta| meta.bbox()).unwrap_or_default(),
+>>>>>>> refs/remotes/origin/main
             Self::Error => return 0.0,
         };
         bbox.y_min.to_f32()
@@ -209,7 +266,14 @@ impl PsFont<'_> {
     fn code_to_gid(&self, code: u8) -> u32 {
         let gid = match self {
             Self::Type1(type1) => type1.encoding().and_then(|encoding| encoding.map(code)),
+<<<<<<< HEAD
+            Self::Cff(cff) => cff
+                .encoding
+                .as_ref()
+                .and_then(|encoding| encoding.map(code)),
+=======
             Self::Cff(cff) => cff.encoding.as_ref().and_then(|encoding| encoding.map(code)),
+>>>>>>> refs/remotes/origin/main
             Self::Error => return 0,
         };
         let gid = gid.unwrap_or_default().to_u32();
@@ -255,7 +319,14 @@ impl PsFont<'_> {
             Self::Type1(type1) => type1.draw(gid.into(), ppem, outline).ok()??,
             Self::Cff(cff) => {
                 let gid = GlyphId::new(gid);
+<<<<<<< HEAD
+                let subfont = cff
+                    .subfonts
+                    .get(cff.font.subfont_index(gid)? as usize)?
+                    .as_ref()?;
+=======
                 let subfont = cff.subfonts.get(cff.font.subfont_index(gid)? as usize)?.as_ref()?;
+>>>>>>> refs/remotes/origin/main
                 cff.font.draw(subfont, gid, &[], ppem, outline).ok()??
             }
             Self::Error => return None,
@@ -274,7 +345,12 @@ impl Point {
 impl Outline {
     fn push<const N: usize>(&mut self, verb: PathVerb, points: [(f32, f32); N]) {
         self.verbs.push(verb);
+<<<<<<< HEAD
+        self.points
+            .extend(points.into_iter().map(|(x, y)| Point::new(x, y)));
+=======
         self.points.extend(points.into_iter().map(|(x, y)| Point::new(x, y)));
+>>>>>>> refs/remotes/origin/main
     }
 }
 
