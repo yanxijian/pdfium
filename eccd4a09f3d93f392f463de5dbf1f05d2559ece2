@@ -36,6 +36,47 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de57da06_ad675767",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:08:17Z",
+      "side": 1,
+      "message": "Note: this was a typo, and not built in old code, hee,",
+      "range": {
+        "startLine": 797,
+        "startChar": 12,
+        "endLine": 797,
+        "endChar": 49
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "15f3f1a7_acc45ccd",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxge/cfx_face.cpp",
+              "range": {
+                "startLine": 797,
+                "startChar": 0,
+                "endLine": 798,
+                "endChar": 0
+              },
+              "replacement": "#if defined(PDF_ENABLE_FONTATIONS)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "eccd4a09f3d93f392f463de5dbf1f05d2559ece2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "926c2332_1fd0e33c",
