@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "48203631_0e7ac81f",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:13:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a583debd_13adeb4b",
+      "range": {
+        "startLine": 27,
+        "startChar": 35,
+        "endLine": 27,
+        "endChar": 51
+      },
+      "revId": "181312e1947443ffc7052bb01d19d1a85fa2b1e7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1cea7f7_17d8cf4d",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-05-22T16:47:30Z",
       "side": 1,
       "message": "ASSERT_TRUE()? Also line 43.",
+      "revId": "181312e1947443ffc7052bb01d19d1a85fa2b1e7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d31b63b_151ceb35",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:13:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b1cea7f7_17d8cf4d",
       "revId": "181312e1947443ffc7052bb01d19d1a85fa2b1e7",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
