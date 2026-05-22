@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "786d46e2_00e50733",
+        "filename": "core/fxge/DEPS",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:07:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77c93375_ea947bd8",
+      "revId": "eccd4a09f3d93f392f463de5dbf1f05d2559ece2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "926c2332_1fd0e33c",
@@ -35,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bde7236_c287f4b6",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:07:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "926c2332_1fd0e33c",
+      "revId": "eccd4a09f3d93f392f463de5dbf1f05d2559ece2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd853529_e625d180",
@@ -48,6 +84,30 @@
       "writtenOn": "2026-05-21T23:36:25Z",
       "side": 1,
       "message": "Maybe make this a TODO?",
+      "range": {
+        "startLine": 855,
+        "startChar": 9,
+        "endLine": 855,
+        "endChar": 13
+      },
+      "revId": "eccd4a09f3d93f392f463de5dbf1f05d2559ece2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c4f958b_0d0a2637",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 855,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-22T17:07:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd853529_e625d180",
       "range": {
         "startLine": 855,
         "startChar": 9,
