@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 
+#include "core/fxge/cfx_font.h"
 #include "core/fxge/skrifa/src/main.rs.h"
 #include "core/fxge/skrifa/src/outlines.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -60,4 +61,32 @@ TEST(FxSkrifaTest, TestGetOs2FsType) {
   uint16_t fs_type = 0x1234;  // Show that is is updated.
   EXPECT_TRUE(skrifa::get_os2_fs_type(slice, fs_type));
   EXPECT_EQ(fs_type, 0u);
+}
+
+TEST(FxSkrifaTest, TestGetCharCodesAndIndices) {
+  std::string font_path = PathService::GetTestFilePath("fonts/ahem/Ahem.ttf");
+  std::ifstream input(font_path, std::ios::binary);
+  std::vector<char> bytes((std::istreambuf_iterator<char>(input)),
+                          (std::istreambuf_iterator<char>()));
+  input.close();
+
+  rust::Slice<const uint8_t> slice((const uint8_t*)bytes.data(), bytes.size());
+  auto results = skrifa::get_char_codes_and_indices(slice, 0xFFFF);
+  EXPECT_FALSE(results.empty());
+}
+
+TEST(FxSkrifaTest, TestCfxFontGetCharCodesAndIndices) {
+  std::string font_path = PathService::GetTestFilePath("fonts/ahem/Ahem.ttf");
+  std::ifstream input(font_path, std::ios::binary);
+  std::vector<uint8_t> bytes((std::istreambuf_iterator<char>(input)),
+                             (std::istreambuf_iterator<char>()));
+  input.close();
+
+  pdfium::span<const uint8_t> span =
+      UNSAFE_TODO(pdfium::span<const uint8_t>(bytes.data(), bytes.size()));
+  CFX_Font font;
+  ASSERT_TRUE(font.LoadFaceZeroFromSpan(span, /*force_vertical=*/false, 0));
+
+  auto results = font.GetCharCodesAndIndices(0xFFFF);
+  EXPECT_FALSE(results.empty());
 }
