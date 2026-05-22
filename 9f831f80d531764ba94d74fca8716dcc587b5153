@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a52e32fa_7c0b94ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4835280
+      },
+      "writtenOn": "2026-05-22T19:37:09Z",
+      "side": 1,
+      "message": "I updated this",
+      "parentUuid": "fc3a41ef_1567b19a",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 27
+      },
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9016f599_3ce7017a",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -37,6 +61,30 @@
       "writtenOn": "2026-05-22T19:07:13Z",
       "side": 1,
       "message": "Test naming convention: FPDFEditEmbedderTest.SetFontSize",
+      "range": {
+        "startLine": 24,
+        "startChar": 6,
+        "endLine": 24,
+        "endChar": 39
+      },
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5084331_fc152bd0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4835280
+      },
+      "writtenOn": "2026-05-22T19:37:09Z",
+      "side": 1,
+      "message": "I updated this",
+      "parentUuid": "9016f599_3ce7017a",
       "range": {
         "startLine": 24,
         "startChar": 6,
@@ -60,6 +108,41 @@
       "writtenOn": "2026-05-22T19:04:24Z",
       "side": 1,
       "message": "The expectation after uploading a new patchset to a CL is to reply to the unresolved comments. Comments are initially in a draft state. One has to use the reply button in the Gerrit UI to send out the drafts.\n\nI\u0027ve marked some of the comments as resolved.",
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7eee3842_dc10f9d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4835280
+      },
+      "writtenOn": "2026-05-22T19:37:09Z",
+      "side": 1,
+      "message": "I believe that everything is now resolved.",
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1664c0b_5529d012",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4835280
+      },
+      "writtenOn": "2026-05-22T19:37:09Z",
+      "side": 1,
+      "message": "Ah, I\u0027m still learning the way that things are done here. I will reply with comments next time. I think that you noted everything as resolved here, right?",
+      "parentUuid": "553314f3_56f845ff",
       "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
