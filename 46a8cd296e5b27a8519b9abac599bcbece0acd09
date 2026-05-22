@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97f3fcab_151df87b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "Please add yourself to the AUTHORS file.",
+      "revId": "46a8cd296e5b27a8519b9abac599bcbece0acd09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4e1c513_57474bee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "Please wrap at 72 columns. (73 here)",
+      "revId": "46a8cd296e5b27a8519b9abac599bcbece0acd09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12768189_d5fe9201",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "More parenthesis.",
+      "range": {
+        "startLine": 25,
+        "startChar": 40,
+        "endLine": 25,
+        "endChar": 55
+      },
+      "revId": "46a8cd296e5b27a8519b9abac599bcbece0acd09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

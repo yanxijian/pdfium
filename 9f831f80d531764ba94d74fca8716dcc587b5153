@@ -48,6 +48,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "576b4e95_aca66606",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a52e32fa_7c0b94ef",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 27
+      },
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9016f599_3ce7017a",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "I updated this",
       "parentUuid": "9016f599_3ce7017a",
+      "range": {
+        "startLine": 24,
+        "startChar": 6,
+        "endLine": 24,
+        "endChar": 39
+      },
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d172bb8_113591f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5084331_fc152bd0",
       "range": {
         "startLine": 24,
         "startChar": 6,
@@ -143,6 +191,24 @@
       "side": 1,
       "message": "Ah, I\u0027m still learning the way that things are done here. I will reply with comments next time. I think that you noted everything as resolved here, right?",
       "parentUuid": "553314f3_56f845ff",
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e625ee0_c4d92974",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:45:51Z",
+      "side": 1,
+      "message": "You can also mark comments as resolved.",
+      "parentUuid": "7eee3842_dc10f9d5",
       "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
