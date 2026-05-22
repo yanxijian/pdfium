@@ -375,8 +375,8 @@ RetainPtr<CFX_Face> CFX_Face::New(RetainPtr<Retainable> cache_entry,
   }
 #if defined(PDF_ENABLE_FONTATIONS)
   pdfium::span<const uint8_t> span = font_stream->span();
-  auto skrifa_font = std::make_unique<SkrifaFontHolder>(skrifa::new_ps_font(
-      rust::Slice<const uint8_t>(span.data(), span.size())));
+  auto skrifa_font = std::make_unique<SkrifaFontHolder>(
+      skrifa::new_ps_font(rust::Slice(span)));
 #endif
 
   // Private ctor.
@@ -462,8 +462,7 @@ ByteString CFX_Face::GetStyleName() const {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #if defined(PDF_ENABLE_FONTATIONS)
   pdfium::span<const uint8_t> data = GetData();
-  rust::String skrifa_result = skrifa::get_style_name(
-      rust::Slice<const uint8_t>(data.data(), data.size()));
+  rust::String skrifa_result = skrifa::get_style_name(rust::Slice(data));
   if (!ft_result.IsEmpty() && !skrifa_result.empty()) {
     CHECK_EQ(ft_result, ByteString(skrifa_result.c_str()));
   }
@@ -586,8 +585,7 @@ std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
   std::optional<std::array<uint32_t, 4>> skrifa_result;
   pdfium::span<const uint8_t> data = GetData();
   skrifa::UnicodeRange range;
-  if (skrifa::get_os2_unicode_range(
-          rust::Slice<const uint8_t>(data.data(), data.size()), range)) {
+  if (skrifa::get_os2_unicode_range(rust::Slice(data), range)) {
     skrifa_result = std::array<uint32_t, 4>{range.range1, range.range2,
                                             range.range3, range.range4};
   }
@@ -619,8 +617,7 @@ std::optional<std::array<uint32_t, 2>> CFX_Face::GetOs2CodePageRange() {
   std::optional<std::array<uint32_t, 2>> skrifa_result;
   pdfium::span<const uint8_t> data = GetData();
   skrifa::CodePageRange range;
-  if (skrifa::get_os2_code_page_range(
-          rust::Slice<const uint8_t>(data.data(), data.size()), range)) {
+  if (skrifa::get_os2_code_page_range(rust::Slice(data), range)) {
     skrifa_result = std::array<uint32_t, 2>{range.range1, range.range2};
   }
 
@@ -647,8 +644,7 @@ std::optional<std::array<uint8_t, 2>> CFX_Face::GetOs2Panose() {
   std::optional<std::array<uint8_t, 2>> skrifa_result;
   pdfium::span<const uint8_t> data = GetData();
   skrifa::Os2Panose panose;
-  if (skrifa::get_os2_panose(
-          rust::Slice<const uint8_t>(data.data(), data.size()), panose)) {
+  if (skrifa::get_os2_panose(rust::Slice(data), panose)) {
     skrifa_result = std::array<uint8_t, 2>{panose.b0, panose.b1};
   }
 
@@ -1014,8 +1010,8 @@ ByteString CFX_Face::GetGlyphName(uint32_t glyph_index) {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #if defined(PDF_ENABLE_FONTATIONS)
   pdfium::span<const uint8_t> data = GetData();
-  rust::String skrifa_result = skrifa::get_glyph_name(
-      rust::Slice<const uint8_t>(data.data(), data.size()), glyph_index);
+  rust::String skrifa_result =
+      skrifa::get_glyph_name(rust::Slice(data), glyph_index);
   if (!ft_result.IsEmpty() && !skrifa_result.empty()) {
     CHECK_EQ(ft_result, ByteString(skrifa_result.c_str()));
   }
@@ -1057,8 +1053,7 @@ int CFX_Face::GetNameIndex(const char* name) {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #if defined(PDF_ENABLE_FONTATIONS)
   pdfium::span<const uint8_t> data = GetData();
-  uint32_t skrifa_result = skrifa::get_name_index(
-      rust::Slice<const uint8_t>(data.data(), data.size()), name);
+  uint32_t skrifa_result = skrifa::get_name_index(rust::Slice(data), name);
   CHECK_EQ(ft_result, static_cast<int>(skrifa_result));
 #endif  // defined(PDF_ENABLE_FONTATIONS)
 #endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
@@ -1232,9 +1227,8 @@ std::vector<CharCodeAndIndex> CFX_Face::GetCharCodesAndIndices(
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #if defined(PDF_ENABLE_FONTATIONS)
   pdfium::span<const uint8_t> data = GetData();
-  auto skrifa_result = skrifa::get_char_codes_and_indices(
-      rust::Slice<const uint8_t>(data.data(), data.size()), max_char);
-
+  auto skrifa_result =
+      skrifa::get_char_codes_and_indices(rust::Slice(data), max_char);
   if (results.size() == skrifa_result.size()) {
     for (size_t i = 0; i < results.size(); ++i) {
       CHECK_EQ(results[i].char_code, skrifa_result[i].char_code);
@@ -1324,8 +1318,7 @@ bool CFX_Face::CanEmbed() {
   bool skrifa_result = false;
   uint16_t fs_type = 0;
   pdfium::span<const uint8_t> data = GetData();
-  if (skrifa::get_os2_fs_type(
-          rust::Slice<const uint8_t>(data.data(), data.size()), fs_type)) {
+  if (skrifa::get_os2_fs_type(rust::Slice(data), fs_type)) {
     skrifa_result =
         (fs_type &
          (fxcrt::to_underlying(skrifa::FsType::RestrictedLicenseEmbedding) |
