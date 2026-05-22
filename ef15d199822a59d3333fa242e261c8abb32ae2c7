@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "308d3954_0d2f9deb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T00:41:07Z",
+      "side": 1,
+      "message": "Thanks for the extra details, but a lot of this is already in crbug.com/515079553. How about trimming this down to just the part about what this CL (Gerrit equivalent to Github PR) does?",
+      "revId": "ef15d199822a59d3333fa242e261c8abb32ae2c7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21d5e1b1_493ba4dc",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 2923,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T00:41:07Z",
+      "side": 1,
+      "message": "Can omit this comment.",
+      "revId": "ef15d199822a59d3333fa242e261c8abb32ae2c7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adfffd53_c099b349",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 2928,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T00:41:07Z",
+      "side": 1,
+      "message": "Use ScopedFPDFPageObject here to help document object ownership.",
+      "range": {
+        "startLine": 2928,
+        "startChar": 2,
+        "endLine": 2928,
+        "endChar": 17
+      },
+      "revId": "ef15d199822a59d3333fa242e261c8abb32ae2c7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "954131fb_e2165a45",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 2975,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T00:41:07Z",
+      "side": 1,
+      "message": "Can the code here call OpenScopedSavedDocument() and LoadScopedSavedPage(), so everything scoped and closes automatically? OpenSavedDocument() is now private, so this also does not compile.",
+      "revId": "ef15d199822a59d3333fa242e261c8abb32ae2c7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
