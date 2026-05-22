@@ -39,6 +39,57 @@
       "message": "This will never succeed.",
       "revId": "2bee0bbd0c20d6c5a85f5eabf48ec20d617f7200",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2339cb99_66bd7ea4",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T23:56:28Z",
+      "side": 1,
+      "message": "Forgot to mention this 3 CLs ago, but why not call GetFileContents() from testing/utils/file_util.h?",
+      "revId": "2bee0bbd0c20d6c5a85f5eabf48ec20d617f7200",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43ea5feb_4cd4de22",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T23:56:28Z",
+      "side": 1,
+      "message": "Should be able to verify the elements?",
+      "revId": "2bee0bbd0c20d6c5a85f5eabf48ec20d617f7200",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a8979b9_cbe79c85",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T23:56:28Z",
+      "side": 1,
+      "message": "This is a CFX_Font unit test.",
+      "revId": "2bee0bbd0c20d6c5a85f5eabf48ec20d617f7200",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
