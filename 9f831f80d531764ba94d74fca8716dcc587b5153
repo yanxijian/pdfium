@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "553314f3_56f845ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-22T19:04:24Z",
+      "side": 1,
+      "message": "The expectation after uploading a new patchset to a CL is to reply to the unresolved comments. Comments are initially in a draft state. One has to use the reply button in the Gerrit UI to send out the drafts.\n\nI\u0027ve marked some of the comments as resolved.",
+      "revId": "9f831f80d531764ba94d74fca8716dcc587b5153",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
