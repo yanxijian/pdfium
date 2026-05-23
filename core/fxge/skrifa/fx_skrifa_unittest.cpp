@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 
+#include "core/fxge/cfx_font.h"
 #include "core/fxge/skrifa/src/main.rs.h"
 #include "core/fxge/skrifa/src/outlines.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -60,4 +61,16 @@ TEST(FxSkrifaTest, TestGetOs2FsType) {
   uint16_t fs_type = 0x1234;  // Show that is is updated.
   EXPECT_TRUE(skrifa::get_os2_fs_type(slice, fs_type));
   EXPECT_EQ(fs_type, 0u);
+}
+
+TEST(FxSkrifaTest, TestGetCharCodesAndIndices) {
+  std::string font_path = PathService::GetTestFilePath("fonts/ahem/Ahem.ttf");
+  std::ifstream input(font_path, std::ios::binary);
+  std::vector<char> bytes((std::istreambuf_iterator<char>(input)),
+                          (std::istreambuf_iterator<char>()));
+  input.close();
+
+  rust::Slice<const uint8_t> slice((const uint8_t*)bytes.data(), bytes.size());
+  auto results = skrifa::get_char_codes_and_indices(slice, 0xFFFF);
+  EXPECT_FALSE(results.empty());
 }
