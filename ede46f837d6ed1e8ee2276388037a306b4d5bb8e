@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f729ddd0_c484ddb0",
+        "filename": "core/fxge/cfx_font_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-23T01:10:21Z",
+      "side": 1,
+      "message": "Not actually used.",
+      "revId": "ede46f837d6ed1e8ee2276388037a306b4d5bb8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22079fb6_7897349d",
+        "filename": "core/fxge/skrifa/fx_skrifa_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-23T01:10:21Z",
+      "side": 1,
+      "message": "ASSERT_EQ()",
+      "range": {
+        "startLine": 69,
+        "startChar": 2,
+        "endLine": 69,
+        "endChar": 11
+      },
+      "revId": "ede46f837d6ed1e8ee2276388037a306b4d5bb8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
