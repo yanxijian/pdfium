@@ -22,30 +22,22 @@ TEST(FxSkrifaTest, TestFoxitFixedCff) {
 
 TEST(FxSkrifaTest, TestGetOs2CodePageRange) {
   std::string font_path = PathService::GetTestFilePath("fonts/bug_2094.ttf");
-  std::ifstream input(font_path, std::ios::binary);
-  std::vector<char> bytes((std::istreambuf_iterator<char>(input)),
-                          (std::istreambuf_iterator<char>()));
-  input.close();
+  std::vector<uint8_t> bytes = GetFileContents(font_path.c_str());
 
-  rust::Slice<const uint8_t> slice(
-      reinterpret_cast<const uint8_t*>(bytes.data()), bytes.size());
   skrifa::CodePageRange range;
-  EXPECT_TRUE(skrifa::get_os2_code_page_range(slice, range));
+  EXPECT_TRUE(skrifa::get_os2_code_page_range(rust::Slice<const uint8_t>(bytes),
+                                              range));
   EXPECT_EQ(range.range1, 0u);
   EXPECT_EQ(range.range2, 0u);
 }
 
 TEST(FxSkrifaTest, TestGetOs2Panose) {
   std::string font_path = PathService::GetTestFilePath("fonts/bug_2094.ttf");
-  std::ifstream input(font_path, std::ios::binary);
-  std::vector<char> bytes((std::istreambuf_iterator<char>(input)),
-                          (std::istreambuf_iterator<char>()));
-  input.close();
+  std::vector<uint8_t> bytes = GetFileContents(font_path.c_str());
 
-  rust::Slice<const uint8_t> slice(
-      reinterpret_cast<const uint8_t*>(bytes.data()), bytes.size());
   skrifa::Os2Panose panose;
-  EXPECT_TRUE(skrifa::get_os2_panose(slice, panose));
+  EXPECT_TRUE(
+      skrifa::get_os2_panose(rust::Slice<const uint8_t>(bytes), panose));
   EXPECT_EQ(panose.b0, 2);
   EXPECT_EQ(panose.b1, 0);
 }
