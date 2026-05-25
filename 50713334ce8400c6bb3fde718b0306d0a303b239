@@ -16,6 +16,23 @@
       "message": "Ping",
       "revId": "50713334ce8400c6bb3fde718b0306d0a303b239",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cadae0dd_65d249e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-25T17:50:28Z",
+      "side": 1,
+      "message": "Need to update this CL and the chain as well",
+      "revId": "50713334ce8400c6bb3fde718b0306d0a303b239",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
