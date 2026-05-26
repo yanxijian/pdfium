@@ -22,6 +22,30 @@
       },
       "revId": "337f3395e4b83ac35f359744b4c277a47998c0b0",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "763c036b_2bc140ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-26T17:05:57Z",
+      "side": 1,
+      "message": "You\u0027d think I\u0027d know this by now.  Gah.  Done",
+      "parentUuid": "cb861d4a_d7c9c8ef",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "337f3395e4b83ac35f359744b4c277a47998c0b0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
