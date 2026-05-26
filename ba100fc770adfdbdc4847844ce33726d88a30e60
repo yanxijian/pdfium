@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c550be32_044a0f20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-26T15:13:11Z",
+      "side": 1,
+      "message": "Honestly feel this is a good idea - maybe we can revisit this eventually;\n\nit feels kind of wierd that the .cpp is fpdf_view while header is fpdfview.h",
+      "revId": "ba100fc770adfdbdc4847844ce33726d88a30e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
