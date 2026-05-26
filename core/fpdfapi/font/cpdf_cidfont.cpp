@@ -632,7 +632,7 @@ int CPDF_CIDFont::GetGlyphIndex(uint32_t unicode, bool* pVertGlyph) {
     *pVertGlyph = false;
   }
 
-  int index = font_.GetFace()->GetCharIndex(unicode);
+  int index = font_.GetCharIndex(unicode);
   if (unicode == pdfium::unicode::kBoxDrawingsLightVerical) {
     return index;
   }
