@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bb2fd46_4edf075f",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T19:02:26Z",
+      "side": 1,
+      "message": "Is this the same as FT_FACE_FLAG_SFNT?",
+      "range": {
+        "startLine": 409,
+        "startChar": 40,
+        "endLine": 409,
+        "endChar": 51
+      },
+      "revId": "1d10025937996eaeace3c600dd8669b6d4e904e1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
