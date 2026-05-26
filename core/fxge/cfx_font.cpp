@@ -14,6 +14,7 @@
 #include <utility>
 
 #include "build/build_config.h"
+#include "core/fxcrt/byteorder.h"
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/fx_codepage.h"
 #include "core/fxcrt/fx_stream.h"
@@ -165,6 +166,7 @@ void CFX_Font::SetFaceFromFont(const CFX_Font& that) {
 void CFX_Font::SetSubstFont(std::unique_ptr<CFX_SubstFont> subst) {
   subst_font_ = std::move(subst);
 }
+
 #endif  // defined(PDF_ENABLE_XFA) & !BUILDFLAG(IS_WIN)
 
 CFX_Font::~CFX_Font() {

@@ -19,6 +19,7 @@
 #include "core/fxcrt/observed_ptr.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
+#include "core/fxcrt/widestring.h"
 #include "core/fxge/freetype/fx_freetype.h"
 #include "core/fxge/fx_font.h"
 
@@ -90,6 +91,7 @@ class CFX_Face final : public Retainable, public Observable {
   // Returns the size of the data, or 0 on failure. Only write into `buffer` if
   // it is large enough to hold the data.
   size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
+  std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
 
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
 
@@ -145,6 +147,7 @@ class CFX_Face final : public Retainable, public Observable {
   bool IsScalable() const;
   int GetNumFaces() const;
   std::optional<std::array<uint32_t, 4>> GetOs2UnicodeRange();
+  std::vector<WideString> GetFamilyNames();
 #endif
 
 #if BUILDFLAG(IS_WIN)
