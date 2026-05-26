@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25b5082f_c20a69c0",
+        "filename": "core/fpdfapi/page/cpdf_contentmarks.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T20:54:25Z",
+      "side": 1,
+      "message": "Keep on std::move()-ing.",
+      "range": {
+        "startLine": 54,
+        "startChar": 30,
+        "endLine": 54,
+        "endChar": 34
+      },
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67e6f5ce_f6658969",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T20:54:25Z",
+      "side": 1,
+      "message": "both or multiple?",
+      "range": {
+        "startLine": 469,
+        "startChar": 75,
+        "endLine": 469,
+        "endChar": 79
+      },
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "445a6e22_4443b6de",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T20:54:25Z",
+      "side": 1,
+      "message": "Would be helpful to also document ownership for the two handles.",
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
