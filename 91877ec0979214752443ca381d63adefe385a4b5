@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f68ea0ac_f3af8c7a",
+        "filename": "core/fpdfapi/font/cpdf_cidfont.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 560,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T22:01:51Z",
+      "side": 1,
+      "message": "Or use `maybe_rect.value_or(...);`",
+      "revId": "91877ec0979214752443ca381d63adefe385a4b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
