@@ -11,6 +11,7 @@
 #include <utility>
 #include <vector>
 
+#include "core/fxcrt/byteorder.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/check_op.h"
 #include "core/fxcrt/compiler_specific.h"
@@ -20,6 +21,8 @@
 #include "core/fxcrt/numerics/safe_math.h"
 #include "core/fxcrt/to_underlying.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxge/cfx_cttgsubtable.h"
+#include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_fontmgr.h"
 #include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_glyphbitmap.h"
@@ -606,6 +609,20 @@ size_t CFX_Face::GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer) {
   return ft_result;
 }
 
+std::unique_ptr<CFX_CTTGSUBTable> CFX_Face::ParseGSUBTable() {
+  static constexpr uint32_t kGsubTag =
+      CFX_FontMapper::MakeTag('G', 'S', 'U', 'B');
+  size_t length = GetSfntTable(kGsubTag, {});
+  if (!length) {
+    return nullptr;
+  }
+  auto sub_data = FixedSizeDataVector<uint8_t>::Uninit(length);
+  if (!GetSfntTable(kGsubTag, sub_data.span())) {
+    return nullptr;
+  }
+  return std::make_unique<CFX_CTTGSUBTable>(sub_data.span());
+}
+
 #if defined(PDF_ENABLE_XFA)
 std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
   auto* os2 = static_cast<TT_OS2*>(FT_Get_Sfnt_Table(GetRec(), FT_SFNT_OS2));
@@ -637,6 +654,63 @@ std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
 #endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 
   return ft_result;
+}
+
+std::vector<WideString> CFX_Face::GetFamilyNames() {
+  std::vector<WideString> results;
+  static constexpr uint32_t kNameTag =
+      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+
+  DataVector<uint8_t> table;
+  size_t table_size = GetSfntTable(kNameTag, table);
+  if (!table_size) {
+    return results;
+  }
+  table.resize(table_size);
+  if (!GetSfntTable(kNameTag, table)) {
+    return results;
+  }
+
+  pdfium::span<const uint8_t> name_table = table;
+  auto read_u16 = [](pdfium::span<const uint8_t> data, size_t offset) {
+    return fxcrt::GetUInt16MSBFirst(data.subspan(offset).first<2u>());
+  };
+
+  uint16_t nNameCount = read_u16(name_table, 2);
+  pdfium::span<const uint8_t> str = name_table.subspan(read_u16(name_table, 4));
+  pdfium::span<const uint8_t> name_record = name_table.subspan<6u>();
+  for (uint16_t i = 0; i < nNameCount; ++i) {
+    uint16_t nNameID = read_u16(name_table, i * 12 + 6);
+    if (nNameID != 1) {
+      continue;
+    }
+
+    uint16_t nPlatformID = read_u16(name_record, i * 12);
+    uint16_t nNameLength = read_u16(name_record, i * 12 + 8);
+    uint16_t nNameOffset = read_u16(name_record, i * 12 + 10);
+    if (nPlatformID != 1) {
+      WideString wsFamily;
+      for (uint16_t j = 0; j < nNameLength / 2; ++j) {
+        wchar_t wcTemp = read_u16(str, nNameOffset + j * 2);
+        wsFamily += wcTemp;
+      }
+      results.push_back(wsFamily);
+      continue;
+    }
+
+    // Avoid out of bounds crashes if the length and/or offset are wrong.
+    if (static_cast<size_t>(nNameLength) + nNameOffset >= str.size()) {
+      continue;
+    }
+
+    WideString wsFamily;
+    for (uint16_t j = 0; j < nNameLength; ++j) {
+      wchar_t wcTemp = str[nNameOffset + j];
+      wsFamily += wcTemp;
+    }
+    results.push_back(wsFamily);
+  }
+  return results;
 }
 #endif  // defined(PDF_ENABLE_XFA)
 
