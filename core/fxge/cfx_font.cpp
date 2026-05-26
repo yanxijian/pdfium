@@ -15,10 +15,12 @@
 
 #include "build/build_config.h"
 #include "core/fxcrt/data_vector.h"
+#include "core/fxcrt/fixed_size_data_vector.h"
 #include "core/fxcrt/fx_codepage.h"
 #include "core/fxcrt/fx_stream.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxge/cfx_cttgsubtable.h"
 #include "core/fxge/cfx_face.h"
 #include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_fontmgr.h"
@@ -173,6 +175,25 @@ CFX_Font::~CFX_Font() {
 #if BUILDFLAG(IS_APPLE)
   ReleasePlatformResource();
 #endif
+}
+
+std::unique_ptr<CFX_CTTGSUBTable> CFX_Font::ParseGSUBTable() const {
+  static constexpr uint32_t kGsubTag =
+      CFX_FontMapper::MakeTag('G', 'S', 'U', 'B');
+  if (!face_) {
+    return nullptr;
+  }
+  size_t length = face_->GetSfntTable(kGsubTag, {});
+  if (!length) {
+    return nullptr;
+  }
+
+  auto sub_data = FixedSizeDataVector<uint8_t>::Uninit(length);
+  if (!face_->GetSfntTable(kGsubTag, sub_data.span())) {
+    return nullptr;
+  }
+
+  return std::make_unique<CFX_CTTGSUBTable>(sub_data.span());
 }
 
 bool CFX_Font::LoadFaceZeroFromSpan(pdfium::span<const uint8_t> src_span,
