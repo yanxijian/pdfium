@@ -16,6 +16,23 @@
       "message": "Last one for a bit, I hope. thanks.",
       "revId": "2bd9c273fe7d7095014865d921d26cf1f048de96",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e368b4e6_e6a520b8",
+        "filename": "core/fxge/skrifa/src/main.rs",
+        "patchSetId": 2
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-26T20:10:07Z",
+      "side": 1,
+      "message": "I\u0027m not sure this maps exactly 1:1 with where FreeType sets FT_FACE_FLAG_SCALABLE, but it\u0027s a start.",
+      "revId": "2bd9c273fe7d7095014865d921d26cf1f048de96",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
