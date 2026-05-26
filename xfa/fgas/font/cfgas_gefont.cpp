@@ -293,7 +293,8 @@ RetainPtr<CFGAS_GEFont> CFGAS_GEFont::GetSubstFont(int32_t iGlyphIndex) {
 }
 
 bool CFGAS_GEFont::VerifyUnicode(wchar_t wcUnicode) {
-  RetainPtr<CFX_Face> face = GetDevFont()->GetFace();
+  RetainPtr<CFX_Face> face =
+      pdfium::WrapRetain(const_cast<CFX_Face*>(GetDevFont()->GetFace().Get()));
   if (!face) {
     return false;
   }

@@ -80,7 +80,7 @@ void CPDF_SimpleFont::LoadCharMetrics(int charcode) {
     }
     return;
   }
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   if (!face) {
     return;
   }

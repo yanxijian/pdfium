@@ -223,7 +223,7 @@ void CPDF_Font::LoadFontDescriptor(const CPDF_Dictionary* font_desc) {
 void CPDF_Font::CheckFontMetrics() {
   if (font_bbox_.top == 0 && font_bbox_.bottom == 0 && font_bbox_.left == 0 &&
       font_bbox_.right == 0) {
-    RetainPtr<CFX_Face> face = font_.GetFace();
+    RetainPtr<const CFX_Face> face = font_.GetFace();
     if (face) {
       // Note that `font_bbox_` is deliberately flipped.
       const FX_RECT raw_bbox = face->GetBBox();
@@ -628,6 +628,10 @@ bool CPDF_Font::UseTTCharmap(const RetainPtr<CFX_Face>& face,
     }
   }
   return false;
+}
+
+RetainPtr<CFX_Face> CPDF_Font::GetMutableFace() const {
+  return pdfium::WrapRetain(const_cast<CFX_Face*>(font_.GetFace().Get()));
 }
 
 std::optional<int> CPDF_Font::GetFontWeight() const {

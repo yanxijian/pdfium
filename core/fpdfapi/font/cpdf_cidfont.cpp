@@ -496,7 +496,7 @@ bool CPDF_CIDFont::Load() {
   if (charset_ != CIDSet::kUnknown) {
     cid2unicode_map_ = font_globals->GetCID2UnicodeMap(charset_);
   }
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   if (face) {
     if (font_type_ == CIDFontType::kType1) {
       face->SelectCharMap(fxge::FontEncoding::kUnicode);
@@ -557,7 +557,7 @@ FX_RECT CPDF_CIDFont::GetCharBBox(uint32_t charcode) {
   FX_RECT rect;
   bool bVert = false;
   int glyph_index = GlyphFromCharCode(charcode, &bVert);
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   if (face) {
     rect = face->GetCharBBox(charcode, glyph_index);
   }
@@ -647,7 +647,7 @@ int CPDF_CIDFont::GetGlyphIndex(uint32_t unicode, bool* pVertGlyph) {
 
   static constexpr uint32_t kGsubTag =
       CFX_FontMapper::MakeTag('G', 'S', 'U', 'B');
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   size_t length = face->GetSfntTable(kGsubTag, {});
   if (!length) {
     return index;
@@ -720,7 +720,7 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
       }
 
       charcode += 31;
-      RetainPtr<CFX_Face> face = font_.GetFace();
+      RetainPtr<CFX_Face> face = GetMutableFace();
       bool bMSUnicode = UseTTCharmapUnicode(face);
       bool bMacRoman =
           !bMSUnicode && UseTTCharmap(face, CFX_Face::kMacRomanCmapId);
@@ -770,13 +770,13 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
       }
     }
 
-    RetainPtr<CFX_Face> face = font_.GetFace();
+    RetainPtr<CFX_Face> face = GetMutableFace();
     if (!face) {
       return unicode;
     }
 
     size_t num_charmaps = face->GetCharMapCount();
-    if (!face->SelectCharMap(fxge::FontEncoding::kUnicode)) {
+    if (!font_.SelectCharMap(fxge::FontEncoding::kUnicode)) {
       size_t i;
       for (i = 0; i < num_charmaps; i++) {
         uint32_t ret = CharCodeFromUnicodeForEncoding(
@@ -800,7 +800,7 @@ int CPDF_CIDFont::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
     return unicode;
   }
 
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<const CFX_Face> face = font_.GetFace();
   if (!face) {
     return -1;
   }

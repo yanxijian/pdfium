@@ -161,7 +161,8 @@ RetainPtr<CFX_FontMgr::FontCacheEntry> CFX_FontMgr::AddTTCFontCacheEntry(
 }
 
 RetainPtr<CFX_GlyphCache> CFX_FontMgr::GetGlyphCache(const CFX_Font* font) {
-  RetainPtr<CFX_Face> face = font->GetFace();
+  RetainPtr<CFX_Face> face =
+      pdfium::WrapRetain(const_cast<CFX_Face*>(font->GetFace().Get()));
   auto it = glyph_cache_map_.find(face.Get());
   if (it != glyph_cache_map_.end() && it->second) {
     return pdfium::WrapRetain(it->second.Get());

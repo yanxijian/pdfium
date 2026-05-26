@@ -131,7 +131,7 @@ int CPDF_Type1Font::GlyphFromCharCodeExt(uint32_t charcode) {
 #endif
 
 void CPDF_Type1Font::LoadGlyphMap() {
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   if (!face) {
     return;
   }

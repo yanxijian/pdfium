@@ -59,7 +59,7 @@ bool CPDF_TrueTypeFont::Load() {
 }
 
 void CPDF_TrueTypeFont::LoadGlyphMap() {
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<CFX_Face> face = GetMutableFace();
   if (!face) {
     return;
   }
@@ -151,7 +151,7 @@ void CPDF_TrueTypeFont::LoadGlyphMap() {
       return;
     }
   }
-  if (font_.GetFace()->SelectCharMap(fxge::FontEncoding::kUnicode)) {
+  if (font_.SelectCharMap(fxge::FontEncoding::kUnicode)) {
     pdfium::span<const uint16_t> unicodes =
         UnicodesForPredefinedCharSet(base_encoding);
     for (uint32_t charcode = 0; charcode < 256; charcode++) {
@@ -188,22 +188,22 @@ bool CPDF_TrueTypeFont::HasAnyGlyphIndex() const {
 }
 
 CPDF_TrueTypeFont::CharmapType CPDF_TrueTypeFont::DetermineCharmapType() const {
-  if (UseTTCharmapUnicode(font_.GetFace())) {
+  if (UseTTCharmapUnicode(GetMutableFace())) {
     return CharmapType::kMSUnicode;
   }
 
   if (FontStyleIsNonSymbolic(flags_)) {
-    if (UseTTCharmap(font_.GetFace(), CFX_Face::kMacRomanCmapId)) {
+    if (UseTTCharmap(GetMutableFace(), CFX_Face::kMacRomanCmapId)) {
       return CharmapType::kMacRoman;
     }
-    if (UseTTCharmap(font_.GetFace(), CFX_Face::kWindowsSymbolCmapId)) {
+    if (UseTTCharmap(GetMutableFace(), CFX_Face::kWindowsSymbolCmapId)) {
       return CharmapType::kMSSymbol;
     }
   } else {
-    if (UseTTCharmap(font_.GetFace(), CFX_Face::kWindowsSymbolCmapId)) {
+    if (UseTTCharmap(GetMutableFace(), CFX_Face::kWindowsSymbolCmapId)) {
       return CharmapType::kMSSymbol;
     }
-    if (UseTTCharmap(font_.GetFace(), CFX_Face::kMacRomanCmapId)) {
+    if (UseTTCharmap(GetMutableFace(), CFX_Face::kMacRomanCmapId)) {
       return CharmapType::kMacRoman;
     }
   }
@@ -217,7 +217,7 @@ FontEncoding CPDF_TrueTypeFont::DetermineEncoding() const {
   }
 
   // Not null - caller checked.
-  RetainPtr<CFX_Face> face = font_.GetFace();
+  RetainPtr<const CFX_Face> face = font_.GetFace();
   const size_t num_charmaps = face->GetCharMapCount();
   if (num_charmaps == 0) {
     return base_encoding_;

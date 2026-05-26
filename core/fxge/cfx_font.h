@@ -75,10 +75,11 @@ class CFX_Font {
                      FX_CodePage code_page,
                      bool bVertical);
 
-  RetainPtr<CFX_Face> GetFace() const { return face_; }
+  RetainPtr<const CFX_Face> GetFace() const { return face_; }
   bool HasFace() const { return !!face_; }
   CFX_SubstFont* GetSubstFont() const { return subst_font_.get(); }
   int GetSubstFontItalicAngle() const;
+  bool SelectCharMap(fxge::FontEncoding encoding) const;
   std::vector<CharCodeAndIndex> GetCharCodesAndIndices(char32_t max_char);
 
 #if defined(PDF_ENABLE_XFA) && !BUILDFLAG(IS_WIN)
