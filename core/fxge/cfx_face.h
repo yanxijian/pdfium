@@ -145,11 +145,11 @@ class CFX_Face final : public Retainable, public Observable {
 #endif
 
 #if BUILDFLAG(IS_WIN)
-  bool CanEmbed();
+  bool CanEmbed() const;
 #endif
 
 #if defined(PDF_USE_SKIA)
-  SkTypeface* GetOrCreateSkTypeface();
+  SkTypeface* GetOrCreateSkTypeface() const;
 #endif
 
  private:
@@ -200,7 +200,7 @@ class CFX_Face final : public Retainable, public Observable {
 
   ScopedFXFTFaceRec const rec_;
 #if defined(PDF_USE_SKIA)
-  sk_sp<SkTypeface> skia_typeface_;
+  mutable sk_sp<SkTypeface> skia_typeface_;
 #endif  // defined(PDF_USE_SKIA)
 #if defined(PDF_ENABLE_FONTATIONS)
   std::unique_ptr<SkrifaFontHolder> skrifa_font_;

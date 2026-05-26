@@ -23,21 +23,20 @@ class UnicodeCharmapResolver : public CFX_CharmapResolver {
   ~UnicodeCharmapResolver() override = default;
 
   uint32_t GlyphFromCharCode(uint32_t charcode) override {
-    RetainPtr<CFX_Face> face = font_->GetFace();
-    if (!face) {
+    if (!font_->HasFace()) {
       return charcode;
     }
-    if (face->SelectCharMap(fxge::FontEncoding::kUnicode)) {
-      return face->GetCharIndex(charcode);
+    if (font_->SelectCharMap(fxge::FontEncoding::kUnicode)) {
+      return font_->GetCharIndex(charcode);
     }
     if (font_->GetSubstFont() &&
         font_->GetSubstFont()->charset_ == FX_Charset::kSymbol) {
       uint32_t index = 0;
-      if (face->SelectCharMap(fxge::FontEncoding::kSymbol)) {
-        index = face->GetCharIndex(charcode);
+      if (font_->SelectCharMap(fxge::FontEncoding::kSymbol)) {
+        index = font_->GetCharIndex(charcode);
       }
-      if (!index && face->SelectCharMap(fxge::FontEncoding::kAppleRoman)) {
-        return face->GetCharIndex(charcode);
+      if (!index && font_->SelectCharMap(fxge::FontEncoding::kAppleRoman)) {
+        return font_->GetCharIndex(charcode);
       }
     }
     return charcode;
@@ -63,8 +62,8 @@ class AlternateCharmapResolver : public CFX_CharmapResolver {
   ~AlternateCharmapResolver() override = default;
 
   uint32_t GlyphFromCharCode(uint32_t charcode) override {
-    RetainPtr<CFX_Face> face = font_->GetFace();
-    uint32_t char_index = face->GetCharIndex(charcode);
+    RetainPtr<const CFX_Face> face = font_->GetFace();
+    uint32_t char_index = font_->GetCharIndex(charcode);
     if (char_index > 0) {
       return char_index;
     }
@@ -75,16 +74,16 @@ class AlternateCharmapResolver : public CFX_CharmapResolver {
       if (encoding_id_ == encoding_id) {
         continue;
       }
-      if (!face->SelectCharMap(encoding_id)) {
+      if (!font_->SelectCharMap(encoding_id)) {
         continue;
       }
-      char_index = face->GetCharIndex(charcode);
+      char_index = font_->GetCharIndex(charcode);
       if (char_index > 0) {
         encoding_id_ = encoding_id;
         return char_index;
       }
     }
-    face->SelectCharMap(encoding_id_);
+    font_->SelectCharMap(encoding_id_);
     return 0;
   }
 
@@ -112,7 +111,7 @@ std::unique_ptr<CFX_CharmapResolver> CFX_CharmapResolver::CreateAlternate(
     return nullptr;
   }
   for (fxge::FontEncoding id : kEncodingIDs) {
-    if (font->GetFace()->SelectCharMap(id)) {
+    if (font->SelectCharMap(id)) {
       return std::make_unique<AlternateCharmapResolver>(font, id);
     }
   }
