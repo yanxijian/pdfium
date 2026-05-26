@@ -217,6 +217,10 @@ bool CFX_Font::HasAnyGlyphs() const {
   return face_ && face_->GetGlyphCount() > 0;
 }
 
+bool CFX_Font::SelectCharMap(fxge::FontEncoding encoding) const {
+  return face_ && face_->SelectCharMap(encoding);
+}
+
 int CFX_Font::GetGlyphWidth(uint32_t glyph_index) const {
   return GetGlyphWidth(glyph_index, 0, 0);
 }

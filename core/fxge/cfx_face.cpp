@@ -1390,8 +1390,8 @@ int CFX_Face::GetNumFaces() const {
 #endif
 
 #if BUILDFLAG(IS_WIN)
-bool CFX_Face::CanEmbed() {
-  FT_UShort fstype = FT_Get_FSType_Flags(GetRec());
+bool CFX_Face::CanEmbed() const {
+  FT_UShort fstype = FT_Get_FSType_Flags(const_cast<FT_Face>(GetRec()));
   bool ft_result = (fstype & (FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING |
                               FT_FSTYPE_BITMAP_EMBEDDING_ONLY)) == 0;
 
@@ -1434,7 +1434,7 @@ CFX_Face::CFX_Face(RetainPtr<Retainable> cache_entry,
 }
 
 #if defined(PDF_USE_SKIA)
-SkTypeface* CFX_Face::GetOrCreateSkTypeface() {
+SkTypeface* CFX_Face::GetOrCreateSkTypeface() const {
   if (!skia_typeface_) {
     skia_typeface_ =
         CFX_GEModule::Get()->GetFontMgr()->MakeSkTypeface(GetData());
