@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "01adbeae_f3ac4b6e",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-27T21:23:27Z",
+      "side": 1,
+      "message": "The expectations are just what the current code generates in debug mode. I copy-pasted the expectations from another test, ran it, and updated the expectations to match the actual results.\n\nYour calculations assumed alpha is 255, but the alpha value varies.",
+      "parentUuid": "741a04da_f227c862",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e3878b7_b83d20b1",
         "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
         "patchSetId": 2
@@ -37,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6ac383bd_7ad84741",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-27T21:23:27Z",
+      "side": 1,
+      "message": "I did not bother investigating, because the plan is to replace the existing code altogether.",
+      "parentUuid": "7e3878b7_b83d20b1",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "19a24b9e_7afcfdef",
         "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
         "patchSetId": 2
@@ -48,6 +84,30 @@
       "writtenOn": "2026-05-27T21:13:00Z",
       "side": 1,
       "message": "Why aren\u0027t these values exactly the same as the non-premul case? Is the output premultiplied here but not in the other case or something?",
+      "range": {
+        "startLine": 349,
+        "startChar": 19,
+        "endLine": 349,
+        "endChar": 33
+      },
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e8e3469_cc600d3e",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-27T21:23:27Z",
+      "side": 1,
+      "message": "I originally did the math a year ago, so my memory is a bit hazy, but I think it\u0027s all rounding errors.",
+      "parentUuid": "19a24b9e_7afcfdef",
       "range": {
         "startLine": 349,
         "startChar": 19,
