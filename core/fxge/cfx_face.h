@@ -19,6 +19,7 @@
 #include "core/fxcrt/observed_ptr.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
+#include "core/fxcrt/widestring.h"
 #include "core/fxge/freetype/fx_freetype.h"
 #include "core/fxge/fx_font.h"
 
@@ -145,6 +146,7 @@ class CFX_Face final : public Retainable, public Observable {
   bool IsScalable() const;
   int GetNumFaces() const;
   std::optional<std::array<uint32_t, 4>> GetOs2UnicodeRange();
+  std::vector<WideString> GetFamilyNames();
 #endif
 
 #if BUILDFLAG(IS_WIN)
