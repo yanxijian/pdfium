@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "003686ec_5440c329",
+        "filename": "core/fpdfapi/page/cpdf_contentmarks.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T17:44:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25b5082f_c20a69c0",
+      "range": {
+        "startLine": 54,
+        "startChar": 30,
+        "endLine": 54,
+        "endChar": 34
+      },
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "67e6f5ce_f6658969",
@@ -47,6 +71,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5305232a_d4964225",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T17:44:01Z",
+      "side": 1,
+      "message": "It\u0027s just awkward to explain precisely because it will only span if it\u0027s actually consecutive. If it\u0027s not consecutive the mark is just copied in both places. Both is accurate for every pair of objects.\n\nI rephrased it hopefully you like this version better.",
+      "parentUuid": "67e6f5ce_f6658969",
+      "range": {
+        "startLine": 469,
+        "startChar": 75,
+        "endLine": 469,
+        "endChar": 79
+      },
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "445a6e22_4443b6de",
@@ -60,6 +108,24 @@
       "writtenOn": "2026-05-26T20:54:25Z",
       "side": 1,
       "message": "Would be helpful to also document ownership for the two handles.",
+      "revId": "8d320e40a97a912598563619667cc857a1aa737c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c03a1b2a_b8f2346b",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T17:44:01Z",
+      "side": 1,
+      "message": "Is it even possible for the ownership to be anything other than the PDFium library? I thought it was implied because it\u0027s impossible to get the handles except by the public API calls that return non-owning handles.\n\nHonestly I\u0027d prefer not to mention ownership at all because most of the API functions (like GetPageObject) don\u0027t and as far as I can tell transferring ownership isn\u0027t a thing this API does.\n\nI added a sentence though because you asked. Hopefully it is accurate.",
+      "parentUuid": "445a6e22_4443b6de",
       "revId": "8d320e40a97a912598563619667cc857a1aa737c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
