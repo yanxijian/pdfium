@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "acab132b_03226162",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-27T17:48:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e5f065e_052ac744",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 4
+      },
+      "revId": "b369689b2f972550d02702cd0de09836cce67ed3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33e59839_1c93072c",
@@ -41,6 +65,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9471121a_b1436619",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-27T17:48:19Z",
+      "side": 1,
+      "message": "Needed, otherwise presuhmit complains about the new files not having 2026 in the comment block because git didn\u0027t recognize it as a rename.",
+      "parentUuid": "33e59839_1c93072c",
+      "revId": "b369689b2f972550d02702cd0de09836cce67ed3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "781ca3ae_af806857",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-05-27T17:39:27Z",
       "side": 1,
       "message": "Not sure but do we need to add back this comment?\n\n```\n  // CFX_CTTGSUBTable parses the data and stores all the values in its structs.\n  // It does not store pointers into `sub_data`.\n```\n\nImplementation seems identical here",
+      "range": {
+        "startLine": 623,
+        "startChar": 2,
+        "endLine": 623,
+        "endChar": 61
+      },
+      "revId": "b369689b2f972550d02702cd0de09836cce67ed3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "556c4b01_eedfd3f0",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-27T17:48:19Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "781ca3ae_af806857",
       "range": {
         "startLine": 623,
         "startChar": 2,
