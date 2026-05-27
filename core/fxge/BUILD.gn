@@ -29,6 +29,8 @@ source_set("fxge") {
     "cfx_color.h",
     "cfx_cttgsubtable.cpp",
     "cfx_cttgsubtable.h",
+    "cfx_cttnametable.cpp",
+    "cfx_cttnametable.h",
     "cfx_defaultrenderdevice.cpp",
     "cfx_defaultrenderdevice.h",
     "cfx_drawutils.cpp",
