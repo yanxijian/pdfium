@@ -1,0 +1,79 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed75b696_4aa17e5b",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-05-27T18:06:34Z",
+      "side": 1,
+      "message": "I think `pdfium::WrapRetain()` is preferred for converting a raw pointer to a `RetainPtr`.",
+      "range": {
+        "startLine": 409,
+        "startChar": 25,
+        "endLine": 409,
+        "endChar": 34
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "0d193565_43a18145",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_editpage.cpp",
+              "range": {
+                "startLine": 409,
+                "startChar": 0,
+                "endLine": 410,
+                "endChar": 0
+              },
+              "replacement": "  marks-\u003eAddExistingMark(pdfium::WrapRetain(mark_item));\n"
+            }
+          ]
+        }
+      ],
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdbee9a1_92940851",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-05-27T18:06:34Z",
+      "side": 1,
+      "message": "Seems unrelated but it\u0027s ok.",
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6719d62b_9912b365",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-05-27T18:06:34Z",
+      "side": 1,
+      "message": "What happens if a user uses a mark from Document A and uses this API for a page object on Document B? I.e. does this handle cross-document safely? Maybe mention they must be from the same document.",
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
