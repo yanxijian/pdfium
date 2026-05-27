@@ -565,11 +565,16 @@ void SetupStrokePaint(SkPaint* stroke_paint,
   SkVector device_units[2] = {{0, 1}, {1, 0}};
   inverse.mapPoints(device_units);
 
-  float width = fill_options.zero_area
-                    ? 0.0f
-                    : std::max(stroke_options->line_width(),
-                               std::min(device_units[0].length(),
-                                        device_units[1].length()));
+  float width;
+  if (fill_options.stroke_text_mode) {
+    width = stroke_options->line_width();
+  } else if (fill_options.zero_area) {
+    width = 0.0f;
+  } else {
+    width =
+        std::max(stroke_options->line_width(),
+                 std::min(device_units[0].length(), device_units[1].length()));
+  }
   const std::vector<float>& dash_array = stroke_options->dash_array();
   if (!dash_array.empty()) {
     // `SkDashPathEffect` only takes even-sized interval arrays. Support

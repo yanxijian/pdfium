@@ -301,7 +301,7 @@ void RasterizeStroke(agg::rasterizer_scanline_aa* rasterizer,
                      const CFX_Matrix* pObject2Device,
                      const CFX_GraphStateData* pGraphState,
                      float scale,
-                     bool bTextMode) {
+                     bool text_mode) {
   agg::line_cap_e cap;
   switch (pGraphState->line_cap()) {
     case CFX_GraphStateData::LineCap::kRound:
@@ -327,12 +327,14 @@ void RasterizeStroke(agg::rasterizer_scanline_aa* rasterizer,
       break;
   }
   float width = pGraphState->line_width() * scale;
-  float unit = 1.0f;
-  if (pObject2Device) {
-    unit =
-        1.0f / ((pObject2Device->GetXUnit() + pObject2Device->GetYUnit()) / 2);
+  if (!text_mode) {
+    float unit = 1.0f;
+    if (pObject2Device) {
+      unit = 1.0f /
+             ((pObject2Device->GetXUnit() + pObject2Device->GetYUnit()) / 2);
+    }
+    width = std::max(width, unit);
   }
-  width = std::max(width, unit);
   const std::vector<float>& dash_array = pGraphState->dash_array();
 
   // If the dash pattern cycle is too small (< 0.1 device pixels), render as
