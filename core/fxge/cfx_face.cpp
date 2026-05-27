@@ -21,6 +21,7 @@
 #include "core/fxcrt/numerics/safe_math.h"
 #include "core/fxcrt/to_underlying.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxge/cfx_cos2table.h"
 #include "core/fxge/cfx_cttgsubtable.h"
 #include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_fontmgr.h"
@@ -625,95 +626,69 @@ std::unique_ptr<CFX_CTTGSUBTable> CFX_Face::ParseGSUBTable() {
   return std::make_unique<CFX_CTTGSUBTable>(sub_data.span());
 }
 
-#if defined(PDF_ENABLE_XFA)
-std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
-  auto* os2 = static_cast<TT_OS2*>(FT_Get_Sfnt_Table(GetRec(), FT_SFNT_OS2));
-  std::optional<std::array<uint32_t, 4>> ft_result;
-  if (os2) {
-    ft_result =
-        std::array<uint32_t, 4>{static_cast<uint32_t>(os2->ulUnicodeRange1),
-                                static_cast<uint32_t>(os2->ulUnicodeRange2),
-                                static_cast<uint32_t>(os2->ulUnicodeRange3),
-                                static_cast<uint32_t>(os2->ulUnicodeRange4)};
+const CFX_COS2Table* CFX_Face::GetOrCreateOS2Table() {
+  if (os2_table_) {
+    return os2_table_.get();
   }
+
+  static constexpr uint32_t kOs2Tag =
+      CFX_FontMapper::MakeTag('O', 'S', '/', '2');
+  size_t length = GetSfntTable(kOs2Tag, {});
+  if (length == 0) {
+    os2_table_ = std::make_unique<CFX_COS2Table>();
+    return os2_table_.get();
+  }
+
+  auto buffer = FixedSizeDataVector<uint8_t>::Uninit(length);
+  GetSfntTable(kOs2Tag, buffer.span());
+  os2_table_ = std::make_unique<CFX_COS2Table>(buffer.span());
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 #if defined(PDF_ENABLE_FONTATIONS)
-  std::optional<std::array<uint32_t, 4>> skrifa_result;
   pdfium::span<const uint8_t> data = GetData();
-  skrifa::UnicodeRange range;
-  if (skrifa::get_os2_unicode_range(rust::Slice(data), range)) {
-    skrifa_result = std::array<uint32_t, 4>{range.range1, range.range2,
-                                            range.range3, range.range4};
+  skrifa::UnicodeRange u_range;
+  std::array<uint32_t, 4> skrifa_usb = {};
+  if (skrifa::get_os2_unicode_range(rust::Slice(data), u_range)) {
+    skrifa_usb = {u_range.range1, u_range.range2, u_range.range3,
+                  u_range.range4};
   }
-  CHECK_EQ(ft_result.has_value(), skrifa_result.has_value());
-  if (ft_result.has_value() && skrifa_result.has_value()) {
-    for (size_t i = 0; i < 4; ++i) {
-      CHECK_EQ((*ft_result)[i], (*skrifa_result)[i]);
-    }
+
+  skrifa::CodePageRange cp_range;
+  std::array<uint32_t, 2> skrifa_csb = {};
+  if (skrifa::get_os2_code_page_range(rust::Slice(data), cp_range)) {
+    skrifa_csb = {cp_range.range1, cp_range.range2};
   }
+
+  skrifa::Os2Panose p_panose;
+  std::array<uint8_t, 2> skrifa_panose = {};
+  if (skrifa::get_os2_panose(rust::Slice(data), p_panose)) {
+    skrifa_panose = {p_panose.b0, p_panose.b1};
+  }
+
+  CFX_COS2Table skrifa_table(skrifa_usb, skrifa_csb, skrifa_panose);
+  CHECK_EQ(*os2_table_, skrifa_table);
 #endif  // defined(PDF_ENABLE_FONTATIONS)
 #endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
 
-  return ft_result;
+  return os2_table_.get();
+}
+
+#if defined(PDF_ENABLE_XFA)
+std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
+  auto usb = GetOrCreateOS2Table()->GetUsb();
+  return std::array<uint32_t, 4>{usb[0], usb[1], usb[2], usb[3]};
 }
 #endif  // defined(PDF_ENABLE_XFA)
 
 #if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
 std::optional<std::array<uint32_t, 2>> CFX_Face::GetOs2CodePageRange() {
-  auto* os2 = static_cast<TT_OS2*>(FT_Get_Sfnt_Table(GetRec(), FT_SFNT_OS2));
-  std::optional<std::array<uint32_t, 2>> ft_result;
-  if (os2) {
-    ft_result =
-        std::array<uint32_t, 2>{static_cast<uint32_t>(os2->ulCodePageRange1),
-                                static_cast<uint32_t>(os2->ulCodePageRange2)};
-  }
-
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-#if defined(PDF_ENABLE_FONTATIONS)
-  std::optional<std::array<uint32_t, 2>> skrifa_result;
-  pdfium::span<const uint8_t> data = GetData();
-  skrifa::CodePageRange range;
-  if (skrifa::get_os2_code_page_range(rust::Slice(data), range)) {
-    skrifa_result = std::array<uint32_t, 2>{range.range1, range.range2};
-  }
-
-  CHECK_EQ(ft_result.has_value(), skrifa_result.has_value());
-  if (ft_result.has_value() && skrifa_result.has_value()) {
-    CHECK_EQ((*ft_result)[0], (*skrifa_result)[0]);
-    CHECK_EQ((*ft_result)[1], (*skrifa_result)[1]);
-  }
-#endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-#endif  // defined(PDF_ENABLE_FONTATIONS)
-
-  return ft_result;
+  auto csb = GetOrCreateOS2Table()->GetCsb();
+  return std::array<uint32_t, 2>{csb[0], csb[1]};
 }
 
 std::optional<std::array<uint8_t, 2>> CFX_Face::GetOs2Panose() {
-  auto* os2 = static_cast<TT_OS2*>(FT_Get_Sfnt_Table(GetRec(), FT_SFNT_OS2));
-  std::optional<std::array<uint8_t, 2>> ft_result;
-  if (os2) {
-    ft_result = std::array<uint8_t, 2>{os2->panose[0], os2->panose[1]};
-  }
-
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-#if defined(PDF_ENABLE_FONTATIONS)
-  std::optional<std::array<uint8_t, 2>> skrifa_result;
-  pdfium::span<const uint8_t> data = GetData();
-  skrifa::Os2Panose panose;
-  if (skrifa::get_os2_panose(rust::Slice(data), panose)) {
-    skrifa_result = std::array<uint8_t, 2>{panose.b0, panose.b1};
-  }
-
-  CHECK_EQ(ft_result.has_value(), skrifa_result.has_value());
-  if (ft_result.has_value() && skrifa_result.has_value()) {
-    CHECK_EQ((*ft_result)[0], (*skrifa_result)[0]);
-    CHECK_EQ((*ft_result)[1], (*skrifa_result)[1]);
-  }
-#endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-#endif  // defined(PDF_ENABLE_FONTATIONS)
-
-  return ft_result;
+  auto panose = GetOrCreateOS2Table()->GetPanose();
+  return std::array<uint8_t, 2>{panose[0], panose[1]};
 }
 #endif  // defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
 
