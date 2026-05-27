@@ -30,6 +30,7 @@
 #include "third_party/rust/cxx/v1/cxx.h"
 #endif
 
+class CFX_COS2Table;
 class CFX_CTTGSUBTable;
 class CFX_GlyphBitmap;
 class CFX_Path;
@@ -92,6 +93,8 @@ class CFX_Face final : public Retainable, public Observable {
   size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
 
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
+
+  const CFX_COS2Table* GetOrCreateOS2Table();
 
   int GetGlyphCount() const;
   // TODO(crbug.com/42271048): Can this method be private?
@@ -202,6 +205,7 @@ class CFX_Face final : public Retainable, public Observable {
   RetainPtr<CFX_ReadOnlySpanStream> font_stream_;
 
   ScopedFXFTFaceRec const rec_;
+  std::unique_ptr<CFX_COS2Table> os2_table_;
 #if defined(PDF_USE_SKIA)
   sk_sp<SkTypeface> skia_typeface_;
 #endif  // defined(PDF_USE_SKIA)
