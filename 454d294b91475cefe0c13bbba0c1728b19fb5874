@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "754505d2_814733b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T21:27:05Z",
+      "side": 1,
+      "message": "What actually are the corrections logically? It\u0027s hard to separate the logic changes here from the refactoring changes. It\u0027s even harder to understand what the meaning of these functions are.\n\nThe changes I see are:\n\n 1. return input.alpha !\u003d 0 in CompositePixelBgraPremul2BgraPremulCommonStart() which I can\u0027t understand the purpose of\n 2. It looks like the code that CompositePixelBgraPremul2BgraPremulCommonFinish() replaced divided by 255 and now you divide by 255*255 which I also don\u0027t understand the purpose of.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 41
+      },
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f473b08_31356ee4",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T21:27:05Z",
+      "side": 1,
+      "message": "Why is there type mixing between FX_BGR_STRUCT\u003cint\u003e and FX_BGR_STRUCT\u003cuint8_t\u003e here? Is it possible to avoid these implicit casts and just use uint8_t for everything?",
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
