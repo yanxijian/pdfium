@@ -31,6 +31,7 @@
 #endif
 
 class CFX_CTTGSUBTable;
+class CFX_CTTNameTable;
 class CFX_GlyphBitmap;
 class CFX_Path;
 class CFX_SubstFont;
@@ -92,6 +93,7 @@ class CFX_Face final : public Retainable, public Observable {
   size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
 
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
+  std::unique_ptr<CFX_CTTNameTable> ParseNameTable();
 
   int GetGlyphCount() const;
   // TODO(crbug.com/42271048): Can this method be private?
