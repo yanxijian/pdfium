@@ -23,6 +23,7 @@
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr_exclusion.h"
+#include "core/fxcrt/widestring.h"
 #include "core/fxge/cfx_face.h"
 #include "core/fxge/fx_font.h"
 
