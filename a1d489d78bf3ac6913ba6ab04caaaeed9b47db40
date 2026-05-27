@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "741a04da_f227c862",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T21:13:00Z",
+      "side": 1,
+      "message": "How did you generate these expectations? It\u0027s hard for me as a reviewer to know they\u0027re correct.\n\nIn fact spot checking I\u0027m pretty confused. Here\u0027s the definition of screen https://source.chromium.org/chromium/chromium/src/+/main:third_party/skia/include/core/SkBlendMode.h;l\u003d53;drc\u003d5bde3f4b2f152ffa301082e5f8eafdc9324c7aea\n\nIn all of the pixels in kSrcScan1 and kDestScan green is 100 so I don\u0027t understand how it\u0027s possible for the values of green to change. As far as I can tell it should be:\n\n100 / 255 \u003d 0.392156863\n0.392156863 + 0.392156863 - 0.392156863*0.392156863 \u003d 0.630526721\n0.630526721 * 255 \u003d 160.784313805\n\nSo I think the answer rounded should be 161 for all of these pixels.",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e3878b7_b83d20b1",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T21:13:00Z",
+      "side": 1,
+      "message": "It\u0027s surprising that the results are different in debug mode. What\u0027s the reason for that?",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19a24b9e_7afcfdef",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-27T21:13:00Z",
+      "side": 1,
+      "message": "Why aren\u0027t these values exactly the same as the non-premul case? Is the output premultiplied here but not in the other case or something?",
+      "range": {
+        "startLine": 349,
+        "startChar": 19,
+        "endLine": 349,
+        "endChar": 33
+      },
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
