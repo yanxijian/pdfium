@@ -22,6 +22,7 @@
 #include "core/fxcrt/to_underlying.h"
 #include "core/fxcrt/unowned_ptr.h"
 #include "core/fxge/cfx_cttgsubtable.h"
+#include "core/fxge/cfx_cttnametable.h"
 #include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_fontmgr.h"
 #include "core/fxge/cfx_gemodule.h"
@@ -623,6 +624,20 @@ std::unique_ptr<CFX_CTTGSUBTable> CFX_Face::ParseGSUBTable() {
   // CFX_CTTGSUBTable parses the data and stores all the values in its structs.
   // It does not store pointers into `sub_data`.
   return std::make_unique<CFX_CTTGSUBTable>(sub_data.span());
+}
+
+std::unique_ptr<CFX_CTTNameTable> CFX_Face::ParseNameTable() {
+  static constexpr uint32_t kNameTag =
+      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  size_t length = GetSfntTable(kNameTag, {});
+  if (!length) {
+    return nullptr;
+  }
+  auto name_data = FixedSizeDataVector<uint8_t>::Uninit(length);
+  if (!GetSfntTable(kNameTag, name_data.span())) {
+    return nullptr;
+  }
+  return std::make_unique<CFX_CTTNameTable>(name_data.span());
 }
 
 #if defined(PDF_ENABLE_XFA)
