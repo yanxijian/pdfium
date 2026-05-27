@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e6292a6_f48d66a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-27T23:56:35Z",
+      "side": 1,
+      "message": "go/avoid-we",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 7
+      },
+      "revId": "a472a0fdf81a651b4e64d4496b32e22aaccc06b9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f7e2c0a_6b3295e5",
+        "filename": "core/fxge/BUILD.gn",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-27T23:56:35Z",
+      "side": 1,
+      "message": "Make this XFA-only?",
+      "revId": "a472a0fdf81a651b4e64d4496b32e22aaccc06b9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
