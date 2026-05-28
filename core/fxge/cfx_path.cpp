@@ -316,6 +316,20 @@ void CFX_Path::AppendPointAndClose(const CFX_PointF& point, Point::Type type) {
   points_.emplace_back(point, type, /*close=*/true);
 }
 
+void CFX_Path::AppendQuadraticBezier(const CFX_PointF& control,
+                                     const CFX_PointF& to) {
+  CHECK(!points_.empty());
+  CFX_PointF current = points_.back().point_;
+
+  AppendPoint(CFX_PointF(current.x + (control.x - current.x) * 2 / 3,
+                         current.y + (control.y - current.y) * 2 / 3),
+              Point::Type::kBezier);
+  AppendPoint(CFX_PointF(control.x + (to.x - control.x) / 3,
+                         control.y + (to.y - control.y) / 3),
+              Point::Type::kBezier);
+  AppendPoint(to, Point::Type::kBezier);
+}
+
 void CFX_Path::AppendLine(const CFX_PointF& pt1, const CFX_PointF& pt2) {
   if (points_.empty() || fabs(points_.back().point_.x - pt1.x) > 0.001 ||
       fabs(points_.back().point_.y - pt1.y) > 0.001) {
