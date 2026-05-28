@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94198a9a_d7f3c029",
+        "filename": "core/fxge/cfx_substfont.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:39:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4938036d_0333a30c",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3e27e900_a05cbfd8",
@@ -47,6 +71,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc487da5_c2136d48",
+        "filename": "core/fxge/cfx_substfont.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:39:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e27e900_a05cbfd8",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc66e29f_da4f89ce",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-05-28T22:35:31Z",
       "side": 1,
       "message": "Consider keeping the explanatory comment `// Returns negative values on failure.` that was present in the old implementation.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec940824_f066040d",
+        "filename": "core/fxge/cfx_substfont.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:39:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc66e29f_da4f89ce",
       "range": {
         "startLine": 25,
         "startChar": 0,
