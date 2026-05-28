@@ -890,6 +890,24 @@ bool CFX_DIBitmap::CompositeRect(int left,
 }
 #endif  // BUILDFLAG(IS_WIN) || defined(PDF_USE_AGG)
 
+void CFX_DIBitmap::PopulateFrom1bppMask(pdfium::span<const uint8_t> src_span,
+                                        uint32_t src_pitch) {
+  CHECK_EQ(GetFormat(), FXDIB_Format::k8bppMask);
+
+  const int width = GetWidth();
+  const int rows = GetHeight();
+  const uint32_t dest_pitch = GetPitch();
+  pdfium::span<uint8_t> dest_span = GetWritableBuffer();
+
+  for (int i = 0; i < rows; i++) {
+    for (int n = 0; n < width; n++) {
+      dest_span[n] = (src_span[n / 8] & (0x80 >> (n % 8))) ? 255 : 0;
+    }
+    dest_span = dest_span.subspan(dest_pitch);
+    src_span = src_span.subspan(src_pitch);
+  }
+}
+
 bool CFX_DIBitmap::ConvertFormat(FXDIB_Format dest_format) {
   static constexpr FXDIB_Format kAllowedDestFormats[] = {
       FXDIB_Format::k8bppMask,
