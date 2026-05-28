@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a80e7959_f8b585a4",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T18:12:16Z",
+      "side": 1,
+      "message": "nit: pre-existing: can we call this Rearrange instead of ReArrange while we\u0027re at it?",
+      "range": {
+        "startLine": 520,
+        "startChar": 20,
+        "endLine": 520,
+        "endChar": 29
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "5bf1696a_c6450921",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 302,
+                "startChar": 0,
+                "endLine": 303,
+                "endChar": 0
+              },
+              "replacement": "  Rearrange(0);\n"
+            },
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 323,
+                "startChar": 0,
+                "endLine": 324,
+                "endChar": 0
+              },
+              "replacement": "  Rearrange(GetCount() - 1);\n"
+            },
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 520,
+                "startChar": 0,
+                "endLine": 522,
+                "endChar": 0
+              },
+              "replacement": "void CPWL_ListCtrl::Rearrange(int32_t item_index) {\n  CHECK_GE(item_index, 0);\n"
+            },
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 530,
+                "startChar": 0,
+                "endLine": 531,
+                "endChar": 0
+              },
+              "replacement": "  item_index \u003d std::min(item_index, count - 1);\n"
+            },
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 533,
+                "startChar": 0,
+                "endLine": 535,
+                "endChar": 0
+              },
+              "replacement": "  if (IsValid(item_index - 1)) {\n    fPosY \u003d list_items_[item_index - 1]-\u003eGetRect().bottom;\n"
+            },
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 539,
+                "startChar": 0,
+                "endLine": 540,
+                "endChar": 0
+              },
+              "replacement": "           .subspan(pdfium::checked_cast\u003csize_t\u003e(item_index))) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9f78082_fb89911c",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T18:12:16Z",
+      "side": 1,
+      "message": "Having checked GE above, we know that nItemIndex is valid as a size_t.",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "ed6af31d_aa3d8916",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+              "range": {
+                "startLine": 537,
+                "startChar": 0,
+                "endLine": 540,
+                "endChar": 0
+              },
+              "replacement": "  for (const auto\u0026 pListItem : pdfium::span(list_items_).subspan(nItemIndex)) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
