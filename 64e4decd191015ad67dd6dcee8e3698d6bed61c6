@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f3d29da_0505ab1c",
+        "filename": "core/fpdfapi/edit/cpdf_pageorganizer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:04:16Z",
+      "side": 1,
+      "message": "Would just tracking the `pp` pointers with `visited_parent_dicts` work?",
+      "revId": "64e4decd191015ad67dd6dcee8e3698d6bed61c6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8b407c3_bc89fe20",
+        "filename": "testing/resources/bug_517126568.in",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:04:16Z",
+      "side": 1,
+      "message": "Add a PDF comment (% foo) to point out this is a deliberate self-reference.",
+      "revId": "64e4decd191015ad67dd6dcee8e3698d6bed61c6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
