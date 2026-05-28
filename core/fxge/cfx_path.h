@@ -64,6 +64,7 @@ class CFX_Path {
   void AppendLine(const CFX_PointF& pt1, const CFX_PointF& pt2);
   void AppendPoint(const CFX_PointF& point, Point::Type type);
   void AppendPointAndClose(const CFX_PointF& point, Point::Type type);
+  void AppendQuadraticBezier(const CFX_PointF& control, const CFX_PointF& to);
   void ClosePath();
 
  private:
