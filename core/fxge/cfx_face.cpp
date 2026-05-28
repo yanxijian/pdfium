@@ -54,7 +54,6 @@
 #include "third_party/rust/cxx/v1/cxx.h"
 #endif
 
-#define EM_ADJUST(em, a) (em == 0 ? (a) : (a) * 1000 / em)
 
 namespace {
 
@@ -133,20 +132,9 @@ int Outline_LineTo(const FT_Vector* to, void* user) {
 int Outline_ConicTo(const FT_Vector* control, const FT_Vector* to, void* user) {
   OUTLINE_PARAMS* param = static_cast<OUTLINE_PARAMS*>(user);
 
-  param->path_->AppendPoint(
-      CFX_PointF(
-          (param->cur_x_ + (control->x - param->cur_x_) * 2 / 3) / kCoordUnit,
-          (param->cur_y_ + (control->y - param->cur_y_) * 2 / 3) / kCoordUnit),
-      CFX_Path::Point::Type::kBezier);
-
-  param->path_->AppendPoint(
-      CFX_PointF((control->x + (to->x - control->x) / 3) / kCoordUnit,
-                 (control->y + (to->y - control->y) / 3) / kCoordUnit),
-      CFX_Path::Point::Type::kBezier);
-
-  param->path_->AppendPoint(CFX_PointF(to->x / kCoordUnit, to->y / kCoordUnit),
-                            CFX_Path::Point::Type::kBezier);
-
+  param->path_->AppendQuadraticBezier(
+      CFX_PointF(control->x / kCoordUnit, control->y / kCoordUnit),
+      CFX_PointF(to->x / kCoordUnit, to->y / kCoordUnit));
   param->cur_x_ = to->x;
   param->cur_y_ = to->y;
   return 0;
@@ -260,6 +248,13 @@ FX_RECT ScaledFXRectFromFTPos(FT_Pos left,
 
   return FXRectFromFTPos(left * 1000 / x_scale, top * 1000 / y_scale,
                          right * 1000 / x_scale, bottom * 1000 / y_scale);
+}
+
+int AdjustTopForCBox(int top) {
+  if (top <= kMaxRectTop) {
+    return top + top / 64;
+  }
+  return std::numeric_limits<int>::max();
 }
 
 FT_Render_Mode FtRenderModeFromFontAntiAliasingMode(
@@ -789,13 +784,7 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
 
   if (anti_alias != FontAntiAliasingMode::kMono &&
       ft_bitmap.pixel_mode == FT_PIXEL_MODE_MONO) {
-    for (unsigned int i = 0; i < ft_bitmap.rows; i++) {
-      for (unsigned int n = 0; n < ft_bitmap.width; n++) {
-        dest_span[n] = (src_span[n / 8] & (0x80 >> (n % 8))) ? 255 : 0;
-      }
-      dest_span = dest_span.subspan(dest_pitch);
-      src_span = src_span.subspan(src_pitch);
-    }
+    new_bitmap->PopulateFrom1bppMask(src_span, src_pitch);
   } else {
     std::ranges::fill(dest_span, 0);
     const uint32_t rowbytes = std::min(src_pitch, dest_pitch);
@@ -917,15 +906,9 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPathFontations(
         auto p = outline.points[point_idx++];
         // Convert quadratic to cubic bezier to match FreeType
         // decomposition.
-        skrifa_path->AppendPoint(
-            CFX_PointF(current_point.x + (c0.x - current_point.x) * 2 / 3,
-                       current_point.y + (c0.y - current_point.y) * 2 / 3),
-            CFX_Path::Point::Type::kBezier);
-        skrifa_path->AppendPoint(
-            CFX_PointF(c0.x + (p.x - c0.x) / 3, c0.y + (p.y - c0.y) / 3),
-            CFX_Path::Point::Type::kBezier);
+        skrifa_path->AppendQuadraticBezier(CFX_PointF(c0.x, c0.y),
+                                           CFX_PointF(p.x, p.y));
         current_point = CFX_PointF(p.x, p.y);
-        skrifa_path->AppendPoint(current_point, CFX_Path::Point::Type::kBezier);
         break;
       }
       case skrifa::PathVerb::CurveTo: {
@@ -991,7 +974,7 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
   }
 
   const int ft_result =
-      static_cast<int>(EM_ADJUST(GetUnitsPerEm(), horizontal_advance));
+      static_cast<int>(FxEmAdjust(GetUnitsPerEm(), horizontal_advance));
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
@@ -1001,7 +984,7 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
     font.getWidths(pdfium::span_from_ref(skia_glyph_index),
                    pdfium::span_from_ref(width));
     const int sk_result = static_cast<int>(
-        EM_ADJUST(GetUnitsPerEm(), static_cast<int>(width + 0.5)));
+        FxEmAdjust(GetUnitsPerEm(), static_cast<int64_t>(width + 0.5)));
     CHECK_EQ(ft_result, sk_result);
   }
 #endif
@@ -1195,11 +1178,7 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
     int err = FT_Load_Glyph(rec, glyph_index, FT_LOAD_NO_SCALE);
     if (err == 0) {
       rect = GetGlyphBBox();
-      if (rect.top <= kMaxRectTop) {
-        rect.top += rect.top / 64;
-      } else {
-        rect.top = std::numeric_limits<int>::max();
-      }
+      rect.top = AdjustTopForCBox(rect.top);
     }
   }
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
