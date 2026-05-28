@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d869ba1a_1b7426a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "lowercase",
+      "range": {
+        "startLine": 7,
+        "startChar": 28,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d184134b_7e0cf4b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "lowercase",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "aefee1ef_6494d661",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 9
@@ -14,6 +60,137 @@
       "writtenOn": "2026-05-28T06:54:00Z",
       "side": 1,
       "message": "Also needed to add some local modifications to brotli to get the gn gen to work locally.\n\nMain changes:\n\n1. Default argument for building with fuzzers as true in brotli. This can be changed to false by PDFium args\n2. Including pdfium.gni into the file for symbols related to ubsan.\n\n2. Cant be upstreamed.\n\nBut I did upload 1 in case any other embedders who use brotli are facing a similar issue, if not perhaps this can be added as a local modification.\nhttps://chromium-review.googlesource.com/c/chromium/src/+/7882000\n\nBefore (without local changes):\n```\nERROR at //third_party/brotli/BUILD.gn:10:3: Unable to load \"~/repo/pdfium/testing/libfuzzer/fuzzer_test.gni\".\n  import(\"//testing/libfuzzer/fuzzer_test.gni\")\n  ^-------------------------------------------\nSee //core/fxcodec/BUILD.gn:149:17: which caused the file to be included.\n      deps +\u003d [ \"../../third_party/brotli:dec\" ]\n                ^-----------------------------\n```\nAfter (with local changes except setting default to false instead - same effect as us overriding from the PDFium side):\n```\nDone. Made 811 targets from 221 files in 602ms\n```",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cc2bfbd_31dd12e8",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 9
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "This is a no-op. Just omit it. The TODO comment is sufficient.",
+      "range": {
+        "startLine": 147,
+        "startChar": 6,
+        "endLine": 147,
+        "endChar": 19
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22c114f5_c9894421",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 9
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "Is this necessary for unittests?",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f391f629_23602033",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 9
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "Put the conditionals after the non-conditionals.",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bd44d30_461990b9",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "`using BrotliEmbedderTest \u003d EmbedderTest;`",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "573e4361_3327a978",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "Do the tests currently fail if they run?",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 36
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1eecd99_1dd2805b",
+        "filename": "pdfium.gni",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "Try to keep the list somewhat sorted. Move above `pdf_enable_click_logging`.",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fefac6a_a7365d86",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:27:42Z",
+      "side": 1,
+      "message": "Where exactly are these files from?",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
