@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db6801d2_94a93e1c",
+        "filename": "core/fxge/cfx_path.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T23:11:59Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by autoreview issue finding: Although `(control.x - current.x) * 2 / 3` correctly evaluates as floating-point arithmetic due to left-to-right associativity (because `control.x - current.x` is a float), using `2.0f / 3.0f` might make it immediately obvious to readers that integer division is not intended here.",
+      "range": {
+        "startLine": 324,
+        "startChar": 0,
+        "endLine": 324,
+        "endChar": 0
+      },
+      "revId": "b06c13692952ca248143be06ff3803a01a03f980",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
