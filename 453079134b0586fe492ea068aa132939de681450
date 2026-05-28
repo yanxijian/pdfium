@@ -196,6 +196,24 @@
       "message": "Run this through optipng to shrink the PNG a bit.\n\nBTW, this will likely require different expectation files for Win/Mac/Linux.",
       "revId": "453079134b0586fe492ea068aa132939de681450",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4670eac4_b12440bc",
+        "filename": "testing/resources/pixel/bug_477200528_expected.pdf.0.png",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:25:00Z",
+      "side": 1,
+      "message": "https://ci.chromium.org/ui/p/pdfium/builders/try/mac_no_v8/32476/test-results should show the comparison between this file and what the Mac try bot rendered. Add that to the CL? I ran try jobs on all 3 platforms with AGG and Skia.",
+      "parentUuid": "bd7a9dc9_ecc20006",
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
