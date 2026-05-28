@@ -427,6 +427,24 @@
       "parentUuid": "f528f93b_440c0c31",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "317433d9_0780ab13",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T23:57:42Z",
+      "side": 1,
+      "message": "Thanks. It\u0027s unclear what license those files are released under. So instead of using PDFA\u0027s example, how about creating one from scratch, similar to testing/resources/utf-8.in. Let me know if you need help.",
+      "parentUuid": "18dec0f2_c5da53ac",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
