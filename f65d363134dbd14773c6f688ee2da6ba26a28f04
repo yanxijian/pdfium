@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf18ca8d_308f9ff1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "Wrap at 72 columns.",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a54d585e_952f148d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "Bug: NNN",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb52ecbb_407dfbe9",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "In general, PDFium is trying to use Google C++ style naming going forward. So this can be named \"count\".",
+      "range": {
+        "startLine": 519,
+        "startChar": 16,
+        "endLine": 519,
+        "endChar": 22
+      },
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "444aaa0c_1aaec2ba",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "Check `list_items_.empty()` instead.",
+      "range": {
+        "startLine": 520,
+        "startChar": 6,
+        "endLine": 520,
+        "endChar": 17
+      },
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cb8c3d2_58ecced4",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "Given the callers, I believe this pre-condition should hold: `CHECK_GE(nItemIndex, 0);`\n\nIf this CL adds that to the top of this method, then the std::max() part here can be removed, right?",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "415e24a1_f2705121",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 533,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T17:20:31Z",
+      "side": 1,
+      "message": "Instead of indexing here, how about something like `for (const auto\u0026 pListItem : pdfium::span(list_items_).subspan(nItemIndex)) {` ?",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
