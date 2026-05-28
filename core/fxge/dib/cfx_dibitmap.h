@@ -91,6 +91,8 @@ class CFX_DIBitmap final : public CFX_DIBBase {
   }
 
   bool ConvertFormat(FXDIB_Format format);
+  void PopulateFrom1bppMask(pdfium::span<const uint8_t> src_span,
+                            uint32_t src_pitch);
   void Clear(uint32_t color);
 
 #if defined(PDF_USE_SKIA)

@@ -789,13 +789,7 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
 
   if (anti_alias != FontAntiAliasingMode::kMono &&
       ft_bitmap.pixel_mode == FT_PIXEL_MODE_MONO) {
-    for (unsigned int i = 0; i < ft_bitmap.rows; i++) {
-      for (unsigned int n = 0; n < ft_bitmap.width; n++) {
-        dest_span[n] = (src_span[n / 8] & (0x80 >> (n % 8))) ? 255 : 0;
-      }
-      dest_span = dest_span.subspan(dest_pitch);
-      src_span = src_span.subspan(src_pitch);
-    }
+    new_bitmap->PopulateFrom1bppMask(src_span, src_pitch);
   } else {
     std::ranges::fill(dest_span, 0);
     const uint32_t rowbytes = std::min(src_pitch, dest_pitch);
