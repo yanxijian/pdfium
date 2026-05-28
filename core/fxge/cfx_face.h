@@ -31,6 +31,9 @@
 #endif
 
 class CFX_CTTGSUBTable;
+#if defined(PDF_ENABLE_XFA)
+class CFX_CTTNameTable;
+#endif  // defined(PDF_ENABLE_XFA)
 class CFX_GlyphBitmap;
 class CFX_Path;
 class CFX_SubstFont;
@@ -92,6 +95,9 @@ class CFX_Face final : public Retainable, public Observable {
   size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
 
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
+#if defined(PDF_ENABLE_XFA)
+  std::unique_ptr<CFX_CTTNameTable> ParseNameTable();
+#endif  // defined(PDF_ENABLE_XFA)
 
   int GetGlyphCount() const;
   // TODO(crbug.com/42271048): Can this method be private?
