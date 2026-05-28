@@ -516,12 +516,22 @@ CFX_FloatRect CPWL_ListCtrl::GetContentRect() const {
 }
 
 void CPWL_ListCtrl::ReArrange(int32_t nItemIndex) {
+  const int32_t nCount = GetCount();
+  if (nCount == 0) {
+    content_rect_ = CFX_FloatRect();
+    SetScrollInfo();
+    return;
+  }
+
+  nItemIndex = std::max(0, std::min(nItemIndex, nCount - 1));
+
   float fPosY = 0.0f;
   if (IsValid(nItemIndex - 1)) {
     fPosY = list_items_[nItemIndex - 1]->GetRect().bottom;
   }
 
-  for (const auto& pListItem : list_items_) {
+  for (int32_t i = nItemIndex; i < nCount; ++i) {
+    const auto& pListItem = list_items_[i];
     float fListItemHeight = pListItem->GetItemHeight();
     pListItem->SetRect(
         CFX_FloatRect(0.0f, fPosY + fListItemHeight, 0.0f, fPosY));
