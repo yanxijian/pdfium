@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05f22f39_0c525cdb",
+        "filename": "core/fxge/cfx_cttnametable.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T00:17:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "24225280_c61303d5",
+      "revId": "28799dd87cb3ebb77de3bb92758bf79f89a34cdb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f59c66fc_f1676917",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-05-28T00:11:58Z",
       "side": 1,
       "message": "Add `noexcept` to move ctor/operator\u003d.",
+      "revId": "28799dd87cb3ebb77de3bb92758bf79f89a34cdb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89a3a038_d9fc8aac",
+        "filename": "core/fxge/cfx_cttnametable.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T00:17:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f59c66fc_f1676917",
       "revId": "28799dd87cb3ebb77de3bb92758bf79f89a34cdb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
