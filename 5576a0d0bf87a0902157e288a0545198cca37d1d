@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4938036d_0333a30c",
+        "filename": "core/fxge/cfx_substfont.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:35:31Z",
+      "side": 1,
+      "message": "It looks like the `static_assert`s checking the array sizes were lost during the move. Consider bringing them back:\n```cpp\nstatic_assert(kWeightPowArraySize \u003d\u003d std::size(kWeightPow), \"Wrong size\");\nstatic_assert(kWeightPowArraySize \u003d\u003d std::size(kWeightPow11), \"Wrong size\");\nstatic_assert(kWeightPowArraySize \u003d\u003d std::size(kWeightPowShiftJis), \"Wrong size\");\n```",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e27e900_a05cbfd8",
+        "filename": "core/fxge/cfx_substfont.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:35:31Z",
+      "side": 1,
+      "message": "Consider keeping the explanatory comment that was present in the old `cfx_face.cpp` before the move:\n```cpp\n// |angle| is non-positive so |-angle| is used as the index. Need to make sure\n// |angle| !\u003d INT_MIN since -INT_MIN is undefined.\n```",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc66e29f_da4f89ce",
+        "filename": "core/fxge/cfx_substfont.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-28T22:35:31Z",
+      "side": 1,
+      "message": "Consider keeping the explanatory comment `// Returns negative values on failure.` that was present in the old implementation.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 0
+      },
+      "revId": "5576a0d0bf87a0902157e288a0545198cca37d1d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
