@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aefee1ef_6494d661",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-28T06:54:00Z",
+      "side": 1,
+      "message": "Also needed to add some local modifications to brotli to get the gn gen to work locally.\n\nMain changes:\n\n1. Default argument for building with fuzzers as true in brotli. This can be changed to false by PDFium args\n2. Including pdfium.gni into the file for symbols related to ubsan.\n\n2. Cant be upstreamed.\n\nBut I did upload 1 in case any other embedders who use brotli are facing a similar issue, if not perhaps this can be added as a local modification.\nhttps://chromium-review.googlesource.com/c/chromium/src/+/7882000\n\nBefore (without local changes):\n```\nERROR at //third_party/brotli/BUILD.gn:10:3: Unable to load \"~/repo/pdfium/testing/libfuzzer/fuzzer_test.gni\".\n  import(\"//testing/libfuzzer/fuzzer_test.gni\")\n  ^-------------------------------------------\nSee //core/fxcodec/BUILD.gn:149:17: which caused the file to be included.\n      deps +\u003d [ \"../../third_party/brotli:dec\" ]\n                ^-----------------------------\n```\nAfter (with local changes except setting default to false instead - same effect as us overriding from the PDFium side):\n```\nDone. Made 811 targets from 221 files in 602ms\n```",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
