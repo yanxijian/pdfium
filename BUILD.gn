@@ -164,6 +164,9 @@ config("pdfium_public_config") {
   if (pdf_use_skia) {
     defines += [ "PDF_USE_SKIA" ]
   }
+  if (pdf_enable_brotli) {
+    defines += [ "PDF_ENABLE_BROTLI" ]
+  }
 }
 
 config("pdfium_core_config") {
