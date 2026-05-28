@@ -36,6 +36,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc638b3c_b4ec2c8c",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:11:04Z",
+      "side": 1,
+      "message": "Hmm okay I managed to reproduce it converting straight alpha to premultiplied.\n\nkSrcScan1 rows 3 and 4\n```\n    {.blue \u003d 255, .green \u003d 100, .red \u003d 0, .alpha \u003d 0},\n    {.blue \u003d 255, .green \u003d 100, .red \u003d 0, .alpha \u003d 255},\n```\nkDestScan rows 3 and 4\n```\n    {.blue \u003d 255, .green \u003d 100, .red \u003d 0, .alpha \u003d 255},\n    {.blue \u003d 255, .green \u003d 100, .red \u003d 0, .alpha \u003d 255},\n```\nSo if it\u0027s straight alpha you need to first multiply all the color channels by alpha then convert back after blending.\n\nThen the first row gets:\n`0.392156863*0 + 0.392156863*1 - 0.392156863*0*0.392156863*1 \u003d 0.392156863` (scaled back to 100)\n\nAnd the second row gets the original 161.",
+      "parentUuid": "01adbeae_f3ac4b6e",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e3878b7_b83d20b1",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "I did not bother investigating, because the plan is to replace the existing code altogether.",
       "parentUuid": "7e3878b7_b83d20b1",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85df78ec_7b470194",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:11:04Z",
+      "side": 1,
+      "message": "What do you mean replace the code? https://pdfium-review.googlesource.com/c/pdfium/+/148030 looks like a small math adjustment + a refactor. It doesn\u0027t have an debug ifdefs so I don\u0027t see how the code should be any different in debug.\n\nSo what numbers do you get if you run it in release mode?",
+      "parentUuid": "6ac383bd_7ad84741",
       "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -108,6 +144,30 @@
       "side": 1,
       "message": "I originally did the math a year ago, so my memory is a bit hazy, but I think it\u0027s all rounding errors.",
       "parentUuid": "19a24b9e_7afcfdef",
+      "range": {
+        "startLine": 349,
+        "startChar": 19,
+        "endLine": 349,
+        "endChar": 33
+      },
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15acbc2f_0c3a6156",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:11:04Z",
+      "side": 1,
+      "message": "Yeah there are rounding errors because of the converting to ints when premultiplying and unpremultiplying. I almost wanted to say it would be nicer to not unpremultiply for the test but that wouldn\u0027t really make the results the same as the other tests anyway.",
+      "parentUuid": "4e8e3469_cc600d3e",
       "range": {
         "startLine": 349,
         "startChar": 19,
