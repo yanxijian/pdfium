@@ -94,6 +94,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c36cf58a_cdafb78d",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:16:53Z",
+      "side": 1,
+      "message": "I figured someone can do this as a follow-up, and convert `nItemIndex` to `size_t`.",
+      "parentUuid": "a80e7959_f8b585a4",
+      "range": {
+        "startLine": 520,
+        "startChar": 20,
+        "endLine": 520,
+        "endChar": 29
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a9f78082_fb89911c",
         "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
         "patchSetId": 4
@@ -129,6 +153,30 @@
           ]
         }
       ],
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "070a036b_4cf93044",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:16:53Z",
+      "side": 1,
+      "message": "Or maybe something like: `size_t actual_index \u003d std::min\u003csize_t\u003e(nItemIndex, list_items_.size() - 1);`\n\nEither way, no need for `checked_cast()` here.",
+      "parentUuid": "a9f78082_fb89911c",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
       "revId": "453079134b0586fe492ea068aa132939de681450",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
