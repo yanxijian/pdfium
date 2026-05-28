@@ -179,6 +179,23 @@
       },
       "revId": "453079134b0586fe492ea068aa132939de681450",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd7a9dc9_ecc20006",
+        "filename": "testing/resources/pixel/bug_477200528_expected.pdf.0.png",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-28T18:18:12Z",
+      "side": 1,
+      "message": "Run this through optipng to shrink the PNG a bit.\n\nBTW, this will likely require different expectation files for Win/Mac/Linux.",
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
