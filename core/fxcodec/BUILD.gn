@@ -143,6 +143,11 @@ source_set("fxcodec") {
       ]
       deps += [ "../../third_party:tiff" ]
     }
+    if (pdf_enable_brotli) {
+      sources += []  # TODO(https://crbug.com/475855993): Add Brotli source
+                     # files here once Brotli support is implemented.
+      deps += [ "../../third_party/brotli:dec" ]
+    }
   }
 
   visibility = [ "../../*" ]
@@ -174,9 +179,19 @@ pdfium_unittest_source_set("unittests") {
       ]
     }
   }
+
+  if (pdf_enable_brotli) {
+    sources += []  # TODO(https://crbug.com/475855993): Add Brotli unit test
+                   # source files here once Brotli support is implemented.
+    deps += [ "../../third_party/brotli:dec" ]
+  }
 }
 
 pdfium_embeddertest_source_set("embeddertests") {
   sources = [ "jbig2/jbig2_embeddertest.cpp" ]
+  if (pdf_enable_brotli) {
+    sources += [ "brotli/brotli_embeddertest.cpp" ]
+    deps = [ "../../third_party/brotli:dec" ]
+  }
   pdfium_root_dir = "../../"
 }
