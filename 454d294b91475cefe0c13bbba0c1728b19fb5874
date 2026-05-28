@@ -39,6 +39,64 @@
       "message": "Why is there type mixing between FX_BGR_STRUCT\u003cint\u003e and FX_BGR_STRUCT\u003cuint8_t\u003e here? Is it possible to avoid these implicit casts and just use uint8_t for everything?",
       "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cd4cf1e_a344f806",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:09:44Z",
+      "side": 1,
+      "message": "It\u0027s because RgbBlend() uses \u003cint\u003e for some reason. I guess that\u0027s probably out of scope for this CL.",
+      "parentUuid": "5f473b08_31356ee4",
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "152f8d56_7f06e7c0",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:09:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we keep the pixels premultiplied the whole way through? Unpremultiplying then blending is not efficient and defeats the purpose of premultiplied alpha.\n\nUnPremultiplyBgr() divides by input.alpha then CompositePixelBgraPremul2BgraPremulCommonFinish() multiplies the input.alpha again and this process leaves rounding errors in the middle.",
+      "range": {
+        "startLine": 724,
+        "startChar": 2,
+        "endLine": 730,
+        "endChar": 79
+      },
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e121833_f550dd38",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-28T20:09:44Z",
+      "side": 1,
+      "message": "This is an artifact on unpremultiplying for the test. In premultiplied alpha the color channels get zerod for zero alpha then you cannot get the value back when you convert back to straight.",
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
