@@ -523,6 +523,24 @@
       "parentUuid": "870fa28e_f082abe9",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1da2e289_01aff559",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-29T16:40:33Z",
+      "side": 1,
+      "message": "Not quite sure if it would really work and it is kind of hard to tell if the OpenDocument() failure is from Brotli or from something else with the strutcure of the PDF.",
+      "parentUuid": "dc57e1ea_7a96d3ab",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
