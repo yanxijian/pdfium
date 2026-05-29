@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f4fea86_86b3de0b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-05-29T20:06:37Z",
+      "side": 1,
+      "message": "Can omit this tag. This is PDFium, which doesn\u0027t have Ink Signatures. PDFium embedders can benefit from this API.\n\nAlso, the tag in Chromium is `[PDF Ink Signatures]`.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "f2aa16117a480bbcef835e0f3b7857e75b890f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
