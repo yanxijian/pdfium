@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc39152a_dafdcaf7",
+        "filename": "testing/resources/bug_517126568.in",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-29T18:28:50Z",
+      "side": 1,
+      "message": "After making this change, please regenerate the PDF to keep it in sync.",
+      "revId": "a3067ba3009beae0537da587d5ab61c5ce938f5a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
