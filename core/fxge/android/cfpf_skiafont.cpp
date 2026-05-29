@@ -9,6 +9,7 @@
 #include <utility>
 
 #include "core/fxcrt/numerics/safe_conversions.h"
+#include "core/fxge/fx_font.h"
 
 CFPF_SkiaFont::CFPF_SkiaFont(RetainPtr<CFX_Face> face, FX_Charset uCharset)
     : face_(std::move(face)), charset_(uCharset) {}
@@ -27,5 +28,14 @@ uint32_t CFPF_SkiaFont::GetFontData(uint32_t dwTable,
   if (!face_) {
     return 0;
   }
-  return pdfium::checked_cast<uint32_t>(face_->GetSfntTable(dwTable, pBuffer));
+  pdfium::span<const uint8_t> table_data =
+      GetFontTable(face_->GetData(), dwTable, 0);
+  if (table_data.empty()) {
+    return 0;
+  }
+  if (pBuffer.size() < table_data.size()) {
+    return pdfium::checked_cast<uint32_t>(table_data.size());
+  }
+  fxcrt::spancpy(pBuffer, table_data);
+  return pdfium::checked_cast<uint32_t>(table_data.size());
 }
