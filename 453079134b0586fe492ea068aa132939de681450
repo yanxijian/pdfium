@@ -280,6 +280,24 @@
       "parentUuid": "4670eac4_b12440bc",
       "revId": "453079134b0586fe492ea068aa132939de681450",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d9cd329_6525fdc8",
+        "filename": "testing/resources/pixel/bug_477200528_expected.pdf.0.png",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-29T19:05:17Z",
+      "side": 1,
+      "message": "The CL needs to have the variations to make the try bots happy across Win/Mac/Linux. See the failures here: https://pdfium-review.googlesource.com/c/pdfium/+/148610?checksPatchset\u003d4\u0026tab\u003dchecks",
+      "parentUuid": "48eab9c2_4f6ce566",
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
