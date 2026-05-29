@@ -16,6 +16,24 @@
       "message": "Make the method should be Populate8bppMaskFrom1bppSpan()?",
       "revId": "f5586571d9486153626c739dd8c5009063f57451",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1760444_79c61e8b",
+        "filename": "core/fxge/dib/cfx_dibitmap.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 895,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-05-29T18:22:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d133b7e_02165d2a",
+      "revId": "f5586571d9486153626c739dd8c5009063f57451",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
