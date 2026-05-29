@@ -152,6 +152,30 @@ ByteString GetNameFromTT(pdfium::span<const uint8_t> name_table,
   return ByteString();
 }
 
+pdfium::span<const uint8_t> GetFontTable(pdfium::span<const uint8_t> font_data,
+                                         uint32_t tag) {
+  if (font_data.size() < 12) {
+    return {};
+  }
+  uint16_t nTables = fxcrt::GetUInt16MSBFirst(font_data.subspan<4, 2>());
+  auto table_dir = font_data.subspan(12u);
+  if (table_dir.size() < static_cast<size_t>(nTables) * 16u) {
+    return {};
+  }
+  for (uint16_t i = 0; i < nTables; ++i) {
+    auto entry = table_dir.subspan(static_cast<size_t>(i) * 16u, 16u);
+    if (fxcrt::GetUInt32MSBFirst(entry.first<4u>()) == tag) {
+      uint32_t offset = fxcrt::GetUInt32MSBFirst(entry.subspan<8u, 4u>());
+      uint32_t size = fxcrt::GetUInt32MSBFirst(entry.subspan<12u, 4u>());
+      if (offset > font_data.size() || size > font_data.size() - offset) {
+        return {};
+      }
+      return font_data.subspan(offset, size);
+    }
+  }
+  return {};
+}
+
 uint32_t GetTTCIndex(pdfium::span<const uint8_t> font_data,
                      size_t font_offset) {
   pdfium::span<const uint8_t> p = font_data.subspan<8u>();
