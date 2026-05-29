@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9684869a_24ebaa30",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T19:51:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "938806d8_925ef0e5",
+      "range": {
+        "startLine": 470,
+        "startChar": 44,
+        "endLine": 470,
+        "endChar": 55
+      },
+      "revId": "4c7240b3bcccefb6814544c9f681d0f2f304ff78",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "93ab07b1_2ef5bf2d",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-05-29T18:03:57Z",
       "side": 1,
       "message": "\"interned\" does not appear anywhere else in the public/ dir, so this reads like it is explaining implementation details, which is more than necessary for intended readers. It\u0027s probably sufficient to document the expectations without going into the \"why\" here.",
+      "range": {
+        "startLine": 479,
+        "startChar": 36,
+        "endLine": 479,
+        "endChar": 44
+      },
+      "revId": "4c7240b3bcccefb6814544c9f681d0f2f304ff78",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d8d2e34_07f9e0f6",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T19:51:40Z",
+      "side": 1,
+      "message": "I changed the docs to just say it needs to be the same document.",
+      "parentUuid": "93ab07b1_2ef5bf2d",
       "range": {
         "startLine": 479,
         "startChar": 36,
