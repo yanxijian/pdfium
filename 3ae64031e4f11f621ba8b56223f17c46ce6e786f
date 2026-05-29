@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff109c7d_0a06a06c",
+        "filename": "core/fxge/android/cfpf_skiafont.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-29T23:54:09Z",
+      "side": 1,
+      "message": "Isn\u0027t `face_` always going to be non-null here? CHECK() that and delete the null check on line 19 and 27?",
+      "revId": "3ae64031e4f11f621ba8b56223f17c46ce6e786f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c0de549_664820b5",
+        "filename": "core/fxge/android/cfpf_skiafontmgr.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-29T23:54:09Z",
+      "side": 1,
+      "message": "Pre-existing. Since ReportFace() never returns nullptr, I wonder if it can just return an Entry directly.",
+      "revId": "3ae64031e4f11f621ba8b56223f17c46ce6e786f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
