@@ -44,6 +44,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "00a5daa6_6f57a0e7",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T17:37:46Z",
+      "side": 1,
+      "message": "Done.\n\nInteresting that function is exactly equivalent. The documentation claims that the wrapper is needed for type deduction but the constructor on it\u0027s own did type deduction just fine for me. I wonder if over time type deduction has gotten better and WrapRetain isn\u0027t needed anymore.",
+      "parentUuid": "ed75b696_4aa17e5b",
+      "range": {
+        "startLine": 409,
+        "startChar": 25,
+        "endLine": 409,
+        "endChar": 34
+      },
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "fdbee9a1_92940851",
         "filename": "public/fpdf_edit.h",
         "patchSetId": 3
@@ -55,6 +79,24 @@
       "writtenOn": "2026-05-27T18:06:34Z",
       "side": 1,
       "message": "Seems unrelated but it\u0027s ok.",
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3342a8f_b1a04356",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T17:37:46Z",
+      "side": 1,
+      "message": "Oops that keeps sneaking in because I have auto format on save in my editor. It is unrelated.",
+      "parentUuid": "fdbee9a1_92940851",
       "revId": "9ed2b61210782baa397470407f0291add7660ebb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -72,6 +114,24 @@
       "writtenOn": "2026-05-27T18:06:34Z",
       "side": 1,
       "message": "What happens if a user uses a mark from Document A and uses this API for a page object on Document B? I.e. does this handle cross-document safely? Maybe mention they must be from the same document.",
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97352507_43fbb431",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T17:37:46Z",
+      "side": 1,
+      "message": "The only use of the document parameter is for the names of the mark params which are interned. I wrote a test to check cross-document behavior but because of the way the test harness is set up it\u0027s not easy to keep two documents live in memory at the same time. I believe it would work cross document as long as you keep the memory around for the original since the only reference is the interned strings. That would cause a copy of the mark to be emitted when the PDF text is generated.\n\nI added to the documentation about this since I don\u0027t have a nice way to make it work. Maybe that can be future work to clean up this strings memory ownership and then cross document marks would work without a caveat.\n\nHere\u0027s that test I wrote:\n\n```\n--- a/fpdfsdk/fpdf_edit_embeddertest.cpp\n+++ b/fpdfsdk/fpdf_edit_embeddertest.cpp\n@@ -4150,6 +4150,50 @@ TEST_F(FPDFEditEmbedderTest, AddExistingMarkCompressedStream) {\n   CheckMarkCounts(saved_page.get(), 0, 2, 2, 0, 0, 0);\n }\n \n+TEST_F(FPDFEditEmbedderTest, AddExistingMarkCrossDocument) {\n+  ASSERT_TRUE(OpenDocument(\"hello_world.pdf\"));\n+  ScopedPage page \u003d LoadScopedPage(0);\n+  ASSERT_TRUE(page);\n+\n+  // Add a mark to the first page object\n+  FPDF_PAGEOBJECT page_object1 \u003d FPDFPage_GetObject(page.get(), 0);\n+  FPDF_PAGEOBJECTMARK mark \u003d FPDFPageObj_AddMark(page_object1, \"Prime\");\n+  EXPECT_TRUE(mark);\n+  EXPECT_TRUE(FPDFPageObjMark_SetStringParam(document(), page_object1, mark,\n+                                             \"Test\", \"Hello\"));\n+\n+  // Render and check there is 1 mark.\n+  {\n+    ScopedFPDFBitmap page_bitmap \u003d RenderPage(page.get());\n+    CompareBitmapWithExpectationSuffix(page_bitmap.get(), kHelloWorldPng);\n+  }\n+  CheckMarkCounts(page.get(), 0, 2, 1, 0, 0, 0);\n+\n+  // Open another document\n+  auto document \u003d std::move(document_);\n+  CloseDocument();\n+  ASSERT_TRUE(OpenDocument(\"hello_world_compressed_stream.pdf\"));\n+  page \u003d LoadScopedPage(0);\n+  ASSERT_TRUE(page);\n+\n+  // Render and check there are no marks.\n+  {\n+    ScopedFPDFBitmap page_bitmap \u003d RenderPage(page.get());\n+    CompareBitmapWithExpectationSuffix(page_bitmap.get(), kHelloWorldPng);\n+  }\n+  CheckMarkCounts(page.get(), 0, 2, 0, 0, 0, 0);\n+\n+  // AddExistingMark with the mark created for the other document\n+  FPDF_PAGEOBJECT page_object2 \u003d FPDFPage_GetObject(page.get(), 0);\n+  EXPECT_TRUE(FPDFPageObj_AddExistingMark(page_object2, mark));\n+\n+  {\n+    ScopedFPDFBitmap page_bitmap \u003d RenderPage(page.get());\n+    CompareBitmapWithExpectationSuffix(page_bitmap.get(), kHelloWorldPng);\n+  }\n+  CheckMarkCounts(page.get(), 0, 2, 1, 0, 0, 0);\n+}\n+\n TEST_F(FPDFEditEmbedderTest, SetMarkParam) {\n   // Load document with some text.\n   ASSERT_TRUE(OpenDocument(\"text_in_page_marked.pdf\"));\n```",
+      "parentUuid": "6719d62b_9912b365",
       "revId": "9ed2b61210782baa397470407f0291add7660ebb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
