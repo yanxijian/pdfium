@@ -274,7 +274,8 @@ CFPF_SkiaFont* CFPF_SkiaFontMgr::CreateFont(ByteStringView family_name,
       continue;
     }
     int32_t score = 0;
-    const uint32_t sys_font_name_hash = SkiaNormalizeFontName(font->family);
+    const uint32_t sys_font_name_hash =
+        SkiaNormalizeFontName(font->family.AsStringView());
     if (face_name_hash == sys_font_name_hash) {
       score += kSkiaMatchNameWeight;
     }

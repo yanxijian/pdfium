@@ -10,6 +10,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include <optional>
 #include <vector>
 
 #include "core/fxcrt/bytestring.h"
@@ -63,6 +64,11 @@ enum class FontAntiAliasingMode : int {
   kLcd,
 };
 
+struct FontTableLocation {
+  uint32_t offset;
+  uint32_t size;
+};
+
 /* Other font flags */
 #define FXFONT_USEEXTERNATTR 0x80000
 
@@ -81,6 +87,12 @@ FX_RECT GetGlyphsBBox(const std::vector<TextGlyphPos>& glyphs,
                       bool anti_alias_is_lcd);
 
 ByteString GetNameFromTT(pdfium::span<const uint8_t> name_table, uint32_t name);
+std::optional<FontTableLocation> FindFontTable(
+    pdfium::span<const uint8_t> table_dir,
+    uint32_t tag);
+pdfium::span<const uint8_t> GetFontTable(pdfium::span<const uint8_t> font_data,
+                                         uint32_t tag,
+                                         size_t face_offset);
 uint32_t GetTTCIndex(pdfium::span<const uint8_t> font_data, size_t font_offset);
 
 inline bool FontStyleIsForceBold(uint32_t style) {
