@@ -116,6 +116,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e28ffe8a_5a092b0f",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T17:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c36cf58a_cdafb78d",
+      "range": {
+        "startLine": 520,
+        "startChar": 20,
+        "endLine": 520,
+        "endChar": 29
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9f78082_fb89911c",
@@ -171,6 +195,30 @@
       "side": 1,
       "message": "Or maybe something like: `size_t actual_index \u003d std::min\u003csize_t\u003e(nItemIndex, list_items_.size() - 1);`\n\nEither way, no need for `checked_cast()` here.",
       "parentUuid": "a9f78082_fb89911c",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a64fb76b_c72a22a0",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T17:42:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "070a036b_4cf93044",
       "range": {
         "startLine": 539,
         "startChar": 20,
