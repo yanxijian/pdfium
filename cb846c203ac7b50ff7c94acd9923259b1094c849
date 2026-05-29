@@ -114,6 +114,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5f099ac9_b50d1e01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-29T14:54:08Z",
+      "side": 1,
+      "message": "Have another modification:\nhttps://chromium-review.googlesource.com/c/chromium/src/+/7882511",
+      "parentUuid": "aefee1ef_6494d661",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1cc2bfbd_31dd12e8",
         "filename": "core/fxcodec/BUILD.gn",
         "patchSetId": 9
@@ -323,6 +341,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d22d7f1_ad605e29",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-29T14:54:08Z",
+      "side": 1,
+      "message": "Well now my new samples fail at OpenDocument for some reason but I added extra steps which BrotliDecode should pass so we can keep using the existing tests even after we fix the issues.",
+      "parentUuid": "573e4361_3327a978",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 36
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1eecd99_1dd2805b",
@@ -461,6 +503,24 @@
       "side": 1,
       "message": "Will do, but it might take me a while to get it done.",
       "parentUuid": "317433d9_0780ab13",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc57e1ea_7a96d3ab",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-29T14:54:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "870fa28e_f082abe9",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
