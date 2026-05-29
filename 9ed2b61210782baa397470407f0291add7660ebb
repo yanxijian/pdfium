@@ -134,6 +134,24 @@
       "parentUuid": "6719d62b_9912b365",
       "revId": "9ed2b61210782baa397470407f0291add7660ebb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71470c92_57e1a88e",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 469,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-05-29T18:03:57Z",
+      "side": 1,
+      "message": "Thanks for exploring the possibilities, but it is probably a simpler model for PDFium embedders to work with if the API says the handles should all be in the same document. By under promising, this also gives the API implementation more wiggle room to change without potentially breaking embedders.",
+      "parentUuid": "97352507_43fbb431",
+      "revId": "9ed2b61210782baa397470407f0291add7660ebb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
