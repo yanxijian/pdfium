@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e02ee7f_9c938b28",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bf18ca8d_308f9ff1",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a54d585e_952f148d",
@@ -35,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21e57c39_c55cdf3f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a54d585e_952f148d",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb52ecbb_407dfbe9",
@@ -48,6 +84,30 @@
       "writtenOn": "2026-05-28T17:20:31Z",
       "side": 1,
       "message": "In general, PDFium is trying to use Google C++ style naming going forward. So this can be named \"count\".",
+      "range": {
+        "startLine": 519,
+        "startChar": 16,
+        "endLine": 519,
+        "endChar": 22
+      },
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5de3c393_cfe9b84d",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb52ecbb_407dfbe9",
       "range": {
         "startLine": 519,
         "startChar": 16,
@@ -81,6 +141,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d75fafa_a48cb99b",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 520,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "444aaa0c_1aaec2ba",
+      "range": {
+        "startLine": 520,
+        "startChar": 6,
+        "endLine": 520,
+        "endChar": 17
+      },
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9cb8c3d2_58ecced4",
@@ -98,6 +182,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9382f690_8de0c485",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9cb8c3d2_58ecced4",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "415e24a1_f2705121",
@@ -111,6 +213,24 @@
       "writtenOn": "2026-05-28T17:20:31Z",
       "side": 1,
       "message": "Instead of indexing here, how about something like `for (const auto\u0026 pListItem : pdfium::span(list_items_).subspan(nItemIndex)) {` ?",
+      "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe0ff7af_c66c7e90",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 533,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T08:24:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "415e24a1_f2705121",
       "revId": "f65d363134dbd14773c6f688ee2da6ba26a28f04",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
