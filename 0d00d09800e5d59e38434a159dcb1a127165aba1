@@ -16,6 +16,24 @@
       "message": "Space after colon, like line 16.",
       "revId": "0d00d09800e5d59e38434a159dcb1a127165aba1",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0e1f8f9_b5443dc6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T12:52:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "599edc39_4121c4cc",
+      "revId": "0d00d09800e5d59e38434a159dcb1a127165aba1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }

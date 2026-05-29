@@ -36,6 +36,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91c51de6_0b92356d",
+        "filename": "core/fpdfapi/edit/cpdf_pageorganizer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T12:52:09Z",
+      "side": 1,
+      "message": "Makes sense. I\u0027ll simplify this to track only the dictionary pointers.",
+      "parentUuid": "11185ecc_7d3b98d7",
+      "revId": "64e4decd191015ad67dd6dcee8e3698d6bed61c6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c8b407c3_bc89fe20",
@@ -49,6 +67,24 @@
       "writtenOn": "2026-05-28T18:04:16Z",
       "side": 1,
       "message": "Add a PDF comment (% foo) to point out this is a deliberate self-reference.",
+      "revId": "64e4decd191015ad67dd6dcee8e3698d6bed61c6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23101516_a1caf842",
+        "filename": "testing/resources/bug_517126568.in",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-29T12:52:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8b407c3_bc89fe20",
       "revId": "64e4decd191015ad67dd6dcee8e3698d6bed61c6",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
