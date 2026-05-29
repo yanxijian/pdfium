@@ -22,6 +22,7 @@
 #include "core/fxcrt/fx_folder.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/fx_system.h"
+#include "core/fxcrt/mapped_data_bytes.h"
 #include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/fx_font.h"
 
@@ -74,45 +75,6 @@ bool FindFamilyNameMatch(ByteStringView family_name,
   }
 
   return true;
-}
-
-ByteString ReadStringFromFile(FILE* pFile, uint32_t size) {
-  ByteString result;
-  {
-    // Span's lifetime must end before ReleaseBuffer() below.
-    pdfium::span<char> buffer = result.GetBuffer(size);
-
-    // SAFETY: GetBuffer(size) ensures size bytes available.
-    if (!UNSAFE_BUFFERS(fread(buffer.data(), size, 1, pFile))) {
-      return ByteString();
-    }
-  }
-  result.ReleaseBuffer(size);
-  return result;
-}
-
-ByteString LoadTableFromTT(FILE* pFile,
-                           const uint8_t* pTables,
-                           uint32_t nTables,
-                           uint32_t tag,
-                           FX_FILESIZE fileSize) {
-  UNSAFE_TODO({
-    for (uint32_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): use actual span.
-      auto p = pdfium::span(pTables + i * 16, 16u);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == tag) {
-        uint32_t offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        uint32_t size = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-        if (offset > std::numeric_limits<uint32_t>::max() - size ||
-            static_cast<FX_FILESIZE>(offset + size) > fileSize ||
-            fseek(pFile, offset, SEEK_SET) < 0) {
-          return ByteString();
-        }
-        return ReadStringFromFile(pFile, size);
-      }
-    }
-  });
-  return ByteString();
 }
 
 }  // namespace
@@ -172,17 +134,14 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
 
   fseek(pFile.get(), 0, SEEK_END);
-
   FX_FILESIZE filesize = ftell(pFile.get());
-  uint8_t buffer[16];
   fseek(pFile.get(), 0, SEEK_SET);
 
-  // SAFETY: 12 byte read fits into 16 byte buffer,
-  size_t items_read =
-      UNSAFE_BUFFERS(fread(buffer, /*size=*/12, /*nmemb=*/1, pFile.get()));
-  if (items_read != 1) {
+  uint8_t buffer[12];
+  if (UNSAFE_BUFFERS(fread(buffer, 12, 1, pFile.get())) != 1) {
     return;
   }
+
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
     ReportFace(path, pFile.get(), filesize, 0);
@@ -191,25 +150,16 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
 
   uint32_t nFaces =
       fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).subspan<8u, 4u>());
-  FX_SAFE_SIZE_T safe_face_bytes = nFaces;
-  safe_face_bytes *= 4;
-  if (!safe_face_bytes.IsValid()) {
-    return;
-  }
-
-  auto offsets =
-      FixedSizeDataVector<uint8_t>::Uninit(safe_face_bytes.ValueOrDie());
-  pdfium::span<uint8_t> offsets_span = offsets.span();
-  items_read = UNSAFE_TODO(fread(offsets_span.data(), /*size=*/1,
-                                 /*nmemb=*/offsets_span.size(), pFile.get()));
-  if (items_read != offsets_span.size()) {
+  auto offsets = FixedSizeDataVector<uint8_t>::Uninit(nFaces * 4);
+  if (UNSAFE_BUFFERS(
+          fread(offsets.span().data(), nFaces * 4, 1, pFile.get())) != 1) {
     return;
   }
 
   for (uint32_t i = 0; i < nFaces; i++) {
-    ReportFace(
-        path, pFile.get(), filesize,
-        fxcrt::GetUInt32MSBFirst(offsets_span.subspan(i * 4).first<4u>()));
+    uint32_t offset =
+        fxcrt::GetUInt32MSBFirst(offsets.span().subspan(i * 4).first<4u>());
+    ReportFace(path, pFile.get(), filesize, offset);
   }
 }
 
@@ -217,36 +167,42 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
                                     FILE* pFile,
                                     FX_FILESIZE filesize,
                                     uint32_t offset) {
-  char buffer[16];
   if (fseek(pFile, offset, SEEK_SET) < 0) {
     return;
   }
-  // SAFTEY: 12 byt read fits in 16 byte buffer.
-  if (UNSAFE_BUFFERS(!fread(buffer, 12, 1, pFile))) {
+
+  uint8_t buffer[12];
+  if (UNSAFE_BUFFERS(fread(buffer, 12, 1, pFile)) != 1) {
     return;
   }
 
-  uint32_t nTables =
-      fxcrt::GetUInt16MSBFirst(pdfium::as_byte_span(buffer).subspan<4, 2>());
-  ByteString tables = ReadStringFromFile(pFile, nTables * 16);
-  if (tables.IsEmpty()) {
+  uint16_t nTables =
+      fxcrt::GetUInt16MSBFirst(pdfium::span(buffer).subspan<4, 2>());
+  auto table_dir_data = FixedSizeDataVector<uint8_t>::Uninit(nTables * 16);
+  if (UNSAFE_BUFFERS(
+          fread(table_dir_data.span().data(), nTables * 16, 1, pFile)) != 1) {
     return;
   }
 
-  static constexpr uint32_t kNameTag =
-      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
-  ByteString names = LoadTableFromTT(pFile, tables.unsigned_str(), nTables,
-                                     kNameTag, filesize);
-  if (names.IsEmpty()) {
+  uint32_t name_tag = CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  auto loc = FindFontTable(table_dir_data.span(), name_tag);
+  if (!loc) {
     return;
   }
 
-  ByteString facename = GetNameFromTT(names.unsigned_span(), 1);
+  auto names_data = FixedSizeDataVector<uint8_t>::Uninit(loc->size);
+  if (fseek(pFile, loc->offset, SEEK_SET) < 0 ||
+      UNSAFE_BUFFERS(fread(names_data.span().data(), loc->size, 1, pFile)) !=
+          1) {
+    return;
+  }
+
+  ByteString facename = GetNameFromTT(names_data.span(), 1);
   if (facename.IsEmpty()) {
     return;
   }
 
-  ByteString style = GetNameFromTT(names.unsigned_span(), 2);
+  ByteString style = GetNameFromTT(names_data.span(), 2);
   if (style != "Regular") {
     facename += " " + style;
   }
@@ -255,36 +211,43 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     return;
   }
 
-  auto pInfo =
-      std::make_unique<FontFaceInfo>(path, facename, tables, offset, filesize);
-  static constexpr uint32_t kOs2Tag =
-      CFX_FontMapper::MakeTag('O', 'S', '/', '2');
-  ByteString os2 =
-      LoadTableFromTT(pFile, tables.unsigned_str(), nTables, kOs2Tag, filesize);
-  if (os2.GetLength() >= 86) {
-    pdfium::span<const uint8_t> p = os2.unsigned_span().subspan(78u);
-    uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
-    if (codepages & (1U << 17)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
-      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kShiftJis;
-    }
-    if (codepages & (1U << 18)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
-      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kGb;
-    }
-    if (codepages & (1U << 20)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
-      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kBig5;
-    }
-    if ((codepages & (1U << 19)) || (codepages & (1U << 21))) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kHangul);
-      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kKorean;
-    }
-    if (codepages & (1U << 31)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kSymbol);
-      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kSymbol;
+  ByteString tables = UNSAFE_BUFFERS(
+      ByteString(table_dir_data.span().data(), table_dir_data.span().size()));
+  auto pInfo = std::make_unique<FontFaceInfo>(
+      path, facename, tables, offset, pdfium::checked_cast<uint32_t>(filesize));
+
+  uint32_t os2_tag = CFX_FontMapper::MakeTag('O', 'S', '/', '2');
+  loc = FindFontTable(table_dir_data.span(), os2_tag);
+  if (loc && loc->size >= 86) {
+    auto os2_data = FixedSizeDataVector<uint8_t>::Uninit(loc->size);
+    if (fseek(pFile, loc->offset, SEEK_SET) >= 0 &&
+        UNSAFE_BUFFERS(fread(os2_data.span().data(), loc->size, 1, pFile)) ==
+            1) {
+      pdfium::span<const uint8_t> p = os2_data.span().subspan(78u);
+      uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
+      if (codepages & (1U << 17)) {
+        mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
+        pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kShiftJis;
+      }
+      if (codepages & (1U << 18)) {
+        mapper_->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
+        pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kGb;
+      }
+      if (codepages & (1U << 20)) {
+        mapper_->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
+        pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kBig5;
+      }
+      if ((codepages & (1U << 19)) || (codepages & (1U << 21))) {
+        mapper_->AddInstalledFont(facename, FX_Charset::kHangul);
+        pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kKorean;
+      }
+      if (codepages & (1U << 31)) {
+        mapper_->AddInstalledFont(facename, FX_Charset::kSymbol);
+        pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kSymbol;
+      }
     }
   }
+
   mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kAnsi;
   pInfo->styles_ = 0;
@@ -413,27 +376,43 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   }
 
   const FontFaceInfo* font = static_cast<FontFaceInfo*>(hFont);
-  uint32_t datasize = 0;
-  uint32_t offset = 0;
+
   if (table == SystemFontInfoIface::kTableNone) {
-    datasize = font->font_offset_ ? 0 : font->file_size_;
-  } else if (table == SystemFontInfoIface::kTableTTCF) {
-    datasize = font->font_offset_ ? font->file_size_ : 0;
-  } else {
-    size_t nTables = font->font_tables_.GetLength() / 16;
-    for (size_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): iterate over span.
-      pdfium::span<const uint8_t> p =
-          font->font_tables_.unsigned_span().subspan(i * 16);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == table) {
-        offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        datasize = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-      }
+    if (font->font_offset_) {
+      return 0;
     }
+    if (buffer.size() < font->file_size_) {
+      return font->file_size_;
+    }
+    std::unique_ptr<FILE, FxFileCloser> pFile(
+        fopen(font->file_path_.c_str(), "rb"));
+    if (!pFile) {
+      return 0;
+    }
+    if (UNSAFE_BUFFERS(
+            fread(buffer.data(), font->file_size_, 1, pFile.get())) != 1) {
+      return 0;
+    }
+    return font->file_size_;
   }
 
-  if (!datasize || buffer.size() < datasize) {
-    return datasize;
+  if (table == SystemFontInfoIface::kTableTTCF) {
+    if (!font->font_offset_) {
+      return 0;
+    }
+    if (buffer.size() < font->file_size_) {
+      return font->file_size_;
+    }
+    std::unique_ptr<FILE, FxFileCloser> pFile(
+        fopen(font->file_path_.c_str(), "rb"));
+    if (!pFile) {
+      return 0;
+    }
+    if (UNSAFE_BUFFERS(
+            fread(buffer.data(), font->file_size_, 1, pFile.get())) != 1) {
+      return 0;
+    }
+    return font->file_size_;
   }
 
   std::unique_ptr<FILE, FxFileCloser> pFile(
@@ -442,13 +421,20 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
     return 0;
   }
 
-  if (fseek(pFile.get(), offset, SEEK_SET) < 0) {
+  auto loc = FindFontTable(font->font_tables_.unsigned_span(), table);
+  if (!loc) {
     return 0;
   }
-  if (UNSAFE_TODO(fread(buffer.data(), datasize, 1, pFile.get())) != 1) {
+
+  if (buffer.size() < loc->size) {
+    return loc->size;
+  }
+
+  if (fseek(pFile.get(), loc->offset, SEEK_SET) < 0 ||
+      UNSAFE_BUFFERS(fread(buffer.data(), loc->size, 1, pFile.get())) != 1) {
     return 0;
   }
-  return datasize;
+  return loc->size;
 }
 
 void CFX_FolderFontInfo::DeleteFont(void* hFont) {}
