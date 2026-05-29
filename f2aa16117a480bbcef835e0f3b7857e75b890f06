@@ -22,6 +22,30 @@
       },
       "revId": "f2aa16117a480bbcef835e0f3b7857e75b890f06",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d87a9ea6_b6aff915",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-05-29T20:10:32Z",
+      "side": 1,
+      "message": "I just thought it made sense to tag that this was done as part of the ink signatures project. I know that\u0027s the tag in Chromium but I felt PDF is redundant for PDFium and wanted more space in my subject line.\n\nYou\u0027re right though this tag is unique and probably won\u0027t help anyone find the CL.",
+      "parentUuid": "9f4fea86_86b3de0b",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "f2aa16117a480bbcef835e0f3b7857e75b890f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
