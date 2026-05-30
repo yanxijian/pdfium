@@ -231,6 +231,54 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "459d75f5_e417ba1b",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-30T10:05:09Z",
+      "side": 1,
+      "message": "Build error at cpwl_list_ctrl.cpp:537:\n\n    .subspan(nItemIndex)\n\n`nItemIndex` is `int32_t`, but `subspan()` expects a `size_t`.\n\nThe argument is wrapped in `StrictNumeric\u003csize_t\u003e`, which performs a\n`strict_cast\u003csize_t\u003e()`. This fails to compile because `size_t` cannot\nrepresent all possible `int32_t` values.\n\nAlthough `CHECK_GE(nItemIndex, 0)` guarantees the value is non-negative\nat runtime, the compiler cannot infer that. Use:\n\n    .subspan(pdfium::checked_cast\u003csize_t\u003e(nItemIndex))",
+      "parentUuid": "a64fb76b_c72a22a0",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30c2f46d_fc2bb232",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-05-30T10:05:09Z",
+      "side": 1,
+      "message": "The build fails at fpdfsdk/pwl/cpwl_list_ctrl.cpp:537:\n\n    for (const auto\u0026 pListItem : pdfium::span(list_items_).subspan(nItemIndex)) {\n\n  `nItemIndex` is `int32_t`, but `subspan()` wraps its argument in\n  `StrictNumeric\u003csize_t\u003e`. The constructor of `StrictNumeric` calls\n  `strict_cast\u003csize_t\u003e(int32_t_value)`, which is a compile-time error\n  because `unsigned long long` cannot represent all `int` values\n  (i.e., negative numbers fail the `kContained` range check).\n\n  Even though `CHECK_GE(nItemIndex, 0)` at line 521 guarantees\n  `nItemIndex` is non-negative at runtime, the compiler doesn\u0027t see that.\n  The fix should be either:\n\n    .subspan(pdfium::checked_cast\u003csize_t\u003e(nItemIndex))\n\n  or computing a `size_t` index upfront:\n\n    size_t index \u003d std::min\u003csize_t\u003e(nItemIndex, list_items_.size() - 1);",
+      "parentUuid": "a64fb76b_c72a22a0",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bd7a9dc9_ecc20006",
         "filename": "testing/resources/pixel/bug_477200528_expected.pdf.0.png",
         "patchSetId": 4
