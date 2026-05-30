@@ -87,13 +87,13 @@ void SwapByteOrder(pdfium::span<uint16_t> str) {
   }
 }
 
-}  // namespace
+constexpr uint32_t kUtf8BomMask = 0x00FFFFFF;
+constexpr uint32_t kUtf8Bom = 0x00BFBBEF;
+constexpr uint32_t kUtf16BomMask = 0x0000FFFF;
+constexpr uint32_t kUtf16BeBom = 0x0000FFFE;
+constexpr uint32_t kUtf16LeBom = 0x0000FEFF;
 
-#define BOM_UTF8_MASK 0x00FFFFFF
-#define BOM_UTF8 0x00BFBBEF
-#define BOM_UTF16_MASK 0x0000FFFF
-#define BOM_UTF16_BE 0x0000FFFE
-#define BOM_UTF16_LE 0x0000FEFF
+}  // namespace
 
 CFX_SeekableStreamProxy::CFX_SeekableStreamProxy(
     const RetainPtr<IFX_SeekableReadStream>& stream)
@@ -105,16 +105,16 @@ CFX_SeekableStreamProxy::CFX_SeekableStreamProxy(
   uint32_t bom = 0;
   ReadData(pdfium::byte_span_from_ref(bom).first<3>());
 
-  bom &= BOM_UTF8_MASK;
-  if (bom == BOM_UTF8) {
+  bom &= kUtf8BomMask;
+  if (bom == kUtf8Bom) {
     bom_length_ = 3;
     code_page_ = FX_CodePage::kUTF8;
   } else {
-    bom &= BOM_UTF16_MASK;
-    if (bom == BOM_UTF16_BE) {
+    bom &= kUtf16BomMask;
+    if (bom == kUtf16BeBom) {
       bom_length_ = 2;
       code_page_ = FX_CodePage::kUTF16BE;
-    } else if (bom == BOM_UTF16_LE) {
+    } else if (bom == kUtf16LeBom) {
       bom_length_ = 2;
       code_page_ = FX_CodePage::kUTF16LE;
     } else {
