@@ -166,7 +166,7 @@ const AbbrPair kInlineValueAbbr[] = {
     {"AHx", "ASCIIHexDecode"}, {"A85", "ASCII85Decode"},
     {"LZW", "LZWDecode"},      {"Fl", "FlateDecode"},
     {"RL", "RunLengthDecode"}, {"CCF", "CCITTFaxDecode"},
-    {"DCT", "DCTDecode"},
+    {"DCT", "DCTDecode"},      {"BDC", "BrotliDecode"},
 };
 
 struct AbbrReplacementOp {
