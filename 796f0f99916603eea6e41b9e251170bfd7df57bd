@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25d5cefe_95b7353e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T11:43:06Z",
+      "side": 1,
+      "message": "Hi guys, finally finished an initial attempt for an Implimentation of /BrotliDecode. Wired it somewhat similarly to /FlateDecode except in the line decoder part, not sure if there is anything I was supposed to add there specifically.\n\nEither way it seems to work now for the sample PDFs and all of PDFA\u0027s samples (which I tested locally).\n\n+@bashi and +@rbyers to help out with the brotli-side in case I missed anything with the Brotli API. Thanks!",
+      "revId": "796f0f99916603eea6e41b9e251170bfd7df57bd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
