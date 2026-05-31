@@ -26,7 +26,7 @@ class CJBig2_ArithDecoder;
 class CJBig2_GRDProc;
 class PauseIndicatorIface;
 
-#define JBIG2_MIN_SEGMENT_SIZE 11
+constexpr int kJBig2MinSegmentSize = 11;
 
 enum class JBig2_Result { kSuccess, kFailure, kEndReached };
 
