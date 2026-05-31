@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f3a8e8d_b2e82138",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:59:00Z",
+      "side": 1,
+      "message": "Spaced it out a bit more earlier for my readability but I should probably condense this down similarly to the rest of the blocks.",
+      "revId": "15060c726ddec762942b298604887376e2f6d43c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed8624f8_7569e7c6",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:59:00Z",
+      "side": 1,
+      "message": "Same here - Spaced it out a bit more earlier for my readability but I should probably condense this down similarly to the rest of the blocks.",
+      "revId": "15060c726ddec762942b298604887376e2f6d43c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
