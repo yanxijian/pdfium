@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "530781fa_066401a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T13:55:02Z",
+      "side": 1,
+      "message": "```suggestion\ncpdf_streamparser.cpp alongside existing filters, and enables the Brotli\n```",
+      "range": {
+        "startLine": 14,
+        "startChar": 66,
+        "endLine": 14,
+        "endChar": 72
+      },
+      "revId": "eab86f20ec9e0e9a93d1d28de8d463fbb767afaf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09ecce80_01dfd04c",
+        "filename": "core/fpdfapi/page/cpdf_streamparser.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T13:55:02Z",
+      "side": 1,
+      "message": "Guard include",
+      "revId": "eab86f20ec9e0e9a93d1d28de8d463fbb767afaf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "466bb518_d0389a1e",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T13:55:02Z",
+      "side": 1,
+      "message": "Guard include",
+      "revId": "eab86f20ec9e0e9a93d1d28de8d463fbb767afaf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2a9d4f1_c8bdae9b",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T13:55:02Z",
+      "side": 1,
+      "message": "DEPS",
+      "revId": "eab86f20ec9e0e9a93d1d28de8d463fbb767afaf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
