@@ -62,6 +62,30 @@
       },
       "revId": "14709727628b8aa457785b431164b65e4bdd2e46",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3115a887_ee0a9f25",
+        "filename": "core/fxcodec/jbig2/jbig2_context.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T14:28:20Z",
+      "side": 1,
+      "message": ".cpp not header",
+      "parentUuid": "7f60fe19_39c7ae63",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 40
+      },
+      "revId": "14709727628b8aa457785b431164b65e4bdd2e46",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
