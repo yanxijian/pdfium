@@ -50,8 +50,9 @@ bool CXFA_FFListBox::LoadWidget() {
   CFWL_ListBox* pListBox = cppgc::MakeGarbageCollected<CFWL_ListBox>(
       GetFWLApp()->GetHeap()->GetAllocationHandle(), GetFWLApp(),
       CFWL_Widget::Properties(), nullptr);
-  pListBox->ModifyStyles(FWL_STYLE_WGT_VScroll | FWL_STYLE_WGT_NoBackground,
-                         0xFFFFFFFF);
+  pListBox->ModifyStyles(
+      {pdfium::WidgetStyle::kVScroll, pdfium::WidgetStyle::kNoBackground},
+      ~Mask<pdfium::WidgetStyle>{});
   SetNormalWidget(pListBox);
   pListBox->SetAdapterIface(this);
 
