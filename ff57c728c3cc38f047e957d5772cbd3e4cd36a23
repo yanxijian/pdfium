@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c475f915_63e78a79",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:27:13Z",
+      "side": 1,
+      "message": "Line 9 seems to overflow 72 chars.",
+      "revId": "ff57c728c3cc38f047e957d5772cbd3e4cd36a23",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42cf9e0b_2eed608f",
+        "filename": "xfa/fwl/cfwl_edit.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 720,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:27:13Z",
+      "side": 1,
+      "message": "Can you double check if this bit has been formatted, seems a bit off that this would come to the next line when the formatted could have put it in the previous line.",
+      "range": {
+        "startLine": 720,
+        "startChar": 0,
+        "endLine": 720,
+        "endChar": 39
+      },
+      "revId": "ff57c728c3cc38f047e957d5772cbd3e4cd36a23",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
