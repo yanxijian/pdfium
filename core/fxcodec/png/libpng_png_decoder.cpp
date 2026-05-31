@@ -7,6 +7,7 @@
 #include "core/fxcodec/png/libpng_png_decoder.h"
 
 #include <setjmp.h>
+#include <stddef.h>
 #include <string.h>
 
 #include "core/fxcodec/cfx_codec_memory.h"
@@ -28,7 +29,7 @@
 #error "If Rust PNG is enabled, then `libpng` should not be used."
 #endif
 
-#define PNG_ERROR_SIZE 256
+constexpr size_t kPngErrorSize = 256;
 
 using PngDecoderDelegate = fxcodec::PngDecoderDelegate;
 
@@ -40,7 +41,7 @@ class CPngContext final : public ProgressiveDecoderContext {
   png_structp png_ = nullptr;
   png_infop info_ = nullptr;
   UnownedPtr<PngDecoderDelegate> const delegate_;
-  char last_error_[PNG_ERROR_SIZE] = {};
+  char last_error_[kPngErrorSize] = {};
   png_uint_32 height_ = 0;
   int number_of_passes_ = 0;
 };
@@ -50,7 +51,7 @@ extern "C" {
 void _png_error_data(png_structp png_ptr, png_const_charp error_msg) {
   if (png_get_error_ptr(png_ptr)) {
     UNSAFE_TODO(strncpy(static_cast<char*>(png_get_error_ptr(png_ptr)),
-                        error_msg, PNG_ERROR_SIZE - 1));
+                        error_msg, kPngErrorSize - 1));
   }
 
   longjmp(png_jmpbuf(png_ptr), 1);
