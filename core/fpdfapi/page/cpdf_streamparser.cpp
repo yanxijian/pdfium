@@ -33,6 +33,10 @@
 #include "core/fxcrt/span_util.h"
 #include "core/fxge/calculate_pitch.h"
 
+#if defined(PDF_ENABLE_BROTLI)
+#include "core/fxcodec/brotli/brotli_decoder.h"
+#endif
+
 namespace {
 
 const uint32_t kMaxNestedParsingLevel = 512;
@@ -89,6 +93,9 @@ uint32_t DecodeInlineStream(pdfium::span<const uint8_t> src_span,
   DCHECK(decoder != "Fl");
   DCHECK(decoder != "LZW");
   DCHECK(decoder != "RL");
+#if defined(PDF_ENABLE_BROTLI)
+  DCHECK(decoder != "BDC");
+#endif
 
   if (decoder == "FlateDecode") {
     return FlateOrLZWDecode(/*use_lzw=*/false, src_span, pParam.Get(),
@@ -122,6 +129,12 @@ uint32_t DecodeInlineStream(pdfium::span<const uint8_t> src_span,
   if (decoder == "RunLengthDecode") {
     return RunLengthDecode(src_span).bytes_consumed;
   }
+#if defined(PDF_ENABLE_BROTLI)
+  if (decoder == "BrotliDecode") {
+    return BrotliDecoder::Decode(src_span, pParam.Get(), orig_size)
+        .bytes_consumed;
+  }
+#endif
 
   return FX_INVALID_OFFSET;
 }
