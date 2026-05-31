@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a8c24c9_2a2b2979",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-05-31T17:09:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed531b48_9244244d",
+      "range": {
+        "startLine": 7,
+        "startChar": 28,
+        "endLine": 7,
+        "endChar": 37
+      },
+      "revId": "3695498d3d703731be26ed535ccbe210b6772369",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b935bf15_283cf134",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-05-31T14:06:18Z",
       "side": 1,
       "message": "This is not in an anonymous namespace (but the description says it should).",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 37
+      },
+      "revId": "3695498d3d703731be26ed535ccbe210b6772369",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dae16eec_df0b769a",
+        "filename": "core/fxcodec/png/libpng_png_decoder.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-05-31T17:09:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b935bf15_283cf134",
       "range": {
         "startLine": 32,
         "startChar": 0,
