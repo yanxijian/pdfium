@@ -229,8 +229,8 @@ constexpr std::array<const LineBreakPairRow, 38> kLineBreakPairTable = {{
 
 }  // namespace
 
-FX_LINEBREAKTYPE GetLineBreakTypeFromPair(FX_BREAKPROPERTY curr_char,
-                                          FX_BREAKPROPERTY next_char) {
+FX_LINEBREAKTYPE GetLineBreakTypeFromPair(BreakProperty curr_char,
+                                          BreakProperty next_char) {
   const size_t row = static_cast<size_t>(curr_char);
   const size_t col = static_cast<size_t>(next_char);
   return kLineBreakPairTable[row][col];

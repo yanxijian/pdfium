@@ -21,7 +21,7 @@ enum class FX_LINEBREAKTYPE : uint8_t {
   kHANGUL_SPACE_BRK = 0x6F,
 };
 
-FX_LINEBREAKTYPE GetLineBreakTypeFromPair(FX_BREAKPROPERTY curr_char,
-                                          FX_BREAKPROPERTY next_char);
+FX_LINEBREAKTYPE GetLineBreakTypeFromPair(BreakProperty curr_char,
+                                          BreakProperty next_char);
 
 #endif  // XFA_FGAS_LAYOUT_FGAS_LINEBREAK_H_
