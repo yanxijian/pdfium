@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a23e27e_be3b8153",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:56:24Z",
+      "side": 1,
+      "message": "Wrap lines 9, 11, 13",
+      "revId": "36c6f5f355fe956db3c2528ed4eef2b54ae9a632",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e50627a_fc83ba71",
+        "filename": "xfa/fwl/cfwl_datetimepicker.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:56:24Z",
+      "side": 1,
+      "message": "public:\n    uint32_t styles_ \u003d FWL_STYLE_WGT_Child;  // Mask of FWL_STYLE_*_*.\n    uint32_t style_exts_ \u003d 0;                // Mask of FWL_STYLEEXT_*_*.\n    Mask\u003cWidgetState\u003e states_;\n\nShouldn\u0027t the first argument also be 0?\nAlthough I do remember another CL did change the type of styles_.",
+      "range": {
+        "startLine": 29,
+        "startChar": 18,
+        "endLine": 29,
+        "endChar": 71
+      },
+      "revId": "36c6f5f355fe956db3c2528ed4eef2b54ae9a632",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
