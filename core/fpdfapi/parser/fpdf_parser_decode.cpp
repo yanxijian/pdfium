@@ -18,6 +18,7 @@
 #include "core/fpdfapi/parser/cpdf_array.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
 #include "core/fpdfapi/parser/fpdf_parser_utility.h"
+#include "core/fxcodec/brotli/brotli_decoder.h"
 #include "core/fxcodec/data_and_bytes_consumed.h"
 #include "core/fxcodec/fax/faxmodule.h"
 #include "core/fxcodec/flate/flatemodule.h"
@@ -106,9 +107,16 @@ bool ValidateDecoderPipeline(const CPDF_Array* pDecoders) {
   }
 
   // TODO(thestig): Consolidate all the places that use these filter names.
+#if defined(PDF_ENABLE_BROTLI)
+  static const char kValidDecoders[][18] = {
+      "FlateDecode",     "Fl",  "LZWDecode",      "LZW",
+      "ASCII85Decode",   "A85", "ASCIIHexDecode", "AHx",
+      "RunLengthDecode", "RL",  "BrotliDecode",   "BDC"};
+#else
   static const char kValidDecoders[][16] = {
       "FlateDecode",    "Fl",  "LZWDecode",       "LZW", "ASCII85Decode", "A85",
       "ASCIIHexDecode", "AHx", "RunLengthDecode", "RL"};
+#endif
   for (size_t i = 0; i < count - 1; ++i) {
     if (!pdfium::Contains(kValidDecoders, pDecoders->GetByteStringAt(i))) {
       return false;
@@ -491,7 +499,29 @@ std::optional<PDFDataDecodeResult> PDF_DataDecode(
       DataAndBytesConsumed decode_result = RunLengthDecode(last_span);
       new_buf = std::move(decode_result.data);
       bytes_consumed = decode_result.bytes_consumed;
-    } else {
+    }
+#if defined(PDF_ENABLE_BROTLI)
+    else if (decoder == "BrotliDecode" || decoder == "BDC") {
+      if (bImageAcc && i == nSize - 1) {
+        result.image_encoding = "BrotliDecode";
+        result.image_params = std::move(pParam);
+        return result;
+      }
+
+      pdfium::span<const uint8_t> brotli_span = last_span;
+
+      DataAndBytesConsumed decode_result =
+          BrotliDecoder::Decode(brotli_span, pParam, estimated_size);
+
+      new_buf = std::move(decode_result.data);
+      bytes_consumed = decode_result.bytes_consumed;
+
+      if (bytes_consumed > last_span.size()) {
+        return std::nullopt;
+      }
+    }
+#endif
+    else {
       // If we get here, assume it's an image decoder.
       if (decoder == "DCT") {
         decoder = "DCTDecode";
