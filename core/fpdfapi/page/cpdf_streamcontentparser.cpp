@@ -167,6 +167,9 @@ const AbbrPair kInlineValueAbbr[] = {
     {"LZW", "LZWDecode"},      {"Fl", "FlateDecode"},
     {"RL", "RunLengthDecode"}, {"CCF", "CCITTFaxDecode"},
     {"DCT", "DCTDecode"},
+#if defined(PDF_ENABLE_BROTLI)
+    {"BDC", "BrotliDecode"},
+#endif
 };
 
 struct AbbrReplacementOp {
