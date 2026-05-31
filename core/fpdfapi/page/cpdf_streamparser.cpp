@@ -22,6 +22,9 @@
 #include "core/fpdfapi/parser/cpdf_string.h"
 #include "core/fpdfapi/parser/fpdf_parser_decode.h"
 #include "core/fpdfapi/parser/fpdf_parser_utility.h"
+#if defined(PDF_ENABLE_BROTLI)
+#include "core/fxcodec/brotli/brotli_decoder.h"
+#endif
 #include "core/fxcodec/data_and_bytes_consumed.h"
 #include "core/fxcodec/jpeg/jpegmodule.h"
 #include "core/fxcodec/scanlinedecoder.h"
@@ -89,6 +92,9 @@ uint32_t DecodeInlineStream(pdfium::span<const uint8_t> src_span,
   DCHECK(decoder != "Fl");
   DCHECK(decoder != "LZW");
   DCHECK(decoder != "RL");
+#if defined(PDF_ENABLE_BROTLI)
+  DCHECK(decoder != "BDC");
+#endif
 
   if (decoder == "FlateDecode") {
     return FlateOrLZWDecode(/*use_lzw=*/false, src_span, pParam.Get(),
@@ -122,6 +128,12 @@ uint32_t DecodeInlineStream(pdfium::span<const uint8_t> src_span,
   if (decoder == "RunLengthDecode") {
     return RunLengthDecode(src_span).bytes_consumed;
   }
+#if defined(PDF_ENABLE_BROTLI)
+  if (decoder == "BrotliDecode") {
+    return BrotliDecoder::Decode(src_span, pParam.Get(), orig_size)
+        .bytes_consumed;
+  }
+#endif
 
   return FX_INVALID_OFFSET;
 }
