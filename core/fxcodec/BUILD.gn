@@ -149,6 +149,22 @@ source_set("fxcodec") {
       deps += [ "../../third_party:tiff" ]
     }
   }
+<<<<<<< PATCH SET (cdb9c55cbc2e1a02d4fabcd547f04a05528c625e Add BrotliDecode filter support for PDF 2.0 streams)
+  if (pdf_enable_brotli) {
+    sources += [
+      "brotli/brotli_decoder.cpp",
+      "brotli/brotli_decoder.h",
+    ]
+    deps += [ "../../third_party/brotli:dec" ]
+  }
+||||||| BASE      (3cb06ac431c3bf76f38cd36e8a498fb1215e2ef0 Add simple tests for Brotli compression)
+  if (pdf_enable_brotli) {
+    # TODO(https://crbug.com/475855993): Add Brotli source files here once
+    # Brotli support is implemented.
+    deps += [ "../../third_party/brotli:dec" ]
+  }
+=======
+>>>>>>> BASE      (e5b3f700cf56b28124ace823f4878f6a5d8de4f2 Add simple tests for Brotli compression)
 
   visibility = [ "../../*" ]
 }
