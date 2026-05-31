@@ -87,13 +87,35 @@ void SwapByteOrder(pdfium::span<uint16_t> str) {
   }
 }
 
-}  // namespace
+// Byte-order mark detected at the start of a stream.
+enum class ByteOrderMark {
+  kNone,
+  kUtf8,
+  kUtf16Be,
+  kUtf16Le,
+};
 
-#define BOM_UTF8_MASK 0x00FFFFFF
-#define BOM_UTF8 0x00BFBBEF
-#define BOM_UTF16_MASK 0x0000FFFF
-#define BOM_UTF16_BE 0x0000FFFE
-#define BOM_UTF16_LE 0x0000FEFF
+ByteOrderMark DetectByteOrderMark(uint32_t leading_bytes) {
+  constexpr uint32_t kUtf8Mask = 0x00FFFFFF;
+  constexpr uint32_t kUtf8Marker = 0x00BFBBEF;
+  constexpr uint32_t kUtf16Mask = 0x0000FFFF;
+  constexpr uint32_t kUtf16BeMarker = 0x0000FFFE;
+  constexpr uint32_t kUtf16LeMarker = 0x0000FEFF;
+
+  if ((leading_bytes & kUtf8Mask) == kUtf8Marker) {
+    return ByteOrderMark::kUtf8;
+  }
+  const uint32_t two_bytes = leading_bytes & kUtf16Mask;
+  if (two_bytes == kUtf16BeMarker) {
+    return ByteOrderMark::kUtf16Be;
+  }
+  if (two_bytes == kUtf16LeMarker) {
+    return ByteOrderMark::kUtf16Le;
+  }
+  return ByteOrderMark::kNone;
+}
+
+}  // namespace
 
 CFX_SeekableStreamProxy::CFX_SeekableStreamProxy(
     const RetainPtr<IFX_SeekableReadStream>& stream)
@@ -102,25 +124,26 @@ CFX_SeekableStreamProxy::CFX_SeekableStreamProxy(
 
   Seek(From::Begin, 0);
 
-  uint32_t bom = 0;
-  ReadData(pdfium::byte_span_from_ref(bom).first<3>());
+  uint32_t leading_bytes = 0;
+  ReadData(pdfium::byte_span_from_ref(leading_bytes).first<3>());
 
-  bom &= BOM_UTF8_MASK;
-  if (bom == BOM_UTF8) {
-    bom_length_ = 3;
-    code_page_ = FX_CodePage::kUTF8;
-  } else {
-    bom &= BOM_UTF16_MASK;
-    if (bom == BOM_UTF16_BE) {
+  switch (DetectByteOrderMark(leading_bytes)) {
+    case ByteOrderMark::kUtf8:
+      bom_length_ = 3;
+      code_page_ = FX_CodePage::kUTF8;
+      break;
+    case ByteOrderMark::kUtf16Be:
       bom_length_ = 2;
       code_page_ = FX_CodePage::kUTF16BE;
-    } else if (bom == BOM_UTF16_LE) {
+      break;
+    case ByteOrderMark::kUtf16Le:
       bom_length_ = 2;
       code_page_ = FX_CodePage::kUTF16LE;
-    } else {
+      break;
+    case ByteOrderMark::kNone:
       bom_length_ = 0;
       code_page_ = FX_GetACP();
-    }
+      break;
   }
 
   Seek(From::Begin, static_cast<FX_FILESIZE>(bom_length_));
