@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ecee380_42766b57",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:40:37Z",
+      "side": 1,
+      "message": "Minor nit: should be\n\n```suggestion\nBring the enum class and its values in line with PDFium naming conventions by dropping the FX_ prefix, switching values from SCREAMING_SNAKE to CamelCase, and spelling out BRK as Break/Common.\n```\n\nAnd then wrap.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 180
+      },
+      "revId": "cf3a6126ed790ca1d678e0e547cb3a5595aaad10",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b836067d_b440f1bf",
+        "filename": "xfa/fgas/layout/fgas_linebreak.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:40:37Z",
+      "side": 1,
+      "message": "Not needed for this CL, but a general point: I noticed another one of your CLs that replaces these with constexprs. No need to rework anything here, but maybe consider chaining CLs together in future to avoid rebase/merge conflicts if one lands before the other.",
+      "range": {
+        "startLine": 25,
+        "startChar": 8,
+        "endLine": 25,
+        "endChar": 15
+      },
+      "revId": "cf3a6126ed790ca1d678e0e547cb3a5595aaad10",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "deb5f102_990e62f7",
+        "filename": "xfa/fgas/layout/fgas_linebreak.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-05-31T17:40:37Z",
+      "side": 1,
+      "message": "Can this go inside a struct, or a class or something of that sort, leaving it in the global namespace may not be best.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 67
+      },
+      "revId": "cf3a6126ed790ca1d678e0e547cb3a5595aaad10",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
