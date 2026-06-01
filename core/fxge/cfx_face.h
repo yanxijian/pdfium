@@ -90,11 +90,6 @@ class CFX_Face final : public Retainable, public Observable {
   int16_t GetDescender() const;
 
   pdfium::span<const uint8_t> GetData() const;
-
-  // Returns the size of the data, or 0 on failure. Only write into `buffer` if
-  // it is large enough to hold the data.
-  size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
-
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
 
   int GetGlyphCount() const;
@@ -174,6 +169,10 @@ class CFX_Face final : public Retainable, public Observable {
 
   FT_FaceRec* GetRec() { return rec_.get(); }
   const FT_FaceRec* GetRec() const { return rec_.get(); }
+
+  // Returns the size of the data, or 0 on failure. Only write into `buffer` if
+  // it is large enough to hold the data.
+  size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
 
   int GetCharMapEncodingIdByIndex(size_t index) const;
   CFX_Size GetPixelSize() const;
