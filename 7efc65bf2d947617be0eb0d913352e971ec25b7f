@@ -1,0 +1,366 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c5e77c5_288eabda",
+        "filename": "core/fpdfapi/page/cpdf_streamcontentparser.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "so ... do we want to parse this anyways and just skip decoding later on based on whether support is enabled?  I\u0027m not sure either way.",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 171,
+        "endChar": 28
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "5639e2a7_9adc8418",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfapi/page/cpdf_streamcontentparser.cpp",
+              "range": {
+                "startLine": 168,
+                "startChar": 0,
+                "endLine": 174,
+                "endChar": 0
+              },
+              "replacement": "    {\"RL\", \"RunLengthDecode\"}, {\"CCF\", \"CCITTFaxDecode\"}, {\"DCT\", \"DCTDecode\"},\n    {\"BDC\", \"BrotliDecode\"}};\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad043d06_cedb5ec5",
+        "filename": "core/fpdfapi/page/cpdf_streamparser.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "nit: these condition ifdef blocks should come after all the non-conditional ones at line 38.",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 6
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "c3fcef99_ca9f1cb3",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfapi/page/cpdf_streamparser.cpp",
+              "range": {
+                "startLine": 25,
+                "startChar": 0,
+                "endLine": 28,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "core/fpdfapi/page/cpdf_streamparser.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "#if defined(PDF_ENABLE_BROTLI)\n#include \"core/fxcodec/brotli/brotli_decoder.h\"\n#endif\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ec1154c_f9c9b3a5",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "nit: same here.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b45a17e_b8e9c2b7",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "This isn\u0027t the number of items, but the maximum bytes per string which does not increase (not a table of pointers but rather a table of fixed size strings, which turns out to save space when we got small strings).",
+      "range": {
+        "startLine": 113,
+        "startChar": 37,
+        "endLine": 113,
+        "endChar": 39
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "7477f62c_ed12426a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+              "range": {
+                "startLine": 113,
+                "startChar": 0,
+                "endLine": 114,
+                "endChar": 0
+              },
+              "replacement": "  static const char kValidDecoders[][16] \u003d {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5213cf75_d9191029",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "nit: maybe these go after the bytes_consumed test?",
+      "range": {
+        "startLine": 515,
+        "startChar": 5,
+        "endLine": 516,
+        "endChar": 52
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7be20820_bb0eec62",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "super-nit: maybe kMaxDecodeBytes to provid the unit.",
+      "range": {
+        "startLine": 16,
+        "startChar": 17,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "811ed1bf_e1ddbad8",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 16,
+                "startChar": 0,
+                "endLine": 17,
+                "endChar": 0
+              },
+              "replacement": "constexpr size_t kMaxDecodeSize \u003d 64 \u003c\u003c 20;\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3104483_8fa84145",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "might recurse forever, as the assignment above might minimize the value after we set it to the kMaxDecodeSize in the previous caller but zeroed it above.",
+      "range": {
+        "startLine": 30,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 39
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8e2b6f09_3595e9db",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 62,
+                "startChar": 0,
+                "endLine": 63,
+                "endChar": 0
+              },
+              "replacement": "        // Pass nullptr for params in recursive calls since the estimated size\n        // is now based on the previous attempt\u0027s output needs, not Length1.\n        return Decode(src_span, nullptr, new_decode_size);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba2ec9d2_f72544e7",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-01T17:51:34Z",
+      "side": 1,
+      "message": "wind up with a bunch of unused backing stores in the heap when we recurse below.  Might be easier to iterate, doing a .resize() on an initially empty vector, say.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 60
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b02697b3_c144d8ed",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  } else if (estimated_decode_size \u003e kMaxDecodeSize) {\n    return {DataVector\u003cuint8_t\u003e(), 0u};\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 33,
+                "startChar": 0,
+                "endLine": 34,
+                "endChar": 0
+              },
+              "replacement": "\n  BrotliDecoderState* state \u003d\n      BrotliDecoderCreateInstance(nullptr, nullptr, nullptr);\n  if (!state) {\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 40,
+                "startChar": 0,
+                "endLine": 42,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  BrotliDecoderResult result;\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 44,
+                "startChar": 0,
+                "endLine": 48,
+                "endChar": 0
+              },
+              "replacement": "  while (true) {\n    size_t available_out \u003d decoded_buffer.size() - total_out;\n    uint8_t* next_out \u003d decoded_buffer.data() + total_out;\n\n    result \u003d BrotliDecoderDecompressStream(state, \u0026available_in, \u0026next_in,\n                                           \u0026available_out, \u0026next_out,\n                                           \u0026total_out);\n\n    if (result \u003d\u003d BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT) {\n      if (decoded_buffer.size() \u003d\u003d kMaxDecodeSize) {\n        // Cannot grow further.\n        BrotliDecoderDestroyInstance(state);\n        return {DataVector\u003cuint8_t\u003e(), 0u};\n      }\n      uint32_t new_decode_size \u003d std::min(\n          static_cast\u003cuint32_t\u003e(decoded_buffer.size()) * 2,\n          static_cast\u003cuint32_t\u003e(kMaxDecodeSize));\n      decoded_buffer.resize(new_decode_size);\n    } else {\n      break;\n    }\n  }\n\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 58,
+                "startChar": 0,
+                "endLine": 64,
+                "endChar": 0
+              },
+              "replacement": "    default:\n      // Should not be reached.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
