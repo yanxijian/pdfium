@@ -279,6 +279,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1c5a2a4e_25105344",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-01T20:09:48Z",
+      "side": 1,
+      "message": "After the `CHECK_GE()` assertion, it should be safe to use `static_cast\u003csize_t\u003e()`. You can certainly also calculate the index as a separate size_t variable.",
+      "parentUuid": "459d75f5_e417ba1b",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bd7a9dc9_ecc20006",
         "filename": "testing/resources/pixel/bug_477200528_expected.pdf.0.png",
         "patchSetId": 4
