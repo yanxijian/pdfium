@@ -519,32 +519,75 @@ pdfium::span<const uint8_t> CFX_Face::GetData() const {
   return font_stream_->span();
 }
 
-size_t CFX_Face::GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer) {
+size_t CFX_Face::GetGsubTable(pdfium::span<uint8_t> buffer) {
+  static constexpr uint32_t kGsubTag =
+      CFX_FontMapper::MakeTag('G', 'S', 'U', 'B');
   size_t ft_result = 0;
   unsigned long length = pdfium::checked_cast<unsigned long>(buffer.size());
   if (length) {
-    int error = FT_Load_Sfnt_Table(GetRec(), table, 0, buffer.data(), &length);
+    int error =
+        FT_Load_Sfnt_Table(GetRec(), kGsubTag, 0, buffer.data(), &length);
     if (!error && length == buffer.size()) {
       ft_result = buffer.size();
     }
   } else {
-    int error = FT_Load_Sfnt_Table(GetRec(), table, 0, nullptr, &length);
+    int error = FT_Load_Sfnt_Table(GetRec(), kGsubTag, 0, nullptr, &length);
     if (!error && length) {
       ft_result = pdfium::checked_cast<size_t>(length);
     }
   }
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  if (skia_typeface_) {
+  pdfium::span<const uint8_t> data = GetData();
+  if (!data.empty()) {
     if (buffer.empty()) {
-      CHECK_EQ(ft_result, skia_typeface_->getTableSize(table));
+      CHECK_EQ(ft_result, skrifa::get_gsub_table(rust::Slice(data),
+                                                 rust::Slice<uint8_t>{}));
     } else {
-      std::vector<uint8_t> skia_buffer(buffer.size());
-      size_t skia_result = skia_typeface_->getTableData(
-          table, 0, skia_buffer.size(), skia_buffer.data());
-      CHECK_EQ(ft_result, skia_result);
+      std::vector<uint8_t> skrifa_buffer(buffer.size());
+      size_t skrifa_result =
+          skrifa::get_gsub_table(rust::Slice(data), rust::Slice(skrifa_buffer));
+      CHECK_EQ(ft_result, skrifa_result);
       if (ft_result > 0) {
-        CHECK(std::equal(buffer.begin(), buffer.end(), skia_buffer.begin()));
+        CHECK(std::equal(buffer.begin(), buffer.end(), skrifa_buffer.begin()));
+      }
+    }
+  }
+#endif
+  return ft_result;
+}
+
+size_t CFX_Face::GetNameTable(pdfium::span<uint8_t> buffer) {
+  static constexpr uint32_t kNameTag =
+      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  size_t ft_result = 0;
+  unsigned long length = pdfium::checked_cast<unsigned long>(buffer.size());
+  if (length) {
+    int error =
+        FT_Load_Sfnt_Table(GetRec(), kNameTag, 0, buffer.data(), &length);
+    if (!error && length == buffer.size()) {
+      ft_result = buffer.size();
+    }
+  } else {
+    int error = FT_Load_Sfnt_Table(GetRec(), kNameTag, 0, nullptr, &length);
+    if (!error && length) {
+      ft_result = pdfium::checked_cast<size_t>(length);
+    }
+  }
+
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  pdfium::span<const uint8_t> data = GetData();
+  if (!data.empty()) {
+    if (buffer.empty()) {
+      CHECK_EQ(ft_result, skrifa::get_name_table(rust::Slice(data),
+                                                 rust::Slice<uint8_t>{}));
+    } else {
+      std::vector<uint8_t> skrifa_buffer(buffer.size());
+      size_t skrifa_result =
+          skrifa::get_name_table(rust::Slice(data), rust::Slice(skrifa_buffer));
+      CHECK_EQ(ft_result, skrifa_result);
+      if (ft_result > 0) {
+        CHECK(std::equal(buffer.begin(), buffer.end(), skrifa_buffer.begin()));
       }
     }
   }
@@ -553,14 +596,12 @@ size_t CFX_Face::GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer) {
 }
 
 std::unique_ptr<CFX_CTTGSUBTable> CFX_Face::ParseGSUBTable() {
-  static constexpr uint32_t kGsubTag =
-      CFX_FontMapper::MakeTag('G', 'S', 'U', 'B');
-  size_t length = GetSfntTable(kGsubTag, {});
+  size_t length = GetGsubTable({});
   if (!length) {
     return nullptr;
   }
   auto sub_data = FixedSizeDataVector<uint8_t>::Uninit(length);
-  if (!GetSfntTable(kGsubTag, sub_data.span())) {
+  if (!GetGsubTable(sub_data.span())) {
     return nullptr;
   }
   // CFX_CTTGSUBTable parses the data and stores all the values in its structs.
@@ -570,14 +611,12 @@ std::unique_ptr<CFX_CTTGSUBTable> CFX_Face::ParseGSUBTable() {
 
 #if defined(PDF_ENABLE_XFA)
 std::unique_ptr<CFX_CTTNameTable> CFX_Face::ParseNameTable() {
-  static constexpr uint32_t kNameTag =
-      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
-  size_t length = GetSfntTable(kNameTag, {});
+  size_t length = GetNameTable({});
   if (!length) {
     return nullptr;
   }
   auto name_data = FixedSizeDataVector<uint8_t>::Uninit(length);
-  if (!GetSfntTable(kNameTag, name_data.span())) {
+  if (!GetNameTable(name_data.span())) {
     return nullptr;
   }
   return std::make_unique<CFX_CTTNameTable>(name_data.span());
