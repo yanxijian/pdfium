@@ -90,16 +90,11 @@ class CFX_Face final : public Retainable, public Observable {
   int16_t GetDescender() const;
 
   pdfium::span<const uint8_t> GetData() const;
-
-  // Returns the size of the data, or 0 on failure. Only write into `buffer` if
-  // it is large enough to hold the data.
-  size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
-
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
 
   int GetGlyphCount() const;
   // TODO(crbug.com/42271048): Can this method be private?
-  FX_RECT GetGlyphBBox() const;
+  FX_RECT GetGlyphBBox(uint32_t glyph_index);
   std::optional<FX_RECT> GetFontGlyphBBox(uint32_t glyph_index);
   std::unique_ptr<CFX_GlyphBitmap> RenderGlyph(uint32_t glyph_index,
                                                bool font_style,
@@ -112,7 +107,7 @@ class CFX_Face final : public Retainable, public Observable {
                                           int dest_width,
                                           bool is_vertical,
                                           const CFX_SubstFont* subst_font);
-  int GetGlyphTTWidth() const;
+  int GetGlyphTTWidth(uint32_t glyph_index);
   int GetGlyphWidth(uint32_t glyph_index,
                     int dest_width,
                     int weight,
@@ -175,6 +170,11 @@ class CFX_Face final : public Retainable, public Observable {
   FT_FaceRec* GetRec() { return rec_.get(); }
   const FT_FaceRec* GetRec() const { return rec_.get(); }
 
+  // Returns the size of the data, or 0 on failure. Only write into `buffer` if
+  // it is large enough to hold the data.
+  size_t GetGsubTable(pdfium::span<uint8_t> buffer);
+  size_t GetNameTable(pdfium::span<uint8_t> buffer);
+
   int GetCharMapEncodingIdByIndex(size_t index) const;
   CFX_Size GetPixelSize() const;
 
@@ -207,6 +207,8 @@ class CFX_Face final : public Retainable, public Observable {
   RetainPtr<CFX_ReadOnlySpanStream> font_stream_;
 
   ScopedFXFTFaceRec const rec_;
+  std::optional<uint32_t> last_loaded_glyph_index_;
+  std::optional<FT_Int32> last_loaded_flags_;
 #if defined(PDF_USE_SKIA)
   sk_sp<SkTypeface> skia_typeface_;
 #endif  // defined(PDF_USE_SKIA)
