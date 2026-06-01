@@ -383,6 +383,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5b5708b_c88a81be",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T16:20:01Z",
+      "side": 1,
+      "message": "Fixed the issue (turns out my pdfs were broken earlier but they should work now).",
+      "parentUuid": "6d22d7f1_ad605e29",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 36
+      },
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1eecd99_1dd2805b",
