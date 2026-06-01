@@ -379,10 +379,13 @@ ByteString CFX_Face::GetFontFormat() {
 
 bool CFX_Face::IsTricky() const {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  // TODO(https://crbug.com/42271123): Skia does not expose 'tricky' font
-  // detection. We need to use Skrifa to check for specific font characteristics
-  // (e.g. in 'prep' or 'fpgm' tables) or determine if Skia handles these fonts
-  // correctly without workarounds.
+#if defined(PDF_ENABLE_FONTATIONS)
+  pdfium::span<const uint8_t> data = GetData();
+  ByteString ps_name = GetPostscriptName();
+  CHECK_EQ(ft_result,
+           skrifa::is_tricky(rust::Slice(data),
+                             rust::Str(ps_name.c_str(), ps_name.GetLength())));
+#endif
 #endif
   return !!(GetRec()->face_flags & FT_FACE_FLAG_TRICKY);
 }
@@ -1139,8 +1142,8 @@ int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
   return error;
 }
 
-ByteString CFX_Face::GetPostscriptName() {
-  const char* ft_result = FT_Get_Postscript_Name(GetRec());
+ByteString CFX_Face::GetPostscriptName() const {
+  const char* ft_result = FT_Get_Postscript_Name(const_cast<FT_Face>(GetRec()));
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkString name;
