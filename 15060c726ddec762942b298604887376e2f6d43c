@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e621a319_d0f0f8f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T03:42:43Z",
+      "side": 1,
+      "message": "I think this should be landed after\nhttps://pdfium-review.googlesource.com/c/pdfium/+/148230\n\nbut before\nhttps://pdfium-review.googlesource.com/c/pdfium/+/148850\n\nIf we land this after 148850 then it may cause unexpected failures on other CLs that are unrelated to brotli but if we land it before GN would complain about the flag not existing.",
+      "parentUuid": "e812209c_7ce05883",
+      "revId": "15060c726ddec762942b298604887376e2f6d43c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f3a8e8d_b2e82138",
         "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
         "patchSetId": 13
