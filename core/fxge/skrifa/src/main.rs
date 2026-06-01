@@ -131,6 +131,7 @@ mod skrifa_ffi {
         fn is_scalable(data: &[u8]) -> bool;
         fn get_font_format(data: &[u8]) -> String;
         fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> BoundingBox;
+        fn is_tricky(data: &[u8], name: &str) -> bool;
     }
 
     unsafe extern "C++" {
@@ -577,6 +578,320 @@ pub fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> skrifa_ffi::BoundingBo
         }
     }
     skrifa_ffi::BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }
+}
+
+// The following data and logic are derived from FreeType's
+// `src/truetype/ttobjs.c` and are subject to the FreeType License (FTL).
+// Copyright (C) 2026 The FreeType Project (www.freetype.org). All rights
+// reserved.
+
+struct SfntIdRec {
+    checksum: u32,
+    length: u32,
+}
+
+const TRICK_NAMES_COUNT: usize = 20;
+const TRICK_NAMES: [&str; TRICK_NAMES_COUNT] = [
+    "cpop",
+    "DFGirl-W6-WIN-BF",
+    "DFGothic-EB",
+    "DFGyoSho-Lt",
+    "DFHei",
+    "DFHSGothic-W5",
+    "DFHSMincho-W3",
+    "DFHSMincho-W7",
+    "DFKaiSho-SB",
+    "DFKaiShu",
+    "DFKai-SB",
+    "DFMing",
+    "DLC",
+    "HuaTianKaiTi?",
+    "HuaTianSongTi?",
+    "Ming(for ISO10646)",
+    "MingLiU",
+    "MingMedium",
+    "PMingLiU",
+    "MingLi43",
+];
+
+const TRICK_SFNT_IDS_NUM_FACES: usize = 31;
+const TRICK_SFNT_IDS_PER_FACE: usize = 3;
+
+const TRICK_SFNT_ID_CVT: usize = 0;
+const TRICK_SFNT_ID_FPGM: usize = 1;
+const TRICK_SFNT_ID_PREP: usize = 2;
+
+const SFNT_IDS: [[SfntIdRec; TRICK_SFNT_IDS_PER_FACE]; TRICK_SFNT_IDS_NUM_FACES] = [
+    [
+        /* MingLiU 1995 */
+        SfntIdRec { checksum: 0x05BCF058, length: 0x000002E4 },
+        SfntIdRec { checksum: 0x28233BF1, length: 0x000087C4 },
+        SfntIdRec { checksum: 0xA344A1EA, length: 0x000001E1 },
+    ],
+    [
+        /* MingLiU 1996- */
+        SfntIdRec { checksum: 0x05BCF058, length: 0x000002E4 },
+        SfntIdRec { checksum: 0x28233BF1, length: 0x000087C4 },
+        SfntIdRec { checksum: 0xA344A1EB, length: 0x000001E1 },
+    ],
+    [
+        /* DFGothic-EB */
+        SfntIdRec { checksum: 0x12C3EBB2, length: 0x00000350 },
+        SfntIdRec { checksum: 0xB680EE64, length: 0x000087A7 },
+        SfntIdRec { checksum: 0xCE939563, length: 0x00000758 },
+    ],
+    [
+        /* DFGyoSho-Lt */
+        SfntIdRec { checksum: 0x11E5EAD4, length: 0x00000350 },
+        SfntIdRec { checksum: 0xCE5956E9, length: 0x0000BC85 },
+        SfntIdRec { checksum: 0x8272F416, length: 0x00000045 },
+    ],
+    [
+        /* DFHei-Md-HK-BF */
+        SfntIdRec { checksum: 0x1257EB46, length: 0x00000350 },
+        SfntIdRec { checksum: 0xF699D160, length: 0x0000715F },
+        SfntIdRec { checksum: 0xD222F568, length: 0x000003BC },
+    ],
+    [
+        /* DFHSGothic-W5 */
+        SfntIdRec { checksum: 0x1262EB4E, length: 0x00000350 },
+        SfntIdRec { checksum: 0xE86A5D64, length: 0x00007940 },
+        SfntIdRec { checksum: 0x7850F729, length: 0x000005FF },
+    ],
+    [
+        /* DFHSMincho-W3 */
+        SfntIdRec { checksum: 0x122DEB0A, length: 0x00000350 },
+        SfntIdRec { checksum: 0x3D16328A, length: 0x0000859B },
+        SfntIdRec { checksum: 0xA93FC33B, length: 0x000002CB },
+    ],
+    [
+        /* DFHSMincho-W7 */
+        SfntIdRec { checksum: 0x125FEB26, length: 0x00000350 },
+        SfntIdRec { checksum: 0xA5ACC982, length: 0x00007EE1 },
+        SfntIdRec { checksum: 0x90999196, length: 0x0000041F },
+    ],
+    [
+        /* DFKaiShu */
+        SfntIdRec { checksum: 0x11E5EAD4, length: 0x00000350 },
+        SfntIdRec { checksum: 0x5A30CA3B, length: 0x00009063 },
+        SfntIdRec { checksum: 0x13A42602, length: 0x0000007E },
+    ],
+    [
+        /* DFKaiShu, variant */
+        SfntIdRec { checksum: 0x11E5EAD4, length: 0x00000350 },
+        SfntIdRec { checksum: 0xA6E78C01, length: 0x00008998 },
+        SfntIdRec { checksum: 0x13A42602, length: 0x0000007E },
+    ],
+    [
+        /* DFKaiShu-Md-HK-BF */
+        SfntIdRec { checksum: 0x11E5EAD4, length: 0x00000360 },
+        SfntIdRec { checksum: 0x9DB282B2, length: 0x0000C06E },
+        SfntIdRec { checksum: 0x53E6D7CA, length: 0x00000082 },
+    ],
+    [
+        /* DFMing-Bd-HK-BF */
+        SfntIdRec { checksum: 0x1243EB18, length: 0x00000350 },
+        SfntIdRec { checksum: 0xBA0A8C30, length: 0x000074AD },
+        SfntIdRec { checksum: 0xF3D83409, length: 0x0000037B },
+    ],
+    [
+        /* DLCLiShu */
+        SfntIdRec { checksum: 0x07DCF546, length: 0x00000308 },
+        SfntIdRec { checksum: 0x40FE7C90, length: 0x00008E2A },
+        SfntIdRec { checksum: 0x608174B5, length: 0x0000007A },
+    ],
+    [
+        /* DLCHayBold */
+        SfntIdRec { checksum: 0xEB891238, length: 0x00000308 },
+        SfntIdRec { checksum: 0xD2E4DCD4, length: 0x0000676F },
+        SfntIdRec { checksum: 0x8EA5F293, length: 0x000003B8 },
+    ],
+    [
+        /* HuaTianKaiTi */
+        SfntIdRec { checksum: 0xFFFBFFFC, length: 0x00000008 },
+        SfntIdRec { checksum: 0x9C9E48B8, length: 0x0000BEA2 },
+        SfntIdRec { checksum: 0x70020112, length: 0x00000008 },
+    ],
+    [
+        /* HuaTianSongTi */
+        SfntIdRec { checksum: 0xFFFBFFFC, length: 0x00000008 },
+        SfntIdRec { checksum: 0x0A5A0483, length: 0x00017C39 },
+        SfntIdRec { checksum: 0x70020112, length: 0x00000008 },
+    ],
+    [
+        /* NEC fadpop7.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x40C92555, length: 0x000000E5 },
+        SfntIdRec { checksum: 0xA39B58E3, length: 0x0000117C },
+    ],
+    [
+        /* NEC fadrei5.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x33C41652, length: 0x000000E5 },
+        SfntIdRec { checksum: 0x26D6C52A, length: 0x00000F6A },
+    ],
+    [
+        /* NEC fangot7.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x6DB1651D, length: 0x0000019D },
+        SfntIdRec { checksum: 0x6C6E4B03, length: 0x00002492 },
+    ],
+    [
+        /* NEC fangyo5.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x40C92555, length: 0x000000E5 },
+        SfntIdRec { checksum: 0xDE51FAD0, length: 0x0000117C },
+    ],
+    [
+        /* NEC fankyo5.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x85E47664, length: 0x000000E5 },
+        SfntIdRec { checksum: 0xA6C62831, length: 0x00001CAA },
+    ],
+    [
+        /* NEC fanrgo5.ttf */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x2D891CFD, length: 0x0000019D },
+        SfntIdRec { checksum: 0xA0604633, length: 0x00001DE8 },
+    ],
+    [
+        /* NEC fangot5.ttc */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x40AA774C, length: 0x000001CB },
+        SfntIdRec { checksum: 0x9B5CAA96, length: 0x00001F9A },
+    ],
+    [
+        /* NEC fanmin3.ttc */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x0D3DE9CB, length: 0x00000141 },
+        SfntIdRec { checksum: 0xD4127766, length: 0x00002280 },
+    ],
+    [
+        /* NEC FA-Gothic, 1996 */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x4A692698, length: 0x000001F0 },
+        SfntIdRec { checksum: 0x340D4346, length: 0x00001FCA },
+    ],
+    [
+        /* NEC FA-Minchou, 1996 */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0xCD34C604, length: 0x00000166 },
+        SfntIdRec { checksum: 0x6CF31046, length: 0x000022B0 },
+    ],
+    [
+        /* NEC FA-RoundGothicB, 1996 */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0x5DA75315, length: 0x0000019D },
+        SfntIdRec { checksum: 0x40745A5F, length: 0x000022E0 },
+    ],
+    [
+        /* NEC FA-RoundGothicM, 1996 */
+        SfntIdRec { checksum: 0x00000000, length: 0x00000000 },
+        SfntIdRec { checksum: 0xF055FC48, length: 0x000001C2 },
+        SfntIdRec { checksum: 0x3900DED3, length: 0x00001E18 },
+    ],
+    [
+        /* MINGLI.TTF, 1992 */
+        SfntIdRec { checksum: 0x00170003, length: 0x00000060 },
+        SfntIdRec { checksum: 0xDBB4306E, length: 0x000058AA },
+        SfntIdRec { checksum: 0xD643482A, length: 0x00000035 },
+    ],
+    [
+        /* DFHei-Bd-WIN-HK-BF */
+        SfntIdRec { checksum: 0x1269EB58, length: 0x00000350 },
+        SfntIdRec { checksum: 0x5CD5957A, length: 0x00006A4E },
+        SfntIdRec { checksum: 0xF758323A, length: 0x00000380 },
+    ],
+    [
+        /* DFMing-Md-WIN-HK-BF */
+        SfntIdRec { checksum: 0x122FEB0B, length: 0x00000350 },
+        SfntIdRec { checksum: 0x7F10919A, length: 0x000070A9 },
+        SfntIdRec { checksum: 0x7CD7E7B7, length: 0x0000025C },
+    ],
+];
+
+fn compute_sfnt_checksum(data: &[u8]) -> u32 {
+    let mut checksum: u32 = 0;
+    let mut chunks = data.chunks_exact(4);
+    for chunk in &mut chunks {
+        checksum =
+            checksum.wrapping_add(u32::from_be_bytes([chunk[0], chunk[1], chunk[2], chunk[3]]));
+    }
+    let remainder = chunks.remainder();
+    if !remainder.is_empty() {
+        let mut last_bytes = [0u8; 4];
+        last_bytes[..remainder.len()].copy_from_slice(remainder);
+        checksum = checksum.wrapping_add(u32::from_be_bytes(last_bytes));
+    }
+    checksum
+}
+
+fn skip_pdf_random_tag(name: &str) -> &str {
+    if name.len() >= 7 && name.as_bytes()[6] == b'+' {
+        return &name[7..];
+    }
+    name
+}
+
+pub fn is_tricky(data: &[u8], name: &str) -> bool {
+    let name_without_tag = skip_pdf_random_tag(name);
+    for trick_name in TRICK_NAMES.iter() {
+        if name_without_tag.contains(trick_name) {
+            return true;
+        }
+    }
+
+    if let Ok(font) = read_fonts::FontRef::new(data) {
+        let mut num_matched_ids = [0; TRICK_SFNT_IDS_NUM_FACES];
+        let mut has_cvt = false;
+        let mut has_fpgm = false;
+        let mut has_prep = false;
+
+        let tables = [
+            (Tag::new(b"cvt "), TRICK_SFNT_ID_CVT),
+            (Tag::new(b"fpgm"), TRICK_SFNT_ID_FPGM),
+            (Tag::new(b"prep"), TRICK_SFNT_ID_PREP),
+        ];
+
+        for (tag, k) in tables.iter() {
+            if let Some(table_data) = font.table_data(*tag) {
+                match *k {
+                    TRICK_SFNT_ID_CVT => has_cvt = true,
+                    TRICK_SFNT_ID_FPGM => has_fpgm = true,
+                    TRICK_SFNT_ID_PREP => has_prep = true,
+                    _ => {}
+                }
+
+                let length = table_data.len() as u32;
+                let checksum = compute_sfnt_checksum(table_data);
+
+                for j in 0..TRICK_SFNT_IDS_NUM_FACES {
+                    if length == SFNT_IDS[j][*k].length && checksum == SFNT_IDS[j][*k].checksum {
+                        num_matched_ids[j] += 1;
+                        if num_matched_ids[j] == TRICK_SFNT_IDS_PER_FACE {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        for j in 0..TRICK_SFNT_IDS_NUM_FACES {
+            if !has_cvt && SFNT_IDS[j][TRICK_SFNT_ID_CVT].length == 0 {
+                num_matched_ids[j] += 1;
+            }
+            if !has_fpgm && SFNT_IDS[j][TRICK_SFNT_ID_FPGM].length == 0 {
+                num_matched_ids[j] += 1;
+            }
+            if !has_prep && SFNT_IDS[j][TRICK_SFNT_ID_PREP].length == 0 {
+                num_matched_ids[j] += 1;
+            }
+            if num_matched_ids[j] == TRICK_SFNT_IDS_PER_FACE {
+                return true;
+            }
+        }
+    }
+    false
 }
 
 fn main() {
