@@ -375,8 +375,13 @@ ByteString CFX_Face::GetFontFormat() {
 bool CFX_Face::IsTricky() const {
   const bool ft_result = !!(GetRec()->face_flags & FT_FACE_FLAG_TRICKY);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
-  // Skrifa.
+#if defined(PDF_ENABLE_FONTATIONS)
+  pdfium::span<const uint8_t> data = GetData();
+  ByteString ps_name = GetPostscriptName();
+  CHECK_EQ(ft_result,
+           skrifa::is_tricky(rust::Slice(data),
+                             rust::Str(ps_name.c_str(), ps_name.GetLength())));
+#endif
 #endif
   return ft_result;
 }
@@ -1068,8 +1073,8 @@ int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
   return ft_result;
 }
 
-ByteString CFX_Face::GetPostscriptName() {
-  const char* ft_result = FT_Get_Postscript_Name(GetRec());
+ByteString CFX_Face::GetPostscriptName() const {
+  const char* ft_result = FT_Get_Postscript_Name(const_cast<FT_Face>(GetRec()));
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkString name;

@@ -131,6 +131,7 @@ mod skrifa_ffi {
         fn is_scalable(data: &[u8]) -> bool;
         fn get_font_format(data: &[u8]) -> String;
         fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> BoundingBox;
+        fn is_tricky(data: &[u8], name: &str) -> bool;
     }
 
     unsafe extern "C++" {
@@ -577,6 +578,13 @@ pub fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> skrifa_ffi::BoundingBo
         }
     }
     skrifa_ffi::BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }
+}
+
+pub fn is_tricky(data: &[u8], _name: &str) -> bool {
+    if let Ok(font) = read_fonts::FontRef::new(data) {
+        return skrifa::outline::OutlineGlyphCollection::new(&font).require_interpreter();
+    }
+    false
 }
 
 fn main() {
