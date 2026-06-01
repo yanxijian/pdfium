@@ -529,6 +529,30 @@
       ],
       "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a385f76_51c520c3",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:32:33Z",
+      "side": 1,
+      "message": "Going to try working on this a bit more - I shipped the recursive approach for now because when I tried this earlier, the compiler complained about unsafe buffers, and when I used UNSAFE_BUFFERS() on it, it bus-errored during the tests. After that though, I didn\u0027t take much time to figure out why.\n\nWill revisit this approach.",
+      "parentUuid": "ba2ec9d2_f72544e7",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 60
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
