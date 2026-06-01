@@ -121,6 +121,8 @@ mod skrifa_ffi {
         fn get_style_name(data: &[u8]) -> String;
         fn get_glyph_name(data: &[u8], gid: u32) -> String;
         fn get_name_index(data: &[u8], name: &str) -> u32;
+        fn get_gsub_table(data: &[u8], buffer: &mut [u8]) -> usize;
+        fn get_name_table(data: &[u8], buffer: &mut [u8]) -> usize;
 
         fn agl_name_to_unicode(name: &str, unicode: &mut u32) -> bool;
         fn agl_unicode_to_name(unicode: u32, name: &mut [u8]) -> bool;
@@ -403,6 +405,40 @@ pub fn get_os2_fs_type(data: &[u8], fs_type: &mut u16) -> bool {
         }
     }
     false
+}
+
+pub fn get_gsub_table(data: &[u8], buffer: &mut [u8]) -> usize {
+    if let Ok(font) = read_fonts::FontRef::new(data) {
+        use read_fonts::TableProvider;
+        if let Ok(gsub) = font.gsub() {
+            let table_data = gsub.offset_data().as_bytes();
+            if buffer.is_empty() {
+                return table_data.len();
+            }
+            if buffer.len() >= table_data.len() {
+                buffer[..table_data.len()].copy_from_slice(table_data);
+                return table_data.len();
+            }
+        }
+    }
+    0
+}
+
+pub fn get_name_table(data: &[u8], buffer: &mut [u8]) -> usize {
+    if let Ok(font) = read_fonts::FontRef::new(data) {
+        use read_fonts::TableProvider;
+        if let Ok(name) = font.name() {
+            let table_data = name.offset_data().as_bytes();
+            if buffer.is_empty() {
+                return table_data.len();
+            }
+            if buffer.len() >= table_data.len() {
+                buffer[..table_data.len()].copy_from_slice(table_data);
+                return table_data.len();
+            }
+        }
+    }
+    0
 }
 
 pub fn get_os2_unicode_range(data: &[u8], range: &mut skrifa_ffi::UnicodeRange) -> bool {
