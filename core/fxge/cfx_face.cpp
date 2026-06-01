@@ -375,8 +375,10 @@ ByteString CFX_Face::GetFontFormat() {
 bool CFX_Face::IsTricky() const {
   const bool ft_result = !!(GetRec()->face_flags & FT_FACE_FLAG_TRICKY);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
-  // Skrifa.
+#if defined(PDF_ENABLE_FONTATIONS)
+  pdfium::span<const uint8_t> data = GetData();
+  CHECK_EQ(ft_result, skrifa::is_tricky(rust::Slice(data)));
+#endif
 #endif
   return ft_result;
 }
