@@ -42,6 +42,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cb22b37_faa344b5",
+        "filename": "core/fpdfapi/page/cpdf_streamcontentparser.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Why parse it if we don\u0027t plan to decode it anyway, might as well leave anything which is BDC as BDC instead of having it be replaced with BrotliDecode (Which is what I assume this does), and then have BrotliDecode to do nothing.",
+      "parentUuid": "6c5e77c5_288eabda",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 171,
+        "endChar": 28
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ad043d06_cedb5ec5",
@@ -93,6 +117,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20a94f98_abe8d236",
+        "filename": "core/fpdfapi/page/cpdf_streamparser.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad043d06_cedb5ec5",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 6
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9ec1154c_f9c9b3a5",
@@ -106,6 +154,30 @@
       "writtenOn": "2026-06-01T17:51:34Z",
       "side": 1,
       "message": "nit: same here.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50ae46eb_bbf2a214",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ec1154c_f9c9b3a5",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -157,6 +229,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1eb0068f_dc47af40",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b45a17e_b8e9c2b7",
+      "range": {
+        "startLine": 113,
+        "startChar": 37,
+        "endLine": 113,
+        "endChar": 39
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5213cf75_d9191029",
@@ -170,6 +266,30 @@
       "writtenOn": "2026-06-01T17:51:34Z",
       "side": 1,
       "message": "nit: maybe these go after the bytes_consumed test?",
+      "range": {
+        "startLine": 515,
+        "startChar": 5,
+        "endLine": 516,
+        "endChar": 52
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96255dfa_78f7af93",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Good point - otherwise it would write to new_buf even if it may have failed.\nDone.",
+      "parentUuid": "5213cf75_d9191029",
       "range": {
         "startLine": 515,
         "startChar": 5,
@@ -221,6 +341,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cace6e6d_de3ac5b2",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "7be20820_bb0eec62",
+      "range": {
+        "startLine": 16,
+        "startChar": 17,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3104483_8fa84145",
@@ -258,6 +402,30 @@
           ]
         }
       ],
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f1aa377_df8b6fed",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:18:15Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "d3104483_8fa84145",
+      "range": {
+        "startLine": 30,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 39
+      },
       "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
