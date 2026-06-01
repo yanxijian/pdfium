@@ -22,6 +22,30 @@
       },
       "revId": "67978692ed3cb1b984f2ac80b9ac3ab8ec74d9d5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22e6ecaa_a6113839",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-06-01T23:23:54Z",
+      "side": 1,
+      "message": "Oh cool I forgot about that link format.",
+      "parentUuid": "bbea12a1_a4d8bce8",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 58
+      },
+      "revId": "67978692ed3cb1b984f2ac80b9ac3ab8ec74d9d5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
