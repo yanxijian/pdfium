@@ -985,11 +985,23 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPathFontations(
 }
 #endif
 
-int CFX_Face::GetGlyphTTWidth() const {
+int CFX_Face::GetGlyphTTWidth(uint32_t glyph_index) {
+  LoadGlyph(glyph_index, /*scale=*/false);
   const auto* fontglyph = GetRec()->glyph;
   const int ft_result =
       NormalizeFontMetric(fontglyph->metrics.horiAdvance, GetUnitsPerEm());
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  pdfium::span<const uint8_t> data = GetData();
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    skrifa::Outline outline;
+    if (skrifa_font_->font->unscaled_outline(glyph_index, outline)) {
+      const int skrifa_result = NormalizeFontMetric(
+          static_cast<int64_t>(outline.advance_width + 0.5), GetUnitsPerEm());
+      CHECK_EQ(ft_result, skrifa_result);
+    }
+  }
+#endif
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
     font.setHinting(SkFontHinting::kNone);
@@ -1116,7 +1128,15 @@ int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
   if (!scale) {
     args |= FT_LOAD_NO_SCALE;
   }
-  return FT_Load_Glyph(GetRec(), glyph_index, args);
+  if (last_loaded_glyph_index_ == glyph_index && last_loaded_flags_ == args) {
+    return 0;
+  }
+  int error = FT_Load_Glyph(GetRec(), glyph_index, args);
+  if (!error) {
+    last_loaded_glyph_index_ = glyph_index;
+    last_loaded_flags_ = args;
+  }
+  return error;
 }
 
 ByteString CFX_Face::GetPostscriptName() {
@@ -1202,8 +1222,7 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
   FX_RECT rect;
   FT_FaceRec* rec = GetRec();
   if (IsTricky()) {
-    int err =
-        FT_Load_Glyph(rec, glyph_index, FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH);
+    int err = LoadGlyph(glyph_index, /*scale=*/true);
     if (!err) {
       FT_Glyph glyph;
       err = FT_Get_Glyph(rec->glyph, &glyph);
@@ -1229,9 +1248,9 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
       }
     }
   } else {
-    int err = FT_Load_Glyph(rec, glyph_index, FT_LOAD_NO_SCALE);
+    int err = LoadGlyph(glyph_index, /*scale=*/false);
     if (err == 0) {
-      rect = GetGlyphBBox();
+      rect = GetGlyphBBox(glyph_index);
       if (rect.top <= kMaxRectTop) {
         rect.top += rect.top / 64;
       } else {
@@ -1255,7 +1274,8 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
   return rect;
 }
 
-FX_RECT CFX_Face::GetGlyphBBox() const {
+FX_RECT CFX_Face::GetGlyphBBox(uint32_t glyph_index) {
+  LoadGlyph(glyph_index, /*scale=*/false);
   const auto* glyph = GetRec()->glyph;
   pdfium::ClampedNumeric<FT_Pos> left = glyph->metrics.horiBearingX;
   pdfium::ClampedNumeric<FT_Pos> top = glyph->metrics.horiBearingY;
@@ -1266,6 +1286,16 @@ FX_RECT CFX_Face::GetGlyphBBox() const {
                     NormalizeFontMetric(top - glyph->metrics.height, upem));
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  pdfium::span<const uint8_t> data = GetData();
+  skrifa::BoundingBox bbox =
+      skrifa::get_glyph_bounds(rust::Slice(data), glyph_index);
+  FX_RECT skrifa_result(NormalizeFontMetric(bbox.x_min, upem),
+                        NormalizeFontMetric(bbox.y_max, upem),
+                        NormalizeFontMetric(bbox.x_max, upem),
+                        NormalizeFontMetric(bbox.y_min, upem));
+  // TODO(tsepez): verify results.
+#endif
   if (skia_typeface_) {
     SkFont font(skia_typeface_, upem);
     font.setHinting(SkFontHinting::kNone);
