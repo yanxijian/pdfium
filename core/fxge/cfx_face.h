@@ -172,7 +172,8 @@ class CFX_Face final : public Retainable, public Observable {
 
   // Returns the size of the data, or 0 on failure. Only write into `buffer` if
   // it is large enough to hold the data.
-  size_t GetSfntTable(uint32_t table, pdfium::span<uint8_t> buffer);
+  size_t GetGsubTable(pdfium::span<uint8_t> buffer);
+  size_t GetNameTable(pdfium::span<uint8_t> buffer);
 
   int GetCharMapEncodingIdByIndex(size_t index) const;
   CFX_Size GetPixelSize() const;
