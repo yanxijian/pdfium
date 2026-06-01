@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7d367dc_05c71c1a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-01T23:36:48Z",
+      "side": 1,
+      "message": "go/avoid-we",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9adebbca_14a031b6",
+        "filename": "core/fxge/android/cfpf_skiafont.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-01T23:36:48Z",
+      "side": 1,
+      "message": "Flip the conditional on line 33 and combine this line with line 34?",
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29338f7a_89f01c99",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-01T23:36:48Z",
+      "side": 1,
+      "message": "1) Why make this non-const?\n2) Actually, this one can be `SystemFontInfoIface::kTableNAME`.",
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "301988de_3f8518c9",
+        "filename": "core/fxge/fx_font_unittest.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-01T23:36:48Z",
+      "side": 1,
+      "message": "ASSERT_EQ() here and line 101.",
+      "range": {
+        "startLine": 94,
+        "startChar": 2,
+        "endLine": 94,
+        "endChar": 11
+      },
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
