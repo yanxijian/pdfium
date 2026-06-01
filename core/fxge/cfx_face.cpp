@@ -310,6 +310,9 @@ RetainPtr<CFX_Face> CFX_Face::New(RetainPtr<Retainable> cache_entry,
   CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
   pdfium::span<const uint8_t> data = font_stream->span();
   FT_FaceRec* face_rec = nullptr;
+  // TODO(https://crbug.com/42271123): Replace FT_New_Memory_Face with
+  // SkTypeface::MakeFromData(SkData::MakeWithoutCopy(data.data(), data.size()),
+  // face_index) or skrifa::new_ps_font(rust::Slice(data)).
   if (FT_New_Memory_Face(font_mgr->GetFTLibrary(), data.data(),
                          pdfium::checked_cast<FT_Long>(data.size()),
                          pdfium::checked_cast<FT_Long>(face_index),
@@ -377,6 +380,10 @@ bool CFX_Face::IsTricky() const {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
   // Skrifa.
+  // TODO(https://crbug.com/42271123): Skia does not expose 'tricky' font
+  // detection. We need to use Skrifa to check for specific font characteristics
+  // (e.g. in 'prep' or 'fpgm' tables) or determine if Skia handles these fonts
+  // correctly without workarounds.
 #endif
   return ft_result;
 }
@@ -833,6 +840,11 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
   // Skrifa.
+  // TODO(https://crbug.com/42271123): Replace FT_Load_Glyph and FT_Render_Glyph
+  // with Skia rendering. Strategy: Use SkFont::getGlyphPaths to get paths and
+  // draw to an SkCanvas backed by a bitmap, or use SkStrike/SkScalerContext for
+  // direct glyph extraction. For emboldening, use SkFont::setEmbolden(true) or
+  // SkPaint with stroke-and-fill.
 #endif
   return pGlyphBitmap;
 }
@@ -1103,6 +1115,10 @@ int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
   // Skrifa.
+  // TODO(https://crbug.com/42271123): Avoid stateful glyph loading.
+  // Strategy: Use SkFont::getWidths, SkFont::getBounds, or skrifa::Outline to
+  // get metrics and outlines directly. Callers should be updated to use these
+  // stateless APIs instead of relying on GetRec()->glyph.
 #endif
   return ft_result;
 }
@@ -1311,6 +1327,9 @@ std::vector<CharCodeAndIndex> CFX_Face::GetCharCodesAndIndices(
 }
 
 CFX_Face::CharMap CFX_Face::GetCurrentCharMap() const {
+  // TODO(https://crbug.com/42271123): Replace FT_CharMap with a non-FreeType
+  // representation. Strategy: Use Skrifa's font.charmap() to access and iterate
+  // over cmaps and select the appropriate one.
   return GetRec()->charmap;
 }
 
@@ -1374,6 +1393,8 @@ int CFX_Face::GetNumFaces() const {
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   // TODO(https://crbug.com/42271123): Compute equivalent result via Skia or
   // Skrifa.
+  // TODO(https://crbug.com/42271123): Use Skrifa to parse the font container
+  // (e.g. TTC header) to get the number of faces.
 #endif
   return ft_result;
 }
@@ -1441,6 +1462,9 @@ void CFX_Face::AdjustVariationParams(int glyph_index,
   DCHECK_GE(dest_width, 0);
 
   FT_FaceRec* rec = GetRec();
+  // TODO(https://crbug.com/42271123): Use SkFontArguments::VariationPosition
+  // when creating the SkTypeface to handle variable font axes instead of
+  // dynamically setting coordinates on an existing face.
   ScopedFXFTMMVar variation_desc(rec);
   if (!variation_desc) {
     return;
