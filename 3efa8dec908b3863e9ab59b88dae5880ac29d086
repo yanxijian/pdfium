@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3ac02f6_bd96b0fb",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 22
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-01T18:51:00Z",
+      "side": 1,
+      "message": "Formatting needed here...",
+      "revId": "3efa8dec908b3863e9ab59b88dae5880ac29d086",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
