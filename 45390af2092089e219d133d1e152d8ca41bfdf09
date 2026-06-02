@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e5b4e0a_9894dc2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-02T04:24:45Z",
+      "side": 1,
+      "message": "Hey guys, implemented a separate CL to be able to enable the Brotli support build flag by default. If we plan to enable this by default we can land this CL if not we can decide not to and reorder the commits. Thanks!",
+      "revId": "45390af2092089e219d133d1e152d8ca41bfdf09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
