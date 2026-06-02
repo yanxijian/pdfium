@@ -444,6 +444,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1b97d25_353cfe20",
+        "filename": "pdfium.gni",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-02T21:54:53Z",
+      "side": 1,
+      "message": "Above, not below.",
+      "parentUuid": "ccf6066c_87ab5dac",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9fefac6a_a7365d86",
         "filename": "testing/resources/brotli_prototype_a.pdf",
         "patchSetId": 9
@@ -581,6 +599,24 @@
       "side": 1,
       "message": "Not quite sure if it would really work and it is kind of hard to tell if the OpenDocument() failure is from Brotli or from something else with the strutcure of the PDF.",
       "parentUuid": "dc57e1ea_7a96d3ab",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4533e7c3_cd7f3668",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-02T21:54:53Z",
+      "side": 1,
+      "message": "I can\u0027t actually view the .in files in the web review tool. I suspect it\u0027s because the files have binary data. Consider chaining `/ASCII85Decode` to make the content streams ASCII. This is similar to what testing/tools/encode_pdf_filter.py produces, but with `/BrotliDecode` instead of `/FlateDecode`.",
+      "parentUuid": "1da2e289_01aff559",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
