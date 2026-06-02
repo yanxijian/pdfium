@@ -7,9 +7,13 @@
 #include <string>
 #include <vector>
 
+#include "core/fpdfapi/parser/cpdf_array.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
 #include "core/fpdfapi/parser/cpdf_document.h"
+#include "core/fpdfapi/parser/cpdf_number.h"
 #include "core/fpdfapi/parser/cpdf_reference.h"
+#include "core/fpdfapi/parser/cpdf_string.h"
+#include "core/fpdfdoc/cpdf_nametree.h"
 #include "core/fxcrt/bytestring.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxge/cfx_defaultrenderdevice.h"
@@ -120,6 +124,50 @@ TEST_F(FPDFDocEmbedderTest, DestGetPageIndex) {
   dest = FPDF_GetNamedDestByName(document(), "LastAlternate");
   EXPECT_TRUE(dest);
   EXPECT_EQ(-1, FPDFDest_GetDestPageIndex(document(), dest));
+}
+
+TEST_F(FPDFDocEmbedderTest, DestLookupAndInsertWithLimitsArray) {
+  ASSERT_TRUE(OpenDocument("named_dests.pdf"));
+
+  CPDF_Document* doc = CPDFDocumentFromFPDFDocument(document());
+  ASSERT_TRUE(doc);
+
+  RetainPtr<CPDF_Dictionary> pRoot = doc->GetMutableRoot();
+  ASSERT_TRUE(pRoot);
+
+  RetainPtr<CPDF_Dictionary> pNames = pRoot->GetMutableDictFor("Names");
+  ASSERT_TRUE(pNames);
+
+  RetainPtr<CPDF_Dictionary> pDests = pNames->GetMutableDictFor("Dests");
+  ASSERT_TRUE(pDests);
+
+  RetainPtr<CPDF_Array> pKids = pDests->GetMutableArrayFor("Kids");
+  ASSERT_TRUE(pKids);
+
+  RetainPtr<CPDF_Dictionary> pKid0 = pKids->GetMutableDictAt(0);
+  ASSERT_TRUE(pKid0);
+
+  // 1. Manually add a Limits array with 4 elements.
+  RetainPtr<CPDF_Array> pLimits = pKid0->SetNewFor<CPDF_Array>("Limits");
+  pLimits->AppendNew<CPDF_String>("First");
+  pLimits->AppendNew<CPDF_String>("Next");
+  pLimits->AppendNew<CPDF_String>("Extra1");
+  pLimits->AppendNew<CPDF_String>("Extra2");
+  ASSERT_EQ(4u, pLimits->size());
+
+  // 2. Test Non-Truncation (Lookup-only path)
+  // Perform a lookup. This should NOT trim the Limits array.
+  FPDF_DEST dest = FPDF_GetNamedDestByName(document(), "First");
+  EXPECT_TRUE(dest);
+  EXPECT_EQ(4u, pLimits->size());
+
+  // 3. Test Truncation (Insertion path)
+  // Perform an insertion. This should trim the Limits array to 2 elements.
+  auto name_tree = CPDF_NameTree::Create(doc, "Dests");
+  ASSERT_TRUE(name_tree);
+  EXPECT_TRUE(name_tree->AddValueAndName(pdfium::MakeRetain<CPDF_Number>(123),
+                                         L"NewKey"));
+  EXPECT_EQ(2u, pLimits->size());
 }
 
 TEST_F(FPDFDocEmbedderTest, DestGetView) {
