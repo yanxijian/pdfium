@@ -106,6 +106,24 @@
       "parentUuid": "ce43a64d_37f4dfab",
       "revId": "7b8630f2854526fd754d4ce8a967d9ac5202d2d9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da838be6_10c3642a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-02T18:40:22Z",
+      "side": 1,
+      "message": "Hmmm possible, but if it does come to that we can get both CLs submittable (the chromium one and the PDFium one) and then figure out which one to land first based on what happens.",
+      "parentUuid": "4c1a4176_6a9c09fc",
+      "revId": "7b8630f2854526fd754d4ce8a967d9ac5202d2d9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
