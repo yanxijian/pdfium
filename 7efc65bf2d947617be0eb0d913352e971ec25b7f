@@ -300,6 +300,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "205b10e3_537bf117",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-02T06:54:11Z",
+      "side": 1,
+      "message": "Ok this broke something... Reverted.",
+      "parentUuid": "96255dfa_78f7af93",
+      "range": {
+        "startLine": 515,
+        "startChar": 5,
+        "endLine": 516,
+        "endChar": 52
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7be20820_bb0eec62",
