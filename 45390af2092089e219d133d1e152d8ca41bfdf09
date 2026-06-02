@@ -16,6 +16,88 @@
       "message": "Hey guys, implemented a separate CL to be able to enable the Brotli support build flag by default. If we plan to enable this by default we can land this CL if not we can decide not to and reorder the commits. Thanks!",
       "revId": "45390af2092089e219d133d1e152d8ca41bfdf09",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a36bb8ce_734b1d04",
+        "filename": "pdfium.gni",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T15:47:45Z",
+      "side": 1,
+      "message": "Nah, this needs to be optional until the 2.0 spec is finalized.  In particular, we don\u0027t want this rolling into chrome by default just yet without something called a \"feature flag\" to disable it if necessary. That would involve an API change on public/ API to pass the information down from the embedder. \n\nHaving the PDFium recipes run the tests is great, though.  That\u0027s where this should become true.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 26
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "0199b4ce_b4741eba",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "pdfium.gni",
+              "range": {
+                "startLine": 23,
+                "startChar": 0,
+                "endLine": 24,
+                "endChar": 0
+              },
+              "replacement": "  pdf_enable_brotli \u003d false\n"
+            }
+          ]
+        }
+      ],
+      "revId": "45390af2092089e219d133d1e152d8ca41bfdf09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ef4f983_59caebe3",
+        "filename": "pdfium.gni",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T15:47:45Z",
+      "side": 1,
+      "message": "This probably also needs the _override technique for to allow adaptation to other build environments than the standalone pdfium build.",
+      "range": {
+        "startLine": 23,
+        "startChar": 22,
+        "endLine": 23,
+        "endChar": 26
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "96e36f70_074a6eb3",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "pdfium.gni",
+              "range": {
+                "startLine": 23,
+                "startChar": 0,
+                "endLine": 24,
+                "endChar": 0
+              },
+              "replacement": "  pdf_enable_brotli \u003d pdf_enable_brotli_override\n"
+            }
+          ]
+        }
+      ],
+      "revId": "45390af2092089e219d133d1e152d8ca41bfdf09",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
