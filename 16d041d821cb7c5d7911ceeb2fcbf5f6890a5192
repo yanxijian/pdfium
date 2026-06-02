@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0723ff9_995ecf9b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T22:41:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7d367dc_05c71c1a",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9adebbca_14a031b6",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-01T23:36:48Z",
       "side": 1,
       "message": "Flip the conditional on line 33 and combine this line with line 34?",
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcc640cb_5d919466",
+        "filename": "core/fxge/android/cfpf_skiafont.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T22:41:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9adebbca_14a031b6",
       "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "763940f8_d22c61b2",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T22:41:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29338f7a_89f01c99",
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "301988de_3f8518c9",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-06-01T23:36:48Z",
       "side": 1,
       "message": "ASSERT_EQ() here and line 101.",
+      "range": {
+        "startLine": 94,
+        "startChar": 2,
+        "endLine": 94,
+        "endChar": 11
+      },
+      "revId": "16d041d821cb7c5d7911ceeb2fcbf5f6890a5192",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13a77c2f_f8d30f82",
+        "filename": "core/fxge/fx_font_unittest.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T22:41:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "301988de_3f8518c9",
       "range": {
         "startLine": 94,
         "startChar": 2,
