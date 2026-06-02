@@ -14,6 +14,7 @@
 
 #include "core/fxcrt/fx_stream.h"
 #include "core/fxcrt/numerics/safe_conversions.h"
+#include "core/fxcrt/span_io.h"
 
 #ifndef O_BINARY
 #define O_BINARY 0
@@ -79,14 +80,14 @@ size_t CFX_FileAccess_Posix::Read(pdfium::span<uint8_t> buffer) {
   if (fd_ < 0) {
     return 0;
   }
-  return read(fd_, buffer.data(), buffer.size());
+  return fxcrt::spanread(buffer, fd_).size();
 }
 
 size_t CFX_FileAccess_Posix::Write(pdfium::span<const uint8_t> buffer) {
   if (fd_ < 0) {
     return 0;
   }
-  return write(fd_, buffer.data(), buffer.size());
+  return fxcrt::spanwrite(buffer, fd_) ? buffer.size() : 0;
 }
 
 size_t CFX_FileAccess_Posix::ReadPos(pdfium::span<uint8_t> buffer,
