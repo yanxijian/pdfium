@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d408d8b_73a04450",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T18:11:46Z",
+      "side": 1,
+      "message": "The comment says \"Returns whether the entire container was successfully written.\" which implies a boolean return type, but the function returns `size_t` representing the number of elements written. The same documentation mismatch exists for the POSIX and Windows overloads below.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 0
+      },
+      "revId": "02849116c38b579508e719b7afdd54087227d98c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "378b0630_8676ede9",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T18:11:46Z",
+      "side": 1,
+      "message": "If `s` is empty (i.e. `s.size_bytes() \u003d\u003d 0`), `read()` will return 0, which triggers this `\u003c\u003d 0` check and returns an empty span. This works, but passing a null pointer (which a default-constructed span might have) to `read()` can technically result in `EFAULT` on some OSs. You might want to add an early return if `s.empty()`. The same applies to `spanwrite`, `ReadFile`, and `WriteFile`.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 0
+      },
+      "revId": "02849116c38b579508e719b7afdd54087227d98c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25ed5ea8_77cb84b0",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T18:11:46Z",
+      "side": 1,
+      "message": "`static_cast\u003cDWORD\u003e` could silently truncate if `s.size_bytes()` exceeds 4GB (i.e. larger than `MAXDWORD`). Consider using `pdfium::base::checked_cast\u003cDWORD\u003e` (from `core/fxcrt/numerics/safe_conversions.h`) to fail safely if such large buffers are ever passed. The same applies to `WriteFile` below.",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 0
+      },
+      "revId": "02849116c38b579508e719b7afdd54087227d98c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
