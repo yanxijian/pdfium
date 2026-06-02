@@ -18,6 +18,7 @@
 #include <vector>
 
 #include "core/fxcrt/numerics/safe_conversions.h"
+#include "core/fxcrt/span_io.h"
 #include "testing/image_diff/image_diff_png.h"
 #include "testing/utils/path_service.h"
 #include "testing/utils/pixel_diff_util.h"
@@ -90,9 +91,12 @@ class Image {
     std::vector<uint8_t> compressed;
     const size_t kBufSize = 1024;
     uint8_t buf[kBufSize];
-    size_t num_read = 0;
-    while ((num_read = fread(buf, 1, kBufSize, f)) > 0) {
-      compressed.insert(compressed.end(), buf, buf + num_read);
+    while (true) {
+      auto read_span = fxcrt::spanread(pdfium::span(buf), f);
+      if (read_span.empty()) {
+        break;
+      }
+      compressed.insert(compressed.end(), read_span.begin(), read_span.end());
     }
 
     fclose(f);
@@ -389,9 +393,7 @@ int DiffImages(const std::string& binary_name,
     return kStatusError;
   }
 
-  size_t size = png_encoding.size();
-  char* ptr = reinterpret_cast<char*>(&png_encoding.front());
-  if (fwrite(ptr, 1, size, f) != size) {
+  if (fxcrt::spanwrite(png_encoding, f) != png_encoding.size()) {
     return kStatusError;
   }
 
