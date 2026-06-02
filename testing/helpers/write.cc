@@ -13,6 +13,7 @@
 
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/span_io.h"
 #include "public/cpp/fpdf_scopers.h"
 #include "public/fpdf_annot.h"
 #include "public/fpdf_attachment.h"
@@ -270,9 +271,7 @@ std::string WritePng(const char* pdf_name,
     return std::string();
   }
 
-  size_t bytes_written =
-      fwrite(&png_encoding.front(), 1, png_encoding.size(), fp);
-  if (bytes_written != png_encoding.size()) {
+  if (fxcrt::spanwrite(png_encoding, fp) != png_encoding.size()) {
     fprintf(stderr, "Failed to write to %s\n", filename.c_str());
   }
 
@@ -325,7 +324,7 @@ std::string WritePpm(const char* pdf_name,
       dest_line[(w * 3) + 2] = src_line[w * 4];
     }
   }
-  if (fwrite(result.data(), out_len, 1, fp) != 1) {
+  if (fxcrt::spanwrite(result, fp) != result.size()) {
     fprintf(stderr, "Failed to write to %s\n", filename.c_str());
   }
 
@@ -346,7 +345,7 @@ void WriteText(FPDF_TEXTPAGE textpage, const char* pdf_name, int num) {
 
   // Output in UTF32-LE.
   uint32_t bom = 0x0000FEFF;
-  if (fwrite(&bom, sizeof(bom), 1, fp) != 1) {
+  if (fxcrt::spanwrite(pdfium::span_from_ref(bom), fp) != 1) {
     fprintf(stderr, "Failed to write to %s\n", filename.c_str());
     (void)fclose(fp);
     return;
@@ -354,7 +353,7 @@ void WriteText(FPDF_TEXTPAGE textpage, const char* pdf_name, int num) {
 
   for (int i = 0; i < FPDFText_CountChars(textpage); i++) {
     uint32_t c = FPDFText_GetUnicode(textpage, i);
-    if (fwrite(&c, sizeof(c), 1, fp) != 1) {
+    if (fxcrt::spanwrite(pdfium::span_from_ref(c), fp) != 1) {
       fprintf(stderr, "Failed to write to %s\n", filename.c_str());
       break;
     }
@@ -532,9 +531,13 @@ std::string WriteBmp(const char* pdf_name,
   file_header.bfSize = sizeof(file_header) + bmi.bmiHeader.biSize + out_len;
   file_header.bfOffBits = file_header.bfSize - out_len;
 
-  if (fwrite(&file_header, sizeof(file_header), 1, fp) != 1 ||
-      fwrite(&bmi, bmi.bmiHeader.biSize, 1, fp) != 1 ||
-      fwrite(buffer, out_len, 1, fp) != 1) {
+  if (fxcrt::spanwrite(pdfium::span_from_ref(file_header), fp) != 1 ||
+      fxcrt::spanwrite(pdfium::span(reinterpret_cast<const uint8_t*>(&bmi),
+                                    bmi.bmiHeader.biSize),
+                       fp) != bmi.bmiHeader.biSize ||
+      fxcrt::spanwrite(
+          pdfium::span(reinterpret_cast<const uint8_t*>(buffer), out_len),
+          fp) != out_len) {
     fprintf(stderr, "Failed to write to %s\n", filename.c_str());
   }
   fclose(fp);
@@ -594,7 +597,9 @@ void WritePS(FPDF_PAGE page, const char* pdf_name, int num) {
     const auto* comment = reinterpret_cast<const EMRGDICOMMENT*>(record);
     const char* data = reinterpret_cast<const char*>(comment->Data);
     uint16_t size = *reinterpret_cast<const uint16_t*>(data);
-    if (fwrite(data + sizeof(uint16_t), size, 1, fp) != 1) {
+    auto src_span = pdfium::span(
+        reinterpret_cast<const uint8_t*>(data + sizeof(uint16_t)), size);
+    if (fxcrt::spanwrite(src_span, fp) != src_span.size()) {
       fprintf(stderr, "Failed to write to %s\n", filename.c_str());
       break;
     }
@@ -692,8 +697,9 @@ void WriteBufferToFile(const void* buf,
     return;
   }
 
-  size_t bytes_written = fwrite(buf, 1, buflen, fp);
-  if (bytes_written == buflen) {
+  if (fxcrt::spanwrite(
+          pdfium::span(reinterpret_cast<const uint8_t*>(buf), buflen), fp) ==
+      buflen) {
     fprintf(stderr, "Successfully wrote %s %s.\n", filetype, filename);
   } else {
     fprintf(stderr, "Failed to write to %s.\n", filename);
