@@ -19,6 +19,16 @@ declare_args() {
   # Generate logging messages for click events that reach PDFium
   pdf_enable_click_logging = false
 
+<<<<<<< PATCH SET (a475098d2a600478c9786c9720fb8f729ae62482 Add brotli build override)
+  # Build PDFium with experimental brotli compression support.
+  pdf_enable_brotli = pdf_enable_brotli_override
+
+||||||| BASE      (9831de5d9a98f8ef549de87d487b70a82ac77705 Add simple tests for Brotli compression)
+  # Build PDFium with experimental brotli compression support.
+  pdf_enable_brotli = false
+
+=======
+>>>>>>> BASE      (1ca37e1f4fe907e12de22c2c24e7bb8c9ddae797 Enforce unsafe_buffers in testing/image_diff/ directory.)
   # Build PDFium either with or without v8 support.
   pdf_enable_v8 = pdf_enable_v8_override
 
