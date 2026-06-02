@@ -152,6 +152,44 @@ ByteString GetNameFromTT(pdfium::span<const uint8_t> name_table,
   return ByteString();
 }
 
+std::optional<FontTableLocation> FindFontTable(
+    pdfium::span<const uint8_t> table_dir,
+    uint32_t tag) {
+  size_t nTables = table_dir.size() / 16u;
+  for (size_t i = 0; i < nTables; ++i) {
+    auto entry = table_dir.subspan(i * 16u, 16u);
+    if (fxcrt::GetUInt32MSBFirst(entry.first<4u>()) == tag) {
+      uint32_t offset = fxcrt::GetUInt32MSBFirst(entry.subspan<8u, 4u>());
+      uint32_t size = fxcrt::GetUInt32MSBFirst(entry.subspan<12u, 4u>());
+      return FontTableLocation{offset, size};
+    }
+  }
+  return std::nullopt;
+}
+
+pdfium::span<const uint8_t> GetFontTable(pdfium::span<const uint8_t> font_data,
+                                         uint32_t tag,
+                                         size_t face_offset) {
+  if (font_data.size() < 12 || face_offset > font_data.size() - 12) {
+    return {};
+  }
+  auto face_data = font_data.subspan(face_offset);
+  uint16_t nTables = fxcrt::GetUInt16MSBFirst(face_data.subspan<4, 2>());
+  if (face_data.size() < 12u + nTables * 16u) {
+    return {};
+  }
+  auto table_dir = face_data.subspan(12u, nTables * 16u);
+  auto loc = FindFontTable(table_dir, tag);
+  if (!loc) {
+    return {};
+  }
+  if (loc->offset > font_data.size() ||
+      loc->size > font_data.size() - loc->offset) {
+    return {};
+  }
+  return font_data.subspan(loc->offset, loc->size);
+}
+
 uint32_t GetTTCIndex(pdfium::span<const uint8_t> font_data,
                      size_t font_offset) {
   pdfium::span<const uint8_t> p = font_data.subspan<8u>();
