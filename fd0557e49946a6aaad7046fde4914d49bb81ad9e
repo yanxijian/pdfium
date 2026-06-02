@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a56ad95_1df98c3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-02T18:05:18Z",
+      "side": 1,
+      "message": "Well it\u0027s fine we can disable support for now. We can test it locally as well if needed + Bots would probably be added by the time we look at the next CL in the chain.",
+      "revId": "fd0557e49946a6aaad7046fde4914d49bb81ad9e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
