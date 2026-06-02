@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1fab09f_23915816",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-02T19:49:53Z",
+      "side": 1,
+      "message": "Yes, we can deal with the chrome roll when it happens.",
+      "revId": "759bdcbd5c4c3e3ee3e684a4da9fcc41e403e435",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
