@@ -301,6 +301,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5186afd2_d5ccf444",
+        "filename": "fpdfsdk/pwl/cpwl_list_ctrl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-02T15:29:39Z",
+      "side": 1,
+      "message": "I kept the existing nItemIndex logic unchanged and only changed\nthe subspan() argument to static_cast\u003csize_t\u003e(nItemIndex), as suggested.",
+      "parentUuid": "1c5a2a4e_25105344",
+      "range": {
+        "startLine": 539,
+        "startChar": 20,
+        "endLine": 539,
+        "endChar": 48
+      },
+      "revId": "453079134b0586fe492ea068aa132939de681450",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bd7a9dc9_ecc20006",
