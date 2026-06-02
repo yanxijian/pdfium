@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75dd5153_bc41b7fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-02T03:50:02Z",
+      "side": 1,
+      "message": "Hi Tom,\n\nI\u0027ve updated the CL based on the discussion and uploaded a new patchset.\n\nWhen you have a chance, could you please take another look and let me know if this approach looks good?\n\nThanks!",
+      "revId": "c1312dba56b69dc3a1e4a4cbdb532e46196f89e9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
