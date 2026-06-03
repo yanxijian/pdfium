@@ -126,13 +126,13 @@ void CFX_FolderFontInfo::AddPath(const ByteString& path) {
 }
 
 void CFX_FolderFontInfo::EnumFontList(CFX_FontMapper* pMapper) {
-  mapper_ = pMapper;
   for (const auto& path : path_list_) {
-    ScanPath(path);
+    ScanPath(pMapper, path);
   }
 }
 
-void CFX_FolderFontInfo::ScanPath(const ByteString& path) {
+void CFX_FolderFontInfo::ScanPath(CFX_FontMapper* mapper,
+                                  const ByteString& path) {
   std::unique_ptr<FX_Folder> handle = FX_Folder::OpenFolder(path);
   if (!handle) {
     return;
@@ -161,11 +161,12 @@ void CFX_FolderFontInfo::ScanPath(const ByteString& path) {
 #endif
 
     fullpath += filename;
-    bFolder ? ScanPath(fullpath) : ScanFile(fullpath);
+    bFolder ? ScanPath(mapper, fullpath) : ScanFile(mapper, fullpath);
   }
 }
 
-void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
+void CFX_FolderFontInfo::ScanFile(CFX_FontMapper* mapper,
+                                  const ByteString& path) {
   std::unique_ptr<FILE, FxFileCloser> pFile(fopen(path.c_str(), "rb"));
   if (!pFile) {
     return;
@@ -185,7 +186,7 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
-    ReportFace(path, pFile.get(), filesize, 0);
+    ReportFace(mapper, path, pFile.get(), filesize, 0);
     return;
   }
 
@@ -208,12 +209,13 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
 
   for (uint32_t i = 0; i < nFaces; i++) {
     ReportFace(
-        path, pFile.get(), filesize,
+        mapper, path, pFile.get(), filesize,
         fxcrt::GetUInt32MSBFirst(offsets_span.subspan(i * 4).first<4u>()));
   }
 }
 
-void CFX_FolderFontInfo::ReportFace(const ByteString& path,
+void CFX_FolderFontInfo::ReportFace(CFX_FontMapper* mapper,
+                                    const ByteString& path,
                                     FILE* pFile,
                                     FX_FILESIZE filesize,
                                     uint32_t offset) {
@@ -265,27 +267,27 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     pdfium::span<const uint8_t> p = os2.unsigned_span().subspan(78u);
     uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
     if (codepages & (1U << 17)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
+      mapper->AddInstalledFont(facename, FX_Charset::kShiftJIS);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kShiftJis;
     }
     if (codepages & (1U << 18)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
+      mapper->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kGb;
     }
     if (codepages & (1U << 20)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
+      mapper->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kBig5;
     }
     if ((codepages & (1U << 19)) || (codepages & (1U << 21))) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kHangul);
+      mapper->AddInstalledFont(facename, FX_Charset::kHangul);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kKorean;
     }
     if (codepages & (1U << 31)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kSymbol);
+      mapper->AddInstalledFont(facename, FX_Charset::kSymbol);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kSymbol;
     }
   }
-  mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
+  mapper->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kAnsi;
   pInfo->styles_ = 0;
   if (style.Contains("Bold")) {
@@ -416,7 +418,9 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   uint32_t datasize = 0;
   uint32_t offset = 0;
   if (table == SystemFontInfoIface::kTableNone) {
-    datasize = font->font_offset_ ? 0 : font->file_size_;
+    datasize = font->font_offset_ ? font->file_size_ - font->font_offset_
+                                  : font->file_size_;
+    offset = font->font_offset_;
   } else if (table == SystemFontInfoIface::kTableTTCF) {
     datasize = font->font_offset_ ? font->file_size_ : 0;
   } else {
