@@ -1,0 +1,43 @@
+{{header}}
+{{object 1 0}}
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+  /AcroForm << /Fields [ 6 0 R ] >>
+>>
+endobj
+{{object 2 0}}
+<< /Count 2 /Kids [ 3 0 R 4 0 R ] /Type /Pages >>
+endobj
+{{object 3 0}}
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 300 ]
+  /Annots 5 0 R
+>>
+endobj
+{{object 4 0}}
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 300 ]
+  /Annots 5 0 R
+>>
+endobj
+{{object 5 0}}
+[ 6 0 R ]
+endobj
+{{object 6 0}}
+<<
+  /Type /Annot
+  /FT /Tx
+  /T (Shared Annot Array Widget)
+  /Rect [ 100 100 200 130 ]
+  /Subtype /Widget
+>>
+endobj
+{{xref}}
+{{trailer}}
+{{startxref}}
+%%EOF
