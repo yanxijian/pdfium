@@ -1,0 +1,56 @@
+%PDF-1.7
+% ò¤ô
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+  /AcroForm << /Fields [ 6 0 R ] >>
+>>
+endobj
+2 0 obj
+<< /Count 2 /Kids [ 3 0 R 4 0 R ] /Type /Pages >>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 300 ]
+  /Annots 5 0 R
+>>
+endobj
+4 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 300 ]
+  /Annots 5 0 R
+>>
+endobj
+5 0 obj
+[ 6 0 R ]
+endobj
+6 0 obj
+<<
+  /Type /Annot
+  /FT /Tx
+  /T (Shared Annot Array Widget)
+  /Rect [ 100 100 200 130 ]
+  /Subtype /Widget
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000104 00000 n 
+0000000169 00000 n 
+0000000264 00000 n 
+0000000359 00000 n 
+0000000384 00000 n 
+trailer <<
+  /Root 1 0 R
+  /Size 7
+>>
+startxref
+510
+%%EOF
