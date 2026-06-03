@@ -22,6 +22,30 @@
       },
       "revId": "2d38586dff0bffc62830b94a53c8060fa0867f8a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f67f41c3_8d71fee8",
+        "filename": "testing/resources/hello_world_brotli_with_length1.pdf",
+        "patchSetId": 40
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-03T17:34:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23ff48a1_be615f0e",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 18
+      },
+      "revId": "2d38586dff0bffc62830b94a53c8060fa0867f8a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
