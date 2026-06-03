@@ -637,6 +637,24 @@
       "parentUuid": "1da2e289_01aff559",
       "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "737932a5_3bc2ee28",
+        "filename": "testing/resources/brotli_prototype_a.pdf",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-03T03:48:38Z",
+      "side": 1,
+      "message": "Encode_pdf_filter.py is helpful. I can just hotwire the script a bit to work with BrotliDecode on my local fork to help make the PDFs.\n\nWill work on it.",
+      "parentUuid": "4533e7c3_cd7f3668",
+      "revId": "cb846c203ac7b50ff7c94acd9923259b1094c849",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
