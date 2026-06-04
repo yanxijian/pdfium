@@ -16,6 +16,74 @@
       "message": "Lei, PTAL.",
       "revId": "9f47e33fd8ef8da6bcf8345594ce31ab10399442",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc1118cd_328413cd",
+        "filename": "core/fxcrt/span_io_unittest.cpp",
+        "patchSetId": 26
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:18:44Z",
+      "side": 1,
+      "message": "Add another scoper for temp file creation + deletion?",
+      "revId": "9f47e33fd8ef8da6bcf8345594ce31ab10399442",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80925a07_ec9706ee",
+        "filename": "testing/utils/file_util.h",
+        "patchSetId": 26
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:18:44Z",
+      "side": 1,
+      "message": "dtor after ctors, including copy/move ctors. So move after line 41.",
+      "revId": "9f47e33fd8ef8da6bcf8345594ce31ab10399442",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce427ac0_be62a5b5",
+        "filename": "testing/utils/file_util.h",
+        "patchSetId": 26
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:18:44Z",
+      "side": 1,
+      "message": "Do all these scopers need to be movable?",
+      "revId": "9f47e33fd8ef8da6bcf8345594ce31ab10399442",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8410c1a0_ff0cf5fd",
+        "filename": "testing/utils/file_util.h",
+        "patchSetId": 26
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:18:44Z",
+      "side": 1,
+      "message": "The is_valid() methods are unused.",
+      "revId": "9f47e33fd8ef8da6bcf8345594ce31ab10399442",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
