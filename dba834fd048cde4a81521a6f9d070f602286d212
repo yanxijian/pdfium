@@ -80,6 +80,40 @@
       "parentUuid": "80b22e55_4df1b62a",
       "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0beab35f_462a1a68",
+        "filename": "testing/fuzzers/pdf_fuzzer_init_public.cc",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:09:21Z",
+      "side": 1,
+      "message": "No longer needed.",
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9468289_bb1c6d1e",
+        "filename": "testing/helpers/dump.cc",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T23:09:21Z",
+      "side": 1,
+      "message": "No longer needed?",
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
