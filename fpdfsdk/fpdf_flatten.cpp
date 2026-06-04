@@ -9,6 +9,8 @@
 #include <limits.h>
 
 #include <algorithm>
+#include <iterator>
+#include <set>
 #include <sstream>
 #include <utility>
 #include <vector>
@@ -16,6 +18,7 @@
 #include "constants/annotation_common.h"
 #include "constants/annotation_flags.h"
 #include "constants/font_encodings.h"
+#include "constants/form_fields.h"
 #include "constants/page_object.h"
 #include "core/fpdfapi/edit/cpdf_contentstream_write_utils.h"
 #include "core/fpdfapi/page/cpdf_page.h"
@@ -30,6 +33,7 @@
 #include "core/fpdfapi/parser/cpdf_stream_acc.h"
 #include "core/fpdfapi/parser/fpdf_parser_utility.h"
 #include "core/fpdfdoc/cpdf_annot.h"
+#include "core/fxcrt/containers/contains.h"
 #include "core/fxcrt/fx_string_wrappers.h"
 #include "fpdfsdk/cpdfsdk_helpers.h"
 
@@ -37,6 +41,12 @@ enum FPDF_TYPE { MAX, MIN };
 enum FPDF_VALUE { TOP, LEFT, RIGHT, BOTTOM };
 
 namespace {
+
+constexpr char kAcroForm[] = "AcroForm";
+constexpr char kAnnots[] = "Annots";
+constexpr char kFields[] = "Fields";
+constexpr char kXFA[] = "XFA";
+constexpr int kMaxRecursion = 32;
 
 bool IsValidRect(const CFX_FloatRect& rect, const CFX_FloatRect& rcPage) {
   static constexpr float kMinSize = 0.000001f;
@@ -314,6 +324,138 @@ void SanitizeResources(RetainPtr<CPDF_Dictionary> resources_dict) {
   SanitizeFontResources(resources_dict->GetMutableDictFor("Font"));
 }
 
+bool IsWidgetAnnot(const CPDF_Dictionary* annot) {
+  return annot && annot->GetNameFor(pdfium::annotation::kSubtype) == "Widget";
+}
+
+std::set<const CPDF_Dictionary*> CollectPageWidgetAnnots(
+    const CPDF_Dictionary* page_dict) {
+  std::set<const CPDF_Dictionary*> widget_annots;
+  RetainPtr<const CPDF_Array> annots = page_dict->GetArrayFor(kAnnots);
+  if (!annots) {
+    return widget_annots;
+  }
+
+  for (size_t i = 0; i < annots->size(); ++i) {
+    RetainPtr<const CPDF_Dictionary> annot = annots->GetDictAt(i);
+    if (IsWidgetAnnot(annot.Get())) {
+      widget_annots.insert(annot.Get());
+    }
+  }
+  return widget_annots;
+}
+
+void RemoveSharedWidgetsFromSet(
+    CPDF_Document* document,
+    const CPDF_Dictionary* current_page_dict,
+    std::set<const CPDF_Dictionary*>* widget_annots) {
+  for (int i = 0, page_count = document->GetPageCount();
+       i < page_count && !widget_annots->empty(); ++i) {
+    RetainPtr<const CPDF_Dictionary> page_dict = document->GetPageDictionary(i);
+    if (!page_dict || page_dict.Get() == current_page_dict) {
+      continue;
+    }
+
+    std::set<const CPDF_Dictionary*> other_page_widget_annots =
+        CollectPageWidgetAnnots(page_dict.Get());
+    if (other_page_widget_annots.empty()) {
+      continue;
+    }
+
+    std::set<const CPDF_Dictionary*> page_only_widget_annots;
+    std::set_difference(
+        widget_annots->begin(), widget_annots->end(),
+        other_page_widget_annots.begin(), other_page_widget_annots.end(),
+        std::inserter(page_only_widget_annots, page_only_widget_annots.end()));
+    *widget_annots = std::move(page_only_widget_annots);
+  }
+}
+
+bool PruneFieldArray(CPDF_Array* fields,
+                     const std::set<const CPDF_Dictionary*>& widget_annots,
+                     std::set<const CPDF_Dictionary*>* visited_fields,
+                     int level);
+
+bool PruneFieldKids(CPDF_Dictionary* field,
+                    const std::set<const CPDF_Dictionary*>& widget_annots,
+                    std::set<const CPDF_Dictionary*>* visited_fields,
+                    int level) {
+  RetainPtr<CPDF_Array> kids =
+      field->GetMutableArrayFor(pdfium::form_fields::kKids);
+  if (!kids || !visited_fields->insert(field).second) {
+    return false;
+  }
+
+  return PruneFieldArray(kids.Get(), widget_annots, visited_fields,
+                         level + 1) &&
+         kids->IsEmpty();
+}
+
+bool PruneFieldArray(CPDF_Array* fields,
+                     const std::set<const CPDF_Dictionary*>& widget_annots,
+                     std::set<const CPDF_Dictionary*>* visited_fields,
+                     int level) {
+  if (level > kMaxRecursion) {
+    return false;
+  }
+
+  bool pruned = false;
+  for (size_t i = fields->size(); i > 0; --i) {
+    const size_t field_index = i - 1;
+    RetainPtr<CPDF_Dictionary> field = fields->GetMutableDictAt(field_index);
+    if (!field) {
+      continue;
+    }
+
+    bool prune_field = pdfium::Contains(widget_annots, field.Get());
+    if (!prune_field) {
+      prune_field =
+          PruneFieldKids(field.Get(), widget_annots, visited_fields, level);
+    }
+    if (prune_field) {
+      fields->RemoveAt(field_index);
+      pruned = true;
+    }
+  }
+  return pruned;
+}
+
+void RemoveFlattenedFields(CPDF_Document* document,
+                           const CPDF_Dictionary* page_dict,
+                           int level) {
+  std::set<const CPDF_Dictionary*> widget_annots =
+      CollectPageWidgetAnnots(page_dict);
+  if (widget_annots.empty()) {
+    return;
+  }
+
+  RemoveSharedWidgetsFromSet(document, page_dict, &widget_annots);
+  if (widget_annots.empty()) {
+    return;
+  }
+
+  RetainPtr<CPDF_Dictionary> root = document->GetMutableRoot();
+  if (!root) {
+    return;
+  }
+
+  RetainPtr<CPDF_Dictionary> acro_form = root->GetMutableDictFor(kAcroForm);
+  if (!acro_form) {
+    return;
+  }
+
+  RetainPtr<CPDF_Array> fields = acro_form->GetMutableArrayFor(kFields);
+  if (!fields) {
+    return;
+  }
+
+  std::set<const CPDF_Dictionary*> visited_fields;
+  PruneFieldArray(fields.Get(), widget_annots, &visited_fields, level);
+  if (fields->IsEmpty() && !acro_form->KeyExist(kXFA)) {
+    root->RemoveFor(kAcroForm);
+  }
+}
+
 }  // namespace
 
 FPDF_EXPORT int FPDF_CALLCONV FPDFPage_Flatten(FPDF_PAGE page, int nFlag) {
@@ -496,6 +638,7 @@ FPDF_EXPORT int FPDF_CALLCONV FPDFPage_Flatten(FPDF_PAGE page, int nFlag) {
                                   sFormName.c_str());
     pNewXObject->SetDataAndRemoveFilter(sStream.unsigned_span());
   }
-  pPageDict->RemoveFor("Annots");
+  RemoveFlattenedFields(document, pPageDict.Get(), /*level=*/0);
+  pPageDict->RemoveFor(kAnnots);
   return FLATTEN_SUCCESS;
 }
