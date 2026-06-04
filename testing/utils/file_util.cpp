@@ -9,35 +9,112 @@
 #include <utility>
 #include <vector>
 
+#include "build/build_config.h"
 #include "core/fxcrt/numerics/safe_conversions.h"
 #include "core/fxcrt/span.h"
+#include "core/fxcrt/span_io.h"
 #include "core/fxcrt/stl_util.h"
 #include "testing/utils/path_service.h"
 
-bool CanReadFile(const char* filename) {
-  FILE* file = fopen(filename, "rb");
-  if (!file) {
-    return false;
+#if BUILDFLAG(IS_POSIX)
+#include <unistd.h>
+#endif
+
+#if BUILDFLAG(IS_WIN)
+#include <windows.h>
+#endif
+
+namespace pdfium {
+
+void FileCloser::operator()(FILE* f) const {
+  if (f) {
+    fclose(f);
   }
-  (void)fclose(file);
-  return true;
+}
+
+#if BUILDFLAG(IS_POSIX)
+ScopedFD::ScopedFD() = default;
+ScopedFD::ScopedFD(int fd) : fd_(fd) {}
+ScopedFD::~ScopedFD() {
+  if (fd_ >= 0) {
+    close(fd_);
+  }
+}
+
+ScopedFD::ScopedFD(ScopedFD&& other) noexcept : fd_(other.release()) {}
+
+ScopedFD& ScopedFD::operator=(ScopedFD&& other) noexcept {
+  reset(other.release());
+  return *this;
+}
+
+int ScopedFD::release() {
+  int fd = fd_;
+  fd_ = -1;
+  return fd;
+}
+
+void ScopedFD::reset(int fd) {
+  if (fd_ >= 0) {
+    close(fd_);
+  }
+  fd_ = fd;
+}
+#endif  // BUILDFLAG(IS_POSIX)
+
+#if BUILDFLAG(IS_WIN)
+ScopedHandle::ScopedHandle() = default;
+ScopedHandle::ScopedHandle(HANDLE handle) : handle_(handle) {}
+ScopedHandle::~ScopedHandle() {
+  if (handle_ && handle_ != INVALID_HANDLE_VALUE) {
+    CloseHandle(handle_);
+  }
+}
+
+ScopedHandle::ScopedHandle(ScopedHandle&& other) noexcept
+    : handle_(other.release()) {}
+
+ScopedHandle& ScopedHandle::operator=(ScopedHandle&& other) noexcept {
+  reset(other.release());
+  return *this;
+}
+
+HANDLE ScopedHandle::release() {
+  HANDLE handle = handle_;
+  handle_ = INVALID_HANDLE_VALUE;
+  return handle;
+}
+
+void ScopedHandle::reset(HANDLE handle) {
+  if (handle_ && handle_ != INVALID_HANDLE_VALUE) {
+    CloseHandle(handle_);
+  }
+  handle_ = handle;
+}
+#endif  // BUILDFLAG(IS_WIN)
+
+}  // namespace pdfium
+
+bool CanReadFile(const char* filename) {
+  pdfium::ScopedFILE file(fopen(filename, "rb"));
+  return !!file;
 }
 
 std::vector<uint8_t> GetFileContents(const char* filename) {
-  FILE* file = fopen(filename, "rb");
+  pdfium::ScopedFILE file(fopen(filename, "rb"));
   if (!file) {
     fprintf(stderr, "Failed to open: %s\n", filename);
     return {};
   }
-  (void)fseek(file, 0, SEEK_END);
-  size_t file_length = ftell(file);
+  (void)fseek(file.get(), 0, SEEK_END);
+  size_t file_length = ftell(file.get());
   if (!file_length) {
     return {};
   }
-  (void)fseek(file, 0, SEEK_SET);
+  (void)fseek(file.get(), 0, SEEK_SET);
   std::vector<uint8_t> buffer(file_length);
-  size_t bytes_read = fread(buffer.data(), 1, file_length, file);
-  (void)fclose(file);
+  pdfium::span<uint8_t> items_read = fxcrt::spanread(buffer, file.get());
+  size_t bytes_read = items_read.size();
   if (bytes_read != file_length) {
     fprintf(stderr, "Failed to read: %s\n", filename);
     return {};

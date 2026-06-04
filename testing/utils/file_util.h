@@ -7,10 +7,76 @@
 
 #include <stdint.h>
 
+#include <memory>
 #include <string>
 #include <vector>
 
+#include "build/build_config.h"
 #include "public/fpdfview.h"
+
+#if BUILDFLAG(IS_WIN)
+#include <windows.h>
+#endif
+
+namespace pdfium {
+
+// Scoper for FILE*.
+struct FileCloser {
+  void operator()(FILE* f) const;
+};
+using ScopedFILE = std::unique_ptr<FILE, FileCloser>;
+
+#if BUILDFLAG(IS_POSIX)
+// Scoper for POSIX file descriptor.
+class ScopedFD {
+ public:
+  ScopedFD();
+  explicit ScopedFD(int fd);
+  ~ScopedFD();
+
+  ScopedFD(const ScopedFD&) = delete;
+  ScopedFD& operator=(const ScopedFD&) = delete;
+
+  ScopedFD(ScopedFD&& other) noexcept;
+  ScopedFD& operator=(ScopedFD&& other) noexcept;
+
+  int get() const { return fd_; }
+  bool is_valid() const { return fd_ >= 0; }
+
+  int release();
+  void reset(int fd = -1);
+
+ private:
+  int fd_ = -1;
+};
+#endif  // BUILDFLAG(IS_POSIX)
+
+#if BUILDFLAG(IS_WIN)
+// Scoper for Windows HANDLE.
+class ScopedHandle {
+ public:
+  ScopedHandle();
+  explicit ScopedHandle(HANDLE handle);
+  ~ScopedHandle();
+
+  ScopedHandle(const ScopedHandle&) = delete;
+  ScopedHandle& operator=(const ScopedHandle&) = delete;
+
+  ScopedHandle(ScopedHandle&& other) noexcept;
+  ScopedHandle& operator=(ScopedHandle&& other) noexcept;
+
+  HANDLE get() const { return handle_; }
+  bool is_valid() const { return handle_ && handle_ != INVALID_HANDLE_VALUE; }
+
+  HANDLE release();
+  void reset(HANDLE handle = INVALID_HANDLE_VALUE);
+
+ private:
+  HANDLE handle_ = INVALID_HANDLE_VALUE;
+};
+#endif  // BUILDFLAG(IS_WIN)
+
+}  // namespace pdfium
 
 // Returns true if the path can be read from.
 bool CanReadFile(const char* filename);
