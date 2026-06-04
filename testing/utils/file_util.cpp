@@ -11,33 +11,30 @@
 
 #include "core/fxcrt/numerics/safe_conversions.h"
 #include "core/fxcrt/span.h"
+#include "core/fxcrt/span_io.h"
 #include "core/fxcrt/stl_util.h"
 #include "testing/utils/path_service.h"
 
 bool CanReadFile(const char* filename) {
-  FILE* file = fopen(filename, "rb");
-  if (!file) {
-    return false;
-  }
-  (void)fclose(file);
-  return true;
+  pdfium::ScopedFILE file(fopen(filename, "rb"));
+  return !!file;
 }
 
 std::vector<uint8_t> GetFileContents(const char* filename) {
-  FILE* file = fopen(filename, "rb");
+  pdfium::ScopedFILE file(fopen(filename, "rb"));
   if (!file) {
     fprintf(stderr, "Failed to open: %s\n", filename);
     return {};
   }
-  (void)fseek(file, 0, SEEK_END);
-  size_t file_length = ftell(file);
+  (void)fseek(file.get(), 0, SEEK_END);
+  size_t file_length = ftell(file.get());
   if (!file_length) {
     return {};
   }
-  (void)fseek(file, 0, SEEK_SET);
+  (void)fseek(file.get(), 0, SEEK_SET);
   std::vector<uint8_t> buffer(file_length);
-  size_t bytes_read = fread(buffer.data(), 1, file_length, file);
-  (void)fclose(file);
+  pdfium::span<uint8_t> items_read = fxcrt::spanread(buffer, file.get());
+  size_t bytes_read = items_read.size();
   if (bytes_read != file_length) {
     fprintf(stderr, "Failed to read: %s\n", filename);
     return {};

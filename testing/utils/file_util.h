@@ -7,8 +7,117 @@
 
 #include <stdint.h>
 
+#include <memory>
 #include <string>
 #include <vector>
+
+#include "build/build_config.h"
+
+#if BUILDFLAG(IS_POSIX)
+#include <unistd.h>
+#endif
+
+#if BUILDFLAG(IS_WIN)
+#include <windows.h>
+#endif
+
+namespace pdfium {
+
+// Scoper for FILE*.
+struct FileCloser {
+  void operator()(FILE* f) const {
+    if (f) {
+      fclose(f);
+    }
+  }
+};
+using ScopedFILE = std::unique_ptr<FILE, FileCloser>;
+
+#if BUILDFLAG(IS_POSIX)
+// Scoper for POSIX file descriptor.
+class ScopedFD {
+ public:
+  ScopedFD() = default;
+  explicit ScopedFD(int fd) : fd_(fd) {}
+  ~ScopedFD() {
+    if (fd_ >= 0) {
+      close(fd_);
+    }
+  }
+
+  ScopedFD(const ScopedFD&) = delete;
+  ScopedFD& operator=(const ScopedFD&) = delete;
+
+  ScopedFD(ScopedFD&& other) noexcept : fd_(other.release()) {}
+  ScopedFD& operator=(ScopedFD&& other) noexcept {
+    reset(other.release());
+    return *this;
+  }
+
+  int get() const { return fd_; }
+  bool is_valid() const { return fd_ >= 0; }
+
+  int release() {
+    int fd = fd_;
+    fd_ = -1;
+    return fd;
+  }
+
+  void reset(int fd = -1) {
+    if (fd_ >= 0) {
+      close(fd_);
+    }
+    fd_ = fd;
+  }
+
+ private:
+  int fd_ = -1;
+};
+#endif  // BUILDFLAG(IS_POSIX)
+
+#if BUILDFLAG(IS_WIN)
+// Scoper for Windows HANDLE.
+class ScopedHandle {
+ public:
+  ScopedHandle() = default;
+  explicit ScopedHandle(HANDLE handle) : handle_(handle) {}
+  ~ScopedHandle() {
+    if (handle_ && handle_ != INVALID_HANDLE_VALUE) {
+      CloseHandle(handle_);
+    }
+  }
+
+  ScopedHandle(const ScopedHandle&) = delete;
+  ScopedHandle& operator=(const ScopedHandle&) = delete;
+
+  ScopedHandle(ScopedHandle&& other) noexcept : handle_(other.release()) {}
+  ScopedHandle& operator=(ScopedHandle&& other) noexcept {
+    reset(other.release());
+    return *this;
+  }
+
+  HANDLE get() const { return handle_; }
+  bool is_valid() const { return handle_ && handle_ != INVALID_HANDLE_VALUE; }
+
+  HANDLE release() {
+    HANDLE handle = handle_;
+    handle_ = INVALID_HANDLE_VALUE;
+    return handle;
+  }
+
+  void reset(HANDLE handle = INVALID_HANDLE_VALUE) {
+    if (handle_ && handle_ != INVALID_HANDLE_VALUE) {
+      CloseHandle(handle_);
+    }
+    handle_ = handle;
+  }
+
+ private:
+  HANDLE handle_ = INVALID_HANDLE_VALUE;
+};
+#endif  // BUILDFLAG(IS_WIN)
+
+}  // namespace pdfium
 
 #include "public/fpdfview.h"
 
