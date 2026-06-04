@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9b1306c_5442e2e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:33:53Z",
+      "side": 1,
+      "message": "\"CFX_FileAccess_Posix changes\"",
+      "range": {
+        "startLine": 22,
+        "startChar": 10,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "392adc4d_f91d9451",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:33:53Z",
+      "side": 1,
+      "message": "Can be uint8_t?",
+      "range": {
+        "startLine": 217,
+        "startChar": 2,
+        "endLine": 217,
+        "endChar": 6
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e32fb96_759c77fa",
+        "filename": "testing/image_diff/image_diff.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:33:53Z",
+      "side": 1,
+      "message": "Explicit span construction not needed?",
+      "range": {
+        "startLine": 95,
+        "startChar": 39,
+        "endLine": 95,
+        "endChar": 55
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
