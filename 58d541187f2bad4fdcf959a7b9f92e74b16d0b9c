@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "748a069b_5a549339",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9b1306c_5442e2e4",
+      "range": {
+        "startLine": 22,
+        "startChar": 10,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4976231c_e1386274",
@@ -41,6 +65,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9ea9852_776efea3",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4976231c_e1386274",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "65ece956_3c968fd8",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-06-04T00:59:19Z",
       "side": 1,
       "message": "C++ style naming.",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 60
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "589dd51a_b2e99095",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "65ece956_3c968fd8",
       "range": {
         "startLine": 31,
         "startChar": 55,
@@ -87,6 +153,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e5ec15f_7afc632f",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "977d0c48_0034635d",
+      "range": {
+        "startLine": 103,
+        "startChar": 56,
+        "endLine": 103,
+        "endChar": 61
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0445717a_ca1e3452",
@@ -104,6 +194,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "51322072_1899d275",
+        "filename": "core/fxcrt/span_io_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0445717a_ca1e3452",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d485bf35_5c860559",
@@ -117,6 +225,30 @@
       "writtenOn": "2026-06-04T00:59:19Z",
       "side": 1,
       "message": "hHey!",
+      "range": {
+        "startLine": 151,
+        "startChar": 9,
+        "endLine": 151,
+        "endChar": 14
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "def4d44e_fec58b46",
+        "filename": "core/fxcrt/span_io_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d485bf35_5c860559",
       "range": {
         "startLine": 151,
         "startChar": 9,
@@ -150,6 +282,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fe494d6_3f066fa9",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "392adc4d_f91d9451",
+      "range": {
+        "startLine": 217,
+        "startChar": 2,
+        "endLine": 217,
+        "endChar": 6
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "598c3911_9da2c30f",
@@ -163,6 +319,24 @@
       "writtenOn": "2026-06-04T00:59:19Z",
       "side": 1,
       "message": "Create closer to where used?",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "692baa49_80ddeba6",
+        "filename": "testing/helpers/write.cc",
+        "patchSetId": 17
+      },
+      "lineNbr": 511,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Nah, create after we just validated out_len.",
+      "parentUuid": "598c3911_9da2c30f",
       "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -184,6 +358,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c42997f_1a730eba",
+        "filename": "testing/helpers/write.cc",
+        "patchSetId": 17
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "I think the test directory is exempted by the config file.  added anyway.",
+      "parentUuid": "d2369375_060eafb3",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9e32fb96_759c77fa",
@@ -197,6 +389,30 @@
       "writtenOn": "2026-06-04T00:33:53Z",
       "side": 1,
       "message": "Explicit span construction not needed?",
+      "range": {
+        "startLine": 95,
+        "startChar": 39,
+        "endLine": 95,
+        "endChar": 55
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c0460e7_14d6e0cc",
+        "filename": "testing/image_diff/image_diff.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-04T19:38:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e32fb96_759c77fa",
       "range": {
         "startLine": 95,
         "startChar": 39,
