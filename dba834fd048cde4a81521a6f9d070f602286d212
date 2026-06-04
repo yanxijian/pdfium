@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5472a64_ffd9d07d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T22:54:43Z",
+      "side": 1,
+      "message": "\"unsafe usage\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 39,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b935bb4_83898a89",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T22:54:43Z",
+      "side": 1,
+      "message": "go/avoid-we",
+      "range": {
+        "startLine": 10,
+        "startChar": 10,
+        "endLine": 10,
+        "endChar": 12
+      },
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80b22e55_4df1b62a",
+        "filename": "testing/fuzzers/pdf_cfgas_stringformatter_fuzzer.cc",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T22:54:43Z",
+      "side": 1,
+      "message": "Should these fuzzers switch to DEFINE_LLVM_FUZZER_TEST_ONE_INPUT_SPAN() instead?",
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
