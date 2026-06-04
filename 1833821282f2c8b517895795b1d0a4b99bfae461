@@ -35,6 +35,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "6412f7f4_2f91fe08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-04T18:07:55Z",
+      "side": 1,
+      "message": "I assume you meant replace EmAdjust with NormalizeFontMetric. Done, also repurposed the \u003ccmath\u003e include for `std::roundll()` as a way to combine the + 0.5 and static_cast\u003c\u003e steps.",
+      "parentUuid": "11a30c4b_9db2998b",
+      "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "d00190dd_f80114a9",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-06-04T17:56:05Z",
       "side": 1,
       "message": "Unrelated to this CL, but maybe for std::abs()?",
+      "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1d845b3_8e6419cd",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-04T18:07:55Z",
+      "side": 1,
+      "message": "Not sure what you meant but the import was just me experimenting with `std::roundll()`, which I now added in the latest patchset.",
+      "parentUuid": "d00190dd_f80114a9",
       "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
