@@ -83,8 +83,9 @@ bool XFAJSEmbedderTest::Execute(ByteStringView input) {
     return true;
   }
 
-  fprintf(stderr, "FormCalc: %.*s\n", static_cast<int>(input.GetLength()),
-          input.unterminated_c_str());
+  UNSAFE_TODO(fprintf(stderr, "FormCalc: %.*s\n",
+                      static_cast<int>(input.GetLength()),
+                      input.unterminated_c_str()));
 
   v8::Local<v8::Value> result = GetValue();
   if (!fxv8::IsArray(result)) {
@@ -99,7 +100,7 @@ bool XFAJSEmbedderTest::Execute(ByteStringView input) {
 
   WideString str = fxv8::ReentrantToWideStringHelper(isolate(), msg);
   if (!str.IsEmpty()) {
-    fprintf(stderr, "JS ERROR: %ls\n", str.c_str());
+    UNSAFE_TODO(fprintf(stderr, "JS ERROR: %ls\n", str.c_str()));
   }
   return false;
 }

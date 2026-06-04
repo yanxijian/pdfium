@@ -8,8 +8,10 @@
 #include "core/fxcrt/span.h"
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size) {
+  // SAFETY: required from fuzzer API.
   std::unique_ptr<fxcodec::IccTransform> transform =
-      fxcodec::IccTransform::CreateTransformSRGB(pdfium::span(data, size));
+      fxcodec::IccTransform::CreateTransformSRGB(
+          UNSAFE_BUFFERS(pdfium::span(data, size)));
   if (!transform) {
     return 0;
   }
