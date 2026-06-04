@@ -11,6 +11,7 @@
 
 #include "core/fxcrt/numerics/safe_conversions.h"
 #include "core/fxcrt/span.h"
+#include "core/fxcrt/span_io.h"
 #include "core/fxcrt/stl_util.h"
 #include "testing/utils/path_service.h"
 
@@ -36,7 +37,8 @@ std::vector<uint8_t> GetFileContents(const char* filename) {
   }
   (void)fseek(file, 0, SEEK_SET);
   std::vector<uint8_t> buffer(file_length);
-  size_t bytes_read = fread(buffer.data(), 1, file_length, file);
+  pdfium::span<uint8_t> items_read = fxcrt::spanread(buffer, file);
+  size_t bytes_read = items_read.size();
   (void)fclose(file);
   if (bytes_read != file_length) {
     fprintf(stderr, "Failed to read: %s\n", filename);

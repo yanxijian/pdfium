@@ -81,6 +81,19 @@ source_set("test_support") {
   }
 }
 
+source_set("gtest_utils") {
+  testonly = true
+  sources = [
+    "utils/scoped_temp_file.cpp",
+    "utils/scoped_temp_file.h",
+  ]
+  deps = [ "//testing/gtest" ]
+  configs += [
+    "../:pdfium_strict_config",
+    "../:pdfium_noshorten_config",
+  ]
+}
+
 if (build_with_chromium && pdf_use_skia) {
   source_set("discardable_memory_allocator") {
     testonly = true
@@ -166,6 +179,7 @@ source_set("unit_test_support") {
     "../:pdfium_noshorten_config",
   ]
   public_deps = [
+    ":gtest_utils",
     ":test_environments",
     ":test_support",
   ]
@@ -222,6 +236,7 @@ source_set("embedder_test_support") {
     "//third_party/simdutf",
   ]
   public_deps = [
+    ":gtest_utils",
     ":test_environments",
     ":test_support",
     "../core/fxcrt",
