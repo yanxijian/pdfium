@@ -62,6 +62,24 @@
       "message": "Should these fuzzers switch to DEFINE_LLVM_FUZZER_TEST_ONE_INPUT_SPAN() instead?",
       "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc638206_a63e8330",
+        "filename": "testing/fuzzers/pdf_cfgas_stringformatter_fuzzer.cc",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T22:58:26Z",
+      "side": 1,
+      "message": "I guess PDFium doesn\u0027t have libfuzzer. Will keep reviewing...",
+      "parentUuid": "80b22e55_4df1b62a",
+      "revId": "dba834fd048cde4a81521a6f9d070f602286d212",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
