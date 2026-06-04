@@ -51,6 +51,24 @@
       "message": "Actually needs to be near line 767 in the other list below. List the file as bug_477200528.in. My earlier comment was bad advice.",
       "revId": "f6b816f5f0b1b8f2b524fb053964ad5b78188788",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc2c69c2_ce182fad",
+        "filename": "testing/SUPPRESSIONS",
+        "patchSetId": 8
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T14:52:13Z",
+      "side": 1,
+      "message": "I uploaded the fix for testing/SUPPRESSIONS. It now lists bug_477200528.in in\nthe GDI suppression list as suggested. Could you please take another look when\nyou have a chance?",
+      "parentUuid": "fb45d9a5_76b7bda7",
+      "revId": "f6b816f5f0b1b8f2b524fb053964ad5b78188788",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
