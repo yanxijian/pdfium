@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e68ab2b_5d0d53c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-04T16:15:29Z",
+      "side": 1,
+      "message": "Hey guys! Working on continuing removing the defines. Have kept the CFX_Face::EmAdjust() function public for now so that other files that I have found can also use this function. Thanks!",
+      "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
