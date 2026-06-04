@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ab3924b_bd8ee328",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "Please wrap at 72 columns.",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93ff1dec_65fdf24a",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "Just return this, instead of using an out-parameter.",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "291ac642_e42efaae",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "It wasn\u0027t obvious if this is removing the widgets from a dictionary, or from the set. Since this is a set operation, how about \"RemoveSharedWidgetsFromSet\"?",
+      "range": {
+        "startLine": 345,
+        "startChar": 5,
+        "endLine": 345,
+        "endChar": 11
+      },
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b073fc67_d3e12730",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "Use std::set_difference() instead?",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20a925a4_27f31af3",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "Intuitive, this name sounds like it is trying to answer a question, so it should be logically const. But it is not. Is there a way to do the decision making, and then prune?",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "575d7ae4_d13ad49d",
+        "filename": "testing/resources/bug_498010830_shared_annots.in",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T02:42:56Z",
+      "side": 1,
+      "message": "Please use testing/resources/344775293.in as an example and format the .in file in the same manner. Then regenerate the .pdf.",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
