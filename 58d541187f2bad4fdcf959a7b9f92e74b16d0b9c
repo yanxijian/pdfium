@@ -26,6 +26,109 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4976231c_e1386274",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "Newline after.",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65ece956_3c968fd8",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "C++ style naming.",
+      "range": {
+        "startLine": 31,
+        "startChar": 55,
+        "endLine": 31,
+        "endChar": 60
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "977d0c48_0034635d",
+        "filename": "core/fxcrt/span_io.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "More hHandles.",
+      "range": {
+        "startLine": 103,
+        "startChar": 56,
+        "endLine": 103,
+        "endChar": 61
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0445717a_ca1e3452",
+        "filename": "core/fxcrt/span_io_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "Add scopers to wrap all the different types of temp file creation + cleanup.",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d485bf35_5c860559",
+        "filename": "core/fxcrt/span_io_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "hHey!",
+      "range": {
+        "startLine": 151,
+        "startChar": 9,
+        "endLine": 151,
+        "endChar": 14
+      },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "392adc4d_f91d9451",
         "filename": "core/fxge/cfx_folderfontinfo.cpp",
         "patchSetId": 17
@@ -43,6 +146,40 @@
         "endLine": 217,
         "endChar": 6
       },
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "598c3911_9da2c30f",
+        "filename": "testing/helpers/write.cc",
+        "patchSetId": 17
+      },
+      "lineNbr": 511,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "Create closer to where used?",
+      "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2369375_060eafb3",
+        "filename": "testing/helpers/write.cc",
+        "patchSetId": 17
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T00:59:19Z",
+      "side": 1,
+      "message": "This didn\u0027t need UNSAFE_TODO()?",
       "revId": "58d541187f2bad4fdcf959a7b9f92e74b16d0b9c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
