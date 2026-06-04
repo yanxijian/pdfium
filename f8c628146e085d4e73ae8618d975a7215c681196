@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5ea899d_6507968f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:34:37Z",
+      "side": 1,
+      "message": "\"make the feature off by default\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 31
+      },
+      "revId": "f8c628146e085d4e73ae8618d975a7215c681196",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fe4a532_e7f464aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:34:37Z",
+      "side": 1,
+      "message": "Let\u0027s work on this CL and land it first. I can help with the Chromium side changes.",
+      "revId": "f8c628146e085d4e73ae8618d975a7215c681196",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48659d1d_d623b372",
+        "filename": "build_overrides/pdfium.gni",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:34:37Z",
+      "side": 1,
+      "message": "Capitalize to be consistent with the next line.",
+      "range": {
+        "startLine": 12,
+        "startChar": 33,
+        "endLine": 12,
+        "endChar": 39
+      },
+      "revId": "f8c628146e085d4e73ae8618d975a7215c681196",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f117468_30d4bfc0",
+        "filename": "pdfium.gni",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:34:37Z",
+      "side": 1,
+      "message": "Consider just unchain this CL from its parent CL, and add this line directly in this CL.",
+      "revId": "f8c628146e085d4e73ae8618d975a7215c681196",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
