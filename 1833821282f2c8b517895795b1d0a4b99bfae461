@@ -73,6 +73,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "52472e07_33db62d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-04T18:18:33Z",
+      "side": 1,
+      "message": "Replacing it with NormalizeFontMetric is causing a couple tests to fail. Undoing this.",
+      "parentUuid": "e00bf8ae_8286d500",
+      "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "d00190dd_f80114a9",
         "filename": "core/fxge/cfx_face.cpp",
         "patchSetId": 2
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Not sure what you meant but the import was just me experimenting with `std::roundll()`, which I now added in the latest patchset.",
       "parentUuid": "d00190dd_f80114a9",
+      "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa48182c_0e40ddf7",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-04T18:18:33Z",
+      "side": 1,
+      "message": "Nevermind, removed.",
+      "parentUuid": "f1d845b3_8e6419cd",
       "revId": "1833821282f2c8b517895795b1d0a4b99bfae461",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
