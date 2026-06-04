@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <array>
+#include <cmath>
 #include <limits>
 #include <memory>
 #include <utility>
@@ -53,8 +54,6 @@
 #include "core/fxge/skrifa/src/main.rs.h"
 #include "third_party/rust/cxx/v1/cxx.h"
 #endif
-
-#define EM_ADJUST(em, a) (em == 0 ? (a) : (a) * 1000 / em)
 
 namespace {
 
@@ -948,7 +947,7 @@ int CFX_Face::GetGlyphTTWidth() const {
     font.getWidths(pdfium::span_from_ref(skia_glyph_index),
                    pdfium::span_from_ref(width));
     const int sk_result =
-        NormalizeFontMetric(static_cast<int64_t>(width + 0.5), GetUnitsPerEm());
+        NormalizeFontMetric(std::roundll(width), GetUnitsPerEm());
     CHECK_EQ(ft_result, sk_result);
   }
 #endif
@@ -976,8 +975,8 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
     return 0;
   }
 
-  const int ft_result =
-      static_cast<int>(EM_ADJUST(GetUnitsPerEm(), horizontal_advance));
+  const int ft_result = NormalizeFontMetric(
+      static_cast<int64_t>(horizontal_advance), GetUnitsPerEm());
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
@@ -986,8 +985,8 @@ int CFX_Face::GetGlyphWidth(uint32_t glyph_index,
     SkScalar width;
     font.getWidths(pdfium::span_from_ref(skia_glyph_index),
                    pdfium::span_from_ref(width));
-    const int sk_result = static_cast<int>(
-        EM_ADJUST(GetUnitsPerEm(), static_cast<int>(width + 0.5)));
+    const int sk_result =
+        NormalizeFontMetric(std::roundll(width), GetUnitsPerEm());
     CHECK_EQ(ft_result, sk_result);
   }
 #endif
