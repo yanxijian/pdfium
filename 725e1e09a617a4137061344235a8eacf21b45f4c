@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea57c228_a22ebdee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ab3924b_bd8ee328",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "93ff1dec_65fdf24a",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-04T02:42:56Z",
       "side": 1,
       "message": "Just return this, instead of using an out-parameter.",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95f43468_b6678696",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93ff1dec_65fdf24a",
       "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +94,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fde83352_71592737",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done. Renamed it to RemoveSharedWidgetsFromSet().",
+      "parentUuid": "291ac642_e42efaae",
+      "range": {
+        "startLine": 345,
+        "startChar": 5,
+        "endLine": 345,
+        "endChar": 11
+      },
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b073fc67_d3e12730",
@@ -71,6 +131,24 @@
       "writtenOn": "2026-06-04T02:42:56Z",
       "side": 1,
       "message": "Use std::set_difference() instead?",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dca80b14_55ca78e9",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b073fc67_d3e12730",
       "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -92,6 +170,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3dfee29d_4efbbb57",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done. I split the decision from the pruning side effect. The old\nShouldPruneField() helper is gone now. PruneFieldArray() first decides whether\nthe current field should be removed, and only then removes it from the array.",
+      "parentUuid": "20a925a4_27f31af3",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "575d7ae4_d13ad49d",
@@ -105,6 +201,24 @@
       "writtenOn": "2026-06-04T02:42:56Z",
       "side": 1,
       "message": "Please use testing/resources/344775293.in as an example and format the .in file in the same manner. Then regenerate the .pdf.",
+      "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f34db00f_446696bb",
+        "filename": "testing/resources/bug_498010830_shared_annots.in",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-04T15:57:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "575d7ae4_d13ad49d",
       "revId": "725e1e09a617a4137061344235a8eacf21b45f4c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
