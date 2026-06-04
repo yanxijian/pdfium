@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75fb984c_f243a867",
+        "filename": "testing/resources/hello_world_brotli.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "Missing a newline.",
+      "range": {
+        "startLine": 2,
+        "startChar": 15,
+        "endLine": 2,
+        "endChar": 23
+      },
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfc2bc91_b6bbcdb3",
+        "filename": "testing/resources/hello_world_brotli.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "Indent this and next line.",
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16b441d4_7ad156ae",
+        "filename": "testing/resources/hello_world_brotli_with_length1.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "Missing a newline.",
+      "range": {
+        "startLine": 2,
+        "startChar": 15,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "149a1ee2_40c5e987",
+        "filename": "testing/resources/hello_world_brotli_with_length1.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "Indent.",
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c52adcd_3ae8401c",
+        "filename": "testing/resources/many_rectangles_brotli.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "No space immediately inside the brackets. Same for line 11.",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aaa26b24_9a53afe7",
+        "filename": "testing/resources/many_rectangles_brotli.in",
+        "patchSetId": 42
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-04T20:40:37Z",
+      "side": 1,
+      "message": "Wrap at 80 columns.",
+      "revId": "9831de5d9a98f8ef549de87d487b70a82ac77705",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
