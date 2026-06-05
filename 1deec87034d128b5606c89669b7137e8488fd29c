@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc010149_2aff7cc7",
+        "filename": "build_overrides/crubit.gni",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T00:54:35Z",
+      "side": 1,
+      "message": "PDFium",
+      "range": {
+        "startLine": 1,
+        "startChar": 21,
+        "endLine": 1,
+        "endChar": 29
+      },
+      "revId": "1deec87034d128b5606c89669b7137e8488fd29c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82685bf5_762a66c0",
+        "filename": "build_overrides/crubit.gni",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T00:54:35Z",
+      "side": 1,
+      "message": "Is this how `gn format` likes it?",
+      "revId": "1deec87034d128b5606c89669b7137e8488fd29c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
