@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "760543c8_883b94d9",
+        "filename": "testing/utils/file_util.h",
+        "patchSetId": 27
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T23:23:11Z",
+      "side": 1,
+      "message": "Now release() and reset() have no callers.",
+      "revId": "dafce6dfe93bf61a891d1c07d0c6117788526cb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
