@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9809978_55deb8b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "Got red trybots.",
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32e02fca_c36b2dc8",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "Not used. Generally one should Include What You Use (IWYU) but also don\u0027t include what you don\u0027t use.",
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ac02082_4654e9c8",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "Why is this float when GetCharWidth() returns int?",
+      "range": {
+        "startLine": 17,
+        "startChar": 55,
+        "endLine": 17,
+        "endChar": 60
+      },
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3971bf1e_aa359db4",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "Please write FunctionName as FunctionName() to avoid confusion with ClassName.",
+      "range": {
+        "startLine": 18,
+        "startChar": 14,
+        "endLine": 18,
+        "endChar": 30
+      },
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d139ad4b_cc0afa8d",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "The convension is to add a comment above a group of overrides to indicate what class the methods are overriding. This helps with cases where classes inherit from multiple parent classes, but PDFium (and Chromium) generally do it always, even when there is only 1 parent See CPWL_EditImpl::Provider in fpdfsdk/pwl/cpwl_edit_impl.cpp for example.",
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "498884bf_e3afecca",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "Before getting into RTL, how about adding a LTR test case first to establish a baseline?",
+      "range": {
+        "startLine": 37,
+        "startChar": 28,
+        "endLine": 37,
+        "endChar": 41
+      },
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "817cef55_d5e0e3b1",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:07:16Z",
+      "side": 1,
+      "message": "When one adds more test cases, will they need this as well? Consider using a test fixture with SetUp() and TearDown().",
+      "revId": "82848ad84749e62e92ab8948034cb89225487a5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
