@@ -16,6 +16,24 @@
       "message": "I think these can be private.",
       "revId": "c49f2c5c0b5fcd0858ec4c6ed630a8a7796d9393",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b33d62df_2f254c05",
+        "filename": "core/fxcrt/fx_random.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-05T23:38:00Z",
+      "side": 1,
+      "message": "Almost, but would have to move a function from anon namespace to be a method. Follow-up.",
+      "parentUuid": "2cc442e7_ab01a3aa",
+      "revId": "c49f2c5c0b5fcd0858ec4c6ed630a8a7796d9393",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
