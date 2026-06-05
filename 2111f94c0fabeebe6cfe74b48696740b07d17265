@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ac5bffe2_299b72d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T21:46:02Z",
+      "side": 1,
+      "message": "It\u0027s not just about typos and such. It\u0027s about mapping \"CommonWord\" to a particular entry that has \"CommonWord\" in the spec. One can also use xrefs to more easily see what other parts of the codebase deals with the same dictionary entry.",
+      "parentUuid": "b84f35b3_412a8967",
+      "revId": "2111f94c0fabeebe6cfe74b48696740b07d17265",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "00b3e4b8_fad438cf",
         "filename": "core/fpdfapi/edit/cpdf_pageorganizer.cpp",
         "patchSetId": 1
