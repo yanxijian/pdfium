@@ -16,6 +16,23 @@
       "message": "Hey guys created the PDFium bot changes by adding 3 new builders:\n\nlinux_skia_brotli\nmac_skia_brotli\nand\nwindows_skia_brotli\n\nThese bots are specifically for testing brotli-related changes.\n\nCorresponding chromium CL: https://chromium-review.googlesource.com/c/chromium/tools/build/+/7588614\n\nThanks!",
       "revId": "b76122463a38479941bff416f42a5c5c3175f708",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6bab3cbd_c2ecf35b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-05T17:22:17Z",
+      "side": 1,
+      "message": "Need to wait for crrev.com/c/7588614 to land, but looks good otherwise.",
+      "revId": "b76122463a38479941bff416f42a5c5c3175f708",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
