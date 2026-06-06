@@ -17,3 +17,11 @@ TEST_F(FPDFRenderPatternEmbedderTest, LoadError547706) {
   ScopedFPDFBitmap bitmap = RenderLoadedPage(page.get());
   CompareBitmap(bitmap.get(), pdfium::kBlankPage612By792Png);
 }
+
+TEST_F(FPDFRenderPatternEmbedderTest, ZeroTilingPatternStep509964646) {
+  ASSERT_TRUE(OpenDocument("bug_509964646.pdf"));
+  ScopedPage page = LoadScopedPage(0);
+  ASSERT_TRUE(page);
+  ScopedFPDFBitmap bitmap = RenderLoadedPage(page.get());
+  ASSERT_TRUE(bitmap);
+}
