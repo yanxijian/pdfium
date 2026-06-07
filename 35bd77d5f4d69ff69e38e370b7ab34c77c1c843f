@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7f8dd8d_631f033b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8751
+      },
+      "writtenOn": "2026-06-07T17:00:53Z",
+      "side": 1,
+      "message": "With simdutf behind checkout_v8 conditional, we get the following build error when using checkout_configuration\u003dminimal (non-v8 build):\n```\n[\u0027/home/me/projects/pypdfium2/sbuild/toolchained/depot_tools/gn\u0027, \u0027gen\u0027, \u0027/home/me/projects/pypdfium2/sbuild/toolchained/pdfium/out/Default\u0027] (cwd\u003dPosixPath(\u0027/home/me/projects/pypdfium2/sbuild/toolchained/pdfium\u0027))\nERROR at //testing/BUILD.gn:222:5: Unable to load \"/home/me/projects/pypdfium2/sbuild/toolchained/pdfium/third_party/simdutf/BUILD.gn\".\n    \"//third_party/simdutf\",\n    ^----------------------\n```",
+      "revId": "35bd77d5f4d69ff69e38e370b7ab34c77c1c843f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
