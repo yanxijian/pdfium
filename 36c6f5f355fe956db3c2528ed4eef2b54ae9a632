@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e18712aa_7eb90e97",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-07T21:12:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a23e27e_be3b8153",
+      "revId": "36c6f5f355fe956db3c2528ed4eef2b54ae9a632",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9e50627a_fc83ba71",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-05-31T17:56:24Z",
       "side": 1,
       "message": "public:\n    uint32_t styles_ \u003d FWL_STYLE_WGT_Child;  // Mask of FWL_STYLE_*_*.\n    uint32_t style_exts_ \u003d 0;                // Mask of FWL_STYLEEXT_*_*.\n    Mask\u003cWidgetState\u003e states_;\n\nShouldn\u0027t the first argument also be 0?\nAlthough I do remember another CL did change the type of styles_.",
+      "range": {
+        "startLine": 29,
+        "startChar": 18,
+        "endLine": 29,
+        "endChar": 71
+      },
+      "revId": "36c6f5f355fe956db3c2528ed4eef2b54ae9a632",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7c35d68_2aa116fa",
+        "filename": "xfa/fwl/cfwl_datetimepicker.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-07T21:12:48Z",
+      "side": 1,
+      "message": "awesome! styles_ is still uint32_t here, so only the third field (now Mask\u003cWidgetState\u003e) needed {}. Reverted the first arg back to 0, and fixed the same unnecessary change in cfwl_edit.cpp.",
+      "parentUuid": "9e50627a_fc83ba71",
       "range": {
         "startLine": 29,
         "startChar": 18,
