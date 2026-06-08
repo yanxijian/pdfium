@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2eccd22b_a4749cd5",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:07:54Z",
+      "side": 0,
+      "message": "Was this wrong the whole time? Maybe we should go over this change separately in its own CL.",
+      "revId": "7be64fd48d7ffa7132bb498df67257ee892257a5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

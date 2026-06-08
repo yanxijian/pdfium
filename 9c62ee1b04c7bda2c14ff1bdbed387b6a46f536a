@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "625ef83e_f6358e6a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:07:54Z",
+      "side": 1,
+      "message": "Do this separately?",
+      "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "d89e0d50_1ddcd98f",
@@ -14,6 +31,23 @@
       "writtenOn": "2026-06-08T17:44:40Z",
       "side": 1,
       "message": "crap.  tests.  looking.",
+      "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae3465c0_414f858f",
+        "filename": "core/fxge/cfx_folderfontinfo.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:07:54Z",
+      "side": 1,
+      "message": "No longer used.",
       "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
