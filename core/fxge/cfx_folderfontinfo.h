@@ -44,7 +44,7 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
 
   class FontFaceInfo {
    public:
-    enum class CharsetFlag : uint8_t {
+    enum class CharsetFlag : uint16_t {
       kNone = 0,
       kAnsi = 1 << 0,
       kSymbol = 1 << 1,
@@ -52,6 +52,14 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
       kBig5 = 1 << 3,
       kGb = 1 << 4,
       kKorean = 1 << 5,
+      kCyrillic = 1 << 6,
+      kGreek = 1 << 7,
+      kTurkish = 1 << 8,
+      kHebrew = 1 << 9,
+      kArabic = 1 << 10,
+      kBaltic = 1 << 11,
+      kThai = 1 << 12,
+      kEasternEuropean = 1 << 13,
     };
 
     static CharsetFlag GetCharset(FX_Charset charset);
