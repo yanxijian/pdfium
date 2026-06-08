@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57d20b3f_09007bf6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:41:11Z",
+      "side": 1,
+      "message": "Shorten to \"with an enum class\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 79
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1552081_0c76f575",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:41:11Z",
+      "side": 1,
+      "message": "Keep the CL description up to date.",
+      "range": {
+        "startLine": 9,
+        "startChar": 137,
+        "endLine": 9,
+        "endChar": 141
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3dd7c52c_7ed17cac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:41:11Z",
+      "side": 1,
+      "message": "Wrap",
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d80a4708_b6f43c50",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:41:11Z",
+      "side": 1,
+      "message": "Use HighlightStyle as much as possible and only call fxcrt::to_underlying() when needed.",
+      "range": {
+        "startLine": 86,
+        "startChar": 2,
+        "endLine": 86,
+        "endChar": 10
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b621e876_2f775007",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:41:11Z",
+      "side": 1,
+      "message": "Include stdint.h since PDFium is not using std::uint32_t.",
+      "range": {
+        "startLine": 10,
+        "startChar": 10,
+        "endLine": 10,
+        "endChar": 17
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
