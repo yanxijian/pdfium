@@ -50,6 +50,63 @@
       "message": "No longer used.",
       "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5122819_7fa57d3a",
+        "filename": "core/fxge/cfx_folderfontinfo_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:12:08Z",
+      "side": 1,
+      "message": "Avoid adding a second public section.",
+      "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91f7e044_fe6fc759",
+        "filename": "core/fxge/cfx_folderfontinfo_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:12:08Z",
+      "side": 1,
+      "message": "Call reserve() since the size is known in advance.",
+      "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9903638f_e7e8f0d3",
+        "filename": "core/fxge/cfx_folderfontinfo_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T18:12:08Z",
+      "side": 1,
+      "message": "No hUngarian notation in new code.",
+      "range": {
+        "startLine": 211,
+        "startChar": 8,
+        "endLine": 211,
+        "endChar": 13
+      },
+      "revId": "9c62ee1b04c7bda2c14ff1bdbed387b6a46f536a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
