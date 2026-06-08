@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df53f888_ac1ac552",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7c43c12b_5f0fd126",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "230fc577_dd16acca",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-05T20:33:48Z",
       "side": 1,
       "message": "Please remember to keep the CL description updated to match the actual code.",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c386c43_627360bb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "230fc577_dd16acca",
       "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -75,6 +111,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "07f8743a_596ab729",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "465d86f4_b4da8060",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ad1edafa_80feb091",
@@ -88,6 +142,30 @@
       "writtenOn": "2026-06-05T20:33:48Z",
       "side": 1,
       "message": "From the class description comment, I understand why GetCharWidth() returns 10, but what about these other values? Maybe the class comment can give a more general overview of what class is trying to do. No need to list every single class method and what they do.",
+      "range": {
+        "startLine": 26,
+        "startChar": 55,
+        "endLine": 26,
+        "endChar": 65
+      },
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68e97c47_aefe5998",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad1edafa_80feb091",
       "range": {
         "startLine": 26,
         "startChar": 55,
@@ -115,6 +193,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3086eeb8_9bbc0fc3",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a15ebe52_e7b419fe",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7466dc52_d46d9caa",
@@ -128,6 +224,30 @@
       "writtenOn": "2026-06-05T20:33:48Z",
       "side": 1,
       "message": "If you ask 10 random developers, I imagine all of them will be able to tell this maps to some kind of iterator, but nobody can answer exactly what class that is. Per https://google.github.io/styleguide/cppguide.html#Type_deduction, it would be better to write this out for clarity. It is a bit longer, but still fits on this 1 line.",
+      "range": {
+        "startLine": 74,
+        "startChar": 2,
+        "endLine": 74,
+        "endChar": 6
+      },
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a8ff6a8_05f4e918",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7466dc52_d46d9caa",
       "range": {
         "startLine": 74,
         "startChar": 2,
@@ -155,6 +275,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e57a41ea_32e65919",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "The test fails if L75 is commented out. When iterator is initialized the default position is (-1, -1, -1), so GetWord() returns false.",
+      "parentUuid": "d3d2b7e5_322a01d8",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "87d7fd72_b09a4495",
@@ -168,6 +306,24 @@
       "writtenOn": "2026-06-05T20:33:48Z",
       "side": 1,
       "message": "Check the NextWord() return value.",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c40a716_89e6110d",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87d7fd72_b09a4495",
       "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -189,6 +345,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe32605d_d147f7c4",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f87941d_0a5bc0ee",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8ecaaefc_e8147322",
@@ -206,6 +380,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "98a0399f_f8ef1cae",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ecaaefc_e8147322",
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62e4e185_fc93ad55",
@@ -219,6 +411,30 @@
       "writtenOn": "2026-06-05T20:33:48Z",
       "side": 1,
       "message": "No need to write commented out code. A good comment is oftentimes sufficient to help readers understand what this should be.",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 34
+      },
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08d4d153_80e5a1d2",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-08T23:27:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62e4e185_fc93ad55",
       "range": {
         "startLine": 141,
         "startChar": 0,
