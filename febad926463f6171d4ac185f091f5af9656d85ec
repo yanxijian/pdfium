@@ -96,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "89bc06b1_63a82636",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T23:51:19Z",
+      "side": 1,
+      "message": "Patch set 9 has \"A test double that ...\", but what kind of test double is it?",
+      "parentUuid": "9350689c_32c2169c",
+      "range": {
+        "startLine": 15,
+        "startChar": 3,
+        "endLine": 15,
+        "endChar": 10
+      },
+      "revId": "febad926463f6171d4ac185f091f5af9656d85ec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "465d86f4_b4da8060",
         "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
         "patchSetId": 7
