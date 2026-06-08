@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca5d8a7f_9f0c2d9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-08T16:34:49Z",
+      "side": 1,
+      "message": "Thanks. I forgot to do this in https://pdfium-review.googlesource.com/c/141274",
+      "revId": "039de46d4d7782cc26bc1d16b5110cd4cd0d8241",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
