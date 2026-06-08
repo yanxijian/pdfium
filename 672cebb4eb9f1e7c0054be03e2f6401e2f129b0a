@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c036a59_c66850d8",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 6295
+      },
+      "writtenOn": "2026-06-08T18:27:54Z",
+      "side": 1,
+      "message": "If all the usages are outside pdfium namespace, shouldn\u0027t the variable itself be declared outside as well? Or is the plan to move a bunch of these to the pdfium namespace?",
+      "range": {
+        "startLine": 187,
+        "startChar": 14,
+        "endLine": 187,
+        "endChar": 20
+      },
+      "revId": "672cebb4eb9f1e7c0054be03e2f6401e2f129b0a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
