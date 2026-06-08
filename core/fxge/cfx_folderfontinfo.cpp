@@ -57,63 +57,7 @@ struct FxFileCloser {
   }
 };
 
-bool FindFamilyNameMatch(ByteStringView family_name,
-                         const ByteString& installed_font_name) {
-  std::optional<size_t> result = installed_font_name.Find(family_name, 0);
-  if (!result.has_value()) {
-    return false;
-  }
 
-  size_t next_index = result.value() + family_name.GetLength();
-  // Rule out the case that |family_name| is a substring of
-  // |installed_font_name| but their family names are actually different words.
-  // For example: "Univers" and "Universal" are not a match because they have
-  // different family names, but "Univers" and "Univers Bold" are a match.
-  if (installed_font_name.IsValidIndex(next_index) &&
-      FXSYS_IsLowerASCII(installed_font_name[next_index])) {
-    return false;
-  }
-
-  return true;
-}
-
-ByteString ReadStringFromFile(FILE* pFile, uint32_t size) {
-  ByteString result;
-  {
-    // Span's lifetime must end before ReleaseBuffer() below.
-    pdfium::span<char> buffer = result.GetBuffer(size);
-
-    if (fxcrt::spanread(buffer.first(size), pFile).size() != size) {
-      return ByteString();
-    }
-  }
-  result.ReleaseBuffer(size);
-  return result;
-}
-
-ByteString LoadTableFromTT(FILE* pFile,
-                           const uint8_t* pTables,
-                           uint32_t nTables,
-                           uint32_t tag,
-                           FX_FILESIZE fileSize) {
-  UNSAFE_TODO({
-    for (uint32_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): use actual span.
-      auto p = pdfium::span(pTables + i * 16, 16u);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == tag) {
-        uint32_t offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        uint32_t size = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-        if (offset > std::numeric_limits<uint32_t>::max() - size ||
-            static_cast<FX_FILESIZE>(offset + size) > fileSize ||
-            fseek(pFile, offset, SEEK_SET) < 0) {
-          return ByteString();
-        }
-        return ReadStringFromFile(pFile, size);
-      }
-    }
-  });
-  return ByteString();
-}
 
 }  // namespace
 
@@ -257,6 +201,38 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
   if (os2.GetLength() >= 86) {
     pdfium::span<const uint8_t> p = os2.unsigned_span().subspan(78u);
     uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
+    if (codepages & (1U << 1)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_EasternEuropean);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kEasternEuropean;
+    }
+    if (codepages & (1U << 2)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Cyrillic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kCyrillic;
+    }
+    if (codepages & (1U << 3)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Greek);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kGreek;
+    }
+    if (codepages & (1U << 4)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Turkish);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kTurkish;
+    }
+    if (codepages & (1U << 5)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Hebrew);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kHebrew;
+    }
+    if (codepages & (1U << 6)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Arabic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kArabic;
+    }
+    if (codepages & (1U << 7)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Baltic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kBaltic;
+    }
+    if (codepages & (1U << 16)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kThai);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kThai;
+    }
     if (codepages & (1U << 17)) {
       mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kShiftJis;
@@ -278,6 +254,7 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
       pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kSymbol;
     }
   }
+  OnFaceReported(pInfo.get(), pFile, offset, filesize);
   mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kAnsi;
   pInfo->styles_ = 0;
@@ -319,6 +296,22 @@ CFX_FolderFontInfo::FontFaceInfo::GetCharset(FX_Charset charset) {
       return CharsetFlag::kSymbol;
     case FX_Charset::kANSI:
       return CharsetFlag::kAnsi;
+    case FX_Charset::kMSWin_Cyrillic:
+      return CharsetFlag::kCyrillic;
+    case FX_Charset::kMSWin_Greek:
+      return CharsetFlag::kGreek;
+    case FX_Charset::kMSWin_Turkish:
+      return CharsetFlag::kTurkish;
+    case FX_Charset::kMSWin_Hebrew:
+      return CharsetFlag::kHebrew;
+    case FX_Charset::kMSWin_Arabic:
+      return CharsetFlag::kArabic;
+    case FX_Charset::kMSWin_Baltic:
+      return CharsetFlag::kBaltic;
+    case FX_Charset::kThai:
+      return CharsetFlag::kThai;
+    case FX_Charset::kMSWin_EasternEuropean:
+      return CharsetFlag::kEasternEuropean;
     default:
       return CharsetFlag::kNone;
   }
@@ -343,10 +336,10 @@ void* CFX_FolderFontInfo::FindFont(int weight,
       if (font->IsEligibleForFindFont(charset_flag, charset)) {
         iBestSimilar =
             font->SimilarityScore(weight, bItalic, pitch_family, bMatchName);
+        pFind = font;
         if (iBestSimilar == FontFaceInfo::kSimilarityScoreMax) {
           return font;
         }
-        pFind = font;
       }
     }
   }
@@ -354,18 +347,15 @@ void* CFX_FolderFontInfo::FindFont(int weight,
   // avoid calling it unless there might be a better match.
   ByteStringView bsFamily = family.AsStringView();
   for (const auto& it : font_list_) {
-    const ByteString& bsName = it.first;
     FontFaceInfo* font = it.second.get();
     if (!font->IsEligibleForFindFont(charset_flag, charset)) {
       continue;
     }
     int32_t iSimilarValue = font->SimilarityScore(
         weight, bItalic, pitch_family,
-        bMatchName && bsFamily.GetLength() == bsName.GetLength());
-    if (iSimilarValue > iBestSimilar) {
-      if (bMatchName && !FindFamilyNameMatch(bsFamily, bsName)) {
-        continue;
-      }
+        bMatchName && bsFamily.GetLength() == font->face_name_.GetLength());
+    if (IsBetterMatch(font, iSimilarValue, pFind, iBestSimilar, charset, family,
+                      bMatchName)) {
       iBestSimilar = iSimilarValue;
       pFind = font;
     }
@@ -455,6 +445,66 @@ bool CFX_FolderFontInfo::GetFaceName(void* hFont, ByteString* name) {
 }
 
 bool CFX_FolderFontInfo::GetFontCharset(void* hFont, FX_Charset* charset) {
+  if (!hFont) {
+    return false;
+  }
+  auto* font = static_cast<FontFaceInfo*>(hFont);
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kSymbol) {
+    *charset = FX_Charset::kSymbol;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kShiftJis) {
+    *charset = FX_Charset::kShiftJIS;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kGb) {
+    *charset = FX_Charset::kChineseSimplified;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kBig5) {
+    *charset = FX_Charset::kChineseTraditional;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kKorean) {
+    *charset = FX_Charset::kHangul;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kCyrillic) {
+    *charset = FX_Charset::kMSWin_Cyrillic;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kGreek) {
+    *charset = FX_Charset::kMSWin_Greek;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kTurkish) {
+    *charset = FX_Charset::kMSWin_Turkish;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kHebrew) {
+    *charset = FX_Charset::kMSWin_Hebrew;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kArabic) {
+    *charset = FX_Charset::kMSWin_Arabic;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kBaltic) {
+    *charset = FX_Charset::kMSWin_Baltic;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kThai) {
+    *charset = FX_Charset::kThai;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kEasternEuropean) {
+    *charset = FX_Charset::kMSWin_EasternEuropean;
+    return true;
+  }
+  if (font->charsets_ & FontFaceInfo::CharsetFlag::kAnsi) {
+    *charset = FX_Charset::kANSI;
+    return true;
+  }
   return false;
 }
 
@@ -501,4 +551,84 @@ int32_t CFX_FolderFontInfo::FontFaceInfo::SimilarityScore(
   }
   DCHECK_LE(score, kSimilarityScoreMax);
   return score;
+}
+
+// static
+bool CFX_FolderFontInfo::FindFamilyNameMatch(
+    ByteStringView family_name,
+    const ByteString& installed_font_name) {
+  std::optional<size_t> result = installed_font_name.Find(family_name, 0);
+  if (!result.has_value()) {
+    return false;
+  }
+
+  size_t next_index = result.value() + family_name.GetLength();
+  if (installed_font_name.IsValidIndex(next_index) &&
+      FXSYS_IsLowerASCII(installed_font_name[next_index])) {
+    return false;
+  }
+
+  return true;
+}
+
+// static
+ByteString CFX_FolderFontInfo::ReadStringFromFile(FILE* pFile, uint32_t size) {
+  ByteString result;
+  {
+    // Span's lifetime must end before ReleaseBuffer() below.
+    pdfium::span<char> buffer = result.GetBuffer(size);
+
+    if (fxcrt::spanread(buffer.first(size), pFile).size() != size) {
+      return ByteString();
+    }
+  }
+  result.ReleaseBuffer(size);
+  return result;
+}
+
+// static
+ByteString CFX_FolderFontInfo::LoadTableFromTT(FILE* pFile,
+                                               const uint8_t* pTables,
+                                               uint32_t nTables,
+                                               uint32_t tag,
+                                               FX_FILESIZE fileSize) {
+  UNSAFE_TODO({
+    for (uint32_t i = 0; i < nTables; i++) {
+      // TODO(tsepez): use actual span.
+      auto p = pdfium::span(pTables + i * 16, 16u);
+      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == tag) {
+        uint32_t offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
+        uint32_t size = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
+        if (offset > std::numeric_limits<uint32_t>::max() - size ||
+            static_cast<FX_FILESIZE>(offset + size) > fileSize ||
+            fseek(pFile, offset, SEEK_SET) < 0) {
+          return ByteString();
+        }
+        return ReadStringFromFile(pFile, size);
+      }
+    }
+  });
+  return ByteString();
+}
+
+void CFX_FolderFontInfo::OnFaceReported(FontFaceInfo* pInfo,
+                                        FILE* pFile,
+                                        uint32_t offset,
+                                        FX_FILESIZE filesize) {}
+
+bool CFX_FolderFontInfo::IsBetterMatch(const FontFaceInfo* candidate,
+                                       int32_t candidate_score,
+                                       const FontFaceInfo* current_best,
+                                       int32_t current_best_score,
+                                       FX_Charset charset,
+                                       const ByteString& family,
+                                       bool bMatchName) const {
+  if (candidate_score <= current_best_score) {
+    return false;
+  }
+  if (bMatchName &&
+      !FindFamilyNameMatch(family.AsStringView(), candidate->face_name_)) {
+    return false;
+  }
+  return true;
 }
