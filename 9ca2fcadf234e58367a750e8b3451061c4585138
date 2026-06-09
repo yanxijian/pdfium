@@ -3,6 +3,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "95760d1a_5a36fffe",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-09T00:00:11Z",
+      "side": 1,
+      "message": "This file doesn\u0027t use gmock, so remove this include.",
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "042f7e17_67b7f1b3",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-09T00:00:11Z",
+      "side": 1,
+      "message": "Is using Helvetica the most important part? The test does not break is one swaps Helvetica for the Times font, but it would break if GetCharWidth() returns a different value. So how about highlighting the more important part?",
+      "range": {
+        "startLine": 19,
+        "startChar": 3,
+        "endLine": 19,
+        "endChar": 12
+      },
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88f092bd_ca4e9330",
         "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
         "patchSetId": 9
