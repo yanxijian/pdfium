@@ -252,3 +252,18 @@ TEST(fxcrt, FXSYSSafeOps) {
     }
   });
 }
+
+static_assert(FXSYS_IsLowerASCII('a'), "Should be lower");
+static_assert(!FXSYS_IsLowerASCII('A'), "Should not be lower");
+
+static_assert(FXSYS_IsUpperASCII('A'), "Should be upper");
+static_assert(!FXSYS_IsUpperASCII('a'), "Should not be upper");
+
+static_assert(FXSYS_ToUpperASCII('a') == 'A', "Should convert to upper");
+static_assert(FXSYS_ToUpperASCII('A') == 'A', "Should remain upper");
+
+static_assert(FXSYS_IsOctalDigit('7'), "Should be octal");
+static_assert(!FXSYS_IsOctalDigit('8'), "Should not be octal");
+
+static_assert(FXSYS_HexCharToInt('a') == 10, "Should convert hex");
+static_assert(FXSYS_WideHexCharToInt(L'a') == 10, "Should convert wide hex");
