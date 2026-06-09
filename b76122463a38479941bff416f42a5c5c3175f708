@@ -33,6 +33,24 @@
       "message": "Need to wait for crrev.com/c/7588614 to land, but looks good otherwise.",
       "revId": "b76122463a38479941bff416f42a5c5c3175f708",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c02dc7f3_f566241b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-09T01:47:30Z",
+      "side": 1,
+      "message": "Recipe CL landed, so can land too.",
+      "parentUuid": "6bab3cbd_c2ecf35b",
+      "revId": "b76122463a38479941bff416f42a5c5c3175f708",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
