@@ -32,50 +32,6 @@ constexpr char kDroidSerif[] = "Droid Serif";
 constexpr char kDroidSansMono[] = "Droid Sans Mono";
 constexpr char kDroidSansFallback[] = "Droid Sans Fallback";
 
-constexpr uint32_t ConstexprHashNormalizeFontName(const char* family) {
-  uint32_t hash_code = 0;
-  UNSAFE_BUFFERS({
-    for (size_t i = 0; family[i] != '\0'; ++i) {
-      char ch = family[i];
-      if (ch == ' ' || ch == '-' || ch == ',') {
-        continue;
-      }
-      if (ch >= 'A' && ch <= 'Z') {
-        ch = ch - 'A' + 'a';
-      }
-      hash_code = 31 * hash_code + ch;
-    }
-  });
-  return hash_code;
-}
-
-static_assert(ConstexprHashNormalizeFontName("Arial") == 0x058c5083,
-              "Arial hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Serif") == 0x0684317d,
-              "Serif hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Verdana") == 0x14ee2d13,
-              "Verdana hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Courier") == 0x3918fe2d,
-              "Courier hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Courier New") == 0x83746053,
-              "Courier New hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Monospace") == 0xaaa60c03,
-              "Monospace hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("SimHei") == 0xca3812d5,
-              "SimHei hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("SimSun") == 0xca383e15,
-              "SimSun hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Tahoma") == 0xcb7a04c8,
-              "Tahoma hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Georgia") == 0xfb4ce0de,
-              "Georgia hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Baskerville") == 0x3d49f40e,
-              "Baskerville hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Palatino") == 0x3b98b31c,
-              "Palatino hash mismatch");
-static_assert(ConstexprHashNormalizeFontName("Monaco") == 0xc04fe601,
-              "Monaco hash mismatch");
-
 constexpr int kSkiaMatchNameWeight = 62;
 constexpr int kSkiaMatchSystemNameWeight = 60;
 constexpr int kSkiaMatchSerifStyleWeight = 16;
