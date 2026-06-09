@@ -44,7 +44,7 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
 
   class FontFaceInfo {
    public:
-    enum class CharsetFlag : uint8_t {
+    enum class CharsetFlag : uint16_t {
       kNone = 0,
       kAnsi = 1 << 0,
       kSymbol = 1 << 1,
@@ -52,6 +52,14 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
       kBig5 = 1 << 3,
       kGb = 1 << 4,
       kKorean = 1 << 5,
+      kCyrillic = 1 << 6,
+      kGreek = 1 << 7,
+      kTurkish = 1 << 8,
+      kHebrew = 1 << 9,
+      kArabic = 1 << 10,
+      kBaltic = 1 << 11,
+      kThai = 1 << 12,
+      kEasternEuropean = 1 << 13,
     };
 
     static CharsetFlag GetCharset(FX_Charset charset);
@@ -77,7 +85,34 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
     const uint32_t file_size_;
     uint32_t styles_ = 0;
     Mask<CharsetFlag> charsets_;
+    uint32_t glyph_count_ = 0;
   };
+
+  static bool FindFamilyNameMatch(ByteStringView family_name,
+                                  const ByteString& installed_font_name);
+  static ByteString ReadStringFromFile(FILE* pFile, uint32_t size);
+  static ByteString LoadTableFromTT(FILE* pFile,
+                                    const uint8_t* pTables,
+                                    uint32_t nTables,
+                                    uint32_t tag,
+                                    FX_FILESIZE fileSize);
+
+  // Called during directory scanning when a font face is reported.
+  // Subclasses can override this to perform additional startup parsing.
+  virtual void OnFaceReported(FontFaceInfo* pInfo,
+                              FILE* pFile,
+                              uint32_t offset,
+                              FX_FILESIZE filesize);
+
+  // Returns true if the candidate font is a better match than the current best.
+  // Subclasses can override this to implement custom matching heuristics.
+  virtual bool IsBetterMatch(const FontFaceInfo* candidate,
+                             int32_t candidate_score,
+                             const FontFaceInfo* current_best,
+                             int32_t current_best_score,
+                             FX_Charset charset,
+                             const ByteString& family,
+                             bool bMatchName) const;
 
   void ScanPath(const ByteString& path);
   void ScanFile(const ByteString& path);
