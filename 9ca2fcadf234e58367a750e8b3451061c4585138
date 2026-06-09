@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8071e12b_468cbb92",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-09T16:16:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95760d1a_5a36fffe",
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "042f7e17_67b7f1b3",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-09T00:00:11Z",
       "side": 1,
       "message": "Is using Helvetica the most important part? The test does not break is one swaps Helvetica for the Times font, but it would break if GetCharWidth() returns a different value. So how about highlighting the more important part?",
+      "range": {
+        "startLine": 19,
+        "startChar": 3,
+        "endLine": 19,
+        "endChar": 12
+      },
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4530fce0_2a5dfeb3",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-09T16:16:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "042f7e17_67b7f1b3",
       "range": {
         "startLine": 19,
         "startChar": 3,
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "09a3b25e_491c11ff",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-09T16:16:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "88f092bd_ca4e9330",
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "16ef0ce1_d6f761b6",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-06-08T23:51:19Z",
       "side": 1,
       "message": "\"this test case should use\"",
+      "range": {
+        "startLine": 152,
+        "startChar": 21,
+        "endLine": 152,
+        "endChar": 31
+      },
+      "revId": "9ca2fcadf234e58367a750e8b3451061c4585138",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86e4334a_5029fd66",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-09T16:16:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16ef0ce1_d6f761b6",
       "range": {
         "startLine": 152,
         "startChar": 21,
