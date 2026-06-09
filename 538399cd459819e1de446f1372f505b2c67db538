@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e60bb32c_97db1c51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e53aa93_58f00679",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "89726083_d5d7e4a0",
@@ -35,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc07140d_95d4d8d8",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "89726083_d5d7e4a0",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9ef19599_c0865a0f",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-06-09T04:28:27Z",
       "side": 1,
       "message": "Just pass this by reference, unlike the other parameters that are generally always passed by pointer.",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c99ac90_217347a4",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ef19599_c0865a0f",
       "revId": "538399cd459819e1de446f1372f505b2c67db538",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -75,6 +129,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "48e1a8bc_a22a5756",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d23b9a1_2a8b38b6",
+      "range": {
+        "startLine": 366,
+        "startChar": 4,
+        "endLine": 366,
+        "endChar": 23
+      },
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "552bb4f0_142bcbc5",
@@ -88,6 +166,24 @@
       "writtenOn": "2026-06-09T04:28:27Z",
       "side": 1,
       "message": "Also pass by reference.",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5100e7b9_c52c2136",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "552bb4f0_142bcbc5",
       "revId": "538399cd459819e1de446f1372f505b2c67db538",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -109,6 +205,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94618846_912430fc",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1e4056f_394161ac",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7bfd23c8_900ed6bb",
@@ -122,6 +236,24 @@
       "writtenOn": "2026-06-09T04:28:27Z",
       "side": 1,
       "message": "If `kids` starts out as empty, it probably should get pruned, but line 389 will call PruneFieldArray() and PruneFieldArray() will return false.",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0614b052_a6f1dfd0",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done. The pruning decision now checks whether Kids is empty after recursively pruning, including the case where it starts empty.",
+      "parentUuid": "7bfd23c8_900ed6bb",
       "revId": "538399cd459819e1de446f1372f505b2c67db538",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -143,6 +275,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "58756609_4b327ade",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b4d1d4b7_af3aabf2",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fee3a538_ae9b2cc0",
@@ -156,6 +306,24 @@
       "writtenOn": "2026-06-09T04:28:27Z",
       "side": 1,
       "message": "For the 2 shared tests, I think you can keep going and do the following to further exercise the code:\n\n1) Let `saved_doc` go out of scope.\n2) Call ClearString().\n3) Flatten page 1.\n4) Save and reopen the saved doc.\n5) Check the form type is `FORMTYPE_NONE`",
+      "revId": "538399cd459819e1de446f1372f505b2c67db538",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b4e154e_d1dad275",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-09T16:39:20Z",
+      "side": 1,
+      "message": "Done. Both shared tests now save/reopen after flattening the first page, then flatten page 1 and verify the saved document has FORMTYPE_NONE.",
+      "parentUuid": "fee3a538_ae9b2cc0",
       "revId": "538399cd459819e1de446f1372f505b2c67db538",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
