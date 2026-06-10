@@ -18,6 +18,7 @@
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/containers/contains.h"
+#include "core/fxcrt/fx_coordinates.h"
 #include "core/fxcrt/fx_memcpy_wrappers.h"
 #include "core/fxcrt/fx_system.h"
 #include "core/fxcrt/span.h"
@@ -169,6 +170,56 @@ TEST_F(FPDFAnnotEmbedderTest, SetAP) {
             FPDFAnnot_GetAP(annot.get(), FPDF_ANNOT_APPEARANCEMODE_NORMAL,
                             buf.data(), normal_length_bytes));
   EXPECT_EQ(kStreamData, GetPlatformWString(buf.data()));
+}
+
+TEST_F(FPDFAnnotEmbedderTest, SetRectKeepsAPBBox) {
+  ScopedFPDFDocument doc(FPDF_CreateNewDocument());
+  ASSERT_TRUE(doc);
+  ScopedFPDFPage page(FPDFPage_New(doc.get(), 0, 100, 100));
+  ASSERT_TRUE(page);
+  ScopedFPDFWideString ap_stream = GetFPDFWideString(kStreamData);
+  ASSERT_TRUE(ap_stream);
+
+  ScopedFPDFAnnotation annot(
+      FPDFPage_CreateAnnot(page.get(), FPDF_ANNOT_STAMP));
+  ASSERT_TRUE(annot);
+
+  const FS_RECTF rect{0.0f, 40.0f, 100.0f, 0.0f};
+  ASSERT_TRUE(FPDFAnnot_SetRect(annot.get(), &rect));
+  ASSERT_TRUE(FPDFAnnot_SetAP(annot.get(), FPDF_ANNOT_APPEARANCEMODE_NORMAL,
+                              ap_stream.get()));
+
+  CPDF_AnnotContext* context = CPDFAnnotContextFromFPDFAnnotation(annot.get());
+  ASSERT_TRUE(context);
+  const CPDF_Dictionary* annot_dict = context->GetAnnotDict();
+  ASSERT_TRUE(annot_dict);
+  RetainPtr<const CPDF_Dictionary> ap_dict =
+      annot_dict->GetDictFor(pdfium::annotation::kAP);
+  ASSERT_TRUE(ap_dict);
+  RetainPtr<const CPDF_Dictionary> stream_dict = ap_dict->GetDictFor("N");
+  ASSERT_TRUE(stream_dict);
+
+  CFX_FloatRect bbox = stream_dict->GetRectFor("BBox");
+  EXPECT_FLOAT_EQ(0.0f, bbox.left);
+  EXPECT_FLOAT_EQ(0.0f, bbox.bottom);
+  EXPECT_FLOAT_EQ(100.0f, bbox.right);
+  EXPECT_FLOAT_EQ(40.0f, bbox.top);
+
+  const FS_RECTF larger_rect{0.0f, 120.0f, 300.0f, 0.0f};
+  ASSERT_TRUE(FPDFAnnot_SetRect(annot.get(), &larger_rect));
+
+  FS_RECTF updated_rect;
+  ASSERT_TRUE(FPDFAnnot_GetRect(annot.get(), &updated_rect));
+  EXPECT_FLOAT_EQ(larger_rect.left, updated_rect.left);
+  EXPECT_FLOAT_EQ(larger_rect.top, updated_rect.top);
+  EXPECT_FLOAT_EQ(larger_rect.right, updated_rect.right);
+  EXPECT_FLOAT_EQ(larger_rect.bottom, updated_rect.bottom);
+
+  bbox = stream_dict->GetRectFor("BBox");
+  EXPECT_FLOAT_EQ(0.0f, bbox.left);
+  EXPECT_FLOAT_EQ(0.0f, bbox.bottom);
+  EXPECT_FLOAT_EQ(100.0f, bbox.right);
+  EXPECT_FLOAT_EQ(40.0f, bbox.top);
 }
 
 TEST_F(FPDFAnnotEmbedderTest, SetAPWithOpacity) {
