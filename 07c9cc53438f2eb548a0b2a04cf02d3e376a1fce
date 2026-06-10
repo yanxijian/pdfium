@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ff66c68_bf5f0751",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 48
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-10T04:39:19Z",
+      "side": 1,
+      "message": "Wrap",
+      "revId": "07c9cc53438f2eb548a0b2a04cf02d3e376a1fce",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e70e4f72_90fd8ed4",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 48
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-10T04:39:19Z",
+      "side": 1,
+      "message": "Move above line 85 to sort this too.",
+      "revId": "07c9cc53438f2eb548a0b2a04cf02d3e376a1fce",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8e5a48c_969289ff",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 48
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-10T04:39:19Z",
+      "side": 1,
+      "message": "Use //third_party/..., so the path works for PDFium when it\u0027s part of a Chromium checkout. Same for line 189.",
+      "range": {
+        "startLine": 150,
+        "startChar": 15,
+        "endLine": 150,
+        "endChar": 21
+      },
+      "revId": "07c9cc53438f2eb548a0b2a04cf02d3e376a1fce",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
