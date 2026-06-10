@@ -55,6 +55,10 @@ inline constexpr char FXSYS_ToUpperASCII(char c) {
   return FXSYS_IsLowerASCII(c) ? (c + ('A' - 'a')) : c;
 }
 
+inline char FXSYS_ToLowerASCII(char c) {
+  return FXSYS_IsUpperASCII(c) ? (c + ('a' - 'A')) : c;
+}
+
 inline bool FXSYS_iswalpha(wchar_t c) {
   return u_isalpha(c);
 }
