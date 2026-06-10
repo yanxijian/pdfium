@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a2d2c18_3c9fe274",
+        "filename": "core/fxge/android/cfpf_skiafontmgr.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-10T17:15:21Z",
+      "side": 1,
+      "message": "Sort the list, either by name or hash, so it\u0027s easier to see there are no repeats.",
+      "revId": "3641be4c69514372f7d403bf1c25f7a51ac71bfc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
