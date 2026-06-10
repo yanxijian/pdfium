@@ -16,6 +16,29 @@
       "message": "Uploaded a new patchThanks for the review. I addressed the comments and uploaded a new patch set. The shared annotation/widget tests now\n  cover both preserving the AcroForm after the first page is flattened and removing it after all referencing pages are\n  flattened.set addressing all comments and regenerated the PDF test resource. PTAL, thanks.",
       "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6d72501_1b805be2",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-10T22:12:01Z",
+      "side": 1,
+      "message": "No caller reads the return result. Remove?",
+      "range": {
+        "startLine": 373,
+        "startChar": 0,
+        "endLine": 373,
+        "endChar": 4
+      },
+      "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
