@@ -16,6 +16,23 @@
       "message": "Now to test this on the actual brotli bots for once.",
       "revId": "1dd1e29f375491ebf0e693c7cde40f007c36c057",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81f1593d_0cf7f47c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 37
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-10T05:10:11Z",
+      "side": 1,
+      "message": "Merge conflict led to me accidentally reverting the BUILD.gn changes. Will patch.",
+      "revId": "1dd1e29f375491ebf0e693c7cde40f007c36c057",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
