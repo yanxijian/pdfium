@@ -124,63 +124,52 @@ const char* SkiaGetSubstFont(uint32_t hash,
   return nullptr;
 }
 
-enum SKIACHARSET {
-  SKIACHARSET_Ansi = 1 << 0,
-  SKIACHARSET_Default = 1 << 1,
-  SKIACHARSET_Symbol = 1 << 2,
-  SKIACHARSET_ShiftJIS = 1 << 3,
-  SKIACHARSET_Korean = 1 << 4,
-  SKIACHARSET_Johab = 1 << 5,
-  SKIACHARSET_GB2312 = 1 << 6,
-  SKIACHARSET_BIG5 = 1 << 7,
-  SKIACHARSET_Greek = 1 << 8,
-  SKIACHARSET_Turkish = 1 << 9,
-  SKIACHARSET_Vietnamese = 1 << 10,
-  SKIACHARSET_Hebrew = 1 << 11,
-  SKIACHARSET_Arabic = 1 << 12,
-  SKIACHARSET_Baltic = 1 << 13,
-  SKIACHARSET_Cyrillic = 1 << 14,
-  SKIACHARSET_Thai = 1 << 15,
-  SKIACHARSET_EeasternEuropean = 1 << 16,
-  SKIACHARSET_PC = 1 << 17,
-  SKIACHARSET_OEM = 1 << 18,
-};
+constexpr auto kFPFSkiaFontFXCharsetFlags =
+    std::to_array<const FX_CharsetFlag>({
+        FX_CharsetFlag::kANSI,                   // 0
+        FX_CharsetFlag::kMSWin_EasternEuropean,  // 1
+        FX_CharsetFlag::kMSWin_Cyrillic,         // 2
+        FX_CharsetFlag::kMSWin_Greek,            // 3
+        FX_CharsetFlag::kMSWin_Turkish,          // 4
+        FX_CharsetFlag::kMSWin_Hebrew,           // 5
+        FX_CharsetFlag::kMSWin_Arabic,           // 6
+        FX_CharsetFlag::kMSWin_Baltic,           // 7
+        FX_CharsetFlag::kNone,                   // 8
+        FX_CharsetFlag::kNone,                   // 9
+        FX_CharsetFlag::kNone,                   // 10
+        FX_CharsetFlag::kNone,                   // 11
+        FX_CharsetFlag::kNone,                   // 12
+        FX_CharsetFlag::kNone,                   // 13
+        FX_CharsetFlag::kNone,                   // 14
+        FX_CharsetFlag::kNone,                   // 15
+        FX_CharsetFlag::kThai,                   // 16
+        FX_CharsetFlag::kShiftJIS,               // 17
+        FX_CharsetFlag::kChineseSimplified,      // 18
+        FX_CharsetFlag::kHangul,                 // 19
+        FX_CharsetFlag::kChineseTraditional,     // 20
+        FX_CharsetFlag::kJohab,                  // 21
+        FX_CharsetFlag::kNone,                   // 22
+        FX_CharsetFlag::kNone,                   // 23
+        FX_CharsetFlag::kNone,                   // 24
+        FX_CharsetFlag::kNone,                   // 25
+        FX_CharsetFlag::kNone,                   // 26
+        FX_CharsetFlag::kNone,                   // 27
+        FX_CharsetFlag::kNone,                   // 28
+        FX_CharsetFlag::kNone,                   // 29
+        FX_CharsetFlag::kOEM,                    // 30
+        FX_CharsetFlag::kSymbol,                 // 31
+    });
 
-uint32_t SkiaGetCharset(FX_Charset charset) {
-  switch (charset) {
-    case FX_Charset::kANSI:
-      return SKIACHARSET_Ansi;
-    case FX_Charset::kDefault:
-      return SKIACHARSET_Default;
-    case FX_Charset::kSymbol:
-      return SKIACHARSET_Symbol;
-    case FX_Charset::kShiftJIS:
-      return SKIACHARSET_ShiftJIS;
-    case FX_Charset::kHangul:
-      return SKIACHARSET_Korean;
-    case FX_Charset::kChineseSimplified:
-      return SKIACHARSET_GB2312;
-    case FX_Charset::kChineseTraditional:
-      return SKIACHARSET_BIG5;
-    case FX_Charset::kMSWin_Greek:
-      return SKIACHARSET_Greek;
-    case FX_Charset::kMSWin_Turkish:
-      return SKIACHARSET_Turkish;
-    case FX_Charset::kMSWin_Hebrew:
-      return SKIACHARSET_Hebrew;
-    case FX_Charset::kMSWin_Arabic:
-      return SKIACHARSET_Arabic;
-    case FX_Charset::kMSWin_Baltic:
-      return SKIACHARSET_Baltic;
-    case FX_Charset::kMSWin_Cyrillic:
-      return SKIACHARSET_Cyrillic;
-    case FX_Charset::kThai:
-      return SKIACHARSET_Thai;
-    case FX_Charset::kMSWin_EasternEuropean:
-      return SKIACHARSET_EeasternEuropean;
-    default:
-      return SKIACHARSET_Default;
+Mask<FX_CharsetFlag> SkiaGetFaceCharsets(uint32_t code_range) {
+  Mask<FX_CharsetFlag> charsets;
+  for (int32_t i = 0; i < 32; i++) {
+    if (code_range & (1 << i)) {
+      if (kFPFSkiaFontFXCharsetFlags[i] != FX_CharsetFlag::kNone) {
+        charsets |= kFPFSkiaFontFXCharsetFlags[i];
+      }
+    }
   }
+  return charsets;
 }
 
 uint32_t SkiaNormalizeFontName(ByteStringView family) {
@@ -225,51 +214,6 @@ bool SkiaMaybeArabic(ByteStringView facename) {
   ByteString name(facename);
   name.MakeLower();
   return name.Contains("arabic");
-}
-
-constexpr auto kFPFSkiaFontCharsets = std::to_array<const uint32_t>({
-    SKIACHARSET_Ansi,
-    SKIACHARSET_EeasternEuropean,
-    SKIACHARSET_Cyrillic,
-    SKIACHARSET_Greek,
-    SKIACHARSET_Turkish,
-    SKIACHARSET_Hebrew,
-    SKIACHARSET_Arabic,
-    SKIACHARSET_Baltic,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    SKIACHARSET_Thai,
-    SKIACHARSET_ShiftJIS,
-    SKIACHARSET_GB2312,
-    SKIACHARSET_Korean,
-    SKIACHARSET_BIG5,
-    SKIACHARSET_Johab,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    SKIACHARSET_OEM,
-    SKIACHARSET_Symbol,
-});
-
-uint32_t SkiaGetFaceCharset(uint32_t code_range) {
-  uint32_t charset = 0;
-  for (int32_t i = 0; i < 32; i++) {
-    if (code_range & (1 << i)) {
-      charset |= kFPFSkiaFontCharsets[i];
-    }
-  }
-  return charset;
 }
 
 }  // namespace
@@ -331,8 +275,11 @@ CFPF_SkiaFont* CFPF_SkiaFontMgr::CreateFont(ByteStringView family_name,
   int32_t best_score = -1;
   int32_t best_glyph_num = 0;
   for (const std::unique_ptr<Entry>& font : pdfium::Reversed(font_faces_)) {
-    if (!(font->charsets & SkiaGetCharset(charset))) {
-      continue;
+    if (charset != FX_Charset::kDefault) {
+      FX_CharsetFlag flag = FX_GetCharsetFlag(charset);
+      if (flag != FX_CharsetFlag::kNone && !(font->charsets & flag)) {
+        continue;
+      }
     }
     int32_t score = 0;
     const uint32_t sys_font_name_hash =
@@ -451,17 +398,17 @@ std::unique_ptr<CFPF_SkiaFontMgr::Entry> CFPF_SkiaFontMgr::ReportFace(
     RetainPtr<CFX_Face> face,
     const ByteString& file,
     int face_index) {
-  uint32_t charset = SKIACHARSET_Default;
+  Mask<FX_CharsetFlag> charsets;
   std::optional<std::array<uint32_t, 2>> cp_range = face->GetOs2CodePageRange();
   if (cp_range.has_value()) {
-    charset |= SkiaGetFaceCharset(cp_range.value()[0]);
+    charsets |= SkiaGetFaceCharsets(cp_range.value()[0]);
   }
   auto entry = std::make_unique<Entry>();
   entry->path = file;
   entry->family = face->GetFamilyName();
   entry->style = face->GetFontStyle();
   entry->face_index = face_index;
-  entry->charsets = charset;
+  entry->charsets = charsets;
   entry->glyph_num = face->GetGlyphCount();
   return entry;
 }
