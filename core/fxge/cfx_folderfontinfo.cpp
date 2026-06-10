@@ -259,6 +259,38 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     // codepages corresponds to OS/2 table ulCodePageRange1.
     // See https://learn.microsoft.com/en-us/typography/opentype/spec/os2
     uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
+    if (codepages & (1U << 1)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_EasternEuropean);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kEasternEuropean;
+    }
+    if (codepages & (1U << 2)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Cyrillic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kCyrillic;
+    }
+    if (codepages & (1U << 3)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Greek);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kGreek;
+    }
+    if (codepages & (1U << 4)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Turkish);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kTurkish;
+    }
+    if (codepages & (1U << 5)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Hebrew);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kHebrew;
+    }
+    if (codepages & (1U << 6)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Arabic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kArabic;
+    }
+    if (codepages & (1U << 7)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Baltic);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kBaltic;
+    }
+    if (codepages & (1U << 16)) {
+      mapper_->AddInstalledFont(facename, FX_Charset::kThai);
+      pInfo->charsets_ |= FontFaceInfo::CharsetFlag::kThai;
+    }
     if (codepages & (1U << 17)) {
       mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
       pInfo->charsets_ |= FX_SupportedCharsetFlag::kShiftJIS;
@@ -437,6 +469,66 @@ bool CFX_FolderFontInfo::GetFaceName(void* hFont, ByteString* name) {
 }
 
 bool CFX_FolderFontInfo::GetFontCharset(void* hFont, FX_Charset* charset) {
+  if (!hFont) {
+    return false;
+  }
+  FontFaceInfo* pFont = static_cast<FontFaceInfo*>(hFont);
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kSymbol) {
+    *charset = FX_Charset::kSymbol;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kShiftJis) {
+    *charset = FX_Charset::kShiftJIS;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kGb) {
+    *charset = FX_Charset::kChineseSimplified;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kBig5) {
+    *charset = FX_Charset::kChineseTraditional;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kKorean) {
+    *charset = FX_Charset::kHangul;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kCyrillic) {
+    *charset = FX_Charset::kMSWin_Cyrillic;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kGreek) {
+    *charset = FX_Charset::kMSWin_Greek;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kTurkish) {
+    *charset = FX_Charset::kMSWin_Turkish;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kHebrew) {
+    *charset = FX_Charset::kMSWin_Hebrew;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kArabic) {
+    *charset = FX_Charset::kMSWin_Arabic;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kBaltic) {
+    *charset = FX_Charset::kMSWin_Baltic;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kThai) {
+    *charset = FX_Charset::kThai;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kEasternEuropean) {
+    *charset = FX_Charset::kMSWin_EasternEuropean;
+    return true;
+  }
+  if (pFont->charsets_ & FontFaceInfo::CharsetFlag::kAnsi) {
+    *charset = FX_Charset::kANSI;
+    return true;
+  }
   return false;
 }
 
