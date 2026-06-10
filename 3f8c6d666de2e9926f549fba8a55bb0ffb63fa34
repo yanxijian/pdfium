@@ -214,6 +214,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5dd4e7b_deb49e93",
+        "filename": "core/fxge/android/cfpf_skiafontmgr.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-10T17:05:33Z",
+      "side": 1,
+      "message": "Ha ha.  Yeah, what I meant to say, I guess, was that the reason this is repeated here instead of using the function elsewhere is that since the bots are light on tests, the compiler needs to prove correctness, and for that a constexpr is needed so it is duplicated here.\n\nI\u0027ve removed the name and updated the comment.",
+      "parentUuid": "b36d824a_cb46ac6f",
+      "range": {
+        "startLine": 35,
+        "startChar": 19,
+        "endLine": 35,
+        "endChar": 45
+      },
+      "revId": "3f8c6d666de2e9926f549fba8a55bb0ffb63fa34",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea4fb2ef_01639d31",
