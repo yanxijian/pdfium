@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "679a553f_7b9a9406",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-11T04:51:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57d20b3f_09007bf6",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 79
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1552081_0c76f575",
@@ -64,6 +88,48 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "733e0753_42afca4b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-11T04:51:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3dd7c52c_7ed17cac",
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c585509c_b52bc08e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-11T04:51:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b1552081_0c76f575",
+      "range": {
+        "startLine": 9,
+        "startChar": 137,
+        "endLine": 9,
+        "endChar": 141
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d80a4708_b6f43c50",
@@ -87,6 +153,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c95db464_7966e70f",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-11T04:51:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d80a4708_b6f43c50",
+      "range": {
+        "startLine": 86,
+        "startChar": 2,
+        "endLine": 86,
+        "endChar": 10
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b621e876_2f775007",
@@ -100,6 +190,30 @@
       "writtenOn": "2026-06-08T16:41:11Z",
       "side": 1,
       "message": "Include stdint.h since PDFium is not using std::uint32_t.",
+      "range": {
+        "startLine": 10,
+        "startChar": 10,
+        "endLine": 10,
+        "endChar": 17
+      },
+      "revId": "307cb4a8fe70c5f09c69d632d443821072359f56",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79e667fd_f6a920b0",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-11T04:51:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b621e876_2f775007",
       "range": {
         "startLine": 10,
         "startChar": 10,
