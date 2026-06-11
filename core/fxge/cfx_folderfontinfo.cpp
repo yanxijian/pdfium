@@ -328,6 +328,14 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
       pInfo->charsets_ |= FX_CharsetFlag::kSymbol;
     }
   }
+  static constexpr uint32_t kMaxpTag =
+      CFX_FontMapper::MakeTag('m', 'a', 'x', 'p');
+  ByteString maxp = LoadTableFromTT(pFile, tables.unsigned_str(), nTables,
+                                    kMaxpTag, filesize);
+  if (maxp.GetLength() >= 6) {
+    pdfium::span<const uint8_t> p = maxp.unsigned_span().subspan(4u);
+    pInfo->glyph_count_ = fxcrt::GetUInt16MSBFirst(p.first<2u>());
+  }
   mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FX_CharsetFlag::kANSI;
   pInfo->styles_ = 0;
@@ -373,10 +381,10 @@ void* CFX_FolderFontInfo::FindFont(int weight,
       if (font->IsEligibleForFindFont(charset_flag, charset)) {
         iBestSimilar =
             font->SimilarityScore(weight, bItalic, pitch_family, bMatchName);
+        pFind = font;
         if (iBestSimilar == FontFaceInfo::kSimilarityScoreMax) {
           return font;
         }
-        pFind = font;
       }
     }
   }
@@ -384,18 +392,15 @@ void* CFX_FolderFontInfo::FindFont(int weight,
   // avoid calling it unless there might be a better match.
   ByteStringView bsFamily = family.AsStringView();
   for (const auto& it : font_list_) {
-    const ByteString& bsName = it.first;
     FontFaceInfo* font = it.second.get();
     if (!font->IsEligibleForFindFont(charset_flag, charset)) {
       continue;
     }
     int32_t iSimilarValue = font->SimilarityScore(
         weight, bItalic, pitch_family,
-        bMatchName && bsFamily.GetLength() == bsName.GetLength());
-    if (iSimilarValue > iBestSimilar) {
-      if (bMatchName && !FindFamilyNameMatch(bsFamily, bsName)) {
-        continue;
-      }
+        bMatchName && bsFamily.GetLength() == font->face_name_.GetLength());
+    if (IsBetterMatch(font, iSimilarValue, pFind, iBestSimilar, charset, family,
+                      bMatchName)) {
       iBestSimilar = iSimilarValue;
       pFind = font;
     }
@@ -531,4 +536,21 @@ int32_t CFX_FolderFontInfo::FontFaceInfo::SimilarityScore(
   }
   DCHECK_LE(score, kSimilarityScoreMax);
   return score;
+}
+
+bool CFX_FolderFontInfo::IsBetterMatch(const FontFaceInfo* candidate,
+                                       int32_t candidate_score,
+                                       const FontFaceInfo* current_best,
+                                       int32_t current_best_score,
+                                       FX_Charset charset,
+                                       const ByteString& family,
+                                       bool bMatchName) const {
+  if (candidate_score <= current_best_score) {
+    return false;
+  }
+  if (bMatchName &&
+      !FindFamilyNameMatch(family.AsStringView(), candidate->face_name_)) {
+    return false;
+  }
+  return true;
 }
