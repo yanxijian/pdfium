@@ -1342,6 +1342,16 @@ FPDF_EXPORT FPDF_RESULT FPDF_CALLCONV FPDF_BStr_Clear(FPDF_BSTR* bstr) {
 }
 #endif  // PDF_ENABLE_XFA
 
+#ifdef PDF_ENABLE_BROTLI
+FPDF_EXPORT void FPDF_CALLCONV FPDF_SetBrotliDecodeEnabled(FPDF_BOOL enabled) {
+  SetBrotliEnabled(static_cast<bool>(enabled));
+}
+
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_IsBrotliDecodeEnabled() {
+  return GetBrotliEnabled();
+}
+#endif  // PDF_ENABLE_BROTLI
+
 FPDF_EXPORT FPDF_DEST FPDF_CALLCONV FPDF_GetNamedDest(FPDF_DOCUMENT document,
                                                       int index,
                                                       void* buffer,
