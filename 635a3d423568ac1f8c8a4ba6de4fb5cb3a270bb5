@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d621cc5_99b15cd7",
+        "filename": "core/fpdfapi/page/cpdf_streamcontentparser.cpp",
+        "patchSetId": 40
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T16:36:20Z",
+      "side": 1,
+      "message": "Please leave it out for now. Otherwise, PDFium is going to treat some data as Brotli-encoded when other PDF implementations do not.",
+      "parentUuid": "81e8ea2f_a0bc9e52",
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9dd4f281_658cae78",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 40

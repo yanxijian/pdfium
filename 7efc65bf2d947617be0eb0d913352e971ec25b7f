@@ -437,6 +437,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a496316_9876a80f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T16:36:20Z",
+      "side": 1,
+      "message": "Thanks for the details. If the value does not work well for some reason, it can always be adjusted later.",
+      "parentUuid": "4aedc9a3_1ab8057e",
+      "range": {
+        "startLine": 16,
+        "startChar": 17,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3104483_8fa84145",
