@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "545cf2aa_7560000c",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 49
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T17:12:30Z",
+      "side": 1,
+      "message": "Format",
+      "revId": "8fe523fb83f3383b4046af4df9af483ca41d533f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

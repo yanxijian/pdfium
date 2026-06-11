@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f17a8e6d_483d68d9",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 44
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T17:12:30Z",
+      "side": 1,
+      "message": "Done, although I feel we are very much replacing a variable with... another variable.",
+      "parentUuid": "e128f581_73e0d0ea",
+      "range": {
+        "startLine": 30,
+        "startChar": 22,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "0302e63f465a24bce209a75cfeba800d04feb10e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1690ecec_18e654c9",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-11T16:36:20Z",
       "side": 1,
       "message": "With the manual BrotliDecoderDestroyInstance() call gone, how about removing this additional level of nesting? For instance, add `continue;` after line 54. Then do this if-statement. Then just do the line 61 return. No need for the else-statement on line 60.",
+      "revId": "0302e63f465a24bce209a75cfeba800d04feb10e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "430a39e6_14939cbb",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 44
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T17:12:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1690ecec_18e654c9",
       "revId": "0302e63f465a24bce209a75cfeba800d04feb10e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
