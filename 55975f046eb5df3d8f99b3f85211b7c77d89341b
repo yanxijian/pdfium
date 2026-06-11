@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ae6b511_d0e47771",
+        "filename": "core/fxcrt/fx_codepage.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T17:56:31Z",
+      "side": 1,
+      "message": "It was an attempt to maintain old behaviour when we encounter the next cl, but I think this should be mapped properly here and deal with that consequence later.\n\nDone.",
+      "parentUuid": "f7fb9b70_1165fa3e",
+      "revId": "55975f046eb5df3d8f99b3f85211b7c77d89341b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8aea935_7b63e66b",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-11T17:47:01Z",
       "side": 1,
       "message": "Wrap in backticks.",
+      "range": {
+        "startLine": 259,
+        "startChar": 7,
+        "endLine": 259,
+        "endChar": 16
+      },
+      "revId": "55975f046eb5df3d8f99b3f85211b7c77d89341b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6d4a8ed_c2faa87d",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T17:56:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8aea935_7b63e66b",
       "range": {
         "startLine": 259,
         "startChar": 7,
