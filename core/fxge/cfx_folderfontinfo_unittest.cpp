@@ -4,11 +4,15 @@
 
 #include "core/fxge/cfx_folderfontinfo.h"
 
+#include <string>
 #include <utility>
 
+#include "core/fxcrt/byteorder.h"
 #include "core/fxcrt/fx_codepage.h"
+#include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/fx_font.h"
 #include "testing/gtest/include/gtest/gtest.h"
+#include "testing/utils/path_service.h"
 
 namespace {
 
@@ -68,6 +72,36 @@ class CFXFolderFontInfoTest : public ::testing::Test {
     font_info_.font_list_[font_name] = std::move(info);
   }
 
+ public:
+  struct TestFaceInfo {
+    ByteString name;
+    uint32_t file_size;
+    uint32_t font_offset;
+    void* handle;
+  };
+
+  void ScanFonts(const std::string& path) {
+    font_info_.AddPath(path.c_str());
+    CFX_FontMapper mapper;
+    font_info_.EnumFontList(&mapper);
+  }
+
+  std::vector<TestFaceInfo> GetRegisteredFaces() {
+    std::vector<TestFaceInfo> faces;
+    for (const auto& it : font_info_.font_list_) {
+      faces.push_back({it.first, it.second->file_size_, it.second->font_offset_,
+                       it.second.get()});
+    }
+    return faces;
+  }
+
+  size_t GetFontData(void* hFont,
+                     uint32_t table,
+                     pdfium::span<uint8_t> buffer) {
+    return font_info_.GetFontData(hFont, table, buffer);
+  }
+
+ private:
   CFX_FolderFontInfo font_info_;
 };
 
@@ -141,4 +175,51 @@ TEST_F(CFXFolderFontInfoTest, TestFindFont) {
                   kComicSansMS, true);
   ASSERT_TRUE(font);
   EXPECT_EQ(GetFaceName(font), kComicSansMS);
+}
+
+TEST_F(CFXFolderFontInfoTest, ScanTTC) {
+  std::string font_dir =
+      PathService::GetThirdPartyFilePath("skia/resources/fonts");
+  if (font_dir.empty() || !PathService::DirectoryExists(font_dir)) {
+    GTEST_SKIP() << "Skia test fonts directory not found";
+  }
+
+  ScanFonts(font_dir);
+
+  std::vector<TestFaceInfo> faces = GetRegisteredFaces();
+  const TestFaceInfo* ttc_face = nullptr;
+  for (const auto& face : faces) {
+    if (face.font_offset > 0) {
+      ttc_face = &face;
+      break;
+    }
+  }
+
+  if (!ttc_face) {
+    GTEST_SKIP() << "No TTC faces found in Skia test fonts";
+  }
+
+  void* hFont = ttc_face->handle;
+
+  size_t ttc_size = GetFontData(hFont, SystemFontInfoIface::kTableTTCF, {});
+  EXPECT_EQ(ttc_face->file_size, ttc_size);
+
+  size_t font_size = GetFontData(hFont, SystemFontInfoIface::kTableNone, {});
+  EXPECT_EQ(ttc_face->file_size - ttc_face->font_offset, font_size);
+
+  std::vector<uint8_t> ttc_buffer(ttc_size);
+  size_t read_bytes =
+      GetFontData(hFont, SystemFontInfoIface::kTableTTCF, ttc_buffer);
+  EXPECT_EQ(ttc_size, read_bytes);
+  uint32_t magic =
+      fxcrt::GetUInt32MSBFirst(pdfium::span(ttc_buffer).first<4u>());
+  EXPECT_EQ(SystemFontInfoIface::kTableTTCF, magic);
+
+  std::vector<uint8_t> font_buffer(font_size);
+  read_bytes = GetFontData(hFont, SystemFontInfoIface::kTableNone, font_buffer);
+  EXPECT_EQ(font_size, read_bytes);
+  uint32_t ttf_magic =
+      fxcrt::GetUInt32MSBFirst(pdfium::span(font_buffer).first<4u>());
+  EXPECT_TRUE(ttf_magic == 0x00010000 || ttf_magic == 0x74727565 ||
+              ttf_magic == 0x4f54544f);
 }
