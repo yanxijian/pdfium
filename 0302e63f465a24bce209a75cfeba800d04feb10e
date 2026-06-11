@@ -72,6 +72,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e69b86c_32d96a4c",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 44
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T17:29:07Z",
+      "side": 1,
+      "message": "Here are the 3 states that the code went through:\n\n1. `BrotliDecoderState*` - required manual resource management.\n2. `BrotliDecoderState*` and `std::unique_ptr` - needs 2 variables for 1 thing.\n3. `std::unique_ptr` - back to 1 variable. No manual resource management.",
+      "parentUuid": "581de736_8b0481cd",
+      "range": {
+        "startLine": 30,
+        "startChar": 22,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "0302e63f465a24bce209a75cfeba800d04feb10e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1690ecec_18e654c9",
