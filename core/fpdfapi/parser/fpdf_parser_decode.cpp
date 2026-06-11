@@ -502,16 +502,18 @@ std::optional<PDFDataDecodeResult> PDF_DataDecode(
     }
 #if defined(PDF_ENABLE_BROTLI)
     else if (decoder == "BrotliDecode" || decoder == "BDC") {
-      if (bImageAcc && i == nSize - 1) {
-        result.image_encoding = "BrotliDecode";
-        result.image_params = std::move(pParam);
-        return result;
+      if (BrotliDecoder::GetBrotliEnabled()) {
+        if (bImageAcc && i == nSize - 1) {
+          result.image_encoding = "BrotliDecode";
+          result.image_params = std::move(pParam);
+          return result;
+        }
+        pdfium::span<const uint8_t> brotli_span = last_span;
+        DataAndBytesConsumed decode_result =
+            BrotliDecoder::Decode(brotli_span, estimated_size);
+        new_buf = std::move(decode_result.data);
+        bytes_consumed = decode_result.bytes_consumed;
       }
-      pdfium::span<const uint8_t> brotli_span = last_span;
-      DataAndBytesConsumed decode_result =
-          BrotliDecoder::Decode(brotli_span, estimated_size);
-      new_buf = std::move(decode_result.data);
-      bytes_consumed = decode_result.bytes_consumed;
     }
 #endif
     else {
