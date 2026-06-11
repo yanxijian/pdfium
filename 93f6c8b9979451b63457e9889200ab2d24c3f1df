@@ -39,6 +39,30 @@
       },
       "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28947753_e8bc659a",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-11T15:30:17Z",
+      "side": 1,
+      "message": "Done. Changed PruneFieldArray() to return void and removed the unused result plumbing.",
+      "parentUuid": "f6d72501_1b805be2",
+      "range": {
+        "startLine": 373,
+        "startChar": 0,
+        "endLine": 373,
+        "endChar": 4
+      },
+      "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
