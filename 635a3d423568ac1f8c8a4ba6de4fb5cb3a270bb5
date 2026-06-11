@@ -16,6 +16,97 @@
       "message": "Take 2",
       "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bec3f942_c0571b92",
+        "filename": "core/fpdfapi/page/cpdf_streamcontentparser.cpp",
+        "patchSetId": 40
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T04:56:32Z",
+      "side": 1,
+      "message": "Is this in a (draft) spec somewhere?",
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9dd4f281_658cae78",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 40
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T04:56:32Z",
+      "side": 1,
+      "message": "For foo.cpp, foo.h should be first.",
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15d1b913_44d564c2",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 40
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T04:56:32Z",
+      "side": 1,
+      "message": "Combine with lines 11-12.",
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16937841_7f2dadcf",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 40
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T04:56:32Z",
+      "side": 1,
+      "message": "Manage this with a custom deleter for std::unique_ptr, instead of manually calling BrotliDecoderDestroyInstance().",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 29
+      },
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fea1fab8_cf94830f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 40
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T04:56:32Z",
+      "side": 1,
+      "message": "Not used.",
+      "revId": "635a3d423568ac1f8c8a4ba6de4fb5cb3a270bb5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
