@@ -59,6 +59,10 @@ class CFXFolderFontInfoTest : public ::testing::Test {
     return static_cast<CFX_FolderFontInfo::FontFaceInfo*>(font)->face_name_;
   }
 
+  bool GetFontCharset(void* font, FX_Charset* charset) {
+    return font_info_.GetFontCharset(font, charset);
+  }
+
  private:
   void AddDummyFont(const char* font_name, FX_CharsetFlag charset) {
     auto info = std::make_unique<CFX_FolderFontInfo::FontFaceInfo>(
@@ -141,4 +145,21 @@ TEST_F(CFXFolderFontInfoTest, TestFindFont) {
                   kComicSansMS, true);
   ASSERT_TRUE(font);
   EXPECT_EQ(GetFaceName(font), kComicSansMS);
+}
+
+TEST_F(CFXFolderFontInfoTest, TestGetFontCharset) {
+  void* font = FindFont(/*weight=*/0, /*bItalic=*/false, FX_Charset::kSymbol,
+                        pdfium::kFontPitchFamilyRoman, kSymbol,
+                        /*bMatchName=*/true);
+  ASSERT_TRUE(font);
+  FX_Charset charset;
+  EXPECT_TRUE(GetFontCharset(font, &charset));
+  EXPECT_EQ(charset, FX_Charset::kSymbol);
+
+  font = FindFont(/*weight=*/0, /*bItalic=*/false, FX_Charset::kANSI,
+                  pdfium::kFontPitchFamilyRoman, kArial,
+                  /*bMatchName=*/true);
+  ASSERT_TRUE(font);
+  EXPECT_TRUE(GetFontCharset(font, &charset));
+  EXPECT_EQ(charset, FX_Charset::kANSI);
 }
