@@ -8,6 +8,7 @@
 #include <memory>
 #include <utility>
 
+#include "brotli_decoder.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/numerics/safe_conversions.h"
@@ -15,10 +16,15 @@
 
 namespace {
 constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
+<<<<<<< PATCH SET (ddf4b4d5c9b587cdc77ed34ac2a078db1a367ba4 Add public API to enable/disable Brotli stream decoding)
+bool g_brotli_enabled_ = false;
+||||||| BASE      (baca7d2d708d7dff0a6e16b5d8d7dd2851a1cbaf Add BrotliDecode filter support for PDF 2.0 streams)
+=======
 
 struct BrotliDecoderStateDeleter {
   void operator()(struct BrotliDecoderStateStruct* ptr) const;
 };
+>>>>>>> BASE      (d907aa83b9ea48a1d1192e807daa72a7a7fceae5 Add BrotliDecode filter support for PDF 2.0 streams)
 }  // namespace
 
 void BrotliDecoderStateDeleter::operator()(
@@ -28,6 +34,7 @@ void BrotliDecoderStateDeleter::operator()(
 
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(g_brotli_enabled_);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
@@ -69,4 +76,12 @@ DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
     }
     return {DataVector<uint8_t>(), 0u};
   }
+}
+
+void BrotliDecoder::SetBrotliEnabled(bool enabled) {
+  g_brotli_enabled_ = enabled;
+}
+
+bool BrotliDecoder::GetBrotliEnabled() {
+  return g_brotli_enabled_;
 }
