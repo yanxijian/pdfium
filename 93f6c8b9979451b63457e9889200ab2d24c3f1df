@@ -81,6 +81,30 @@
       },
       "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11c9760b_7bc8db0a",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T16:40:11Z",
+      "side": 1,
+      "message": "Looking at it again, the alternative is to have the `bool` return type, and use it to return the `fields-\u003eIsEmpty()` value. Then callers just handle the return value instead of explicitly checking `IsEmpty()`. WDYT?",
+      "parentUuid": "28947753_e8bc659a",
+      "range": {
+        "startLine": 373,
+        "startChar": 0,
+        "endLine": 373,
+        "endChar": 4
+      },
+      "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
