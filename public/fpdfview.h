@@ -1498,6 +1498,27 @@ FPDF_EXPORT FPDF_RESULT FPDF_CALLCONV FPDF_BStr_Set(FPDF_BSTR* bstr,
 FPDF_EXPORT FPDF_RESULT FPDF_CALLCONV FPDF_BStr_Clear(FPDF_BSTR* bstr);
 #endif  // PDF_ENABLE_XFA
 
+#ifdef PDF_ENABLE_BROTLI
+// Experimental API.
+// Function: FPDF_SetBrotliDecodeEnabled
+//          Enables or disables Brotli-compressed stream decoding.
+// Parameters:
+//          enabled - TRUE to enable Brotli decoding, FALSE to disable.
+// Return value:
+//          None.
+FPDF_EXPORT void FPDF_CALLCONV FPDF_SetBrotliDecodeEnabled(FPDF_BOOL enabled);
+
+// Experimental API.
+// Function: FPDF_IsBrotliDecodeEnabled
+//          Returns whether Brotli-compressed stream decoding is currently
+//          enabled.
+// Parameters:
+//          None.
+// Return value:
+//          TRUE if Brotli decoding is enabled, FALSE otherwise.
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_IsBrotliDecodeEnabled();
+#endif // PDF_ENABLE_BROTLI
+
 #ifdef __cplusplus
 }
 #endif

@@ -497,7 +497,14 @@ std::optional<PDFDataDecodeResult> PDF_DataDecode(
       bytes_consumed = decode_result.bytes_consumed;
     }
 #if defined(PDF_ENABLE_BROTLI)
+<<<<<<< PATCH SET (449810f12a5ddd6bdc2e0f1d15320f872e6cd0a9 Add public API for enabling/disabling BrotliDecode)
+    else if ((decoder == "BrotliDecode" || decoder == "BDC") &&
+             BrotliDecoder::GetBrotliEnabled()) {
+||||||| BASE      (0302e63f465a24bce209a75cfeba800d04feb10e Add BrotliDecode filter support for PDF 2.0 streams)
+    else if (decoder == "BrotliDecode" || decoder == "BDC") {
+=======
     else if (decoder == "BrotliDecode") {
+>>>>>>> BASE      (8fe523fb83f3383b4046af4df9af483ca41d533f Add BrotliDecode filter support for PDF 2.0 streams)
       if (bImageAcc && i == nSize - 1) {
         result.image_encoding = "BrotliDecode";
         result.image_params = std::move(pParam);
