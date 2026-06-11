@@ -17,6 +17,13 @@ class BrotliDecoder {
  public:
   static DataAndBytesConsumed Decode(pdfium::span<const uint8_t> src_span,
                                      uint32_t estimated_decode_size);
+<<<<<<< PATCH SET (a148402402b90963da33194055cb8dff9b060d27 Add public API to enable/disable Brotli stream decoding)
+  static void SetBrotliEnabled(bool enabled);
+  static bool GetBrotliEnabled();
+
+||||||| BASE      (34a520439043b163979a359d3650fd440d0b8db8 Add BrotliDecode filter support for PDF 2.0 streams)
+=======
+>>>>>>> BASE      (85039431fb09ff95b0bf11c9c001c8da6534f18c Add BrotliDecode filter support for PDF 2.0 streams)
  private:
   struct BrotliDeleter {
     void operator()(BrotliDecoderState* ptr) const;
