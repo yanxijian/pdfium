@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad041e59_603e2bf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T18:48:59Z",
+      "side": 1,
+      "message": "Hey guys, added some of the public API for the later flag implementation for enabling or disabling brotli from the chromium end. Thanks!",
+      "revId": "791665776dfd9c11d9ca9ed5fe2a8f90bdc8c568",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
