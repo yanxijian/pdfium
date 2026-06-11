@@ -15,6 +15,7 @@
 
 namespace {
 constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
+bool g_brotli_enabled = false;
 
 struct BrotliDecoderStateDeleter {
   void operator()(struct BrotliDecoderStateStruct* ptr) const;
@@ -28,6 +29,7 @@ void BrotliDecoderStateDeleter::operator()(
 
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(g_brotli_enabled);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
@@ -69,4 +71,12 @@ DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
     }
     return {DataVector<uint8_t>(), 0u};
   }
+}
+
+void BrotliDecoder::SetBrotliEnabled(bool enabled) {
+  g_brotli_enabled = enabled;
+}
+
+bool BrotliDecoder::GetBrotliEnabled() {
+  return g_brotli_enabled;
 }
