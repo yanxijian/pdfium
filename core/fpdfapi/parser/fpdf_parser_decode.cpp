@@ -501,7 +501,7 @@ std::optional<PDFDataDecodeResult> PDF_DataDecode(
       bytes_consumed = decode_result.bytes_consumed;
     }
 #if defined(PDF_ENABLE_BROTLI)
-    else if (decoder == "BrotliDecode" || decoder == "BDC") {
+    else if ((decoder == "BrotliDecode" || decoder == "BDC") && BrotliDecoder::GetBrotliEnabled()) {
       if (bImageAcc && i == nSize - 1) {
         result.image_encoding = "BrotliDecode";
         result.image_params = std::move(pParam);
