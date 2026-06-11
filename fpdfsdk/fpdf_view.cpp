@@ -60,6 +60,10 @@
 #include "fxjs/ijs_runtime.h"
 #include "public/fpdf_formfill.h"
 
+#if defined(PDF_ENABLE_BROTLI)
+#include "core/fxcodec/brotli/brotli_decoder.h"
+#endif
+
 #ifdef PDF_ENABLE_V8
 #include "fxjs/cfx_v8_array_buffer_allocator.h"
 #endif
@@ -1341,6 +1345,16 @@ FPDF_EXPORT FPDF_RESULT FPDF_CALLCONV FPDF_BStr_Clear(FPDF_BSTR* bstr) {
   return 0;
 }
 #endif  // PDF_ENABLE_XFA
+
+#ifdef PDF_ENABLE_BROTLI
+FPDF_EXPORT void FPDF_CALLCONV FPDF_SetBrotliDecodeEnabled(FPDF_BOOL enabled) {
+  BrotliDecoder::SetBrotliEnabled(static_cast<bool>(enabled));
+}
+
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_IsBrotliDecodeEnabled() {
+  return BrotliDecoder::GetBrotliEnabled();
+}
+#endif  // PDF_ENABLE_BROTLI
 
 FPDF_EXPORT FPDF_DEST FPDF_CALLCONV FPDF_GetNamedDest(FPDF_DOCUMENT document,
                                                       int index,
