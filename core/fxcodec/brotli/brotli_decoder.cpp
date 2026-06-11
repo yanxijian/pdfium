@@ -16,8 +16,11 @@ namespace {
 constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
 }  // namespace
 
+bool BrotliDecoder::enabled_ = false;
+
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(enabled_);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
