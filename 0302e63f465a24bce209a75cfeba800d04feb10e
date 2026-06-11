@@ -48,6 +48,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "581de736_8b0481cd",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 44
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T17:17:13Z",
+      "side": 1,
+      "message": "Might have come off differently from what I intended (Sorry for that). Happy to keep it as is but just curious why we are doing it this way.",
+      "parentUuid": "f17a8e6d_483d68d9",
+      "range": {
+        "startLine": 30,
+        "startChar": 22,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "0302e63f465a24bce209a75cfeba800d04feb10e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1690ecec_18e654c9",
