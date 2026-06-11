@@ -74,7 +74,16 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
     const uint32_t file_size_;
     uint32_t styles_ = 0;
     Mask<FX_CharsetFlag> charsets_;
+    uint32_t glyph_count_ = 0;
   };
+
+  virtual bool IsBetterMatch(const FontFaceInfo* candidate,
+                             int32_t candidate_score,
+                             const FontFaceInfo* current_best,
+                             int32_t current_best_score,
+                             FX_Charset charset,
+                             const ByteString& family,
+                             bool bMatchName) const;
 
   void ScanPath(const ByteString& path);
   void ScanFile(const ByteString& path);
