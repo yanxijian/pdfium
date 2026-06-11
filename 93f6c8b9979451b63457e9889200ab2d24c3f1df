@@ -105,6 +105,30 @@
       },
       "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5660f71_680cdb61",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-11T18:45:29Z",
+      "side": 1,
+      "message": "SGTM, done. I changed PruneFieldArray() to return whether the field array is empty after pruning, and used that result at both the recursive call site and the AcroForm cleanup check.",
+      "parentUuid": "11c9760b_7bc8db0a",
+      "range": {
+        "startLine": 373,
+        "startChar": 0,
+        "endLine": 373,
+        "endChar": 4
+      },
+      "revId": "93f6c8b9979451b63457e9889200ab2d24c3f1df",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
