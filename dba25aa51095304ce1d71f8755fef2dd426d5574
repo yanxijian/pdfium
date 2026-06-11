@@ -1,0 +1,173 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03f0d24d_64cefddb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T20:05:22Z",
+      "side": 1,
+      "message": "Your CL is fine, just to make you aware of some pdfium-specific stuff that handles these enum class masks with type safety,",
+      "revId": "dba25aa51095304ce1d71f8755fef2dd426d5574",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61dd2a85_8743bc12",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T20:05:22Z",
+      "side": 1,
+      "message": "similarly, here if we start with an emtpy Mask\u003cHighlightStyle\u003e, we can |\u003d the constants directly, then pass `mask.UncheckedValue()\u0027",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 51
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "c1aa0b07_ae7bf49d",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "#include \"core/fxcrt/mask.h\"\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 86,
+                "startChar": 0,
+                "endLine": 87,
+                "endChar": 0
+              },
+              "replacement": "  fxcrt::Mask\u003cHighlightStyle\u003e highlight;\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 89,
+                "startChar": 0,
+                "endLine": 90,
+                "endChar": 0
+              },
+              "replacement": "      highlight |\u003d HighlightStyle::kInverted;\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 92,
+                "startChar": 0,
+                "endLine": 93,
+                "endChar": 0
+              },
+              "replacement": "      highlight |\u003d HighlightStyle::kOutline;\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 95,
+                "startChar": 0,
+                "endLine": 96,
+                "endChar": 0
+              },
+              "replacement": "      highlight |\u003d HighlightStyle::kPush;\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 100,
+                "startChar": 0,
+                "endLine": 101,
+                "endChar": 0
+              },
+              "replacement": "  GetNormalWidget()-\u003eModifyStyleExts(highlight.UncheckedValue(),\n"
+            }
+          ]
+        }
+      ],
+      "revId": "dba25aa51095304ce1d71f8755fef2dd426d5574",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbae3f53_cfb29baa",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T20:05:22Z",
+      "side": 1,
+      "message": "Drive-by: just wanted to call attention to fxcrt::Mask\u003c\u003e, this might clean up as `auto exts_mask \u003d Mask\u003chighlightStyle\u003e::FromUnderlyingUnchecked(pWidget-\u003eGetStyleExts());` then you can \u0026 | etc the enum class without casts/to_underlyfig.",
+      "range": {
+        "startLine": 225,
+        "startChar": 6,
+        "endLine": 225,
+        "endChar": 30
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "5d101f8c_471076c4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "#include \"core/fxcrt/mask.h\"\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 225,
+                "startChar": 0,
+                "endLine": 227,
+                "endChar": 0
+              },
+              "replacement": "  auto exts_mask \u003d\n      fxcrt::Mask\u003cHighlightStyle\u003e::FromUnderlyingUnchecked(pWidget-\u003eGetStyleExts());\n  if (exts_mask.Has(HighlightStyle::kInverted)) {\n"
+            },
+            {
+              "path": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+              "range": {
+                "startLine": 241,
+                "startChar": 0,
+                "endLine": 243,
+                "endChar": 0
+              },
+              "replacement": "  if (exts_mask.Has(HighlightStyle::kOutline)) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "dba25aa51095304ce1d71f8755fef2dd426d5574",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
