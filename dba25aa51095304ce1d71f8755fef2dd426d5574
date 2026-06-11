@@ -111,6 +111,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a459397a_5802c687",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-11T20:07:37Z",
+      "side": 1,
+      "message": "also mask.h has using fxcrt::Mask so we just write Mask\u003cT\u003e without the qualifier.",
+      "parentUuid": "61dd2a85_8743bc12",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 51
+      },
+      "revId": "dba25aa51095304ce1d71f8755fef2dd426d5574",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bbae3f53_cfb29baa",
         "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
         "patchSetId": 6
