@@ -68,19 +68,6 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
     uint32_t glyph_count_ = 0;
   };
 
-  void ScanPath(const ByteString& path);
-  void ScanFile(const ByteString& path);
-  void ReportFace(const ByteString& path,
-                  FILE* pFile,
-                  FX_FILESIZE filesize,
-                  uint32_t offset);
-  void* GetSubstFont(const ByteString& face);
-  void* FindFont(int weight,
-                 bool bItalic,
-                 FX_Charset charset,
-                 int pitch_family,
-                 const ByteString& family,
-                 bool bMatchName);
   static bool FindFamilyNameMatch(ByteStringView family_name,
                                   const ByteString& installed_font_name);
   static ByteString ReadStringFromFile(FILE* pFile, uint32_t size);
@@ -97,6 +84,20 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
                              FX_Charset charset,
                              const ByteString& family,
                              bool bMatchName) const;
+
+  void ScanPath(const ByteString& path);
+  void ScanFile(const ByteString& path);
+  void ReportFace(const ByteString& path,
+                  FILE* pFile,
+                  FX_FILESIZE filesize,
+                  uint32_t offset);
+  void* GetSubstFont(const ByteString& face);
+  void* FindFont(int weight,
+                 bool bItalic,
+                 FX_Charset charset,
+                 int pitch_family,
+                 const ByteString& family,
+                 bool bMatchName);
 
   std::map<ByteString, std::unique_ptr<FontFaceInfo>> font_list_;
   std::vector<ByteString> path_list_;
