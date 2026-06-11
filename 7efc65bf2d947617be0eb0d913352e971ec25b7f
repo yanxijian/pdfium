@@ -415,6 +415,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4aedc9a3_1ab8057e",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T14:03:48Z",
+      "side": 1,
+      "message": "1. I already did change the variable name as a part of this. I thought initially had 2 suggestions: make the variable name ...Bytes instead and use shift by 20 instead of the *1024 as it is less verbose. Have reverted it to * 1024.\n\n2. One critical part is that a limit was needed; without a limit you can have a stream that is a zip bomb of sorts that uncompresses to a very large size. So a limit here was needed. For the value itself, since there is no real specification for this;\n\nI am going to be honest here, the limit was arbitrary. I just thought of a power of 2 that was not unusually large and landed on 64 and went with that.\n\nSome of the other filters use different limits (ex: Flate uses 1GiB, while some others use 20MiB)\n\n1. Done\n2. Might need to discuss this further. Happy to use 1GiB to match Flate, or if you have any other suggestions for a limit let me know.",
+      "parentUuid": "a32ee56b_667af787",
+      "range": {
+        "startLine": 16,
+        "startChar": 17,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "7efc65bf2d947617be0eb0d913352e971ec25b7f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d3104483_8fa84145",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 15
