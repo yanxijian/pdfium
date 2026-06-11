@@ -65,6 +65,7 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
     const uint32_t file_size_;
     uint32_t styles_ = 0;
     Mask<FX_CharsetFlag> charsets_;
+    uint32_t glyph_count_ = 0;
   };
 
   void ScanPath(const ByteString& path);
@@ -80,6 +81,22 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
                  int pitch_family,
                  const ByteString& family,
                  bool bMatchName);
+  static bool FindFamilyNameMatch(ByteStringView family_name,
+                                  const ByteString& installed_font_name);
+  static ByteString ReadStringFromFile(FILE* pFile, uint32_t size);
+  static ByteString LoadTableFromTT(FILE* pFile,
+                                    const uint8_t* pTables,
+                                    uint32_t nTables,
+                                    uint32_t tag,
+                                    FX_FILESIZE fileSize);
+
+  virtual bool IsBetterMatch(const FontFaceInfo* candidate,
+                             int32_t candidate_score,
+                             const FontFaceInfo* current_best,
+                             int32_t current_best_score,
+                             FX_Charset charset,
+                             const ByteString& family,
+                             bool bMatchName) const;
 
   std::map<ByteString, std::unique_ptr<FontFaceInfo>> font_list_;
   std::vector<ByteString> path_list_;
