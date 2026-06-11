@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7fb9b70_1165fa3e",
+        "filename": "core/fxcrt/fx_codepage.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T17:43:50Z",
+      "side": 1,
+      "message": "Why is this not mapped?",
+      "revId": "55975f046eb5df3d8f99b3f85211b7c77d89341b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
