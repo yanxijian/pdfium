@@ -539,6 +539,9 @@ int CheckPDFiumCApi() {
     CHK(FPDF_GetXFAPacketName);
     CHK(FPDF_InitLibrary);
     CHK(FPDF_InitLibraryWithConfig);
+#ifdef PDF_ENABLE_BROTLI
+    CHK(FPDF_IsBrotliDecodeEnabled);
+#endif
     CHK(FPDF_LoadCustomDocument);
     CHK(FPDF_LoadDocument);
     CHK(FPDF_LoadMemDocument);
@@ -552,6 +555,9 @@ int CheckPDFiumCApi() {
     CHK(FPDF_RenderPageBitmapWithMatrix);
 #if defined(PDF_USE_SKIA)
     CHK(FPDF_RenderPageSkia);
+#endif
+#ifdef PDF_ENABLE_BROTLI
+    CHK(FPDF_SetBrotliDecodeEnabled);
 #endif
 #if defined(_WIN32)
     CHK(FPDF_SetPrintMode);
