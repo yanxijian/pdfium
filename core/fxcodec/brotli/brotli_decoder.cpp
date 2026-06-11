@@ -8,6 +8,7 @@
 #include <memory>
 #include <utility>
 
+#include "brotli_decoder.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/numerics/safe_conversions.h"
@@ -15,6 +16,7 @@
 
 namespace {
 constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
+bool g_brotli_enabled_ = false;
 }  // namespace
 
 void BrotliDecoderStateDeleter::operator()(
@@ -24,6 +26,7 @@ void BrotliDecoderStateDeleter::operator()(
 
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(g_brotli_enabled_);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
@@ -65,4 +68,12 @@ DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
     }
     return {DataVector<uint8_t>(), 0u};
   }
+}
+
+void BrotliDecoder::SetBrotliEnabled(bool enabled) {
+  g_brotli_enabled_ = enabled;
+}
+
+bool BrotliDecoder::GetBrotliEnabled() {
+  return g_brotli_enabled_;
 }
