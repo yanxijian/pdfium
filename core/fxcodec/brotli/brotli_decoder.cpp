@@ -14,8 +14,15 @@
 #include "third_party/brotli/include/brotli/decode.h"
 
 namespace {
+<<<<<<< PATCH SET (550aa79d2a14196094aa419009d9e54f9eba30d2 Add public API to enable/disable Brotli stream decoding)
+constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
+bool g_brotli_enabled = false;
+||||||| BASE      (d907aa83b9ea48a1d1192e807daa72a7a7fceae5 Add BrotliDecode filter support for PDF 2.0 streams)
+constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
+=======
 
 constexpr size_t kMaxDecodeBytes = 1024 * 1024 * 1024;
+>>>>>>> BASE      (70119ad20e377bfa266cc8279951d331a37dbe0e Add BrotliDecode filter support for PDF 2.0 streams)
 
 struct BrotliDecoderStateDeleter {
   void operator()(struct BrotliDecoderStateStruct* ptr) const {
@@ -27,6 +34,7 @@ struct BrotliDecoderStateDeleter {
 
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(g_brotli_enabled);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
@@ -68,4 +76,12 @@ DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
     }
     return {DataVector<uint8_t>(), 0u};
   }
+}
+
+void BrotliDecoder::SetBrotliEnabled(bool enabled) {
+  g_brotli_enabled = enabled;
+}
+
+bool BrotliDecoder::GetBrotliEnabled() {
+  return g_brotli_enabled;
 }
