@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a34f4ed9_745f3771",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 50
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 11,
+        "startChar": 34,
+        "endLine": 11,
+        "endChar": 42
+      },
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ab16fd9_6c807c07",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "Is this variable necessary?",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a11345b0_afcf142f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "This means some data stream out there is larger than 64 MB uncompressed, but this code will refuse to decompress it. This does not feel right.\n\nI\u0027m fine with doing Brotli decompression in chunks in the line 45 loop below, but I\u0027m concerned that the overall function cannot handle larger outputs.",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "095f03e5_be3d5fe3",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "There should be a `// SAFETY ...` comment to explain why this is safe. Or use spans as much as possible instead of using pointer arthimatics.",
+      "range": {
+        "startLine": 47,
+        "startChar": 24,
+        "endLine": 47,
+        "endChar": 38
+      },
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48d6f600_c9e9e380",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 50
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "Since this class only has a single static method, should it even have a class at all?\n\nEven for FlateModule, it\u0027s kinda meh to have a class that can\u0027t get instantiated.",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a781570b_1e724677",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-11T20:35:13Z",
+      "side": 1,
+      "message": "Do you have a try job run where CompareBitmapWithExpectationSuffix() failed? It works in my local development environment.",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
