@@ -17,12 +17,18 @@ namespace {
 constexpr size_t kMaxDecodeBytes = 64 * 1024 * 1024;
 }  // namespace
 
+<<<<<<< PATCH SET (2b607a983e7408e7a143be488255170cac145b92 Add public API to enable/disable Brotli stream decoding)
+bool BrotliDecoder::enabled_ = false;
+||||||| BASE      (9564f610d1e36fa62a836eb9aa36e87422b06b59 Add BrotliDecode filter support for PDF 2.0 streams)
+=======
 void BrotliDecoder::BrotliDeleter::operator()(BrotliDecoderState* ptr) const {
   BrotliDecoderDestroyInstance(ptr);
 }
+>>>>>>> BASE      (34a520439043b163979a359d3650fd440d0b8db8 Add BrotliDecode filter support for PDF 2.0 streams)
 
 DataAndBytesConsumed BrotliDecoder::Decode(pdfium::span<const uint8_t> src_span,
                                            uint32_t estimated_decode_size) {
+  CHECK(enabled_);
   if (src_span.empty()) {
     return {DataVector<uint8_t>(), 0u};
   }
