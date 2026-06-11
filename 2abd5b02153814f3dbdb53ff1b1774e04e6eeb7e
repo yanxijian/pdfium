@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaa55a32_1373266b",
+        "filename": "core/fpdfapi/page/cpdf_streamparser.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-11T15:43:08Z",
+      "side": 1,
+      "message": "```suggestion\n    if (BrotliDecoder::GetBrotliEnabled()) {\n```\n\nNo one saw that...",
+      "revId": "2abd5b02153814f3dbdb53ff1b1774e04e6eeb7e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
