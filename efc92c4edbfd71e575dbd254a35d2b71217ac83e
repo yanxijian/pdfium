@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54ddc959_ae5fcdc8",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-12T00:38:52Z",
+      "side": 1,
+      "message": "Move not helpful?",
+      "revId": "efc92c4edbfd71e575dbd254a35d2b71217ac83e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50105a5b_35dbbd29",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-12T00:38:52Z",
+      "side": 1,
+      "message": "FindFamilyNameMatch() is no longer obviously visible in the code below.",
+      "range": {
+        "startLine": 391,
+        "startChar": 34,
+        "endLine": 391,
+        "endChar": 75
+      },
+      "revId": "efc92c4edbfd71e575dbd254a35d2b71217ac83e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72adc855_765c90d5",
+        "filename": "core/fxge/cfx_folderfontinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-12T00:38:52Z",
+      "side": 1,
+      "message": "style",
+      "range": {
+        "startLine": 86,
+        "startChar": 34,
+        "endLine": 86,
+        "endChar": 44
+      },
+      "revId": "efc92c4edbfd71e575dbd254a35d2b71217ac83e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
