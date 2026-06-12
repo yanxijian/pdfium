@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcf04b03_a6df955a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 50
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a34f4ed9_745f3771",
+      "range": {
+        "startLine": 11,
+        "startChar": 34,
+        "endLine": 11,
+        "endChar": 42
+      },
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ab16fd9_6c807c07",
@@ -41,6 +65,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80ab7f2e_c3603114",
+        "filename": "core/fpdfapi/parser/fpdf_parser_decode.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "Not needed, removed.",
+      "parentUuid": "7ab16fd9_6c807c07",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a11345b0_afcf142f",
@@ -54,6 +96,24 @@
       "writtenOn": "2026-06-11T20:35:13Z",
       "side": 1,
       "message": "This means some data stream out there is larger than 64 MB uncompressed, but this code will refuse to decompress it. This does not feel right.\n\nI\u0027m fine with doing Brotli decompression in chunks in the line 45 loop below, but I\u0027m concerned that the overall function cannot handle larger outputs.",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ebe2fe4_f639c41b",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "There are 3 main choices here:\n1. Fail on large sizes\nPros: A lower risk of having a PDF that just zip bombs your ram\nCons: A lot of PDFs fail to decode which can be confusing for users.\n\n2. Return a half decoded stream\nPros: We don\u0027t return a failure state and at least give a bit of the stream.\nCons: Unpredictable Behaviour and the PDF may not render. \n\n3. Removing the check\nPros: Supports more PDFs without failing\nCons: Floods the RAM and may cause a DOS.\n\nFor these large buffers, even just at the max size of 64MB, a full decode takes ~1.7 seconds on my system (Might differ system to system but just giving an example). Allowing exponential growth to support such streams will cause a 10GiB sample for instance to take 270s to decode.\n\nAFAIK FlateDecode also imposes a limit of 1GiB to protect against this case.\n\nI would say at this point option 1 seems like the best choice considering that while some PDFs fail, if the limit is set right the vast majority should render fine.",
+      "parentUuid": "a11345b0_afcf142f",
       "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -81,6 +141,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2145a8f6_a54ba3de",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "095f03e5_be3d5fe3",
+      "range": {
+        "startLine": 47,
+        "startChar": 24,
+        "endLine": 47,
+        "endChar": 38
+      },
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "48d6f600_c9e9e380",
@@ -98,6 +182,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3859d39a_f25673e4",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 50
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "The follow up CL adds 2 more (albeit static) methods and a private static boolean to this class as well. The class remains an organisational choice which might be better than adding these to the global namespace where they might conflict with other functions.",
+      "parentUuid": "48d6f600_c9e9e380",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a781570b_1e724677",
@@ -111,6 +213,24 @@
       "writtenOn": "2026-06-11T20:35:13Z",
       "side": 1,
       "message": "Do you have a try job run where CompareBitmapWithExpectationSuffix() failed? It works in my local development environment.",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "404cb75b_e5e67ea0",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T05:49:00Z",
+      "side": 1,
+      "message": "As far as I remember, it didn\u0027t work on my local machine without Fuzzy (MacOS 26.5.1, agg)\n\n```\n[ RUN      ] BrotliEmbedderTest.SimpleBrotliWithText\n../../testing/embedder_test.cpp:548: Failure\nExpected equality of these values:\n  pixels_different\n    Which is: 4\n  0\nPixels do not match!\nActual pixels (open in browser):\n[base64]\nExpected pixels (open in browser):\n[more base64]\n\nGoogle Test trace:\n../../testing/embedder_test.cpp:1184: CompareBitmapWithExpectationSuffix() with /Users/aryankrishnan/repo/pdfium/out/pdfiumtest/../../testing/resources/embedder_tests/hello_world_agg_mac.png\n\n[  FAILED  ] BrotliEmbedderTest.SimpleBrotliWithText (15 ms)\n[----------] 1 test from BrotliEmbedderTest (15 ms total)\n\n[----------] Global test environment tear-down\n[\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d] 1 test from 1 test suite ran. (63 ms total)\n[  PASSED  ] 0 tests.\n[  FAILED  ] 1 test, listed below:\n[  FAILED  ] BrotliEmbedderTest.SimpleBrotliWithText\n\n 1 FAILED TEST\n```\n\nLeaving it Fuzzy for now, updating the comment to mention why, let me know if you\u0027d like me to leave it as non-Fuzzy (should pass on the bots either way, but might cause later confusion if someone clones the repo on MacOS 26)",
+      "parentUuid": "a781570b_1e724677",
       "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
