@@ -651,14 +651,20 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
 
   while (pIterator->NextWord()) {
     CPVT_WordPlace place = pIterator->GetAt();
-    if (bContinuous) {
-      if (place.LineCmp(oldplace) != 0) {
+    CPVT_Word word;
+    bool bIsLTR = true;
+    if (pIterator->GetWord(word)) {
+      bIsLTR = word.nDirection == CPVT_WordDirection::kLeftToRight;
+    }
+
+    if (bContinuous && bIsLTR) {
+      if (place.LineCmp(oldplace) != 0 ||
+          (!sWords.IsEmpty() && word.nFontIndex != nCurFontIndex)) {
         if (!sWords.IsEmpty()) {
           sEditStream << GetWordRenderString(sWords.AsStringView());
           sWords.clear();
         }
 
-        CPVT_Word word;
         if (pIterator->GetWord(word)) {
           ptNew = CFX_PointF(word.ptWord.x + ptOffset.x,
                              word.ptWord.y + ptOffset.y);
@@ -677,7 +683,6 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
         }
       }
 
-      CPVT_Word word;
       if (pIterator->GetWord(word)) {
         if (word.nFontIndex != nCurFontIndex) {
           if (!sWords.IsEmpty()) {
@@ -693,7 +698,11 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
       }
       oldplace = place;
     } else {
-      CPVT_Word word;
+      if (!sWords.IsEmpty()) {
+        sEditStream << GetWordRenderString(sWords.AsStringView());
+        sWords.clear();
+      }
+
       if (pIterator->GetWord(word)) {
         ptNew =
             CFX_PointF(word.ptWord.x + ptOffset.x, word.ptWord.y + ptOffset.y);
@@ -711,7 +720,19 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
         sEditStream << GetWordRenderString(
             pEdit->GetPDFWordString(nCurFontIndex, word.Word, SubWord)
                 .AsStringView());
+      } else {
+        CPVT_Line line;
+        pIterator->GetLine(line);
+        ptNew =
+            CFX_PointF(line.ptLine.x + ptOffset.x, line.ptLine.y + ptOffset.y);
+
+        if (ptNew.x != ptOld.x || ptNew.y != ptOld.y) {
+          WritePoint(sEditStream, {ptNew.x - ptOld.x, ptNew.y - ptOld.y})
+              << " " << kMoveTextPositionOperator << "\n";
+          ptOld = ptNew;
+        }
       }
+      oldplace = place;
     }
   }
 

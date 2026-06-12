@@ -673,14 +673,26 @@ void CPWL_Edit::GetCaretInfo(CFX_PointF* ptHead, CFX_PointF* ptFoot) const {
   CPVT_Word word;
   CPVT_Line line;
   if (pIterator->GetWord(word)) {
-    ptHead->x = word.ptWord.x + word.fWidth;
+    ptHead->x = word.GetCaretX();
     ptHead->y = word.ptWord.y + word.fAscent;
-    ptFoot->x = word.ptWord.x + word.fWidth;
+    ptFoot->x = word.GetCaretX();
     ptFoot->y = word.ptWord.y + word.fDescent;
   } else if (pIterator->GetLine(line)) {
-    ptHead->x = line.ptLine.x;
+    bool bIsRTL = false;
+    CPVT_WordPlace old_place = pIterator->GetAt();
+    if (pIterator->NextWord()) {
+      CPVT_Word first_word;
+      if (pIterator->GetWord(first_word) &&
+          first_word.nDirection == CPVT_WordDirection::kRightToLeft) {
+        bIsRTL = true;
+      }
+    }
+    pIterator->SetAt(old_place);
+
+    float fX = bIsRTL ? line.ptLine.x + line.fLineWidth : line.ptLine.x;
+    ptHead->x = fX;
     ptHead->y = line.ptLine.y + line.fLineAscent;
-    ptFoot->x = line.ptLine.x;
+    ptFoot->x = fX;
     ptFoot->y = line.ptLine.y + line.fLineDescent;
   }
 }
