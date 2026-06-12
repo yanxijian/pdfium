@@ -322,7 +322,15 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
   vt_iterator->SetAt(0);
   while (vt_iterator->NextWord()) {
     CPVT_WordPlace place = vt_iterator->GetWordPlace();
-    if (continuous) {
+
+    bool bContinuous = continuous;
+    CPVT_Word peek_word;
+    if (bContinuous && vt_iterator->GetWord(peek_word) &&
+        peek_word.nDirection != CPVT_WordDirection::kLeftToRight) {
+      bContinuous = false;
+    }
+
+    if (bContinuous) {
       if (place.LineCmp(oldplace) != 0) {
         if (!words.IsEmpty()) {
           line_stream << GetWordRenderString(words.AsStringView());
@@ -361,6 +369,13 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
       }
       oldplace = place;
     } else {
+      if (!words.IsEmpty()) {
+        line_stream << GetWordRenderString(words.AsStringView());
+        edit_stream << line_stream.str();
+        line_stream.str("");
+        words.clear();
+      }
+
       CPVT_Word word;
       if (vt_iterator->GetWord(word)) {
         new_point =
