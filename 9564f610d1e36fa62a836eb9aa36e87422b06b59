@@ -16,6 +16,24 @@
       "message": "@thestig@chromium.org I think the trybots are down",
       "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a12c22e9_a64467ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 51
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T06:16:42Z",
+      "side": 1,
+      "message": "Its due to the same thing that is not letting me open gerrit half the time, seems like some \"Bot filter\" is a bit too harsh right now.\n\nThere is a 429 from \"gerrit_client.py\" per the logs despite the IP being a Google cloud address after a quick search.",
+      "parentUuid": "84839d45_c90ce9d0",
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
