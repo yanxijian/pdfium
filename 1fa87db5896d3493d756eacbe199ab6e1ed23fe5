@@ -18,6 +18,23 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fe40059_588dc418",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T11:19:23Z",
+      "side": 1,
+      "message": "Maybe:\n```\nAddresses post-landing review comments to CL 148813.\n\nBuild up the highlight...\n```",
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "f882621b_57653946",
@@ -31,6 +48,23 @@
       "writtenOn": "2026-06-11T22:09:14Z",
       "side": 1,
       "message": "Thanks.  In particular, trying to \u0026-this against a different enum class should be caught.  As you progress, I\u0027d not be surprised if you hit that !",
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd5180e5_6c6a070e",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T11:19:23Z",
+      "side": 1,
+      "message": "@tsepez@chromium.org Curious about why we are changing this. The old version only seemed to be setting one highlight value (not multiple) so I don\u0027t see why we would use a mask here, similarly ModifyStyleExts() also takes a numeric type (not a mask).\n\nLet me know what I am missing here, thanks!",
       "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
