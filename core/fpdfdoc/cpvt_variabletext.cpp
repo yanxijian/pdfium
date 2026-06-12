@@ -152,6 +152,7 @@ bool CPVT_VariableText::Iterator::GetWord(CPVT_Word& word) const {
   word.fDescent = vt_->GetWordDescent(*pInfo);
   word.nFontIndex = pInfo->nFontIndex;
   word.fFontSize = vt_->GetWordFontSize();
+  word.nDirection = pInfo->nDirection;
   return true;
 }
 

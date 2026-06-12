@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <sstream>
 #include <utility>
+#include <vector>
 
 #include "constants/annotation_common.h"
 #include "constants/appearance.h"
@@ -313,76 +314,39 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
                           bool continuous,
                           uint16_t sub_word) {
   fxcrt::ostringstream edit_stream;
-  fxcrt::ostringstream line_stream;
-  CFX_PointF old_point;
   CFX_PointF new_point;
   int32_t current_font_index = -1;
-  CPVT_WordPlace oldplace;
-  ByteString words;
+
+  std::vector<CPVT_Word> all_words;
   vt_iterator->SetAt(0);
   while (vt_iterator->NextWord()) {
-    CPVT_WordPlace place = vt_iterator->GetWordPlace();
-    if (continuous) {
-      if (place.LineCmp(oldplace) != 0) {
-        if (!words.IsEmpty()) {
-          line_stream << GetWordRenderString(words.AsStringView());
-          edit_stream << line_stream.str();
-          line_stream.str("");
-          words.clear();
-        }
-        CPVT_Word word;
-        if (vt_iterator->GetWord(word)) {
-          new_point =
-              CFX_PointF(word.ptWord.x + offset.x, word.ptWord.y + offset.y);
-        } else {
-          CPVT_Line line;
-          vt_iterator->GetLine(line);
-          new_point =
-              CFX_PointF(line.ptLine.x + offset.x, line.ptLine.y + offset.y);
-        }
-        if (new_point != old_point) {
-          WritePoint(line_stream, new_point - old_point) << " Td\n";
-          old_point = new_point;
-        }
-      }
-      CPVT_Word word;
-      if (vt_iterator->GetWord(word)) {
-        if (word.nFontIndex != current_font_index) {
-          if (!words.IsEmpty()) {
-            line_stream << GetWordRenderString(words.AsStringView());
-            words.clear();
-          }
-          line_stream << GetFontSetString(font_map, word.nFontIndex,
-                                          word.fFontSize);
-          current_font_index = word.nFontIndex;
-        }
-        words +=
-            GetPDFWordString(font_map, current_font_index, word.Word, sub_word);
-      }
-      oldplace = place;
-    } else {
-      CPVT_Word word;
-      if (vt_iterator->GetWord(word)) {
-        new_point =
-            CFX_PointF(word.ptWord.x + offset.x, word.ptWord.y + offset.y);
-        if (new_point != old_point) {
-          WritePoint(edit_stream, new_point - old_point) << " Td\n";
-          old_point = new_point;
-        }
-        if (word.nFontIndex != current_font_index) {
-          edit_stream << GetFontSetString(font_map, word.nFontIndex,
-                                          word.fFontSize);
-          current_font_index = word.nFontIndex;
-        }
-        edit_stream << GetWordRenderString(
-            GetPDFWordString(font_map, current_font_index, word.Word, sub_word)
-                .AsStringView());
-      }
+    CPVT_Word word;
+    if (vt_iterator->GetWord(word)) {
+      all_words.push_back(word);
     }
   }
-  if (!words.IsEmpty()) {
-    line_stream << GetWordRenderString(words.AsStringView());
-    edit_stream << line_stream.str();
+
+  std::sort(all_words.begin(), all_words.end(),
+            [](const CPVT_Word& a, const CPVT_Word& b) {
+              if (a.ptWord.y != b.ptWord.y) {
+                return a.ptWord.y > b.ptWord.y;
+              }
+              return a.ptWord.x < b.ptWord.x;
+            });
+
+  for (const auto& word : all_words) {
+    new_point = CFX_PointF(word.ptWord.x + offset.x, word.ptWord.y + offset.y);
+    if (word.nFontIndex != current_font_index) {
+      edit_stream << GetFontSetString(font_map, word.nFontIndex,
+                                      word.fFontSize);
+      current_font_index = word.nFontIndex;
+    }
+    CFX_Matrix text_matrix;
+    text_matrix.Translate(new_point.x, new_point.y);
+    WriteMatrix(edit_stream, text_matrix) << " Tm\n";
+    edit_stream << GetWordRenderString(
+        GetPDFWordString(font_map, current_font_index, word.Word, sub_word)
+            .AsStringView());
   }
   return ByteString(edit_stream);
 }
