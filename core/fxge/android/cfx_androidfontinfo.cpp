@@ -233,3 +233,83 @@ bool CFX_AndroidFontInfo::IsBetterMatch(const FontFaceInfo* candidate,
                                            current_best, current_best_score,
                                            charset, family, bMatchName);
 }
+
+bool CFX_AndroidFontInfo::GetFontCharset(void* hFont, FX_Charset* charset) {
+  if (!hFont) {
+    return false;
+  }
+  // Check supported charsets in order of specificity (Symbol and CJK first,
+  // then regional, then ANSI last) to ensure we resolve kDefault to the most
+  // specific charset supported by the font (e.g. preventing CJK fonts that
+  // also support ANSI from being incorrectly resolved as ANSI).
+  FontFaceInfo* pFont = static_cast<FontFaceInfo*>(hFont);
+  if (pFont->charsets_ & FX_CharsetFlag::kSymbol) {
+    *charset = FX_Charset::kSymbol;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kShiftJIS) {
+    *charset = FX_Charset::kShiftJIS;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kChineseSimplified) {
+    *charset = FX_Charset::kChineseSimplified;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kChineseTraditional) {
+    *charset = FX_Charset::kChineseTraditional;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kHangul) {
+    *charset = FX_Charset::kHangul;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kJohab) {
+    *charset = FX_Charset::kJohab;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Cyrillic) {
+    *charset = FX_Charset::kMSWin_Cyrillic;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Greek) {
+    *charset = FX_Charset::kMSWin_Greek;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Turkish) {
+    *charset = FX_Charset::kMSWin_Turkish;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Hebrew) {
+    *charset = FX_Charset::kMSWin_Hebrew;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Arabic) {
+    *charset = FX_Charset::kMSWin_Arabic;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Baltic) {
+    *charset = FX_Charset::kMSWin_Baltic;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_Vietnamese) {
+    *charset = FX_Charset::kMSWin_Vietnamese;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kThai) {
+    *charset = FX_Charset::kThai;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kMSWin_EasternEuropean) {
+    *charset = FX_Charset::kMSWin_EasternEuropean;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kOEM) {
+    *charset = FX_Charset::kOEM;
+    return true;
+  }
+  if (pFont->charsets_ & FX_CharsetFlag::kANSI) {
+    *charset = FX_Charset::kANSI;
+    return true;
+  }
+  return false;
+}

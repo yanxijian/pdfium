@@ -22,6 +22,7 @@ class CFX_AndroidFontInfo final : public CFX_FolderFontInfo {
                 FX_Charset charset,
                 int pitch_family,
                 const ByteString& face) override;
+  bool GetFontCharset(void* hFont, FX_Charset* charset) override;
 
  protected:
   // CFX_FolderFontInfo:
