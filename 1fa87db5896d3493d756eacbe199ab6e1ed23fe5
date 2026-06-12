@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "22f02cbb_9c20ac86",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T11:25:53Z",
+      "side": 1,
+      "message": "Minor nit (feel free to ignore)\n\n```suggestion\nUse fxcrt::Mask\u003c\u003e for push button highlight styles\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 51
+      },
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a0f8776e_87397413",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -31,6 +54,24 @@
       "writtenOn": "2026-06-12T11:19:23Z",
       "side": 1,
       "message": "Maybe:\n```\nAddresses post-landing review comments to CL 148813.\n\nBuild up the highlight...\n```",
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52542b92_2732a250",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-12T11:25:53Z",
+      "side": 1,
+      "message": "Edit: \"Address\" instead of \"Addresses\"\n\n```\n...\nAddress post-landing review comments for CL 148813.\n\nBuild up the highlight ...\n```",
+      "parentUuid": "1fe40059_588dc418",
       "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
