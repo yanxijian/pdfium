@@ -56,14 +56,16 @@ class CPDFSDK_InteractiveForm final
   void SynchronizeField(CPDF_FormField* pFormField);
 #endif  // PDF_ENABLE_XFA
 
-  bool OnKeyStrokeCommit(CPDF_FormField* pFormField, const WideString& csValue);
-  bool OnValidate(CPDF_FormField* pFormField, const WideString& csValue);
-  void OnCalculate(CPDF_FormField* pFormField);
-  std::optional<WideString> OnFormat(CPDF_FormField* pFormField);
+  bool OnKeyStrokeCommit(RetainPtr<CPDF_FormField> pFormField,
+                         const WideString& csValue);
+  bool OnValidate(RetainPtr<CPDF_FormField> pFormField,
+                  const WideString& csValue);
+  void OnCalculate(RetainPtr<CPDF_FormField> pFormField);
+  std::optional<WideString> OnFormat(RetainPtr<CPDF_FormField> pFormField);
 
-  void ResetFieldAppearance(CPDF_FormField* pFormField,
+  void ResetFieldAppearance(RetainPtr<CPDF_FormField> pFormField,
                             std::optional<WideString> sValue);
-  void UpdateField(CPDF_FormField* pFormField);
+  void UpdateField(RetainPtr<CPDF_FormField> pFormField);
 
   bool DoAction_Hide(const CPDF_Action& action);
   bool DoAction_SubmitForm(const CPDF_Action& action);
