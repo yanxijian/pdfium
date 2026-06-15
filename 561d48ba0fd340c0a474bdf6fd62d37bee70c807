@@ -41,6 +41,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cddbc30e_2d9b0255",
+        "filename": "xfa/fgas/layout/cfgas_char.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-15T19:21:32Z",
+      "side": 1,
+      "message": "Done. Added named constants `kNibbleBits`/`kNibbleMask` for the nibble shift/mask, and `kBidiClassNone` for the `0xF` \"no BidiClass\" sentinel. Replaced the magic numbers",
+      "parentUuid": "755a90ef_1b531e7f",
+      "range": {
+        "startLine": 228,
+        "startChar": 45,
+        "endLine": 228,
+        "endChar": 49
+      },
+      "revId": "561d48ba0fd340c0a474bdf6fd62d37bee70c807",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2333e56e_c0100085",
@@ -64,6 +88,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2c8644b_6bdfccb1",
+        "filename": "xfa/fgas/layout/cfgas_char.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-15T19:21:32Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "2333e56e_c0100085",
+      "range": {
+        "startLine": 372,
+        "startChar": 42,
+        "endLine": 372,
+        "endChar": 45
+      },
+      "revId": "561d48ba0fd340c0a474bdf6fd62d37bee70c807",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fc46f12c_f4527e36",
@@ -77,6 +125,30 @@
       "writtenOn": "2026-06-15T14:55:34Z",
       "side": 1,
       "message": "char_type for consistency with char_type_?",
+      "range": {
+        "startLine": 75,
+        "startChar": 11,
+        "endLine": 75,
+        "endChar": 19
+      },
+      "revId": "561d48ba0fd340c0a474bdf6fd62d37bee70c807",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab7bbe95_64abd48a",
+        "filename": "xfa/fgas/layout/cfgas_rtfbreak.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-15T19:21:32Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "fc46f12c_f4527e36",
       "range": {
         "startLine": 75,
         "startChar": 11,
