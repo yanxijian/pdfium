@@ -422,23 +422,24 @@ void CPDFSDK_FormFillEnvironment::OnSetFieldInputFocusInternal(
 }
 
 void CPDFSDK_FormFillEnvironment::OnCalculate(
-    ObservedPtr<CPDFSDK_Annot>& pAnnot) {
-  ObservedPtr<CPDFSDK_Widget> pWidget(ToCPDFSDKWidget(pAnnot.Get()));
-  if (pWidget) {
-    interactive_form_->OnCalculate(pWidget->GetFormField());
+    ObservedPtr<CPDFSDK_Annot>& annot) {
+  ObservedPtr<CPDFSDK_Widget> widget(ToCPDFSDKWidget(annot.Get()));
+  if (widget) {
+    interactive_form_->OnCalculate(widget->GetFormField());
   }
 }
 
-void CPDFSDK_FormFillEnvironment::OnFormat(ObservedPtr<CPDFSDK_Annot>& pAnnot) {
-  ObservedPtr<CPDFSDK_Widget> pWidget(ToCPDFSDKWidget(pAnnot.Get()));
-  std::optional<WideString> sValue =
-      interactive_form_->OnFormat(pWidget->GetFormField());
-  if (!pWidget) {
+void CPDFSDK_FormFillEnvironment::OnFormat(ObservedPtr<CPDFSDK_Annot>& annot) {
+  ObservedPtr<CPDFSDK_Widget> widget(ToCPDFSDKWidget(annot.Get()));
+  RetainPtr<CPDF_FormField> form_field(widget->GetFormField());
+  std::optional<WideString> formatted_value =
+      interactive_form_->OnFormat(form_field.Get());
+  if (!widget) {
     return;
   }
-  if (sValue.has_value()) {
-    interactive_form_->ResetFieldAppearance(pWidget->GetFormField(), sValue);
-    interactive_form_->UpdateField(pWidget->GetFormField());
+  if (formatted_value.has_value()) {
+    interactive_form_->ResetFieldAppearance(form_field.Get(), formatted_value);
+    interactive_form_->UpdateField(form_field.Get());
   }
 }
 
@@ -901,7 +902,7 @@ void CPDFSDK_FormFillEnvironment::SendOnFocusChange(
 }
 
 bool CPDFSDK_FormFillEnvironment::DoActionDocOpen(const CPDF_Action& action) {
-  std::set<const CPDF_Dictionary*> visited;
+  std::set<RetainPtr<const CPDF_Dictionary>> visited;
   return ExecuteDocumentOpenAction(action, &visited);
 }
 
@@ -922,13 +923,13 @@ bool CPDFSDK_FormFillEnvironment::DoActionJavaScript(
 void CPDFSDK_FormFillEnvironment::DoActionFieldJavaScript(
     const CPDF_Action& JsAction,
     CPDF_AAction::AActionType type,
-    CPDF_FormField* pFormField,
+    CPDF_FormField* form_field,
     CFFL_FieldAction* data) {
   if (IsJSPlatformPresent() &&
       JsAction.GetType() == CPDF_Action::Type::kJavaScript) {
     WideString swJS = JsAction.GetJavaScript();
     if (!swJS.IsEmpty()) {
-      RunFieldJavaScript(pFormField, type, data, swJS);
+      RunFieldJavaScript(form_field, type, data, swJS);
     }
   }
 }
@@ -964,29 +965,29 @@ bool CPDFSDK_FormFillEnvironment::DoActionDestination(const CPDF_Dest& dest) {
 bool CPDFSDK_FormFillEnvironment::DoActionPage(
     const CPDF_Action& action,
     CPDF_AAction::AActionType eType) {
-  std::set<const CPDF_Dictionary*> visited;
+  std::set<RetainPtr<const CPDF_Dictionary>> visited;
   return ExecuteDocumentPageAction(action, eType, &visited);
 }
 
 bool CPDFSDK_FormFillEnvironment::DoActionDocument(
     const CPDF_Action& action,
     CPDF_AAction::AActionType eType) {
-  std::set<const CPDF_Dictionary*> visited;
+  std::set<RetainPtr<const CPDF_Dictionary>> visited;
   return ExecuteDocumentPageAction(action, eType, &visited);
 }
 
 bool CPDFSDK_FormFillEnvironment::DoActionField(const CPDF_Action& action,
                                                 CPDF_AAction::AActionType type,
-                                                CPDF_FormField* pFormField,
+                                                CPDF_FormField* form_field,
                                                 CFFL_FieldAction* data) {
-  std::set<const CPDF_Dictionary*> visited;
-  return ExecuteFieldAction(action, type, pFormField, data, &visited);
+  std::set<RetainPtr<const CPDF_Dictionary>> visited;
+  return ExecuteFieldAction(action, type, form_field, data, &visited);
 }
 
 bool CPDFSDK_FormFillEnvironment::ExecuteDocumentOpenAction(
     const CPDF_Action& action,
-    std::set<const CPDF_Dictionary*>* visited) {
-  const CPDF_Dictionary* dict = action.GetDict();
+    std::set<RetainPtr<const CPDF_Dictionary>>* visited) {
+  RetainPtr<const CPDF_Dictionary> dict(action.GetDict());
   if (pdfium::Contains(*visited, dict)) {
     return false;
   }
@@ -1017,8 +1018,8 @@ bool CPDFSDK_FormFillEnvironment::ExecuteDocumentOpenAction(
 bool CPDFSDK_FormFillEnvironment::ExecuteDocumentPageAction(
     const CPDF_Action& action,
     CPDF_AAction::AActionType type,
-    std::set<const CPDF_Dictionary*>* visited) {
-  const CPDF_Dictionary* dict = action.GetDict();
+    std::set<RetainPtr<const CPDF_Dictionary>>* visited) {
+  RetainPtr<const CPDF_Dictionary> dict(action.GetDict());
   if (pdfium::Contains(*visited, dict)) {
     return false;
   }
@@ -1047,21 +1048,22 @@ bool CPDFSDK_FormFillEnvironment::ExecuteDocumentPageAction(
 }
 
 bool CPDFSDK_FormFillEnvironment::IsValidField(
-    const CPDF_Dictionary* pFieldDict) {
-  DCHECK(pFieldDict);
+    const CPDF_Dictionary* field_dict) {
+  DCHECK(field_dict);
 
-  CPDFSDK_InteractiveForm* pForm = GetInteractiveForm();
-  CPDF_InteractiveForm* pPDFForm = pForm->GetInteractiveForm();
-  return !!pPDFForm->GetFieldByDict(pFieldDict);
+  CPDFSDK_InteractiveForm* sdk_form = GetInteractiveForm();
+  CPDF_InteractiveForm* pdf_form = sdk_form->GetInteractiveForm();
+  return !!pdf_form->GetFieldByDict(field_dict);
 }
 
 bool CPDFSDK_FormFillEnvironment::ExecuteFieldAction(
     const CPDF_Action& action,
     CPDF_AAction::AActionType type,
-    CPDF_FormField* pFormField,
+    CPDF_FormField* form_field,
     CFFL_FieldAction* data,
-    std::set<const CPDF_Dictionary*>* visited) {
-  const CPDF_Dictionary* dict = action.GetDict();
+    std::set<RetainPtr<const CPDF_Dictionary>>* visited) {
+  RetainPtr<CPDF_FormField> retained_field(form_field);
+  RetainPtr<const CPDF_Dictionary> dict(action.GetDict());
   if (pdfium::Contains(*visited, dict)) {
     return false;
   }
@@ -1072,8 +1074,8 @@ bool CPDFSDK_FormFillEnvironment::ExecuteFieldAction(
     if (IsJSPlatformPresent()) {
       WideString swJS = action.GetJavaScript();
       if (!swJS.IsEmpty()) {
-        RunFieldJavaScript(pFormField, type, data, swJS);
-        if (!IsValidField(pFormField->GetFieldDict())) {
+        RunFieldJavaScript(retained_field.Get(), type, data, swJS);
+        if (!IsValidField(retained_field->GetFieldDict())) {
           return false;
         }
       }
@@ -1084,7 +1086,8 @@ bool CPDFSDK_FormFillEnvironment::ExecuteFieldAction(
 
   for (size_t i = 0, sz = action.GetSubActionsCount(); i < sz; i++) {
     CPDF_Action subaction = action.GetSubAction(i);
-    if (!ExecuteFieldAction(subaction, type, pFormField, data, visited)) {
+    if (!ExecuteFieldAction(subaction, type, retained_field.Get(), data,
+                            visited)) {
       return false;
     }
   }
@@ -1159,45 +1162,51 @@ void CPDFSDK_FormFillEnvironment::DoActionNamed(const CPDF_Action& action) {
 }
 
 void CPDFSDK_FormFillEnvironment::RunFieldJavaScript(
-    CPDF_FormField* pFormField,
+    CPDF_FormField* form_field,
     CPDF_AAction::AActionType type,
     CFFL_FieldAction* data,
     const WideString& script) {
   DCHECK(type != CPDF_AAction::kCalculate);
   DCHECK(type != CPDF_AAction::kFormat);
 
-  RunScript(script, [type, data, pFormField](IJS_EventContext* context) {
+  RetainPtr<CPDF_FormField> retained_field(form_field);
+  RunScript(script, [type, data, retained_field](IJS_EventContext* context) {
     switch (type) {
       case CPDF_AAction::kCursorEnter:
-        context->OnField_MouseEnter(data->bModifier, data->bShift, pFormField);
+        context->OnField_MouseEnter(data->bModifier, data->bShift,
+                                    retained_field.Get());
         break;
       case CPDF_AAction::kCursorExit:
-        context->OnField_MouseExit(data->bModifier, data->bShift, pFormField);
+        context->OnField_MouseExit(data->bModifier, data->bShift,
+                                   retained_field.Get());
         break;
       case CPDF_AAction::kButtonDown:
-        context->OnField_MouseDown(data->bModifier, data->bShift, pFormField);
+        context->OnField_MouseDown(data->bModifier, data->bShift,
+                                   retained_field.Get());
         break;
       case CPDF_AAction::kButtonUp:
-        context->OnField_MouseUp(data->bModifier, data->bShift, pFormField);
+        context->OnField_MouseUp(data->bModifier, data->bShift,
+                                 retained_field.Get());
         break;
       case CPDF_AAction::kGetFocus:
-        context->OnField_Focus(data->bModifier, data->bShift, pFormField,
-                               &data->sValue);
+        context->OnField_Focus(data->bModifier, data->bShift,
+                               retained_field.Get(), &data->sValue);
         break;
       case CPDF_AAction::kLoseFocus:
-        context->OnField_Blur(data->bModifier, data->bShift, pFormField,
-                              &data->sValue);
+        context->OnField_Blur(data->bModifier, data->bShift,
+                              retained_field.Get(), &data->sValue);
         break;
       case CPDF_AAction::kKeyStroke:
         context->OnField_Keystroke(
             &data->sChange, data->sChangeEx, data->bKeyDown, data->bModifier,
-            &data->nSelEnd, &data->nSelStart, data->bShift, pFormField,
-            &data->sValue, data->bWillCommit, data->bFieldFull, &data->bRC);
+            &data->nSelEnd, &data->nSelStart, data->bShift,
+            retained_field.Get(), &data->sValue, data->bWillCommit,
+            data->bFieldFull, &data->bRC);
         break;
       case CPDF_AAction::kValidate:
-        context->OnField_Validate(&data->sChange, data->sChangeEx,
-                                  data->bKeyDown, data->bModifier, data->bShift,
-                                  pFormField, &data->sValue, &data->bRC);
+        context->OnField_Validate(
+            &data->sChange, data->sChangeEx, data->bKeyDown, data->bModifier,
+            data->bShift, retained_field.Get(), &data->sValue, &data->bRC);
         break;
       default:
         NOTREACHED();
