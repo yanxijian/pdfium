@@ -1,0 +1,127 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d6ece82_0779e5e8",
+        "filename": "xfa/fwl/cfwl_caret.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T23:09:28Z",
+      "side": 1,
+      "message": "Up to you, if you want to avoid the head-scratching between the plural name of the method and the singular variable name, you could write `SetStates({WidgetState::kCaretHighlight});` but do as you like.",
+      "range": {
+        "startLine": 28,
+        "startChar": 2,
+        "endLine": 28,
+        "endChar": 42
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "82b8539c_3923fd43",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "xfa/fwl/cfwl_caret.cpp",
+              "range": {
+                "startLine": 28,
+                "startChar": 0,
+                "endLine": 29,
+                "endChar": 0
+              },
+              "replacement": "  SetStates({WidgetState::kCaretHighlight});\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ca94f70579c485dde0b4f04b450d8c225cd4c1ff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b86625e1_42a28abb",
+        "filename": "xfa/fwl/cfwl_edit.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T23:09:28Z",
+      "side": 1,
+      "message": "pre-existing:: suggest parens around \u0026 though not needed.",
+      "range": {
+        "startLine": 584,
+        "startChar": 6,
+        "endLine": 584,
+        "endChar": 49
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "5b4cbeb7_6de1595b",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "xfa/fwl/cfwl_edit.cpp",
+              "range": {
+                "startLine": 584,
+                "startChar": 0,
+                "endLine": 585,
+                "endChar": 0
+              },
+              "replacement": "  if ((properties_.states_ \u0026 WidgetState::kFocused) \u0026\u0026 !rtCaret.IsEmpty()) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ca94f70579c485dde0b4f04b450d8c225cd4c1ff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb760833_52e748e4",
+        "filename": "xfa/fwl/cfwl_widget.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T23:09:28Z",
+      "side": 1,
+      "message": "pre-existing:  It\u0027s always  bugged me (but not enough to do anything about it) that set and remove aren\u0027t direct antonyms:  set and clear, add and remove, but we\u0027re mixing the two.  Want to change it to ClearStates while we at it?",
+      "range": {
+        "startLine": 128,
+        "startChar": 15,
+        "endLine": 128,
+        "endChar": 27
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "c594ebd3_4a9b7841",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "xfa/fwl/cfwl_widget.h",
+              "range": {
+                "startLine": 128,
+                "startChar": 0,
+                "endLine": 129,
+                "endChar": 0
+              },
+              "replacement": "  virtual void ClearStates(Mask\u003cWidgetState\u003e states);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ca94f70579c485dde0b4f04b450d8c225cd4c1ff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
