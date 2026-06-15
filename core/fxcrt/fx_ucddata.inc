@@ -886,18 +886,18 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0375
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0376
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0377
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0378
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0379
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0378
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0379
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+037A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+037B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+037C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+037D
   CHARPROP____(0x1ffu, kNormal, kON, kIS)  // U+037E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+037F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0380
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0381
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0382
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0383
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+037F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0380
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0381
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0382
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0383
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0384
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0385
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0386
@@ -905,9 +905,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0388
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0389
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+038A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+038B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+038B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+038C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+038D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+038D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+038E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+038F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0390
@@ -928,7 +928,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+039F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+03A0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+03A1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+03A2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+03A2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+03A3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+03A4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+03A5
@@ -1316,17 +1316,17 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0523
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0524
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0525
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0526
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0527
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0528
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0529
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+052F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0530
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0526
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0527
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0528
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0529
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+052F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0530
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0531
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0532
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0533
@@ -1365,8 +1365,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0554
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0555
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0556
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0557
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0558
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0557
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0558
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0559
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+055A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+055B
@@ -1374,7 +1374,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+055D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+055E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+055F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0560
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0560
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0561
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0562
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0563
@@ -1414,15 +1414,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0585
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0586
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0587
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0588
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0588
   CHARPROP____(0x1ffu, kNormal, kL, kIS)  // U+0589
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+058A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+058B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+058C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+058D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+058E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+058F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0590
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+058B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+058C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+058D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+058E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+058F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0590
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0591
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0592
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0593
@@ -1478,14 +1478,14 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+05C5
   CHARPROP____(0x1ffu, kNormal, kR, kEX)  // U+05C6
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+05C7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05C8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05C9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05CF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05C8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05C9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05CF
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05D0
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05D1
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05D2
@@ -1513,33 +1513,33 @@
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05E8
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05E9
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05EA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05EB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05EC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05ED
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05EE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05EF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05EB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05EC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05ED
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05EE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05EF
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05F0
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05F1
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05F2
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05F3
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+05F4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05F5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05F6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05F7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05F8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05F9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+05FF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05F5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05F6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05F7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05F8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05F9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+05FF
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kAL)  // U+0600
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kAL)  // U+0601
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kAL)  // U+0602
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kAL)  // U+0603
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+0604
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+0605
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+0604
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+0605
   CHARPROP____(0x1ffu, kArabicNormal, kON, kAL)  // U+0606
   CHARPROP____(0x1ffu, kArabicNormal, kON, kAL)  // U+0607
   CHARPROP____(0x1ffu, kArabicNormal, kAL, kAL)  // U+0608
@@ -1562,11 +1562,11 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0619
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+061A
   CHARPROP____(0x1ffu, kArabicNormal, kAL, kEX)  // U+061B
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+061C
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+061D
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+061C
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+061D
   CHARPROP____(0x1ffu, kArabicNormal, kAL, kEX)  // U+061E
   CHARPROP____(0x1ffu, kArabicNormal, kAL, kEX)  // U+061F
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+0620
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+0620
   CHARPROP____(0x1ffu, kArabicNormal, kAL, kAL)  // U+0621
   CHARPROP____(0x1ffu, kArabicAlef, kAL, kAL)  // U+0622
   CHARPROP____(0x1ffu, kArabicAlef, kAL, kAL)  // U+0623
@@ -1629,7 +1629,7 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+065C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+065D
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+065E
-  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNONE)  // U+065F
+  CHARPROP____(0x1ffu, kArabicNormal, kAL, kNone)  // U+065F
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kNU)  // U+0660
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kNU)  // U+0661
   CHARPROP____(0x1ffu, kArabicNormal, kAN, kNU)  // U+0662
@@ -1804,7 +1804,7 @@
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+070B
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+070C
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+070D
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+070E
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+070E
   CHARPROP____(0x1ffu, kNormal, kBN, kAL)  // U+070F
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+0710
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0711
@@ -1865,8 +1865,8 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0748
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0749
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+074A
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+074B
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+074C
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+074B
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+074C
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+074D
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+074E
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+074F
@@ -1968,20 +1968,20 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+07AF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+07B0
   CHARPROP____(0x1ffu, kNormal, kAL, kAL)  // U+07B1
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B2
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B3
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B4
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B5
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B6
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B7
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B8
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07B9
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BA
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BB
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BC
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BD
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BE
-  CHARPROP____(0x1ffu, kUnknown, kAL, kNONE)  // U+07BF
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B2
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B3
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B4
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B5
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B6
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B7
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B8
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07B9
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BA
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BB
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BC
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BD
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BE
+  CHARPROP____(0x1ffu, kUnknown, kAL, kNone)  // U+07BF
   CHARPROP____(0x1ffu, kNormal, kR, kNU)  // U+07C0
   CHARPROP____(0x1ffu, kNormal, kR, kNU)  // U+07C1
   CHARPROP____(0x1ffu, kNormal, kR, kNU)  // U+07C2
@@ -2041,11 +2041,11 @@
   CHARPROP____(0x1ffu, kNormal, kON, kIS)  // U+07F8
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+07F9
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+07FA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+07FB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+07FC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+07FD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+07FE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+07FF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+07FB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+07FC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+07FD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+07FE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+07FF
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0800
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0801
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0802
@@ -2092,8 +2092,8 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+082B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+082C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+082D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+082E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+082F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+082E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+082F
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0830
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0831
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+0832
@@ -2109,199 +2109,199 @@
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+083C
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+083D
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+083E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+083F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0840
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0841
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0842
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0843
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0844
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0845
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0846
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0847
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0848
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0849
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+084F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0850
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0851
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0852
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0853
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0854
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0855
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0856
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0857
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0858
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0859
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+085F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0860
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0861
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0862
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0863
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0864
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0865
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0866
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0867
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0868
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0869
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+086F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0870
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0871
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0872
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0873
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0874
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0875
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0876
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0877
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0878
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0879
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+087F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0880
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0881
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0882
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0883
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0884
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0885
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0886
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0887
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0888
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0889
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+088F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0890
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0891
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0892
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0893
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0894
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0895
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0896
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0897
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0898
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+0899
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089A
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089B
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089D
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+089F
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08A9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08AF
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08B9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08BF
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08C9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08CF
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08D9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08DF
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08E9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08EA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08EB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08EC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08ED
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08EE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08EF
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F0
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F1
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F2
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F3
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F4
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F5
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F6
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F7
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F8
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08F9
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FA
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FB
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FC
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FD
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FE
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+08FF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+083F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0840
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0841
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0842
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0843
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0844
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0845
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0846
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0847
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0848
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0849
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+084F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0850
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0851
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0852
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0853
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0854
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0855
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0856
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0857
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0858
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0859
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+085F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0860
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0861
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0862
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0863
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0864
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0865
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0866
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0867
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0868
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0869
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+086F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0870
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0871
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0872
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0873
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0874
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0875
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0876
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0877
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0878
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0879
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+087F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0880
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0881
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0882
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0883
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0884
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0885
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0886
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0887
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0888
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0889
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+088F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0890
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0891
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0892
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0893
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0894
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0895
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0896
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0897
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0898
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+0899
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089A
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089B
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089C
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089E
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+089F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08A9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08AF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08B9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08BF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08C9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08CF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08D9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08DF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08E9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08EA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08EB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08EC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08ED
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08EE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08EF
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F0
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F1
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F2
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F3
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F4
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F5
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F6
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F7
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F8
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08F9
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FA
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FB
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FC
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FD
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FE
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+08FF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0900
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0901
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0902
@@ -2360,8 +2360,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0937
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0938
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0939
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+093A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+093B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+093A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+093B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+093C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+093D
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+093E
@@ -2381,15 +2381,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+094C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+094D
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+094E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+094F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+094F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0950
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0951
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0952
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0953
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0954
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0955
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0956
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0957
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0956
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0957
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0958
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0959
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+095A
@@ -2417,12 +2417,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0970
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0971
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0972
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0973
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0974
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0975
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0976
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0977
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0978
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0973
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0974
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0975
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0976
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0977
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0978
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0979
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+097A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+097B
@@ -2430,11 +2430,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+097D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+097E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+097F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0980
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0980
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0981
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0982
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0983
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0984
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0984
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0985
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0986
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0987
@@ -2443,12 +2443,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+098A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+098B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+098C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+098D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+098E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+098D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+098E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+098F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0990
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0991
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0992
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0991
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0992
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0993
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0994
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0995
@@ -2471,7 +2471,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09A6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09A7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09A8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09A9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09A9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09AA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09AB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09AC
@@ -2479,17 +2479,17 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09AE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09AF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09B1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09B1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09B3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09B4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09B5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09B3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09B4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09B5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09B9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09BA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09BB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09BA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09BB
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09BC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09BD
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09BE
@@ -2499,39 +2499,39 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09C2
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09C3
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09C4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09C5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09C6
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09C7
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09CA
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09CB
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09CC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09CD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09CF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D6
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+09D7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09D9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09DA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09DB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09D9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09DA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09DB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09DC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09DD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09DE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09DE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09DF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09E0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09E1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09E2
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+09E3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09E4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09E5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09E4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09E5
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+09E6
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+09E7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+09E8
@@ -2554,29 +2554,29 @@
   CHARPROP____(0x1ffu, kNormal, kL, kPO)  // U+09F9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+09FA
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+09FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+09FF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+09FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A00
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A01
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A02
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0A03
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A04
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A04
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A05
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A06
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A07
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A08
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A09
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A0A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A0B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A0D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A0E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A0B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A0C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A0E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A0F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A11
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A12
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A12
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A14
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A15
@@ -2599,7 +2599,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A26
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A27
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A29
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A2A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A2B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A2C
@@ -2607,59 +2607,59 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A2E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A2F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A30
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A31
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A31
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A32
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A33
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A34
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A34
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A35
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A36
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A37
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A37
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A38
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A3B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A3C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A3D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A3D
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0A3E
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0A3F
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0A40
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A41
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A42
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A43
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A45
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A46
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A43
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A44
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A46
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A47
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A49
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A4A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A4A
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A4B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A4C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A50
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A54
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A55
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A56
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A55
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A56
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A57
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A58
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A59
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A5A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A5B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A5D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A5F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A60
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A61
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A62
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A60
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A61
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A62
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A63
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A65
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0A66
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0A67
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0A68
@@ -2676,21 +2676,21 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A73
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A74
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A80
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A81
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0A82
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0A83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A84
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A85
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A86
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A87
@@ -2700,11 +2700,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A8B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A8C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A8E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A8F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A90
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A91
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0A92
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0A92
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A93
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A94
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0A95
@@ -2727,7 +2727,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AA6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AA7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AA9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AAA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AAB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AAC
@@ -2735,17 +2735,17 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AAE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AAF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AB1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AB1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AB4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ABA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ABB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ABA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ABB
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0ABC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0ABD
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0ABE
@@ -2756,38 +2756,38 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AC3
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AC4
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AC6
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AC7
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AC8
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0AC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ACA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ACA
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0ACB
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0ACC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0ACD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ACE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ACF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ACE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ACF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ADF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ADF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AE0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0AE1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AE2
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0AE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AE5
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AE6
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AE7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AE8
@@ -2798,27 +2798,27 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AED
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AEE
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0AEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF0
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+0AF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0AFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0AFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B00
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B01
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B02
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B03
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B04
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B04
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B05
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B06
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B07
@@ -2827,12 +2827,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B0A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B0B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B0D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B0E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B0E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B0F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B11
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B12
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B12
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B14
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B15
@@ -2855,7 +2855,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B26
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B27
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B29
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B2A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B2B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B2C
@@ -2863,17 +2863,17 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B2E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B2F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B30
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B31
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B31
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B32
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B33
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B34
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B34
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B35
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B36
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B37
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B38
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B3B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B3C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B3D
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B3E
@@ -2883,39 +2883,39 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B42
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B43
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B45
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B46
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B46
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B47
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B49
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B4A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B4A
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B4B
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B4C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B50
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B54
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B55
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B51
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B55
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B56
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0B57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B58
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B59
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B5B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B5C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B5E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B5F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B60
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B61
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B62
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B65
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0B66
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0B67
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0B68
@@ -2928,66 +2928,66 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0B6F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B70
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B81
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0B82
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B84
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B85
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B86
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B87
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B88
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B89
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B8D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B8E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B8F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B91
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B92
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B93
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B94
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B95
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B96
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B98
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B99
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B9B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0B9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0B9D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B9E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0B9F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BA3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BA4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BA7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BA7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BA8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BA9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BAA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BAC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BAD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BAB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BAD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BAE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BAF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BB0
@@ -3000,50 +3000,50 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BB7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BB8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BBD
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BBE
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BBF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0BC0
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BC1
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BC5
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BC6
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BC7
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BC9
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BCA
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BCB
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BCC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0BCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BCF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0BD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD6
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0BD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BE5
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0BE6
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0BE7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0BE8
@@ -3065,16 +3065,16 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0BF8
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+0BF9
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0BFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0BFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0BFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C00
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C01
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C02
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C03
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C04
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C04
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C05
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C06
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C07
@@ -3083,11 +3083,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C0A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C0B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C0D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C0E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C0F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C11
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C12
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C14
@@ -3111,7 +3111,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C26
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C27
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C29
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C2A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C2B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C2C
@@ -3122,15 +3122,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C31
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C32
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C33
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C34
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C34
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C35
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C36
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C37
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C38
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C3C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C3D
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C3E
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C3F
@@ -3139,39 +3139,39 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C42
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C43
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C45
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C46
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C47
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C49
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C4A
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C4B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C4C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C50
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C51
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C54
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C55
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C56
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C57
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C57
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C58
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C5F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C60
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C61
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C62
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0C63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C65
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C66
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C67
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C68
@@ -3182,14 +3182,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C6D
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C6E
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0C6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C77
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0C78
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0C79
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0C7A
@@ -3198,11 +3198,11 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0C7D
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0C7E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C81
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C82
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0C83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C84
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C85
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C86
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C87
@@ -3211,11 +3211,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C8A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C8B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C8D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C8E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C8F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0C91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0C91
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C92
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C93
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0C94
@@ -3239,7 +3239,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CA6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CA7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CA9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CAA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CAB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CAC
@@ -3250,14 +3250,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CB4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CBB
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0CBC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CBD
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CBE
@@ -3267,39 +3267,39 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CC2
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CC3
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CC5
   CHARPROP____(0x1ffu, kCombination, kL, kCM)  // U+0CC6
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CC7
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CC9
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CCA
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CCB
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0CCC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0CCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CCF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD4
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CD5
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0CD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CDD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CDF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CE0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0CE1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0CE2
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0CE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CE5
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CE6
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CE7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CE8
@@ -3310,27 +3310,27 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CED
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CEE
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0CEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0CF1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+0CF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0CFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D00
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D01
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0CFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D01
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D02
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D03
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D04
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D04
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D05
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D06
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D07
@@ -3339,11 +3339,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D0A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D0B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D0D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D0E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D0F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D11
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D12
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D14
@@ -3367,7 +3367,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D26
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D27
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D29
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D2A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D2B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D2C
@@ -3384,9 +3384,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D37
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D38
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D3C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D3D
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D3E
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D3F
@@ -3395,39 +3395,39 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D42
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D43
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D45
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D46
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D47
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D49
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D4A
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D4B
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D4C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D50
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D54
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D55
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D56
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D51
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D55
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D56
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D58
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D59
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D5F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D60
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D61
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D62
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0D63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D65
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0D66
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0D67
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0D68
@@ -3444,9 +3444,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D73
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D74
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D78
   CHARPROP____(0x1ffu, kNormal, kL, kPO)  // U+0D79
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D7A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D7B
@@ -3454,11 +3454,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D7D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D7E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D81
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D82
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0D83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D84
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D85
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D86
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D87
@@ -3477,9 +3477,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D94
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D95
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D98
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0D99
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0D99
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D9A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D9B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0D9C
@@ -3504,7 +3504,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DAF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DB2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DB2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB5
@@ -3514,10 +3514,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DB9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DBA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DBC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DBF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC2
@@ -3525,23 +3525,23 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DC9
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0DCA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DCB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DCC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DCB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DCC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DCD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DCE
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DCF
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DD0
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DD1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0DD2
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0DD3
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0DD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DD5
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0DD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DD7
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DD8
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DD9
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DDA
@@ -3550,39 +3550,39 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DDD
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DDE
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF1
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DF2
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+0DF3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0DF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0DFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0DFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E00
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E01
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E02
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E03
@@ -3641,10 +3641,10 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0E38
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0E39
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0E3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E3C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E3D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E3E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E3D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E3E
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+0E3F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E40
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E41
@@ -3674,67 +3674,67 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0E59
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+0E5A
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+0E5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E5F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E60
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E61
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E62
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E65
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E67
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E68
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E69
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E60
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E61
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E62
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E63
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E66
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E68
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E69
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E80
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E81
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E82
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E83
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E83
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E84
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E85
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E86
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E85
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E86
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E87
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E88
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E89
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E89
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E8C
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E8F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E91
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E92
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E93
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E90
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E92
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E93
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E94
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E95
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E96
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0E98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0E98
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E99
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E9A
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E9B
@@ -3742,19 +3742,19 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E9D
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E9E
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0E9F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EA0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EA0
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EA1
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EA2
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EA3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EA4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EA4
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EA5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EA6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EA6
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EA7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EA8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EA9
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EAA
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EAC
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EAD
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EAE
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EAF
@@ -3768,28 +3768,28 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EB7
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EB8
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EBA
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EBB
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EBC
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EBF
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC0
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC1
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC2
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC3
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EC5
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EC7
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EC8
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0EC9
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0ECA
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0ECB
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0ECC
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+0ECD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ECE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0ECF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ECE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0ECF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED0
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED1
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED2
@@ -3800,44 +3800,44 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+0ED9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EDB
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EDC
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+0EDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0EFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0EFF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F00
   CHARPROP____(0x1ffu, kNormal, kL, kBB)  // U+0F01
   CHARPROP____(0x1ffu, kNormal, kL, kBB)  // U+0F02
@@ -3910,7 +3910,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F45
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F46
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F47
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F48
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F48
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F49
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F4A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F4B
@@ -3947,10 +3947,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F6A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F6B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F70
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F71
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F72
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F73
@@ -3978,10 +3978,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F89
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F8A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0F8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F8F
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F90
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F91
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F92
@@ -3990,7 +3990,7 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F95
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F96
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0F98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0F98
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F99
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F9A
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0F9B
@@ -4027,7 +4027,7 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0FBA
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0FBB
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+0FBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FBD
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+0FBE
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+0FBF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FC0
@@ -4043,7 +4043,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FCA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FCB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FCC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FCD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FCD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FCE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FCF
   CHARPROP____(0x1ffu, kNormal, kL, kBB)  // U+0FD0
@@ -4055,45 +4055,45 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FD6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FD7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+0FD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+0FFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+0FFF
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1000
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1001
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1002
@@ -4292,16 +4292,16 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10C3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10C4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10CF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10D0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10D1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10D2
@@ -4347,9 +4347,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10FA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10FB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+10FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+10FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+10FF
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+1100
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+1101
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+1102
@@ -4679,13 +4679,13 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1246
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1247
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1248
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1249
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1249
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+124A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+124B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+124C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+124D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+124E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+124F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+124E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+124F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1250
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1251
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1252
@@ -4693,15 +4693,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1254
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1255
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1256
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1257
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1257
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1258
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1259
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1259
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+125A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+125B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+125C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+125D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+125E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+125F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+125E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+125F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1260
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1261
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1262
@@ -4743,13 +4743,13 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1286
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1287
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1288
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1289
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1289
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+128A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+128B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+128C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+128D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+128E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+128F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+128E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+128F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1290
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1291
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1292
@@ -4783,13 +4783,13 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12AE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12AF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12B1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12B1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12B6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12B7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12B6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12B7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12B9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12BA
@@ -4797,15 +4797,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12BC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12BD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12BE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12BF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12BF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12C1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12C1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12C7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12C9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12CA
@@ -4821,7 +4821,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12D4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12D5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12D6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+12D7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+12D7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12D8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12D9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+12DA
@@ -4879,13 +4879,13 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+130E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+130F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1310
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1311
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1311
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1312
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1313
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1314
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1315
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1316
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1317
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1316
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1317
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1318
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1319
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+131A
@@ -4953,10 +4953,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1358
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1359
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+135A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+135B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+135C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+135D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+135E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+135B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+135C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+135D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+135E
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+135F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1360
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1361
@@ -4987,9 +4987,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+137A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+137B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+137C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+137D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+137E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+137F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+137D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+137E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+137F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1380
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1381
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1382
@@ -5016,12 +5016,12 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1397
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1398
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1399
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+139F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+139F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13A0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13A1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13A2
@@ -5107,17 +5107,17 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13F2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13F3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+13F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+13FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+13FF
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+1400
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1401
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1402
@@ -5787,9 +5787,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+169A
   CHARPROP____(0x00eu, kNormal, kON, kOP)  // U+169B
   CHARPROP____(0x00fu, kNormal, kON, kCL)  // U+169C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+169D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+169E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+169F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+169D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+169E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+169F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16A0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16A1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16A2
@@ -5871,21 +5871,21 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16EE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16EF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+16F0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+16FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+16FF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1700
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1701
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1702
@@ -5899,7 +5899,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+170A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+170B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+170C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+170D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+170D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+170E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+170F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1710
@@ -5907,17 +5907,17 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1712
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1713
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1714
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1715
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1716
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1717
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1718
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1719
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+171F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1715
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1716
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1717
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1718
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1719
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+171F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1720
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1721
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1722
@@ -5941,15 +5941,15 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1734
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1735
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1736
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1737
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1738
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1739
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+173F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1737
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1738
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1739
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+173F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1740
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1741
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1742
@@ -5970,18 +5970,18 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1751
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1752
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1753
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1754
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1755
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1756
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1757
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1758
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1759
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+175F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1754
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1755
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1756
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1757
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1758
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1759
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+175F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1760
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1761
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1762
@@ -5995,25 +5995,25 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+176A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+176B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+176C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+176D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+176D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+176E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+176F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1770
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1771
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1771
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1772
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1773
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1774
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1775
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1776
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1777
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1778
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1779
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+177F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1774
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1775
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1776
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1777
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1778
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1779
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+177F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1780
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1781
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1782
@@ -6108,8 +6108,8 @@
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+17DB
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+17DC
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+17DD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17DE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17DF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17DE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17DF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E0
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E1
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E2
@@ -6120,12 +6120,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+17E9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17EA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17EB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17EC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17ED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17EE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17EF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17EA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17EB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17EC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17ED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17EE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17EF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F2
@@ -6136,12 +6136,12 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F7
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F8
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+17F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+17FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+17FF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1800
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1801
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+1802
@@ -6157,7 +6157,7 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+180C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+180D
   CHARPROP____(0x1ffu, kNormal, kWS, kGL)  // U+180E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+180F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+180F
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1810
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1811
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1812
@@ -6168,12 +6168,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1817
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1818
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1819
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+181F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+181F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1820
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1821
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1822
@@ -6262,14 +6262,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1875
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1876
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1877
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1878
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1879
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+187F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1878
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1879
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+187F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1880
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1881
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1882
@@ -6313,11 +6313,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18A8
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+18A9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18AA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18AB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18AC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18AD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18AE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18AF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18AB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18AC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18AD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18AE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18AF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18B0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18B1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18B2
@@ -6388,16 +6388,16 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18F3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18F4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+18F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+18FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+18FF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1900
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1901
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1902
@@ -6427,9 +6427,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+191A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+191B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+191C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+191D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+191E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+191F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+191D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+191E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+191F
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1920
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1921
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1922
@@ -6442,10 +6442,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1929
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+192A
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+192B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+192C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+192D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+192E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+192F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+192C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+192D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+192E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+192F
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1930
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1931
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1932
@@ -6458,14 +6458,14 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1939
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+193A
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+193B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+193C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+193D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+193E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+193F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+193C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+193D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+193E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+193F
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1940
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1941
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1942
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1943
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1941
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1942
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1943
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+1944
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+1945
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1946
@@ -6508,24 +6508,24 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+196B
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+196C
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+196D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+196E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+196F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+196E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+196F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1970
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1971
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1972
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1973
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1974
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1975
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1976
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1977
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1978
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1979
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+197F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1975
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1976
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1977
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1978
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1979
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+197F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1980
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1981
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1982
@@ -6570,10 +6570,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19A9
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19AA
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19AB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19AC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19AD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19AE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19AF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19AC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19AD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19AE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19AF
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19B0
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19B1
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19B2
@@ -6600,12 +6600,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19C7
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19C8
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+19C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19CF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19D0
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19D1
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19D2
@@ -6617,9 +6617,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19D8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19D9
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+19DA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19DB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19DC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+19DD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19DB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19DC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+19DD
   CHARPROP____(0x1ffu, kNormal, kON, kSA)  // U+19DE
   CHARPROP____(0x1ffu, kNormal, kON, kSA)  // U+19DF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+19E0
@@ -6682,8 +6682,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1A19
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1A1A
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1A1B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A1C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A1D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A1C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A1D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1A1E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1A1F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1A20
@@ -6749,7 +6749,7 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A5C
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A5D
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A5F
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A60
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1A61
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A62
@@ -6779,8 +6779,8 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A7A
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A7B
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+1A7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A7E
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1A7F
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A80
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A81
@@ -6792,12 +6792,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A87
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A88
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A89
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A8F
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A90
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A91
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A92
@@ -6808,12 +6808,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A97
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A98
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1A99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1A9F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1A9F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AA0
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AA1
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AA2
@@ -6828,88 +6828,88 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AAB
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AAC
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+1AAD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AAE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AAF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ABF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ACF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1ADF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1AFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AAE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AAF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AB9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ABF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ACF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1ADF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1AFF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1B00
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1B01
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1B02
@@ -6986,10 +6986,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B49
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B4A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B4B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B4C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B4C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B4D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B4F
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1B50
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1B51
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1B52
@@ -7035,9 +7035,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B7A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B7B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1B7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1B7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1B7F
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1B80
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1B81
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1B82
@@ -7081,9 +7081,9 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1BA8
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1BA9
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1BAA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BAC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BAD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BAB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BAD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1BAE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1BAF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1BB0
@@ -7096,76 +7096,76 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1BB7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1BB8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1BB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BBF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BCF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1BFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1BFF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C00
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C01
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C02
@@ -7222,9 +7222,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1C35
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1C36
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1C37
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C38
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C38
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C39
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C3A
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1C3B
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1C3C
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1C3D
@@ -7240,9 +7240,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1C47
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1C48
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+1C49
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C4A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C4B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C4C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C4A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C4B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C4C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C4D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C4E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C4F
@@ -7294,86 +7294,86 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1C7D
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1C7E
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+1C7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C81
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C82
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C84
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C85
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C86
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C87
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C88
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C89
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C8F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C91
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C92
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C93
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C94
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C95
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C98
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1C9F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CA9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CAF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CBF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C82
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C83
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C85
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C86
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C87
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C88
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C89
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C90
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C92
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C93
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C94
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C95
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C96
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C99
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1C9F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CAF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CB9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CCF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1CD0
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1CD1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1CD2
@@ -7409,19 +7409,19 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1CF0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1CF1
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+1CF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1CFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1CFF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1D00
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1D01
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1D02
@@ -7653,28 +7653,28 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DE4
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DE5
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1DFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1DFC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DFD
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DFE
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+1DFF
@@ -7956,16 +7956,16 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F14
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F15
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F16
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F17
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F16
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F17
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F18
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F19
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F1A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F1B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F1C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F1D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F1E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F1F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F1E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F1F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F20
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F21
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F22
@@ -8004,16 +8004,16 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F43
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F44
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F45
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F46
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F47
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F46
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F47
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F48
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F49
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F4A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F4B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F4C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F4F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F50
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F51
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F52
@@ -8022,13 +8022,13 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F55
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F56
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F58
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F5A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F5C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F5E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F5F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F60
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F61
@@ -8060,8 +8060,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F7B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F7C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1F7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1F7F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F80
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F81
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1F82
@@ -8115,7 +8115,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FB5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FB5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FB8
@@ -8131,7 +8131,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FC5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FC8
@@ -8146,15 +8146,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FD5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FD9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FDA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FDC
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FDD
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FDE
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FDF
@@ -8174,12 +8174,12 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FED
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FEE
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FF1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FF5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FF8
@@ -8189,7 +8189,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+1FFC
   CHARPROP____(0x1ffu, kNormal, kON, kBB)  // U+1FFD
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+1FFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+1FFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+1FFF
   CHARPROP____(0x1ffu, kNormal, kWS, kBA)  // U+2000
   CHARPROP____(0x1ffu, kNormal, kWS, kBA)  // U+2001
   CHARPROP____(0x1ffu, kNormal, kWS, kBA)  // U+2002
@@ -8291,11 +8291,11 @@
   CHARPROP____(0x1ffu, kNormal, kBN, kAL)  // U+2062
   CHARPROP____(0x1ffu, kNormal, kBN, kAL)  // U+2063
   CHARPROP____(0x1ffu, kNormal, kBN, kAL)  // U+2064
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+2065
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+2066
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+2067
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+2068
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+2069
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+2065
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+2066
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+2067
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+2068
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+2069
   CHARPROP____(0x1ffu, kControl, kBN, kCM)  // U+206A
   CHARPROP____(0x1ffu, kControl, kBN, kCM)  // U+206B
   CHARPROP____(0x1ffu, kControl, kBN, kCM)  // U+206C
@@ -8304,8 +8304,8 @@
   CHARPROP____(0x1ffu, kControl, kBN, kCM)  // U+206F
   CHARPROP____(0x1ffu, kNormal, kEN, kAL)  // U+2070
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2071
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2072
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2073
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2072
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2073
   CHARPROP____(0x1ffu, kNormal, kEN, kAI)  // U+2074
   CHARPROP____(0x1ffu, kNormal, kEN, kAL)  // U+2075
   CHARPROP____(0x1ffu, kNormal, kEN, kAL)  // U+2076
@@ -8333,23 +8333,23 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+208C
   CHARPROP____(0x01au, kNormal, kON, kOP)  // U+208D
   CHARPROP____(0x01bu, kNormal, kON, kCL)  // U+208E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+208F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+208F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2090
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2091
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2092
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2093
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2094
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2095
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2096
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2097
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2098
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2099
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+209F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2095
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2096
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2097
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2098
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2099
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+209F
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+20A0
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+20A1
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+20A2
@@ -8375,29 +8375,29 @@
   CHARPROP____(0x1ffu, kNormal, kET, kPO)  // U+20B6
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+20B7
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+20B8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20B9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20BF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20B9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20BF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20CF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20D0
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20D1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20D2
@@ -8431,21 +8431,21 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20EE
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20EF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+20F0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+20FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+20FF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2100
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2101
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2102
@@ -8584,12 +8584,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2187
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2188
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2189
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+218F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+218F
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2190
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2191
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2192
@@ -9191,29 +9191,29 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+23E6
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+23E7
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+23E8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23E9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23EA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23EB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23EC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23ED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23EE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23EF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+23FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23E9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23EA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23EB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23EC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23ED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23EE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23EF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+23FF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2400
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2401
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2402
@@ -9253,31 +9253,31 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2424
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2425
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2426
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2427
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2428
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2429
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+242F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2430
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2431
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2432
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2433
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2434
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2435
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2436
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2437
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2438
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2439
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+243F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2427
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2428
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2429
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+242F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2430
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2431
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2432
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2433
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2434
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2435
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2436
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2437
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2438
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2439
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+243F
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2440
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2441
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2442
@@ -9289,27 +9289,27 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2448
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2449
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+244A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+244B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+244C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+244D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+244E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+244F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2450
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2451
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2452
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2453
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2454
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2455
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2456
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2457
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2458
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2459
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+245F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+244B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+244C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+244D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+244E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+244F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2450
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2451
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2452
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2453
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2454
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2455
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2456
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2457
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2458
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2459
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+245F
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2460
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2461
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2462
@@ -9932,7 +9932,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26CB
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26CC
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26CE
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26CF
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26D0
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26D1
@@ -9952,12 +9952,12 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26DF
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26E0
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26E1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26E2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26E2
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26E3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26E4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26E5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26E6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+26E7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26E4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26E5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26E6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+26E7
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26E8
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26E9
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26EA
@@ -9982,18 +9982,18 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26FD
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26FE
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+26FF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2700
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2700
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2701
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2702
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2703
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2704
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2705
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2705
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2706
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2707
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2708
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2709
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+270A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+270B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+270A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+270B
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+270C
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+270D
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+270E
@@ -10022,7 +10022,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2725
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2726
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2727
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2728
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2728
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2729
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+272A
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+272B
@@ -10058,16 +10058,16 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2749
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+274A
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+274B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+274C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+274C
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+274D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+274E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+274E
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+274F
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2750
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2751
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2752
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2753
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2754
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2755
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2753
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2754
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2755
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2756
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2757
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2758
@@ -10077,8 +10077,8 @@
   CHARPROP____(0x1ffu, kNormal, kON, kQU)  // U+275C
   CHARPROP____(0x1ffu, kNormal, kON, kQU)  // U+275D
   CHARPROP____(0x1ffu, kNormal, kON, kQU)  // U+275E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+275F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2760
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+275F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2760
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2761
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+2762
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+2763
@@ -10131,9 +10131,9 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2792
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2793
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2794
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2795
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2796
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2797
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2795
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2796
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2797
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2798
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2799
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+279A
@@ -10158,7 +10158,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27AD
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27AE
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27AF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27B0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27B0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27B1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27B2
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27B3
@@ -10173,7 +10173,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27BC
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27BD
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27BE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27BF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27BF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27C0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27C1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27C2
@@ -10185,11 +10185,11 @@
   CHARPROP____(0x0a6u, kNormal, kON, kAL)  // U+27C8
   CHARPROP____(0x0a7u, kNormal, kON, kAL)  // U+27C9
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27CB
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+27CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+27CF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27D0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27D1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+27D2
@@ -11083,9 +11083,9 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B4A
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B4B
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B4C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B4D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B4F
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B50
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B51
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2B52
@@ -11096,172 +11096,172 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2B57
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2B58
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+2B59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B5F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B60
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B61
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B62
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B65
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B67
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B68
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B69
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B81
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B82
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B84
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B85
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B86
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B87
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B88
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B89
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B8F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B91
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B92
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B93
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B94
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B95
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B98
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2B9F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BA9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BAF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BBF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BCF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2BFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B60
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B61
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B62
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B63
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B66
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B68
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B69
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B82
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B83
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B85
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B86
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B87
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B88
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B89
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B90
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B92
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B93
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B94
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B95
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B96
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B99
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2B9F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BAF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BB9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2BFF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C00
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C01
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C02
@@ -11309,7 +11309,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C2C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C2D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C2E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2C2F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2C2F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C30
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C31
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C32
@@ -11357,7 +11357,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C5C
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C5D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2C5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2C5F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C60
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C61
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2C62
@@ -11504,13 +11504,13 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2CEF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2CF0
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2CF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2CF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2CF8
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+2CF9
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+2CFA
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+2CFB
@@ -11556,16 +11556,16 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D23
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D24
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D25
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D26
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D27
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D29
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D2F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D26
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D27
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D28
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D2F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D30
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D31
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D32
@@ -11620,32 +11620,32 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D63
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D64
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D65
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D67
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D68
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D69
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D6A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D66
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D68
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D69
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D6A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D6B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D6E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D7F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D80
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D81
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D82
@@ -11669,15 +11669,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D94
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D95
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2D96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D98
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2D9F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D99
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2D9F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA2
@@ -11685,7 +11685,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DA7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DA7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DA9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DAA
@@ -11693,7 +11693,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DAC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DAD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DAE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DAF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DAF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB2
@@ -11701,7 +11701,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DB7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DB7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DB9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DBA
@@ -11709,7 +11709,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DBC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DBD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DBF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC2
@@ -11717,7 +11717,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DC7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DC9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DCA
@@ -11725,7 +11725,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DCC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DCD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DCE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DCF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DCF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD2
@@ -11733,7 +11733,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DD7
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD8
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DD9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DDA
@@ -11741,7 +11741,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DDC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DDD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+2DDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2DDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2DDF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2DE0
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2DE1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+2DE2
@@ -11824,84 +11824,84 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+2E2F
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+2E30
   CHARPROP____(0x1ffu, kNormal, kON, kBA)  // U+2E31
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E32
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E33
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E34
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E35
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E36
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E37
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E38
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E3F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E40
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E41
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E42
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E43
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E45
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E46
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E47
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E49
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E50
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E54
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E55
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E56
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E58
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E5F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E60
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E61
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E62
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E65
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E67
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E68
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E69
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E32
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E33
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E34
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E35
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E36
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E37
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E38
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E39
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E3F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E40
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E41
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E42
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E43
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E44
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E46
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E47
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E48
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E51
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E55
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E56
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E57
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E59
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E60
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E61
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E62
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E63
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E66
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E68
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E69
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E7F
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E80
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E81
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E82
@@ -11928,7 +11928,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E97
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E98
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2E9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2E9A
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E9B
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E9C
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2E9D
@@ -12018,18 +12018,18 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2EF1
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2EF2
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2EF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2EFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2EFF
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2F00
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2F01
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2F02
@@ -12244,32 +12244,32 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FD3
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FD4
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FDF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FEF
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FF0
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FF1
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FF2
@@ -12282,10 +12282,10 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FF9
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FFA
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+2FFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+2FFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+2FFF
   CHARPROP____(0x1ffu, kNormal, kWS, kID)  // U+3000
   CHARPROP____(0x1ffu, kNormal, kON, kCL)  // U+3001
   CHARPROP____(0x1ffu, kNormal, kON, kCL)  // U+3002
@@ -12350,7 +12350,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+303D
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+303E
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+303F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3040
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3040
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+3041
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3042
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+3043
@@ -12437,8 +12437,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3094
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+3095
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+3096
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3097
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3098
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3097
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3098
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+3099
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+309A
   CHARPROP____(0x1ffu, kNormal, kON, kNS)  // U+309B
@@ -12542,11 +12542,11 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+30FD
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+30FE
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+30FF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3100
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3101
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3102
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3103
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3104
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3100
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3101
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3102
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3103
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3104
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3105
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3106
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3107
@@ -12588,9 +12588,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+312B
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+312C
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+312D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+312E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+312F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+3130
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+312E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+312F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+3130
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3131
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3132
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3133
@@ -12685,7 +12685,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+318C
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+318D
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+318E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+318F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+318F
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3190
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3191
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3192
@@ -12726,14 +12726,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+31B5
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+31B6
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+31B7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31B8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31B9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31BF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31B8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31B9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31BF
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31C0
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31C1
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31C2
@@ -12770,18 +12770,18 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31E1
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31E2
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+31E3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31E9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31EA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31EB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31EC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31ED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31EE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+31EF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31E9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31EA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31EB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31EC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31ED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31EE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+31EF
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+31F0
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+31F1
   CHARPROP____(0x1ffu, kNormal, kL, kNS)  // U+31F2
@@ -12829,7 +12829,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+321C
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+321D
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+321E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+321F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+321F
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3220
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3221
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3222
@@ -13053,7 +13053,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+32FC
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+32FD
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+32FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+32FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+32FF
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3300
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3301
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+3302
@@ -19891,7 +19891,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+4DB2
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+4DB3
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+4DB4
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+4DB5
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+4DB5
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DB6
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DB7
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DB8
@@ -19901,7 +19901,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DBC
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DBD
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+4DBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+4DBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+4DBF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+4DC0
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+4DC1
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+4DC2
@@ -40905,7 +40905,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+9FC8
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+9FC9
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+9FCA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+9FCB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+9FCB
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FCC
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FCD
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FCE
@@ -40957,7 +40957,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FFC
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FFD
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+9FFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+9FFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+9FFF
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A000
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A001
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A002
@@ -42123,9 +42123,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A48A
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A48B
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+A48C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A48D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A48E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A48F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A48D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A48E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A48F
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A490
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A491
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A492
@@ -42181,15 +42181,15 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A4C4
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A4C5
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+A4C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A4CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A4CF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A4D0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A4D1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A4D2
@@ -42538,26 +42538,26 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A629
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A62A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A62B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A62C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A62D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A62E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A62F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A630
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A631
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A632
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A633
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A634
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A635
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A636
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A637
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A638
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A639
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A63F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A62C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A62D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A62E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A62F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A630
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A631
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A632
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A633
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A634
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A635
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A636
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A637
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A638
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A639
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A63F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A640
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A641
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A642
@@ -42590,8 +42590,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A65D
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A65E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A65F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A660
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A661
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A660
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A661
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A662
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A663
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A664
@@ -42610,14 +42610,14 @@
   CHARPROP____(0x1ffu, kNormal, kNSM, kCM)  // U+A671
   CHARPROP____(0x1ffu, kNormal, kNSM, kCM)  // U+A672
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A673
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A674
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A675
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A676
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A677
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A678
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A679
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A67A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A67B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A674
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A675
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A676
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A677
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A678
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A679
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A67A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A67B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A67C
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A67D
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A67E
@@ -42646,14 +42646,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A695
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A696
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A697
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A698
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A699
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A69F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A698
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A699
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A69F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A6A0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A6A1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A6A2
@@ -42742,14 +42742,14 @@
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+A6F5
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+A6F6
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+A6F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A6FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A6FF
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A700
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A701
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A702
@@ -42891,116 +42891,116 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A78A
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A78B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A78C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A78D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A78E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A78F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A790
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A791
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A792
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A793
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A794
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A795
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A796
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A797
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A798
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A799
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A79F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7A9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7AF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7B9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7BF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7CF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7D9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7DF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7E9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7EA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7EB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7EC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7ED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7EE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7EF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A7FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A78D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A78E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A78F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A790
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A791
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A792
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A793
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A794
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A795
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A796
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A797
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A798
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A799
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A79F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7A9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7AF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7B9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7BF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7CF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7D9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7DF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7E9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7EA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7EB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7EC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7ED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7EE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7EF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A7FA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A7FB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A7FC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A7FD
@@ -43050,10 +43050,10 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A829
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A82A
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+A82B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A82C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A82D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A82E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A82F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A82C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A82D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A82E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A82F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A830
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A831
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A832
@@ -43064,12 +43064,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A837
   CHARPROP____(0x1ffu, kNormal, kET, kPO)  // U+A838
   CHARPROP____(0x1ffu, kNormal, kET, kAL)  // U+A839
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A83F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A83F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A840
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A841
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A842
@@ -43126,14 +43126,14 @@
   CHARPROP____(0x1ffu, kNormal, kON, kBB)  // U+A875
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+A876
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+A877
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A878
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A879
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A87F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A878
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A879
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A87F
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A880
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A881
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A882
@@ -43203,15 +43203,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A8C2
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A8C3
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A8C4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8C5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8CA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8CB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8CC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8CD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8C5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8C6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8CB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8CC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8CD
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+A8CE
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+A8CF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A8D0
@@ -43224,12 +43224,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A8D7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A8D8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A8D9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8DF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8DF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A8E0
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A8E1
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A8E2
@@ -43258,10 +43258,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A8F9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A8FA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A8FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A8FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A8FF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A900
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A901
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A902
@@ -43346,17 +43346,17 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A951
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A952
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+A953
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A954
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A955
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A956
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A957
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A958
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A959
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A95A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A95B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A95C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A95D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A95E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A954
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A955
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A956
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A957
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A958
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A959
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A95A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A95B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A95C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A95D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A95E
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A95F
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+A960
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+A961
@@ -43387,9 +43387,9 @@
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+A97A
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+A97B
   CHARPROP____(0x1ffu, kNormal, kL, kJL)  // U+A97C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A97D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A97E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A97F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A97D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A97E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A97F
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A980
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A981
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+A982
@@ -43468,7 +43468,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9CB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9CC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9CD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9CE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9CE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9CF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A9D0
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A9D1
@@ -43480,44 +43480,44 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A9D7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A9D8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+A9D9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9DA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9DB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9DC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9DD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9DA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9DB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9DC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9DD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9DE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+A9DF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9E9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9EA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9EB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9EC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9ED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9EE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9EF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9F9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+A9FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9E9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9EA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9EB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9EC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9ED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9EE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9EF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9F9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+A9FF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA00
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA01
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA02
@@ -43573,15 +43573,15 @@
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+AA34
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+AA35
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+AA36
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA37
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA38
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA3F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA37
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA38
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA39
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA3F
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA40
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA41
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA42
@@ -43596,8 +43596,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA4B
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+AA4C
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+AA4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA4F
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA50
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA51
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA52
@@ -43608,8 +43608,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA57
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA58
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+AA59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA5B
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+AA5C
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+AA5D
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+AA5E
@@ -43642,10 +43642,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA79
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA7A
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AA7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AA7F
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA80
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA81
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AA82
@@ -43713,259 +43713,259 @@
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AAC0
   CHARPROP____(0x1ffu, kCombination, kNSM, kSA)  // U+AAC1
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AAC2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAC9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AACF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAD9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AADA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AACF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AADA
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AADB
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AADC
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AADD
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AADE
   CHARPROP____(0x1ffu, kNormal, kL, kSA)  // U+AADF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAE9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAEA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAEB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAEC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAEF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AAFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB00
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB01
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB02
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB03
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB04
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB05
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB06
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB07
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB08
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB09
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB0F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB11
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB12
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB13
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB14
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB15
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB16
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB17
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB18
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB19
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB1F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB20
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB21
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB22
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB23
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB24
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB25
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB26
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB27
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB29
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB2F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB30
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB31
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB32
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB33
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB34
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB35
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB36
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB37
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB38
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB39
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB3F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB40
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB41
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB42
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB43
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB44
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB45
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB46
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB47
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB48
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB49
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB4F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB50
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB51
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB53
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB54
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB55
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB56
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB57
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB58
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB59
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB5F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB60
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB61
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB62
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB63
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB64
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB65
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB67
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB68
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB69
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB6F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB70
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB71
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB72
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB73
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB74
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB75
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB76
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB77
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB78
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB79
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB7F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB80
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB81
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB82
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB83
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB84
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB85
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB86
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB87
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB88
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB89
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB8F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB90
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB91
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB92
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB93
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB94
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB95
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB96
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB97
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB98
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB99
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+AB9F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABA9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABAF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB1
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB2
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABB9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAE9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAEA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAEB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAEC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAED
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAF9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AAFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB01
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB02
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB03
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB04
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB05
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB06
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB07
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB08
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB09
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB0F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB10
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB12
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB13
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB14
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB15
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB16
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB17
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB18
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB19
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB1F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB20
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB21
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB22
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB23
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB24
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB25
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB26
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB27
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB28
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB2F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB30
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB31
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB32
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB33
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB34
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB35
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB36
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB37
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB38
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB39
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB3F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB40
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB41
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB42
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB43
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB44
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB45
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB46
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB47
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB48
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB49
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB4F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB50
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB51
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB52
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB54
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB55
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB56
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB57
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB58
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB59
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB5F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB60
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB61
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB62
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB63
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB64
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB65
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB66
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB68
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB69
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB70
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB71
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB72
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB73
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB74
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB75
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB76
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB77
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB78
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB79
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB80
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB81
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB82
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB83
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB84
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB85
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB86
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB87
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB88
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB89
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB8F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB90
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB91
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB92
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB93
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB94
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB95
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB96
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB97
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB98
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB99
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+AB9F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABA9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABAF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB2
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABB9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABBF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+ABC0
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+ABC1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+ABC2
@@ -44012,8 +44012,8 @@
   CHARPROP____(0x1ffu, kNormal, kL, kBA)  // U+ABEB
   CHARPROP____(0x1ffu, kNormal, kL, kCM)  // U+ABEC
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+ABED
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABEF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABEE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABEF
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF0
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF1
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF2
@@ -44024,12 +44024,12 @@
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF7
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF8
   CHARPROP____(0x1ffu, kNormal, kL, kNU)  // U+ABF9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+ABFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+ABFF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC00
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC01
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC02
@@ -44057,7 +44057,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC18
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC19
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC1A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AC1B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AC1B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC1C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC1D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC1E
@@ -44085,7 +44085,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC34
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC35
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC36
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AC37
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AC37
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC38
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC39
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC3A
@@ -44113,7 +44113,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC50
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC51
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC52
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AC53
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AC53
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC54
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC55
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC56
@@ -44141,7 +44141,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC6C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC6D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC6E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AC6F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AC6F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC70
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC71
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC72
@@ -44169,7 +44169,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC88
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC89
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC8A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AC8B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AC8B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AC8C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC8D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AC8E
@@ -44197,7 +44197,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACA4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACA5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACA6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ACA7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ACA7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ACA8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACA9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACAA
@@ -44225,7 +44225,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACC0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACC1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACC2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ACC3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ACC3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ACC4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACC5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACC6
@@ -44253,7 +44253,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACDC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACDD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACDE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ACDF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ACDF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ACE0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACE1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACE2
@@ -44281,7 +44281,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACF8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACF9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACFA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ACFB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ACFB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ACFC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACFD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ACFE
@@ -44309,7 +44309,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD14
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD15
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD16
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AD17
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AD17
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AD18
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD19
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD1A
@@ -44337,7 +44337,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD30
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD31
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD32
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AD33
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AD33
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AD34
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD35
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD36
@@ -44365,7 +44365,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD4C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD4D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD4E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AD4F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AD4F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AD50
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD51
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD52
@@ -44393,7 +44393,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD68
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD69
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD6A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AD6B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AD6B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AD6C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD6D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD6E
@@ -44421,7 +44421,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD84
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD85
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD86
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AD87
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AD87
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AD88
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD89
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AD8A
@@ -44449,7 +44449,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADA0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADA1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADA2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ADA3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ADA3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ADA4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADA5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADA6
@@ -44477,7 +44477,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADBC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADBD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADBE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ADBF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ADBF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ADC0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADC1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADC2
@@ -44505,7 +44505,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADD8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADD9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADDA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ADDB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ADDB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ADDC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADDD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADDE
@@ -44533,7 +44533,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADF4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADF5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADF6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+ADF7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+ADF7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+ADF8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADF9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+ADFA
@@ -44561,7 +44561,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE12
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE13
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE13
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AE14
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE15
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE16
@@ -44589,7 +44589,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE2E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE2F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE2F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AE30
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE31
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE32
@@ -44617,7 +44617,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE4A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE4B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE4B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AE4C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE4D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE4E
@@ -44645,7 +44645,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE66
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE67
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE67
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AE68
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE69
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE6A
@@ -44673,7 +44673,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE82
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE83
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE83
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AE84
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE85
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE86
@@ -44701,7 +44701,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AE9E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AE9F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AE9F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AEA0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEA1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEA2
@@ -44729,7 +44729,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEBA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AEBB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AEBB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AEBC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEBD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEBE
@@ -44757,7 +44757,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AED4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AED5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AED6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AED7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AED7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AED8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AED9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEDA
@@ -44785,7 +44785,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEF2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AEF3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AEF3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AEF4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEF5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AEF6
@@ -44813,7 +44813,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF0C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF0D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF0E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF0F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF0F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF12
@@ -44841,7 +44841,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF28
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF29
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF2A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF2B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF2B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF2E
@@ -44869,7 +44869,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF44
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF45
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF46
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF47
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF47
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF4A
@@ -44897,7 +44897,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF60
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF61
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF62
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF63
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF63
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF66
@@ -44925,7 +44925,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF7C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF7D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF7E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF7F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF7F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF82
@@ -44953,7 +44953,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF98
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF99
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF9A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AF9B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AF9B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AF9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AF9E
@@ -44981,7 +44981,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFB4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFB5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFB6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AFB7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AFB7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AFB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFBA
@@ -45009,7 +45009,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFD0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFD1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFD2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AFD3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AFD3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AFD4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFD5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFD6
@@ -45037,7 +45037,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFEC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFEE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+AFEF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+AFEF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+AFF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+AFF2
@@ -45065,7 +45065,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B008
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B009
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B00A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B00B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B00B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B00C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B00D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B00E
@@ -45093,7 +45093,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B024
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B025
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B026
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B027
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B027
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B028
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B029
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B02A
@@ -45121,7 +45121,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B040
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B041
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B042
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B043
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B043
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B044
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B045
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B046
@@ -45149,7 +45149,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B05C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B05D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B05E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B05F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B05F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B060
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B061
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B062
@@ -45177,7 +45177,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B078
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B079
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B07A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B07B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B07B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B07C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B07D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B07E
@@ -45205,7 +45205,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B094
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B095
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B096
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B097
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B097
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B098
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B099
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B09A
@@ -45233,7 +45233,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0B2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B0B3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B0B3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B0B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0B6
@@ -45261,7 +45261,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0CE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B0CF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B0CF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B0D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0D2
@@ -45289,7 +45289,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0EA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B0EB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B0EB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B0EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B0EE
@@ -45317,7 +45317,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B104
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B105
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B106
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B107
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B107
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B108
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B109
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B10A
@@ -45345,7 +45345,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B120
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B121
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B122
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B123
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B123
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B124
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B125
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B126
@@ -45373,7 +45373,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B13C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B13D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B13E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B13F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B13F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B140
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B141
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B142
@@ -45401,7 +45401,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B158
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B159
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B15A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B15B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B15B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B15C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B15D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B15E
@@ -45429,7 +45429,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B174
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B175
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B176
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B177
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B177
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B178
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B179
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B17A
@@ -45457,7 +45457,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B190
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B191
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B192
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B193
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B193
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B194
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B195
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B196
@@ -45485,7 +45485,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1AE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B1AF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B1AF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B1B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1B2
@@ -45513,7 +45513,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1CA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B1CB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B1CB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B1CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1CE
@@ -45541,7 +45541,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1E6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B1E7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B1E7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B1E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B1EA
@@ -45569,7 +45569,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B200
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B201
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B202
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B203
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B203
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B204
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B205
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B206
@@ -45597,7 +45597,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B21C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B21D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B21E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B21F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B21F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B220
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B221
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B222
@@ -45625,7 +45625,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B238
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B239
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B23A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B23B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B23B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B23C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B23D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B23E
@@ -45653,7 +45653,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B254
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B255
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B256
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B257
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B257
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B258
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B259
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B25A
@@ -45681,7 +45681,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B270
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B271
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B272
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B273
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B273
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B274
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B275
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B276
@@ -45709,7 +45709,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B28C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B28D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B28E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B28F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B28F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B290
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B291
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B292
@@ -45737,7 +45737,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2AA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B2AB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B2AB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B2AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2AE
@@ -45765,7 +45765,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2C6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B2C7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B2C7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B2C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2CA
@@ -45793,7 +45793,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2E2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B2E3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B2E3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B2E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2E6
@@ -45821,7 +45821,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B2FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B2FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B2FF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B300
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B301
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B302
@@ -45849,7 +45849,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B318
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B319
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B31A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B31B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B31B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B31C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B31D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B31E
@@ -45877,7 +45877,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B334
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B335
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B336
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B337
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B337
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B338
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B339
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B33A
@@ -45905,7 +45905,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B350
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B351
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B352
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B353
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B353
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B354
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B355
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B356
@@ -45933,7 +45933,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B36C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B36D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B36E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B36F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B36F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B370
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B371
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B372
@@ -45961,7 +45961,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B388
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B389
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B38A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B38B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B38B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B38C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B38D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B38E
@@ -45989,7 +45989,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3A6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B3A7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B3A7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B3A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3AA
@@ -46017,7 +46017,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3C2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B3C3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B3C3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B3C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3C6
@@ -46045,7 +46045,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3DE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B3DF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B3DF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B3E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3E2
@@ -46073,7 +46073,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3FA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B3FB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B3FB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B3FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B3FE
@@ -46101,7 +46101,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B414
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B415
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B416
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B417
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B417
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B418
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B419
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B41A
@@ -46129,7 +46129,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B430
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B431
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B432
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B433
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B433
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B434
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B435
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B436
@@ -46157,7 +46157,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B44C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B44D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B44E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B44F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B44F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B450
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B451
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B452
@@ -46185,7 +46185,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B468
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B469
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B46A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B46B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B46B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B46C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B46D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B46E
@@ -46213,7 +46213,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B484
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B485
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B486
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B487
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B487
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B488
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B489
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B48A
@@ -46241,7 +46241,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4A2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B4A3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B4A3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B4A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4A6
@@ -46269,7 +46269,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4BE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B4BF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B4BF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B4C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4C2
@@ -46297,7 +46297,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4DA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B4DB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B4DB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B4DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4DE
@@ -46325,7 +46325,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4F6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B4F7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B4F7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B4F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B4FA
@@ -46353,7 +46353,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B510
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B511
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B512
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B513
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B513
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B514
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B515
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B516
@@ -46381,7 +46381,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B52C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B52D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B52E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B52F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B52F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B530
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B531
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B532
@@ -46409,7 +46409,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B548
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B549
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B54A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B54B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B54B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B54C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B54D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B54E
@@ -46437,7 +46437,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B564
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B565
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B566
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B567
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B567
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B568
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B569
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B56A
@@ -46465,7 +46465,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B580
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B581
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B582
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B583
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B583
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B584
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B585
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B586
@@ -46493,7 +46493,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B59C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B59D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B59E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B59F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B59F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B5A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5A2
@@ -46521,7 +46521,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5BA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B5BB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B5BB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B5BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5BE
@@ -46549,7 +46549,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5D6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B5D7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B5D7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B5D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5DA
@@ -46577,7 +46577,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5F2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B5F3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B5F3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B5F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B5F6
@@ -46605,7 +46605,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B60C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B60D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B60E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B60F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B60F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B610
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B611
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B612
@@ -46633,7 +46633,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B628
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B629
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B62A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B62B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B62B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B62C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B62D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B62E
@@ -46661,7 +46661,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B644
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B645
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B646
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B647
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B647
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B648
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B649
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B64A
@@ -46689,7 +46689,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B660
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B661
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B662
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B663
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B663
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B664
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B665
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B666
@@ -46717,7 +46717,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B67C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B67D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B67E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B67F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B67F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B680
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B681
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B682
@@ -46745,7 +46745,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B698
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B699
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B69A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B69B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B69B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B69C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B69D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B69E
@@ -46773,7 +46773,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6B6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B6B7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B6B7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B6B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6BA
@@ -46801,7 +46801,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6D2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B6D3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B6D3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B6D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6D6
@@ -46829,7 +46829,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6EE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B6EF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B6EF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B6F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B6F2
@@ -46857,7 +46857,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B708
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B709
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B70A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B70B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B70B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B70C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B70D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B70E
@@ -46885,7 +46885,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B724
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B725
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B726
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B727
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B727
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B728
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B729
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B72A
@@ -46913,7 +46913,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B740
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B741
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B742
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B743
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B743
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B744
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B745
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B746
@@ -46941,7 +46941,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B75C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B75D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B75E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B75F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B75F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B760
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B761
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B762
@@ -46969,7 +46969,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B778
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B779
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B77A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B77B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B77B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B77C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B77D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B77E
@@ -46997,7 +46997,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B794
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B795
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B796
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B797
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B797
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B798
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B799
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B79A
@@ -47025,7 +47025,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7B2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B7B3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B7B3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B7B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7B6
@@ -47053,7 +47053,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7CE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B7CF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B7CF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B7D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7D2
@@ -47081,7 +47081,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7EA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B7EB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B7EB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B7EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B7EE
@@ -47109,7 +47109,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B804
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B805
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B806
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B807
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B807
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B808
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B809
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B80A
@@ -47137,7 +47137,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B820
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B821
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B822
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B823
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B823
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B824
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B825
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B826
@@ -47165,7 +47165,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B83C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B83D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B83E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B83F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B83F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B840
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B841
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B842
@@ -47193,7 +47193,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B858
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B859
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B85A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B85B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B85B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B85C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B85D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B85E
@@ -47221,7 +47221,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B874
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B875
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B876
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B877
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B877
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B878
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B879
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B87A
@@ -47249,7 +47249,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B890
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B891
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B892
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B893
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B893
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B894
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B895
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B896
@@ -47277,7 +47277,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8AE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B8AF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B8AF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B8B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8B2
@@ -47305,7 +47305,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8CA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B8CB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B8CB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B8CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8CE
@@ -47333,7 +47333,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8E6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B8E7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B8E7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B8E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B8EA
@@ -47361,7 +47361,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B900
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B901
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B902
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B903
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B903
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B904
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B905
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B906
@@ -47389,7 +47389,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B91C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B91D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B91E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B91F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B91F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B920
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B921
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B922
@@ -47417,7 +47417,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B938
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B939
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B93A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B93B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B93B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B93C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B93D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B93E
@@ -47445,7 +47445,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B954
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B955
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B956
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B957
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B957
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B958
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B959
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B95A
@@ -47473,7 +47473,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B970
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B971
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B972
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B973
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B973
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B974
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B975
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B976
@@ -47501,7 +47501,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B98C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B98D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B98E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B98F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B98F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B990
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B991
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B992
@@ -47529,7 +47529,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9AA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B9AB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B9AB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B9AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9AE
@@ -47557,7 +47557,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9C6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B9C7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B9C7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B9C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9CA
@@ -47585,7 +47585,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9E2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B9E3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B9E3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+B9E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9E6
@@ -47613,7 +47613,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+B9FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+B9FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+B9FF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA00
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA01
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA02
@@ -47641,7 +47641,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA18
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA19
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA1A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BA1B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BA1B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA1C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA1D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA1E
@@ -47669,7 +47669,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA34
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA35
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA36
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BA37
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BA37
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA38
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA39
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA3A
@@ -47697,7 +47697,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA50
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA51
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA52
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BA53
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BA53
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA54
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA55
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA56
@@ -47725,7 +47725,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA6C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA6D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA6E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BA6F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BA6F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA70
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA71
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA72
@@ -47753,7 +47753,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA88
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA89
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA8A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BA8B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BA8B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BA8C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA8D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BA8E
@@ -47781,7 +47781,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAA4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAA5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAA6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BAA7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BAA7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BAA8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAA9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAAA
@@ -47809,7 +47809,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAC0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAC1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAC2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BAC3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BAC3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BAC4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAC5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAC6
@@ -47837,7 +47837,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BADC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BADD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BADE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BADF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BADF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BAE0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAE1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAE2
@@ -47865,7 +47865,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAF8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAF9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAFA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BAFB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BAFB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BAFC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAFD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BAFE
@@ -47893,7 +47893,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB14
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB15
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB16
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BB17
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BB17
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BB18
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB19
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB1A
@@ -47921,7 +47921,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB30
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB31
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB32
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BB33
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BB33
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BB34
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB35
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB36
@@ -47949,7 +47949,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB4C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB4D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB4E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BB4F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BB4F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BB50
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB51
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB52
@@ -47977,7 +47977,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB68
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB69
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB6A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BB6B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BB6B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BB6C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB6D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB6E
@@ -48005,7 +48005,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB84
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB85
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB86
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BB87
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BB87
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BB88
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB89
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BB8A
@@ -48033,7 +48033,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBA0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBA1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBA2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BBA3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BBA3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BBA4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBA5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBA6
@@ -48061,7 +48061,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBBC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBBD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBBE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BBBF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BBBF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BBC0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBC1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBC2
@@ -48089,7 +48089,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBD8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBD9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBDA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BBDB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BBDB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BBDC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBDD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBDE
@@ -48117,7 +48117,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBF4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBF5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBF6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BBF7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BBF7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BBF8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBF9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BBFA
@@ -48145,7 +48145,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC12
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC13
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC13
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BC14
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC15
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC16
@@ -48173,7 +48173,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC2E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC2F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC2F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BC30
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC31
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC32
@@ -48201,7 +48201,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC4A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC4B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC4B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BC4C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC4D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC4E
@@ -48229,7 +48229,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC66
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC67
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC67
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BC68
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC69
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC6A
@@ -48257,7 +48257,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC82
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC83
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC83
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BC84
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC85
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC86
@@ -48285,7 +48285,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BC9E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BC9F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BC9F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BCA0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCA1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCA2
@@ -48313,7 +48313,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCBA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BCBB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BCBB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BCBC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCBD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCBE
@@ -48341,7 +48341,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCD4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCD5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCD6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BCD7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BCD7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BCD8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCD9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCDA
@@ -48369,7 +48369,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCF2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BCF3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BCF3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BCF4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCF5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BCF6
@@ -48397,7 +48397,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD0C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD0D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD0E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD0F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD0F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD12
@@ -48425,7 +48425,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD28
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD29
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD2A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD2B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD2B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD2E
@@ -48453,7 +48453,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD44
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD45
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD46
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD47
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD47
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD4A
@@ -48481,7 +48481,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD60
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD61
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD62
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD63
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD63
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD66
@@ -48509,7 +48509,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD7C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD7D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD7E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD7F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD7F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD82
@@ -48537,7 +48537,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD98
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD99
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD9A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BD9B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BD9B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BD9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BD9E
@@ -48565,7 +48565,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDB4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDB5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDB6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BDB7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BDB7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BDB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDBA
@@ -48593,7 +48593,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDD0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDD1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDD2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BDD3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BDD3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BDD4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDD5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDD6
@@ -48621,7 +48621,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDEC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDEE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BDEF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BDEF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BDF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BDF2
@@ -48649,7 +48649,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE08
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE09
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE0A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE0B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE0B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE0C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE0D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE0E
@@ -48677,7 +48677,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE24
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE25
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE26
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE27
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE27
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE28
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE29
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE2A
@@ -48705,7 +48705,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE40
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE41
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE42
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE43
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE43
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE44
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE45
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE46
@@ -48733,7 +48733,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE5C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE5D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE5E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE5F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE5F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE60
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE61
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE62
@@ -48761,7 +48761,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE78
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE79
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE7A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE7B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE7B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE7C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE7D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE7E
@@ -48789,7 +48789,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE94
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE95
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE96
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BE97
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BE97
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BE98
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE99
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BE9A
@@ -48817,7 +48817,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEB0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEB1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEB2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BEB3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BEB3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BEB4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEB5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEB6
@@ -48845,7 +48845,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BECC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BECD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BECE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BECF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BECF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BED0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BED1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BED2
@@ -48873,7 +48873,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEE8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEE9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEEA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BEEB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BEEB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BEEC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BEEE
@@ -48901,7 +48901,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF04
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF05
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF06
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF07
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF07
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF08
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF09
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF0A
@@ -48929,7 +48929,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF20
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF21
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF22
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF23
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF23
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF24
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF25
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF26
@@ -48957,7 +48957,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF3C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF3D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF3E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF3F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF3F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF40
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF41
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF42
@@ -48985,7 +48985,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF58
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF59
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF5A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF5B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF5B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF5C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF5D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF5E
@@ -49013,7 +49013,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF74
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF75
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF76
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF77
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF77
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF78
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF79
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF7A
@@ -49041,7 +49041,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF90
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF91
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF92
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BF93
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BF93
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BF94
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF95
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BF96
@@ -49069,7 +49069,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFAC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFAD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFAE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BFAF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BFAF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BFB0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFB1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFB2
@@ -49097,7 +49097,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFC8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFC9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFCA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BFCB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BFCB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BFCC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFCD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFCE
@@ -49125,7 +49125,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFE4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFE5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFE6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+BFE7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+BFE7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+BFE8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFE9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+BFEA
@@ -49153,7 +49153,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C000
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C001
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C002
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C003
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C003
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C004
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C005
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C006
@@ -49181,7 +49181,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C01C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C01D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C01E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C01F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C01F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C020
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C021
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C022
@@ -49209,7 +49209,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C038
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C039
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C03A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C03B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C03B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C03C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C03D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C03E
@@ -49237,7 +49237,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C054
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C055
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C056
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C057
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C057
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C058
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C059
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C05A
@@ -49265,7 +49265,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C070
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C071
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C072
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C073
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C073
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C074
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C075
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C076
@@ -49293,7 +49293,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C08C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C08D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C08E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C08F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C08F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C090
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C091
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C092
@@ -49321,7 +49321,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0AA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C0AB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C0AB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C0AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0AE
@@ -49349,7 +49349,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0C6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C0C7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C0C7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C0C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0CA
@@ -49377,7 +49377,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0E2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C0E3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C0E3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C0E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0E6
@@ -49405,7 +49405,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C0FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C0FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C0FF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C100
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C101
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C102
@@ -49433,7 +49433,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C118
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C119
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C11A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C11B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C11B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C11C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C11D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C11E
@@ -49461,7 +49461,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C134
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C135
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C136
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C137
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C137
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C138
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C139
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C13A
@@ -49489,7 +49489,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C150
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C151
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C152
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C153
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C153
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C154
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C155
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C156
@@ -49517,7 +49517,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C16C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C16D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C16E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C16F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C16F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C170
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C171
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C172
@@ -49545,7 +49545,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C188
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C189
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C18A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C18B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C18B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C18C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C18D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C18E
@@ -49573,7 +49573,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1A6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C1A7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C1A7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C1A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1AA
@@ -49601,7 +49601,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1C2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C1C3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C1C3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C1C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1C6
@@ -49629,7 +49629,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1DE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C1DF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C1DF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C1E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1E2
@@ -49657,7 +49657,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1FA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C1FB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C1FB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C1FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C1FE
@@ -49685,7 +49685,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C214
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C215
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C216
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C217
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C217
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C218
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C219
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C21A
@@ -49713,7 +49713,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C230
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C231
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C232
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C233
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C233
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C234
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C235
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C236
@@ -49741,7 +49741,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C24C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C24D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C24E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C24F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C24F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C250
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C251
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C252
@@ -49769,7 +49769,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C268
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C269
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C26A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C26B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C26B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C26C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C26D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C26E
@@ -49797,7 +49797,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C284
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C285
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C286
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C287
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C287
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C288
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C289
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C28A
@@ -49825,7 +49825,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2A2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C2A3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C2A3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C2A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2A6
@@ -49853,7 +49853,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2BE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C2BF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C2BF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C2C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2C2
@@ -49881,7 +49881,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2DA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C2DB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C2DB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C2DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2DE
@@ -49909,7 +49909,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2F6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C2F7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C2F7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C2F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C2FA
@@ -49937,7 +49937,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C310
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C311
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C312
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C313
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C313
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C314
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C315
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C316
@@ -49965,7 +49965,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C32C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C32D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C32E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C32F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C32F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C330
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C331
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C332
@@ -49993,7 +49993,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C348
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C349
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C34A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C34B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C34B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C34C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C34D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C34E
@@ -50021,7 +50021,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C364
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C365
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C366
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C367
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C367
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C368
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C369
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C36A
@@ -50049,7 +50049,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C380
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C381
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C382
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C383
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C383
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C384
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C385
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C386
@@ -50077,7 +50077,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C39C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C39D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C39E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C39F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C39F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C3A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3A2
@@ -50105,7 +50105,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3BA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C3BB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C3BB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C3BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3BE
@@ -50133,7 +50133,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3D6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C3D7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C3D7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C3D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3DA
@@ -50161,7 +50161,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3F2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C3F3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C3F3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C3F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C3F6
@@ -50189,7 +50189,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C40C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C40D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C40E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C40F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C40F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C410
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C411
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C412
@@ -50217,7 +50217,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C428
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C429
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C42A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C42B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C42B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C42C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C42D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C42E
@@ -50245,7 +50245,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C444
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C445
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C446
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C447
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C447
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C448
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C449
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C44A
@@ -50273,7 +50273,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C460
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C461
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C462
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C463
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C463
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C464
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C465
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C466
@@ -50301,7 +50301,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C47C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C47D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C47E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C47F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C47F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C480
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C481
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C482
@@ -50329,7 +50329,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C498
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C499
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C49A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C49B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C49B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C49C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C49D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C49E
@@ -50357,7 +50357,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4B6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C4B7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C4B7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C4B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4BA
@@ -50385,7 +50385,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4D2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C4D3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C4D3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C4D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4D6
@@ -50413,7 +50413,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4EE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C4EF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C4EF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C4F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C4F2
@@ -50441,7 +50441,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C508
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C509
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C50A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C50B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C50B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C50C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C50D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C50E
@@ -50469,7 +50469,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C524
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C525
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C526
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C527
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C527
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C528
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C529
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C52A
@@ -50497,7 +50497,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C540
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C541
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C542
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C543
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C543
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C544
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C545
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C546
@@ -50525,7 +50525,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C55C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C55D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C55E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C55F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C55F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C560
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C561
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C562
@@ -50553,7 +50553,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C578
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C579
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C57A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C57B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C57B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C57C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C57D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C57E
@@ -50581,7 +50581,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C594
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C595
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C596
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C597
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C597
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C598
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C599
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C59A
@@ -50609,7 +50609,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5B2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C5B3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C5B3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C5B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5B6
@@ -50637,7 +50637,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5CE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C5CF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C5CF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C5D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5D2
@@ -50665,7 +50665,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5EA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C5EB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C5EB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C5EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C5EE
@@ -50693,7 +50693,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C604
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C605
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C606
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C607
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C607
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C608
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C609
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C60A
@@ -50721,7 +50721,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C620
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C621
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C622
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C623
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C623
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C624
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C625
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C626
@@ -50749,7 +50749,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C63C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C63D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C63E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C63F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C63F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C640
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C641
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C642
@@ -50777,7 +50777,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C658
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C659
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C65A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C65B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C65B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C65C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C65D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C65E
@@ -50805,7 +50805,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C674
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C675
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C676
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C677
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C677
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C678
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C679
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C67A
@@ -50833,7 +50833,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C690
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C691
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C692
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C693
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C693
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C694
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C695
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C696
@@ -50861,7 +50861,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6AE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C6AF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C6AF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C6B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6B2
@@ -50889,7 +50889,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6CA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C6CB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C6CB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C6CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6CE
@@ -50917,7 +50917,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6E6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C6E7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C6E7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C6E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C6EA
@@ -50945,7 +50945,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C700
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C701
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C702
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C703
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C703
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C704
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C705
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C706
@@ -50973,7 +50973,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C71C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C71D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C71E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C71F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C71F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C720
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C721
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C722
@@ -51001,7 +51001,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C738
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C739
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C73A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C73B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C73B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C73C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C73D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C73E
@@ -51029,7 +51029,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C754
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C755
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C756
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C757
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C757
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C758
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C759
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C75A
@@ -51057,7 +51057,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C770
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C771
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C772
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C773
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C773
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C774
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C775
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C776
@@ -51085,7 +51085,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C78C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C78D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C78E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C78F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C78F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C790
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C791
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C792
@@ -51113,7 +51113,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7AA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C7AB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C7AB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C7AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7AE
@@ -51141,7 +51141,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7C6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C7C7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C7C7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C7C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7CA
@@ -51169,7 +51169,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7E2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C7E3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C7E3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C7E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7E6
@@ -51197,7 +51197,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C7FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C7FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C7FF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C800
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C801
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C802
@@ -51225,7 +51225,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C818
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C819
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C81A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C81B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C81B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C81C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C81D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C81E
@@ -51253,7 +51253,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C834
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C835
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C836
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C837
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C837
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C838
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C839
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C83A
@@ -51281,7 +51281,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C850
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C851
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C852
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C853
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C853
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C854
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C855
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C856
@@ -51309,7 +51309,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C86C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C86D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C86E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C86F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C86F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C870
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C871
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C872
@@ -51337,7 +51337,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C888
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C889
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C88A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C88B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C88B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C88C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C88D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C88E
@@ -51365,7 +51365,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8A6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C8A7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C8A7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C8A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8AA
@@ -51393,7 +51393,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8C2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C8C3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C8C3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C8C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8C6
@@ -51421,7 +51421,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8DE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C8DF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C8DF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C8E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8E2
@@ -51449,7 +51449,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8FA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C8FB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C8FB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C8FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C8FE
@@ -51477,7 +51477,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C914
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C915
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C916
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C917
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C917
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C918
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C919
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C91A
@@ -51505,7 +51505,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C930
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C931
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C932
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C933
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C933
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C934
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C935
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C936
@@ -51533,7 +51533,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C94C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C94D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C94E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C94F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C94F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C950
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C951
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C952
@@ -51561,7 +51561,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C968
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C969
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C96A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C96B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C96B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C96C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C96D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C96E
@@ -51589,7 +51589,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C984
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C985
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C986
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C987
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C987
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C988
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C989
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C98A
@@ -51617,7 +51617,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9A2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C9A3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C9A3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C9A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9A6
@@ -51645,7 +51645,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9BE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C9BF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C9BF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C9C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9C2
@@ -51673,7 +51673,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9DA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C9DB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C9DB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C9DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9DE
@@ -51701,7 +51701,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9F6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+C9F7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+C9F7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+C9F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+C9FA
@@ -51729,7 +51729,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA12
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA13
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA13
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CA14
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA15
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA16
@@ -51757,7 +51757,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA2E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA2F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA2F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CA30
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA31
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA32
@@ -51785,7 +51785,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA4A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA4B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA4B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CA4C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA4D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA4E
@@ -51813,7 +51813,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA66
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA67
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA67
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CA68
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA69
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA6A
@@ -51841,7 +51841,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA82
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA83
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA83
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CA84
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA85
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA86
@@ -51869,7 +51869,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CA9E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CA9F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CA9F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CAA0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAA1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAA2
@@ -51897,7 +51897,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CABA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CABB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CABB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CABC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CABD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CABE
@@ -51925,7 +51925,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAD4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAD5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAD6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CAD7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CAD7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CAD8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAD9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CADA
@@ -51953,7 +51953,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAF2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CAF3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CAF3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CAF4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAF5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CAF6
@@ -51981,7 +51981,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB0C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB0D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB0E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB0F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB0F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB10
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB11
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB12
@@ -52009,7 +52009,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB28
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB29
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB2A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB2B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB2B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB2C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB2D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB2E
@@ -52037,7 +52037,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB44
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB45
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB46
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB47
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB47
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB48
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB49
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB4A
@@ -52065,7 +52065,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB60
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB61
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB62
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB63
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB63
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB64
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB65
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB66
@@ -52093,7 +52093,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB7C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB7D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB7E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB7F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB7F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB80
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB81
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB82
@@ -52121,7 +52121,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB98
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB99
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB9A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CB9B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CB9B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CB9C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB9D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CB9E
@@ -52149,7 +52149,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBB4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBB5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBB6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CBB7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CBB7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CBB8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBB9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBBA
@@ -52177,7 +52177,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBD0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBD1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBD2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CBD3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CBD3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CBD4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBD5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBD6
@@ -52205,7 +52205,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBEC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBEE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CBEF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CBEF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CBF0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBF1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CBF2
@@ -52233,7 +52233,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC08
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC09
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC0A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC0B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC0B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC0C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC0D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC0E
@@ -52261,7 +52261,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC24
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC25
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC26
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC27
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC27
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC28
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC29
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC2A
@@ -52289,7 +52289,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC40
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC41
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC42
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC43
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC43
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC44
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC45
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC46
@@ -52317,7 +52317,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC5C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC5D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC5E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC5F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC5F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC60
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC61
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC62
@@ -52345,7 +52345,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC78
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC79
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC7A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC7B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC7B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC7C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC7D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC7E
@@ -52373,7 +52373,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC94
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC95
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC96
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CC97
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CC97
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CC98
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC99
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CC9A
@@ -52401,7 +52401,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCB0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCB1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCB2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CCB3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CCB3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CCB4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCB5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCB6
@@ -52429,7 +52429,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCCC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCCD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCCE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CCCF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CCCF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CCD0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCD1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCD2
@@ -52457,7 +52457,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCE8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCE9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCEA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CCEB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CCEB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CCEC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CCEE
@@ -52485,7 +52485,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD04
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD05
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD06
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD07
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD07
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD08
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD09
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD0A
@@ -52513,7 +52513,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD20
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD21
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD22
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD23
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD23
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD24
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD25
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD26
@@ -52541,7 +52541,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD3C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD3D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD3E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD3F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD3F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD40
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD41
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD42
@@ -52569,7 +52569,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD58
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD59
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD5A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD5B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD5B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD5C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD5D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD5E
@@ -52597,7 +52597,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD74
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD75
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD76
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD77
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD77
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD78
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD79
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD7A
@@ -52625,7 +52625,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD90
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD91
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD92
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CD93
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CD93
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CD94
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD95
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CD96
@@ -52653,7 +52653,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDAC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDAD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDAE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CDAF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CDAF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CDB0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDB1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDB2
@@ -52681,7 +52681,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDC8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDC9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDCA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CDCB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CDCB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CDCC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDCD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDCE
@@ -52709,7 +52709,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDE4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDE5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDE6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CDE7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CDE7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CDE8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDE9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CDEA
@@ -52737,7 +52737,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE00
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE01
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE02
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE03
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE03
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE04
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE05
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE06
@@ -52765,7 +52765,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE1C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE1D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE1E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE1F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE1F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE20
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE21
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE22
@@ -52793,7 +52793,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE38
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE39
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE3A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE3B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE3B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE3C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE3D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE3E
@@ -52821,7 +52821,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE54
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE55
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE56
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE57
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE57
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE58
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE59
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE5A
@@ -52849,7 +52849,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE70
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE71
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE72
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE73
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE73
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE74
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE75
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE76
@@ -52877,7 +52877,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE8C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE8D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE8E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CE8F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CE8F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CE90
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE91
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CE92
@@ -52905,7 +52905,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEA8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEA9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEAA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CEAB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CEAB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CEAC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEAD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEAE
@@ -52933,7 +52933,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEC4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEC5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEC6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CEC7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CEC7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CEC8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEC9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CECA
@@ -52961,7 +52961,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEE0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEE1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEE2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CEE3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CEE3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CEE4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEE5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEE6
@@ -52989,7 +52989,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEFC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEFD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CEFE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CEFF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CEFF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF00
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF01
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF02
@@ -53017,7 +53017,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF18
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF19
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF1A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CF1B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CF1B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF1C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF1D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF1E
@@ -53045,7 +53045,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF34
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF35
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF36
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CF37
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CF37
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF38
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF39
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF3A
@@ -53073,7 +53073,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF50
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF51
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF52
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CF53
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CF53
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF54
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF55
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF56
@@ -53101,7 +53101,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF6C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF6D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF6E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CF6F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CF6F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF70
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF71
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF72
@@ -53129,7 +53129,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF88
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF89
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF8A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CF8B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CF8B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CF8C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF8D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CF8E
@@ -53157,7 +53157,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFA4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFA5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFA6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CFA7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CFA7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CFA8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFA9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFAA
@@ -53185,7 +53185,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFC0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFC1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFC2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CFC3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CFC3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CFC4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFC5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFC6
@@ -53213,7 +53213,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFDC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFDD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFDE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CFDF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CFDF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CFE0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFE1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFE2
@@ -53241,7 +53241,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFF8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFF9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFFA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+CFFB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+CFFB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+CFFC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFFD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+CFFE
@@ -53269,7 +53269,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D014
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D015
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D016
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D017
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D017
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D018
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D019
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D01A
@@ -53297,7 +53297,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D030
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D031
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D032
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D033
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D033
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D034
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D035
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D036
@@ -53325,7 +53325,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D04C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D04D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D04E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D04F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D04F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D050
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D051
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D052
@@ -53353,7 +53353,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D068
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D069
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D06A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D06B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D06B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D06C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D06D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D06E
@@ -53381,7 +53381,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D084
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D085
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D086
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D087
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D087
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D088
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D089
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D08A
@@ -53409,7 +53409,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0A2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D0A3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D0A3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D0A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0A6
@@ -53437,7 +53437,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0BE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D0BF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D0BF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D0C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0C2
@@ -53465,7 +53465,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0DA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D0DB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D0DB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D0DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0DE
@@ -53493,7 +53493,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0F6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D0F7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D0F7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D0F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D0FA
@@ -53521,7 +53521,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D110
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D111
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D112
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D113
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D113
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D114
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D115
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D116
@@ -53549,7 +53549,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D12C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D12D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D12E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D12F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D12F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D130
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D131
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D132
@@ -53577,7 +53577,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D148
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D149
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D14A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D14B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D14B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D14C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D14D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D14E
@@ -53605,7 +53605,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D164
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D165
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D166
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D167
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D167
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D168
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D169
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D16A
@@ -53633,7 +53633,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D180
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D181
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D182
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D183
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D183
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D184
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D185
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D186
@@ -53661,7 +53661,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D19C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D19D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D19E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D19F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D19F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D1A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1A2
@@ -53689,7 +53689,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1BA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D1BB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D1BB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D1BC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1BD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1BE
@@ -53717,7 +53717,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1D6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D1D7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D1D7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D1D8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1D9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1DA
@@ -53745,7 +53745,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1F2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D1F3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D1F3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D1F4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1F5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D1F6
@@ -53773,7 +53773,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D20C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D20D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D20E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D20F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D20F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D210
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D211
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D212
@@ -53801,7 +53801,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D228
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D229
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D22A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D22B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D22B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D22C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D22D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D22E
@@ -53829,7 +53829,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D244
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D245
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D246
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D247
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D247
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D248
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D249
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D24A
@@ -53857,7 +53857,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D260
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D261
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D262
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D263
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D263
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D264
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D265
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D266
@@ -53885,7 +53885,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D27C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D27D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D27E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D27F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D27F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D280
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D281
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D282
@@ -53913,7 +53913,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D298
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D299
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D29A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D29B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D29B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D29C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D29D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D29E
@@ -53941,7 +53941,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2B6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D2B7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D2B7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D2B8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2B9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2BA
@@ -53969,7 +53969,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2D2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D2D3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D2D3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D2D4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2D5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2D6
@@ -53997,7 +53997,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2EE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D2EF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D2EF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D2F0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2F1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D2F2
@@ -54025,7 +54025,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D308
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D309
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D30A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D30B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D30B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D30C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D30D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D30E
@@ -54053,7 +54053,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D324
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D325
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D326
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D327
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D327
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D328
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D329
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D32A
@@ -54081,7 +54081,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D340
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D341
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D342
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D343
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D343
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D344
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D345
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D346
@@ -54109,7 +54109,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D35C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D35D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D35E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D35F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D35F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D360
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D361
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D362
@@ -54137,7 +54137,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D378
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D379
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D37A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D37B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D37B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D37C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D37D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D37E
@@ -54165,7 +54165,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D394
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D395
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D396
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D397
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D397
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D398
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D399
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D39A
@@ -54193,7 +54193,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3B2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D3B3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D3B3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D3B4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3B5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3B6
@@ -54221,7 +54221,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3CE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D3CF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D3CF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D3D0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3D1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3D2
@@ -54249,7 +54249,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3EA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D3EB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D3EB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D3EC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3ED
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D3EE
@@ -54277,7 +54277,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D404
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D405
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D406
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D407
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D407
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D408
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D409
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D40A
@@ -54305,7 +54305,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D420
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D421
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D422
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D423
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D423
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D424
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D425
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D426
@@ -54333,7 +54333,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D43C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D43D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D43E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D43F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D43F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D440
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D441
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D442
@@ -54361,7 +54361,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D458
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D459
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D45A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D45B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D45B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D45C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D45D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D45E
@@ -54389,7 +54389,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D474
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D475
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D476
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D477
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D477
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D478
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D479
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D47A
@@ -54417,7 +54417,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D490
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D491
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D492
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D493
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D493
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D494
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D495
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D496
@@ -54445,7 +54445,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4AE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D4AF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D4AF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D4B0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4B1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4B2
@@ -54473,7 +54473,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4CA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D4CB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D4CB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D4CC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4CD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4CE
@@ -54501,7 +54501,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4E6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D4E7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D4E7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D4E8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4E9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D4EA
@@ -54529,7 +54529,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D500
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D501
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D502
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D503
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D503
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D504
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D505
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D506
@@ -54557,7 +54557,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D51C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D51D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D51E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D51F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D51F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D520
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D521
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D522
@@ -54585,7 +54585,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D538
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D539
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D53A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D53B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D53B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D53C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D53D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D53E
@@ -54613,7 +54613,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D554
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D555
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D556
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D557
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D557
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D558
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D559
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D55A
@@ -54641,7 +54641,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D570
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D571
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D572
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D573
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D573
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D574
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D575
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D576
@@ -54669,7 +54669,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D58C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D58D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D58E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D58F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D58F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D590
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D591
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D592
@@ -54697,7 +54697,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5AA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D5AB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D5AB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D5AC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5AD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5AE
@@ -54725,7 +54725,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5C6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D5C7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D5C7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D5C8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5C9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5CA
@@ -54753,7 +54753,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5E2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D5E3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D5E3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D5E4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5E5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5E6
@@ -54781,7 +54781,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D5FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D5FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D5FF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D600
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D601
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D602
@@ -54809,7 +54809,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D618
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D619
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D61A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D61B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D61B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D61C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D61D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D61E
@@ -54837,7 +54837,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D634
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D635
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D636
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D637
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D637
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D638
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D639
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D63A
@@ -54865,7 +54865,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D650
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D651
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D652
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D653
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D653
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D654
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D655
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D656
@@ -54893,7 +54893,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D66C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D66D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D66E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D66F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D66F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D670
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D671
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D672
@@ -54921,7 +54921,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D688
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D689
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D68A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D68B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D68B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D68C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D68D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D68E
@@ -54949,7 +54949,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6A4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6A5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6A6
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D6A7
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D6A7
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D6A8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6A9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6AA
@@ -54977,7 +54977,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6C0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6C1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6C2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D6C3
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D6C3
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D6C4
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6C5
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6C6
@@ -55005,7 +55005,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6DC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6DD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6DE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D6DF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D6DF
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D6E0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6E1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6E2
@@ -55033,7 +55033,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6F8
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6F9
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6FA
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D6FB
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D6FB
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D6FC
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6FD
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D6FE
@@ -55061,7 +55061,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D714
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D715
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D716
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D717
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D717
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D718
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D719
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D71A
@@ -55089,7 +55089,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D730
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D731
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D732
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D733
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D733
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D734
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D735
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D736
@@ -55117,7 +55117,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D74C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D74D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D74E
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D74F
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D74F
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D750
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D751
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D752
@@ -55145,7 +55145,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D768
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D769
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D76A
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D76B
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D76B
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D76C
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D76D
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D76E
@@ -55173,7 +55173,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D784
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D785
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D786
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D787
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D787
   CHARPROP____(0x1ffu, kNormal, kL, kH2)  // U+D788
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D789
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D78A
@@ -55201,19 +55201,19 @@
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D7A0
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D7A1
   CHARPROP____(0x1ffu, kNormal, kL, kH3)  // U+D7A2
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+D7A3
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A4
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A5
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7A9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AA
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7AF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+D7A3
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A4
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A5
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A6
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7A9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AB
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7AF
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7B0
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7B1
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7B2
@@ -55237,10 +55237,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7C4
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7C5
   CHARPROP____(0x1ffu, kNormal, kL, kJV)  // U+D7C6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7C7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7C8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7C9
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7CA
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7C7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7C8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7C9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7CA
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7CB
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7CC
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7CD
@@ -55290,10 +55290,10 @@
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7F9
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7FA
   CHARPROP____(0x1ffu, kNormal, kL, kJT)  // U+D7FB
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7FC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7FD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7FE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+D7FF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7FC
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7FD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7FE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+D7FF
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+D800
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+D801
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+D802
@@ -56189,7 +56189,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB7C
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB7D
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB7E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+DB7F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+DB7F
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB80
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB81
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DB82
@@ -56317,7 +56317,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DBFC
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DBFD
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DBFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+DBFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+DBFF
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DC00
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DC01
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DC02
@@ -57341,7 +57341,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DFFC
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DFFD
   CHARPROP____(0x1ffu, kNormal, kON, kSG)  // U+DFFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+DFFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+DFFF
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+E000
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+E001
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+E002
@@ -63741,7 +63741,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+F8FC
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+F8FD
   CHARPROP____(0x1ffu, kNormal, kL, kXX)  // U+F8FE
-  CHARPROP____(0x1ffu, kUnknown, kL, kNONE)  // U+F8FF
+  CHARPROP____(0x1ffu, kUnknown, kL, kNone)  // U+F8FF
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+F900
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+F901
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+F902
@@ -64045,7 +64045,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA2C
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA2D
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FA2E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FA2F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FA2F
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA30
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA31
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA32
@@ -64109,7 +64109,7 @@
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA6C
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA6D
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FA6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FA6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FA6F
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA70
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA71
   CHARPROP____(0x1ffu, kNormal, kL, kID)  // U+FA72
@@ -64253,7 +64253,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FAFC
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FAFD
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FAFE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FAFF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FAFF
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB00
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB01
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB02
@@ -64261,28 +64261,28 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB04
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB05
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB06
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB07
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB08
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB09
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB0F
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB10
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB11
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB12
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB07
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB08
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB09
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB0F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB10
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB11
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB12
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB13
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB14
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB15
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB16
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FB17
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB18
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB19
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB1A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB1B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FB1C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB18
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB19
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB1A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB1B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FB1C
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB1D
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FB1E
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB1F
@@ -64309,21 +64309,21 @@
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB34
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB35
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB36
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+FB37
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+FB37
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB38
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB39
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB3A
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB3B
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB3C
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+FB3D
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+FB3D
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB3E
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+FB3F
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+FB3F
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB40
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB41
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+FB42
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+FB42
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB43
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB44
-  CHARPROP____(0x1ffu, kUnknown, kR, kNONE)  // U+FB45
+  CHARPROP____(0x1ffu, kUnknown, kR, kNone)  // U+FB45
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB46
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB47
   CHARPROP____(0x1ffu, kNormal, kR, kAL)  // U+FB48
@@ -64432,39 +64432,39 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBAF
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBB0
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBB1
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB2
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB3
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB4
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB5
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB6
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB7
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB8
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBB9
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBA
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBB
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBC
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBD
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBE
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBBF
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC0
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC1
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC2
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC3
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC4
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC5
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC6
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC7
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC8
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBC9
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCA
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCB
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCC
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCD
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCE
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBCF
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBD0
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBD1
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FBD2
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB2
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB3
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB4
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB5
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB6
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB7
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB8
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBB9
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBA
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBB
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBC
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBD
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBE
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBBF
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC0
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC1
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC2
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC3
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC4
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC5
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC6
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC7
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC8
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBC9
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCA
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCB
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCC
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCD
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCE
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBCF
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBD0
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBD1
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FBD2
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBD3
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBD4
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FBD5
@@ -64830,22 +64830,22 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD3D
   CHARPROP____(0x1ffu, kArabicForm, kON, kOP)  // U+FD3E
   CHARPROP____(0x1ffu, kArabicForm, kON, kCL)  // U+FD3F
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD40
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD41
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD42
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD43
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD44
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD45
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD46
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD47
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD48
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD49
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4A
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4B
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4C
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4D
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4E
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD4F
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD40
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD41
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD42
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD43
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD44
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD45
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD46
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD47
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD48
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD49
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4A
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4B
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4C
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4D
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4E
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD4F
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD50
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD51
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD52
@@ -64910,8 +64910,8 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD8D
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD8E
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD8F
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD90
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FD91
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD90
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FD91
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD92
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD93
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FD94
@@ -64966,46 +64966,46 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDC5
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDC6
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDC7
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDC8
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDC9
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCA
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCB
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCC
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCD
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCE
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDCF
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD0
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD1
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD2
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD3
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD4
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD5
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD6
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD7
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD8
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDD9
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDA
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDB
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDC
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDD
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDE
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDDF
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE0
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE1
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE2
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE3
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE4
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE5
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE6
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE7
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE8
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDE9
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDEA
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDEB
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDEC
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDED
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDEE
-  CHARPROP____(0x1ffu, kArabicForm, kBN, kNONE)  // U+FDEF
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDC8
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDC9
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCA
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCB
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCC
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCD
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCE
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDCF
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD0
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD1
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD2
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD3
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD4
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD5
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD6
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD7
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD8
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDD9
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDA
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDB
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDC
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDD
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDE
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDDF
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE0
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE1
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE2
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE3
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE4
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE5
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE6
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE7
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE8
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDE9
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDEA
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDEB
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDEC
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDED
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDEE
+  CHARPROP____(0x1ffu, kArabicForm, kBN, kNone)  // U+FDEF
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDF0
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDF1
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDF2
@@ -65020,8 +65020,8 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FDFB
   CHARPROP____(0x1ffu, kArabicForm, kAL, kPO)  // U+FDFC
   CHARPROP____(0x1ffu, kArabicForm, kON, kAL)  // U+FDFD
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDFE
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FDFF
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDFE
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FDFF
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE00
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE01
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE02
@@ -65048,12 +65048,12 @@
   CHARPROP____(0x1ffu, kNormal, kON, kOP)  // U+FE17
   CHARPROP____(0x1ffu, kNormal, kON, kCL)  // U+FE18
   CHARPROP____(0x1ffu, kNormal, kON, kIN)  // U+FE19
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE1F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE1F
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE20
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE21
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE22
@@ -65061,15 +65061,15 @@
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE24
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE25
   CHARPROP____(0x1ffu, kCombination, kNSM, kCM)  // U+FE26
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE27
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE28
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE29
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2A
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE2F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE27
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE28
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE29
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2A
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2B
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE2F
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE30
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE31
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE32
@@ -65105,7 +65105,7 @@
   CHARPROP____(0x1ffu, kNormal, kCS, kCL)  // U+FE50
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE51
   CHARPROP____(0x1ffu, kNormal, kCS, kCL)  // U+FE52
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE53
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE53
   CHARPROP____(0x1ffu, kNormal, kON, kNS)  // U+FE54
   CHARPROP____(0x1ffu, kNormal, kCS, kNS)  // U+FE55
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+FE56
@@ -65125,21 +65125,21 @@
   CHARPROP____(0x160u, kNormal, kON, kID)  // U+FE64
   CHARPROP____(0x161u, kNormal, kON, kID)  // U+FE65
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE66
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE67
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE67
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE68
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+FE69
   CHARPROP____(0x1ffu, kNormal, kET, kPO)  // U+FE6A
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FE6B
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE6C
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE6D
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE6E
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FE6F
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE6C
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE6D
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE6E
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FE6F
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE70
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE71
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE72
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE73
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE74
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FE75
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FE75
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE76
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE77
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FE78
@@ -65275,10 +65275,10 @@
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FEFA
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FEFB
   CHARPROP____(0x1ffu, kArabicForm, kAL, kAL)  // U+FEFC
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FEFD
-  CHARPROP____(0x1ffu, kArabicForm, kAL, kNONE)  // U+FEFE
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FEFD
+  CHARPROP____(0x1ffu, kArabicForm, kAL, kNone)  // U+FEFE
   CHARPROP____(0x1ffu, kControl, kBN, kWJ)  // U+FEFF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FF00
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FF00
   CHARPROP____(0x1ffu, kNormal, kON, kEX)  // U+FF01
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FF02
   CHARPROP____(0x1ffu, kNormal, kET, kID)  // U+FF03
@@ -65469,39 +65469,39 @@
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFBC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFBD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFBE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFBF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFC0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFC1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFBF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFC0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFC1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFC7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFC8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFC9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFC8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFC9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCC
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCD
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCE
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFCF
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFD0
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFD1
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFD0
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFD1
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD2
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD3
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD4
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD5
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD6
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFD7
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFD8
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFD9
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFD8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFD9
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFDA
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFDB
   CHARPROP____(0x1ffu, kNormal, kL, kAL)  // U+FFDC
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFDD
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFDE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFDF
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFDD
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFDE
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFDF
   CHARPROP____(0x1ffu, kNormal, kET, kPO)  // U+FFE0
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+FFE1
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FFE2
@@ -65509,7 +65509,7 @@
   CHARPROP____(0x1ffu, kNormal, kON, kID)  // U+FFE4
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+FFE5
   CHARPROP____(0x1ffu, kNormal, kET, kPR)  // U+FFE6
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFE7
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFE7
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFE8
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFE9
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFEA
@@ -65517,20 +65517,20 @@
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFEC
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFED
   CHARPROP____(0x1ffu, kNormal, kON, kAL)  // U+FFEE
-  CHARPROP____(0x1ffu, kUnknown, kON, kNONE)  // U+FFEF
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF0
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF1
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF2
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF3
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF4
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF5
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF6
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF7
-  CHARPROP____(0x1ffu, kUnknown, kBN, kNONE)  // U+FFF8
+  CHARPROP____(0x1ffu, kUnknown, kON, kNone)  // U+FFEF
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF0
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF1
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF2
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF3
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF4
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF5
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF6
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF7
+  CHARPROP____(0x1ffu, kUnknown, kBN, kNone)  // U+FFF8
   CHARPROP____(0x1ffu, kNormal, kON, kCM)  // U+FFF9
   CHARPROP____(0x1ffu, kNormal, kON, kCM)  // U+FFFA
   CHARPROP____(0x1ffu, kNormal, kON, kCM)  // U+FFFB
   CHARPROP____(0x1ffu, kNormal, kON, kB2)  // U+FFFC
   CHARPROP____(0x1ffu, kNormal, kON, kAI)  // U+FFFD
-  CHARPROP____(0x1ffu, kControl, kBN, kNONE)  // U+FFFE
-  CHARPROP____(0x1ffu, kControl, kBN, kNONE)  // U+FFFF
+  CHARPROP____(0x1ffu, kControl, kBN, kNone)  // U+FFFE
+  CHARPROP____(0x1ffu, kControl, kBN, kNone)  // U+FFFF
