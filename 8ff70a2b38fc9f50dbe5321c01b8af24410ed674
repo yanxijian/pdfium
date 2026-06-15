@@ -265,6 +265,30 @@
       },
       "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea3cec8b_826f96c2",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T20:07:53Z",
+      "side": 1,
+      "message": "Yes, I believe it to be a real issue.  Let\u0027s change to retain_ptrs.\n1. Freeing Address:  F2  (a direct dictionary) is processed, pruned, and destroyed. Its address (e.g.,  0xABC000 ) is now free.\n  2. Dangling Pointer:  visited_fields  still contains the raw pointer  0xABC000 .\n  3. New Allocation: We move to  F3  (an indirect reference, not yet loaded). Resolving it triggers lazy parsing, which allocates\n  a new  CPDF_Dictionary  for  F3 .\n  4. Re-use: The memory allocator yields the recently freed address  0xABC000  for  F3 .\n  5. Failure:  visited_fields  now has a false match for  F3  (since it contains  0xABC000 ), causing  F3 \u0027s children to be      \n  skipped during pruning.",
+      "parentUuid": "d8f27902_37add03b",
+      "range": {
+        "startLine": 398,
+        "startChar": 14,
+        "endLine": 398,
+        "endChar": 22
+      },
+      "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
