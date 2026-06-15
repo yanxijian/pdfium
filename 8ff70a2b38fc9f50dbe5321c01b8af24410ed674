@@ -1,0 +1,205 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da0758c9_78935b9e",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T18:16:02Z",
+      "side": 1,
+      "message": "What actions (javascript) might run as a result of this removal?  If so, I\u0027d expect that the pointers in your std::set might become stale unless we store these as retain_ptrs.",
+      "range": {
+        "startLine": 398,
+        "startChar": 14,
+        "endLine": 398,
+        "endChar": 22
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "f91454da_62a29dfd",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 331,
+                "startChar": 0,
+                "endLine": 332,
+                "endChar": 0
+              },
+              "replacement": "std::set\u003cuint32_t\u003e CollectPageWidgetAnnotObjNums(\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 333,
+                "startChar": 0,
+                "endLine": 334,
+                "endChar": 0
+              },
+              "replacement": "  std::set\u003cuint32_t\u003e widget_annot_obj_nums;\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 336,
+                "startChar": 0,
+                "endLine": 337,
+                "endChar": 0
+              },
+              "replacement": "    return widget_annot_obj_nums;\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 340,
+                "startChar": 0,
+                "endLine": 343,
+                "endChar": 0
+              },
+              "replacement": "    RetainPtr\u003cconst CPDF_Object\u003e annot \u003d annots-\u003eGetObjectAt(i);\n    RetainPtr\u003cconst CPDF_Dictionary\u003e annot_dict \u003d annot-\u003eGetDict();\n    if (IsWidgetAnnot(annot_dict.Get())) {\n      widget_annot_obj_nums.insert(annot-\u003eGetObjNum());\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 345,
+                "startChar": 0,
+                "endLine": 346,
+                "endChar": 0
+              },
+              "replacement": "  return widget_annot_obj_nums;\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 348,
+                "startChar": 0,
+                "endLine": 349,
+                "endChar": 0
+              },
+              "replacement": "void RemoveSharedWidgetObjNumsFromSet(\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 351,
+                "startChar": 0,
+                "endLine": 352,
+                "endChar": 0
+              },
+              "replacement": "    std::set\u003cuint32_t\u003e\u0026 widget_annot_obj_nums) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 353,
+                "startChar": 0,
+                "endLine": 354,
+                "endChar": 0
+              },
+              "replacement": "       i \u003c page_count \u0026\u0026 !widget_annot_obj_nums.empty(); ++i) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 359,
+                "startChar": 0,
+                "endLine": 362,
+                "endChar": 0
+              },
+              "replacement": "    std::set\u003cuint32_t\u003e other_page_widget_annot_obj_nums \u003d\n        CollectPageWidgetAnnotObjNums(page_dict.Get());\n    if (other_page_widget_annot_obj_nums.empty()) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 365,
+                "startChar": 0,
+                "endLine": 366,
+                "endChar": 0
+              },
+              "replacement": "    std::set\u003cuint32_t\u003e page_only_widget_annot_obj_nums;\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 367,
+                "startChar": 0,
+                "endLine": 370,
+                "endChar": 0
+              },
+              "replacement": "        widget_annot_obj_nums, other_page_widget_annot_obj_nums,\n        std::inserter(page_only_widget_annot_obj_nums,\n                      page_only_widget_annot_obj_nums.end()));\n    widget_annot_obj_nums \u003d std::move(page_only_widget_annot_obj_nums);\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 374,
+                "startChar": 0,
+                "endLine": 376,
+                "endChar": 0
+              },
+              "replacement": "                     const std::set\u003cuint32_t\u003e\u0026 widget_annot_obj_nums,\n                     std::set\u003cuint32_t\u003e\u0026 visited_field_obj_nums,\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 388,
+                "startChar": 0,
+                "endLine": 389,
+                "endChar": 0
+              },
+              "replacement": "    bool prune_field \u003d pdfium::Contains(widget_annot_obj_nums, field-\u003eGetObjNum());\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 392,
+                "startChar": 0,
+                "endLine": 395,
+                "endChar": 0
+              },
+              "replacement": "      if (kids \u0026\u0026 visited_field_obj_nums.insert(field-\u003eGetObjNum()).second) {\n        prune_field \u003d PruneFieldArray(kids.Get(), widget_annot_obj_nums,\n                                      visited_field_obj_nums, level + 1);\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 406,
+                "startChar": 0,
+                "endLine": 409,
+                "endChar": 0
+              },
+              "replacement": "  std::set\u003cuint32_t\u003e widget_annot_obj_nums \u003d\n      CollectPageWidgetAnnotObjNums(page_dict);\n  if (widget_annot_obj_nums.empty()) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 412,
+                "startChar": 0,
+                "endLine": 414,
+                "endChar": 0
+              },
+              "replacement": "  RemoveSharedWidgetObjNumsFromSet(document, page_dict, widget_annot_obj_nums);\n  if (widget_annot_obj_nums.empty()) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_flatten.cpp",
+              "range": {
+                "startLine": 433,
+                "startChar": 0,
+                "endLine": 435,
+                "endChar": 0
+              },
+              "replacement": "  std::set\u003cuint32_t\u003e visited_field_obj_nums;\n  if (PruneFieldArray(fields.Get(), widget_annot_obj_nums, visited_field_obj_nums,\n"
+            }
+          ]
+        }
+      ],
+      "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
