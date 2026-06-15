@@ -24,6 +24,7 @@
 #include "core/fpdfdoc/cpdf_interactiveform.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_graphstatedata.h"
 #include "core/fxge/cfx_path.h"
@@ -276,7 +277,7 @@ void CPDFSDK_Widget::Synchronize(bool bSynchronizeElse) {
     return;
   }
 
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   switch (GetFieldType()) {
     case FormFieldType::kCheckBox:
     case FormFieldType::kRadioButton: {
@@ -409,7 +410,7 @@ bool CPDFSDK_Widget::IsPushHighlighted() const {
 }
 
 FormFieldType CPDFSDK_Widget::GetFieldType() const {
-  CPDF_FormField* pField = GetFormField();
+  RetainPtr<CPDF_FormField> pField = GetFormField();
   return pField ? pField->GetFieldType() : FormFieldType::kUnknown;
 }
 
@@ -442,9 +443,9 @@ bool CPDFSDK_Widget::IsSignatureWidget() const {
   return GetFieldType() == FormFieldType::kSignature;
 }
 
-CPDF_FormField* CPDFSDK_Widget::GetFormField() const {
+RetainPtr<CPDF_FormField> CPDFSDK_Widget::GetFormField() const {
   CPDF_FormControl* pControl = GetFormControl();
-  return pControl ? pControl->GetField() : nullptr;
+  return pControl ? pdfium::WrapRetain(pControl->GetField()) : nullptr;
 }
 
 CPDF_FormControl* CPDFSDK_Widget::GetFormControl() const {
@@ -517,7 +518,7 @@ int CPDFSDK_Widget::GetSelectedIndex(int nIndex) const {
     }
   }
 #endif  // PDF_ENABLE_XFA
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   return pFormField->GetSelectedIndex(nIndex);
 }
 
@@ -530,7 +531,7 @@ WideString CPDFSDK_Widget::GetValue() const {
     }
   }
 #endif  // PDF_ENABLE_XFA
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   return pFormField->GetValue();
 }
 
@@ -540,7 +541,7 @@ WideString CPDFSDK_Widget::GetExportValue() const {
 }
 
 WideString CPDFSDK_Widget::GetOptionLabel(int nIndex) const {
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   return pFormField->GetOptionLabel(nIndex);
 }
 
@@ -549,7 +550,7 @@ WideString CPDFSDK_Widget::GetSelectExportText(int nIndex) const {
     return WideString();
   }
 
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   if (!pFormField) {
     return WideString();
   }
@@ -563,7 +564,7 @@ WideString CPDFSDK_Widget::GetSelectExportText(int nIndex) const {
 }
 
 int CPDFSDK_Widget::CountOptions() const {
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   return pFormField->CountOptions();
 }
 
@@ -703,13 +704,13 @@ void CPDFSDK_Widget::ResetAppearance(std::optional<WideString> sValue,
 }
 
 std::optional<WideString> CPDFSDK_Widget::OnFormat() {
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   DCHECK(pFormField);
   return interactive_form_->OnFormat(pFormField);
 }
 
 void CPDFSDK_Widget::ResetFieldAppearance() {
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   DCHECK(pFormField);
   interactive_form_->ResetFieldAppearance(pFormField, std::nullopt);
 }
@@ -972,7 +973,7 @@ void CPDFSDK_Widget::DrawAppearance(CFX_RenderDevice* pDevice,
 }
 
 void CPDFSDK_Widget::UpdateField() {
-  CPDF_FormField* pFormField = GetFormField();
+  RetainPtr<CPDF_FormField> pFormField = GetFormField();
   DCHECK(pFormField);
   interactive_form_->UpdateField(pFormField);
 }
