@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f97c4a84_7528a0a5",
+        "filename": "core/fxge/android/cfpf_skiafont.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 0,
+      "message": "Can GetSfntTable() be private now? Maybe in a follow-up.",
+      "range": {
+        "startLine": 27,
+        "startChar": 47,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "ccfc0838c6876caf94e0c9685315dc2755dd157f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

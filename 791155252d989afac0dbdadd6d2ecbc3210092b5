@@ -16,6 +16,143 @@
       "message": "Slightly smaller, PTAL.",
       "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5961ea0b_0d4170c2",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "BTW, as a follow-up, all of these names can omit \"Skia\", since they have little to do with Skia and are named as such due to the their connections with the files this CL removes.",
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c726cf27_c5bb7dec",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "Didn\u0027t need to move.",
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff2f13ea_8a42bff1",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "Carry over \"SAFETY\" comment from cfpf_skiafontmgr.cpp.",
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7237fc87_f468e893",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "style",
+      "range": {
+        "startLine": 157,
+        "startChar": 7,
+        "endLine": 157,
+        "endChar": 11
+      },
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1006e232_92c7b5dc",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "Negate and do an early return?",
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e8a1fef_78a9becd",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 28
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "style",
+      "range": {
+        "startLine": 203,
+        "startChar": 21,
+        "endLine": 203,
+        "endChar": 29
+      },
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98011745_93859193",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 28
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T23:37:09Z",
+      "side": 1,
+      "message": "Update",
+      "range": {
+        "startLine": 35,
+        "startChar": 26,
+        "endLine": 35,
+        "endChar": 36
+      },
+      "revId": "791155252d989afac0dbdadd6d2ecbc3210092b5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
