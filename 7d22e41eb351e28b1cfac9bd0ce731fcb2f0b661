@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "04c2d5cd_93ad82e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-15T19:36:20Z",
+      "side": 1,
+      "message": "gosh, always forget to click atleast once the \"format\" button",
+      "parentUuid": "be641f02_9cf1408d",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 330
+      },
+      "revId": "7d22e41eb351e28b1cfac9bd0ce731fcb2f0b661",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "cb1ec635_fc072b7c",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 4
