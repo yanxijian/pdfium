@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "55997066_372f8817",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T18:21:23Z",
+      "side": 1,
+      "message": ".. the previous comment is mainly for me, just to remind me to dig in.  If you can answer it great, alternatively if we accept a little ref-churn, sets of RetainPtr\u003c\u003e are safer.",
+      "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "da0758c9_78935b9e",
