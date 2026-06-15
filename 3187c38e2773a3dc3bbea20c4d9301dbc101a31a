@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "600ab9b6_8be4e3d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8751
+      },
+      "writtenOn": "2026-06-15T20:08:57Z",
+      "side": 1,
+      "message": "Libpng has now been auto-rolled in [1], so I will close this CL.\n(The CL already said \"Merged\" earlier today, I\u0027m not sure why it is now back to \"Ready to submit\".)\n\n[1]: https://pdfium.googlesource.com/pdfium/+/e1157f05b244796ca834fffdd307437d6c4bffac",
+      "revId": "3187c38e2773a3dc3bbea20c4d9301dbc101a31a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
