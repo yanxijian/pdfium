@@ -70,6 +70,30 @@
       },
       "revId": "672cebb4eb9f1e7c0054be03e2f6401e2f129b0a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1316022e_4e73305c",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-15T19:32:08Z",
+      "side": 1,
+      "message": "moved the constants, no more namespace, think its easier/better to do it in one go!",
+      "parentUuid": "9cb41742_c3212629",
+      "range": {
+        "startLine": 187,
+        "startChar": 14,
+        "endLine": 187,
+        "endChar": 20
+      },
+      "revId": "672cebb4eb9f1e7c0054be03e2f6401e2f129b0a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
