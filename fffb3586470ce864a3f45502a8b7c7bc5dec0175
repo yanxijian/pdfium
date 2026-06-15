@@ -16,6 +16,24 @@
       "message": "I\u0027ve been trying to make this smaller with prequel-CLs, but eventually I have to jump off the cliff.",
       "revId": "fffb3586470ce864a3f45502a8b7c7bc5dec0175",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ddeac6d_89ccf3ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T17:25:36Z",
+      "side": 1,
+      "message": "I do think I can do the mechanical move of tables first, lemme try that",
+      "parentUuid": "da72ed82_6668e5eb",
+      "revId": "fffb3586470ce864a3f45502a8b7c7bc5dec0175",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
