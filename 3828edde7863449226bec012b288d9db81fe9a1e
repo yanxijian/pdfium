@@ -1,0 +1,209 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "022780f8_6db132f4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "typo - \u0027H\u0027 should be lowercase.",
+      "range": {
+        "startLine": 10,
+        "startChar": 33,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd35944d_a4df6f30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Just a quick pass.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f30a82be_871d80d4",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Avoid using Hungarian notation for variable names in new code. Use Google C++ style for new names. Here and in the rest of this CL.",
+      "range": {
+        "startLine": 326,
+        "startChar": 9,
+        "endLine": 326,
+        "endChar": 20
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df34b2c1_7a993bd3",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Give this local variable, and possibly also the parameter on line 313, better names so readers can more easily figure out what they represent.",
+      "range": {
+        "startLine": 326,
+        "startChar": 9,
+        "endLine": 326,
+        "endChar": 20
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "655eb867_0e3d8484",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Style: dtor after ctors, so move this after line 22.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7358e413_f3340e2f",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Some of the changes here look like it\u0027s just modernizing the existing code, and isn\u0027t strictly necessary in this CL. Maybe split this off into a separate cleanup CL, and prepend that to this CL?",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3bce280_f528e182",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Style: methods above member variables.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "595c5cca_371e2633",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Maybe nest this in `CPVT_WordInfo`. As in, `CPVT_WordInfo::Direction`.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4192b45e_48040571",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "This is never used?",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb399878_2f4e12cb",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 720,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "This looks like a leftover debugging statement. Please remove.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99b0875d_3202966a",
+        "filename": "testing/resources/pixel/bug_725389_expected_mac.pdf.0.png",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-15T22:49:27Z",
+      "side": 1,
+      "message": "Please run `optipng` on these files to keep the file sizes small.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
