@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ad287c4_34bb94ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T19:31:13Z",
+      "side": 1,
+      "message": "Only concern is a loss of uniqueness in these names.  It seems unlikely that any of these symbols would persist outside of compile phase, but one thing we\u0027ve done in the past is in the header do ...\n```\nnamespace pdfium {\nenum class BidiClass { ... };\n}  // namespace pdfium\n\nusing pdfium::BidiClass;\n```\njust to avoid some latent linker hassle.",
+      "revId": "e3aad02e98dab34307b929b90c7c00c59da0df9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
