@@ -46,6 +46,30 @@
       },
       "revId": "672cebb4eb9f1e7c0054be03e2f6401e2f129b0a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cb41742_c3212629",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 6295
+      },
+      "writtenOn": "2026-06-15T14:37:53Z",
+      "side": 1,
+      "message": "That\u0027s not a good reason given that there\u0027s a bunch of other methods and constants in this same file but outside of the pdfium namespace. Well I\u0027m out of the loop here so I\u0027ll unblock you but can you file a bug or make sure this is tracked somewhere? The namespacing here seems arbitrary.",
+      "parentUuid": "92642ed9_80cebe81",
+      "range": {
+        "startLine": 187,
+        "startChar": 14,
+        "endLine": 187,
+        "endChar": 20
+      },
+      "revId": "672cebb4eb9f1e7c0054be03e2f6401e2f129b0a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
