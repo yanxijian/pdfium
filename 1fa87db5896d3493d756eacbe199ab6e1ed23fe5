@@ -168,6 +168,24 @@
       "message": "@tsepez@chromium.org Curious about why we are changing this. The old version only seemed to be setting one highlight value (not multiple) so I don\u0027t see why we would use a mask here, similarly ModifyStyleExts() also takes a numeric type (not a mask).\n\nLet me know what I am missing here, thanks!",
       "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0fa69e1_e5273e80",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T19:14:51Z",
+      "side": 1,
+      "message": "strict type safety.  avoids some underlying_type usage which would stil compile against any enum constant with the same width.",
+      "parentUuid": "cd5180e5_6c6a070e",
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
