@@ -27,6 +27,7 @@
 #include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/fx_string_wrappers.h"
+#include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_graphstatedata.h"
 #include "core/fxge/cfx_path.h"
 #include "fpdfsdk/cpdfsdk_annot.h"
@@ -253,7 +254,8 @@ void CPDFSDK_InteractiveForm::SynchronizeField(CPDF_FormField* pFormField) {
 }
 #endif  // PDF_ENABLE_XFA
 
-void CPDFSDK_InteractiveForm::OnCalculate(CPDF_FormField* pFormField) {
+void CPDFSDK_InteractiveForm::OnCalculate(
+    const RetainPtr<CPDF_FormField>& pFormField) {
   if (!form_fill_env_->IsJSPlatformPresent()) {
     return;
   }
@@ -311,7 +313,7 @@ void CPDFSDK_InteractiveForm::OnCalculate(CPDF_FormField* pFormField) {
 }
 
 std::optional<WideString> CPDFSDK_InteractiveForm::OnFormat(
-    CPDF_FormField* pFormField) {
+    const RetainPtr<CPDF_FormField>& pFormField) {
   if (!form_fill_env_->IsJSPlatformPresent()) {
     return std::nullopt;
   }
@@ -333,7 +335,7 @@ std::optional<WideString> CPDFSDK_InteractiveForm::OnFormat(
       WideString script = action.GetJavaScript();
       if (!script.IsEmpty()) {
         IJS_Runtime::ScopedEventContext context(pRuntime);
-        context->OnField_Format(pFormField, &sValue);
+        context->OnField_Format(pFormField.Get(), &sValue);
         std::optional<IJS_Runtime::JS_Error> err = context->RunScript(script);
         if (!err.has_value()) {
           return sValue;
@@ -345,7 +347,7 @@ std::optional<WideString> CPDFSDK_InteractiveForm::OnFormat(
 }
 
 void CPDFSDK_InteractiveForm::ResetFieldAppearance(
-    CPDF_FormField* pFormField,
+    const RetainPtr<CPDF_FormField>& pFormField,
     std::optional<WideString> sValue) {
   for (int i = 0, sz = pFormField->CountControls(); i < sz; i++) {
     CPDF_FormControl* pFormCtrl = pFormField->GetControl(i);
@@ -356,7 +358,8 @@ void CPDFSDK_InteractiveForm::ResetFieldAppearance(
   }
 }
 
-void CPDFSDK_InteractiveForm::UpdateField(CPDF_FormField* pFormField) {
+void CPDFSDK_InteractiveForm::UpdateField(
+    const RetainPtr<CPDF_FormField>& pFormField) {
   auto* formfiller = form_fill_env_->GetInteractiveFormFiller();
   for (int i = 0, sz = pFormField->CountControls(); i < sz; i++) {
     CPDF_FormControl* pFormCtrl = pFormField->GetControl(i);
@@ -374,8 +377,9 @@ void CPDFSDK_InteractiveForm::UpdateField(CPDF_FormField* pFormField) {
   }
 }
 
-bool CPDFSDK_InteractiveForm::OnKeyStrokeCommit(CPDF_FormField* pFormField,
-                                                const WideString& csValue) {
+bool CPDFSDK_InteractiveForm::OnKeyStrokeCommit(
+    const RetainPtr<CPDF_FormField>& pFormField,
+    const WideString& csValue) {
   CPDF_AAction aAction = pFormField->GetAdditionalAction();
   if (!aAction.ActionExist(CPDF_AAction::kKeyStroke)) {
     return true;
@@ -395,8 +399,9 @@ bool CPDFSDK_InteractiveForm::OnKeyStrokeCommit(CPDF_FormField* pFormField,
   return fa.bRC;
 }
 
-bool CPDFSDK_InteractiveForm::OnValidate(CPDF_FormField* pFormField,
-                                         const WideString& csValue) {
+bool CPDFSDK_InteractiveForm::OnValidate(
+    const RetainPtr<CPDF_FormField>& pFormField,
+    const WideString& csValue) {
   CPDF_AAction aAction = pFormField->GetAdditionalAction();
   if (!aAction.ActionExist(CPDF_AAction::kValidate)) {
     return true;
@@ -561,61 +566,66 @@ std::vector<CPDF_FormField*> CPDFSDK_InteractiveForm::GetFieldFromObjects(
 
 bool CPDFSDK_InteractiveForm::BeforeValueChange(CPDF_FormField* pField,
                                                 const WideString& csValue) {
-  FormFieldType fieldType = pField->GetFieldType();
+  RetainPtr<CPDF_FormField> pRetainedField(pField);
+  FormFieldType fieldType = pRetainedField->GetFieldType();
   if (!IsFormFieldTypeComboOrText(fieldType)) {
     return true;
   }
-  if (!OnKeyStrokeCommit(pField, csValue)) {
+  if (!OnKeyStrokeCommit(pRetainedField, csValue)) {
     return false;
   }
-  return OnValidate(pField, csValue);
+  return OnValidate(pRetainedField, csValue);
 }
 
 void CPDFSDK_InteractiveForm::AfterValueChange(CPDF_FormField* pField) {
+  RetainPtr<CPDF_FormField> pRetainedField(pField);
 #ifdef PDF_ENABLE_XFA
-  SynchronizeField(pField);
+  SynchronizeField(pRetainedField.Get());
 #endif  // PDF_ENABLE_XFA
 
-  FormFieldType fieldType = pField->GetFieldType();
+  FormFieldType fieldType = pRetainedField->GetFieldType();
   if (!IsFormFieldTypeComboOrText(fieldType)) {
     return;
   }
 
-  OnCalculate(pField);
-  ResetFieldAppearance(pField, OnFormat(pField));
-  UpdateField(pField);
+  OnCalculate(pRetainedField);
+  ResetFieldAppearance(pRetainedField, OnFormat(pRetainedField));
+  UpdateField(pRetainedField);
 }
 
 bool CPDFSDK_InteractiveForm::BeforeSelectionChange(CPDF_FormField* pField,
                                                     const WideString& csValue) {
-  if (pField->GetFieldType() != FormFieldType::kListBox) {
+  RetainPtr<CPDF_FormField> pRetainedField(pField);
+  if (pRetainedField->GetFieldType() != FormFieldType::kListBox) {
     return true;
   }
-  if (!OnKeyStrokeCommit(pField, csValue)) {
+  if (!OnKeyStrokeCommit(pRetainedField, csValue)) {
     return false;
   }
-  return OnValidate(pField, csValue);
+  return OnValidate(pRetainedField, csValue);
 }
 
 void CPDFSDK_InteractiveForm::AfterSelectionChange(CPDF_FormField* pField) {
-  if (pField->GetFieldType() != FormFieldType::kListBox) {
+  RetainPtr<CPDF_FormField> pRetainedField(pField);
+  if (pRetainedField->GetFieldType() != FormFieldType::kListBox) {
     return;
   }
 
-  OnCalculate(pField);
-  ResetFieldAppearance(pField, std::nullopt);
-  UpdateField(pField);
+  OnCalculate(pRetainedField);
+  ResetFieldAppearance(pRetainedField, std::nullopt);
+  UpdateField(pRetainedField);
 }
 
 void CPDFSDK_InteractiveForm::AfterCheckedStatusChange(CPDF_FormField* pField) {
-  FormFieldType fieldType = pField->GetFieldType();
+  RetainPtr<CPDF_FormField> pRetainedField(pField);
+  FormFieldType fieldType = pRetainedField->GetFieldType();
   if (fieldType != FormFieldType::kCheckBox &&
       fieldType != FormFieldType::kRadioButton) {
     return;
   }
 
-  OnCalculate(pField);
-  UpdateField(pField);
+  OnCalculate(pRetainedField);
+  UpdateField(pRetainedField);
 }
 
 void CPDFSDK_InteractiveForm::AfterFormReset(CPDF_InteractiveForm* pForm) {

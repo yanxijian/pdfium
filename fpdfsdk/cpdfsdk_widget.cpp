@@ -24,6 +24,7 @@
 #include "core/fpdfdoc/cpdf_interactiveform.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_graphstatedata.h"
 #include "core/fxge/cfx_path.h"
@@ -705,13 +706,14 @@ void CPDFSDK_Widget::ResetAppearance(std::optional<WideString> sValue,
 std::optional<WideString> CPDFSDK_Widget::OnFormat() {
   CPDF_FormField* pFormField = GetFormField();
   DCHECK(pFormField);
-  return interactive_form_->OnFormat(pFormField);
+  return interactive_form_->OnFormat(pdfium::WrapRetain(pFormField));
 }
 
 void CPDFSDK_Widget::ResetFieldAppearance() {
   CPDF_FormField* pFormField = GetFormField();
   DCHECK(pFormField);
-  interactive_form_->ResetFieldAppearance(pFormField, std::nullopt);
+  interactive_form_->ResetFieldAppearance(pdfium::WrapRetain(pFormField),
+                                          std::nullopt);
 }
 
 void CPDFSDK_Widget::OnDraw(CFX_RenderDevice* pDevice,
@@ -974,7 +976,7 @@ void CPDFSDK_Widget::DrawAppearance(CFX_RenderDevice* pDevice,
 void CPDFSDK_Widget::UpdateField() {
   CPDF_FormField* pFormField = GetFormField();
   DCHECK(pFormField);
-  interactive_form_->UpdateField(pFormField);
+  interactive_form_->UpdateField(pdfium::WrapRetain(pFormField));
 }
 
 void CPDFSDK_Widget::DrawShadow(CFX_RenderDevice* pDevice,
@@ -1094,7 +1096,8 @@ bool CPDFSDK_Widget::OnAAction(CPDF_AAction::AActionType type,
 
   CPDF_Action action = GetAAction(type);
   if (action.GetType() != CPDF_Action::Type::kUnknown) {
-    pFormFillEnv->DoActionField(action, type, GetFormField(), data);
+    pFormFillEnv->DoActionField(action, type,
+                                pdfium::WrapRetain(GetFormField()), data);
   }
   return false;
 }
