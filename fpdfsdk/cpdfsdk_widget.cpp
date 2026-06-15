@@ -24,6 +24,7 @@
 #include "core/fpdfdoc/cpdf_interactiveform.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_graphstatedata.h"
 #include "core/fxge/cfx_path.h"
@@ -703,15 +704,15 @@ void CPDFSDK_Widget::ResetAppearance(std::optional<WideString> sValue,
 }
 
 std::optional<WideString> CPDFSDK_Widget::OnFormat() {
-  CPDF_FormField* pFormField = GetFormField();
-  DCHECK(pFormField);
-  return interactive_form_->OnFormat(pFormField);
+  RetainPtr<CPDF_FormField> form_field(GetFormField());
+  DCHECK(form_field);
+  return interactive_form_->OnFormat(form_field.Get());
 }
 
 void CPDFSDK_Widget::ResetFieldAppearance() {
-  CPDF_FormField* pFormField = GetFormField();
-  DCHECK(pFormField);
-  interactive_form_->ResetFieldAppearance(pFormField, std::nullopt);
+  RetainPtr<CPDF_FormField> form_field(GetFormField());
+  DCHECK(form_field);
+  interactive_form_->ResetFieldAppearance(form_field.Get(), std::nullopt);
 }
 
 void CPDFSDK_Widget::OnDraw(CFX_RenderDevice* pDevice,
@@ -972,9 +973,9 @@ void CPDFSDK_Widget::DrawAppearance(CFX_RenderDevice* pDevice,
 }
 
 void CPDFSDK_Widget::UpdateField() {
-  CPDF_FormField* pFormField = GetFormField();
-  DCHECK(pFormField);
-  interactive_form_->UpdateField(pFormField);
+  RetainPtr<CPDF_FormField> form_field(GetFormField());
+  DCHECK(form_field);
+  interactive_form_->UpdateField(form_field.Get());
 }
 
 void CPDFSDK_Widget::DrawShadow(CFX_RenderDevice* pDevice,
@@ -1083,18 +1084,19 @@ CFX_Color CPDFSDK_Widget::GetFillPWLColor() const {
 
 bool CPDFSDK_Widget::OnAAction(CPDF_AAction::AActionType type,
                                CFFL_FieldAction* data,
-                               const CPDFSDK_PageView* pPageView) {
-  CPDFSDK_FormFillEnvironment* pFormFillEnv = pPageView->GetFormFillEnv();
+                               const CPDFSDK_PageView* page_view) {
+  CPDFSDK_FormFillEnvironment* form_fill_env = page_view->GetFormFillEnv();
 
 #ifdef PDF_ENABLE_XFA
-  if (HandleXFAAAction(type, data, pFormFillEnv)) {
+  if (HandleXFAAAction(type, data, form_fill_env)) {
     return true;
   }
 #endif  // PDF_ENABLE_XFA
 
   CPDF_Action action = GetAAction(type);
   if (action.GetType() != CPDF_Action::Type::kUnknown) {
-    pFormFillEnv->DoActionField(action, type, GetFormField(), data);
+    RetainPtr<CPDF_FormField> form_field(GetFormField());
+    form_fill_env->DoActionField(action, type, form_field.Get(), data);
   }
   return false;
 }

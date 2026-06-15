@@ -124,7 +124,7 @@ class CPDFSDK_Widget final : public CPDFSDK_BAAnnot {
 
   bool OnAAction(CPDF_AAction::AActionType type,
                  CFFL_FieldAction* data,
-                 const CPDFSDK_PageView* pPageView);
+                 const CPDFSDK_PageView* page_view);
 
   CPDF_FormField* GetFormField() const;
   CPDF_FormControl* GetFormControl() const;
