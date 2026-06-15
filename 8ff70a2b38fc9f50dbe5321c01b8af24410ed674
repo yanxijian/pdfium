@@ -241,6 +241,30 @@
       },
       "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8f27902_37add03b",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-15T20:04:07Z",
+      "side": 1,
+      "message": "Answer is no JS, but automated analysis suggests there\u0027s a path to get a dangling ptr in the std::set\u003c\u003e, but I have yet to analyze the analysis.  It would behoove us to convert to std::set\u003cRetainPtr\u003c\u003e\u003e.",
+      "parentUuid": "c6a912e8_d054ff4f",
+      "range": {
+        "startLine": 398,
+        "startChar": 14,
+        "endLine": 398,
+        "endChar": 22
+      },
+      "revId": "8ff70a2b38fc9f50dbe5321c01b8af24410ed674",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
