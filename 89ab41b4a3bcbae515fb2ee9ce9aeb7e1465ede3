@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0511b315_bee0cde2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:40:31Z",
+      "side": 1,
+      "message": "here is basically the \"testing strategy\" comment as a prequel CL.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
