@@ -269,6 +269,24 @@
       "parentUuid": "2d09beff_4ef5911d",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de3a777a_8af845ff",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:21:39Z",
+      "side": 1,
+      "message": "Maybe add a comment in the code for this, so future readers can see why it\u0027s deliberately flipped.",
+      "parentUuid": "3f7a0059_b623d18e",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
