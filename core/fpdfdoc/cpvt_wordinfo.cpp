@@ -6,6 +6,7 @@
 
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 
+#include "core/fpdfdoc/cpvt_word.h"
 #include "core/fxcrt/fx_codepage.h"
 
 CPVT_WordInfo::CPVT_WordInfo()
@@ -51,3 +52,8 @@ CPVT_WordInfo& CPVT_WordInfo::operator=(const CPVT_WordInfo& word) {
   fWordTail = word.fWordTail;
   return *this;
 }
+
+CPVT_Word::CPVT_Word() = default;
+CPVT_Word::CPVT_Word(const CPVT_Word&) = default;
+CPVT_Word& CPVT_Word::operator=(const CPVT_Word&) = default;
+CPVT_Word::~CPVT_Word() = default;
