@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a37618f_1c635220",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 37
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "gah.",
+      "parentUuid": "220978ea_58547e2b",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7eb942d_b1d6daea",
@@ -31,6 +49,47 @@
       "writtenOn": "2026-06-16T23:02:25Z",
       "side": 1,
       "message": "Mention testing strategy in the CL description.",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6abc618f_463e445d",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7eb942d_b1d6daea",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8385467c_0cff27b3",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "Yes, the test cases removed from `core/fxge/android/cfpf_skiafontmgr_unittest.cpp` have been equivalently ported to `core/fxge/android/cfx_androidfontinfo_unittest.cpp`, with the exception of two tests that were specifically verifying an old bug/quirk that this refactor fixes. Here is the exact mapping of the removed test cases to the added ones:1. **`CreateFontPreferOriginalNonCJK`** ➡️ **`MapFontPreferOriginalNonCJK`**   *(Verifies that exact name matches are preferred over substitutions for non-CJK fonts)*2. **`CreateFontFallbackToSubstNonCJK`** ➡️ **`MapFontFallbackToSubstNonCJK`**   *(Verifies that missing non-CJK fonts correctly fall back to their substitutions)*3. **`CreateFontPreferOriginalCJK`** ➡️ **`MapFontPreferOriginalCJK`**   *(Verifies that exact name matches are preferred for CJK fonts, even if another CJK font has a higher glyph count)*4. **`CreateFontFallbackToSubstCJK`** ➡️ **`MapFontFallbackToSubstCJK`**   *(Verifies that missing CJK fonts correctly fall back to their substitutions)*5. **`CreateFontCJKFallbackNoMatch`** ➡️ **`MapFontCJKFallbackNoMatch`**   *(Verifies that an unknown CJK font falls back to the available CJK font)*6. **`CreateFontCJKDifferentGlyphCountsNoNameMatch`** ➡️ **`MapFontCJKDifferentGlyphCountsNoNameMatch`**   *(Verifies that when falling back between multiple CJK fonts without a name match, the one with the higher glyph count is chosen)*### What about the `CreateFontCJKOrderDependency` tests?The removed test file had two order dependency tests:* `CreateFontCJKOrderDependency1`* `CreateFontCJKOrderDependency2`These tests were removed because they verified an artifact of the old single-pass matching logic. In the old `CFPF_SkiaFontMgr`, searching for a CJK font would sometimes pick a font with a higher glyph count instead of a perfect name match just because of the order the system scanned the font files. By rewriting `CFX_AndroidFontInfo` to inherit from `CFX_FolderFontInfo`, the search is now properly done in two passes:1. Try to find a perfect name match (`FindFont(..., must_match_name\u003dtrue)`).2. If that fails, fall back to comparing glyph counts (`FindFont(..., must_match_name\u003dfalse)`).This eliminates the order dependency quirk altogether, making those two tests obsolete (the correct behavior is now robustly covered by `MapFontPreferOriginalCJK`).### New CoverageThe CL also adds **`MapFontCJKDifferentWeights`**, which wasn\u0027t in the old test file. This improves coverage by verifying that style/weight matching now works correctly for CJK fonts, a feature inherited from the new `CFX_FolderFontInfo` base class.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 36
+      },
       "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -52,6 +111,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "334d8f56_90b8431d",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eae06e5d_c2a6405c",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7241f880_6ee5eb09",
@@ -65,6 +142,30 @@
       "writtenOn": "2026-06-16T23:02:25Z",
       "side": 1,
       "message": "Can be private.",
+      "range": {
+        "startLine": 56,
+        "startChar": 1,
+        "endLine": 56,
+        "endChar": 10
+      },
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f337a42_c4990af0",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7241f880_6ee5eb09",
       "range": {
         "startLine": 56,
         "startChar": 1,

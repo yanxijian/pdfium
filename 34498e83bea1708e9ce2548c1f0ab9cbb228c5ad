@@ -251,6 +251,24 @@
       "parentUuid": "7a7d23aa_12280ff2",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f7a0059_b623d18e",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:11:50Z",
+      "side": 1,
+      "message": "Ah, two separate purposes. Depending upon must_match_name_. If we have a match, then we prefer style using count as a tie-breaker.  If we don\u0027t have a match, we prefer most glyphs to avoid empty boxes.",
+      "parentUuid": "2d09beff_4ef5911d",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
