@@ -22,6 +22,29 @@
       },
       "revId": "7c399c3a28a57b3676aa099b76a5d53285b46cea",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52b5e113_39acfc24",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 34
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:42:16Z",
+      "side": 1,
+      "message": "NIT: You can optimize this by checking if the score is strictly worse before doing the string matching, similar to `CFX_FolderFontInfo::IsBetterMatch`\u0027s early out.\n\n```suggestion\n    // Avoid the relatively expensive FindFamilyNameMatch() unless there might\n    // be a better match.\n    if (current_best \u0026\u0026 candidate_score \u003c current_best_score) {\n      return false;\n    }\n    ByteStringView family_view \u003d family.AsStringView();\n```",
+      "range": {
+        "startLine": 218,
+        "startChar": 0,
+        "endLine": 218,
+        "endChar": 0
+      },
+      "revId": "7c399c3a28a57b3676aa099b76a5d53285b46cea",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
