@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae331a55_d0116d38",
+        "filename": "core/fpdfapi/font/cpdf_cidfont.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T17:38:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25e622a3_e8af5fa8",
+      "revId": "39a44cb1e5889bab2bc942f41dd77a7656865e71",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1ce4c5b0_f2ddae00",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-16T17:31:46Z",
       "side": 1,
       "message": "If you\u0027d like, this can also reference ISO 32000-1:2008 spec, section 9.6.",
+      "revId": "39a44cb1e5889bab2bc942f41dd77a7656865e71",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b7a06d2_ac2cbbe4",
+        "filename": "core/fpdfapi/font/cpdf_simplefont.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T17:38:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ce4c5b0_f2ddae00",
       "revId": "39a44cb1e5889bab2bc942f41dd77a7656865e71",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
