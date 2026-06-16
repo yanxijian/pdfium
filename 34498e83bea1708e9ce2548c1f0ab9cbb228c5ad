@@ -287,6 +287,24 @@
       "parentUuid": "3f7a0059_b623d18e",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c92145e0_45356720",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T23:31:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "de3a777a_8af845ff",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
