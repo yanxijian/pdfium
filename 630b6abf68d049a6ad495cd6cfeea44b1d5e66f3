@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4cf8aa7_9397578d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T17:17:25Z",
+      "side": 1,
+      "message": "bot thinks we can do better.  Please evaluate.",
+      "revId": "630b6abf68d049a6ad495cd6cfeea44b1d5e66f3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f53ab426_26c60287",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T17:17:25Z",
+      "side": 1,
+      "message": "You can significantly optimize and simplify this by avoiding creating new sets per page and skipping `set_difference`.\n\nInstead of collecting all widget annotations for the other page, you can iterate through its `Annots` array and `erase` directly from `widget_annots`. `std::set::erase` will safely do nothing if the annotation isn\u0027t in `widget_annots` (e.g. if it\u0027s not a widget or not shared).\n\n```cpp\n    RetainPtr\u003cconst CPDF_Array\u003e annots \u003d page_dict-\u003eGetArrayFor(kAnnots);\n    if (!annots) {\n      continue;\n    }\n\n    for (size_t j \u003d 0; j \u003c annots-\u003esize(); ++j) {\n      widget_annots.erase(annots-\u003eGetDictAt(j));\n      if (widget_annots.empty()) {\n        return;\n      }\n    }\n```\nThis avoids string comparisons in `IsWidgetAnnot()` for annotations that aren\u0027t on the current page, and skips allocating temporary sets.",
+      "range": {
+        "startLine": 368,
+        "startChar": 0,
+        "endLine": 368,
+        "endChar": 0
+      },
+      "revId": "630b6abf68d049a6ad495cd6cfeea44b1d5e66f3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
