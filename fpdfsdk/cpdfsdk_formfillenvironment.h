@@ -125,11 +125,11 @@ class CPDFSDK_FormFillEnvironment final
                         CPDF_AAction::AActionType eType);
   bool DoActionField(const CPDF_Action& action,
                      CPDF_AAction::AActionType type,
-                     CPDF_FormField* pFormField,
+                     CPDF_FormField* form_field,
                      CFFL_FieldAction* data);
   void DoActionFieldJavaScript(const CPDF_Action& JsAction,
                                CPDF_AAction::AActionType type,
-                               CPDF_FormField* pFormField,
+                               CPDF_FormField* form_field,
                                CFFL_FieldAction* data);
   bool DoActionLink(const CPDF_Action& action,
                     CPDF_AAction::AActionType type,
@@ -253,25 +253,27 @@ class CPDFSDK_FormFillEnvironment final
 
   // Support methods for Actions.
   void RunScript(const WideString& script, const RunScriptCallback& cb);
-  bool ExecuteDocumentOpenAction(const CPDF_Action& action,
-                                 std::set<const CPDF_Dictionary*>* visited);
-  bool ExecuteDocumentPageAction(const CPDF_Action& action,
-                                 CPDF_AAction::AActionType type,
-                                 std::set<const CPDF_Dictionary*>* visited);
+  bool ExecuteDocumentOpenAction(
+      const CPDF_Action& action,
+      std::set<RetainPtr<const CPDF_Dictionary>>* visited);
+  bool ExecuteDocumentPageAction(
+      const CPDF_Action& action,
+      CPDF_AAction::AActionType type,
+      std::set<RetainPtr<const CPDF_Dictionary>>* visited);
   bool ExecuteFieldAction(const CPDF_Action& action,
                           CPDF_AAction::AActionType type,
-                          CPDF_FormField* pFormField,
+                          CPDF_FormField* form_field,
                           CFFL_FieldAction* data,
-                          std::set<const CPDF_Dictionary*>* visited);
+                          std::set<RetainPtr<const CPDF_Dictionary>>* visited);
   void RunDocumentPageJavaScript(CPDF_AAction::AActionType type,
                                  const WideString& script);
   void RunDocumentOpenJavaScript(const WideString& sScriptName,
                                  const WideString& script);
-  void RunFieldJavaScript(CPDF_FormField* pFormField,
+  void RunFieldJavaScript(CPDF_FormField* form_field,
                           CPDF_AAction::AActionType type,
                           CFFL_FieldAction* data,
                           const WideString& script);
-  bool IsValidField(const CPDF_Dictionary* pFieldDict);
+  bool IsValidField(const CPDF_Dictionary* field_dict);
 
   UnownedPtr<FPDF_FORMFILLINFO> const info_;
   std::unique_ptr<IJS_Runtime> ijs_runtime_;
