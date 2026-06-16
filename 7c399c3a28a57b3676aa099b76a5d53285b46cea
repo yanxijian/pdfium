@@ -45,6 +45,30 @@
       },
       "revId": "7c399c3a28a57b3676aa099b76a5d53285b46cea",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14ca6211_b278ca3b",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 34
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:42:43Z",
+      "side": 1,
+      "message": "We can optimize the code by avoiding the expensive string matching ( FindFamilyNameMatch ) if the candidate\u0027s style score is   \n  already worse than our current best.\n\n  However, unlike  CFX_FolderFontInfo::IsBetterMatch  which checks for worse or equal ( \u003c\u003d ), we can only check for strictly     \n  worse ( \u003c ).\n\n  Here is why:\n\n  • Base class ( CFX_FolderFontInfo ): If scores are equal, the candidate is not considered better. So it can early-out on       \n  candidate_score \u003c\u003d current_best_score .\n  • Android CJK class ( CFX_AndroidFontInfo ): If scores are equal, the candidate can still be better if it has a higher glyph   \n  count (the tie-breaker). So we can only early-out if it is strictly worse:  candidate_score \u003c current_best_score .",
+      "parentUuid": "52b5e113_39acfc24",
+      "range": {
+        "startLine": 218,
+        "startChar": 0,
+        "endLine": 218,
+        "endChar": 0
+      },
+      "revId": "7c399c3a28a57b3676aa099b76a5d53285b46cea",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
