@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a422ab18_d1e8dd88",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T20:51:06Z",
+      "side": 1,
+      "message": "Not used?",
+      "revId": "f0bdf900aba35d2b2839e73701ab2ab097269d9e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c22bdd12_eb4ec240",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T20:51:06Z",
+      "side": 1,
+      "message": "It\u0027s not clear why core/fpdfdoc/cpvt_word.cpp doesn\u0027t exist, but this CL can create it and add this there.",
+      "revId": "f0bdf900aba35d2b2839e73701ab2ab097269d9e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
