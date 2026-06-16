@@ -104,6 +104,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "57826a35_9b994fe1",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 19
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T21:55:58Z",
+      "side": 1,
+      "message": "(the reason being is that we dislike such globals, and this makes it easier to find where they lurk.  But it is OK to use here).",
+      "parentUuid": "ea580a69_ac7b81b4",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 37
+      },
+      "revId": "d1b237028cf9645aa113152d7b9403c607645d80",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7030255e_c2caffe2",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 19
