@@ -186,6 +186,24 @@
       "parentUuid": "cd5180e5_6c6a070e",
       "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8ce66dc_908405b9",
+        "filename": "xfa/fxfa/cxfa_ffpushbutton.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T22:47:27Z",
+      "side": 1,
+      "message": "ModifyStyleExts() in general is taking a uint32_t mask, so working with a mask in the ModifyStyleExts() caller is reasonable.",
+      "parentUuid": "d0fa69e1_e5273e80",
+      "revId": "1fa87db5896d3493d756eacbe199ab6e1ed23fe5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
