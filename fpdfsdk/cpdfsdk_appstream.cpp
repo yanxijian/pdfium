@@ -637,7 +637,7 @@ ByteString GetWordRenderString(ByteStringView strWords) {
 
 ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
                             const CFX_PointF& ptOffset,
-                            bool bContinuous,
+                            bool use_continuous_formatting,
                             uint16_t SubWord) {
   CPWL_EditImpl::Iterator* pIterator = pEdit->GetIterator();
   pIterator->SetAt(0);
@@ -651,14 +651,21 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
 
   while (pIterator->NextWord()) {
     CPVT_WordPlace place = pIterator->GetAt();
-    if (bContinuous) {
-      if (place.LineCmp(oldplace) != 0) {
+    CPVT_Word word;
+    bool is_ltr = true;
+    if (pIterator->GetWord(word)) {
+      is_ltr =
+          word.nDirection == CPVT_WordInfo::CPVT_WordDirection::kLeftToRight;
+    }
+
+    if (use_continuous_formatting && is_ltr) {
+      if (sWords.IsEmpty() || place.LineCmp(oldplace) != 0 ||
+          word.nFontIndex != nCurFontIndex) {
         if (!sWords.IsEmpty()) {
           sEditStream << GetWordRenderString(sWords.AsStringView());
           sWords.clear();
         }
 
-        CPVT_Word word;
         if (pIterator->GetWord(word)) {
           ptNew = CFX_PointF(word.ptWord.x + ptOffset.x,
                              word.ptWord.y + ptOffset.y);
@@ -677,7 +684,6 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
         }
       }
 
-      CPVT_Word word;
       if (pIterator->GetWord(word)) {
         if (word.nFontIndex != nCurFontIndex) {
           if (!sWords.IsEmpty()) {
@@ -693,7 +699,11 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
       }
       oldplace = place;
     } else {
-      CPVT_Word word;
+      if (!sWords.IsEmpty()) {
+        sEditStream << GetWordRenderString(sWords.AsStringView());
+        sWords.clear();
+      }
+
       if (pIterator->GetWord(word)) {
         ptNew =
             CFX_PointF(word.ptWord.x + ptOffset.x, word.ptWord.y + ptOffset.y);
@@ -711,7 +721,19 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
         sEditStream << GetWordRenderString(
             pEdit->GetPDFWordString(nCurFontIndex, word.Word, SubWord)
                 .AsStringView());
+      } else {
+        CPVT_Line line;
+        pIterator->GetLine(line);
+        ptNew =
+            CFX_PointF(line.ptLine.x + ptOffset.x, line.ptLine.y + ptOffset.y);
+
+        if (ptNew.x != ptOld.x || ptNew.y != ptOld.y) {
+          WritePoint(sEditStream, {ptNew.x - ptOld.x, ptNew.y - ptOld.y})
+              << " " << kMoveTextPositionOperator << "\n";
+          ptOld = ptNew;
+        }
       }
+      oldplace = place;
     }
   }
 

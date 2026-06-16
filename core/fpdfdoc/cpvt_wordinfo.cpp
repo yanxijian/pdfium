@@ -6,6 +6,7 @@
 
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 
+#include "core/fpdfdoc/cpvt_word.h"
 #include "core/fxcrt/fx_codepage.h"
 
 CPVT_WordInfo::CPVT_WordInfo()
@@ -14,7 +15,8 @@ CPVT_WordInfo::CPVT_WordInfo()
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(-1) {}
+      nFontIndex(-1),
+      nDirection(CPVT_WordInfo::CPVT_WordDirection::kLeftToRight) {}
 
 CPVT_WordInfo::CPVT_WordInfo(uint16_t word,
                              FX_Charset charset,
@@ -24,7 +26,8 @@ CPVT_WordInfo::CPVT_WordInfo(uint16_t word,
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(fontIndex) {}
+      nFontIndex(fontIndex),
+      nDirection(CPVT_WordInfo::CPVT_WordDirection::kLeftToRight) {}
 
 CPVT_WordInfo::CPVT_WordInfo(const CPVT_WordInfo& word)
     : Word(0),
@@ -32,7 +35,8 @@ CPVT_WordInfo::CPVT_WordInfo(const CPVT_WordInfo& word)
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(-1) {
+      nFontIndex(-1),
+      nDirection(CPVT_WordInfo::CPVT_WordDirection::kLeftToRight) {
   operator=(word);
 }
 
@@ -49,5 +53,17 @@ CPVT_WordInfo& CPVT_WordInfo::operator=(const CPVT_WordInfo& word) {
   fWordX = word.fWordX;
   fWordY = word.fWordY;
   fWordTail = word.fWordTail;
+  nDirection = word.nDirection;
   return *this;
+}
+
+CPVT_Word::CPVT_Word() = default;
+CPVT_Word::CPVT_Word(const CPVT_Word&) = default;
+CPVT_Word& CPVT_Word::operator=(const CPVT_Word&) = default;
+CPVT_Word::~CPVT_Word() = default;
+
+float CPVT_Word::GetCaretX() const {
+  return nDirection == CPVT_WordInfo::CPVT_WordDirection::kRightToLeft
+             ? ptWord.x
+             : ptWord.x + fWidth;
 }

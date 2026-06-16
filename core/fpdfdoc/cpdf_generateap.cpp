@@ -310,7 +310,7 @@ bool ValidateOrCreateFontResources(CPDF_Document* doc,
 ByteString GenerateEditAP(IPVT_FontMap* font_map,
                           CPVT_VariableText::Iterator* vt_iterator,
                           const CFX_PointF& offset,
-                          bool continuous,
+                          bool use_continuous_formatting,
                           uint16_t sub_word) {
   fxcrt::ostringstream edit_stream;
   fxcrt::ostringstream line_stream;
@@ -322,7 +322,16 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
   vt_iterator->SetAt(0);
   while (vt_iterator->NextWord()) {
     CPVT_WordPlace place = vt_iterator->GetWordPlace();
-    if (continuous) {
+
+    bool use_continuous_formatting_for_word = use_continuous_formatting;
+    CPVT_Word peek_word;
+    if (use_continuous_formatting_for_word && vt_iterator->GetWord(peek_word) &&
+        peek_word.nDirection !=
+            CPVT_WordInfo::CPVT_WordDirection::kLeftToRight) {
+      use_continuous_formatting_for_word = false;
+    }
+
+    if (use_continuous_formatting_for_word) {
       if (place.LineCmp(oldplace) != 0) {
         if (!words.IsEmpty()) {
           line_stream << GetWordRenderString(words.AsStringView());
@@ -361,6 +370,13 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
       }
       oldplace = place;
     } else {
+      if (!words.IsEmpty()) {
+        line_stream << GetWordRenderString(words.AsStringView());
+        edit_stream << line_stream.str();
+        line_stream.str("");
+        words.clear();
+      }
+
       CPVT_Word word;
       if (vt_iterator->GetWord(word)) {
         new_point =
