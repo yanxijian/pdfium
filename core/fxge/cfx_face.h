@@ -139,7 +139,7 @@ class CFX_Face final : public Retainable, public Observable {
   void SetCharMapByIndex(size_t index);
   bool SelectCharMap(fxge::FontEncoding encoding);
 
-#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
+#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
   // Returns enum FontStyle values.
   uint32_t GetFontStyle();
 

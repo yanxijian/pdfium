@@ -1440,7 +1440,7 @@ void CFX_Face::AdjustVariationParams(int glyph_index,
   FT_Set_MM_Design_Coordinates(rec, 2, coords);
 }
 
-#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
+#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
 uint32_t CFX_Face::GetFontStyle() {
   uint32_t style = 0;
   if (IsBold()) {
