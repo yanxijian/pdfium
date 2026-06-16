@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "df43a854_d1cd3299",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "022780f8_6db132f4",
+      "range": {
+        "startLine": 10,
+        "startChar": 33,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "bd35944d_a4df6f30",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 7
@@ -87,6 +111,54 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91d2cbf7_59a08a50",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f30a82be_871d80d4",
+      "range": {
+        "startLine": 326,
+        "startChar": 9,
+        "endLine": 326,
+        "endChar": 20
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fa7d651_d2ec2deb",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df34b2c1_7a993bd3",
+      "range": {
+        "startLine": 326,
+        "startChar": 9,
+        "endLine": 326,
+        "endChar": 20
+      },
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "655eb867_0e3d8484",
@@ -100,6 +172,24 @@
       "writtenOn": "2026-06-15T22:49:27Z",
       "side": 1,
       "message": "Style: dtor after ctors, so move this after line 22.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5d28680_ed338e78",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "655eb867_0e3d8484",
       "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -121,6 +211,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d0833c3_8e8fa381",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7358e413_f3340e2f",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3bce280_f528e182",
@@ -134,6 +242,24 @@
       "writtenOn": "2026-06-15T22:49:27Z",
       "side": 1,
       "message": "Style: methods above member variables.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3377714_1f20d05d",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a3bce280_f528e182",
       "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -155,6 +281,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24e95c42_37d9c5ba",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "595c5cca_371e2633",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4192b45e_48040571",
@@ -168,6 +312,24 @@
       "writtenOn": "2026-06-15T22:49:27Z",
       "side": 1,
       "message": "This is never used?",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a51231fb_07fc0122",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4192b45e_48040571",
       "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -189,6 +351,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "423f6072_819fe6a4",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 720,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb399878_2f4e12cb",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "99b0875d_3202966a",
@@ -202,6 +382,24 @@
       "writtenOn": "2026-06-15T22:49:27Z",
       "side": 1,
       "message": "Please run `optipng` on these files to keep the file sizes small.",
+      "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35e46ea5_943645bc",
+        "filename": "testing/resources/pixel/bug_725389_expected_mac.pdf.0.png",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T18:29:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99b0875d_3202966a",
       "revId": "3828edde7863449226bec012b288d9db81fe9a1e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
