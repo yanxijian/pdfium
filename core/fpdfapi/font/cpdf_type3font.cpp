@@ -100,8 +100,6 @@ bool CPDF_Type3Font::Load() {
   return true;
 }
 
-void CPDF_Type3Font::LoadGlyphMap() {}
-
 void CPDF_Type3Font::CheckType3FontMetrics() {
   CheckFontMetrics();
 }
@@ -157,6 +155,13 @@ CPDF_Type3Char* CPDF_Type3Font::LoadChar(uint32_t charcode) {
   CPDF_Type3Char* pCachedChar = pNewChar.get();
   cache_map_[charcode] = std::move(pNewChar);
   return pCachedChar;
+}
+
+int CPDF_Type3Font::GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) {
+  if (pVertGlyph) {
+    *pVertGlyph = false;
+  }
+  return -1;
 }
 
 int CPDF_Type3Font::GetCharWidth(uint32_t charcode) {
