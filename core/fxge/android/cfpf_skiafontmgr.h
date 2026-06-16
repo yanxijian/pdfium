@@ -22,14 +22,15 @@ class CFPF_SkiaFont;
 class CFPF_SkiaFontMgr {
  public:
   CFPF_SkiaFontMgr();
-  ~CFPF_SkiaFontMgr();
+  virtual ~CFPF_SkiaFontMgr();
 
   void LoadFonts(const char** user_paths);
   CFPF_SkiaFont* CreateFont(ByteStringView family_name,
                             FX_Charset charset,
                             uint32_t style);
 
-  RetainPtr<CFX_Face> GetFontFace(const ByteString& path, int32_t face_index);
+  virtual RetainPtr<CFX_Face> GetFontFace(const ByteString& path,
+                                          int32_t face_index);
 
  private:
   struct Entry {
@@ -54,6 +55,7 @@ class CFPF_SkiaFontMgr {
   std::vector<std::unique_ptr<Entry>> font_faces_;
   // Key is a hash based on CreateFont() parameters.
   std::map<uint32_t, std::unique_ptr<CFPF_SkiaFont>> family_font_map_;
+  friend class CFPFSkiaFontMgrTest;
 };
 
 #endif  // CORE_FXGE_ANDROID_CFPF_SKIAFONTMGR_H_
