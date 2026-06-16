@@ -16,6 +16,24 @@
       "message": "Just revert changes to this file. The way it was before is fine.",
       "revId": "eee4375737f7647ce69053ae4fc3639c233f2b02",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a117e295_1a5e914c",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-16T23:30:02Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "77d40031_f0f0c2b4",
+      "revId": "eee4375737f7647ce69053ae4fc3639c233f2b02",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
