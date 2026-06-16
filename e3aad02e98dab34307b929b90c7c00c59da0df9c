@@ -16,6 +16,23 @@
       "message": "Only concern is a loss of uniqueness in these names.  It seems unlikely that any of these symbols would persist outside of compile phase, but one thing we\u0027ve done in the past is in the header do ...\n```\nnamespace pdfium {\nenum class BidiClass { ... };\n}  // namespace pdfium\n\nusing pdfium::BidiClass;\n```\njust to avoid some latent linker hassle.",
       "revId": "e3aad02e98dab34307b929b90c7c00c59da0df9c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5500eaea_d0cf571f",
+        "filename": "xfa/fgas/layout/cfgas_char.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6295
+      },
+      "writtenOn": "2026-06-16T15:06:39Z",
+      "side": 1,
+      "message": "This definition doesn\u0027t seem quite right, or is at least confusing, because 0x0F is actually a valid BidiClass value (kRLE).",
+      "revId": "e3aad02e98dab34307b929b90c7c00c59da0df9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
