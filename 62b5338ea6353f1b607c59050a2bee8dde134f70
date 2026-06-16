@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f80aff39_ad678cfc",
+        "filename": "core/fpdfdoc/cpvt_word.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T21:53:39Z",
+      "side": 1,
+      "message": "Can remove this part since this is all new code and not moving pre-existing code into a new file.",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 80
+      },
+      "revId": "62b5338ea6353f1b607c59050a2bee8dde134f70",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
