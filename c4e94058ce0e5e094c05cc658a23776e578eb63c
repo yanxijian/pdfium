@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "220978ea_58547e2b",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 37
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:02:25Z",
+      "side": 1,
+      "message": "nit: Swap with line 32.",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7eb942d_b1d6daea",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:02:25Z",
+      "side": 1,
+      "message": "Mention testing strategy in the CL description.",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eae06e5d_c2a6405c",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:02:25Z",
+      "side": 1,
+      "message": "sort",
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7241f880_6ee5eb09",
+        "filename": "core/fxge/android/cfx_androidfontinfo_unittest.cpp",
+        "patchSetId": 37
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:02:25Z",
+      "side": 1,
+      "message": "Can be private.",
+      "range": {
+        "startLine": 56,
+        "startChar": 1,
+        "endLine": 56,
+        "endChar": 10
+      },
+      "revId": "c4e94058ce0e5e094c05cc658a23776e578eb63c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

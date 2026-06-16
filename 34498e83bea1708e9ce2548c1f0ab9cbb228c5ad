@@ -233,6 +233,24 @@
       "parentUuid": "6ee0b012_aa68014e",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d09beff_4ef5911d",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T23:02:25Z",
+      "side": 1,
+      "message": "Still flipped.",
+      "parentUuid": "7a7d23aa_12280ff2",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
