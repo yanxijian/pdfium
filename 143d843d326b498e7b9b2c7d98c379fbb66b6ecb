@@ -16,6 +16,120 @@
       "message": "Hi, can you please review this CL and help me merge it, thank you.",
       "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f6069a9_d76ae9e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "Not a reviewer, hence I am not able to approve. I do have a few minor suggestions though.",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "feaa33cb_b43ab1bc",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "```suggestion\n  // Test that annotations with NoView flag are skipped during normal display.\n```",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "762fa94d_e1d640ff",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "ASSERT_TRUE() ends the test there and fails.\nEXPECT_TRUE() records the failure but continues the test anyway.\n\nOn that note, if the document fails to save should the test even continue running to verify the \"Saved\" document?\n\nIt is quite likely that VerifySavedDocument already checks to make sure it exists but I\u0027d prefer this for readability.",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af644599_45032474",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "Nit: how about we drop _normal_display? I would say it is pretty much the default (i.e. if there is nothing there it is usually assumed to be _normal_display)",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ceeb1d1a_ff63a0ff",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "```suggestion\n  // Test that NoView+Print annotations are included when flattening for print.\n```",
+      "range": {
+        "startLine": 167,
+        "startChar": 10,
+        "endLine": 167,
+        "endChar": 11
+      },
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ed111a7_1c27c6db",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-16T13:07:52Z",
+      "side": 1,
+      "message": "I also notice a key difference here: in the previous test the flag is set to FPDF_ANNOT_FLAG_NOVIEW directly, however this one seems to add FPDF_ANNOT_FLAG_NOVIEW and FPDF_ANNOT_FLAG_PRINT to the existing flags and then render it.\n\nWould like if the tests have a similar structure.",
+      "range": {
+        "startLine": 180,
+        "startChar": 4,
+        "endLine": 180,
+        "endChar": 60
+      },
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
