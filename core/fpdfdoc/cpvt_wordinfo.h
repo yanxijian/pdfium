@@ -12,6 +12,7 @@
 #include "core/fxcrt/fx_codepage_forward.h"
 
 struct CPVT_WordInfo {
+  enum class CPVT_WordDirection { kLeftToRight = 1, kRightToLeft = -1 };
   CPVT_WordInfo();
   CPVT_WordInfo(uint16_t word, FX_Charset charset, int32_t fontIndex);
   CPVT_WordInfo(const CPVT_WordInfo& word);
@@ -25,6 +26,7 @@ struct CPVT_WordInfo {
   float fWordY;
   float fWordTail;
   int32_t nFontIndex;
+  CPVT_WordDirection nDirection;
 };
 
 #endif  // CORE_FPDFDOC_CPVT_WORDINFO_H_
