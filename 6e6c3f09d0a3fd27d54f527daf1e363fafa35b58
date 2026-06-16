@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b76b7b6_b66cf207",
+        "filename": "core/fpdfdoc/cpdf_formfield.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T18:41:33Z",
+      "side": 1,
+      "message": "Missing CONSTRUCT_VIA_MAKE_RETAIN. Done",
+      "parentUuid": "24446999_fecd4deb",
+      "range": {
+        "startLine": 57,
+        "startChar": 23,
+        "endLine": 57,
+        "endChar": 40
+      },
+      "revId": "6e6c3f09d0a3fd27d54f527daf1e363fafa35b58",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d310d7a_7f5bbeb8",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-16T02:05:53Z",
       "side": 1,
       "message": "Do renames separately?",
+      "revId": "6e6c3f09d0a3fd27d54f527daf1e363fafa35b58",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dd4fed4_1bc47c8f",
+        "filename": "fpdfsdk/cpdfsdk_formfillenvironment.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T18:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d310d7a_7f5bbeb8",
       "revId": "6e6c3f09d0a3fd27d54f527daf1e363fafa35b58",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be543d89_99a3d73a",
+        "filename": "fpdfsdk/cpdfsdk_formfillenvironment.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T18:41:33Z",
+      "side": 1,
+      "message": "Yeah, CL description is a bit obtuse, was trying to avoid dangling objects as in the CL for the gemini-discovered issue. Update description.",
+      "parentUuid": "2c39a609_2b8312fc",
+      "revId": "6e6c3f09d0a3fd27d54f527daf1e363fafa35b58",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33160846_acffd6fa",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-06-16T02:05:53Z",
       "side": 1,
       "message": "Should these switch to RetainPtr?",
+      "range": {
+        "startLine": 247,
+        "startChar": 47,
+        "endLine": 247,
+        "endChar": 63
+      },
+      "revId": "6e6c3f09d0a3fd27d54f527daf1e363fafa35b58",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50bc04f6_804206c0",
+        "filename": "fpdfsdk/cpdfsdk_interactiveform.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T18:41:33Z",
+      "side": 1,
+      "message": "I went back-and-forth on this.  In the end I went with having the JS-invoking functions do explicit retains around the blocks of JS execution ratther than relying on implicity retention by the callers.",
+      "parentUuid": "33160846_acffd6fa",
       "range": {
         "startLine": 247,
         "startChar": 47,
