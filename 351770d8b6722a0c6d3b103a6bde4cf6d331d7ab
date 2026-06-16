@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee91eb44_289b1163",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Just the number will do. No need for the entire URL.",
+      "range": {
+        "startLine": 54,
+        "startChar": 5,
+        "endLine": 54,
+        "endChar": 49
+      },
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65e8e279_42a267bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Oh, I see Gerrit indicates it\u0027s my turn, but since there were no replies to my comments, I never got the memo.",
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "159159e8_9bbce99b",
+        "filename": "AUTHORS",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Now out of date since this already happened in https://pdfium-review.googlesource.com/c/148170",
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3098c88_4d66c13e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "60b19e49_c73b0b76",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4819b642_69951e21",
@@ -35,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e874c51d_8069d899",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4819b642_69951e21",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "70fdd575_e59ed23c",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-05-15T22:36:37Z",
       "side": 1,
       "message": "Please file a bug on crbug.com/pdfium for tracking purposes and use that here.",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5928ab0d_799b5fcb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:40:51Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "70fdd575_e59ed23c",
       "revId": "39323a3303308c0bec8e427adb890de592da7c40",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
