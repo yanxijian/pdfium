@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5cbfa51_dc4f632f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T21:04:53Z",
+      "side": 1,
+      "message": "I would suggest doing a second cleanup CL after this one to encapsulate CPVT_Word\u0027s member variables:\n\n- Add a N-params constructor.\n- Add getters for member variables. Sometimes it may make sense to add a method to return what the caller actually wants instead of a trivial getter. e.g. No need to expose the ascent/descent values directly.\n\nThen a third cleanup CL can rename the member variables to use Google C++ style names.\n\nAfter all this refactoring, CPVT_Word will be easier to work with.",
+      "revId": "f0bdf900aba35d2b2839e73701ab2ab097269d9e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a422ab18_d1e8dd88",
