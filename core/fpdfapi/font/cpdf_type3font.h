@@ -34,6 +34,7 @@ class CPDF_Type3Font final : public CPDF_SimpleFont {
   void WillBeDestroyed() override;
   int GetCharWidth(uint32_t charcode) override;
   FX_RECT GetCharBBox(uint32_t charcode) override;
+  int GlyphFromCharCode(uint32_t charcode, bool* pVertGlyph) override;
 
   void SetPageResources(CPDF_Dictionary* pResources) {
     page_resources_.Reset(pResources);
