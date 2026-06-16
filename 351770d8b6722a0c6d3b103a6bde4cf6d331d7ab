@@ -56,6 +56,69 @@
       "message": "Now out of date since this already happened in https://pdfium-review.googlesource.com/c/148170",
       "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5745e55_a9ff769d",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:45:06Z",
+      "side": 1,
+      "message": "Wrap using ScopedFPDFPageObject. `ScopedFPDFPageObject path(FPDFPageObj_CreateNewPath(...));` Then there\u0027s no need to explicitly call FPDFPageObj_Destroy().",
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0267624_57078f06",
+        "filename": "fpdfsdk/fpdf_editpath.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:45:06Z",
+      "side": 1,
+      "message": "Why have the \"k\" in the name?",
+      "range": {
+        "startLine": 133,
+        "startChar": 6,
+        "endLine": 133,
+        "endChar": 20
+      },
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3b67d81_c342dc16",
+        "filename": "public/fpdf_edit.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 1234,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:45:06Z",
+      "side": 1,
+      "message": "Instead of taking 4 floats, how about 2 FS_POINTFs?",
+      "range": {
+        "startLine": 1231,
+        "startChar": 0,
+        "endLine": 1234,
+        "endChar": 46
+      },
+      "revId": "351770d8b6722a0c6d3b103a6bde4cf6d331d7ab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }

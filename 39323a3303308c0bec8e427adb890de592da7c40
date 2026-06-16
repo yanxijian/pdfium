@@ -129,6 +129,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2afe6af_6a069bb2",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 694,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:45:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "5f01dc21_0a67dad0",
+      "range": {
+        "startLine": 693,
+        "startChar": 0,
+        "endLine": 694,
+        "endChar": 52
+      },
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d63c90b4_82fa3125",
@@ -183,6 +207,24 @@
       "side": 1,
       "message": "As expected, PDFium\u0027s build system does not like this:\n\n\n```\n../../fpdfsdk/fpdf_editpath.cpp:239:32: error: unsafe pointer arithmetic [-Werror,-Wunsafe-buffer-usage]\n  239 |   const CFX_Path::Point* cp1 \u003d pPathPoint - 2;\n      |                                ^~~~~~~~~~\n../../fpdfsdk/fpdf_editpath.cpp:239:32: note: See //docs/unsafe_buffers.md for help.\n\n```",
       "parentUuid": "3a9ef66d_9c516041",
+      "revId": "39323a3303308c0bec8e427adb890de592da7c40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8fda605_97d0abe2",
+        "filename": "fpdfsdk/fpdf_editpath.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-16T01:45:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "8325b3ce_613ee192",
       "revId": "39323a3303308c0bec8e427adb890de592da7c40",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
