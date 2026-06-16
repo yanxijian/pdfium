@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e932d76a_caa352ac",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e09ca8ab_521accb5",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b24510e_23673c9b",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-16T01:58:30Z",
       "side": 1,
       "message": "Can be `void` since Init() always returns true now. Plus the caller doesn\u0027t check.",
+      "range": {
+        "startLine": 140,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 4
+      },
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "318719c5_8d26d718",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0b24510e_23673c9b",
       "range": {
         "startLine": 140,
         "startChar": 0,
@@ -64,6 +106,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9574450a_97e2d64f",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "492d6cdf_8b057b67",
+      "range": {
+        "startLine": 171,
+        "startChar": 28,
+        "endLine": 171,
+        "endChar": 38
+      },
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f864efb4_fa923b4a",
@@ -77,6 +143,24 @@
       "writtenOn": "2026-06-16T01:58:30Z",
       "side": 1,
       "message": "Can also negate and `return true;` early to avoid more nested ifs.",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e966b6a4_3f834b6e",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f864efb4_fa923b4a",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -98,6 +182,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10aa6e31_8c748afe",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4511ea3c_8dbd6d0d",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6ee0b012_aa68014e",
@@ -111,6 +213,24 @@
       "writtenOn": "2026-06-16T01:58:30Z",
       "side": 1,
       "message": "Line 221 compares the scores first, and then compares the glyph counts. Here, it\u0027s the other way around.",
+      "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a7d23aa_12280ff2",
+        "filename": "core/fxge/android/cfx_androidfontinfo.cpp",
+        "patchSetId": 33
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-16T19:34:49Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6ee0b012_aa68014e",
       "revId": "34498e83bea1708e9ce2548c1f0ab9cbb228c5ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
