@@ -20,6 +20,47 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "abdf501d_3b6a6d3f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:59:42Z",
+      "side": 1,
+      "message": "I might just inline this in the header.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 78
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b43d46ac_22295865",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 23,
+                "endChar": 0
+              },
+              "replacement": "// static\n"
+            }
+          ]
+        }
+      ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "56487cd1_f4a1e907",
         "filename": "core/fxcodec/brotli/brotli_decoder.h",
         "patchSetId": 53
