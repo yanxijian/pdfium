@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebd8c407_cff7aafe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T00:08:18Z",
+      "side": 1,
+      "message": "End of the chain, blocked on start of chain.  This was a suggestion when asked to analyze for deficiencies.",
+      "revId": "02ec2558ac3760f3cf9935fa2b88e9bb661709bc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
