@@ -193,6 +193,9 @@ class CFX_Face final : public Retainable, public Observable {
       int dest_width,
       bool is_vertical,
       const CFX_SubstFont* subst_font);
+  void CheckGlyphBBox(uint32_t glyph_index,
+                      const FX_RECT& ft_result,
+                      int em) const;
 #endif
 
   // `cache_entry_` must outlive `font_stream_`. Faces managed by a cache

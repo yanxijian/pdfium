@@ -319,6 +319,34 @@ impl PsFont<'_> {
         outline.advance_width = width;
         Some(())
     }
+
+    fn glyph_name(&self, gid: u32) -> Option<String> {
+        match self {
+            Self::Type1(type1) => type1.glyph_name(GlyphId::new(gid)).map(|s| s.to_string()),
+            Self::Cff(cff) => {
+                let sid = cff.charset.as_ref()?.string_id(GlyphId::new(gid)).ok()?;
+                let bytes = cff.font.string(sid)?;
+                core::str::from_utf8(bytes).ok().map(|s| s.to_string())
+            }
+            Self::Error => None,
+        }
+    }
+
+    fn is_fixed_pitch(&self) -> bool {
+        match self {
+            Self::Type1(type1) => type1.is_fixed_pitch(),
+            Self::Cff(cff) => cff.meta.as_ref().map(|meta| meta.is_fixed_pitch()).unwrap_or(false),
+            Self::Error => false,
+        }
+    }
+
+    fn has_glyph_names(&self) -> bool {
+        match self {
+            Self::Type1(_) => true,
+            Self::Cff(cff) => !cff.font.is_cid() && cff.charset.is_some(),
+            Self::Error => false,
+        }
+    }
 }
 
 impl Point {
@@ -436,6 +464,13 @@ pub fn get_glyph_name(data: &[u8], gid: u32) -> String {
         if let Some(name) = glyph_names.get(skrifa::GlyphId::new(gid)) {
             return name.to_string();
         }
+    } else {
+        let ps_font = new_ps_font(data);
+        if ps_font.is_ok() {
+            if let Some(name) = ps_font.glyph_name(gid) {
+                return name;
+            }
+        }
     }
     String::new()
 }
@@ -446,6 +481,17 @@ pub fn get_name_index(data: &[u8], name: &str) -> u32 {
         if let Some(gid) = glyph_names.iter().find(|(_id, n)| n.as_str() == name).map(|(id, _n)| id)
         {
             return gid.to_u32();
+        }
+    } else {
+        let ps_font = new_ps_font(data);
+        if ps_font.is_ok() {
+            for gid in 0..ps_font.num_glyphs() {
+                if let Some(gname) = ps_font.glyph_name(gid) {
+                    if gname == name {
+                        return gid;
+                    }
+                }
+            }
         }
     }
     0
@@ -514,6 +560,10 @@ pub fn has_glyph_names(data: &[u8]) -> bool {
         let glyph_names = skrifa::GlyphNames::new(&font);
         return glyph_names.source() != skrifa::GlyphNameSource::Synthesized;
     }
+    let ps_font = new_ps_font(data);
+    if ps_font.is_ok() {
+        return ps_font.has_glyph_names();
+    }
     false
 }
 
@@ -522,6 +572,11 @@ pub fn is_fixed_pitch(data: &[u8]) -> bool {
         use read_fonts::TableProvider;
         if let Ok(post) = font.post() {
             return post.is_fixed_pitch() != 0;
+        }
+    } else {
+        let ps_font = new_ps_font(data);
+        if ps_font.is_ok() {
+            return ps_font.is_fixed_pitch();
         }
     }
     false
@@ -574,6 +629,40 @@ pub fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> skrifa_ffi::BoundingBo
                 x_max: bbox.x_max,
                 y_max: bbox.y_max,
             };
+        }
+    } else {
+        let ps_font = new_ps_font(data);
+        if ps_font.is_ok() {
+            let mut outline = Outline { verbs: Vec::new(), points: Vec::new(), advance_width: 0.0 };
+            if ps_font.unscaled_outline(glyph_index, &mut outline) {
+                if outline.points.is_empty() {
+                    return skrifa_ffi::BoundingBox {
+                        x_min: 0.0,
+                        y_min: 0.0,
+                        x_max: 0.0,
+                        y_max: 0.0,
+                    };
+                }
+                let mut x_min = outline.points[0].x;
+                let mut x_max = outline.points[0].x;
+                let mut y_min = outline.points[0].y;
+                let mut y_max = outline.points[0].y;
+                for p in &outline.points[1..] {
+                    if p.x < x_min {
+                        x_min = p.x;
+                    }
+                    if p.x > x_max {
+                        x_max = p.x;
+                    }
+                    if p.y < y_min {
+                        y_min = p.y;
+                    }
+                    if p.y > y_max {
+                        y_max = p.y;
+                    }
+                }
+                return skrifa_ffi::BoundingBox { x_min, y_min, x_max, y_max };
+            }
         }
     }
     skrifa_ffi::BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }

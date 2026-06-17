@@ -148,8 +148,8 @@ class CFX_ExternalFontInfo final : public SystemFontInfoIface {
 FPDF_EXPORT void FPDF_CALLCONV FPDF_AddInstalledFont(void* mapper,
                                                      const char* face,
                                                      int charset) {
-  CFX_FontMapper* pMapper = static_cast<CFX_FontMapper*>(mapper);
-  pMapper->AddInstalledFont(face, FX_GetCharsetFromInt(charset));
+  CFX_FontMapper* font_mapper = static_cast<CFX_FontMapper*>(mapper);
+  font_mapper->AddInstalledFont(face, FX_GetCharsetFromInt(charset));
 }
 
 FPDF_EXPORT void FPDF_CALLCONV

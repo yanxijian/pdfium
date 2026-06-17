@@ -6,8 +6,10 @@
 
 #include <algorithm>
 #include <array>
+#include <cmath>
 #include <limits>
 #include <memory>
+#include <optional>
 #include <utility>
 #include <vector>
 
@@ -1128,21 +1130,7 @@ std::optional<FX_RECT> CFX_Face::GetFontGlyphBBox(uint32_t glyph_index) {
       GetRec()->glyph->metrics.horiBearingX + GetRec()->glyph->metrics.width,
       GetRec()->glyph->metrics.horiBearingY, em, em);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  if (skia_typeface_) {
-    SkFont font(skia_typeface_, em);
-    font.setHinting(SkFontHinting::kNone);
-    uint16_t skia_glyph_index = static_cast<uint16_t>(glyph_index);
-    SkRect bounds = font.getBounds(skia_glyph_index, nullptr);
-
-    CHECK_EQ(ft_result.left,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fLeft), em));
-    CHECK_EQ(ft_result.top,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fTop), em));
-    CHECK_EQ(ft_result.right,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fRight), em));
-    CHECK_EQ(ft_result.bottom,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fBottom), em));
-  }
+  CheckGlyphBBox(glyph_index, ft_result, em);
 #endif
   return ft_result;
 }
@@ -1204,6 +1192,35 @@ FX_RECT CFX_Face::GetCharBBox(uint32_t code, int glyph_index) {
   return rect;
 }
 
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+void CFX_Face::CheckGlyphBBox(uint32_t glyph_index,
+                              const FX_RECT& ft_result,
+                              int em) const {
+  if (!skia_typeface_) {
+    return;
+  }
+  SkFont font(skia_typeface_, em);
+  font.setHinting(SkFontHinting::kNone);
+  uint16_t skia_glyph_index = static_cast<uint16_t>(glyph_index);
+  std::optional<SkPath> path = font.getPath(skia_glyph_index);
+  if (path) {
+    SkRect path_bounds = path->getBounds();
+    CHECK_EQ(ft_result.left,
+             NormalizeFontMetric(
+                 static_cast<int32_t>(std::round(path_bounds.fLeft)), em));
+    CHECK_EQ(ft_result.top,
+             NormalizeFontMetric(
+                 static_cast<int32_t>(std::round(-path_bounds.fTop)), em));
+    CHECK_EQ(ft_result.right,
+             NormalizeFontMetric(
+                 static_cast<int32_t>(std::round(path_bounds.fRight)), em));
+    CHECK_EQ(ft_result.bottom,
+             NormalizeFontMetric(
+                 static_cast<int32_t>(std::round(-path_bounds.fBottom)), em));
+  }
+}
+#endif
+
 FX_RECT CFX_Face::GetGlyphBBox() const {
   const auto* glyph = GetRec()->glyph;
   pdfium::ClampedNumeric<FT_Pos> left = glyph->metrics.horiBearingX;
@@ -1215,21 +1232,7 @@ FX_RECT CFX_Face::GetGlyphBBox() const {
                     NormalizeFontMetric(top - glyph->metrics.height, upem));
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  if (skia_typeface_) {
-    SkFont font(skia_typeface_, upem);
-    font.setHinting(SkFontHinting::kNone);
-    uint16_t skia_glyph_index = static_cast<uint16_t>(glyph->glyph_index);
-    SkRect bounds = font.getBounds(skia_glyph_index, nullptr);
-
-    CHECK_EQ(ft_result.left,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fLeft), upem));
-    CHECK_EQ(ft_result.top,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fTop), upem));
-    CHECK_EQ(ft_result.right,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fRight), upem));
-    CHECK_EQ(ft_result.bottom,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fBottom), upem));
-  }
+  CheckGlyphBBox(glyph->glyph_index, ft_result, upem);
 #endif
 
   return ft_result;
@@ -1237,21 +1240,22 @@ FX_RECT CFX_Face::GetGlyphBBox() const {
 
 std::vector<CharCodeAndIndex> CFX_Face::GetCharCodesAndIndices(
     char32_t max_char) {
-  CharCodeAndIndex char_code_and_index;
-  char_code_and_index.char_code = static_cast<uint32_t>(
-      FT_Get_First_Char(GetRec(), &char_code_and_index.glyph_index));
-  if (char_code_and_index.char_code > max_char) {
-    return {};
-  }
-  std::vector<CharCodeAndIndex> results = {char_code_and_index};
+  std::vector<CharCodeAndIndex> results;
+  FT_UInt glyph_index;
+  FT_ULong char_code = FT_Get_First_Char(GetRec(), &glyph_index);
   while (true) {
-    char_code_and_index.char_code = static_cast<uint32_t>(FT_Get_Next_Char(
-        GetRec(), results.back().char_code, &char_code_and_index.glyph_index));
-    if (char_code_and_index.char_code > max_char ||
-        char_code_and_index.glyph_index == 0) {
+    if (char_code > max_char) {
       break;
     }
-    results.push_back(char_code_and_index);
+    if (glyph_index != 0) {
+      results.push_back({static_cast<uint32_t>(char_code), glyph_index});
+    }
+    FT_ULong next_char_code =
+        FT_Get_Next_Char(GetRec(), char_code, &glyph_index);
+    if (next_char_code == 0) {
+      break;
+    }
+    char_code = next_char_code;
   }
 
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
