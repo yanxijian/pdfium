@@ -31,14 +31,14 @@ void skrifa::run(rust::Str font_path) {
   rust::Slice<const uint8_t> slice((const uint8_t*)bytes.data(), bytes.size());
 
   // Load the font. Note that the bytes vector must live as long as the font
-  auto font = skrifa::new_ps_font(slice);
+  auto font = skrifa::new_font(slice, 0);
   if (!font->is_ok()) {
     printf("Failed to load font!\n");
     return;
   }
 
   // Get the PostScript name
-  auto name = (std::string)font->name();
+  auto name = (std::string)font->postscript_name();
 
   // And the family name
   auto family_name = (std::string)font->family_name();
