@@ -16,6 +16,189 @@
       "message": "Needs rebasing / maybe more chaining.",
       "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "151da2d4_b09472f2",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "For historical reasons, PDFium started life without any code comments. Since you\u0027ve been thinking about this, please document what this parameter means.",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66462ed3_3dca1ec1",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 1127,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "Needs updating since the parameter name changed.",
+      "range": {
+        "startLine": 1127,
+        "startChar": 23,
+        "endLine": 1127,
+        "endChar": 33
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "401dae62_21ca67df",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 732,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "1) Variable name style.\n2) Since it\u0027s only used on line 738 to check for a particular direction, just precompute that here instead of once per loop iteration.",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ed96ca7_98006104",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "style",
+      "range": {
+        "startLine": 749,
+        "startChar": 27,
+        "endLine": 749,
+        "endChar": 32
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60ce027a_b8254331",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "Do the values matter? i.e. Can these just be 0 and 1? Or would having `bool is_ltr` / `bool is_rtl` sufficient?",
+      "range": {
+        "startLine": 15,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 50
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5e8b58e_5c8e1530",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "As mentioned before, can shorten to \"Direction\".",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2774be5_2b791551",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "Would it be more consistent if this CL always used `is_rtl` or `is_ltr`? I feel I have to always be alert to the actual boolean. See the other comment in `CPVT_WordInfo`, but if `CPVT_WordInfo` stores a bool, then I would suggest consistently using that indicator everywhere else in this CL.",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "346e4a37_e49e9899",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "Since line 656 now calls GetWord(), is it necessary to call it again here? Same question for line 687 and others below.",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e86adda_7244bea5",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T01:13:56Z",
+      "side": 1,
+      "message": "Can probably just compare directly: `ptNew !\u003d ptOld`. I guess this is really a comment about line 711.",
+      "range": {
+        "startLine": 730,
+        "startChar": 12,
+        "endLine": 730,
+        "endChar": 52
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
