@@ -39,6 +39,14 @@ mod skrifa_ffi {
         BitmapEmbeddingOnly = 0x0200,
     }
 
+    #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+    pub enum FontFormat {
+        Unknown = 0,
+        Type1 = 1,
+        TrueType = 2,
+        Cff = 3,
+    }
+
     // Should match SkPathVerb
     #[derive(Copy, Clone, PartialEq, Eq, Debug)]
     #[repr(u8)]
@@ -114,6 +122,20 @@ mod skrifa_ffi {
         fn code_to_gid(&self, code: u8) -> u32;
         fn scaled_outline(&self, gid: u32, ppem: f32, outline: &mut Outline) -> bool;
         fn unscaled_outline(&self, gid: u32, outline: &mut Outline) -> bool;
+
+        type BridgeOpenTypeFont<'a>;
+        unsafe fn new_opentype_font<'a>(data: &'a [u8]) -> Box<BridgeOpenTypeFont<'a>>;
+        fn is_ok(&self) -> bool;
+        fn units_per_em(&self) -> i32;
+        fn ascent(&self) -> f32;
+        fn descent(&self) -> f32;
+        fn num_glyphs(&self) -> u32;
+        fn unicode_to_gid(&self, unicode: u32) -> u32;
+        fn scaled_outline(&self, gid: u32, ppem: f32, outline: &mut Outline) -> bool;
+        fn unscaled_outline(&self, gid: u32, outline: &mut Outline) -> bool;
+
+        fn detect_font_format(data: &[u8]) -> FontFormat;
+
         fn get_os2_code_page_range(data: &[u8], range: &mut CodePageRange) -> bool;
         fn get_os2_panose(data: &[u8], panose: &mut Os2Panose) -> bool;
         fn get_os2_fs_type(data: &[u8], fs_type: &mut u16) -> bool;
@@ -577,6 +599,127 @@ pub fn get_glyph_bounds(data: &[u8], glyph_index: u32) -> skrifa_ffi::BoundingBo
         }
     }
     skrifa_ffi::BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }
+}
+
+pub struct BridgeOpenTypeFont<'a>(Option<read_fonts::FontRef<'a>>);
+
+pub fn new_opentype_font<'a>(data: &'a [u8]) -> Box<BridgeOpenTypeFont<'a>> {
+    let font = read_fonts::FontRef::new(data).ok();
+    Box::new(BridgeOpenTypeFont(font))
+}
+
+impl BridgeOpenTypeFont<'_> {
+    fn is_ok(&self) -> bool {
+        self.0.is_some()
+    }
+
+    fn units_per_em(&self) -> i32 {
+        self.0
+            .as_ref()
+            .map(|f| {
+                let metrics = f.metrics(
+                    skrifa::instance::Size::unscaled(),
+                    skrifa::instance::LocationRef::default(),
+                );
+                metrics.units_per_em as i32
+            })
+            .unwrap_or(0)
+    }
+
+    fn ascent(&self) -> f32 {
+        self.0
+            .as_ref()
+            .map(|f| {
+                let metrics = f.metrics(
+                    skrifa::instance::Size::unscaled(),
+                    skrifa::instance::LocationRef::default(),
+                );
+                metrics.ascent
+            })
+            .unwrap_or(0.0)
+    }
+
+    fn descent(&self) -> f32 {
+        self.0
+            .as_ref()
+            .map(|f| {
+                let metrics = f.metrics(
+                    skrifa::instance::Size::unscaled(),
+                    skrifa::instance::LocationRef::default(),
+                );
+                metrics.descent
+            })
+            .unwrap_or(0.0)
+    }
+
+    fn num_glyphs(&self) -> u32 {
+        self.0
+            .as_ref()
+            .map(|f| {
+                let metrics = f.metrics(
+                    skrifa::instance::Size::unscaled(),
+                    skrifa::instance::LocationRef::default(),
+                );
+                metrics.glyph_count as u32
+            })
+            .unwrap_or(0)
+    }
+
+    fn unicode_to_gid(&self, unicode: u32) -> u32 {
+        self.0
+            .as_ref()
+            .and_then(|f| {
+                let charmap = f.charmap();
+                charmap.map(unicode).map(|gid| gid.to_u32())
+            })
+            .unwrap_or(0)
+    }
+
+    fn scaled_outline(&self, gid: u32, ppem: f32, outline: &mut Outline) -> bool {
+        self.outline_impl(gid, Some(ppem), outline).is_some()
+    }
+
+    fn unscaled_outline(&self, gid: u32, outline: &mut Outline) -> bool {
+        self.outline_impl(gid, None, outline).is_some()
+    }
+
+    fn outline_impl(&self, gid: u32, ppem: Option<f32>, outline: &mut Outline) -> Option<()> {
+        outline.verbs.clear();
+        outline.points.clear();
+        outline.advance_width = 0.0;
+
+        let font_ref = self.0.as_ref()?;
+        let outlines = skrifa::outline::OutlineGlyphCollection::new(font_ref);
+        let glyph = outlines.get(skrifa::GlyphId::new(gid))?;
+
+        let size =
+            ppem.map(skrifa::instance::Size::new).unwrap_or_else(skrifa::instance::Size::unscaled);
+        let settings =
+            skrifa::outline::DrawSettings::unhinted(size, skrifa::instance::LocationRef::default());
+
+        let adjusted_metrics = glyph.draw(settings, outline).ok()?;
+        outline.advance_width = adjusted_metrics.advance_width.unwrap_or(0.0);
+        Some(())
+    }
+}
+
+pub fn detect_font_format(data: &[u8]) -> skrifa_ffi::FontFormat {
+    if read_fonts::ps::type1::Type1Font::new(data).is_ok() {
+        return skrifa_ffi::FontFormat::Type1;
+    }
+    if let Ok(font) = read_fonts::FontRef::new(data) {
+        use read_fonts::TableProvider;
+        if font.cff().is_ok() || font.cff2().is_ok() {
+            return skrifa_ffi::FontFormat::Cff;
+        }
+        if font.glyf().is_ok() {
+            return skrifa_ffi::FontFormat::TrueType;
+        }
+    }
+    if read_fonts::ps::cff::CffFontRef::new(data, 0, None).is_ok() {
+        return skrifa_ffi::FontFormat::Cff;
+    }
+    skrifa_ffi::FontFormat::Unknown
 }
 
 fn main() {

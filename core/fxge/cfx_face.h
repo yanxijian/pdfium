@@ -43,15 +43,21 @@ class CFX_CTTNameTable;
 class SkTypeface;
 #endif
 
+class CFX_TrueTypeFace;
+class CFX_Type1Face;
 #if defined(PDF_ENABLE_FONTATIONS)
-struct SkrifaFontHolder;
+struct SkrifaPsFontHolder;
+struct SkrifaOpenTypeFontHolder;
+#else
+struct SkrifaPsFontHolder {};
+struct SkrifaOpenTypeFontHolder {};
 #endif
 
 namespace fxge {
 enum class FontEncoding : uint32_t;
 }  // namespace fxge
 
-class CFX_Face final : public Retainable, public Observable {
+class CFX_Face : public Retainable, public Observable {
  public:
   using CharMap = void*;
 
@@ -97,46 +103,49 @@ class CFX_Face final : public Retainable, public Observable {
 
   std::unique_ptr<CFX_CTTGSUBTable> ParseGSUBTable();
 
-  int GetGlyphCount() const;
+  virtual int GetGlyphCount() const;
   // TODO(crbug.com/42271048): Can this method be private?
   FX_RECT GetGlyphBBox() const;
-  std::optional<FX_RECT> GetFontGlyphBBox(uint32_t glyph_index);
-  std::unique_ptr<CFX_GlyphBitmap> RenderGlyph(uint32_t glyph_index,
-                                               bool font_style,
-                                               bool is_vertical,
-                                               const CFX_Matrix& matrix,
-                                               int dest_width,
-                                               FontAntiAliasingMode anti_alias,
-                                               const CFX_SubstFont* subst_font);
-  std::unique_ptr<CFX_Path> LoadGlyphPath(uint32_t glyph_index,
-                                          int dest_width,
-                                          bool is_vertical,
-                                          const CFX_SubstFont* subst_font);
+  virtual std::optional<FX_RECT> GetFontGlyphBBox(uint32_t glyph_index);
+  virtual std::unique_ptr<CFX_GlyphBitmap> RenderGlyph(
+      uint32_t glyph_index,
+      bool font_style,
+      bool is_vertical,
+      const CFX_Matrix& matrix,
+      int dest_width,
+      FontAntiAliasingMode anti_alias,
+      const CFX_SubstFont* subst_font);
+  virtual std::unique_ptr<CFX_Path> LoadGlyphPath(
+      uint32_t glyph_index,
+      int dest_width,
+      bool is_vertical,
+      const CFX_SubstFont* subst_font);
   int GetGlyphTTWidth() const;
-  int GetGlyphWidth(uint32_t glyph_index,
-                    int dest_width,
-                    int weight,
-                    const CFX_SubstFont* subst_font);
+  virtual int GetGlyphWidth(uint32_t glyph_index,
+                            int dest_width,
+                            int weight,
+                            const CFX_SubstFont* subst_font);
   ByteString GetGlyphName(uint32_t glyph_index);
 
-  int GetCharIndex(uint32_t code);
-  int GetNameIndex(const char* name);
+  virtual int GetCharIndex(uint32_t code);
+  virtual int GetNameIndex(const char* name);
 
-  FX_RECT GetCharBBox(uint32_t code, int glyph_index);
+  virtual FX_RECT GetCharBBox(uint32_t code, int glyph_index);
 
-  std::vector<CharCodeAndIndex> GetCharCodesAndIndices(char32_t max_char);
+  virtual std::vector<CharCodeAndIndex> GetCharCodesAndIndices(
+      char32_t max_char);
 
   CharMap GetCurrentCharMap() const;
   std::optional<fxge::FontEncoding> GetCurrentCharMapEncoding() const;
-  CharMapId GetCharMapIdByIndex(size_t index) const;
+  virtual CharMapId GetCharMapIdByIndex(size_t index) const;
   int GetCharMapPlatformIdByIndex(size_t index) const;
   fxge::FontEncoding GetCharMapEncodingByIndex(size_t index) const;
-  size_t GetCharMapCount() const;
-  int LoadGlyph(uint32_t glyph_index, bool scale);
-  ByteString GetPostscriptName();
-  void SetCharMap(CharMap map);
-  void SetCharMapByIndex(size_t index);
-  bool SelectCharMap(fxge::FontEncoding encoding);
+  virtual size_t GetCharMapCount() const;
+  virtual int LoadGlyph(uint32_t glyph_index, bool scale);
+  virtual ByteString GetPostscriptName();
+  virtual void SetCharMap(CharMap map);
+  virtual void SetCharMapByIndex(size_t index);
+  virtual bool SelectCharMap(fxge::FontEncoding encoding);
 
 #if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
   // Returns enum FontStyle values.
@@ -156,25 +165,24 @@ class CFX_Face final : public Retainable, public Observable {
   bool CanEmbed();
 #endif
 
+  virtual CFX_TrueTypeFace* AsTrueTypeFace();
+  virtual CFX_Type1Face* AsType1Face();
+
 #if defined(PDF_USE_SKIA)
   SkTypeface* GetOrCreateSkTypeface();
 #endif
 
- private:
+ protected:
   CFX_Face(RetainPtr<Retainable> cache_entry,
            RetainPtr<CFX_ReadOnlySpanStream> font_stream,
-           FT_FaceRec* rec
-#if defined(PDF_ENABLE_FONTATIONS)
-           ,
-           std::unique_ptr<SkrifaFontHolder> skrifa_font
-#endif
-  );
+           FT_FaceRec* rec);
 
   ~CFX_Face() override;
 
   FT_FaceRec* GetRec() { return rec_.get(); }
   const FT_FaceRec* GetRec() const { return rec_.get(); }
 
+ private:
   int GetCharMapEncodingIdByIndex(size_t index) const;
   CFX_Size GetPixelSize() const;
 
@@ -185,14 +193,6 @@ class CFX_Face final : public Retainable, public Observable {
 
 #if BUILDFLAG(IS_ANDROID) || defined(PDF_ENABLE_XFA)
   std::optional<std::array<uint8_t, 2>> GetOs2Panose();
-#endif
-
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  std::unique_ptr<CFX_Path> LoadGlyphPathFontations(
-      uint32_t glyph_index,
-      int dest_width,
-      bool is_vertical,
-      const CFX_SubstFont* subst_font);
 #endif
 
   // `cache_entry_` must outlive `font_stream_`. Faces managed by a cache
@@ -210,9 +210,6 @@ class CFX_Face final : public Retainable, public Observable {
 #if defined(PDF_USE_SKIA)
   sk_sp<SkTypeface> skia_typeface_;
 #endif  // defined(PDF_USE_SKIA)
-#if defined(PDF_ENABLE_FONTATIONS)
-  std::unique_ptr<SkrifaFontHolder> skrifa_font_;
-#endif
 };
 
 #endif  // CORE_FXGE_CFX_FACE_H_
