@@ -58,6 +58,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d6b735f_0f382903",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:16:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "80a1a675_a9d9a193",
+      "range": {
+        "startLine": 492,
+        "startChar": 44,
+        "endLine": 492,
+        "endChar": 46
+      },
+      "revId": "02ec2558ac3760f3cf9935fa2b88e9bb661709bc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64be94ea_22e1df2f",
@@ -71,6 +95,30 @@
       "writtenOn": "2026-06-17T00:36:11Z",
       "side": 1,
       "message": "`font`",
+      "range": {
+        "startLine": 499,
+        "startChar": 16,
+        "endLine": 499,
+        "endChar": 21
+      },
+      "revId": "02ec2558ac3760f3cf9935fa2b88e9bb661709bc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6646baed_12c7d2ee",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 499,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:16:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64be94ea_22e1df2f",
       "range": {
         "startLine": 499,
         "startChar": 16,
