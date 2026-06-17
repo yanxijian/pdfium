@@ -118,6 +118,41 @@
       ],
       "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "572a313b_34f9547c",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:59:03Z",
+      "side": 1,
+      "message": "If at top-level, this would be class BrotliDecoderStateDeleter",
+      "fixSuggestions": [
+        {
+          "fixId": "379bcc93_5ad175a4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.h",
+              "range": {
+                "startLine": 21,
+                "startChar": 0,
+                "endLine": 22,
+                "endChar": 0
+              },
+              "replacement": "  struct BrotliDecoderStateDeleter {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
