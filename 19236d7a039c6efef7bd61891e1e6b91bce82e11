@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d6cea49_19f050ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T21:33:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6393a371_82b4a3d4",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "19236d7a039c6efef7bd61891e1e6b91bce82e11",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e24cfe20_7657073b",
@@ -41,6 +65,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ce20cd8_d0eb9915",
+        "filename": "fpdfsdk/cpdfsdk_formfillenvironment.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T21:33:31Z",
+      "side": 1,
+      "message": "Slighlty safer, new check, old check is at line 440.  Probably not necessary but a lot of the others always start if pwidget.",
+      "parentUuid": "e24cfe20_7657073b",
+      "revId": "19236d7a039c6efef7bd61891e1e6b91bce82e11",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27c90f4d_6584d5a7",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-06-17T02:33:50Z",
       "side": 1,
       "message": "Still too much unrelated renaming. Want to just do some renaming CLs and get those over with?",
+      "range": {
+        "startLine": 1087,
+        "startChar": 55,
+        "endLine": 1087,
+        "endChar": 64
+      },
+      "revId": "19236d7a039c6efef7bd61891e1e6b91bce82e11",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "daf07fdb_54c35999",
+        "filename": "fpdfsdk/cpdfsdk_widget.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1087,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T21:33:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "27c90f4d_6584d5a7",
       "range": {
         "startLine": 1087,
         "startChar": 55,
