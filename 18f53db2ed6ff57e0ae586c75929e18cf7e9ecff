@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15bb4771_f05812dc",
+        "filename": "core/fpdfapi/font/cpdf_facebasedsimplefont.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T23:53:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb3ed7c3_7a7ce764",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0d8540c0_9e258d9e",
@@ -35,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d7798a4_7f26434a",
+        "filename": "core/fpdfapi/font/cpdf_simplefont.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T23:53:19Z",
+      "side": 1,
+      "message": "Went back and forth on whether this should be a pure virtual. Decided against it for now.",
+      "parentUuid": "0d8540c0_9e258d9e",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9d2cc3d_559af9b3",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-06-17T23:46:27Z",
       "side": 1,
       "message": "As-is: To follow CPDF_Font ordering, this should go above line 26.",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a70235ab_9d59b052",
+        "filename": "core/fpdfapi/font/cpdf_simplefont.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T23:53:19Z",
+      "side": 1,
+      "message": "Done, Thanks for being specific.",
+      "parentUuid": "c9d2cc3d_559af9b3",
       "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
