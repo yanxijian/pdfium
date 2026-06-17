@@ -39,6 +39,30 @@
       },
       "revId": "630b6abf68d049a6ad495cd6cfeea44b1d5e66f3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a45f887_b60e40c4",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-17T15:12:44Z",
+      "side": 1,
+      "message": "Done. Simplified RemoveSharedWidgetsFromSet() to erase directly from widget_annots while iterating the other pages\u0027 Annots arrays, avoiding the temporary set and set_difference. Related flatten embedder tests pass.",
+      "parentUuid": "f53ab426_26c60287",
+      "range": {
+        "startLine": 368,
+        "startChar": 0,
+        "endLine": 368,
+        "endChar": 0
+      },
+      "revId": "630b6abf68d049a6ad495cd6cfeea44b1d5e66f3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
