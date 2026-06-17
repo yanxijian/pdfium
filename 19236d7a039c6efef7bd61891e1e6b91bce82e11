@@ -83,6 +83,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2d6dbf6_dcef8180",
+        "filename": "fpdfsdk/cpdfsdk_formfillenvironment.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T21:43:27Z",
+      "side": 1,
+      "message": "OK. I see OnCalculate() above does that.",
+      "parentUuid": "4ce20cd8_d0eb9915",
+      "revId": "19236d7a039c6efef7bd61891e1e6b91bce82e11",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27c90f4d_6584d5a7",
