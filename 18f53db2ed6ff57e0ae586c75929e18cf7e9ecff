@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb3ed7c3_7a7ce764",
+        "filename": "core/fpdfapi/font/cpdf_facebasedsimplefont.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T23:46:27Z",
+      "side": 1,
+      "message": "Maybe mention Type 3 is the only exception to this.",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d8540c0_9e258d9e",
+        "filename": "core/fpdfapi/font/cpdf_simplefont.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T23:46:27Z",
+      "side": 1,
+      "message": "Should this go in CPDF_Type3Font?",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9d2cc3d_559af9b3",
+        "filename": "core/fpdfapi/font/cpdf_simplefont.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T23:46:27Z",
+      "side": 1,
+      "message": "As-is: To follow CPDF_Font ordering, this should go above line 26.",
+      "revId": "18f53db2ed6ff57e0ae586c75929e18cf7e9ecff",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
