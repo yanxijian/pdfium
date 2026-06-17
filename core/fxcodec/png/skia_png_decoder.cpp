@@ -61,8 +61,8 @@ class CodecMemoryStream final : public SkStream {
       : codec_memory_(std::move(codec_memory)) {}
 
   size_t read(void* buffer, size_t size) override {
-    // SAFETY: Relying on the caller to pass correct `buffer` and `size`.
     uint8_t* bytes = static_cast<uint8_t*>(buffer);
+    // SAFETY: Relying on the caller to pass correct `buffer` and `size`.
     auto byte_span = UNSAFE_BUFFERS(pdfium::span(bytes, size));
 
     return codec_memory_->ReadBlock(byte_span);

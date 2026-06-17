@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "core/fxcrt/bytestring.h"
+#include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/fx_codepage_forward.h"
 #include "core/fxcrt/mask.h"
 #include "core/fxcrt/retain_ptr.h"
@@ -24,7 +25,8 @@ class CFPF_SkiaFontMgr {
   CFPF_SkiaFontMgr();
   virtual ~CFPF_SkiaFontMgr();
 
-  void LoadFonts(const char** user_paths);
+  // PRECONDITIONS: `user_paths` must be terminated by a nullptr.
+  UNSAFE_BUFFER_USAGE void LoadFonts(const char** user_paths);
   CFPF_SkiaFont* CreateFont(ByteStringView family_name,
                             FX_Charset charset,
                             uint32_t style);

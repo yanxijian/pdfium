@@ -356,10 +356,10 @@ FPDF_EXPORT int FPDF_CALLCONV FPDFText_GetText(FPDF_TEXTPAGE page,
     *result = '\0';
     return 1;
   }
+  CHECK_LT(char_count, std::numeric_limits<int>::max());
   // SAFETY: Required from caller. Public API description states that
   // `result` must be able to hold `char_count` characters plus a
   // terminator.
-  CHECK_LT(char_count, std::numeric_limits<int>::max());
   pdfium::span<unsigned short> result_span =
       UNSAFE_BUFFERS(pdfium::span(result, static_cast<size_t>(char_count + 1)));
 

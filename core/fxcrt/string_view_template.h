@@ -63,6 +63,8 @@ class StringViewTemplate {
     requires(!std::is_same<UnsignedType, CharType>::value)
       : span_(other.empty()
                   ? pdfium::span<const CharType>()
+                  // SAFETY: UnsignedType and CharType have the same size,
+                  // making reinterpretation safe.
                   : UNSAFE_BUFFERS(pdfium::span(
                         reinterpret_cast<const CharType*>(other.data()),
                         other.size()))) {}
