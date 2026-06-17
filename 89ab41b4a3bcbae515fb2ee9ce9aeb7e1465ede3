@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "5ca6b030_4b2c5c75",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "590a9db3_e485dce4",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "0511b315_bee0cde2",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 7
@@ -76,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8699083_ef96f522",
+        "filename": "core/fxge/android/cfpf_skiafontmgr.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17882172_11062244",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a34fb608_22f9bf33",
@@ -89,6 +131,24 @@
       "writtenOn": "2026-06-17T00:21:39Z",
       "side": 1,
       "message": "C for symmetry. F for usefulness.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11a4e587_69f77fa3",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "J for jetski.",
+      "parentUuid": "a34fb608_22f9bf33",
       "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -110,6 +170,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4aaffb1b_08f41c4a",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74c68714_a518c8e2",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d181d6ed_1e7738e9",
@@ -123,6 +201,24 @@
       "writtenOn": "2026-06-17T00:21:39Z",
       "side": 1,
       "message": "Probably need a comment about what this has to outlive.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec8835d8_ffd079c4",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d181d6ed_1e7738e9",
       "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -144,6 +240,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6066721f_df51a2bc",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32f0e500_6756faae",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "63c6124d_d80dda0e",
@@ -157,6 +271,24 @@
       "writtenOn": "2026-06-17T00:21:39Z",
       "side": 1,
       "message": "Match line 142. Same for .cpp file.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51ad89da_c7876d41",
+        "filename": "core/fxge/cfx_face.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:09:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63c6124d_d80dda0e",
       "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
