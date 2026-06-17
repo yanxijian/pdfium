@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "590a9db3_e485dce4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "go/avoid-we",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "0511b315_bee0cde2",
@@ -14,6 +37,126 @@
       "writtenOn": "2026-06-16T23:40:31Z",
       "side": 1,
       "message": "here is basically the \"testing strategy\" comment as a prequel CL.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "377eb0a1_53d79790",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "I like prequels!\n\nWait, Episode 1 was a prequel...",
+      "parentUuid": "0511b315_bee0cde2",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17882172_11062244",
+        "filename": "core/fxge/android/cfpf_skiafontmgr.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "Top of private block",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a34fb608_22f9bf33",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "C for symmetry. F for usefulness.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74c68714_a518c8e2",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "const method",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d181d6ed_1e7738e9",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "Probably need a comment about what this has to outlive.",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32f0e500_6756faae",
+        "filename": "core/fxge/android/cfpf_skiafontmgr_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "Is this needed if TestSkiaFontMgr is already holding on to it?",
+      "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63c6124d_d80dda0e",
+        "filename": "core/fxge/cfx_face.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T00:21:39Z",
+      "side": 1,
+      "message": "Match line 142. Same for .cpp file.",
       "revId": "89ab41b4a3bcbae515fb2ee9ce9aeb7e1465ede3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
