@@ -618,7 +618,7 @@ std::optional<std::array<uint32_t, 4>> CFX_Face::GetOs2UnicodeRange() {
 }
 #endif  // defined(PDF_ENABLE_XFA)
 
-#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
+#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID)
 std::optional<std::array<uint32_t, 2>> CFX_Face::GetOs2CodePageRange() {
   auto* os2 = static_cast<TT_OS2*>(FT_Get_Sfnt_Table(GetRec(), FT_SFNT_OS2));
   std::optional<std::array<uint32_t, 2>> ft_result;

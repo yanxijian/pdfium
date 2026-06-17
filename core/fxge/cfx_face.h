@@ -184,7 +184,7 @@ class CFX_Face final : public Retainable, public Observable {
 
   pdfium::span<const FT_CharMap> GetCharMaps() const;
 
-#if defined(PDF_ENABLE_XFA) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
+#if BUILDFLAG(IS_ANDROID) || defined(PDF_ENABLE_XFA)
   std::optional<std::array<uint8_t, 2>> GetOs2Panose();
 #endif
 
