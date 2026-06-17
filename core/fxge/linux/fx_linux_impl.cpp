@@ -93,7 +93,8 @@ class CFX_LinuxFontInfo final : public CFX_FolderFontInfo {
                 int pitch_family,
                 const ByteString& face) override;
 
-  bool ParseFontCfg(const char** pUserPaths);
+  // PRECONDITIONS: `pUserPaths` must be terminated by a nullptr.
+  UNSAFE_BUFFER_USAGE bool ParseFontCfg(const char** pUserPaths);
 };
 
 void* CFX_LinuxFontInfo::MapFont(int weight,
@@ -179,7 +180,10 @@ class CLinuxPlatform : public CFX_GEModule::PlatformIface {
 
   std::unique_ptr<SystemFontInfoIface> CreateDefaultSystemFontInfo() override {
     auto pInfo = std::make_unique<CFX_LinuxFontInfo>();
-    if (!pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths())) {
+    // SAFETY: `GetUserFontPaths()` is guaranteed to be nullptr-terminated by
+    // the public API contract (FPDF_LIBRARY_CONFIG::m_pUserFontPaths).
+    if (!UNSAFE_BUFFERS(
+            pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths()))) {
       pInfo->AddPath("/usr/share/fonts");
       pInfo->AddPath("/usr/share/X11/fonts/Type1");
       pInfo->AddPath("/usr/share/X11/fonts/TTF");

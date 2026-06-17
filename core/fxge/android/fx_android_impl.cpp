@@ -34,7 +34,10 @@ class CAndroidPlatform : public CFX_GEModule::PlatformIface {
     }
 
     auto font_info = std::make_unique<CFX_AndroidFontInfo>();
-    font_info->Init(font_mgr_.get(), CFX_GEModule::Get()->GetUserFontPaths());
+    // SAFETY: `GetUserFontPaths()` is guaranteed to be nullptr-terminated by
+    // the public API contract (FPDF_LIBRARY_CONFIG::m_pUserFontPaths).
+    UNSAFE_BUFFERS(font_info->Init(font_mgr_.get(),
+                                   CFX_GEModule::Get()->GetUserFontPaths()));
     return font_info;
   }
 

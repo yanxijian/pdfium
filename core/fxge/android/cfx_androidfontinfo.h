@@ -10,6 +10,7 @@
 #include <stdint.h>
 
 #include "core/fxcrt/bytestring.h"
+#include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr.h"
 #include "core/fxge/cfx_fontmapper.h"
@@ -22,7 +23,9 @@ class CFX_AndroidFontInfo final : public SystemFontInfoIface {
   CFX_AndroidFontInfo();
   ~CFX_AndroidFontInfo() override;
 
-  bool Init(CFPF_SkiaFontMgr* font_mgr, const char** user_paths);
+  // PRECONDITIONS: `user_paths` must be terminated by a nullptr.
+  UNSAFE_BUFFER_USAGE bool Init(CFPF_SkiaFontMgr* font_mgr,
+                                const char** user_paths);
 
   // SystemFontInfoIface:
   void EnumFontList(CFX_FontMapper* pMapper) override;

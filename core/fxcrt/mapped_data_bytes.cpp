@@ -42,6 +42,7 @@ std::unique_ptr<MappedDataBytes> MappedDataBytes::Create(
   if (ptr == MAP_FAILED) {
     return nullptr;
   }
+  // SAFETY: mmap success guarantees `ptr` is valid for `st_size` bytes.
   result->mapping_ = UNSAFE_BUFFERS(pdfium::span(
       static_cast<const uint8_t*>(ptr), static_cast<size_t>(sb.st_size)));
   return result;

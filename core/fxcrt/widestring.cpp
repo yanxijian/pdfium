@@ -329,7 +329,7 @@ static_assert(sizeof(WideString) <= sizeof(wchar_t*),
 // static
 WideString WideString::FormatInteger(int i) {
   wchar_t wbuf[32];
-  // SAFTEY: 32 bytes accommodates biggest int representation plus NUL.
+  // SAFETY: 32 bytes accommodates biggest int representation plus NUL.
   UNSAFE_BUFFERS(swprintf(wbuf, std::size(wbuf), L"%d", i));
   return WideString(wbuf);
 }
@@ -500,7 +500,7 @@ bool operator==(const WideString& lhs, const wchar_t* rhs) {
     return false;
   }
 
-  // SAFTEY: required from caller.
+  // SAFETY: required from caller.
   return UNSAFE_BUFFERS(wcscmp(lhs.data_->string_, rhs)) == 0;
 }
 
@@ -776,7 +776,7 @@ int WideString::Compare(const WideString& str) const {
   size_t that_len = str.data_->data_length_;
   size_t min_len = std::min(this_len, that_len);
 
-  // SAFTEY: Comparison limited to minimum length of either argument.
+  // SAFETY: Comparison limited to minimum length of either argument.
   int result = UNSAFE_BUFFERS(
       FXSYS_wmemcmp(data_->string_, str.data_->string_, min_len));
   if (result != 0) {

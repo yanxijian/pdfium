@@ -30,6 +30,8 @@ constexpr char kDroidSansFallback[] = "Droid Sans Fallback";
 // correct.
 constexpr uint32_t HashNormalizeFontName(const char* family) {
   uint32_t hash_code = 0;
+  // SAFETY: `family` is NUL-terminated (enforced by compile-time literal
+  // checks).
   UNSAFE_BUFFERS({
     for (size_t i = 0; family[i] != '\0'; ++i) {
       char ch = family[i];
@@ -148,7 +150,8 @@ bool CFX_AndroidFontInfo::Init(CFPF_SkiaFontMgr* font_mgr,
   }
 
   font_mgr_ = font_mgr;
-  font_mgr_->LoadFonts(user_paths);
+  // SAFETY: propagated to caller via UNSAFE_BUFFER_USAGE.
+  UNSAFE_BUFFERS(font_mgr_->LoadFonts(user_paths));
   return true;
 }
 
