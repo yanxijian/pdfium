@@ -112,6 +112,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5082333_14589f67",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "c9594cc8_855ff899",
+      "range": {
+        "startLine": 25,
+        "startChar": 28,
+        "endLine": 25,
+        "endChar": 39
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f93955c_0f593f2c",
@@ -153,6 +177,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "86ba636a_1a7ad2ee",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Done, actually we may not need the using now considering the std::unique_ptr\u003c\u003e type declaration is quite short now. Thanks!",
+      "parentUuid": "2f93955c_0f593f2c",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 34
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ffe91e6_b6985211",
@@ -166,6 +214,30 @@
       "writtenOn": "2026-06-16T22:18:00Z",
       "side": 1,
       "message": "span(decoded_buffer).subspan(total_out).data() is safe here.",
+      "range": {
+        "startLine": 48,
+        "startChar": 39,
+        "endLine": 48,
+        "endChar": 72
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7250500e_9930e6b9",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Thanks!",
+      "parentUuid": "7ffe91e6_b6985211",
       "range": {
         "startLine": 48,
         "startChar": 39,
@@ -199,6 +271,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "85dc7b52_6e5fd68a",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0987992a_b6a0969b",
+      "range": {
+        "startLine": 52,
+        "startChar": 7,
+        "endLine": 52,
+        "endChar": 9
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f7ce313_7f6cb8cc",
@@ -222,6 +318,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0908d725_aa003d24",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "5f7ce313_7f6cb8cc",
+      "range": {
+        "startLine": 53,
+        "startChar": 34,
+        "endLine": 53,
+        "endChar": 49
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f976c11e_8cf3ad4e",
@@ -235,6 +355,30 @@
       "writtenOn": "2026-06-16T22:18:00Z",
       "side": 1,
       "message": "again, for bounds checking for free, src_span.subspan(available_in).size();",
+      "range": {
+        "startLine": 63,
+        "startChar": 45,
+        "endLine": 63,
+        "endChar": 49
+      },
+      "revId": "9564f610d1e36fa62a836eb9aa36e87422b06b59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f9972d6_0801dfcc",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 51
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T06:40:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f976c11e_8cf3ad4e",
       "range": {
         "startLine": 63,
         "startChar": 45,
