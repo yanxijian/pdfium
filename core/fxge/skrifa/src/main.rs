@@ -20,7 +20,7 @@ use read_fonts::{
 use skrifa::{
     charmap::Charmap,
     instance::{LocationRef, Size},
-    metrics::Metrics,
+    metrics::{GlyphMetrics, Metrics},
     outline::OutlineGlyphFormat,
     string::StringId,
     FontRef, GlyphNameSource, GlyphNames, MetadataProvider, OutlineGlyphCollection,
@@ -62,6 +62,14 @@ mod skrifa_ffi {
         pub y: f32,
     }
 
+    #[derive(Copy, Clone, PartialEq, Debug)]
+    pub struct BoundingBox {
+        pub x_min: f32,
+        pub y_min: f32,
+        pub x_max: f32,
+        pub y_max: f32,
+    }
+
     #[derive(Clone, Debug)]
     pub struct Outline {
         pub verbs: Vec<PathVerb>,
@@ -73,6 +81,14 @@ mod skrifa_ffi {
     pub struct CodePageRange {
         pub range1: u32,
         pub range2: u32,
+    }
+
+    #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+    pub struct UnicodeRange {
+        pub range1: u32,
+        pub range2: u32,
+        pub range3: u32,
+        pub range4: u32,
     }
 
     #[derive(Copy, Clone, PartialEq, Eq, Debug)]
@@ -94,11 +110,14 @@ mod skrifa_ffi {
         fn font_type(&self) -> FaceFormat;
         unsafe fn postscript_name<'a>(&'a self) -> &'a str;
         unsafe fn family_name<'a>(&'a self) -> &'a str;
+        unsafe fn style_name<'a>(&'a self) -> &'a str;
         fn units_per_em(&self) -> i32;
         fn ascent(&self) -> f32;
         fn descent(&self) -> f32;
         fn num_glyphs(&self) -> u32;
         fn is_fixed_pitch(&self) -> bool;
+        fn is_tricky(&self) -> bool;
+        fn is_scalable(&self) -> bool;
         fn is_cid(&self) -> bool;
         fn cid_to_gid(&self, cid: u16) -> u32;
         fn unicode_to_gid(&self, unicode: u32) -> u32;
@@ -106,16 +125,21 @@ mod skrifa_ffi {
         fn code_to_gid(&self, code: u8) -> u32;
         fn has_glyph_names(&self) -> bool;
         fn glyph_name(&self, gid: u32) -> String;
+        fn get_name_index(&self, name: &str) -> u32;
         fn scaled_outline(&self, gid: u32, ppem: f32, outline: &mut Outline) -> bool;
         fn unscaled_outline(&self, gid: u32, outline: &mut Outline) -> bool;
+        fn has_outline(&self, gid: u32) -> bool;
+        fn get_glyph_bounds(&self, gid: u32) -> BoundingBox;
 
         fn get_os2_code_page_range(&self, range: &mut CodePageRange) -> bool;
+        fn get_os2_unicode_range(&self, range: &mut UnicodeRange) -> bool;
         fn get_os2_panose(&self, panose: &mut Os2Panose) -> bool;
         fn get_os2_fs_type(&self, fs_type: &mut u16) -> bool;
         fn get_char_codes_and_indices(&self, max_char: u32) -> Vec<CharCodeAndIndex>;
 
         fn agl_name_to_unicode(name: &str, unicode: &mut u32) -> bool;
         fn agl_unicode_to_name(unicode: u32, name: &mut [u8]) -> bool;
+        fn get_num_faces(data: &[u8]) -> u32;
     }
 
     unsafe extern "C++" {
@@ -126,8 +150,8 @@ mod skrifa_ffi {
 }
 
 use skrifa_ffi::{
-    CharCodeAndIndex, CodePageRange, FaceFormat, Os2Panose, Outline, PathVerb, Point,
-    PsEncodingKind,
+    BoundingBox, CharCodeAndIndex, CodePageRange, FaceFormat, Os2Panose, Outline, PathVerb, Point,
+    PsEncodingKind, UnicodeRange,
 };
 
 pub enum SkrifaFont<'a> {
@@ -142,6 +166,7 @@ pub struct Sfnt<'a> {
     metrics: Metrics,
     ps_name: Option<String>,
     family_name: Option<String>,
+    style_name: Option<String>,
     glyph_names: GlyphNames<'a>,
     charmap: Charmap<'a>,
     outlines: OutlineGlyphCollection<'a>,
@@ -155,10 +180,20 @@ impl<'a> Sfnt<'a> {
         let ps_name = get_name(StringId::POSTSCRIPT_NAME);
         let family_name =
             get_name(StringId::FAMILY_NAME).or_else(|| get_name(StringId::TYPOGRAPHIC_FAMILY_NAME));
+        let style_name = get_name(StringId::SUBFAMILY_NAME);
         let glyph_names = font.glyph_names();
         let charmap = font.charmap();
         let outlines = font.outline_glyphs();
-        Some(Self { font, ps_name, metrics, family_name, glyph_names, charmap, outlines })
+        Some(Self {
+            font,
+            ps_name,
+            metrics,
+            family_name,
+            style_name,
+            glyph_names,
+            charmap,
+            outlines,
+        })
     }
 }
 
@@ -234,6 +269,13 @@ impl SkrifaFont<'_> {
         }
     }
 
+    fn style_name(&self) -> &str {
+        match self {
+            Self::Sfnt(sfnt) => sfnt.style_name.as_deref().unwrap_or_default(),
+            _ => "",
+        }
+    }
+
     fn units_per_em(&self) -> i32 {
         match self {
             Self::Sfnt(sfnt) => sfnt.metrics.units_per_em as i32,
@@ -279,6 +321,17 @@ impl SkrifaFont<'_> {
             Self::Cff(cff) => cff.meta.as_ref().map(|meta| meta.is_fixed_pitch()).unwrap_or(false),
             Self::Error => false,
         }
+    }
+
+    fn is_tricky(&self) -> bool {
+        let Self::Sfnt(sfnt) = self else {
+            return false;
+        };
+        sfnt.outlines.require_interpreter()
+    }
+
+    fn is_scalable(&self) -> bool {
+        !matches!(self, Self::Error)
     }
 
     fn unicode_to_gid(&self, unicode: u32) -> u32 {
@@ -351,6 +404,17 @@ impl SkrifaFont<'_> {
         }
     }
 
+    fn get_name_index(&self, name: &str) -> u32 {
+        let Self::Sfnt(sfnt) = self else {
+            return 0;
+        };
+        sfnt.glyph_names
+            .iter()
+            .find(|(_id, n)| n.as_str() == name)
+            .map(|(id, _n)| id.to_u32())
+            .unwrap_or(0)
+    }
+
     fn is_cid(&self) -> bool {
         match self {
             Self::Cff(cff) => cff.font.is_cid(),
@@ -376,6 +440,31 @@ impl SkrifaFont<'_> {
 
     fn unscaled_outline(&self, gid: u32, outline: &mut Outline) -> bool {
         self.outline_impl(gid, None, outline).is_some()
+    }
+
+    fn has_outline(&self, gid: u32) -> bool {
+        match self {
+            Self::Sfnt(sfnt) => sfnt.outlines.get(GlyphId::new(gid)).is_some(),
+            Self::Type1(type1) => gid < type1.num_glyphs(),
+            Self::Cff(cff) => gid < cff.font.num_glyphs(),
+            Self::Error => false,
+        }
+    }
+
+    fn get_glyph_bounds(&self, gid: u32) -> BoundingBox {
+        let Self::Sfnt(sfnt) = self else {
+            return BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 };
+        };
+        let glyph_metrics = GlyphMetrics::new(&sfnt.font, Size::unscaled(), LocationRef::default());
+        if let Some(bbox) = glyph_metrics.bounds(GlyphId::new(gid)) {
+            return BoundingBox {
+                x_min: bbox.x_min,
+                y_min: bbox.y_min,
+                x_max: bbox.x_max,
+                y_max: bbox.y_max,
+            };
+        }
+        BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }
     }
 
     fn outline_impl(&self, gid: u32, ppem: Option<f32>, outline: &mut Outline) -> Option<()> {
@@ -415,6 +504,21 @@ impl SkrifaFont<'_> {
         if let Ok(os2) = sfnt.font.os2() {
             range.range1 = os2.ul_code_page_range_1().unwrap_or(0);
             range.range2 = os2.ul_code_page_range_2().unwrap_or(0);
+            return true;
+        }
+        false
+    }
+
+    fn get_os2_unicode_range(&self, range: &mut UnicodeRange) -> bool {
+        let Self::Sfnt(sfnt) = self else {
+            return false;
+        };
+        use read_fonts::TableProvider;
+        if let Ok(os2) = sfnt.font.os2() {
+            range.range1 = os2.ul_unicode_range_1();
+            range.range2 = os2.ul_unicode_range_2();
+            range.range3 = os2.ul_unicode_range_3();
+            range.range4 = os2.ul_unicode_range_4();
             return true;
         }
         false
@@ -545,6 +649,16 @@ fn agl_name_to_unicode(name: &str, unicode: &mut u32) -> bool {
 
 fn agl_unicode_to_name(unicode: u32, name: &mut [u8]) -> bool {
     read_fonts::ps::agl::char_to_name(unicode, name).is_some()
+}
+
+fn get_num_faces(data: &[u8]) -> u32 {
+    if let Ok(collection) = read_fonts::CollectionRef::new(data) {
+        return collection.len();
+    }
+    if read_fonts::FontRef::new(data).is_ok() {
+        return 1;
+    }
+    0
 }
 
 fn main() {
