@@ -5,6 +5,26 @@
 #include "core/fpdfdoc/cpvt_word.h"
 
 CPVT_Word::CPVT_Word() = default;
+
+CPVT_Word::CPVT_Word(uint16_t word,
+                     FX_Charset charset,
+                     const CPVT_WordPlace& word_place,
+                     const CFX_PointF& pt_word,
+                     float ascent,
+                     float descent,
+                     float width,
+                     int32_t font_index,
+                     float font_size)
+    : Word(word),
+      nCharset(charset),
+      WordPlace(word_place),
+      ptWord(pt_word),
+      fAscent(ascent),
+      fDescent(descent),
+      fWidth(width),
+      nFontIndex(font_index),
+      fFontSize(font_size) {}
+
 CPVT_Word::CPVT_Word(const CPVT_Word&) = default;
 CPVT_Word& CPVT_Word::operator=(const CPVT_Word&) = default;
 CPVT_Word::~CPVT_Word() = default;
