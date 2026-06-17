@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d873ed9_a2f61eb9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:18:24Z",
+      "side": 1,
+      "message": "Small bit of OCD noticed while making other class retainable in other CL.",
+      "revId": "2c913443b134638d2d17305e21af708d21f5fa7d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
