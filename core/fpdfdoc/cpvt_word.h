@@ -11,29 +11,47 @@
 
 #include "core/fpdfdoc/cpvt_wordplace.h"
 #include "core/fxcrt/fx_codepage.h"
+#include "core/fxcrt/fx_coordinates.h"
 
 class CPVT_Word {
  public:
   CPVT_Word();
+  CPVT_Word(uint16_t word,
+            FX_Charset charset,
+            const CPVT_WordPlace& word_place,
+            const CFX_PointF& pt_word,
+            float ascent,
+            float descent,
+            float width,
+            int32_t font_index,
+            float font_size);
+  CPVT_Word(const CPVT_Word&);
+  CPVT_Word& operator=(const CPVT_Word&);
+  ~CPVT_Word();
 
-  uint16_t Word;
-  FX_Charset nCharset;
+  uint16_t word() const { return Word; }
+  FX_Charset charset() const { return nCharset; }
+  int32_t font_index() const { return nFontIndex; }
+  const CPVT_WordPlace& word_place() const { return WordPlace; }
+  const CFX_PointF& pt() const { return ptWord; }
+  float width() const { return fWidth; }
+  float font_size() const { return fFontSize; }
+  float ascent() const { return fAscent; }
+  float descent() const { return fDescent; }
+
+  float AscentY() const { return ptWord.y + fAscent; }
+  float DescentY() const { return ptWord.y + fDescent; }
+
+ private:
+  uint16_t Word = 0;
+  FX_Charset nCharset = FX_Charset::kANSI;
   CPVT_WordPlace WordPlace;
   CFX_PointF ptWord;
-  float fAscent;
-  float fDescent;
-  float fWidth;
-  int32_t nFontIndex;
-  float fFontSize;
+  float fAscent = 0.0f;
+  float fDescent = 0.0f;
+  float fWidth = 0.0f;
+  int32_t nFontIndex = -1;
+  float fFontSize = 0.0f;
 };
-
-inline CPVT_Word::CPVT_Word()
-    : Word(0),
-      nCharset(FX_Charset::kANSI),
-      fAscent(0.0f),
-      fDescent(0.0f),
-      fWidth(0.0f),
-      nFontIndex(-1),
-      fFontSize(0.0f) {}
 
 #endif  // CORE_FPDFDOC_CPVT_WORD_H_
