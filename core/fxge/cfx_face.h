@@ -45,6 +45,8 @@ class SkTypeface;
 
 #if defined(PDF_ENABLE_FONTATIONS)
 struct SkrifaFontHolder;
+#else
+struct SkrifaFontHolder {};
 #endif
 
 namespace fxge {
@@ -163,12 +165,8 @@ class CFX_Face final : public Retainable, public Observable {
  private:
   CFX_Face(RetainPtr<Retainable> cache_entry,
            RetainPtr<CFX_ReadOnlySpanStream> font_stream,
-           FT_FaceRec* rec
-#if defined(PDF_ENABLE_FONTATIONS)
-           ,
-           std::unique_ptr<SkrifaFontHolder> skrifa_font
-#endif
-  );
+           FT_FaceRec* rec,
+           std::unique_ptr<SkrifaFontHolder> skrifa_font);
 
   ~CFX_Face() override;
 
@@ -187,14 +185,6 @@ class CFX_Face final : public Retainable, public Observable {
   std::optional<std::array<uint8_t, 2>> GetOs2Panose();
 #endif
 
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  std::unique_ptr<CFX_Path> LoadGlyphPathFontations(
-      uint32_t glyph_index,
-      int dest_width,
-      bool is_vertical,
-      const CFX_SubstFont* subst_font);
-#endif
-
   // `cache_entry_` must outlive `font_stream_`. Faces managed by a cache
   // and sharing the same `font_stream_` keep the cache entry that indexes
   // that stream alive via this member while there is at least one face
@@ -211,7 +201,7 @@ class CFX_Face final : public Retainable, public Observable {
   sk_sp<SkTypeface> skia_typeface_;
 #endif  // defined(PDF_USE_SKIA)
 #if defined(PDF_ENABLE_FONTATIONS)
-  std::unique_ptr<SkrifaFontHolder> skrifa_font_;
+  std::unique_ptr<SkrifaFontHolder> const skrifa_font_;
 #endif
 };
 
