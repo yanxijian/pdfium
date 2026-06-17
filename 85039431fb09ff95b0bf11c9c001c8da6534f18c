@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "083f2104_4f7ed6fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 53
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:57:37Z",
+      "side": 1,
+      "message": "This looks good only concern is typedef is too C-ish for C++.  At worst\n`using BrotliDecoderState \u003d struct ...;` is required.",
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56487cd1_f4a1e907",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:57:37Z",
+      "side": 1,
+      "message": "Not sure why needed. Let\u0027s try just `struct BrotliDecoderStateStruct` and use the ...Struct throughout. Since we in C++, though, we might need to do  extern \"C\" { struct ...; }",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 59
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "69e6059e_d32d36c7",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.h",
+              "range": {
+                "startLine": 14,
+                "startChar": 0,
+                "endLine": 15,
+                "endChar": 0
+              },
+              "replacement": "struct BrotliDecoderStateStruct;\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.h",
+              "range": {
+                "startLine": 22,
+                "startChar": 0,
+                "endLine": 23,
+                "endChar": 0
+              },
+              "replacement": "    void operator()(struct BrotliDecoderStateStruct* ptr) const;\n"
+            }
+          ]
+        }
+      ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca20bdd7_6cf37905",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-17T17:57:37Z",
+      "side": 1,
+      "message": "generally won\u0027t work as it has to be invoked from inside a unique_ptr\u003c\u003e template destructor, surprised that it did, generally fine at top level following the struct definition.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 24
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "2b5a09e5_b0e98c0f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.h",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "struct BrotliDeleter {\n  void operator()(BrotliDecoderState* ptr) const;\n};\n\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.h",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 24,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
