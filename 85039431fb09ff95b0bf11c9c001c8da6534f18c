@@ -59,6 +59,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c57e4ea_498d1465",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T18:30:30Z",
+      "side": 1,
+      "message": "Tried. For some reason, including the brotli header in the actual header makes brotli complain about missing imports which it never complains about in the c++.\n\nSounds weird but it happens for some reason...\n\n```\nIn file included from ../../core/fpdfapi/parser/fpdf_parser_decode.cpp:36:\nIn file included from ../../core/fxcodec/brotli/brotli_decoder.h:11:\n../../third_party/brotli/include/brotli/decode.h:15:10: fatal error: \u0027brotli/port.h\u0027 file not found\n   15 | #include \u003cbrotli/port.h\u003e\n      |          ^~~~~~~~~~~~~~~\n1 error generated.\nbuild failed\nlocal:2 remote:0 cache:0 cache-write:0(err:0) fallback:0 retry:0 skip:3410\nfs: ops: 22(err:4) / r:9(err:0) 351.92KiB / w:0(err:0) 0B\n```\n\nMaybe its something based on the gn deps but, haven\u0027t looked into it.",
+      "parentUuid": "abdf501d_3b6a6d3f",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 78
+      },
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56487cd1_f4a1e907",
@@ -106,6 +130,30 @@
           ]
         }
       ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3b42e61_59346681",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T18:30:30Z",
+      "side": 1,
+      "message": "Done. We didn\u0027t need the extern though.",
+      "parentUuid": "56487cd1_f4a1e907",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 59
+      },
       "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -192,6 +240,48 @@
           ]
         }
       ],
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b2d5a4d_29b7b787",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T18:30:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca20bdd7_6cf37905",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 24
+      },
+      "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8aec090a_8c5fa450",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-17T18:30:30Z",
+      "side": 1,
+      "message": "Done, but keeping it as a struct. Let me know if you want me to make it a class with a public member instead.",
+      "parentUuid": "572a313b_34f9547c",
       "revId": "85039431fb09ff95b0bf11c9c001c8da6534f18c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
