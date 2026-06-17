@@ -4,6 +4,10 @@
 
 #include "core/fxge/cfx_face.h"
 
+#include "core/fxge/cfx_face_skrifa_internal.h"
+#include "core/fxge/cfx_truetypeface.h"
+#include "core/fxge/cfx_type1face.h"
+
 #include <algorithm>
 #include <array>
 #include <limits>
@@ -296,12 +300,13 @@ class ScopedFaceTransform {
 
 }  // namespace
 
-#if defined(PDF_ENABLE_FONTATIONS)
-struct SkrifaFontHolder {
-  explicit SkrifaFontHolder(rust::Box<skrifa::PsFont> f) : font(std::move(f)) {}
-  rust::Box<skrifa::PsFont> font;
+namespace {
+enum class FaceFormat {
+  kUnknown,
+  kTrueType,
+  kType1,
 };
-#endif
+}  // namespace
 
 // static
 RetainPtr<CFX_Face> CFX_Face::New(RetainPtr<Retainable> cache_entry,
@@ -319,22 +324,51 @@ RetainPtr<CFX_Face> CFX_Face::New(RetainPtr<Retainable> cache_entry,
   if (FT_Set_Pixel_Sizes(face_rec, 64, 64) != 0) {
     return nullptr;
   }
+
+  FaceFormat format = FaceFormat::kUnknown;
 #if defined(PDF_ENABLE_FONTATIONS)
-  pdfium::span<const uint8_t> span = font_stream->span();
-  auto skrifa_font = std::make_unique<SkrifaFontHolder>(
-      skrifa::new_ps_font(rust::Slice(span)));
+  skrifa::FontFormat skrifa_format =
+      skrifa::detect_font_format(rust::Slice(data));
+  if (skrifa_format == skrifa::FontFormat::TrueType ||
+      skrifa_format == skrifa::FontFormat::Cff) {
+    format = FaceFormat::kTrueType;
+  } else if (skrifa_format == skrifa::FontFormat::Type1) {
+    format = FaceFormat::kType1;
+  }
 #endif
 
-  // Private ctor.
-  auto result = pdfium::WrapRetain(new CFX_Face(std::move(cache_entry),
-                                                std::move(font_stream), face_rec
+  if (format == FaceFormat::kUnknown) {
+    ByteString ft_format(FT_Get_Font_Format(face_rec));
+    if (ft_format == "TrueType" || ft_format == "CFF") {
+      format = FaceFormat::kTrueType;
+    } else if (ft_format == "Type 1") {
+      format = FaceFormat::kType1;
+    }
+  }
+
+  RetainPtr<CFX_Face> result;
+  if (format == FaceFormat::kTrueType) {
+    std::unique_ptr<SkrifaOpenTypeFontHolder> skrifa_font;
 #if defined(PDF_ENABLE_FONTATIONS)
-                                                ,
-                                                std::move(skrifa_font)
+    skrifa_font = std::make_unique<SkrifaOpenTypeFontHolder>(
+        skrifa::new_opentype_font(rust::Slice(data)));
 #endif
-                                                    ));
+    result = pdfium::WrapRetain(
+        new CFX_TrueTypeFace(std::move(cache_entry), std::move(font_stream),
+                             face_rec, std::move(skrifa_font)));
+  } else {
+    std::unique_ptr<SkrifaPsFontHolder> skrifa_font;
+#if defined(PDF_ENABLE_FONTATIONS)
+    skrifa_font = std::make_unique<SkrifaPsFontHolder>(
+        skrifa::new_ps_font(rust::Slice(data)));
+#endif
+    result = pdfium::WrapRetain(
+        new CFX_Type1Face(std::move(cache_entry), std::move(font_stream),
+                          face_rec, std::move(skrifa_font)));
+  }
+
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  result->skia_typeface_ = font_mgr->MakeSkTypeface(result->GetData());
+  result->GetOrCreateSkTypeface();
 #endif
   return result;
 }
@@ -857,83 +891,8 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPath(
   Outline_CheckEmptyContour(&params);
   pPath->ClosePath();
 
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-  std::unique_ptr<CFX_Path> skrifa_path = CFX_Face::LoadGlyphPathFontations(
-      glyph_index, dest_width, is_vertical, subst_font);
-  // TODO(https://crbug.com/42271123): `skrifa_path` is constructed but its
-  // contents are not strictly verified against `pPath` yet due to scale and
-  // translation differences that might exist.
-#endif
-
   return pPath;
 }
-
-#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
-std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPathFontations(
-    uint32_t glyph_index,
-    int dest_width,
-    bool is_vertical,
-    const CFX_SubstFont* subst_font) {
-  if (!skrifa_font_ || !skrifa_font_->font->is_ok()) {
-    return nullptr;
-  }
-  skrifa::Outline outline;
-  if (!skrifa_font_->font->unscaled_outline(glyph_index, outline)) {
-    return nullptr;
-  }
-  auto skrifa_path = std::make_unique<CFX_Path>();
-  auto point_idx = 0;
-  CFX_PointF current_point(0, 0);
-  for (auto verb : outline.verbs) {
-    switch (verb) {
-      case skrifa::PathVerb::MoveTo: {
-        auto p = outline.points[point_idx++];
-        current_point = CFX_PointF(p.x, p.y);
-        skrifa_path->AppendPoint(current_point, CFX_Path::Point::Type::kMove);
-        break;
-      }
-      case skrifa::PathVerb::LineTo: {
-        auto p = outline.points[point_idx++];
-        current_point = CFX_PointF(p.x, p.y);
-        skrifa_path->AppendPoint(current_point, CFX_Path::Point::Type::kLine);
-        break;
-      }
-      case skrifa::PathVerb::QuadTo: {
-        auto c0 = outline.points[point_idx++];
-        auto p = outline.points[point_idx++];
-        // Convert quadratic to cubic bezier to match FreeType
-        // decomposition.
-        skrifa_path->AppendPoint(
-            CFX_PointF(current_point.x + (c0.x - current_point.x) * 2 / 3,
-                       current_point.y + (c0.y - current_point.y) * 2 / 3),
-            CFX_Path::Point::Type::kBezier);
-        skrifa_path->AppendPoint(
-            CFX_PointF(c0.x + (p.x - c0.x) / 3, c0.y + (p.y - c0.y) / 3),
-            CFX_Path::Point::Type::kBezier);
-        current_point = CFX_PointF(p.x, p.y);
-        skrifa_path->AppendPoint(current_point, CFX_Path::Point::Type::kBezier);
-        break;
-      }
-      case skrifa::PathVerb::CurveTo: {
-        auto c0 = outline.points[point_idx++];
-        auto c1 = outline.points[point_idx++];
-        auto p = outline.points[point_idx++];
-        skrifa_path->AppendPoint(CFX_PointF(c0.x, c0.y),
-                                 CFX_Path::Point::Type::kBezier);
-        skrifa_path->AppendPoint(CFX_PointF(c1.x, c1.y),
-                                 CFX_Path::Point::Type::kBezier);
-        current_point = CFX_PointF(p.x, p.y);
-        skrifa_path->AppendPoint(current_point, CFX_Path::Point::Type::kBezier);
-        break;
-      }
-      case skrifa::PathVerb::Close:
-        skrifa_path->ClosePath();
-        break;
-    }
-  }
-  return skrifa_path;
-}
-#endif
 
 int CFX_Face::GetGlyphTTWidth() const {
   const auto* fontglyph = GetRec()->glyph;
@@ -1367,20 +1326,10 @@ bool CFX_Face::CanEmbed() {
 
 CFX_Face::CFX_Face(RetainPtr<Retainable> cache_entry,
                    RetainPtr<CFX_ReadOnlySpanStream> font_stream,
-                   FT_FaceRec* rec
-#if defined(PDF_ENABLE_FONTATIONS)
-                   ,
-                   std::unique_ptr<SkrifaFontHolder> skrifa_font
-#endif
-                   )
+                   FT_FaceRec* rec)
     : cache_entry_(std::move(cache_entry)),
       font_stream_(std::move(font_stream)),
-      rec_(rec)
-#if defined(PDF_ENABLE_FONTATIONS)
-      ,
-      skrifa_font_(std::move(skrifa_font))
-#endif
-{
+      rec_(rec) {
   DCHECK(rec_);
 }
 
@@ -1395,6 +1344,14 @@ SkTypeface* CFX_Face::GetOrCreateSkTypeface() {
 #endif
 
 CFX_Face::~CFX_Face() = default;
+
+CFX_TrueTypeFace* CFX_Face::AsTrueTypeFace() {
+  return nullptr;
+}
+
+CFX_Type1Face* CFX_Face::AsType1Face() {
+  return nullptr;
+}
 
 void CFX_Face::AdjustVariationParams(int glyph_index,
                                      int dest_width,
