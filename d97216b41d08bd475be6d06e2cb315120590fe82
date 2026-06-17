@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "245f6152_91f1fb0e",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-17T17:14:27Z",
+      "side": 0,
+      "message": "Keep this for std::max().",
+      "revId": "d97216b41d08bd475be6d06e2cb315120590fe82",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
