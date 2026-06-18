@@ -41,7 +41,7 @@ class CPDF_Type3Font final : public CPDF_SimpleFont {
   CPDF_Type3Char* LoadChar(uint32_t charcode);
   void CheckType3FontMetrics();
 
-  CFX_Matrix& GetFontMatrix() { return font_matrix_; }
+  const CFX_Matrix& GetFontMatrix() const { return font_matrix_; }
 
  private:
   CPDF_Type3Font(CPDF_Document* document,

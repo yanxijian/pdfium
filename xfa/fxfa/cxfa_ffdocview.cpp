@@ -599,7 +599,8 @@ void CXFA_FFDocView::AddCalculateNode(CXFA_Node* node) {
 }
 
 void CXFA_FFDocView::AddCalculateNodeNotify(CXFA_Node* pNodeChange) {
-  CJX_Object::CalcData* pGlobalData = pNodeChange->JSObject()->GetCalcData();
+  const CJX_Object::CalcData* pGlobalData =
+      pNodeChange->JSObject()->GetCalcData();
   if (!pGlobalData) {
     return;
   }

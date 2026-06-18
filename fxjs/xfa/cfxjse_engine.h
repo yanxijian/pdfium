@@ -149,7 +149,7 @@ class CFXJSE_Engine final : public CFX_IsolateWrapper {
   v8::Local<v8::Object> GetOrCreateJSBindingFromMap(CXFA_Object* pObject);
 
   CXFA_Object* GetThisObject() const { return this_object_; }
-  CFXJSE_Class* GetJseNormalClass() const { return js_class_; }
+  const CFXJSE_Class* GetJseNormalClass() const { return js_class_; }
   CXFA_Document* GetDocument() const { return document_.Get(); }
 
   void SetNodesOfRunScript(std::vector<cppgc::Persistent<CXFA_Node>>* pArray);
@@ -198,7 +198,7 @@ class CFXJSE_Engine final : public CFX_IsolateWrapper {
   UnownedPtr<CJS_Runtime> const subordinate_runtime_;
   cppgc::WeakPersistent<CXFA_Document> const document_;
   std::unique_ptr<CFXJSE_Context> js_context_;
-  UnownedPtr<CFXJSE_Class> js_class_;
+  UnownedPtr<const CFXJSE_Class> js_class_;
   CXFA_Script::Type script_type_ = CXFA_Script::Type::Unknown;
   // |map_object_to_value_| is what ensures the v8 object bound to a
   // CJX_Object remains valid for the lifetime of the engine.

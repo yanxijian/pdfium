@@ -55,7 +55,7 @@ class CPDFXFA_Context final : public CPDF_Document::Extension,
   }
 
   CPDF_Document* GetPDFDoc() const { return pdfdoc_; }
-  CFX_XMLDocument* GetXMLDoc() { return xml_.get(); }
+  CFX_XMLDocument* GetXMLDoc() const { return xml_.get(); }
   CXFA_FFDoc* GetXFADoc() { return xfadoc_; }
   CXFA_FFDocView* GetXFADocView() const { return xfadoc_view_.Get(); }
   CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {

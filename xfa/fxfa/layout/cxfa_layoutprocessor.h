@@ -48,7 +48,7 @@ class CXFA_LayoutProcessor final : public CXFA_Document::LayoutProcessorIface {
   CXFA_ContentLayoutProcessor* GetRootContentLayoutProcessor() const {
     return content_layout_processor_;
   }
-  CXFA_ViewLayoutProcessor* GetLayoutPageMgr() const {
+  const CXFA_ViewLayoutProcessor* GetLayoutPageMgr() const {
     return view_layout_processor_;
   }
 

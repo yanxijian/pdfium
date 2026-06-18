@@ -47,7 +47,7 @@ class CFXJSE_Context {
   v8::Local<v8::Object> GetGlobalObject();
 
   void AddClass(std::unique_ptr<CFXJSE_Class> pClass);
-  CFXJSE_Class* GetClassByName(ByteStringView szName) const;
+  const CFXJSE_Class* GetClassByName(ByteStringView szName) const;
   void EnableCompatibleMode();
 
   // Note: `pNewThisObject` may be empty.
