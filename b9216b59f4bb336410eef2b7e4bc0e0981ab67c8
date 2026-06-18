@@ -89,6 +89,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d154469_f3c670b6",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T22:41:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "257d90ab_549bda12",
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a32e4db0_49879d10",

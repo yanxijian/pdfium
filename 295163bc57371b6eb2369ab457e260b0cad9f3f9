@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "47fbad1b_b3c46f81",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T22:41:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "404fc8e4_7da4d223",
+      "range": {
+        "startLine": 36,
+        "startChar": 44,
+        "endLine": 36,
+        "endChar": 46
+      },
+      "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9256b38d_1821eec4",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-18T20:44:23Z",
       "side": 1,
       "message": "Should the CL description say something about these 2 methods, since they are not trivial getters?",
+      "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23207733_6e221897",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T22:41:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9256b38d_1821eec4",
       "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
