@@ -61,7 +61,13 @@ void IFWL_ThemeProvider::Trace(cppgc::Visitor* visitor) const {
   visitor->Trace(barcode_tp_);
 }
 
-CFWL_WidgetTP* IFWL_ThemeProvider::GetTheme(const CFWL_Widget* pWidget) const {
+CFWL_WidgetTP* IFWL_ThemeProvider::GetTheme(const CFWL_Widget* pWidget) {
+  return const_cast<CFWL_WidgetTP*>(
+      static_cast<const IFWL_ThemeProvider*>(this)->GetTheme(pWidget));
+}
+
+const CFWL_WidgetTP* IFWL_ThemeProvider::GetTheme(
+    const CFWL_Widget* pWidget) const {
   switch (pWidget->GetClassID()) {
     case FWL_Type::CheckBox:
       return check_box_tp_;

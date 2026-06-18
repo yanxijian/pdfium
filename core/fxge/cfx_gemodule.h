@@ -56,8 +56,10 @@ class CFX_GEModule {
   static void Destroy();
   static CFX_GEModule* Get();
 
-  CFX_FontMgr* GetFontMgr() const { return font_mgr_.get(); }
-  PlatformIface* GetPlatform() const { return platform_.get(); }
+  CFX_FontMgr* GetFontMgr() { return font_mgr_.get(); }
+  const CFX_FontMgr* GetFontMgr() const { return font_mgr_.get(); }
+  PlatformIface* GetPlatform() { return platform_.get(); }
+  const PlatformIface* GetPlatform() const { return platform_.get(); }
   const char** GetUserFontPaths() const { return user_font_paths_; }
 
 #if defined(PDF_USE_SKIA)

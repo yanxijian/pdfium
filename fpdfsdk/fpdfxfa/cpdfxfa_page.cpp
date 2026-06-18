@@ -91,7 +91,7 @@ CPDFXFA_Page* CPDFXFA_Page::AsXFAPage() {
   return this;
 }
 
-CPDF_Document* CPDFXFA_Page::GetDocument() const {
+CPDF_Document* CPDFXFA_Page::GetDocument() {
   return document_;
 }
 

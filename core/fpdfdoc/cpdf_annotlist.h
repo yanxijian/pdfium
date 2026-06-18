@@ -33,7 +33,10 @@ class CPDF_AnnotList final : public CPDF_PageRenderContext::AnnotListIface {
                      bool bShowWidget);
 
   size_t Count() const { return annot_list_.size(); }
-  CPDF_Annot* GetAt(size_t index) const { return annot_list_[index].get(); }
+  CPDF_Annot* GetAt(size_t index) { return annot_list_[index].get(); }
+  const CPDF_Annot* GetAt(size_t index) const {
+    return annot_list_[index].get();
+  }
   bool Contains(const CPDF_Annot* pAnnot) const;
 
  private:

@@ -44,7 +44,8 @@ class CPDFXFA_Widget final : public CPDFSDK_Annot,
   bool SetIndexSelected(int index, bool selected) override;
   bool IsIndexSelected(int index) override;
 
-  CXFA_FFWidget* GetXFAFFWidget() const { return xfa_ffwidget_.Get(); }
+  CXFA_FFWidget* GetXFAFFWidget() { return xfa_ffwidget_.Get(); }
+  const CXFA_FFWidget* GetXFAFFWidget() const { return xfa_ffwidget_.Get(); }
 
   bool OnChangedFocus();
 

@@ -43,12 +43,18 @@ class CXFA_LayoutProcessor final : public CXFA_Document::LayoutProcessorIface {
   int32_t DoLayout();
   bool IncrementLayout();
   int32_t CountPages() const;
-  CXFA_ViewLayoutItem* GetPage(int32_t index) const;
+  CXFA_ViewLayoutItem* GetPage(int32_t index);
+  const CXFA_ViewLayoutItem* GetPage(int32_t index) const {
+    return const_cast<CXFA_LayoutProcessor*>(this)->GetPage(index);
+  }
   CXFA_LayoutItem* GetLayoutItem(CXFA_Node* pFormItem);
-  CXFA_ContentLayoutProcessor* GetRootContentLayoutProcessor() const {
+  CXFA_ContentLayoutProcessor* GetRootContentLayoutProcessor() {
     return content_layout_processor_;
   }
-  CXFA_ViewLayoutProcessor* GetLayoutPageMgr() const {
+  const CXFA_ContentLayoutProcessor* GetRootContentLayoutProcessor() const {
+    return content_layout_processor_;
+  }
+  const CXFA_ViewLayoutProcessor* GetLayoutPageMgr() const {
     return view_layout_processor_;
   }
 

@@ -57,7 +57,10 @@ class CFFL_ComboBox final : public CFFL_TextObject {
 
  private:
   WideString GetSelectExportText();
-  CPWL_ComboBox* GetPWLComboBox(const CPDFSDK_PageView* pPageView) const;
+  CPWL_ComboBox* GetPWLComboBox(const CPDFSDK_PageView* pPageView);
+  const CPWL_ComboBox* GetPWLComboBox(const CPDFSDK_PageView* pPageView) const {
+    return const_cast<CFFL_ComboBox*>(this)->GetPWLComboBox(pPageView);
+  }
   CPWL_ComboBox* CreateOrUpdatePWLComboBox(const CPDFSDK_PageView* pPageView);
 
   FFL_ComboBoxState state_;

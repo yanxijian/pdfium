@@ -386,8 +386,7 @@ uint32_t CFXJS_PerIsolateData::CurrentMaxObjDefinitionID() const {
   return fxcrt::CollectionSize<uint32_t>(object_defn_array_);
 }
 
-CFXJS_ObjDefinition* CFXJS_PerIsolateData::ObjDefinitionForID(
-    uint32_t id) const {
+CFXJS_ObjDefinition* CFXJS_PerIsolateData::ObjDefinitionForID(uint32_t id) {
   return id > 0 && id <= CurrentMaxObjDefinitionID()
              ? object_defn_array_[id - 1].get()
              : nullptr;

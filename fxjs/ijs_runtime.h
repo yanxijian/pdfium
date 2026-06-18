@@ -38,7 +38,8 @@ class IJS_Runtime {
     explicit ScopedEventContext(IJS_Runtime* pRuntime);
     ~ScopedEventContext();
 
-    IJS_EventContext* Get() const { return context_; }
+    IJS_EventContext* Get() { return context_; }
+    const IJS_EventContext* Get() const { return context_; }
     IJS_EventContext* operator->() const { return context_; }
 
    private:
@@ -56,7 +57,10 @@ class IJS_Runtime {
   virtual CJS_Runtime* AsCJSRuntime() = 0;
   virtual IJS_EventContext* NewEventContext() = 0;
   virtual void ReleaseEventContext(IJS_EventContext* context) = 0;
-  virtual CPDFSDK_FormFillEnvironment* GetFormFillEnv() const = 0;
+  virtual CPDFSDK_FormFillEnvironment* GetFormFillEnv() = 0;
+  const CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {
+    return const_cast<IJS_Runtime*>(this)->GetFormFillEnv();
+  }
   virtual std::optional<JS_Error> ExecuteScript(const WideString& script) = 0;
 
  protected:

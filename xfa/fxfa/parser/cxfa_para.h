@@ -16,7 +16,7 @@ class CXFA_Para final : public CXFA_Node {
 
   XFA_AttributeValue GetHorizontalAlign();
   XFA_AttributeValue GetVerticalAlign();
-  float GetLineHeight();
+  float GetLineHeight() const;
   float GetMarginLeft();
   float GetMarginRight();
   float GetSpaceAbove();

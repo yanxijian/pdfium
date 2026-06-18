@@ -90,7 +90,8 @@ class CFWL_ThemePart {
   ~CFWL_ThemePart();
 
   Part GetPart() const { return part_; }
-  CFWL_Widget* GetWidget() const { return widget_; }
+  CFWL_Widget* GetWidget() { return widget_; }
+  const CFWL_Widget* GetWidget() const { return widget_; }
   FWLTHEME_STATE GetThemeState() const;
 
   CFX_Matrix matrix_;

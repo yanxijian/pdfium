@@ -597,7 +597,7 @@ bool CXFA_FMDotAccessorExpression::ToJavaScript(WideTextBuffer* js,
 
   *js << "pfm_rt.dot_acc(";
 
-  CXFA_FMSimpleExpression* exp1 = GetFirstExpression();
+  const CXFA_FMSimpleExpression* exp1 = GetFirstExpression();
   if (exp1) {
     // Write directly to the buffer with each recursion. Creating
     // and copying temporaries here becomes expensive when there
@@ -626,7 +626,7 @@ bool CXFA_FMDotAccessorExpression::ToJavaScript(WideTextBuffer* js,
     *js << "\"" << identifier_ << "\", ";
   }
 
-  CXFA_FMSimpleExpression* exp2 = GetSecondExpression();
+  const CXFA_FMSimpleExpression* exp2 = GetSecondExpression();
   if (!exp2->ToJavaScript(js, ReturnType::kInferred)) {
     return false;
   }
@@ -704,7 +704,7 @@ bool CXFA_FMDotDotAccessorExpression::ToJavaScript(WideTextBuffer* js,
     return false;
   }
 
-  CXFA_FMSimpleExpression* exp1 = GetFirstExpression();
+  const CXFA_FMSimpleExpression* exp1 = GetFirstExpression();
   *js << "pfm_rt.dotdot_acc(";
   if (!exp1->ToJavaScript(js, ReturnType::kInferred)) {
     return false;
@@ -717,7 +717,7 @@ bool CXFA_FMDotDotAccessorExpression::ToJavaScript(WideTextBuffer* js,
     }
   }
 
-  CXFA_FMSimpleExpression* exp2 = GetSecondExpression();
+  const CXFA_FMSimpleExpression* exp2 = GetSecondExpression();
   *js << "\", \"" << identifier_ << "\", ";
   if (!exp2->ToJavaScript(js, ReturnType::kInferred)) {
     return false;

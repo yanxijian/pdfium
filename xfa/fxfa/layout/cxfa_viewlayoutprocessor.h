@@ -51,7 +51,8 @@ class CXFA_ViewLayoutProcessor
 
   void PreFinalize();
   void Trace(cppgc::Visitor* visitor) const;
-  cppgc::Heap* GetHeap() const { return heap_; }
+  cppgc::Heap* GetHeap() { return heap_; }
+  const cppgc::Heap* GetHeap() const { return heap_; }
 
   bool InitLayoutPage(CXFA_Node* pFormNode);
   bool PrepareFirstPage(CXFA_Node* pRootSubform);
@@ -63,18 +64,24 @@ class CXFA_ViewLayoutProcessor
   void FinishPaginatedPageSets();
   void SyncLayoutData();
   int32_t GetPageCount() const;
-  CXFA_ViewLayoutItem* GetPage(int32_t index) const;
+  CXFA_ViewLayoutItem* GetPage(int32_t index);
+  const CXFA_ViewLayoutItem* GetPage(int32_t index) const {
+    return const_cast<CXFA_ViewLayoutProcessor*>(this)->GetPage(index);
+  }
   int32_t GetPageIndex(const CXFA_ViewLayoutItem* pPage) const;
-  CXFA_ViewLayoutItem* GetRootLayoutItem() const {
+  CXFA_ViewLayoutItem* GetRootLayoutItem() {
     return page_set_root_layout_item_;
   }
-  std::optional<BreakData> ProcessBreakBefore(const CXFA_Node* pBreakNode);
-  std::optional<BreakData> ProcessBreakAfter(const CXFA_Node* pBreakNode);
+  const CXFA_ViewLayoutItem* GetRootLayoutItem() const {
+    return page_set_root_layout_item_;
+  }
+  std::optional<BreakData> ProcessBreakBefore(CXFA_Node* pBreakNode);
+  std::optional<BreakData> ProcessBreakAfter(CXFA_Node* pBreakNode);
   std::optional<OverflowData> ProcessOverflow(CXFA_Node* pFormNode,
                                               bool bCreatePage);
   CXFA_Node* QueryOverflow(CXFA_Node* pFormNode);
-  CXFA_Node* ProcessBookendLeader(const CXFA_Node* pBookendNode);
-  CXFA_Node* ProcessBookendTrailer(const CXFA_Node* pBookendNode);
+  CXFA_Node* ProcessBookendLeader(CXFA_Node* pBookendNode);
+  CXFA_Node* ProcessBookendTrailer(CXFA_Node* pBookendNode);
 
  private:
   class CXFA_ViewRecord : public cppgc::GarbageCollected<CXFA_ViewRecord> {
@@ -126,18 +133,17 @@ class CXFA_ViewLayoutProcessor
                 CXFA_Node* pTarget,
                 bool bStartNew);
   bool ShouldGetNextPageArea(CXFA_Node* pTarget, bool bStartNew) const;
-  bool BreakOverflow(const CXFA_Node* pOverflowNode,
+  bool BreakOverflow(CXFA_Node* pOverflowNode,
                      bool bCreatePage,
                      CXFA_Node** pLeaderTemplate,
                      CXFA_Node** pTrailerTemplate);
-  CXFA_Node* ProcessBookendLeaderOrTrailer(const CXFA_Node* pBookendNode,
+  CXFA_Node* ProcessBookendLeaderOrTrailer(CXFA_Node* pBookendNode,
                                            bool bLeader);
-  CXFA_Node* ResolveBookendLeaderOrTrailer(const CXFA_Node* pBookendNode,
+  CXFA_Node* ResolveBookendLeaderOrTrailer(CXFA_Node* pBookendNode,
                                            bool bLeader);
-  std::optional<BreakData> ProcessBreakBeforeOrAfter(
-      const CXFA_Node* pBreakNode,
-      bool bBefore);
-  BreakData ExecuteBreakBeforeOrAfter(const CXFA_Node* pCurNode, bool bBefore);
+  std::optional<BreakData> ProcessBreakBeforeOrAfter(CXFA_Node* pBreakNode,
+                                                     bool bBefore);
+  BreakData ExecuteBreakBeforeOrAfter(CXFA_Node* pCurNode, bool bBefore);
 
   int32_t CreateMinPageRecord(CXFA_Node* pPageArea,
                               bool bTargetPageArea,

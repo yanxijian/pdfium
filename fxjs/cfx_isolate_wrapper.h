@@ -20,7 +20,8 @@ class CFX_IsolateWrapper {
   explicit CFX_IsolateWrapper(v8::Isolate* pIsolate);
   virtual ~CFX_IsolateWrapper();
 
-  v8::Isolate* GetIsolate() const { return isolate_; }
+  v8::Isolate* GetIsolate() { return isolate_; }
+  const v8::Isolate* GetIsolate() const { return isolate_; }
 
   v8::Local<v8::Value> NewNull();
   v8::Local<v8::Value> NewUndefined();

@@ -24,7 +24,8 @@ class CFWL_Message {
   virtual ~CFWL_Message();
 
   Type GetType() const { return type_; }
-  CFWL_Widget* GetDstTarget() const { return dst_target_; }
+  CFWL_Widget* GetDstTarget() { return dst_target_; }
+  const CFWL_Widget* GetDstTarget() const { return dst_target_; }
   void SetDstTarget(CFWL_Widget* pWidget) { dst_target_ = pWidget; }
 
  protected:

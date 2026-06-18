@@ -57,7 +57,12 @@ class CJBig2_SDDProc {
   // `SDNUMINSYMS` and read from `new_syms` at the new index.
   CJBig2_Image* GetImage(
       uint32_t i,
-      pdfium::span<const std::unique_ptr<CJBig2_Image>> new_syms) const;
+      pdfium::span<const std::unique_ptr<CJBig2_Image>> new_syms);
+  const CJBig2_Image* GetImage(
+      uint32_t i,
+      pdfium::span<const std::unique_ptr<CJBig2_Image>> new_syms) const {
+    return const_cast<CJBig2_SDDProc*>(this)->GetImage(i, new_syms);
+  }
 };
 
 #endif  // CORE_FXCODEC_JBIG2_JBIG2_SDD_PROC_H_

@@ -42,7 +42,8 @@ class CPDF_FormControl {
   ~CPDF_FormControl();
 
   CPDF_FormField::Type GetType() const { return field_->GetType(); }
-  CPDF_FormField* GetField() const { return field_; }
+  CPDF_FormField* GetField() { return field_; }
+  const CPDF_FormField* GetField() const { return field_; }
   RetainPtr<const CPDF_Dictionary> GetWidgetDict() const {
     return widget_dict_;
   }

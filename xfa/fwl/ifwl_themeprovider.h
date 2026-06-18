@@ -40,7 +40,7 @@ class IFWL_ThemeProvider : public cppgc::GarbageCollectedMixin {
   virtual CFX_RectF GetUIMargin(const CFWL_ThemePart& pThemePart) const = 0;
   virtual float GetFontSize(const CFWL_ThemePart& pThemePart) const = 0;
   virtual RetainPtr<CFGAS_GEFont> GetFont(const CFWL_ThemePart& pThemePart) = 0;
-  virtual RetainPtr<CFGAS_GEFont> GetFWLFont() = 0;
+  virtual RetainPtr<CFGAS_GEFont> GetFWLFont() const = 0;
   virtual float GetLineHeight(const CFWL_ThemePart& pThemePart) const = 0;
   virtual float GetScrollBarWidth() const = 0;
   virtual FX_COLORREF GetTextColor(const CFWL_ThemePart& pThemePart) const = 0;
@@ -50,7 +50,8 @@ class IFWL_ThemeProvider : public cppgc::GarbageCollectedMixin {
  protected:
   explicit IFWL_ThemeProvider(cppgc::Heap* pHeap);
 
-  CFWL_WidgetTP* GetTheme(const CFWL_Widget* pWidget) const;
+  CFWL_WidgetTP* GetTheme(const CFWL_Widget* pWidget);
+  const CFWL_WidgetTP* GetTheme(const CFWL_Widget* pWidget) const;
 
  private:
   cppgc::Member<CFWL_WidgetTP> check_box_tp_;

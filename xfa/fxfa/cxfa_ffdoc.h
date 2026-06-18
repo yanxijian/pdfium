@@ -108,8 +108,14 @@ class CXFA_FFDoc : public cppgc::GarbageCollected<CXFA_FFDoc> {
                        int32_t nEndPage,
                        Mask<XFA_PrintOpt> dwOptions) = 0;
     virtual FX_ARGB GetHighlightColor(const CXFA_FFDoc* hDoc) const = 0;
-    virtual IJS_Runtime* GetIJSRuntime(const CXFA_FFDoc* hDoc) const = 0;
-    virtual CFX_XMLDocument* GetXMLDoc() const = 0;
+    virtual IJS_Runtime* GetIJSRuntime(const CXFA_FFDoc* hDoc) = 0;
+    const IJS_Runtime* GetIJSRuntime(const CXFA_FFDoc* hDoc) const {
+      return const_cast<CallbackIface*>(this)->GetIJSRuntime(hDoc);
+    }
+    virtual CFX_XMLDocument* GetXMLDoc() = 0;
+    const CFX_XMLDocument* GetXMLDoc() const {
+      return const_cast<CallbackIface*>(this)->GetXMLDoc();
+    }
     virtual RetainPtr<IFX_SeekableReadStream> OpenLinkedFile(
         CXFA_FFDoc* hDoc,
         const WideString& wsLink) = 0;
@@ -153,16 +159,22 @@ class CXFA_FFDoc : public cppgc::GarbageCollected<CXFA_FFDoc> {
              int32_t nEndPage,
              Mask<XFA_PrintOpt> dwOptions);
   FX_ARGB GetHighlightColor() const;
-  IJS_Runtime* GetIJSRuntime() const;
-  CFX_XMLDocument* GetXMLDocument() const;
+  IJS_Runtime* GetIJSRuntime();
+  const IJS_Runtime* GetIJSRuntime() const;
+  CFX_XMLDocument* GetXMLDocument();
+  const CFX_XMLDocument* GetXMLDocument() const;
   RetainPtr<IFX_SeekableReadStream> OpenLinkedFile(const WideString& wsLink);
 
   CXFA_FFDocView* CreateDocView();
   FormType GetFormType() const { return form_type_; }
-  cppgc::Heap* GetHeap() const { return heap_; }
-  CXFA_Document* GetXFADoc() const { return document_; }
-  CXFA_FFApp* GetApp() const { return app_; }
-  CPDF_Document* GetPDFDoc() const { return pdfdoc_; }
+  cppgc::Heap* GetHeap() { return heap_; }
+  const cppgc::Heap* GetHeap() const { return heap_; }
+  CXFA_Document* GetXFADoc() { return document_; }
+  const CXFA_Document* GetXFADoc() const { return document_; }
+  CXFA_FFApp* GetApp() { return app_; }
+  const CXFA_FFApp* GetApp() const { return app_; }
+  CPDF_Document* GetPDFDoc() { return pdfdoc_; }
+  const CPDF_Document* GetPDFDoc() const { return pdfdoc_; }
   CXFA_FFDocView* GetDocView(CXFA_LayoutProcessor* pLayout);
   CXFA_FFDocView* GetDocView();
   RetainPtr<CFGAS_GEFont> GetPDFFont(const WideString& family,

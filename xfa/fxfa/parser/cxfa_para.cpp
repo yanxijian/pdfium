@@ -66,7 +66,7 @@ XFA_AttributeValue CXFA_Para::GetVerticalAlign() {
       .value_or(XFA_AttributeValue::Top);
 }
 
-float CXFA_Para::GetLineHeight() {
+float CXFA_Para::GetLineHeight() const {
   return JSObject()->GetMeasureInUnit(XFA_Attribute::LineHeight, XFA_Unit::Pt);
 }
 

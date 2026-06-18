@@ -260,7 +260,7 @@ int CPDF_FormField::CountControls() const {
   return fxcrt::CollectionSize<int>(GetControls());
 }
 
-CPDF_FormControl* CPDF_FormField::GetControl(int index) const {
+CPDF_FormControl* CPDF_FormField::GetControl(int index) {
   return GetControls()[index];
 }
 
@@ -744,7 +744,7 @@ WideString CPDF_FormField::GetCheckValue(bool bDefault) const {
   auto csExport = WideString::FromASCII("Off");
   int iCount = CountControls();
   for (int i = 0; i < iCount; i++) {
-    CPDF_FormControl* pControl = GetControl(i);
+    const CPDF_FormControl* pControl = GetControl(i);
     bool bChecked =
         bDefault ? pControl->IsDefaultChecked() : pControl->IsChecked();
     if (bChecked) {

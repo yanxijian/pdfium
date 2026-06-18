@@ -131,7 +131,7 @@ void CFGAS_Break::SetLineBoundary(float fLineStart, float fLineEnd) {
 
 CFGAS_Char* CFGAS_Break::GetLastChar(int32_t index,
                                      bool bOmitChar,
-                                     bool bRichText) const {
+                                     bool bRichText) {
   std::vector<CFGAS_Char>& tca = cur_line_->line_chars_;
   if (!fxcrt::IndexInBounds(tca, index)) {
     return nullptr;

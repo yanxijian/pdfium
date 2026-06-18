@@ -127,8 +127,14 @@ class CXFA_FFApp final : public cppgc::GarbageCollected<CXFA_FFApp>,
                                const WideString& wsData,
                                const WideString& wsEncode) = 0;
 
-    virtual CFX_Timer::HandlerIface* GetTimerHandler() const = 0;
-    virtual cppgc::Heap* GetGCHeap() const = 0;
+    virtual CFX_Timer::HandlerIface* GetTimerHandler() = 0;
+    const CFX_Timer::HandlerIface* GetTimerHandler() const {
+      return const_cast<CallbackIface*>(this)->GetTimerHandler();
+    }
+    virtual cppgc::Heap* GetGCHeap() = 0;
+    const cppgc::Heap* GetGCHeap() const {
+      return const_cast<CallbackIface*>(this)->GetGCHeap();
+    }
   };
 
   CONSTRUCT_VIA_MAKE_GARBAGE_COLLECTED;
@@ -142,10 +148,16 @@ class CXFA_FFApp final : public cppgc::GarbageCollected<CXFA_FFApp>,
   cppgc::Heap* GetHeap() override;
 
   bool LoadFWLTheme(CXFA_FFDoc* doc);
-  CFWL_WidgetMgr* GetFWLWidgetMgr() const { return fwlapp_->GetWidgetMgr(); }
-  CallbackIface* GetAppProvider() const { return provider_; }
-  CFWL_App* GetFWLApp() const { return fwlapp_; }
-  CXFA_FontMgr* GetXFAFontMgr() const { return xfafont_mgr_; }
+  CFWL_WidgetMgr* GetFWLWidgetMgr() { return fwlapp_->GetWidgetMgr(); }
+  const CFWL_WidgetMgr* GetFWLWidgetMgr() const {
+    return fwlapp_->GetWidgetMgr();
+  }
+  CallbackIface* GetAppProvider() { return provider_; }
+  const CallbackIface* GetAppProvider() const { return provider_; }
+  CFWL_App* GetFWLApp() { return fwlapp_; }
+  const CFWL_App* GetFWLApp() const { return fwlapp_; }
+  CXFA_FontMgr* GetXFAFontMgr() { return xfafont_mgr_; }
+  const CXFA_FontMgr* GetXFAFontMgr() const { return xfafont_mgr_; }
 
  private:
   explicit CXFA_FFApp(CallbackIface* pProvider);

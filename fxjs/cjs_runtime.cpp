@@ -138,12 +138,12 @@ void CJS_Runtime::ReleaseEventContext(IJS_EventContext* context) {
   event_context_array_.pop_back();
 }
 
-CJS_EventContext* CJS_Runtime::GetCurrentEventContext() const {
+CJS_EventContext* CJS_Runtime::GetCurrentEventContext() {
   return event_context_array_.empty() ? nullptr
                                       : event_context_array_.back().get();
 }
 
-CFX_Timer::HandlerIface* CJS_Runtime::GetTimerHandler() const {
+CFX_Timer::HandlerIface* CJS_Runtime::GetTimerHandler() {
   return form_fill_env_ ? form_fill_env_->GetTimerHandler() : nullptr;
 }
 
@@ -166,7 +166,7 @@ void CJS_Runtime::SetFormFillEnvToDocument() {
   pJSDocument->SetFormFillEnv(form_fill_env_.Get());
 }
 
-CPDFSDK_FormFillEnvironment* CJS_Runtime::GetFormFillEnv() const {
+CPDFSDK_FormFillEnvironment* CJS_Runtime::GetFormFillEnv() {
   return form_fill_env_.Get();
 }
 

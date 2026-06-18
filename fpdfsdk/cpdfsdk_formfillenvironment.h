@@ -80,7 +80,7 @@ class CPDFSDK_FormFillEnvironment final
   CPDFSDK_PageView* GetOrCreatePageView(IPDF_Page* pUnderlyingPage) override;
   CPDFSDK_PageView* GetPageView(IPDF_Page* pUnderlyingPage) override;
   CFX_Timer::HandlerIface* GetTimerHandler() override;
-  CPDFSDK_Annot* GetFocusAnnot() const override;
+  CPDFSDK_Annot* GetFocusAnnot() override;
   bool SetFocusAnnot(ObservedPtr<CPDFSDK_Annot>& pAnnot) override;
   bool HasPermissions(uint32_t flags) const override;
   void OnChange() override;
@@ -107,7 +107,8 @@ class CPDFSDK_FormFillEnvironment final
                     int zoomMode,
                     pdfium::span<float> fPosArray);
 
-  CPDF_Document* GetPDFDocument() const { return cpdfdoc_; }
+  CPDF_Document* GetPDFDocument() { return cpdfdoc_; }
+  const CPDF_Document* GetPDFDocument() const { return cpdfdoc_; }
   CPDF_Document::Extension* GetDocExtension() const {
     return cpdfdoc_->GetExtension();
   }
@@ -146,7 +147,10 @@ class CPDFSDK_FormFillEnvironment final
 
 #ifdef PDF_ENABLE_V8
   CPDFSDK_PageView* GetCurrentView();
-  IPDF_Page* GetCurrentPage() const;
+  IPDF_Page* GetCurrentPage();
+  const IPDF_Page* GetCurrentPage() const {
+    return const_cast<CPDFSDK_FormFillEnvironment*>(this)->GetCurrentPage();
+  }
 
   WideString GetLanguage();
   WideString GetPlatform();
@@ -247,7 +251,10 @@ class CPDFSDK_FormFillEnvironment final
  private:
   using RunScriptCallback = std::function<void(IJS_EventContext* context)>;
 
-  IPDF_Page* GetPage(int nIndex) const;
+  IPDF_Page* GetPage(int nIndex);
+  const IPDF_Page* GetPage(int nIndex) const {
+    return const_cast<CPDFSDK_FormFillEnvironment*>(this)->GetPage(nIndex);
+  }
   void OnSetFieldInputFocusInternal(const WideString& text, bool bFocus);
   void SendOnFocusChange(ObservedPtr<CPDFSDK_Annot>& pAnnot);
 

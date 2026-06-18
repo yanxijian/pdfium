@@ -56,7 +56,8 @@ void CFWL_EditTP::DrawBackground(const CFWL_ThemeBackground& pParams) {
     }
     case CFWL_ThemePart::Part::kCombTextLine: {
       CFWL_Widget::AdapterIface* pWidget =
-          pParams.GetWidget()->GetOutmost()->GetAdapterIface();
+          const_cast<CFWL_Widget::AdapterIface*>(
+              pParams.GetWidget()->GetOutmost()->GetAdapterIface());
       FX_ARGB cr = 0xFF000000;
       float fWidth = 1.0f;
       pWidget->GetBorderColorAndThickness(&cr, &fWidth);

@@ -25,8 +25,14 @@ class CXFA_NodeIteratorTemplate {
   explicit CXFA_NodeIteratorTemplate(NodeType* pRoot)
       : root_(pRoot), current_(pRoot) {}
 
-  NodeType* GetRoot() const { return static_cast<NodeType*>(root_); }
-  NodeType* GetCurrent() const { return static_cast<NodeType*>(current_); }
+  NodeType* GetRoot() { return static_cast<NodeType*>(root_); }
+  const NodeType* GetRoot() const {
+    return static_cast<const NodeType*>(root_);
+  }
+  NodeType* GetCurrent() { return static_cast<NodeType*>(current_); }
+  const NodeType* GetCurrent() const {
+    return static_cast<const NodeType*>(current_);
+  }
 
   void Reset() { current_ = root_; }
   bool SetCurrent(NodeType* pNode) {

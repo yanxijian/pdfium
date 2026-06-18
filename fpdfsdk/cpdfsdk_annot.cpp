@@ -124,7 +124,7 @@ int CPDFSDK_Annot::GetLayoutOrder() const {
   return 5;
 }
 
-CPDF_Annot* CPDFSDK_Annot::GetPDFAnnot() const {
+CPDF_Annot* CPDFSDK_Annot::GetPDFAnnot() {
   return nullptr;
 }
 

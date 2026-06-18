@@ -51,7 +51,10 @@ class CFXJS_PerIsolateData {
   static CFXJS_PerIsolateData* Get(v8::Isolate* pIsolate);
 
   uint32_t CurrentMaxObjDefinitionID() const;
-  CFXJS_ObjDefinition* ObjDefinitionForID(uint32_t id) const;
+  CFXJS_ObjDefinition* ObjDefinitionForID(uint32_t id);
+  const CFXJS_ObjDefinition* ObjDefinitionForID(uint32_t id) const {
+    return const_cast<CFXJS_PerIsolateData*>(this)->ObjDefinitionForID(id);
+  }
   uint32_t AssignIDForObjDefinition(std::unique_ptr<CFXJS_ObjDefinition> pDefn);
   V8TemplateMap* GetDynamicObjsMap() { return dynamic_objs_map_.get(); }
   ExtensionIface* GetExtension() { return extension_.get(); }

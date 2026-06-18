@@ -197,15 +197,15 @@ CPDFXFA_Page* CPDFSDK_PageView::XFAPageIfNotBackedByPDFPage() {
 }
 #endif  // PDF_ENABLE_XFA
 
-CPDF_Document* CPDFSDK_PageView::GetPDFDocument() {
-  return page_->GetDocument();
+CPDF_Document* CPDFSDK_PageView::GetPDFDocument() const {
+  return const_cast<CPDF_Document*>(page_->GetDocument());
 }
 
-CPDF_Page* CPDFSDK_PageView::GetPDFPage() const {
+CPDF_Page* CPDFSDK_PageView::GetPDFPage() {
   return ToPDFPage(page_);
 }
 
-CPDFSDK_InteractiveForm* CPDFSDK_PageView::GetInteractiveForm() const {
+CPDFSDK_InteractiveForm* CPDFSDK_PageView::GetInteractiveForm() {
   return form_fill_env_->GetInteractiveForm();
 }
 

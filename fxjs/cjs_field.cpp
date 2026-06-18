@@ -692,7 +692,7 @@ std::vector<CPDF_FormField*> CJS_Field::GetFormFields() const {
   return GetFormFieldsForName(form_fill_env_.Get(), field_name_);
 }
 
-CPDF_FormField* CJS_Field::GetFirstFormField() const {
+CPDF_FormField* CJS_Field::GetFirstFormField() {
   std::vector<CPDF_FormField*> fields = GetFormFields();
   return fields.empty() ? nullptr : fields[0];
 }

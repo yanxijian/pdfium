@@ -135,7 +135,7 @@ int32_t CXFA_LayoutProcessor::CountPages() const {
   return view_layout_processor_ ? view_layout_processor_->GetPageCount() : 0;
 }
 
-CXFA_ViewLayoutItem* CXFA_LayoutProcessor::GetPage(int32_t index) const {
+CXFA_ViewLayoutItem* CXFA_LayoutProcessor::GetPage(int32_t index) {
   return view_layout_processor_ ? view_layout_processor_->GetPage(index)
                                 : nullptr;
 }

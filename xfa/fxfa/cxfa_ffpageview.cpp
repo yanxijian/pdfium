@@ -105,7 +105,7 @@ bool IsLayoutElement(XFA_Element eElement) {
   }
 }
 
-CXFA_Document* GetDocForPageView(const CXFA_FFPageView* view) {
+const CXFA_Document* GetDocForPageView(const CXFA_FFPageView* view) {
   return view->GetDocView()->GetDoc()->GetXFADoc();
 }
 
@@ -249,7 +249,12 @@ void CXFA_FFPageView::Trace(cppgc::Visitor* visitor) const {
   visitor->Trace(layout_item_);
 }
 
-CXFA_FFDocView* CXFA_FFPageView::GetDocView() const {
+CXFA_FFDocView* CXFA_FFPageView::GetDocView() {
+  return const_cast<CXFA_FFDocView*>(
+      static_cast<const CXFA_FFPageView*>(this)->GetDocView());
+}
+
+const CXFA_FFDocView* CXFA_FFPageView::GetDocView() const {
   return doc_view_;
 }
 

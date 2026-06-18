@@ -211,11 +211,21 @@ FX_ARGB CXFA_FFDoc::GetHighlightColor() const {
   return doc_environment_->GetHighlightColor(this);
 }
 
-IJS_Runtime* CXFA_FFDoc::GetIJSRuntime() const {
+IJS_Runtime* CXFA_FFDoc::GetIJSRuntime() {
+  return const_cast<IJS_Runtime*>(
+      static_cast<const CXFA_FFDoc*>(this)->GetIJSRuntime());
+}
+
+const IJS_Runtime* CXFA_FFDoc::GetIJSRuntime() const {
   return doc_environment_->GetIJSRuntime(this);
 }
 
-CFX_XMLDocument* CXFA_FFDoc::GetXMLDocument() const {
+CFX_XMLDocument* CXFA_FFDoc::GetXMLDocument() {
+  return const_cast<CFX_XMLDocument*>(
+      static_cast<const CXFA_FFDoc*>(this)->GetXMLDocument());
+}
+
+const CFX_XMLDocument* CXFA_FFDoc::GetXMLDocument() const {
   return doc_environment_->GetXMLDoc();
 }
 

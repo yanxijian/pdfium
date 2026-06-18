@@ -31,7 +31,7 @@ class CPDFSDK_BAAnnot : public CPDFSDK_Annot,
   CPDFSDK_Annot::UnsafeInputHandlers* GetUnsafeInputHandlers() override;
   CPDF_Annot::Subtype GetAnnotSubtype() const override;
   CFX_FloatRect GetRect() const override;
-  CPDF_Annot* GetPDFAnnot() const override;
+  CPDF_Annot* GetPDFAnnot() override;
   int GetLayoutOrder() const override;
   void OnDraw(CFX_RenderDevice* pDevice,
               const CFX_Matrix& mtUser2Device,

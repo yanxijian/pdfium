@@ -67,7 +67,10 @@ class CFWL_ListBox : public CFWL_Widget {
                     const CFX_Matrix& matrix) override;
 
   int32_t CountItems(const CFWL_Widget* pWidget) const;
-  Item* GetItem(const CFWL_Widget* pWidget, int32_t nIndex) const;
+  Item* GetItem(const CFWL_Widget* pWidget, int32_t nIndex);
+  const Item* GetItem(const CFWL_Widget* pWidget, int32_t nIndex) const {
+    return const_cast<CFWL_ListBox*>(this)->GetItem(pWidget, nIndex);
+  }
   int32_t GetItemIndex(CFWL_Widget* pWidget, Item* pItem);
   Item* AddString(const WideString& wsAdd);
   void RemoveAt(int32_t index);
@@ -93,7 +96,8 @@ class CFWL_ListBox : public CFWL_Widget {
   bool IsShowVertScrollBar() const;
   bool IsShowHorzScrollBar() const;
   bool ScrollBarPropertiesPresent() const;
-  CFWL_ScrollBar* GetVertScrollBar() const { return vert_scroll_bar_; }
+  CFWL_ScrollBar* GetVertScrollBar() { return vert_scroll_bar_; }
+  const CFWL_ScrollBar* GetVertScrollBar() const { return vert_scroll_bar_; }
   const CFX_RectF& GetRTClient() const { return client_rect_; }
 
  private:

@@ -138,7 +138,7 @@ CPDF_FormObject* CPDFFormObjectFromFPDFPageObject(FPDF_PAGEOBJECT page_object) {
   return pPageObj ? pPageObj->AsForm() : nullptr;
 }
 
-const CPDF_PageObjectHolder* CPDFPageObjHolderFromFPDFFormObject(
+CPDF_PageObjectHolder* CPDFPageObjHolderFromFPDFFormObject(
     FPDF_PAGEOBJECT page_object) {
   CPDF_FormObject* pFormObject = CPDFFormObjectFromFPDFPageObject(page_object);
   return pFormObject ? pFormObject->form() : nullptr;
@@ -1186,7 +1186,7 @@ FPDFFormObj_CountObjects(FPDF_PAGEOBJECT form_object) {
 
 FPDF_EXPORT FPDF_PAGEOBJECT FPDF_CALLCONV
 FPDFFormObj_GetObject(FPDF_PAGEOBJECT form_object, unsigned long index) {
-  const auto* pObjectList = CPDFPageObjHolderFromFPDFFormObject(form_object);
+  auto* pObjectList = CPDFPageObjHolderFromFPDFFormObject(form_object);
   if (!pObjectList) {
     return nullptr;
   }

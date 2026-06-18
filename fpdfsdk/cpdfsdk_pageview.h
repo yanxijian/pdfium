@@ -60,8 +60,11 @@ class CPDFSDK_PageView final : public CPDF_Page::View {
   IPDF_Page* GetXFAPage();
 #endif  // PDF_ENABLE_XFA
 
-  CPDF_Page* GetPDFPage() const;
-  CPDF_Document* GetPDFDocument();
+  CPDF_Page* GetPDFPage();
+  const CPDF_Page* GetPDFPage() const {
+    return const_cast<CPDFSDK_PageView*>(this)->GetPDFPage();
+  }
+  CPDF_Document* GetPDFDocument() const;
   CPDFSDK_FormFillEnvironment* GetFormFillEnv() const { return form_fill_env_; }
 
   WideString GetFocusedFormText();
@@ -110,7 +113,10 @@ class CPDFSDK_PageView final : public CPDF_Page::View {
 
   std::unique_ptr<CPDFSDK_Annot> NewAnnot(CPDF_Annot* annot);
 
-  CPDFSDK_InteractiveForm* GetInteractiveForm() const;
+  CPDFSDK_InteractiveForm* GetInteractiveForm();
+  const CPDFSDK_InteractiveForm* GetInteractiveForm() const {
+    return const_cast<CPDFSDK_PageView*>(this)->GetInteractiveForm();
+  }
   CPDFSDK_Annot* GetFXAnnotAtPoint(const CFX_PointF& point);
   CPDFSDK_Annot* GetFXWidgetAtPoint(const CFX_PointF& point);
 

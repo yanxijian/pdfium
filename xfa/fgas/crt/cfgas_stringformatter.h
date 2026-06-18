@@ -78,7 +78,14 @@ class CFGAS_StringFormatter {
   LocaleIface* GetNumericFormat(LocaleMgrIface* pLocaleMgr,
                                 size_t* iDotIndex,
                                 uint32_t* dwStyle,
-                                WideString* wsPurgePattern) const;
+                                WideString* wsPurgePattern);
+  const LocaleIface* GetNumericFormat(LocaleMgrIface* pLocaleMgr,
+                                      size_t* iDotIndex,
+                                      uint32_t* dwStyle,
+                                      WideString* wsPurgePattern) const {
+    return const_cast<CFGAS_StringFormatter*>(this)->GetNumericFormat(
+        pLocaleMgr, iDotIndex, dwStyle, wsPurgePattern);
+  }
   DateTimeType GetDateTimeFormat(LocaleMgrIface* pLocaleMgr,
                                  LocaleIface** pLocale,
                                  WideString* wsDatePattern,

@@ -57,7 +57,8 @@ class CXFA_ContentLayoutProcessor
   ~CXFA_ContentLayoutProcessor();
 
   void Trace(cppgc::Visitor* visitor) const;
-  cppgc::Heap* GetHeap() const { return heap_; }
+  cppgc::Heap* GetHeap() { return heap_; }
+  const cppgc::Heap* GetHeap() const { return heap_; }
 
   Result DoLayout(bool bUseBreakControl, float fHeightLimit, float fRealHeight);
   void DoLayoutPageArea(CXFA_ViewLayoutItem* pPageAreaLayoutItem);

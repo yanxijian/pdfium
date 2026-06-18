@@ -61,13 +61,25 @@ class CPDF_InteractiveForm {
   static RetainPtr<CPDF_Dictionary> InitAcroFormDict(CPDF_Document* document);
 
   size_t CountFields(const WideString& field_name) const;
-  CPDF_FormField* GetField(size_t index, const WideString& field_name) const;
-  CPDF_FormField* GetFieldByDict(const CPDF_Dictionary* field) const;
+  CPDF_FormField* GetField(size_t index, const WideString& field_name);
+  const CPDF_FormField* GetField(size_t index,
+                                 const WideString& field_name) const {
+    return const_cast<CPDF_InteractiveForm*>(this)->GetField(index, field_name);
+  }
+  CPDF_FormField* GetFieldByDict(const CPDF_Dictionary* field);
+  const CPDF_FormField* GetFieldByDict(const CPDF_Dictionary* field) const {
+    return const_cast<CPDF_InteractiveForm*>(this)->GetFieldByDict(field);
+  }
 
   const CPDF_FormControl* GetControlAtPoint(const CPDF_Page* page,
                                             const CFX_PointF& point,
                                             int* z_order) const;
-  CPDF_FormControl* GetControlByDict(const CPDF_Dictionary* widget_dict) const;
+  CPDF_FormControl* GetControlByDict(const CPDF_Dictionary* widget_dict);
+  const CPDF_FormControl* GetControlByDict(
+      const CPDF_Dictionary* widget_dict) const {
+    return const_cast<CPDF_InteractiveForm*>(this)->GetControlByDict(
+        widget_dict);
+  }
 
   bool NeedConstructAP() const;
   int CountFieldsInCalculationOrder();

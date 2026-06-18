@@ -22,12 +22,15 @@ class CXFA_ViewLayoutItem final : public CXFA_LayoutItem {
 
   void Trace(cppgc::Visitor* visitor) const override;
 
-  CXFA_FFPageView* GetPageView() const { return ffpage_view_; }
-  CXFA_LayoutProcessor* GetLayout() const;
+  CXFA_FFPageView* GetPageView() { return ffpage_view_; }
+  const CXFA_FFPageView* GetPageView() const { return ffpage_view_; }
+  CXFA_LayoutProcessor* GetLayout();
+  const CXFA_LayoutProcessor* GetLayout() const;
   int32_t GetPageIndex() const;
   CFX_SizeF GetPageSize() const;
-  CXFA_Node* GetMasterPage() const;
-  CXFA_Node* GetOldSubform() const { return old_subform_; }
+  CXFA_Node* GetMasterPage();
+  const CXFA_Node* GetMasterPage() const;
+  const CXFA_Node* GetOldSubform() const { return old_subform_; }
   void SetOldSubform(CXFA_Node* pSubform);
 
  private:

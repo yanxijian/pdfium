@@ -54,11 +54,15 @@ class CPDFXFA_Context final : public CPDF_Document::Extension,
     xfa_page_list_.resize(count);
   }
 
-  CPDF_Document* GetPDFDoc() const { return pdfdoc_; }
+  CPDF_Document* GetPDFDoc() { return pdfdoc_; }
+  const CPDF_Document* GetPDFDoc() const { return pdfdoc_; }
   CFX_XMLDocument* GetXMLDoc() { return xml_.get(); }
+  const CFX_XMLDocument* GetXMLDoc() const { return xml_.get(); }
   CXFA_FFDoc* GetXFADoc() { return xfadoc_; }
-  CXFA_FFDocView* GetXFADocView() const { return xfadoc_view_.Get(); }
-  CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {
+  CXFA_FFDocView* GetXFADocView() { return xfadoc_view_.Get(); }
+  const CXFA_FFDocView* GetXFADocView() const { return xfadoc_view_.Get(); }
+  CPDFSDK_FormFillEnvironment* GetFormFillEnv() { return form_fill_env_.Get(); }
+  const CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {
     return form_fill_env_.Get();
   }
   void SetFormFillEnv(CPDFSDK_FormFillEnvironment* pFormFillEnv);
@@ -100,8 +104,8 @@ class CPDFXFA_Context final : public CPDF_Document::Extension,
   bool PutRequestURL(const WideString& wsURL,
                      const WideString& wsData,
                      const WideString& wsEncode) override;
-  CFX_Timer::HandlerIface* GetTimerHandler() const override;
-  cppgc::Heap* GetGCHeap() const override;
+  CFX_Timer::HandlerIface* GetTimerHandler() override;
+  cppgc::Heap* GetGCHeap() override;
 
   bool SaveDatasetsPackage(const RetainPtr<IFX_SeekableStream>& pStream);
   bool SaveFormPackage(const RetainPtr<IFX_SeekableStream>& pStream);
@@ -110,7 +114,10 @@ class CPDFXFA_Context final : public CPDF_Document::Extension,
       std::vector<RetainPtr<IFX_SeekableStream>>* fileList);
 
  private:
-  CJS_Runtime* GetCJSRuntime() const;
+  CJS_Runtime* GetCJSRuntime();
+  const CJS_Runtime* GetCJSRuntime() const {
+    return const_cast<CPDFXFA_Context*>(this)->GetCJSRuntime();
+  }
   bool SavePackage(const RetainPtr<IFX_SeekableStream>& pStream,
                    XFA_HashCode code);
 

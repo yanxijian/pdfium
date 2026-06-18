@@ -672,9 +672,8 @@ size_t CPDF_InteractiveForm::CountFields(const WideString& field_name) const {
   return node ? node->CountFields() : 0;
 }
 
-CPDF_FormField* CPDF_InteractiveForm::GetField(
-    size_t index,
-    const WideString& field_name) const {
+CPDF_FormField* CPDF_InteractiveForm::GetField(size_t index,
+                                               const WideString& field_name) {
   if (field_name.IsEmpty()) {
     return field_tree_->GetRoot()->GetFieldAtIndex(index);
   }
@@ -684,7 +683,7 @@ CPDF_FormField* CPDF_InteractiveForm::GetField(
 }
 
 CPDF_FormField* CPDF_InteractiveForm::GetFieldByDict(
-    const CPDF_Dictionary* field_dict) const {
+    const CPDF_Dictionary* field_dict) {
   if (!field_dict) {
     return nullptr;
   }
@@ -727,7 +726,7 @@ const CPDF_FormControl* CPDF_InteractiveForm::GetControlAtPoint(
 }
 
 CPDF_FormControl* CPDF_InteractiveForm::GetControlByDict(
-    const CPDF_Dictionary* widget_dict) const {
+    const CPDF_Dictionary* widget_dict) {
   const auto it = control_map_.find(widget_dict);
   return it != control_map_.end() ? it->second.get() : nullptr;
 }

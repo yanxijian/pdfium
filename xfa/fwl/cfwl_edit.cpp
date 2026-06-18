@@ -71,7 +71,7 @@ FWL_Type CFWL_Edit::GetClassID() const {
   return FWL_Type::Edit;
 }
 
-CFX_RectF CFWL_Edit::GetWidgetRect() {
+CFX_RectF CFWL_Edit::GetWidgetRect() const {
   CFX_RectF rect = widget_rect_;
   if (properties_.style_exts_ & FWL_STYLEEXT_EDT_OuterScrollbar) {
     float scrollbarWidth = GetThemeProvider()->GetScrollBarWidth();

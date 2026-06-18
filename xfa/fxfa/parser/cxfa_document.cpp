@@ -1587,8 +1587,13 @@ FormType CXFA_Document::GetFormType() const {
   return GetNotify()->GetFFDoc()->GetFormType();
 }
 
-CXFA_Node* CXFA_Document::GetNodeByID(CXFA_Node* pRoot,
-                                      WideStringView wsID) const {
+CXFA_Node* CXFA_Document::GetNodeByID(CXFA_Node* pRoot, WideStringView wsID) {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_Document*>(this)->GetNodeByID(pRoot, wsID));
+}
+
+const CXFA_Node* CXFA_Document::GetNodeByID(CXFA_Node* pRoot,
+                                            WideStringView wsID) const {
   if (!pRoot || wsID.IsEmpty()) {
     return nullptr;
   }
@@ -1758,6 +1763,12 @@ void CXFA_Document::DataMerge_UpdateBindingRelations(
 }
 
 CXFA_Node* CXFA_Document::GetNotBindNode(
+    pdfium::span<cppgc::Member<CXFA_Object>> arrayObjects) {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_Document*>(this)->GetNotBindNode(arrayObjects));
+}
+
+const CXFA_Node* CXFA_Document::GetNotBindNode(
     pdfium::span<cppgc::Member<CXFA_Object>> arrayObjects) const {
   for (auto& pObject : arrayObjects) {
     CXFA_Node* pNode = pObject->AsNode();
@@ -1976,7 +1987,12 @@ size_t CXFA_Document::GetPendingNodesCount() const {
   return pending_page_set_.size();
 }
 
-CXFA_Node* CXFA_Document::GetPendingNodeAtIndex(size_t index) const {
+CXFA_Node* CXFA_Document::GetPendingNodeAtIndex(size_t index) {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_Document*>(this)->GetPendingNodeAtIndex(index));
+}
+
+const CXFA_Node* CXFA_Document::GetPendingNodeAtIndex(size_t index) const {
   return pending_page_set_[index];
 }
 

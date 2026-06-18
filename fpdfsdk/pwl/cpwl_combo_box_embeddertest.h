@@ -21,16 +21,24 @@ class CPWLComboBoxEmbedderTest : public EmbedderTest {
   ScopedPage CreateAndInitializeFormComboboxPDF();
   void FormFillerAndWindowSetup(CPDFSDK_Widget* pAnnotCombobox);
   void TypeTextIntoTextField(int num_chars);
-  CPWL_ComboBox* GetCPWLComboBox() const { return combo_box_; }
-  CFFL_FormField* GetCFFLFormField() const { return form_field_; }
-  CPDFSDK_Widget* GetCPDFSDKAnnotNormal() const { return annot_normal_; }
-  CPDFSDK_Widget* GetCPDFSDKAnnotUserEditable() const {
+  CPWL_ComboBox* GetCPWLComboBox() { return combo_box_; }
+  const CPWL_ComboBox* GetCPWLComboBox() const { return combo_box_; }
+  CFFL_FormField* GetCFFLFormField() { return form_field_; }
+  const CFFL_FormField* GetCFFLFormField() const { return form_field_; }
+  CPDFSDK_Widget* GetCPDFSDKAnnotNormal() { return annot_normal_; }
+  const CPDFSDK_Widget* GetCPDFSDKAnnotNormal() const { return annot_normal_; }
+  CPDFSDK_Widget* GetCPDFSDKAnnotUserEditable() { return annot_editable_; }
+  const CPDFSDK_Widget* GetCPDFSDKAnnotUserEditable() const {
     return annot_editable_;
   }
-  CPDFSDK_FormFillEnvironment* GetCPDFSDKFormFillEnv() const {
+  CPDFSDK_FormFillEnvironment* GetCPDFSDKFormFillEnv() {
     return form_fill_env_;
   }
-  CPDFSDK_PageView* GetPageView() const { return page_view_; }
+  const CPDFSDK_FormFillEnvironment* GetCPDFSDKFormFillEnv() const {
+    return form_fill_env_;
+  }
+  CPDFSDK_PageView* GetPageView() { return page_view_; }
+  const CPDFSDK_PageView* GetPageView() const { return page_view_; }
 
  private:
   CPWL_ComboBox* combo_box_ = nullptr;

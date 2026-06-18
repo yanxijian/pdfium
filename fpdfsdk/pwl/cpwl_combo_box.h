@@ -25,7 +25,8 @@ class CPWL_ComboBox final : public CPWL_Wnd {
       std::unique_ptr<IPWL_FillerNotify::PerWindowData> pAttachedData);
   ~CPWL_ComboBox() override;
 
-  CPWL_Edit* GetEdit() const { return edit_; }
+  CPWL_Edit* GetEdit() { return edit_; }
+  const CPWL_Edit* GetEdit() const { return edit_; }
 
   // CPWL_Wnd:
   void OnDestroy() override;

@@ -33,7 +33,7 @@ class CFX_CSSRuleCollection {
   CFX_CSSRuleCollection();
   ~CFX_CSSRuleCollection();
 
-  void SetRulesFromSheet(const CFX_CSSStyleSheet* sheet);
+  void SetRulesFromSheet(CFX_CSSStyleSheet* sheet);
 
   const std::vector<std::unique_ptr<Data>>* GetTagRuleData(
       const WideString& tagname) const;

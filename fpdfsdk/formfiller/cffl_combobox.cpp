@@ -265,7 +265,7 @@ WideString CFFL_ComboBox::GetSelectExportText() {
 }
 
 CPWL_ComboBox* CFFL_ComboBox::GetPWLComboBox(
-    const CPDFSDK_PageView* pPageView) const {
+    const CPDFSDK_PageView* pPageView) {
   return static_cast<CPWL_ComboBox*>(GetPWLWindow(pPageView));
 }
 

@@ -158,15 +158,22 @@ class CXFA_FFWidget : public cppgc::GarbageCollected<CXFA_FFWidget>,
   virtual WideString GetText();
   virtual FormFieldType GetFormFieldType();
 
-  CXFA_Node* GetNode() const { return node_; }
-  CXFA_ContentLayoutItem* GetLayoutItem() const { return layout_item_; }
+  CXFA_Node* GetNode() { return node_; }
+  const CXFA_Node* GetNode() const { return node_; }
+  CXFA_ContentLayoutItem* GetLayoutItem() { return layout_item_; }
+  const CXFA_ContentLayoutItem* GetLayoutItem() const { return layout_item_; }
   void SetLayoutItem(CXFA_ContentLayoutItem* pItem) { layout_item_ = pItem; }
-  CXFA_FFPageView* GetPageView() const { return page_view_; }
+  CXFA_FFPageView* GetPageView() { return page_view_; }
+  const CXFA_FFPageView* GetPageView() const { return page_view_; }
   void SetPageView(CXFA_FFPageView* pPageView) { page_view_ = pPageView; }
-  CXFA_FFDocView* GetDocView() const { return doc_view_; }
+  CXFA_FFDocView* GetDocView() { return doc_view_; }
+  const CXFA_FFDocView* GetDocView() const { return doc_view_; }
   void SetDocView(CXFA_FFDocView* pDocView) { doc_view_ = pDocView; }
 
-  CXFA_FFWidget* GetNextFFWidget() const;
+  CXFA_FFWidget* GetNextFFWidget();
+  const CXFA_FFWidget* GetNextFFWidget() const {
+    return const_cast<CXFA_FFWidget*>(this)->GetNextFFWidget();
+  }
   const CFX_RectF& GetWidgetRect() const;
   const CFX_RectF& RecacheWidgetRect() const;
   void ModifyStatus(Mask<XFA_WidgetStatus> dwAdded,
@@ -175,7 +182,10 @@ class CXFA_FFWidget : public cppgc::GarbageCollected<CXFA_FFWidget>,
   CXFA_FFDoc* GetDoc();
   CXFA_FFApp* GetApp();
   CXFA_FFApp::CallbackIface* GetAppProvider();
-  CFWL_App* GetFWLApp() const;
+  CFWL_App* GetFWLApp();
+  const CFWL_App* GetFWLApp() const {
+    return const_cast<CXFA_FFWidget*>(this)->GetFWLApp();
+  }
   void InvalidateRect();
   bool IsFocused() const {
     return GetLayoutItem()->TestStatusBits(XFA_WidgetStatus::kFocused);

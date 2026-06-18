@@ -78,7 +78,7 @@ CPDFXFA_Page* CPDF_Page::AsXFAPage() {
   return nullptr;
 }
 
-CPDF_Document* CPDF_Page::GetDocument() const {
+CPDF_Document* CPDF_Page::GetDocument() {
   return pdf_document_;
 }
 

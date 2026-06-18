@@ -21,7 +21,7 @@ size_t CFX_CSSStyleSheet::CountRules() const {
   return rule_array_.size();
 }
 
-CFX_CSSStyleRule* CFX_CSSStyleSheet::GetRule(size_t index) const {
+CFX_CSSStyleRule* CFX_CSSStyleSheet::GetRule(size_t index) {
   return rule_array_[index].get();
 }
 

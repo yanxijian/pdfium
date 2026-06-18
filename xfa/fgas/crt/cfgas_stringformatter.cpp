@@ -1080,7 +1080,7 @@ LocaleIface* CFGAS_StringFormatter::GetNumericFormat(
     LocaleMgrIface* pLocaleMgr,
     size_t* iDotIndex,
     uint32_t* dwStyle,
-    WideString* wsPurgePattern) const {
+    WideString* wsPurgePattern) {
   *dwStyle = 0;
   LocaleIface* pLocale = nullptr;
   size_t ccf = 0;
@@ -1267,7 +1267,7 @@ bool CFGAS_StringFormatter::ParseNum(LocaleMgrIface* pLocaleMgr,
   size_t dot_index_f = pattern_span_.size();
   uint32_t dwFormatStyle = 0;
   WideString wsNumFormat;
-  LocaleIface* pLocale =
+  const LocaleIface* pLocale =
       GetNumericFormat(pLocaleMgr, &dot_index_f, &dwFormatStyle, &wsNumFormat);
   if (!pLocale || wsNumFormat.IsEmpty()) {
     return false;
@@ -2009,7 +2009,7 @@ bool CFGAS_StringFormatter::FormatNum(LocaleMgrIface* pLocaleMgr,
   size_t dot_index_f = pattern_span_.size();
   uint32_t dwNumStyle = 0;
   WideString wsNumFormat;
-  LocaleIface* pLocale =
+  const LocaleIface* pLocale =
       GetNumericFormat(pLocaleMgr, &dot_index_f, &dwNumStyle, &wsNumFormat);
   if (!pLocale || wsNumFormat.IsEmpty()) {
     return false;

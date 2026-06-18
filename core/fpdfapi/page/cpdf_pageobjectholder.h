@@ -82,7 +82,8 @@ class CPDF_PageObjectHolder {
   void ContinueParse(PauseIndicatorIface* pPause);
   ParseState GetParseState() const { return parse_state_; }
 
-  CPDF_Document* GetDocument() const { return document_; }
+  CPDF_Document* GetDocument() { return document_; }
+  const CPDF_Document* GetDocument() const { return document_; }
   RetainPtr<const CPDF_Dictionary> GetDict() const { return dict_; }
   RetainPtr<CPDF_Dictionary> GetMutableDict() { return dict_; }
   RetainPtr<const CPDF_Dictionary> GetResources() const { return resources_; }
@@ -98,7 +99,11 @@ class CPDF_PageObjectHolder {
   }
   size_t GetPageObjectCount() const { return page_object_list_.size(); }
   size_t GetActivePageObjectCount() const;
-  CPDF_PageObject* GetPageObjectByIndex(size_t index) const;
+  CPDF_PageObject* GetPageObjectByIndex(size_t index);
+  const CPDF_PageObject* GetPageObjectByIndex(size_t index) const {
+    return const_cast<CPDF_PageObjectHolder*>(this)->GetPageObjectByIndex(
+        index);
+  }
   void AppendPageObject(std::unique_ptr<CPDF_PageObject> pPageObj);
 
   bool InsertPageObjectAtIndex(size_t index,

@@ -75,7 +75,8 @@ class CXFA_Document final : public cppgc::GarbageCollected<CXFA_Document> {
     virtual void SetHasChangedContainer() = 0;
 
     void SetDocument(CXFA_Document* document) { document_ = document; }
-    CXFA_Document* GetDocument() const { return document_; }
+    CXFA_Document* GetDocument() { return document_; }
+    const CXFA_Document* GetDocument() const { return document_; }
 
    private:
     cppgc::Member<CXFA_Document> document_;
@@ -100,12 +101,16 @@ class CXFA_Document final : public cppgc::GarbageCollected<CXFA_Document> {
   cppgc::Heap* GetHeap() const;
   CXFA_LocaleMgr* GetLocaleMgr();
   CXFA_Object* GetXFAObject(XFA_HashCode wsNodeNameHash);
-  CXFA_Node* GetNodeByID(CXFA_Node* pRoot, WideStringView wsID) const;
+  CXFA_Node* GetNodeByID(CXFA_Node* pRoot, WideStringView wsID);
+  const CXFA_Node* GetNodeByID(CXFA_Node* pRoot, WideStringView wsID) const;
   CXFA_Node* GetNotBindNode(
+      pdfium::span<cppgc::Member<CXFA_Object>> arrayNodes);
+  const CXFA_Node* GetNotBindNode(
       pdfium::span<cppgc::Member<CXFA_Object>> arrayNodes) const;
 
   LayoutProcessorIface* GetLayoutProcessor() const { return layout_processor_; }
-  CXFA_Node* GetRoot() const { return root_node_; }
+  CXFA_Node* GetRoot() { return root_node_; }
+  const CXFA_Node* GetRoot() const { return root_node_; }
   void SetRoot(CXFA_Node* pNewRoot) { root_node_ = pNewRoot; }
 
   bool is_strict_scoping() const { return strict_scoping_; }
@@ -138,7 +143,8 @@ class CXFA_Document final : public cppgc::GarbageCollected<CXFA_Document> {
   void RegisterGlobalBinding(uint32_t dwNameHash, CXFA_Node* pDataNode);
 
   size_t GetPendingNodesCount() const;
-  CXFA_Node* GetPendingNodeAtIndex(size_t index) const;
+  CXFA_Node* GetPendingNodeAtIndex(size_t index);
+  const CXFA_Node* GetPendingNodeAtIndex(size_t index) const;
   void AppendPendingNode(CXFA_Node* node);
   void ClearPendingNodes();
   void SetPendingNodesUnusedAndUnbound();

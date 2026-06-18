@@ -31,7 +31,7 @@ class CFWL_CheckBoxTP final : public CFWL_WidgetTP {
  private:
   CFWL_CheckBoxTP();
 
-  void DrawCheckSign(CFWL_Widget* pWidget,
+  void DrawCheckSign(const CFWL_Widget* pWidget,
                      CFGAS_GEGraphics* pGraphics,
                      const CFX_RectF& pRtBox,
                      Mask<CFWL_PartState> iState,

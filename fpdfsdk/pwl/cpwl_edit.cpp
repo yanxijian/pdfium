@@ -75,7 +75,7 @@ bool CPWL_Edit::RepositionChildWnd() {
 CFX_FloatRect CPWL_Edit::GetClientRect() const {
   float width = static_cast<float>(GetBorderWidth() + GetInnerBorderWidth());
   CFX_FloatRect rcClient = GetWindowRect().GetDeflated(width, width);
-  CPWL_ScrollBar* pVSB = GetVScrollBar();
+  const CPWL_ScrollBar* pVSB = GetVScrollBar();
   if (pVSB && pVSB->IsVisible()) {
     rcClient.right -= CPWL_ScrollBar::kWidth;
   }
@@ -315,7 +315,7 @@ CFX_FloatRect CPWL_Edit::GetFocusRect() const {
 }
 
 bool CPWL_Edit::IsVScrollBarVisible() const {
-  CPWL_ScrollBar* pScroll = GetVScrollBar();
+  const CPWL_ScrollBar* pScroll = GetVScrollBar();
   return pScroll && pScroll->IsVisible();
 }
 

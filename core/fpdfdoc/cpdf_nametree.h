@@ -49,7 +49,8 @@ class CPDF_NameTree {
   RetainPtr<const CPDF_Object> LookupValue(const WideString& csName) const;
 
   size_t GetCount() const;
-  CPDF_Dictionary* GetRootForTesting() const { return root_.Get(); }
+  CPDF_Dictionary* GetRootForTesting() { return root_.Get(); }
+  const CPDF_Dictionary* GetRootForTesting() const { return root_.Get(); }
 
  private:
   explicit CPDF_NameTree(RetainPtr<CPDF_Dictionary> pRoot);

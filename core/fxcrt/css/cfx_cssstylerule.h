@@ -19,7 +19,10 @@ class CFX_CSSStyleRule {
   ~CFX_CSSStyleRule();
 
   size_t CountSelectorLists() const;
-  CFX_CSSSelector* GetSelectorList(size_t index) const;
+  CFX_CSSSelector* GetSelectorList(size_t index);
+  const CFX_CSSSelector* GetSelectorList(size_t index) const {
+    return const_cast<CFX_CSSStyleRule*>(this)->GetSelectorList(index);
+  }
   CFX_CSSDeclaration* GetDeclaration();
 
   void SetSelector(std::vector<std::unique_ptr<CFX_CSSSelector>>* list);

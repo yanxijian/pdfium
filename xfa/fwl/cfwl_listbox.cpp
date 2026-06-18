@@ -886,7 +886,7 @@ int32_t CFWL_ListBox::CountItems(const CFWL_Widget* pWidget) const {
 }
 
 CFWL_ListBox::Item* CFWL_ListBox::GetItem(const CFWL_Widget* pWidget,
-                                          int32_t nIndex) const {
+                                          int32_t nIndex) {
   if (nIndex < 0 || nIndex >= CountItems(pWidget)) {
     return nullptr;
   }

@@ -21,7 +21,8 @@ class CBC_BarcodeMatrix final {
   CBC_BarcodeMatrix(size_t width, size_t height);
   ~CBC_BarcodeMatrix();
 
-  CBC_BarcodeRow* getRow(size_t row) const { return matrix_[row].get(); }
+  CBC_BarcodeRow* getRow(size_t row) { return matrix_[row].get(); }
+  const CBC_BarcodeRow* getRow(size_t row) const { return matrix_[row].get(); }
   size_t getWidth() const { return width_; }
   size_t getHeight() const { return height_; }
   DataVector<uint8_t> toBitArray();

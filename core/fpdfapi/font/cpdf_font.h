@@ -74,14 +74,22 @@ class CPDF_Font : public Retainable, public Observable {
   virtual bool IsTrueTypeFont() const;
   virtual bool IsType3Font() const;
   virtual bool IsCIDFont() const;
-  virtual const CPDF_Type1Font* AsType1Font() const;
   virtual CPDF_Type1Font* AsType1Font();
-  virtual const CPDF_TrueTypeFont* AsTrueTypeFont() const;
+  const CPDF_Type1Font* AsType1Font() const {
+    return const_cast<CPDF_Font*>(this)->AsType1Font();
+  }
   virtual CPDF_TrueTypeFont* AsTrueTypeFont();
-  virtual const CPDF_Type3Font* AsType3Font() const;
+  const CPDF_TrueTypeFont* AsTrueTypeFont() const {
+    return const_cast<CPDF_Font*>(this)->AsTrueTypeFont();
+  }
   virtual CPDF_Type3Font* AsType3Font();
-  virtual const CPDF_CIDFont* AsCIDFont() const;
+  const CPDF_Type3Font* AsType3Font() const {
+    return const_cast<CPDF_Font*>(this)->AsType3Font();
+  }
   virtual CPDF_CIDFont* AsCIDFont();
+  const CPDF_CIDFont* AsCIDFont() const {
+    return const_cast<CPDF_Font*>(this)->AsCIDFont();
+  }
 
   virtual void WillBeDestroyed();
   virtual bool IsVertWriting() const;
@@ -134,7 +142,8 @@ class CPDF_Font : public Retainable, public Observable {
 
   // Can return nullptr for stock Type1 fonts. Always returns non-null for other
   // font types.
-  CPDF_Document* GetDocument() const { return document_; }
+  CPDF_Document* GetDocument() { return document_; }
+  const CPDF_Document* GetDocument() const { return document_; }
 
   CFX_Font* GetFont() { return &font_; }
   const CFX_Font* GetFont() const { return &font_; }

@@ -41,7 +41,7 @@ CPDFSDK_Annot::UnsafeInputHandlers* CPDFSDK_BAAnnot::GetUnsafeInputHandlers() {
   return this;
 }
 
-CPDF_Annot* CPDFSDK_BAAnnot::GetPDFAnnot() const {
+CPDF_Annot* CPDFSDK_BAAnnot::GetPDFAnnot() {
   return annot_;
 }
 

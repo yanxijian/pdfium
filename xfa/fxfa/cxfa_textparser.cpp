@@ -570,8 +570,8 @@ std::optional<WideString> CXFA_TextParser::GetEmbeddedObj(
   return pTextProvider->GetEmbeddedObj(embed_attr_view);
 }
 
-CXFA_TextParser::Context* CXFA_TextParser::GetParseContextFromMap(
-    const CFX_XMLNode* pXMLNode) {
+const CXFA_TextParser::Context* CXFA_TextParser::GetParseContextFromMap(
+    const CFX_XMLNode* pXMLNode) const {
   auto it = map_xmlnode_to_parse_context_.find(pXMLNode);
   return it != map_xmlnode_to_parse_context_.end() ? it->second.get() : nullptr;
 }

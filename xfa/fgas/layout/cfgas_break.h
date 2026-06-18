@@ -52,7 +52,13 @@ class CFGAS_Break {
   const CFGAS_BreakPiece* GetBreakPieceUnstable(int32_t index) const;
   void ClearBreakPieces();
 
-  CFGAS_Char* GetLastChar(int32_t index, bool bOmitChar, bool bRichText) const;
+  CFGAS_Char* GetLastChar(int32_t index, bool bOmitChar, bool bRichText);
+  const CFGAS_Char* GetLastChar(int32_t index,
+                                bool bOmitChar,
+                                bool bRichText) const {
+    return const_cast<CFGAS_Break*>(this)->GetLastChar(index, bOmitChar,
+                                                       bRichText);
+  }
   const CFGAS_BreakLine* GetCurrentLineForTesting() const { return cur_line_; }
 
  protected:

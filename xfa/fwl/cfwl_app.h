@@ -35,18 +35,30 @@ class CFWL_App final : public cppgc::GarbageCollected<CFWL_App> {
 
   void Trace(cppgc::Visitor* visitor) const;
 
-  CFWL_WidgetMgr::AdapterIface* GetWidgetMgrAdapter() const {
+  CFWL_WidgetMgr::AdapterIface* GetWidgetMgrAdapter() {
     return adapter_->GetWidgetMgrAdapter();
   }
-  CFX_Timer::HandlerIface* GetTimerHandler() const {
+  const CFWL_WidgetMgr::AdapterIface* GetWidgetMgrAdapter() const {
+    return adapter_->GetWidgetMgrAdapter();
+  }
+  CFX_Timer::HandlerIface* GetTimerHandler() {
     return adapter_->GetTimerHandler();
   }
-  IFWL_ThemeProvider* GetThemeProvider() const {
+  const CFX_Timer::HandlerIface* GetTimerHandler() const {
+    return adapter_->GetTimerHandler();
+  }
+  IFWL_ThemeProvider* GetThemeProvider() {
     return adapter_->GetThemeProvider();
   }
-  cppgc::Heap* GetHeap() const { return adapter_->GetHeap(); }
-  CFWL_WidgetMgr* GetWidgetMgr() const { return widget_mgr_; }
-  CFWL_NoteDriver* GetNoteDriver() const { return note_driver_; }
+  const IFWL_ThemeProvider* GetThemeProvider() const {
+    return adapter_->GetThemeProvider();
+  }
+  cppgc::Heap* GetHeap() { return adapter_->GetHeap(); }
+  const cppgc::Heap* GetHeap() const { return adapter_->GetHeap(); }
+  CFWL_WidgetMgr* GetWidgetMgr() { return widget_mgr_; }
+  const CFWL_WidgetMgr* GetWidgetMgr() const { return widget_mgr_; }
+  CFWL_NoteDriver* GetNoteDriver() { return note_driver_; }
+  const CFWL_NoteDriver* GetNoteDriver() const { return note_driver_; }
 
  private:
   explicit CFWL_App(AdapterIface* pAdapter);

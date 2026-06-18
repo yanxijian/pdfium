@@ -106,7 +106,7 @@ class CFWL_Widget : public cppgc::GarbageCollected<CFWL_Widget>,
   virtual FWL_Type GetClassID() const = 0;
   virtual bool IsForm() const;
   virtual CFX_RectF GetAutosizedWidgetRect();
-  virtual CFX_RectF GetWidgetRect();
+  virtual CFX_RectF GetWidgetRect() const;
   virtual CFX_RectF GetClientRect();
   virtual void ModifyStyleExts(uint32_t dwStyleExtsAdded,
                                uint32_t dwStyleExtsRemoved);
@@ -129,9 +129,12 @@ class CFWL_Widget : public cppgc::GarbageCollected<CFWL_Widget>,
   bool IsPopup() const;
   bool IsChild() const;
 
-  CFWL_WidgetMgr* GetWidgetMgr() const { return widget_mgr_; }
-  CFWL_Widget* GetOuter() const { return outer_; }
-  CFWL_Widget* GetOutmost() const;
+  CFWL_WidgetMgr* GetWidgetMgr() { return widget_mgr_; }
+  const CFWL_WidgetMgr* GetWidgetMgr() const { return widget_mgr_; }
+  CFWL_Widget* GetOuter() { return outer_; }
+  const CFWL_Widget* GetOuter() const { return outer_; }
+  CFWL_Widget* GetOutmost();
+  const CFWL_Widget* GetOutmost() const;
 
   void ModifyStyles(uint32_t dwStylesAdded, uint32_t dwStylesRemoved);
   uint32_t GetStyleExts() const { return properties_.style_exts_; }
@@ -139,7 +142,8 @@ class CFWL_Widget : public cppgc::GarbageCollected<CFWL_Widget>,
 
   CFX_PointF TransformTo(CFWL_Widget* pWidget, const CFX_PointF& point);
   CFX_Matrix GetMatrix() const;
-  IFWL_ThemeProvider* GetThemeProvider() const;
+  IFWL_ThemeProvider* GetThemeProvider();
+  const IFWL_ThemeProvider* GetThemeProvider() const;
   void SetDelegate(IFWL_WidgetDelegate* delegate) { delegate_ = delegate; }
   IFWL_WidgetDelegate* GetDelegate() {
     return delegate_ ? delegate_.Get() : this;
@@ -148,11 +152,13 @@ class CFWL_Widget : public cppgc::GarbageCollected<CFWL_Widget>,
     return delegate_ ? delegate_.Get() : this;
   }
 
-  CFWL_App* GetFWLApp() const { return fwlapp_; }
+  CFWL_App* GetFWLApp() { return fwlapp_; }
+  const CFWL_App* GetFWLApp() const { return fwlapp_; }
   uint64_t GetEventKey() const { return event_key_; }
   void SetEventKey(uint64_t key) { event_key_ = key; }
 
-  AdapterIface* GetAdapterIface() const { return adapter_iface_; }
+  AdapterIface* GetAdapterIface() { return adapter_iface_; }
+  const AdapterIface* GetAdapterIface() const { return adapter_iface_; }
   void SetAdapterIface(AdapterIface* pItem) { adapter_iface_ = pItem; }
   void RepaintRect(const CFX_RectF& pRect);
 
@@ -189,7 +195,10 @@ class CFWL_Widget : public cppgc::GarbageCollected<CFWL_Widget>,
     }
   }
 
-  CFWL_Widget* GetParent() const { return widget_mgr_->GetParentWidget(this); }
+  CFWL_Widget* GetParent() { return widget_mgr_->GetParentWidget(this); }
+  const CFWL_Widget* GetParent() const {
+    return widget_mgr_->GetParentWidget(this);
+  }
   CFX_SizeF GetOffsetFromParent(CFWL_Widget* pParent);
   void DrawBackground(CFGAS_GEGraphics* pGraphics,
                       CFWL_ThemePart::Part iPartBk,

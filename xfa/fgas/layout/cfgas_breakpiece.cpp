@@ -24,11 +24,11 @@ size_t CFGAS_BreakPiece::GetLength() const {
   return pdfium::checked_cast<size_t>(char_count_);
 }
 
-CFGAS_Char* CFGAS_BreakPiece::GetChar(int32_t index) const {
+CFGAS_Char* CFGAS_BreakPiece::GetChar(int32_t index) {
   return GetChar(pdfium::checked_cast<size_t>(index));
 }
 
-CFGAS_Char* CFGAS_BreakPiece::GetChar(size_t index) const {
+CFGAS_Char* CFGAS_BreakPiece::GetChar(size_t index) {
   DCHECK_LT(index, GetLength());
   DCHECK(chars_);
   return &(*chars_)[start_char_ + index];

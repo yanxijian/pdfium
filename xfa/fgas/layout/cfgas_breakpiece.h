@@ -27,8 +27,14 @@ class CFGAS_BreakPiece {
   // TODO(thestig): When GetCharCount() returns size_t, remove this.
   size_t GetLength() const;
 
-  CFGAS_Char* GetChar(int32_t index) const;
-  CFGAS_Char* GetChar(size_t index) const;
+  CFGAS_Char* GetChar(int32_t index);
+  const CFGAS_Char* GetChar(int32_t index) const {
+    return const_cast<CFGAS_BreakPiece*>(this)->GetChar(index);
+  }
+  CFGAS_Char* GetChar(size_t index);
+  const CFGAS_Char* GetChar(size_t index) const {
+    return const_cast<CFGAS_BreakPiece*>(this)->GetChar(index);
+  }
   WideString GetString() const;
   std::vector<int32_t> GetWidths() const;
 

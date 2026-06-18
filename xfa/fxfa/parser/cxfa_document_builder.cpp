@@ -304,7 +304,12 @@ void CXFA_DocumentBuilder::ConstructXFANode(CXFA_Node* pXFANode,
   }
 }
 
-CXFA_Node* CXFA_DocumentBuilder::GetRootNode() const {
+CXFA_Node* CXFA_DocumentBuilder::GetRootNode() {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_DocumentBuilder*>(this)->GetRootNode());
+}
+
+const CXFA_Node* CXFA_DocumentBuilder::GetRootNode() const {
   return root_node_;
 }
 

@@ -34,7 +34,8 @@ class CPDF_Pattern : public Retainable, public Observable {
   ~CPDF_Pattern() override;
 
   // All the getters that return pointers return non-NULL pointers.
-  CPDF_Document* document() const { return document_; }
+  CPDF_Document* document() { return document_; }
+  const CPDF_Document* document() const { return document_; }
   RetainPtr<CPDF_Object> pattern_obj() const { return pattern_obj_; }
   const CFX_Matrix& parent_matrix() const { return parent_matrix_; }
 

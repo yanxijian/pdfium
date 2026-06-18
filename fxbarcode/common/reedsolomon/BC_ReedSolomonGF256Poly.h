@@ -27,14 +27,14 @@ class CBC_ReedSolomonGF256Poly final {
   int32_t GetDegree() const;
   bool IsZero() const;
   std::unique_ptr<CBC_ReedSolomonGF256Poly> AddOrSubtract(
-      const CBC_ReedSolomonGF256Poly* other);
+      const CBC_ReedSolomonGF256Poly* other) const;
   std::unique_ptr<CBC_ReedSolomonGF256Poly> Multiply(
-      const CBC_ReedSolomonGF256Poly* other);
+      const CBC_ReedSolomonGF256Poly* other) const;
   std::unique_ptr<CBC_ReedSolomonGF256Poly> MultiplyByMonomial(
       int32_t degree,
       int32_t coefficient) const;
   std::unique_ptr<CBC_ReedSolomonGF256Poly> Divide(
-      const CBC_ReedSolomonGF256Poly* other);
+      const CBC_ReedSolomonGF256Poly* other) const;
   std::unique_ptr<CBC_ReedSolomonGF256Poly> Clone() const;
 
  private:

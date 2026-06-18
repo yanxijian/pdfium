@@ -511,6 +511,6 @@ std::unique_ptr<CJBig2_SymbolDict> CJBig2_SDDProc::DecodeHuffman(
 
 CJBig2_Image* CJBig2_SDDProc::GetImage(
     uint32_t i,
-    pdfium::span<const std::unique_ptr<CJBig2_Image>> new_syms) const {
+    pdfium::span<const std::unique_ptr<CJBig2_Image>> new_syms) {
   return i < SDNUMINSYMS ? SDINSYMS[i].get() : new_syms[i - SDNUMINSYMS].get();
 }

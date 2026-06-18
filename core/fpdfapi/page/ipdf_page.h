@@ -29,7 +29,10 @@ class IPDF_Page : public Retainable {
   virtual CPDF_Page* AsPDFPage() = 0;
   virtual CPDFXFA_Page* AsXFAPage() = 0;
 
-  virtual CPDF_Document* GetDocument() const = 0;
+  virtual CPDF_Document* GetDocument() = 0;
+  const CPDF_Document* GetDocument() const {
+    return const_cast<IPDF_Page*>(this)->GetDocument();
+  }
 
   virtual float GetPageWidth() const = 0;
   virtual float GetPageHeight() const = 0;

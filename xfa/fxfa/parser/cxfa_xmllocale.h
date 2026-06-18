@@ -50,7 +50,7 @@ class CXFA_XMLLocale final : public GCedLocaleIface {
   CXFA_XMLLocale(std::unique_ptr<CFX_XMLDocument> root,
                  const CFX_XMLElement* locale);
 
-  WideString GetPattern(CFX_XMLElement* pElement,
+  WideString GetPattern(const CFX_XMLElement* pElement,
                         WideStringView bsTag,
                         WideStringView wsName) const;
   WideString GetCalendarSymbol(WideStringView symbol,

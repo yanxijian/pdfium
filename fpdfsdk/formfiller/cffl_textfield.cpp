@@ -257,7 +257,7 @@ void CFFL_TextField::OnSetFocusForEdit(CPWL_Edit* pEdit) {
   form_filler_->OnSetFieldInputFocus(pEdit->GetText());
 }
 
-CPWL_Edit* CFFL_TextField::GetPWLEdit(const CPDFSDK_PageView* pPageView) const {
+CPWL_Edit* CFFL_TextField::GetPWLEdit(const CPDFSDK_PageView* pPageView) {
   return static_cast<CPWL_Edit*>(GetPWLWindow(pPageView));
 }
 

@@ -42,12 +42,13 @@ class CFXJSE_Context {
 
   ~CFXJSE_Context();
 
-  v8::Isolate* GetIsolate() const { return isolate_; }
+  v8::Isolate* GetIsolate() { return isolate_; }
+  const v8::Isolate* GetIsolate() const { return isolate_; }
   v8::Local<v8::Context> GetContext();
   v8::Local<v8::Object> GetGlobalObject();
 
   void AddClass(std::unique_ptr<CFXJSE_Class> pClass);
-  CFXJSE_Class* GetClassByName(ByteStringView szName) const;
+  CFXJSE_Class* GetClassByName(ByteStringView szName);
   void EnableCompatibleMode();
 
   // Note: `pNewThisObject` may be empty.

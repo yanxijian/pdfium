@@ -92,14 +92,16 @@ class CPDF_RenderStatus {
 #endif
   }
   bool IsStopped() const { return stopped_; }
-  CPDF_RenderContext* GetContext() const { return context_; }
+  CPDF_RenderContext* GetContext() { return context_; }
+  const CPDF_RenderContext* GetContext() const { return context_; }
   const CPDF_Dictionary* GetFormResource() const {
     return form_resource_.Get();
   }
   const CPDF_Dictionary* GetPageResource() const {
     return page_resource_.Get();
   }
-  CFX_RenderDevice* GetRenderDevice() const { return device_; }
+  CFX_RenderDevice* GetRenderDevice() { return device_; }
+  const CFX_RenderDevice* GetRenderDevice() const { return device_; }
   const CPDF_RenderOptions& GetRenderOptions() const { return options_; }
 
   RetainPtr<CPDF_TransferFunc> GetTransferFunc(

@@ -55,7 +55,8 @@ class CJS_Object : public CFXJS_PerObjectData::Binding {
   v8::Local<v8::Object> ToV8Object() {
     return v8_object_.Get(GetRuntime()->GetIsolate());
   }
-  CJS_Runtime* GetRuntime() const { return runtime_.Get(); }
+  CJS_Runtime* GetRuntime() { return runtime_.Get(); }
+  const CJS_Runtime* GetRuntime() const { return runtime_.Get(); }
 
  private:
   v8::Global<v8::Object> v8_object_;

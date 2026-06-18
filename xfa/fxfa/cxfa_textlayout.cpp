@@ -796,7 +796,7 @@ bool CXFA_TextLayout::LoadRichText(const CFX_XMLNode* pXMLNode,
     return false;
   }
 
-  CXFA_TextParser::Context* context =
+  const CXFA_TextParser::Context* context =
       text_parser_->GetParseContextFromMap(pXMLNode);
   CFX_CSSDisplay eDisplay = CFX_CSSDisplay::None;
   bool bContentNode = false;

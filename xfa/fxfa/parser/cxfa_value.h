@@ -24,12 +24,30 @@ class CXFA_Value final : public CXFA_Node {
 
   XFA_Element GetChildValueClassID() const;
   WideString GetChildValueContent() const;
-  CXFA_Arc* GetArcIfExists() const;
-  CXFA_Line* GetLineIfExists() const;
-  CXFA_Rectangle* GetRectangleIfExists() const;
-  CXFA_Text* GetTextIfExists() const;
-  CXFA_ExData* GetExDataIfExists() const;
-  CXFA_Image* GetImageIfExists() const;
+  CXFA_Arc* GetArcIfExists();
+  const CXFA_Arc* GetArcIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetArcIfExists();
+  }
+  CXFA_Line* GetLineIfExists();
+  const CXFA_Line* GetLineIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetLineIfExists();
+  }
+  CXFA_Rectangle* GetRectangleIfExists();
+  const CXFA_Rectangle* GetRectangleIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetRectangleIfExists();
+  }
+  CXFA_Text* GetTextIfExists();
+  const CXFA_Text* GetTextIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetTextIfExists();
+  }
+  CXFA_ExData* GetExDataIfExists();
+  const CXFA_ExData* GetExDataIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetExDataIfExists();
+  }
+  CXFA_Image* GetImageIfExists();
+  const CXFA_Image* GetImageIfExists() const {
+    return const_cast<CXFA_Value*>(this)->GetImageIfExists();
+  }
 
  private:
   CXFA_Value(CXFA_Document* doc, XFA_PacketType packet);

@@ -222,7 +222,7 @@ void CFWL_CheckBoxTP::DrawBackground(const CFWL_ThemeBackground& pParams) {
   }
 }
 
-void CFWL_CheckBoxTP::DrawCheckSign(CFWL_Widget* pWidget,
+void CFWL_CheckBoxTP::DrawCheckSign(const CFWL_Widget* pWidget,
                                     CFGAS_GEGraphics* pGraphics,
                                     const CFX_RectF& pRtBox,
                                     Mask<CFWL_PartState> iState,

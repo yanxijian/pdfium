@@ -88,7 +88,10 @@ class CPDF_FormField final : public Retainable {
   void ResetField();
 
   int CountControls() const;
-  CPDF_FormControl* GetControl(int index) const;
+  CPDF_FormControl* GetControl(int index);
+  const CPDF_FormControl* GetControl(int index) const {
+    return const_cast<CPDF_FormField*>(this)->GetControl(index);
+  }
   int GetControlIndex(const CPDF_FormControl* pControl) const;
 
   FormFieldType GetFieldType() const;

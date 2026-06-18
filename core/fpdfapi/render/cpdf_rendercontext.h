@@ -66,14 +66,16 @@ class CPDF_RenderContext {
   size_t CountLayers() const { return layers_.size(); }
   Layer* GetLayer(uint32_t index) { return &layers_[index]; }
 
-  CPDF_Document* GetDocument() const { return document_; }
+  CPDF_Document* GetDocument() { return document_; }
+  const CPDF_Document* GetDocument() const { return document_; }
   const CPDF_Dictionary* GetPageResources() const {
     return page_resources_.Get();
   }
   RetainPtr<CPDF_Dictionary> GetMutablePageResources() {
     return page_resources_;
   }
-  CPDF_PageImageCache* GetPageCache() const { return page_cache_; }
+  CPDF_PageImageCache* GetPageCache() { return page_cache_; }
+  const CPDF_PageImageCache* GetPageCache() const { return page_cache_; }
 
  private:
   UnownedPtr<CPDF_Document> const document_;

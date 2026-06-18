@@ -24,7 +24,7 @@ CFWL_ScrollBarTP::CFWL_ScrollBarTP()
 CFWL_ScrollBarTP::~CFWL_ScrollBarTP() = default;
 
 void CFWL_ScrollBarTP::DrawBackground(const CFWL_ThemeBackground& pParams) {
-  CFWL_Widget* pWidget = pParams.GetWidget();
+  const CFWL_Widget* pWidget = pParams.GetWidget();
   CFGAS_GEGraphics* pGraphics = pParams.GetGraphics();
   bool bVert = !!pWidget->GetStyleExts();
   switch (pParams.GetPart()) {

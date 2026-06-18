@@ -44,7 +44,9 @@ class CXFA_NodeLocale final : public GCedLocaleIface {
  private:
   explicit CXFA_NodeLocale(CXFA_Node* pNode);
 
-  CXFA_Node* GetNodeByName(CXFA_Node* pParent, WideStringView wsName) const;
+  CXFA_Node* GetNodeByName(CXFA_Node* pParent, WideStringView wsName);
+  const CXFA_Node* GetNodeByName(const CXFA_Node* pParent,
+                                 WideStringView wsName) const;
   WideString GetSymbol(XFA_Element eElement, WideStringView symbol_type) const;
   WideString GetCalendarSymbol(XFA_Element eElement,
                                int index,

@@ -22,7 +22,10 @@ class CFX_CSSStyleSheet {
 
   bool LoadBuffer(WideStringView buffer);
   size_t CountRules() const;
-  CFX_CSSStyleRule* GetRule(size_t index) const;
+  CFX_CSSStyleRule* GetRule(size_t index);
+  const CFX_CSSStyleRule* GetRule(size_t index) const {
+    return const_cast<CFX_CSSStyleSheet*>(this)->GetRule(index);
+  }
 
  private:
   CFX_CSSSyntaxParser::Status LoadStyleRule(CFX_CSSSyntaxParser* pSyntax);

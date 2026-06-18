@@ -29,7 +29,10 @@ class CPDF_StructTree {
   ~CPDF_StructTree();
 
   size_t CountTopElements() const { return kids_.size(); }
-  CPDF_StructElement* GetTopElement(size_t i) const { return kids_[i].Get(); }
+  CPDF_StructElement* GetTopElement(size_t i) { return kids_[i].Get(); }
+  const CPDF_StructElement* GetTopElement(size_t i) const {
+    return kids_[i].Get();
+  }
   uint32_t GetPageObjNum() const { return page_->GetObjNum(); }
   ByteString GetRoleMapNameFor(ByteStringView type) const;
 

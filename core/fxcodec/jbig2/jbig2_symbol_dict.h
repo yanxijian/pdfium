@@ -25,7 +25,10 @@ class CJBig2_SymbolDict {
   void AddImage(std::unique_ptr<CJBig2_Image> image);
 
   size_t NumImages() const { return sdexsyms_.size(); }
-  CJBig2_Image* GetImage(size_t index) const { return sdexsyms_[index].get(); }
+  CJBig2_Image* GetImage(size_t index) { return sdexsyms_[index].get(); }
+  const CJBig2_Image* GetImage(size_t index) const {
+    return sdexsyms_[index].get();
+  }
 
   const std::vector<JBig2ArithCtx>& GbContexts() const { return gb_contexts_; }
   const std::vector<JBig2ArithCtx>& GrContexts() const { return gr_contexts_; }

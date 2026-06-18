@@ -116,7 +116,8 @@ class CJX_Object : public cppgc::GarbageCollected<CJX_Object>,
   size_t GetCalcRecursionCount() const { return calc_recursion_count_; }
 
   void SetLayoutItem(CXFA_LayoutItem* item) { layout_item_ = item; }
-  CXFA_LayoutItem* GetLayoutItem() const { return layout_item_; }
+  CXFA_LayoutItem* GetLayoutItem() { return layout_item_; }
+  const CXFA_LayoutItem* GetLayoutItem() const { return layout_item_; }
 
   bool HasMethod(const WideString& func) const;
   CJS_Result RunMethod(CFXJSE_Engine* pScriptContext,
@@ -143,8 +144,12 @@ class CJX_Object : public cppgc::GarbageCollected<CJX_Object>,
                   bool bSyncData);
 
   template <typename T>
-  T* GetProperty(int32_t index, XFA_Element eType) const {
+  T* GetProperty(int32_t index, XFA_Element eType) {
     return static_cast<T*>(GetPropertyInternal(index, eType));
+  }
+  template <typename T>
+  const T* GetProperty(int32_t index, XFA_Element eType) const {
+    return static_cast<const T*>(GetPropertyInternal(index, eType));
   }
   template <typename T>
   T* GetOrCreateProperty(int32_t index, XFA_Element eType) {
@@ -204,7 +209,7 @@ class CJX_Object : public cppgc::GarbageCollected<CJX_Object>,
 
   void MergeAllData(CXFA_Object* pDstObj);
 
-  CalcData* GetCalcData() const { return calc_data_; }
+  const CalcData* GetCalcData() const { return calc_data_; }
   CalcData* GetOrCreateCalcData(cppgc::Heap* heap);
   void TakeCalcDataFrom(CJX_Object* that);
 

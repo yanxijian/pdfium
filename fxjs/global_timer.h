@@ -36,7 +36,8 @@ class GlobalTimer {
   bool IsOneShot() const { return type_ == Type::kOneShot; }
   uint32_t GetTimeOut() const { return time_out_; }
   int32_t GetTimerID() const { return timer_id_; }
-  CJS_Runtime* GetRuntime() const { return runtime_.Get(); }
+  CJS_Runtime* GetRuntime() { return runtime_.Get(); }
+  const CJS_Runtime* GetRuntime() const { return runtime_.Get(); }
   WideString GetJScript() const { return jscript_; }
 
  private:

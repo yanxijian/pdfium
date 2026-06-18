@@ -487,10 +487,10 @@ bool CXFA_ViewLayoutProcessor::InitLayoutPage(CXFA_Node* pFormNode) {
 
 bool CXFA_ViewLayoutProcessor::PrepareFirstPage(CXFA_Node* pRootSubform) {
   bool bProBreakBefore = false;
-  const CXFA_Node* pBreakBeforeNode = nullptr;
+  CXFA_Node* pBreakBeforeNode = nullptr;
   while (pRootSubform) {
-    for (const CXFA_Node* pBreakNode = pRootSubform->GetFirstChild();
-         pBreakNode; pBreakNode = pBreakNode->GetNextSibling()) {
+    for (CXFA_Node* pBreakNode = pRootSubform->GetFirstChild(); pBreakNode;
+         pBreakNode = pBreakNode->GetNextSibling()) {
       XFA_Element eType = pBreakNode->GetElementType();
       if (eType == XFA_Element::BreakBefore ||
           (eType == XFA_Element::Break &&
@@ -770,7 +770,7 @@ int32_t CXFA_ViewLayoutProcessor::GetPageCount() const {
   return fxcrt::CollectionSize<int32_t>(page_array_);
 }
 
-CXFA_ViewLayoutItem* CXFA_ViewLayoutProcessor::GetPage(int32_t index) const {
+CXFA_ViewLayoutItem* CXFA_ViewLayoutProcessor::GetPage(int32_t index) {
   if (!fxcrt::IndexInBounds(page_array_, index)) {
     return nullptr;
   }
@@ -839,7 +839,7 @@ bool CXFA_ViewLayoutProcessor::ShouldGetNextPageArea(CXFA_Node* pTarget,
 }
 
 CXFA_ViewLayoutProcessor::BreakData
-CXFA_ViewLayoutProcessor::ExecuteBreakBeforeOrAfter(const CXFA_Node* pCurNode,
+CXFA_ViewLayoutProcessor::ExecuteBreakBeforeOrAfter(CXFA_Node* pCurNode,
                                                     bool bBefore) {
   BreakData ret = {nullptr, nullptr, false};
   XFA_Element eType = pCurNode->GetElementType();
@@ -909,17 +909,17 @@ CXFA_ViewLayoutProcessor::ExecuteBreakBeforeOrAfter(const CXFA_Node* pCurNode,
 }
 
 std::optional<CXFA_ViewLayoutProcessor::BreakData>
-CXFA_ViewLayoutProcessor::ProcessBreakBefore(const CXFA_Node* pBreakNode) {
+CXFA_ViewLayoutProcessor::ProcessBreakBefore(CXFA_Node* pBreakNode) {
   return ProcessBreakBeforeOrAfter(pBreakNode, /*bBefore=*/true);
 }
 
 std::optional<CXFA_ViewLayoutProcessor::BreakData>
-CXFA_ViewLayoutProcessor::ProcessBreakAfter(const CXFA_Node* pBreakNode) {
+CXFA_ViewLayoutProcessor::ProcessBreakAfter(CXFA_Node* pBreakNode) {
   return ProcessBreakBeforeOrAfter(pBreakNode, /*bBefore=*/false);
 }
 
 std::optional<CXFA_ViewLayoutProcessor::BreakData>
-CXFA_ViewLayoutProcessor::ProcessBreakBeforeOrAfter(const CXFA_Node* pBreakNode,
+CXFA_ViewLayoutProcessor::ProcessBreakBeforeOrAfter(CXFA_Node* pBreakNode,
                                                     bool bBefore) {
   CXFA_Node* pFormNode = pBreakNode->GetContainerParent();
   if (!pFormNode->PresenceRequiresSpace()) {
@@ -967,17 +967,17 @@ CXFA_ViewLayoutProcessor::ProcessBreakBeforeOrAfter(const CXFA_Node* pBreakNode,
 }
 
 CXFA_Node* CXFA_ViewLayoutProcessor::ProcessBookendLeader(
-    const CXFA_Node* pBookendNode) {
+    CXFA_Node* pBookendNode) {
   return ProcessBookendLeaderOrTrailer(pBookendNode, /*bLeader=*/true);
 }
 
 CXFA_Node* CXFA_ViewLayoutProcessor::ProcessBookendTrailer(
-    const CXFA_Node* pBookendNode) {
+    CXFA_Node* pBookendNode) {
   return ProcessBookendLeaderOrTrailer(pBookendNode, /*bLeader=*/false);
 }
 
 CXFA_Node* CXFA_ViewLayoutProcessor::ProcessBookendLeaderOrTrailer(
-    const CXFA_Node* pBookendNode,
+    CXFA_Node* pBookendNode,
     bool bLeader) {
   CXFA_Node* pFormNode = pBookendNode->GetContainerParent();
   CXFA_Node* pLeaderTemplate =
@@ -999,7 +999,7 @@ CXFA_Node* CXFA_ViewLayoutProcessor::ProcessBookendLeaderOrTrailer(
   return pBookendAppendNode;
 }
 
-bool CXFA_ViewLayoutProcessor::BreakOverflow(const CXFA_Node* pOverflowNode,
+bool CXFA_ViewLayoutProcessor::BreakOverflow(CXFA_Node* pOverflowNode,
                                              bool bCreatePage,
                                              CXFA_Node** pLeaderTemplate,
                                              CXFA_Node** pTrailerTemplate) {
@@ -1140,7 +1140,7 @@ CXFA_ViewLayoutProcessor::ProcessOverflow(CXFA_Node* pFormNode,
 }
 
 CXFA_Node* CXFA_ViewLayoutProcessor::ResolveBookendLeaderOrTrailer(
-    const CXFA_Node* pBookendNode,
+    CXFA_Node* pBookendNode,
     bool bLeader) {
   CXFA_Node* pContainer =
       pBookendNode->GetContainerParent()->GetTemplateNodeIfExists();

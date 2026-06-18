@@ -135,7 +135,14 @@ WideString CXFA_NodeLocale::GetNumPattern(NumSubcategory eType) const {
 }
 
 CXFA_Node* CXFA_NodeLocale::GetNodeByName(CXFA_Node* pParent,
-                                          WideStringView wsName) const {
+                                          WideStringView wsName) {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_NodeLocale*>(this)->GetNodeByName(pParent,
+                                                               wsName));
+}
+
+const CXFA_Node* CXFA_NodeLocale::GetNodeByName(const CXFA_Node* pParent,
+                                                WideStringView wsName) const {
   CXFA_Node* pChild = pParent ? pParent->GetFirstChild() : nullptr;
   while (pChild) {
     if (pChild->JSObject()->GetAttributeByEnum(XFA_Attribute::Name) == wsName) {
@@ -151,7 +158,7 @@ WideString CXFA_NodeLocale::GetSymbol(XFA_Element eElement,
                                       WideStringView symbol_type) const {
   CXFA_Node* pSymbols =
       node_ ? node_->GetChild<CXFA_Node>(0, eElement, false) : nullptr;
-  CXFA_Node* pSymbol = GetNodeByName(pSymbols, symbol_type);
+  const CXFA_Node* pSymbol = GetNodeByName(pSymbols, symbol_type);
   return pSymbol ? pSymbol->JSObject()->GetContent(false) : WideString();
 }
 

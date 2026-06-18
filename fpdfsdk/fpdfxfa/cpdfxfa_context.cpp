@@ -324,7 +324,7 @@ void CPDFXFA_Context::ClearChangeMark() {
   }
 }
 
-CJS_Runtime* CPDFXFA_Context::GetCJSRuntime() const {
+CJS_Runtime* CPDFXFA_Context::GetCJSRuntime() {
   if (!form_fill_env_) {
     return nullptr;
   }
@@ -419,11 +419,11 @@ bool CPDFXFA_Context::PutRequestURL(const WideString& wsURL,
          form_fill_env_->PutRequestURL(wsURL, wsData, wsEncode);
 }
 
-CFX_Timer::HandlerIface* CPDFXFA_Context::GetTimerHandler() const {
+CFX_Timer::HandlerIface* CPDFXFA_Context::GetTimerHandler() {
   return form_fill_env_ ? form_fill_env_->GetTimerHandler() : nullptr;
 }
 
-cppgc::Heap* CPDFXFA_Context::GetGCHeap() const {
+cppgc::Heap* CPDFXFA_Context::GetGCHeap() {
   return gc_heap_.get();
 }
 

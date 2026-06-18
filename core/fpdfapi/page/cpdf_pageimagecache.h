@@ -32,7 +32,8 @@ class CPDF_PageImageCache {
   void ResetBitmapForImage(RetainPtr<CPDF_Image> pImage);
   void CacheOptimization(int32_t dwLimitCacheSize);
   uint32_t GetTimeCount() const { return time_count_; }
-  CPDF_Page* GetPage() const { return page_; }
+  CPDF_Page* GetPage() { return page_; }
+  const CPDF_Page* GetPage() const { return page_; }
 
   bool StartGetCachedBitmap(RetainPtr<CPDF_Image> pImage,
                             const CPDF_Dictionary* pFormResources,
@@ -59,7 +60,8 @@ class CPDF_PageImageCache {
     uint32_t GetMatteColor() const { return matte_color_; }
     uint32_t GetTimeCount() const { return time_count_; }
     void SetTimeCount(uint32_t count) { time_count_ = count; }
-    CPDF_Image* GetImage() const { return image_.Get(); }
+    CPDF_Image* GetImage() { return image_.Get(); }
+    const CPDF_Image* GetImage() const { return image_.Get(); }
 
     CPDF_DIB::LoadState StartGetCachedBitmap(
         CPDF_PageImageCache* pPageImageCache,

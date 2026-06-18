@@ -470,7 +470,7 @@ CFX_FloatRect CPWL_Wnd::GetClientRect() const {
 
   float width = static_cast<float>(GetBorderWidth() + GetInnerBorderWidth());
   CFX_FloatRect rcClient = rcWindow.GetDeflated(width, width);
-  if (CPWL_ScrollBar* pVSB = GetVScrollBar()) {
+  if (const CPWL_ScrollBar* pVSB = GetVScrollBar()) {
     rcClient.right -= pVSB->GetScrollBarWidth();
   }
 
@@ -521,7 +521,7 @@ const CPWL_Dash& CPWL_Wnd::GetBorderDash() const {
   return creation_params_.sDash;
 }
 
-CPWL_ScrollBar* CPWL_Wnd::GetVScrollBar() const {
+CPWL_ScrollBar* CPWL_Wnd::GetVScrollBar() {
   return HasFlag(Styles::kWindowVScroll) ? vscroll_bar_ : nullptr;
 }
 
@@ -688,8 +688,7 @@ void CPWL_Wnd::DestroySharedCaptureFocusState() {
   }
 }
 
-CPWL_Wnd::SharedCaptureFocusState* CPWL_Wnd::GetSharedCaptureFocusState()
-    const {
+CPWL_Wnd::SharedCaptureFocusState* CPWL_Wnd::GetSharedCaptureFocusState() {
   return creation_params_.pSharedCaptureFocusState;
 }
 
@@ -698,17 +697,17 @@ bool CPWL_Wnd::IsCaptureMouse() const {
 }
 
 bool CPWL_Wnd::IsWndCaptureMouse(const CPWL_Wnd* pWnd) const {
-  SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
+  const SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
   return pCtrl && pCtrl->IsWndCaptureMouse(pWnd);
 }
 
 bool CPWL_Wnd::IsWndCaptureKeyboard(const CPWL_Wnd* pWnd) const {
-  SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
+  const SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
   return pCtrl && pCtrl->IsWndCaptureKeyboard(pWnd);
 }
 
 bool CPWL_Wnd::IsFocused() const {
-  SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
+  const SharedCaptureFocusState* pCtrl = GetSharedCaptureFocusState();
   return pCtrl && pCtrl->IsMainCaptureKeyboard(this);
 }
 
@@ -765,7 +764,7 @@ void CPWL_Wnd::SetTransparency(int32_t nTransparency) {
 
 CFX_Matrix CPWL_Wnd::GetWindowMatrix() const {
   CFX_Matrix mt;
-  if (ProviderIface* pProvider = GetProvider()) {
+  if (const ProviderIface* pProvider = GetProvider()) {
     mt.Concat(pProvider->GetWindowMatrix(GetAttachedData()));
   }
   return mt;

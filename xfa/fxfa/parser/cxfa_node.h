@@ -182,7 +182,8 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   }
 
   void SetXMLMappingNode(CFX_XMLNode* node) { xml_node_ = node; }
-  CFX_XMLNode* GetXMLMappingNode() const { return xml_node_; }
+  CFX_XMLNode* GetXMLMappingNode() { return xml_node_; }
+  const CFX_XMLNode* GetXMLMappingNode() const { return xml_node_; }
   CFX_XMLNode* CreateXMLMappingNode();
   bool IsNeedSavingXMLNode() const;
 
@@ -213,16 +214,31 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
 
   CXFA_Node* Clone(bool bRecursive);
 
-  CXFA_Node* GetNextContainerSibling() const;
-  CXFA_Node* GetPrevContainerSibling() const;
-  CXFA_Node* GetFirstContainerChild() const;
-  CXFA_Node* GetContainerParent() const;
+  CXFA_Node* GetNextContainerSibling();
+  const CXFA_Node* GetNextContainerSibling() const {
+    return const_cast<CXFA_Node*>(this)->GetNextContainerSibling();
+  }
+  CXFA_Node* GetPrevContainerSibling();
+  const CXFA_Node* GetPrevContainerSibling() const {
+    return const_cast<CXFA_Node*>(this)->GetPrevContainerSibling();
+  }
+  CXFA_Node* GetFirstContainerChild();
+  const CXFA_Node* GetFirstContainerChild() const {
+    return const_cast<CXFA_Node*>(this)->GetFirstContainerChild();
+  }
+  CXFA_Node* GetContainerParent();
+  const CXFA_Node* GetContainerParent() const {
+    return const_cast<CXFA_Node*>(this)->GetContainerParent();
+  }
 
   std::vector<CXFA_Node*> GetNodeListForType(XFA_Element eTypeFilter);
   std::vector<CXFA_Node*> GetNodeListWithFilter(Mask<XFA_NodeFilter> dwFilter);
   CXFA_Node* CreateSamePacketNode(XFA_Element eType);
   CXFA_Node* CloneTemplateToForm(bool bRecursive);
-  CXFA_Node* GetTemplateNodeIfExists() const;
+  CXFA_Node* GetTemplateNodeIfExists();
+  const CXFA_Node* GetTemplateNodeIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetTemplateNodeIfExists();
+  }
   void SetTemplateNode(CXFA_Node* pTemplateNode);
   CXFA_Node* GetDataDescriptionNode();
   void SetDataDescriptionNode(CXFA_Node* pDataDescriptionNode);
@@ -239,20 +255,41 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   XFA_AttributeValue GetIntact();
   WideString GetNameExpression();
 
-  CXFA_Node* GetFirstChildByName(WideStringView wsNodeName) const;
-  CXFA_Node* GetFirstChildByName(uint32_t dwNodeNameHash) const;
+  CXFA_Node* GetFirstChildByName(WideStringView wsNodeName);
+  const CXFA_Node* GetFirstChildByName(WideStringView wsNodeName) const {
+    return const_cast<CXFA_Node*>(this)->GetFirstChildByName(wsNodeName);
+  }
+  CXFA_Node* GetFirstChildByName(uint32_t dwNodeNameHash);
+  const CXFA_Node* GetFirstChildByName(uint32_t dwNodeNameHash) const {
+    return const_cast<CXFA_Node*>(this)->GetFirstChildByName(dwNodeNameHash);
+  }
   template <typename T>
-  T* GetFirstChildByClass(XFA_Element eType) const {
+  T* GetFirstChildByClass(XFA_Element eType) {
     return static_cast<T*>(GetFirstChildByClassInternal(eType));
   }
-  CXFA_Node* GetNextSameNameSibling(uint32_t dwNodeNameHash) const;
   template <typename T>
-  T* GetNextSameNameSibling(WideStringView wsNodeName) const {
+  const T* GetFirstChildByClass(XFA_Element eType) const {
+    return static_cast<const T*>(GetFirstChildByClassInternal(eType));
+  }
+  CXFA_Node* GetNextSameNameSibling(uint32_t dwNodeNameHash);
+  const CXFA_Node* GetNextSameNameSibling(uint32_t dwNodeNameHash) const {
+    return const_cast<CXFA_Node*>(this)->GetNextSameNameSibling(dwNodeNameHash);
+  }
+  template <typename T>
+  T* GetNextSameNameSibling(WideStringView wsNodeName) {
     return static_cast<T*>(GetNextSameNameSiblingInternal(wsNodeName));
   }
   template <typename T>
-  T* GetNextSameClassSibling(XFA_Element eType) const {
+  const T* GetNextSameNameSibling(WideStringView wsNodeName) const {
+    return static_cast<const T*>(GetNextSameNameSiblingInternal(wsNodeName));
+  }
+  template <typename T>
+  T* GetNextSameClassSibling(XFA_Element eType) {
     return static_cast<T*>(GetNextSameClassSiblingInternal(eType));
+  }
+  template <typename T>
+  const T* GetNextSameClassSibling(XFA_Element eType) const {
+    return static_cast<const T*>(GetNextSameClassSiblingInternal(eType));
   }
 
   CXFA_Node* GetOneChildNamed(WideStringView wsName);
@@ -275,23 +312,47 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   bool IsOpenAccess() const;
 
   CXFA_Occur* GetOccurIfExists();
-  CXFA_Border* GetBorderIfExists() const;
+  CXFA_Border* GetBorderIfExists();
+  const CXFA_Border* GetBorderIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetBorderIfExists();
+  }
   CXFA_Border* GetOrCreateBorderIfPossible();
-  CXFA_Caption* GetCaptionIfExists() const;
-  CXFA_Font* GetFontIfExists() const;
+  CXFA_Caption* GetCaptionIfExists();
+  const CXFA_Caption* GetCaptionIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetCaptionIfExists();
+  }
+  CXFA_Font* GetFontIfExists();
+  const CXFA_Font* GetFontIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetFontIfExists();
+  }
   CXFA_Font* GetOrCreateFontIfPossible();
 
   float GetFontSize() const;
   FX_ARGB GetTextColor() const;
   float GetLineHeight() const;
 
-  CXFA_Margin* GetMarginIfExists() const;
-  CXFA_Para* GetParaIfExists() const;
-  CXFA_Calculate* GetCalculateIfExists() const;
-  CXFA_Validate* GetValidateIfExists() const;
+  CXFA_Margin* GetMarginIfExists();
+  const CXFA_Margin* GetMarginIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetMarginIfExists();
+  }
+  CXFA_Para* GetParaIfExists();
+  const CXFA_Para* GetParaIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetParaIfExists();
+  }
+  CXFA_Calculate* GetCalculateIfExists();
+  const CXFA_Calculate* GetCalculateIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetCalculateIfExists();
+  }
+  CXFA_Validate* GetValidateIfExists();
+  const CXFA_Validate* GetValidateIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetValidateIfExists();
+  }
   CXFA_Validate* GetOrCreateValidateIfPossible();
 
-  CXFA_Value* GetFormValueIfExists() const;
+  CXFA_Value* GetFormValueIfExists();
+  const CXFA_Value* GetFormValueIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetFormValueIfExists();
+  }
   WideString GetRawValue() const;
 
   int32_t GetRotate() const;
@@ -458,12 +519,27 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   void OnRemoved(bool bNotify) const;
   std::optional<void*> GetDefaultValue(XFA_Attribute attr,
                                        XFA_AttributeType eType) const;
-  CXFA_Node* GetChildInternal(size_t index,
-                              XFA_Element eType,
-                              bool bOnlyChild) const;
-  CXFA_Node* GetFirstChildByClassInternal(XFA_Element eType) const;
-  CXFA_Node* GetNextSameNameSiblingInternal(WideStringView wsNodeName) const;
-  CXFA_Node* GetNextSameClassSiblingInternal(XFA_Element eType) const;
+  CXFA_Node* GetChildInternal(size_t index, XFA_Element eType, bool bOnlyChild);
+  const CXFA_Node* GetChildInternal(size_t index,
+                                    XFA_Element eType,
+                                    bool bOnlyChild) const {
+    return const_cast<CXFA_Node*>(this)->GetChildInternal(index, eType,
+                                                          bOnlyChild);
+  }
+  CXFA_Node* GetFirstChildByClassInternal(XFA_Element eType);
+  const CXFA_Node* GetFirstChildByClassInternal(XFA_Element eType) const {
+    return const_cast<CXFA_Node*>(this)->GetFirstChildByClassInternal(eType);
+  }
+  CXFA_Node* GetNextSameNameSiblingInternal(WideStringView wsNodeName);
+  const CXFA_Node* GetNextSameNameSiblingInternal(
+      WideStringView wsNodeName) const {
+    return const_cast<CXFA_Node*>(this)->GetNextSameNameSiblingInternal(
+        wsNodeName);
+  }
+  CXFA_Node* GetNextSameClassSiblingInternal(XFA_Element eType);
+  const CXFA_Node* GetNextSameClassSiblingInternal(XFA_Element eType) const {
+    return const_cast<CXFA_Node*>(this)->GetNextSameClassSiblingInternal(eType);
+  }
   void CalcCaptionSize(CXFA_FFDoc* doc, CFX_SizeF* pszCap);
   void CalculateFieldAutoSize(CXFA_FFDoc* doc, CFX_SizeF* pSize);
   void CalculateWidgetAutoSize(CFX_SizeF* pSize);
@@ -496,7 +572,13 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   void SetImageEdit(const WideString& wsContentType,
                     const WideString& wsHref,
                     const WideString& wsData);
-  CXFA_Node* GetBindingNode() const {
+  CXFA_Node* GetBindingNode() {
+    if (binding_nodes_.empty()) {
+      return nullptr;
+    }
+    return binding_nodes_[0];
+  }
+  const CXFA_Node* GetBindingNode() const {
     if (binding_nodes_.empty()) {
       return nullptr;
     }
@@ -506,7 +588,10 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
   bool NeedsInitApp() const { return HasFlag(XFA_NodeFlag::kNeedsInitApp); }
   void SyncValue(const WideString& wsValue, bool bNotify);
   CXFA_Value* GetDefaultValueIfExists();
-  CXFA_Bind* GetBindIfExists() const;
+  CXFA_Bind* GetBindIfExists();
+  const CXFA_Bind* GetBindIfExists() const {
+    return const_cast<CXFA_Node*>(this)->GetBindIfExists();
+  }
   std::optional<XFA_AttributeValue> GetIntactFromKeep(
       const CXFA_Keep* pKeep,
       XFA_AttributeValue eLayoutType) const;
@@ -522,7 +607,10 @@ class CXFA_Node : public CXFA_Object, public GCedTreeNodeMixin<CXFA_Node> {
                                       CXFA_Event* event,
                                       CXFA_EventParam* pEventParam);
 
-  CFX_XMLDocument* GetXMLDocument() const;
+  CFX_XMLDocument* GetXMLDocument();
+  const CFX_XMLDocument* GetXMLDocument() const {
+    return const_cast<CXFA_Node*>(this)->GetXMLDocument();
+  }
 
   XFA_FFWidgetType ff_widget_type_ = XFA_FFWidgetType::kNone;
   bool is_null_ = true;

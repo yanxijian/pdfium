@@ -34,12 +34,16 @@ class CPDF_StructElement final : public Retainable {
   RetainPtr<const CPDF_Object> GetK() const;
 
   size_t CountKids() const;
-  CPDF_StructElement* GetKidIfElement(size_t index) const;
+  CPDF_StructElement* GetKidIfElement(size_t index);
+  const CPDF_StructElement* GetKidIfElement(size_t index) const {
+    return const_cast<CPDF_StructElement*>(this)->GetKidIfElement(index);
+  }
   int GetKidContentId(size_t index) const;
   bool UpdateKidIfElement(const CPDF_Dictionary* dict,
                           CPDF_StructElement* pElement);
 
-  CPDF_StructElement* GetParent() const { return parent_element_; }
+  CPDF_StructElement* GetParent() { return parent_element_; }
+  const CPDF_StructElement* GetParent() const { return parent_element_; }
   void SetParent(CPDF_StructElement* pParentElement) {
     parent_element_ = pParentElement;
   }

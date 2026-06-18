@@ -208,11 +208,11 @@ void CXFA_FFWidget::Trace(cppgc::Visitor* visitor) const {
   visitor->Trace(node_);
 }
 
-CFWL_App* CXFA_FFWidget::GetFWLApp() const {
+CFWL_App* CXFA_FFWidget::GetFWLApp() {
   return GetPageView()->GetDocView()->GetDoc()->GetApp()->GetFWLApp();
 }
 
-CXFA_FFWidget* CXFA_FFWidget::GetNextFFWidget() const {
+CXFA_FFWidget* CXFA_FFWidget::GetNextFFWidget() {
   return GetFFWidget(GetLayoutItem()->GetNext());
 }
 

@@ -68,37 +68,39 @@ WideString CXFA_XMLLocale::GetName() const {
 }
 
 WideString CXFA_XMLLocale::GetDecimalSymbol() const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
   return patterns ? GetPattern(patterns, kNumberSymbol, L"decimal")
                   : WideString();
 }
 
 WideString CXFA_XMLLocale::GetGroupingSymbol() const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
   return patterns ? GetPattern(patterns, kNumberSymbol, L"grouping")
                   : WideString();
 }
 
 WideString CXFA_XMLLocale::GetPercentSymbol() const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
   return patterns ? GetPattern(patterns, kNumberSymbol, L"percent")
                   : WideString();
 }
 
 WideString CXFA_XMLLocale::GetMinusSymbol() const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kNumberSymbols);
   return patterns ? GetPattern(patterns, kNumberSymbol, L"minus")
                   : WideString();
 }
 
 WideString CXFA_XMLLocale::GetCurrencySymbol() const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(kCurrencySymbols);
+  const CFX_XMLElement* patterns =
+      locale_->GetFirstChildNamed(kCurrencySymbols);
   return patterns ? GetPattern(patterns, kCurrencySymbol, L"symbol")
                   : WideString();
 }
 
 WideString CXFA_XMLLocale::GetDateTimeSymbols() const {
-  CFX_XMLElement* symbols = locale_->GetFirstChildNamed(L"dateTimeSymbols");
+  const CFX_XMLElement* symbols =
+      locale_->GetFirstChildNamed(L"dateTimeSymbols");
   return symbols ? symbols->GetTextData() : WideString();
 }
 
@@ -125,16 +127,16 @@ WideString CXFA_XMLLocale::GetEraName(bool bAD) const {
 WideString CXFA_XMLLocale::GetCalendarSymbol(WideStringView symbol,
                                              size_t index,
                                              bool bAbbr) const {
-  CFX_XMLElement* child = locale_->GetFirstChildNamed(L"calendarSymbols");
+  const CFX_XMLElement* child = locale_->GetFirstChildNamed(L"calendarSymbols");
   if (!child) {
     return WideString();
   }
 
   WideString pstrSymbolNames = symbol + L"Names";
-  CFX_XMLElement* name_child = nullptr;
+  const CFX_XMLElement* name_child = nullptr;
   for (auto* name = child->GetFirstChild(); name;
        name = name->GetNextSibling()) {
-    CFX_XMLElement* elem = ToXMLElement(name);
+    const CFX_XMLElement* elem = ToXMLElement(name);
     if (!elem || elem->GetName() != pstrSymbolNames) {
       continue;
     }
@@ -155,12 +157,13 @@ WideString CXFA_XMLLocale::GetCalendarSymbol(WideStringView symbol,
     return WideString();
   }
 
-  CFX_XMLElement* sym_element = name_child->GetNthChildNamed(symbol, index);
+  const CFX_XMLElement* sym_element =
+      name_child->GetNthChildNamed(symbol, index);
   return sym_element ? sym_element->GetTextData() : WideString();
 }
 
 WideString CXFA_XMLLocale::GetDatePattern(DateTimeSubcategory eType) const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(L"datePatterns");
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(L"datePatterns");
   if (!patterns) {
     return WideString();
   }
@@ -185,7 +188,7 @@ WideString CXFA_XMLLocale::GetDatePattern(DateTimeSubcategory eType) const {
 }
 
 WideString CXFA_XMLLocale::GetTimePattern(DateTimeSubcategory eType) const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(L"timePatterns");
+  const CFX_XMLElement* patterns = locale_->GetFirstChildNamed(L"timePatterns");
   if (!patterns) {
     return WideString();
   }
@@ -210,16 +213,17 @@ WideString CXFA_XMLLocale::GetTimePattern(DateTimeSubcategory eType) const {
 }
 
 WideString CXFA_XMLLocale::GetNumPattern(NumSubcategory eType) const {
-  CFX_XMLElement* patterns = locale_->GetFirstChildNamed(L"numberPatterns");
+  const CFX_XMLElement* patterns =
+      locale_->GetFirstChildNamed(L"numberPatterns");
   return patterns ? XFA_PatternToString(eType) : WideString();
 }
 
-WideString CXFA_XMLLocale::GetPattern(CFX_XMLElement* patterns,
+WideString CXFA_XMLLocale::GetPattern(const CFX_XMLElement* patterns,
                                       WideStringView bsTag,
                                       WideStringView wsName) const {
   for (auto* child = patterns->GetFirstChild(); child;
        child = child->GetNextSibling()) {
-    CFX_XMLElement* pattern = ToXMLElement(child);
+    const CFX_XMLElement* pattern = ToXMLElement(child);
     if (pattern && pattern->GetName() == bsTag &&
         pattern->GetAttribute(L"name") == wsName) {
       return pattern->GetTextData();

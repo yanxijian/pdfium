@@ -69,26 +69,26 @@ WideString CXFA_Value::GetChildValueContent() const {
              : WideString();
 }
 
-CXFA_Arc* CXFA_Value::GetArcIfExists() const {
+CXFA_Arc* CXFA_Value::GetArcIfExists() {
   return CXFA_Arc::FromNode(GetFirstChild());
 }
 
-CXFA_Line* CXFA_Value::GetLineIfExists() const {
+CXFA_Line* CXFA_Value::GetLineIfExists() {
   return CXFA_Line::FromNode(GetFirstChild());
 }
 
-CXFA_Rectangle* CXFA_Value::GetRectangleIfExists() const {
+CXFA_Rectangle* CXFA_Value::GetRectangleIfExists() {
   return CXFA_Rectangle::FromNode(GetFirstChild());
 }
 
-CXFA_Text* CXFA_Value::GetTextIfExists() const {
+CXFA_Text* CXFA_Value::GetTextIfExists() {
   return CXFA_Text::FromNode(GetFirstChild());
 }
 
-CXFA_ExData* CXFA_Value::GetExDataIfExists() const {
+CXFA_ExData* CXFA_Value::GetExDataIfExists() {
   return CXFA_ExData::FromNode(GetFirstChild());
 }
 
-CXFA_Image* CXFA_Value::GetImageIfExists() const {
+CXFA_Image* CXFA_Value::GetImageIfExists() {
   return CXFA_Image::FromNode(GetFirstChild());
 }

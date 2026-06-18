@@ -61,7 +61,10 @@ class CPDFSDK_Annot : public Observable {
 
   virtual void OnLoad() {}
   virtual int GetLayoutOrder() const;
-  virtual CPDF_Annot* GetPDFAnnot() const;
+  virtual CPDF_Annot* GetPDFAnnot();
+  const CPDF_Annot* GetPDFAnnot() const {
+    return const_cast<CPDFSDK_Annot*>(this)->GetPDFAnnot();
+  }
   virtual CPDF_Annot::Subtype GetAnnotSubtype() const = 0;
   virtual CFX_FloatRect GetRect() const = 0;
   virtual void OnDraw(CFX_RenderDevice* pDevice,
@@ -126,7 +129,8 @@ class CPDFSDK_Annot : public Observable {
   IPDF_Page* GetXFAPage();  // Returns XFA page or nullptr.
 
   // Never returns nullptr.
-  CPDFSDK_PageView* GetPageView() const { return page_view_; }
+  CPDFSDK_PageView* GetPageView() { return page_view_; }
+  const CPDFSDK_PageView* GetPageView() const { return page_view_; }
 
  protected:
   explicit CPDFSDK_Annot(CPDFSDK_PageView* pPageView);

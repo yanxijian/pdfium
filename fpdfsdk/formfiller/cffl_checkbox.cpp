@@ -119,7 +119,7 @@ void CFFL_CheckBox::SaveData(const CPDFSDK_PageView* pPageView) {
 }
 
 CPWL_CheckBox* CFFL_CheckBox::GetPWLCheckBox(
-    const CPDFSDK_PageView* pPageView) const {
+    const CPDFSDK_PageView* pPageView) {
   return static_cast<CPWL_CheckBox*>(GetPWLWindow(pPageView));
 }
 

@@ -36,7 +36,10 @@ class CFFL_InteractiveFormFiller final : public IPWL_FillerNotify {
     virtual CPDFSDK_PageView* GetOrCreatePageView(IPDF_Page* pPage) = 0;
     virtual CPDFSDK_PageView* GetPageView(IPDF_Page* pPage) = 0;
     virtual CFX_Timer::HandlerIface* GetTimerHandler() = 0;
-    virtual CPDFSDK_Annot* GetFocusAnnot() const = 0;
+    virtual CPDFSDK_Annot* GetFocusAnnot() = 0;
+    const CPDFSDK_Annot* GetFocusAnnot() const {
+      return const_cast<CallbackIface*>(this)->GetFocusAnnot();
+    }
     virtual bool SetFocusAnnot(ObservedPtr<CPDFSDK_Annot>& pAnnot) = 0;
     virtual void InvalidateRect(CPDFSDK_Widget* pWidget,
                                 const CFX_FloatRect& rect) = 0;

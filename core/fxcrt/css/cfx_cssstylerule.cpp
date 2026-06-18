@@ -16,7 +16,7 @@ size_t CFX_CSSStyleRule::CountSelectorLists() const {
   return selector_.size();
 }
 
-CFX_CSSSelector* CFX_CSSStyleRule::GetSelectorList(size_t index) const {
+CFX_CSSSelector* CFX_CSSStyleRule::GetSelectorList(size_t index) {
   return selector_[index].get();
 }
 

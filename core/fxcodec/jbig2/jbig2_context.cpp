@@ -466,7 +466,7 @@ JBig2_Result CJBig2_Context::ParseSymbolDict(CJBig2_Segment* pSegment) {
       CJBig2_Segment* pSeg =
           FindSegmentByNumber(pSegment->referred_to_segment_numbers_[i]);
       if (pSeg->flags_.s.type == 0) {
-        const CJBig2_SymbolDict& dict = *pSeg->symbol_dict_;
+        CJBig2_SymbolDict& dict = *pSeg->symbol_dict_;
         for (uint32_t j = 0; j < dict.NumImages(); ++j) {
           uint32_t dwTemp = (dwNumSyms + j).ValueOrDie();
           SDINSYMS[dwTemp] = dict.GetImage(j);
@@ -697,7 +697,7 @@ JBig2_Result CJBig2_Context::ParseTextRegion(CJBig2_Segment* pSegment) {
       CJBig2_Segment* pSeg =
           FindSegmentByNumber(pSegment->referred_to_segment_numbers_[i]);
       if (pSeg->flags_.s.type == 0) {
-        const CJBig2_SymbolDict& dict = *pSeg->symbol_dict_;
+        CJBig2_SymbolDict& dict = *pSeg->symbol_dict_;
         for (uint32_t j = 0; j < dict.NumImages(); ++j) {
           uint32_t dwIndex = (dwNumSyms + j).ValueOrDie();
           SBSYMS[dwIndex] = dict.GetImage(j);

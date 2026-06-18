@@ -56,8 +56,8 @@ class CPDFXFA_DocEnvironment final : public CXFA_FFDoc::CallbackIface {
              int32_t nEndPage,
              Mask<XFA_PrintOpt> dwOptions) override;
   FX_ARGB GetHighlightColor(const CXFA_FFDoc* hDoc) const override;
-  IJS_Runtime* GetIJSRuntime(const CXFA_FFDoc* hDoc) const override;
-  CFX_XMLDocument* GetXMLDoc() const override;
+  IJS_Runtime* GetIJSRuntime(const CXFA_FFDoc* hDoc) override;
+  CFX_XMLDocument* GetXMLDoc() override;
   RetainPtr<IFX_SeekableReadStream> OpenLinkedFile(
       CXFA_FFDoc* hDoc,
       const WideString& wsLink) override;

@@ -684,8 +684,7 @@ FX_ARGB CPDFXFA_DocEnvironment::GetHighlightColor(
                                 pForm->GetHighlightColor(FormFieldType::kXFA));
 }
 
-IJS_Runtime* CPDFXFA_DocEnvironment::GetIJSRuntime(
-    const CXFA_FFDoc* hDoc) const {
+IJS_Runtime* CPDFXFA_DocEnvironment::GetIJSRuntime(const CXFA_FFDoc* hDoc) {
   if (hDoc != context_->GetXFADoc()) {
     return nullptr;
   }
@@ -694,7 +693,7 @@ IJS_Runtime* CPDFXFA_DocEnvironment::GetIJSRuntime(
   return pFormFillEnv ? pFormFillEnv->GetIJSRuntime() : nullptr;
 }
 
-CFX_XMLDocument* CPDFXFA_DocEnvironment::GetXMLDoc() const {
+CFX_XMLDocument* CPDFXFA_DocEnvironment::GetXMLDoc() {
   return context_->GetXMLDoc();
 }
 

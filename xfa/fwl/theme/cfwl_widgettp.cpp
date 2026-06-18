@@ -72,7 +72,7 @@ void CFWL_WidgetTP::InitializeArrowColorData() {
   color_data_->clrSign[3] = ArgbEncode(255, 128, 128, 128);
 }
 
-void CFWL_WidgetTP::EnsureTTOInitialized(IFWL_ThemeProvider* pProvider) {
+void CFWL_WidgetTP::EnsureTTOInitialized(const IFWL_ThemeProvider* pProvider) {
   if (text_out_) {
     return;
   }

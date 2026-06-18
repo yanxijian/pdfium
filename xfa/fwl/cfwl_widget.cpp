@@ -73,7 +73,7 @@ CFX_RectF CFWL_Widget::GetAutosizedWidgetRect() {
   return CFX_RectF();
 }
 
-CFX_RectF CFWL_Widget::GetWidgetRect() {
+CFX_RectF CFWL_Widget::GetWidgetRect() const {
   return widget_rect_;
 }
 
@@ -163,8 +163,8 @@ CFX_PointF CFWL_Widget::TransformTo(CFWL_Widget* pWidget,
 }
 
 CFX_Matrix CFWL_Widget::GetMatrix() const {
-  CFWL_Widget* parent = GetParent();
-  std::vector<CFWL_Widget*> parents;
+  const CFWL_Widget* parent = GetParent();
+  std::vector<const CFWL_Widget*> parents;
   while (parent) {
     parents.push_back(parent);
     parent = parent->GetParent();
@@ -178,7 +178,12 @@ CFX_Matrix CFWL_Widget::GetMatrix() const {
   return matrix;
 }
 
-IFWL_ThemeProvider* CFWL_Widget::GetThemeProvider() const {
+IFWL_ThemeProvider* CFWL_Widget::GetThemeProvider() {
+  return const_cast<IFWL_ThemeProvider*>(
+      static_cast<const CFWL_Widget*>(this)->GetThemeProvider());
+}
+
+const IFWL_ThemeProvider* CFWL_Widget::GetThemeProvider() const {
   return GetFWLApp()->GetThemeProvider();
 }
 
@@ -207,7 +212,12 @@ bool CFWL_Widget::IsChild() const {
   return !!(properties_.styles_ & FWL_STYLE_WGT_Child);
 }
 
-CFWL_Widget* CFWL_Widget::GetOutmost() const {
+CFWL_Widget* CFWL_Widget::GetOutmost() {
+  return const_cast<CFWL_Widget*>(
+      static_cast<const CFWL_Widget*>(this)->GetOutmost());
+}
+
+const CFWL_Widget* CFWL_Widget::GetOutmost() const {
   CFWL_Widget* pOuter = const_cast<CFWL_Widget*>(this);
   while (pOuter->GetOuter()) {
     pOuter = pOuter->GetOuter();

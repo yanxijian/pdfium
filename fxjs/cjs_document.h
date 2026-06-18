@@ -28,7 +28,8 @@ class CJS_Document final : public CJS_Object, public Observable {
   ~CJS_Document() override;
 
   void SetFormFillEnv(CPDFSDK_FormFillEnvironment* pFormFillEnv);
-  CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {
+  CPDFSDK_FormFillEnvironment* GetFormFillEnv() { return form_fill_env_.Get(); }
+  const CPDFSDK_FormFillEnvironment* GetFormFillEnv() const {
     return form_fill_env_.Get();
   }
   void AddDelayData(std::unique_ptr<CJS_DelayData> pData);

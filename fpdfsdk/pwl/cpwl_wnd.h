@@ -76,7 +76,7 @@ class CPWL_Wnd : public Observable {
 
     // get a matrix which map user space to CWnd client space
     virtual CFX_Matrix GetWindowMatrix(
-        const IPWL_FillerNotify::PerWindowData* pAttached) = 0;
+        const IPWL_FillerNotify::PerWindowData* pAttached) const = 0;
 
     virtual void OnSetFocusForEdit(CPWL_Edit* pEdit) = 0;
   };
@@ -195,7 +195,10 @@ class CPWL_Wnd : public Observable {
   void RemoveFlag(Styles flag);
   void SetClipRect(const CFX_FloatRect& rect);
 
-  IPWL_FillerNotify::PerWindowData* GetAttachedData() const {
+  IPWL_FillerNotify::PerWindowData* GetAttachedData() {
+    return attached_data_.get();
+  }
+  const IPWL_FillerNotify::PerWindowData* GetAttachedData() const {
     return attached_data_.get();
   }
   std::unique_ptr<IPWL_FillerNotify::PerWindowData> CloneAttachedData() const;
@@ -225,18 +228,29 @@ class CPWL_Wnd : public Observable {
 
   bool IsValid() const { return created_; }
   CreateParams* GetCreationParams() { return &creation_params_; }
-  ProviderIface* GetProvider() const {
+  ProviderIface* GetProvider() { return creation_params_.pProvider.Get(); }
+  const ProviderIface* GetProvider() const {
     return creation_params_.pProvider.Get();
   }
-  CFX_Timer::HandlerIface* GetTimerHandler() const {
+  CFX_Timer::HandlerIface* GetTimerHandler() {
     return creation_params_.pTimerHandler.Get();
   }
-  IPWL_FillerNotify* GetFillerNotify() const {
+  const CFX_Timer::HandlerIface* GetTimerHandler() const {
+    return creation_params_.pTimerHandler.Get();
+  }
+  IPWL_FillerNotify* GetFillerNotify() {
+    return creation_params_.pFillerNotify;
+  }
+  const IPWL_FillerNotify* GetFillerNotify() const {
     return creation_params_.pFillerNotify;
   }
 
-  CPWL_Wnd* GetParentWindow() const { return parent_; }
-  CPWL_ScrollBar* GetVScrollBar() const;
+  CPWL_Wnd* GetParentWindow() { return parent_; }
+  const CPWL_Wnd* GetParentWindow() const { return parent_; }
+  CPWL_ScrollBar* GetVScrollBar();
+  const CPWL_ScrollBar* GetVScrollBar() const {
+    return const_cast<CPWL_Wnd*>(this)->GetVScrollBar();
+  }
 
   // Returns |true| iff this instance is still allocated.
   [[nodiscard]] bool InvalidateRectMove(const CFX_FloatRect& rcOld,
@@ -260,7 +274,8 @@ class CPWL_Wnd : public Observable {
   CFX_PointF GetCenterPoint() const;
   const CFX_FloatRect& GetClipRect() const;
 
-  IPVT_FontMap* GetFontMap() const { return creation_params_.font_map; }
+  IPVT_FontMap* GetFontMap() { return creation_params_.font_map; }
+  const IPVT_FontMap* GetFontMap() const { return creation_params_.font_map; }
 
  private:
   void DrawChildAppearance(CFX_RenderDevice* pDevice,
@@ -273,7 +288,10 @@ class CPWL_Wnd : public Observable {
   void AdjustStyle();
   void CreateSharedCaptureFocusState();
   void DestroySharedCaptureFocusState();
-  SharedCaptureFocusState* GetSharedCaptureFocusState() const;
+  SharedCaptureFocusState* GetSharedCaptureFocusState();
+  const SharedCaptureFocusState* GetSharedCaptureFocusState() const {
+    return const_cast<CPWL_Wnd*>(this)->GetSharedCaptureFocusState();
+  }
 
   CreateParams creation_params_;
   std::unique_ptr<IPWL_FillerNotify::PerWindowData> attached_data_;

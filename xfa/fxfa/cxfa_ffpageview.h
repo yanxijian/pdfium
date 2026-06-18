@@ -30,10 +30,12 @@ class CXFA_FFPageView final : public cppgc::GarbageCollected<CXFA_FFPageView> {
 
   void Trace(cppgc::Visitor* visitor) const;
 
-  CXFA_ViewLayoutItem* GetLayoutItem() const { return layout_item_; }
+  CXFA_ViewLayoutItem* GetLayoutItem() { return layout_item_; }
+  const CXFA_ViewLayoutItem* GetLayoutItem() const { return layout_item_; }
   void SetLayoutItem(CXFA_ViewLayoutItem* pItem) { layout_item_ = pItem; }
 
-  CXFA_FFDocView* GetDocView() const;
+  CXFA_FFDocView* GetDocView();
+  const CXFA_FFDocView* GetDocView() const;
   CFX_RectF GetPageViewRect() const;
   CFX_Matrix GetDisplayMatrixForRect(const FX_RECT& rtDisp,
                                      int32_t rotation) const;

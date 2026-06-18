@@ -72,7 +72,10 @@ class CPWL_ListCtrl {
   void SetPlateRect(const CFX_FloatRect& rect);
 
   float GetFontSize() const { return font_size_; }
-  CPWL_EditImpl* GetItemEdit(int32_t nIndex) const;
+  CPWL_EditImpl* GetItemEdit(int32_t nIndex);
+  const CPWL_EditImpl* GetItemEdit(int32_t nIndex) const {
+    return const_cast<CPWL_ListCtrl*>(this)->GetItemEdit(nIndex);
+  }
   int32_t GetCount() const;
   bool IsItemSelected(int32_t nIndex) const;
   float GetFirstHeight() const;
@@ -88,7 +91,8 @@ class CPWL_ListCtrl {
     ~Item();
 
     void SetFontMap(IPVT_FontMap* font_map);
-    CPWL_EditImpl* GetEdit() const { return edit_.get(); }
+    CPWL_EditImpl* GetEdit() { return edit_.get(); }
+    const CPWL_EditImpl* GetEdit() const { return edit_.get(); }
 
     void SetRect(const CFX_FloatRect& rect) { list_item_rect_ = rect; }
     void SetSelect(bool bSelected) { selected_ = bSelected; }
@@ -102,7 +106,8 @@ class CPWL_ListCtrl {
     uint16_t GetFirstChar() const;
 
    private:
-    CPWL_EditImpl::Iterator* GetIterator() const;
+    CPWL_EditImpl::Iterator* GetIterator();
+    const CPWL_EditImpl::Iterator* GetIterator() const;
 
     bool selected_ = false;
     CFX_FloatRect list_item_rect_;

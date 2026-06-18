@@ -78,7 +78,8 @@ class CFX_Font {
 
   RetainPtr<CFX_Face> GetFace() const { return face_; }
   bool HasFace() const { return !!face_; }
-  CFX_SubstFont* GetSubstFont() const { return subst_font_.get(); }
+  CFX_SubstFont* GetSubstFont() { return subst_font_.get(); }
+  const CFX_SubstFont* GetSubstFont() const { return subst_font_.get(); }
   int GetSubstFontItalicAngle() const;
   std::vector<CharCodeAndIndex> GetCharCodesAndIndices(char32_t max_char);
 
@@ -135,7 +136,8 @@ class CFX_Font {
 #endif
 
 #if BUILDFLAG(IS_APPLE)
-  void* GetPlatformFont() const { return platform_font_; }
+  void* GetPlatformFont() { return platform_font_; }
+  const void* GetPlatformFont() const { return platform_font_; }
   void SetPlatformFont(void* font) { platform_font_ = font; }
 #endif
 

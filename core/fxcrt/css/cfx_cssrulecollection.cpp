@@ -25,7 +25,7 @@ CFX_CSSRuleCollection::GetTagRuleData(const WideString& tagname) const {
   return it != tag_rules_.end() ? &it->second : nullptr;
 }
 
-void CFX_CSSRuleCollection::SetRulesFromSheet(const CFX_CSSStyleSheet* sheet) {
+void CFX_CSSRuleCollection::SetRulesFromSheet(CFX_CSSStyleSheet* sheet) {
   tag_rules_.clear();
   for (size_t i = 0; i < sheet->CountRules(); ++i) {
     AddRule(sheet->GetRule(i));

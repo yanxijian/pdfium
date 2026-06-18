@@ -133,7 +133,7 @@ CPDFSDK_PageView* CPDFSDK_FormFillEnvironment::GetCurrentView() {
   return pPage ? GetOrCreatePageView(pPage) : nullptr;
 }
 
-IPDF_Page* CPDFSDK_FormFillEnvironment::GetCurrentPage() const {
+IPDF_Page* CPDFSDK_FormFillEnvironment::GetCurrentPage() {
   if (info_ && info_->FFI_GetCurrentPage) {
     return IPDFPageFromFPDFPage(info_->FFI_GetCurrentPage(
         info_, FPDFDocumentFromCPDFDocument(cpdfdoc_)));
@@ -757,7 +757,7 @@ void CPDFSDK_FormFillEnvironment::RemovePageView(IPDF_Page* pUnderlyingPage) {
   page_map_.erase(it);
 }
 
-IPDF_Page* CPDFSDK_FormFillEnvironment::GetPage(int nIndex) const {
+IPDF_Page* CPDFSDK_FormFillEnvironment::GetPage(int nIndex) {
   if (!info_ || !info_->FFI_GetPage) {
     return nullptr;
   }
@@ -784,7 +784,7 @@ void CPDFSDK_FormFillEnvironment::UpdateAllViews(CPDFSDK_Annot* pAnnot) {
   }
 }
 
-CPDFSDK_Annot* CPDFSDK_FormFillEnvironment::GetFocusAnnot() const {
+CPDFSDK_Annot* CPDFSDK_FormFillEnvironment::GetFocusAnnot() {
   return focus_annot_.Get();
 }
 

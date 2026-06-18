@@ -32,7 +32,8 @@ class CPDFSDK_InteractiveForm final
   explicit CPDFSDK_InteractiveForm(CPDFSDK_FormFillEnvironment* pFormFillEnv);
   ~CPDFSDK_InteractiveForm() override;
 
-  CPDF_InteractiveForm* GetInteractiveForm() const {
+  CPDF_InteractiveForm* GetInteractiveForm() { return interactive_form_.get(); }
+  const CPDF_InteractiveForm* GetInteractiveForm() const {
     return interactive_form_.get();
   }
 

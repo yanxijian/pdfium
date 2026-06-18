@@ -29,7 +29,7 @@ class CPDFXFA_Page final : public IPDF_Page {
   // IPDF_Page:
   CPDF_Page* AsPDFPage() override;
   CPDFXFA_Page* AsXFAPage() override;
-  CPDF_Document* GetDocument() const override;
+  CPDF_Document* GetDocument() override;
   float GetPageWidth() const override;
   float GetPageHeight() const override;
   CFX_Matrix GetDisplayMatrixForRect(const FX_RECT& rect,

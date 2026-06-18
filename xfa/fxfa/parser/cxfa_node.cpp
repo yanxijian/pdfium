@@ -1098,7 +1098,7 @@ CXFA_Node* CXFA_Node::Clone(bool bRecursive) {
   return pClone;
 }
 
-CXFA_Node* CXFA_Node::GetNextContainerSibling() const {
+CXFA_Node* CXFA_Node::GetNextContainerSibling() {
   for (auto* pNode = GetNextSibling(); pNode; pNode = pNode->GetNextSibling()) {
     if (pNode->GetObjectType() == XFA_ObjectType::ContainerNode) {
       return pNode;
@@ -1107,7 +1107,7 @@ CXFA_Node* CXFA_Node::GetNextContainerSibling() const {
   return nullptr;
 }
 
-CXFA_Node* CXFA_Node::GetPrevContainerSibling() const {
+CXFA_Node* CXFA_Node::GetPrevContainerSibling() {
   for (auto* pNode = GetPrevSibling(); pNode; pNode = pNode->GetPrevSibling()) {
     if (pNode->GetObjectType() == XFA_ObjectType::ContainerNode) {
       return pNode;
@@ -1116,7 +1116,7 @@ CXFA_Node* CXFA_Node::GetPrevContainerSibling() const {
   return nullptr;
 }
 
-CXFA_Node* CXFA_Node::GetFirstContainerChild() const {
+CXFA_Node* CXFA_Node::GetFirstContainerChild() {
   for (auto* pNode = GetFirstChild(); pNode; pNode = pNode->GetNextSibling()) {
     if (pNode->GetObjectType() == XFA_ObjectType::ContainerNode) {
       return pNode;
@@ -1125,7 +1125,7 @@ CXFA_Node* CXFA_Node::GetFirstContainerChild() const {
   return nullptr;
 }
 
-CXFA_Node* CXFA_Node::GetContainerParent() const {
+CXFA_Node* CXFA_Node::GetContainerParent() {
   for (auto* pNode = GetParent(); pNode; pNode = pNode->GetParent()) {
     if (pNode->GetObjectType() == XFA_ObjectType::ContainerNode) {
       return pNode;
@@ -1358,7 +1358,7 @@ CXFA_Node* CXFA_Node::CloneTemplateToForm(bool bRecursive) {
   return pClone;
 }
 
-CXFA_Node* CXFA_Node::GetTemplateNodeIfExists() const {
+CXFA_Node* CXFA_Node::GetTemplateNodeIfExists() {
   return aux_node_;
 }
 
@@ -1670,7 +1670,7 @@ size_t CXFA_Node::CountChildren(XFA_Element eType, bool bOnlyChild) {
 
 CXFA_Node* CXFA_Node::GetChildInternal(size_t index,
                                        XFA_Element eType,
-                                       bool bOnlyChild) const {
+                                       bool bOnlyChild) {
   size_t count = 0;
   for (CXFA_Node* pNode = GetFirstChild(); pNode;
        pNode = pNode->GetNextSibling()) {
@@ -1765,11 +1765,11 @@ void CXFA_Node::RemoveChildAndNotify(CXFA_Node* pNode, bool bNotify) {
                              XFA_AttributeValue::Unknown, false);
 }
 
-CXFA_Node* CXFA_Node::GetFirstChildByName(WideStringView wsName) const {
+CXFA_Node* CXFA_Node::GetFirstChildByName(WideStringView wsName) {
   return GetFirstChildByName(FX_HashCode_GetW(wsName));
 }
 
-CXFA_Node* CXFA_Node::GetFirstChildByName(uint32_t dwNameHash) const {
+CXFA_Node* CXFA_Node::GetFirstChildByName(uint32_t dwNameHash) {
   for (CXFA_Node* pNode = GetFirstChild(); pNode;
        pNode = pNode->GetNextSibling()) {
     if (pNode->GetNameHash() == dwNameHash) {
@@ -1779,7 +1779,7 @@ CXFA_Node* CXFA_Node::GetFirstChildByName(uint32_t dwNameHash) const {
   return nullptr;
 }
 
-CXFA_Node* CXFA_Node::GetFirstChildByClassInternal(XFA_Element eType) const {
+CXFA_Node* CXFA_Node::GetFirstChildByClassInternal(XFA_Element eType) {
   for (CXFA_Node* pNode = GetFirstChild(); pNode;
        pNode = pNode->GetNextSibling()) {
     if (pNode->GetElementType() == eType) {
@@ -1789,7 +1789,7 @@ CXFA_Node* CXFA_Node::GetFirstChildByClassInternal(XFA_Element eType) const {
   return nullptr;
 }
 
-CXFA_Node* CXFA_Node::GetNextSameNameSibling(uint32_t dwNameHash) const {
+CXFA_Node* CXFA_Node::GetNextSameNameSibling(uint32_t dwNameHash) {
   for (CXFA_Node* pNode = GetNextSibling(); pNode;
        pNode = pNode->GetNextSibling()) {
     if (pNode->GetNameHash() == dwNameHash) {
@@ -1800,11 +1800,11 @@ CXFA_Node* CXFA_Node::GetNextSameNameSibling(uint32_t dwNameHash) const {
 }
 
 CXFA_Node* CXFA_Node::GetNextSameNameSiblingInternal(
-    WideStringView wsNodeName) const {
+    WideStringView wsNodeName) {
   return GetNextSameNameSibling(FX_HashCode_GetW(wsNodeName));
 }
 
-CXFA_Node* CXFA_Node::GetNextSameClassSiblingInternal(XFA_Element eType) const {
+CXFA_Node* CXFA_Node::GetNextSameClassSiblingInternal(XFA_Element eType) {
   for (CXFA_Node* pNode = GetNextSibling(); pNode;
        pNode = pNode->GetNextSibling()) {
     if (pNode->GetElementType() == eType) {
@@ -2406,7 +2406,7 @@ int32_t CXFA_Node::GetRotate() const {
   return degrees.has_value() ? XFA_MapRotation(degrees.value()) / 90 * 90 : 0;
 }
 
-CXFA_Border* CXFA_Node::GetBorderIfExists() const {
+CXFA_Border* CXFA_Node::GetBorderIfExists() {
   return JSObject()->GetProperty<CXFA_Border>(0, XFA_Element::Border);
 }
 
@@ -2414,7 +2414,7 @@ CXFA_Border* CXFA_Node::GetOrCreateBorderIfPossible() {
   return JSObject()->GetOrCreateProperty<CXFA_Border>(0, XFA_Element::Border);
 }
 
-CXFA_Caption* CXFA_Node::GetCaptionIfExists() const {
+CXFA_Caption* CXFA_Node::GetCaptionIfExists() {
   return JSObject()->GetProperty<CXFA_Caption>(0, XFA_Element::Caption);
 }
 
@@ -2422,19 +2422,19 @@ CXFA_Font* CXFA_Node::GetOrCreateFontIfPossible() {
   return JSObject()->GetOrCreateProperty<CXFA_Font>(0, XFA_Element::Font);
 }
 
-CXFA_Font* CXFA_Node::GetFontIfExists() const {
+CXFA_Font* CXFA_Node::GetFontIfExists() {
   return JSObject()->GetProperty<CXFA_Font>(0, XFA_Element::Font);
 }
 
 float CXFA_Node::GetFontSize() const {
-  CXFA_Font* font = GetFontIfExists();
+  const CXFA_Font* font = GetFontIfExists();
   float fFontSize = font ? font->GetFontSize() : 10.0f;
   return fFontSize < 0.1f ? 10.0f : fFontSize;
 }
 
 float CXFA_Node::GetLineHeight() const {
   float fLineHeight = 0;
-  CXFA_Para* para = GetParaIfExists();
+  const CXFA_Para* para = GetParaIfExists();
   if (para) {
     fLineHeight = para->GetLineHeight();
   }
@@ -2446,15 +2446,15 @@ float CXFA_Node::GetLineHeight() const {
 }
 
 FX_ARGB CXFA_Node::GetTextColor() const {
-  CXFA_Font* font = GetFontIfExists();
+  const CXFA_Font* font = GetFontIfExists();
   return font ? font->GetColor() : 0xFF000000;
 }
 
-CXFA_Margin* CXFA_Node::GetMarginIfExists() const {
+CXFA_Margin* CXFA_Node::GetMarginIfExists() {
   return JSObject()->GetProperty<CXFA_Margin>(0, XFA_Element::Margin);
 }
 
-CXFA_Para* CXFA_Node::GetParaIfExists() const {
+CXFA_Para* CXFA_Node::GetParaIfExists() {
   return JSObject()->GetProperty<CXFA_Para>(0, XFA_Element::Para);
 }
 
@@ -2475,15 +2475,15 @@ CXFA_Value* CXFA_Node::GetDefaultValueIfExists() {
                   : nullptr;
 }
 
-CXFA_Value* CXFA_Node::GetFormValueIfExists() const {
+CXFA_Value* CXFA_Node::GetFormValueIfExists() {
   return JSObject()->GetProperty<CXFA_Value>(0, XFA_Element::Value);
 }
 
-CXFA_Calculate* CXFA_Node::GetCalculateIfExists() const {
+CXFA_Calculate* CXFA_Node::GetCalculateIfExists() {
   return JSObject()->GetProperty<CXFA_Calculate>(0, XFA_Element::Calculate);
 }
 
-CXFA_Validate* CXFA_Node::GetValidateIfExists() const {
+CXFA_Validate* CXFA_Node::GetValidateIfExists() {
   return JSObject()->GetProperty<CXFA_Validate>(0, XFA_Element::Validate);
 }
 
@@ -2492,7 +2492,7 @@ CXFA_Validate* CXFA_Node::GetOrCreateValidateIfPossible() {
                                                         XFA_Element::Validate);
 }
 
-CXFA_Bind* CXFA_Node::GetBindIfExists() const {
+CXFA_Bind* CXFA_Node::GetBindIfExists() {
   return JSObject()->GetProperty<CXFA_Bind>(0, XFA_Element::Bind);
 }
 
@@ -2511,7 +2511,7 @@ std::optional<XFA_AttributeValue> CXFA_Node::GetIntactFromKeep(
     return intact;
   }
 
-  CXFA_Node* pPreviewRow = GetPrevContainerSibling();
+  const CXFA_Node* pPreviewRow = GetPrevContainerSibling();
   if (!pPreviewRow || pPreviewRow->JSObject()->GetEnum(XFA_Attribute::Layout) !=
                           XFA_AttributeValue::Row) {
     return intact;
@@ -2524,7 +2524,7 @@ std::optional<XFA_AttributeValue> CXFA_Node::GetIntactFromKeep(
     return XFA_AttributeValue::ContentArea;
   }
 
-  CXFA_Keep* pNode =
+  const CXFA_Keep* pNode =
       pPreviewRow->GetFirstChildByClass<CXFA_Keep>(XFA_Element::Keep);
   if (!pNode) {
     return intact;
@@ -3681,7 +3681,7 @@ float CXFA_Node::CalculateWidgetAutoWidth(float fWidthCalc) {
 }
 
 float CXFA_Node::GetWidthWithoutMargin(float fWidthCalc) const {
-  CXFA_Margin* margin = GetMarginIfExists();
+  const CXFA_Margin* margin = GetMarginIfExists();
   if (margin) {
     fWidthCalc -= margin->GetLeftInset() + margin->GetRightInset();
   }
@@ -3708,7 +3708,7 @@ float CXFA_Node::CalculateWidgetAutoHeight(float fHeightCalc) {
 }
 
 float CXFA_Node::GetHeightWithoutMargin(float fHeightCalc) const {
-  CXFA_Margin* margin = GetMarginIfExists();
+  const CXFA_Margin* margin = GetMarginIfExists();
   if (margin) {
     fHeightCalc -= margin->GetTopInset() + margin->GetBottomInset();
   }
@@ -5430,7 +5430,7 @@ CXFA_Node* CXFA_Node::GetTransparentParent() {
   return nullptr;
 }
 
-CFX_XMLDocument* CXFA_Node::GetXMLDocument() const {
+CFX_XMLDocument* CXFA_Node::GetXMLDocument() {
   return GetDocument()->GetNotify()->GetFFDoc()->GetXMLDocument();
 }
 

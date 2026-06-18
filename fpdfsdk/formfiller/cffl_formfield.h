@@ -95,7 +95,7 @@ class CFFL_FormField : public CPWL_Wnd::ProviderIface,
 
   // CPWL_Wnd::ProviderIface:
   CFX_Matrix GetWindowMatrix(
-      const IPWL_FillerNotify::PerWindowData* pAttached) override;
+      const IPWL_FillerNotify::PerWindowData* pAttached) const override;
   void OnSetFocusForEdit(CPWL_Edit* pEdit) override;
 
   virtual void GetActionData(const CPDFSDK_PageView* pPageView,
@@ -117,7 +117,7 @@ class CFFL_FormField : public CPWL_Wnd::ProviderIface,
   virtual bool IsFieldFull(const CPDFSDK_PageView* pPageView);
 #endif  // PDF_ENABLE_XFA
 
-  CFX_Matrix GetCurMatrix();
+  CFX_Matrix GetCurMatrix() const;
   CFX_FloatRect GetFocusBox(const CPDFSDK_PageView* pPageView);
   CFX_FloatRect FFLtoPWL(const CFX_FloatRect& rect);
   CFX_FloatRect PWLtoFFL(const CFX_FloatRect& rect);
@@ -133,7 +133,8 @@ class CFFL_FormField : public CPWL_Wnd::ProviderIface,
   CPDFSDK_PageView* GetCurPageView();
   void SetChangeMark();
 
-  CPDFSDK_Widget* GetSDKWidget() const { return widget_; }
+  CPDFSDK_Widget* GetSDKWidget() { return widget_; }
+  const CPDFSDK_Widget* GetSDKWidget() const { return widget_; }
 
   CFFL_PerWindowData* GetPerPWLWindowData(const CPDFSDK_PageView* pPageView);
   void ResetPWLWindowForValueAge(const CPDFSDK_PageView* pPageView,
@@ -149,7 +150,10 @@ class CFFL_FormField : public CPWL_Wnd::ProviderIface,
   virtual CPWL_Wnd* ResetPWLWindow(const CPDFSDK_PageView* pPageView);
   virtual CPWL_Wnd* RestorePWLWindow(const CPDFSDK_PageView* pPageView);
 
-  CPWL_Wnd* GetPWLWindow(const CPDFSDK_PageView* pPageView) const;
+  CPWL_Wnd* GetPWLWindow(const CPDFSDK_PageView* pPageView);
+  const CPWL_Wnd* GetPWLWindow(const CPDFSDK_PageView* pPageView) const {
+    return const_cast<CFFL_FormField*>(this)->GetPWLWindow(pPageView);
+  }
   CPWL_Wnd* CreateOrUpdatePWLWindow(const CPDFSDK_PageView* pPageView);
   CPWL_Wnd* ResetPWLWindowForValueAgeInternal(const CPDFSDK_PageView* pPageView,
                                               CPDFSDK_Widget* pWidget,

@@ -47,7 +47,7 @@ class CFWL_WidgetTP : public cppgc::GarbageCollected<CFWL_WidgetTP> {
   CFWL_WidgetTP();
 
   void InitializeArrowColorData();
-  void EnsureTTOInitialized(IFWL_ThemeProvider* pProvider);
+  void EnsureTTOInitialized(const IFWL_ThemeProvider* pProvider);
 
   void DrawBorder(CFGAS_GEGraphics* pGraphics,
                   const CFX_RectF& rect,

@@ -265,11 +265,11 @@ void CXFA_FFDocView::UpdateUIDisplay(CXFA_Node* pNode, CXFA_FFWidget* pExcept) {
 }
 
 int32_t CXFA_FFDocView::CountPageViews() const {
-  CXFA_LayoutProcessor* pProcessor = GetLayoutProcessor();
+  const CXFA_LayoutProcessor* pProcessor = GetLayoutProcessor();
   return pProcessor ? pProcessor->CountPages() : 0;
 }
 
-CXFA_FFPageView* CXFA_FFDocView::GetPageView(int32_t nIndex) const {
+CXFA_FFPageView* CXFA_FFDocView::GetPageView(int32_t nIndex) {
   CXFA_LayoutProcessor* pProcessor = GetLayoutProcessor();
   if (!pProcessor) {
     return nullptr;
@@ -279,7 +279,7 @@ CXFA_FFPageView* CXFA_FFDocView::GetPageView(int32_t nIndex) const {
   return pPage ? pPage->GetPageView() : nullptr;
 }
 
-CXFA_LayoutProcessor* CXFA_FFDocView::GetLayoutProcessor() const {
+CXFA_LayoutProcessor* CXFA_FFDocView::GetLayoutProcessor() {
   return CXFA_LayoutProcessor::FromDocument(doc_->GetXFADoc());
 }
 
@@ -599,7 +599,8 @@ void CXFA_FFDocView::AddCalculateNode(CXFA_Node* node) {
 }
 
 void CXFA_FFDocView::AddCalculateNodeNotify(CXFA_Node* pNodeChange) {
-  CJX_Object::CalcData* pGlobalData = pNodeChange->JSObject()->GetCalcData();
+  const CJX_Object::CalcData* pGlobalData =
+      pNodeChange->JSObject()->GetCalcData();
   if (!pGlobalData) {
     return;
   }

@@ -31,7 +31,7 @@ void CFWL_WidgetMgr::Trace(cppgc::Visitor* visitor) const {
   ContainerTrace(visitor, map_widget_item_);
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetParentWidget(const CFWL_Widget* pWidget) const {
+CFWL_Widget* CFWL_WidgetMgr::GetParentWidget(const CFWL_Widget* pWidget) {
   Item* pItem = GetWidgetMgrItem(pWidget);
   if (!pItem) {
     return nullptr;
@@ -41,7 +41,7 @@ CFWL_Widget* CFWL_WidgetMgr::GetParentWidget(const CFWL_Widget* pWidget) const {
   return pParent ? pParent->pWidget : nullptr;
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetPriorSiblingWidget(CFWL_Widget* pWidget) const {
+CFWL_Widget* CFWL_WidgetMgr::GetPriorSiblingWidget(CFWL_Widget* pWidget) {
   Item* pItem = GetWidgetMgrItem(pWidget);
   if (!pItem) {
     return nullptr;
@@ -51,7 +51,7 @@ CFWL_Widget* CFWL_WidgetMgr::GetPriorSiblingWidget(CFWL_Widget* pWidget) const {
   return pSibling ? pSibling->pWidget : nullptr;
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetNextSiblingWidget(CFWL_Widget* pWidget) const {
+CFWL_Widget* CFWL_WidgetMgr::GetNextSiblingWidget(CFWL_Widget* pWidget) {
   Item* pItem = GetWidgetMgrItem(pWidget);
   if (!pItem) {
     return nullptr;
@@ -61,7 +61,7 @@ CFWL_Widget* CFWL_WidgetMgr::GetNextSiblingWidget(CFWL_Widget* pWidget) const {
   return pSibling ? pSibling->pWidget : nullptr;
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetFirstChildWidget(CFWL_Widget* pWidget) const {
+CFWL_Widget* CFWL_WidgetMgr::GetFirstChildWidget(CFWL_Widget* pWidget) {
   Item* pItem = GetWidgetMgrItem(pWidget);
   if (!pItem) {
     return nullptr;
@@ -71,7 +71,7 @@ CFWL_Widget* CFWL_WidgetMgr::GetFirstChildWidget(CFWL_Widget* pWidget) const {
   return pChild ? pChild->pWidget : nullptr;
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetLastChildWidget(CFWL_Widget* pWidget) const {
+CFWL_Widget* CFWL_WidgetMgr::GetLastChildWidget(CFWL_Widget* pWidget) {
   Item* pItem = GetWidgetMgrItem(pWidget);
   if (!pItem) {
     return nullptr;
@@ -125,7 +125,7 @@ void CFWL_WidgetMgr::RemoveWidget(CFWL_Widget* pWidget) {
 }
 
 CFWL_Widget* CFWL_WidgetMgr::GetWidgetAtPoint(CFWL_Widget* parent,
-                                              const CFX_PointF& point) const {
+                                              const CFX_PointF& point) {
   if (!parent) {
     return nullptr;
   }
@@ -145,7 +145,7 @@ CFWL_Widget* CFWL_WidgetMgr::GetWidgetAtPoint(CFWL_Widget* parent,
   return parent;
 }
 
-CFWL_Widget* CFWL_WidgetMgr::GetDefaultButton(CFWL_Widget* pParent) const {
+CFWL_Widget* CFWL_WidgetMgr::GetDefaultButton(CFWL_Widget* pParent) {
   if (pParent->GetClassID() == FWL_Type::PushButton &&
       (pParent->GetStates() & FWL_STATE_PSB_Default)) {
     return pParent;
@@ -166,12 +166,12 @@ CFWL_Widget* CFWL_WidgetMgr::GetDefaultButton(CFWL_Widget* pParent) const {
   return nullptr;
 }
 
-CFWL_WidgetMgr::Item* CFWL_WidgetMgr::GetWidgetMgrRootItem() const {
+CFWL_WidgetMgr::Item* CFWL_WidgetMgr::GetWidgetMgrRootItem() {
   return GetWidgetMgrItem(nullptr);
 }
 
 CFWL_WidgetMgr::Item* CFWL_WidgetMgr::GetWidgetMgrItem(
-    const CFWL_Widget* pWidget) const {
+    const CFWL_Widget* pWidget) {
   auto it = map_widget_item_.find(pWidget);
   return it != map_widget_item_.end() ? it->second : nullptr;
 }

@@ -47,19 +47,38 @@ class CFWL_WidgetMgr final : public cppgc::GarbageCollected<CFWL_WidgetMgr> {
                     CFGAS_GEGraphics* pGraphics,
                     const CFX_Matrix& matrix);
 
-  CFWL_Widget* GetParentWidget(const CFWL_Widget* pWidget) const;
-  CFWL_Widget* GetNextSiblingWidget(CFWL_Widget* pWidget) const;
-  CFWL_Widget* GetFirstChildWidget(CFWL_Widget* pWidget) const;
+  CFWL_Widget* GetParentWidget(const CFWL_Widget* pWidget);
+  const CFWL_Widget* GetParentWidget(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetParentWidget(pWidget);
+  }
+  CFWL_Widget* GetNextSiblingWidget(CFWL_Widget* pWidget);
+  const CFWL_Widget* GetNextSiblingWidget(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetNextSiblingWidget(
+        const_cast<CFWL_Widget*>(pWidget));
+  }
+  CFWL_Widget* GetFirstChildWidget(CFWL_Widget* pWidget);
+  const CFWL_Widget* GetFirstChildWidget(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetFirstChildWidget(
+        const_cast<CFWL_Widget*>(pWidget));
+  }
 
   void RepaintWidget(CFWL_Widget* pWidget, const CFX_RectF& pRect);
 
   void InsertWidget(CFWL_Widget* pParent, CFWL_Widget* pChild);
   void RemoveWidget(CFWL_Widget* pWidget);
 
-  CFWL_Widget* GetWidgetAtPoint(CFWL_Widget* pParent,
-                                const CFX_PointF& point) const;
+  CFWL_Widget* GetWidgetAtPoint(CFWL_Widget* pParent, const CFX_PointF& point);
+  const CFWL_Widget* GetWidgetAtPoint(const CFWL_Widget* pParent,
+                                      const CFX_PointF& point) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetWidgetAtPoint(
+        const_cast<CFWL_Widget*>(pParent), point);
+  }
 
-  CFWL_Widget* GetDefaultButton(CFWL_Widget* pParent) const;
+  CFWL_Widget* GetDefaultButton(CFWL_Widget* pParent);
+  const CFWL_Widget* GetDefaultButton(const CFWL_Widget* pParent) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetDefaultButton(
+        const_cast<CFWL_Widget*>(pParent));
+  }
   void GetAdapterPopupPos(CFWL_Widget* pWidget,
                           float fMinHeight,
                           float fMaxHeight,
@@ -83,11 +102,25 @@ class CFWL_WidgetMgr final : public cppgc::GarbageCollected<CFWL_WidgetMgr> {
 
   CFWL_WidgetMgr(AdapterIface* pAdapter, CFWL_App* pApp);
 
-  CFWL_Widget* GetPriorSiblingWidget(CFWL_Widget* pWidget) const;
-  CFWL_Widget* GetLastChildWidget(CFWL_Widget* pWidget) const;
+  CFWL_Widget* GetPriorSiblingWidget(CFWL_Widget* pWidget);
+  const CFWL_Widget* GetPriorSiblingWidget(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetPriorSiblingWidget(
+        const_cast<CFWL_Widget*>(pWidget));
+  }
+  CFWL_Widget* GetLastChildWidget(CFWL_Widget* pWidget);
+  const CFWL_Widget* GetLastChildWidget(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetLastChildWidget(
+        const_cast<CFWL_Widget*>(pWidget));
+  }
 
-  Item* GetWidgetMgrRootItem() const;
-  Item* GetWidgetMgrItem(const CFWL_Widget* pWidget) const;
+  Item* GetWidgetMgrRootItem();
+  const Item* GetWidgetMgrRootItem() const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetWidgetMgrRootItem();
+  }
+  Item* GetWidgetMgrItem(const CFWL_Widget* pWidget);
+  const Item* GetWidgetMgrItem(const CFWL_Widget* pWidget) const {
+    return const_cast<CFWL_WidgetMgr*>(this)->GetWidgetMgrItem(pWidget);
+  }
   Item* CreateWidgetMgrItem(CFWL_Widget* pWidget);
 
   void DrawChildren(CFWL_Widget* pParent,

@@ -112,7 +112,7 @@ void CFFL_RadioButton::SaveData(const CPDFSDK_PageView* pPageView) {
 }
 
 CPWL_RadioButton* CFFL_RadioButton::GetPWLRadioButton(
-    const CPDFSDK_PageView* pPageView) const {
+    const CPDFSDK_PageView* pPageView) {
   return static_cast<CPWL_RadioButton*>(GetPWLWindow(pPageView));
 }
 

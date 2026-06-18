@@ -601,7 +601,7 @@ void CPWL_ListCtrl::AddItem(const WideString& str) {
   list_items_.push_back(std::move(pListItem));
 }
 
-CPWL_EditImpl* CPWL_ListCtrl::GetItemEdit(int32_t nIndex) const {
+CPWL_EditImpl* CPWL_ListCtrl::GetItemEdit(int32_t nIndex) {
   if (!IsValid(nIndex)) {
     return nullptr;
   }

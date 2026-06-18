@@ -176,8 +176,7 @@ size_t CPDF_PageObjectHolder::GetActivePageObjectCount() const {
   return count;
 }
 
-CPDF_PageObject* CPDF_PageObjectHolder::GetPageObjectByIndex(
-    size_t index) const {
+CPDF_PageObject* CPDF_PageObjectHolder::GetPageObjectByIndex(size_t index) {
   return fxcrt::IndexInBounds(page_object_list_, index)
              ? page_object_list_[index].get()
              : nullptr;

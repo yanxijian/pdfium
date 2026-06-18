@@ -30,7 +30,12 @@ void CXFA_ViewLayoutItem::Trace(cppgc::Visitor* visitor) const {
   visitor->Trace(ffpage_view_);
 }
 
-CXFA_LayoutProcessor* CXFA_ViewLayoutItem::GetLayout() const {
+CXFA_LayoutProcessor* CXFA_ViewLayoutItem::GetLayout() {
+  return const_cast<CXFA_LayoutProcessor*>(
+      static_cast<const CXFA_ViewLayoutItem*>(this)->GetLayout());
+}
+
+const CXFA_LayoutProcessor* CXFA_ViewLayoutItem::GetLayout() const {
   return CXFA_LayoutProcessor::FromDocument(GetFormNode()->GetDocument());
 }
 
@@ -42,7 +47,7 @@ int32_t CXFA_ViewLayoutItem::GetPageIndex() const {
 
 CFX_SizeF CXFA_ViewLayoutItem::GetPageSize() const {
   CFX_SizeF size;
-  CXFA_Medium* pMedium =
+  const CXFA_Medium* pMedium =
       GetFormNode()->GetFirstChildByClass<CXFA_Medium>(XFA_Element::Medium);
   if (!pMedium) {
     return size;
@@ -58,7 +63,12 @@ CFX_SizeF CXFA_ViewLayoutItem::GetPageSize() const {
   return size;
 }
 
-CXFA_Node* CXFA_ViewLayoutItem::GetMasterPage() const {
+CXFA_Node* CXFA_ViewLayoutItem::GetMasterPage() {
+  return const_cast<CXFA_Node*>(
+      static_cast<const CXFA_ViewLayoutItem*>(this)->GetMasterPage());
+}
+
+const CXFA_Node* CXFA_ViewLayoutItem::GetMasterPage() const {
   return GetFormNode();
 }
 

@@ -31,11 +31,19 @@ class CFGAS_GEColor {
     DCHECK(type_ == Solid || type_ == Pattern);
     return argb_;
   }
-  CFGAS_GEPattern* GetPattern() const {
+  CFGAS_GEPattern* GetPattern() {
     DCHECK_EQ(type_, Pattern);
     return pattern_;
   }
-  CFGAS_GEShading* GetShading() const {
+  const CFGAS_GEPattern* GetPattern() const {
+    DCHECK_EQ(type_, Pattern);
+    return pattern_;
+  }
+  CFGAS_GEShading* GetShading() {
+    DCHECK_EQ(type_, Shading);
+    return shading_;
+  }
+  const CFGAS_GEShading* GetShading() const {
     DCHECK_EQ(type_, Shading);
     return shading_;
   }

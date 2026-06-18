@@ -49,7 +49,8 @@ class CXFA_FFDocView : public cppgc::GarbageCollected<CXFA_FFDocView> {
 
   void Trace(cppgc::Visitor* visitor) const;
 
-  CXFA_FFDoc* GetDoc() const { return doc_; }
+  CXFA_FFDoc* GetDoc() { return doc_; }
+  const CXFA_FFDoc* GetDoc() const { return doc_; }
   int32_t StartLayout();
   int32_t DoLayout();
   void StopLayout();
@@ -62,17 +63,23 @@ class CXFA_FFDocView : public cppgc::GarbageCollected<CXFA_FFDocView> {
   void UpdateUIDisplay(CXFA_Node* pNode, CXFA_FFWidget* pExcept);
 
   int32_t CountPageViews() const;
-  CXFA_FFPageView* GetPageView(int32_t nIndex) const;
+  CXFA_FFPageView* GetPageView(int32_t nIndex);
+  const CXFA_FFPageView* GetPageView(int32_t nIndex) const {
+    return const_cast<CXFA_FFDocView*>(this)->GetPageView(nIndex);
+  }
 
   void ResetNode(CXFA_Node* pNode);
   CXFA_Node* GetRootSubform();
   CXFA_FFWidgetHandler* GetWidgetHandler();
-  CXFA_FFWidget* GetFocusWidget() const { return focus_widget_; }
+  const CXFA_FFWidget* GetFocusWidget() const { return focus_widget_; }
   bool SetFocus(CXFA_FFWidget* pNewFocus);
   CXFA_FFWidget* GetWidgetForNode(CXFA_Node* node);
   CXFA_FFWidget* GetWidgetByName(const WideString& wsName,
                                  CXFA_FFWidget* pRefWidget);
-  CXFA_LayoutProcessor* GetLayoutProcessor() const;
+  CXFA_LayoutProcessor* GetLayoutProcessor();
+  const CXFA_LayoutProcessor* GetLayoutProcessor() const {
+    return const_cast<CXFA_FFDocView*>(this)->GetLayoutProcessor();
+  }
   void OnPageViewEvent(CXFA_ViewLayoutItem* pSender,
                        CXFA_FFDoc::PageViewEvent eEvent);
   void LockUpdate() { lock_++; }
@@ -91,7 +98,8 @@ class CXFA_FFDocView : public cppgc::GarbageCollected<CXFA_FFDocView> {
   bool RunLayout();
   void AddNewFormNode(CXFA_Node* pNode);
   void AddIndexChangedSubform(CXFA_Subform* pNode);
-  CXFA_Node* GetFocusNode() const { return focus_node_; }
+  CXFA_Node* GetFocusNode() { return focus_node_; }
+  const CXFA_Node* GetFocusNode() const { return focus_node_; }
   void SetFocusNode(CXFA_Node* pNode);
   void DeleteLayoutItem(CXFA_FFWidget* pWidget);
   XFA_EventError ExecEventActivityByDeepFirst(CXFA_Node* pFormNode,

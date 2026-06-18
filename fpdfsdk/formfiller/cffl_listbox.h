@@ -41,7 +41,10 @@ class CFFL_ListBox final : public CFFL_TextObject {
   bool IsIndexSelected(int index) override;
 
  private:
-  CPWL_ListBox* GetPWLListBox(const CPDFSDK_PageView* pPageView) const;
+  CPWL_ListBox* GetPWLListBox(const CPDFSDK_PageView* pPageView);
+  const CPWL_ListBox* GetPWLListBox(const CPDFSDK_PageView* pPageView) const {
+    return const_cast<CFFL_ListBox*>(this)->GetPWLListBox(pPageView);
+  }
   CPWL_ListBox* CreateOrUpdatePWLListBox(const CPDFSDK_PageView* pPageView);
 
   std::set<int> original_selections_;

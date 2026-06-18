@@ -22,20 +22,22 @@ class CXFA_ContentLayoutItem final : public CXFA_LayoutItem {
 
   void Trace(cppgc::Visitor* visitor) const override;
 
-  CXFA_FFWidget* GetFFWidget() { return ffwidget_; }
+  CXFA_FFWidget* GetFFWidget() const { return ffwidget_; }
 
   CXFA_ContentLayoutItem* GetFirst();
   CXFA_ContentLayoutItem* GetLast();
-  CXFA_ContentLayoutItem* GetPrev() const { return prev_; }
-  CXFA_ContentLayoutItem* GetNext() const { return next_; }
+  CXFA_ContentLayoutItem* GetPrev() { return prev_; }
+  const CXFA_ContentLayoutItem* GetPrev() const { return prev_; }
+  CXFA_ContentLayoutItem* GetNext() { return next_; }
+  const CXFA_ContentLayoutItem* GetNext() const { return next_; }
   void InsertAfter(CXFA_ContentLayoutItem* pNext);
 
   CFX_RectF GetRelativeRect() const;
   CFX_RectF GetAbsoluteRect() const;
   size_t GetIndex() const;
 
-  void SetStatusBits(Mask<XFA_WidgetStatus> val) { status_ |= val; }
-  void ClearStatusBits(Mask<XFA_WidgetStatus> val) { status_ &= ~val; }
+  void SetStatusBits(Mask<XFA_WidgetStatus> val) const { status_ |= val; }
+  void ClearStatusBits(Mask<XFA_WidgetStatus> val) const { status_ &= ~val; }
 
   // TRUE if all (not any) bits set in |val| are set in |status_|.
   bool TestStatusBits(Mask<XFA_WidgetStatus> val) const {
@@ -55,7 +57,7 @@ class CXFA_ContentLayoutItem final : public CXFA_LayoutItem {
   cppgc::Member<CXFA_FFWidget> const ffwidget_;
 };
 
-inline CXFA_FFWidget* GetFFWidget(CXFA_ContentLayoutItem* item) {
+inline CXFA_FFWidget* GetFFWidget(const CXFA_ContentLayoutItem* item) {
   return item ? item->GetFFWidget() : nullptr;
 }
 

@@ -348,7 +348,10 @@ class CJS_Field final : public CJS_Object {
                                pdfium::span<v8::Local<v8::Value>> params);
 
   std::vector<CPDF_FormField*> GetFormFields() const;
-  CPDF_FormField* GetFirstFormField() const;
+  CPDF_FormField* GetFirstFormField();
+  const CPDF_FormField* GetFirstFormField() const {
+    return const_cast<CJS_Field*>(this)->GetFirstFormField();
+  }
   CPDF_FormControl* GetSmartFieldControl(CPDF_FormField* pFormField);
 
   void SetDelay(bool bDelay);

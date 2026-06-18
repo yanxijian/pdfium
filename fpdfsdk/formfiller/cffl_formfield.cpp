@@ -382,8 +382,7 @@ CPWL_Wnd::CreateParams CFFL_FormField::GetCreateParam() {
   return cp;
 }
 
-CPWL_Wnd* CFFL_FormField::GetPWLWindow(
-    const CPDFSDK_PageView* pPageView) const {
+CPWL_Wnd* CFFL_FormField::GetPWLWindow(const CPDFSDK_PageView* pPageView) {
   DCHECK(pPageView);
   auto it = maps_.find(pPageView);
   return it != maps_.end() ? it->second.get() : nullptr;
@@ -420,7 +419,7 @@ void CFFL_FormField::DestroyPWLWindow(const CPDFSDK_PageView* pPageView) {
 }
 
 CFX_Matrix CFFL_FormField::GetWindowMatrix(
-    const IPWL_FillerNotify::PerWindowData* pAttached) {
+    const IPWL_FillerNotify::PerWindowData* pAttached) const {
   const auto* pPrivateData = static_cast<const CFFL_PerWindowData*>(pAttached);
   if (!pPrivateData) {
     return CFX_Matrix();
@@ -438,7 +437,7 @@ void CFFL_FormField::OnSetFocusForEdit(CPWL_Edit* pEdit) {
   // Only sub-classes might have a subordinate edit to focus.
 }
 
-CFX_Matrix CFFL_FormField::GetCurMatrix() {
+CFX_Matrix CFFL_FormField::GetCurMatrix() const {
   CFX_Matrix mt;
   CFX_FloatRect rcDA = widget_->GetPDFAnnot()->GetRect();
   switch (widget_->GetRotate()) {

@@ -39,8 +39,10 @@ class CFWL_Event {
   virtual ~CFWL_Event();
 
   Type GetType() const { return type_; }
-  CFWL_Widget* GetSrcTarget() const { return src_target_; }
-  CFWL_Widget* GetDstTarget() const { return dst_target_; }
+  CFWL_Widget* GetSrcTarget() { return src_target_; }
+  const CFWL_Widget* GetSrcTarget() const { return src_target_; }
+  CFWL_Widget* GetDstTarget() { return dst_target_; }
+  const CFWL_Widget* GetDstTarget() const { return dst_target_; }
 
  private:
   const Type type_;

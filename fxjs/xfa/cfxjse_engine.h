@@ -129,8 +129,10 @@ class CFXJSE_Engine final : public CFX_IsolateWrapper {
   };
   friend class EventParamScope;
 
-  CXFA_Node* GetEventTarget() const { return target_; }
-  CXFA_EventParam* GetEventParam() const { return event_param_; }
+  CXFA_Node* GetEventTarget() { return target_; }
+  const CXFA_Node* GetEventTarget() const { return target_; }
+  CXFA_EventParam* GetEventParam() { return event_param_; }
+  const CXFA_EventParam* GetEventParam() const { return event_param_; }
 
   CFXJSE_Context::ExecutionResult RunScript(CXFA_Script::Type eScriptType,
                                             WideStringView wsScript,
@@ -148,9 +150,11 @@ class CFXJSE_Engine final : public CFX_IsolateWrapper {
 
   v8::Local<v8::Object> GetOrCreateJSBindingFromMap(CXFA_Object* pObject);
 
-  CXFA_Object* GetThisObject() const { return this_object_; }
-  CFXJSE_Class* GetJseNormalClass() const { return js_class_; }
-  CXFA_Document* GetDocument() const { return document_.Get(); }
+  CXFA_Object* GetThisObject() { return this_object_; }
+  const CXFA_Object* GetThisObject() const { return this_object_; }
+  CFXJSE_Class* GetJseNormalClass() { return js_class_; }
+  CXFA_Document* GetDocument() { return document_.Get(); }
+  const CXFA_Document* GetDocument() const { return document_.Get(); }
 
   void SetNodesOfRunScript(std::vector<cppgc::Persistent<CXFA_Node>>* pArray);
   void AddNodesOfRunScript(CXFA_Node* pNode);
@@ -168,10 +172,12 @@ class CFXJSE_Engine final : public CFX_IsolateWrapper {
 
   bool IsResolvingNodes() const { return resolving_nodes_; }
 
-  CFXJSE_Context* GetJseContextForTest() const { return GetJseContext(); }
+  CFXJSE_Context* GetJseContextForTest() { return GetJseContext(); }
+  const CFXJSE_Context* GetJseContextForTest() const { return GetJseContext(); }
 
  private:
-  CFXJSE_Context* GetJseContext() const { return js_context_.get(); }
+  CFXJSE_Context* GetJseContext() { return js_context_.get(); }
+  const CFXJSE_Context* GetJseContext() const { return js_context_.get(); }
   CFXJSE_Context* CreateVariablesContext(CXFA_Script* pScriptNode,
                                          CXFA_Node* pSubform);
   void RemoveBuiltInObjs(CFXJSE_Context* context);

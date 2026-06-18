@@ -36,7 +36,10 @@ class CPDF_SecurityHandler final : public Retainable {
   uint32_t GetPermissions(bool get_owner_perms) const;
   bool IsMetadataEncrypted() const;
 
-  CPDF_CryptoHandler* GetCryptoHandler() const { return crypto_handler_.get(); }
+  CPDF_CryptoHandler* GetCryptoHandler() { return crypto_handler_.get(); }
+  const CPDF_CryptoHandler* GetCryptoHandler() const {
+    return crypto_handler_.get();
+  }
 
   // Take |password| and encode it, if necessary, based on the password encoding
   // conversion.

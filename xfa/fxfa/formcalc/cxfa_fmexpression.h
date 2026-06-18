@@ -53,8 +53,10 @@ class CXFA_FMChainableExpression : public CXFA_FMSimpleExpression {
                              CXFA_FMSimpleExpression* pExp1,
                              CXFA_FMSimpleExpression* pExp2);
 
-  CXFA_FMSimpleExpression* GetFirstExpression() const { return exp_1_; }
-  CXFA_FMSimpleExpression* GetSecondExpression() const { return exp_2_; }
+  CXFA_FMSimpleExpression* GetFirstExpression() { return exp_1_; }
+  const CXFA_FMSimpleExpression* GetFirstExpression() const { return exp_1_; }
+  CXFA_FMSimpleExpression* GetSecondExpression() { return exp_2_; }
+  const CXFA_FMSimpleExpression* GetSecondExpression() const { return exp_2_; }
 
  private:
   cppgc::Member<CXFA_FMSimpleExpression> exp_1_;

@@ -76,15 +76,7 @@ bool CPDF_Font::IsCIDFont() const {
   return false;
 }
 
-const CPDF_Type1Font* CPDF_Font::AsType1Font() const {
-  return nullptr;
-}
-
 CPDF_Type1Font* CPDF_Font::AsType1Font() {
-  return nullptr;
-}
-
-const CPDF_TrueTypeFont* CPDF_Font::AsTrueTypeFont() const {
   return nullptr;
 }
 
@@ -92,15 +84,7 @@ CPDF_TrueTypeFont* CPDF_Font::AsTrueTypeFont() {
   return nullptr;
 }
 
-const CPDF_Type3Font* CPDF_Font::AsType3Font() const {
-  return nullptr;
-}
-
 CPDF_Type3Font* CPDF_Font::AsType3Font() {
-  return nullptr;
-}
-
-const CPDF_CIDFont* CPDF_Font::AsCIDFont() const {
   return nullptr;
 }
 
@@ -279,7 +263,7 @@ bool CPDF_Font::ShouldApplyGlyphSpacingHeuristic(
     return false;
   }
 
-  CFX_SubstFont* subst_font = current_font->GetSubstFont();
+  const CFX_SubstFont* subst_font = current_font->GetSubstFont();
   if (subst_font->IsBuiltInGenericFont()) {
     return false;
   }
@@ -524,7 +508,7 @@ std::vector<TextCharPos> CPDF_Font::GetCharPosList(
 }
 
 std::optional<FX_Charset> CPDF_Font::GetSubstFontCharset() const {
-  CFX_SubstFont* font = font_.GetSubstFont();
+  const CFX_SubstFont* font = font_.GetSubstFont();
   if (!font) {
     return std::nullopt;
   }

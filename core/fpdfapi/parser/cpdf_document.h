@@ -61,7 +61,8 @@ class CPDF_Document : public Observable,
     void SetDocument(CPDF_Document* doc) { doc_ = doc; }
 
    protected:
-    CPDF_Document* GetDocument() const { return doc_; }
+    CPDF_Document* GetDocument() { return doc_; }
+    const CPDF_Document* GetDocument() const { return doc_; }
 
    private:
     UnownedPtr<CPDF_Document> doc_;
@@ -75,7 +76,8 @@ class CPDF_Document : public Observable,
     void SetDocument(CPDF_Document* doc) { doc_ = doc; }
 
    protected:
-    CPDF_Document* GetDocument() const { return doc_; }
+    CPDF_Document* GetDocument() { return doc_; }
+    const CPDF_Document* GetDocument() const { return doc_; }
 
    private:
     UnownedPtr<CPDF_Document> doc_;
@@ -89,12 +91,14 @@ class CPDF_Document : public Observable,
                 std::unique_ptr<PageDataIface> pPageData);
   ~CPDF_Document() override;
 
-  Extension* GetExtension() const { return extension_.get(); }
+  Extension* GetExtension() { return extension_.get(); }
+  const Extension* GetExtension() const { return extension_.get(); }
   void SetExtension(std::unique_ptr<Extension> pExt) {
     extension_ = std::move(pExt);
   }
 
-  CPDF_Parser* GetParser() const { return parser_.get(); }
+  CPDF_Parser* GetParser() { return parser_.get(); }
+  const CPDF_Parser* GetParser() const { return parser_.get(); }
   const CPDF_Dictionary* GetRoot() const { return root_dict_.Get(); }
   RetainPtr<CPDF_Dictionary> GetMutableRoot() { return root_dict_; }
   RetainPtr<CPDF_Dictionary> GetInfo();
@@ -123,7 +127,6 @@ class CPDF_Document : public Observable,
   void MaybePurgeFontFileStreamAcc(RetainPtr<CPDF_StreamAcc>&& stream_acc);
   void MaybePurgeImage(uint32_t objnum);
 
-  // Returns a valid pointer, unless it is called during destruction.
   PageDataIface* GetPageData() const { return doc_page_.get(); }
   RenderDataIface* GetRenderData() const { return doc_render_.get(); }
 

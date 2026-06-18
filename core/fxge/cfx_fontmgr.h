@@ -86,9 +86,13 @@ class CFX_FontMgr {
   RetainPtr<CFX_GlyphCache> GetGlyphCache(const CFX_Font* font);
 
   // Always present.
-  CFX_FontMapper* GetBuiltinMapper() const { return builtin_mapper_.get(); }
+  CFX_FontMapper* GetBuiltinMapper() { return builtin_mapper_.get(); }
+  const CFX_FontMapper* GetBuiltinMapper() const {
+    return builtin_mapper_.get();
+  }
 
-  FXFT_LibraryRec* GetFTLibrary() const { return ft_library_.get(); }
+  FXFT_LibraryRec* GetFTLibrary() { return ft_library_.get(); }
+  const FXFT_LibraryRec* GetFTLibrary() const { return ft_library_.get(); }
 
 #if defined(PDF_USE_SKIA)
   FontBackend GetFontBackend() const { return font_backend_; }

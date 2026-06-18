@@ -219,7 +219,8 @@ class CFX_RenderDevice {
   void SetBitmap(RetainPtr<CFX_DIBitmap> bitmap);
 
   void SetDeviceDriver(std::unique_ptr<RenderDeviceDriverIface> pDriver);
-  RenderDeviceDriverIface* GetDeviceDriver() const {
+  RenderDeviceDriverIface* GetDeviceDriver() { return device_driver_.get(); }
+  const RenderDeviceDriverIface* GetDeviceDriver() const {
     return device_driver_.get();
   }
 

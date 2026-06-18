@@ -47,7 +47,8 @@ class CFGAS_GEFont final : public Retainable {
   std::optional<FX_RECT> GetCharBBox(wchar_t wUnicode);
 
   RetainPtr<CFGAS_GEFont> GetSubstFont(int32_t iGlyphIndex);
-  CFX_Font* GetDevFont() const { return font_.Get(); }
+  CFX_Font* GetDevFont() { return font_.Get(); }
+  const CFX_Font* GetDevFont() const { return font_.Get(); }
 
   void SetLogicalFontStyle(uint32_t dwLogFontStyle) {
     log_font_style_ = dwLogFontStyle;
