@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a563f60_2112f7bf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T19:13:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "145b763c_311a063c",
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b8461a43_3a242358",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-17T23:23:22Z",
       "side": 1,
       "message": "This only has 1 caller, and that caller is using it to construct other CPVT_Word instances.",
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da26bfbf_24f2ab8b",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T19:13:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b8461a43_3a242358",
       "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +94,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b43d39d_946e3ed7",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T19:13:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a32e4db0_49879d10",
+      "range": {
+        "startLine": 36,
+        "startChar": 20,
+        "endLine": 36,
+        "endChar": 22
+      },
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "233427d2_64e464ad",
@@ -71,6 +131,24 @@
       "writtenOn": "2026-06-17T23:23:22Z",
       "side": 1,
       "message": "Seems like a lot of extra work to construct a whole new object to just modify one field.",
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaad3f25_f3fcdaf3",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T19:13:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "233427d2_64e464ad",
       "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
