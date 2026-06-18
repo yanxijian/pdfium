@@ -16,6 +16,24 @@
       "message": "Keep this for std::max().",
       "revId": "d97216b41d08bd475be6d06e2cb315120590fe82",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57552cbe_4fa21002",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-18T13:32:44Z",
+      "side": 0,
+      "message": "Done. Restored \u003calgorithm\u003e since this file still uses std::max().",
+      "parentUuid": "245f6152_91f1fb0e",
+      "revId": "d97216b41d08bd475be6d06e2cb315120590fe82",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
