@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cf2b715_93a3671f",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-18T16:59:35Z",
+      "side": 1,
+      "message": "It\u0027s not strictly necessary for correctness, as the outer loop also checks `!widget_annots.empty()`. However, it\u0027s a good optimization to break out of the inner loop early. \n\nYou could move this check inside the `if (annot)` block, since `widget_annots` can only become empty after an element is actually erased.",
+      "range": {
+        "startLine": 368,
+        "startChar": 0,
+        "endLine": 368,
+        "endChar": 0
+      },
+      "revId": "fe5a5fe03fd6406b232fa2282c4502026630ca8a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
