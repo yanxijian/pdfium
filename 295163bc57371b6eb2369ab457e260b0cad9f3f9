@@ -116,6 +116,24 @@
       "parentUuid": "cc3e9dc7_8a568e1b",
       "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2be78af1_5d2a27e5",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-18T23:08:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc3e9dc7_8a568e1b",
+      "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
