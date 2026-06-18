@@ -1,0 +1,280 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42e1e564_e1db0468",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 750,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-18T00:04:29Z",
+      "side": 1,
+      "message": "nit: might have preferred page_obj as above.",
+      "range": {
+        "startLine": 750,
+        "startChar": 21,
+        "endLine": 750,
+        "endChar": 24
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "3c588763_456c6651",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 750,
+                "startChar": 0,
+                "endLine": 752,
+                "endChar": 0
+              },
+              "replacement": "    CPDF_PageObject* page_obj \u003d it-\u003eget();\n    if (!page_obj-\u003eIsActive()) {\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 755,
+                "startChar": 0,
+                "endLine": 759,
+                "endChar": 0
+              },
+              "replacement": "    if (page_obj-\u003eIsText()) {\n      ProcessTextObject(page_obj-\u003eAsText(), CFX_Matrix(), page_, it);\n    } else if (page_obj-\u003eIsForm()) {\n      ProcessFormObject(page_obj-\u003eAsForm(), CFX_Matrix());\n"
+            }
+          ]
+        }
+      ],
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27286f5f_0b9278d6",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-18T00:04:29Z",
+      "side": 1,
+      "message": "nit: missed one.",
+      "range": {
+        "startLine": 772,
+        "startChar": 31,
+        "endLine": 772,
+        "endChar": 38
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "15cc18a1_9b16ca08",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 772,
+                "startChar": 0,
+                "endLine": 774,
+                "endChar": 0
+              },
+              "replacement": "  const CPDF_PageObjectHolder* p_holder \u003d form_obj-\u003eform();\n  for (auto it \u003d p_holder-\u003ebegin(); it !\u003d p_holder-\u003eend(); ++it) {\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 780,
+                "startChar": 0,
+                "endLine": 781,
+                "endChar": 0
+              },
+              "replacement": "      ProcessTextObject(page_obj-\u003eAsText(), actual_form_matrix, p_holder, it);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7dcc3b89_569bd789",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 884,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-18T00:04:29Z",
+      "side": 1,
+      "message": "missed one, maybe obj_iter",
+      "range": {
+        "startLine": 884,
+        "startChar": 42,
+        "endLine": 884,
+        "endChar": 48
+      },
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61a9ecde_37f051b5",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-18T00:04:29Z",
+      "side": 1,
+      "message": "nit: prefer text_obj unless it conflicts.",
+      "range": {
+        "startLine": 1202,
+        "startChar": 27,
+        "endLine": 1202,
+        "endChar": 30
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "f10a36ee_275abff2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1202,
+                "startChar": 0,
+                "endLine": 1203,
+                "endChar": 0
+              },
+              "replacement": "    const CPDF_TextObject* text_object,\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1205,
+                "startChar": 0,
+                "endLine": 1206,
+                "endChar": 0
+              },
+              "replacement": "  TextOrientation WritingMode \u003d GetTextObjectWritingMode(text_object);\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1216,
+                "startChar": 0,
+                "endLine": 1218,
+                "endChar": 0
+              },
+              "replacement": "  CPDF_TextObject::Item item \u003d text_object-\u003eGetItemInfo(0);\n  const CFX_FloatRect\u0026 this_rect \u003d text_object-\u003eGetRect();\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1219,
+                "startChar": 0,
+                "endLine": 1220,
+                "endChar": 0
+              },
+              "replacement": "  WideString unicode \u003d\n      text_object-\u003eGetFont()-\u003eUnicodeFromCharCode(item.char_code_);\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1231,
+                "startChar": 0,
+                "endLine": 1232,
+                "endChar": 0
+              },
+              "replacement": "    if (EndVerticalLine(this_rect, prev_rect, curline_rect_,\n                        text_object-\u003eGetFontSize(),\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1243,
+                "startChar": 0,
+                "endLine": 1245,
+                "endChar": 0
+              },
+              "replacement": "  int nThisWidth \u003d GetCharWidth(item.char_code_, text_object-\u003eGetFont().Get());\n  float this_width \u003d fabs(nThisWidth * text_object-\u003eGetFontSize() / 1000);\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1250,
+                "startChar": 0,
+                "endLine": 1251,
+                "endChar": 0
+              },
+              "replacement": "  CFX_PointF pos \u003d\n      prev_reverse.Transform(form_matrix.Transform(text_object-\u003eGetPos()));\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1273,
+                "startChar": 0,
+                "endLine": 1274,
+                "endChar": 0
+              },
+              "replacement": "          if (re.Contains(text_object-\u003eGetPos())) {\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1276,
+                "startChar": 0,
+                "endLine": 1278,
+                "endChar": 0
+              },
+              "replacement": "            if (CFX_FloatRect(0, text_object-\u003eGetRect().bottom, 1000,\n                              text_object-\u003eGetRect().top)\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1291,
+                "startChar": 0,
+                "endLine": 1292,
+                "endChar": 0
+              },
+              "replacement": "  if (text_object-\u003eCharCount() \u003d\u003d 1 \u0026\u0026 IsHyphenCode(current_char) \u0026\u0026\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1307,
+                "startChar": 0,
+                "endLine": 1308,
+                "endChar": 0
+              },
+              "replacement": "  CFX_Matrix matrix \u003d text_object-\u003eGetTextMatrix() * form_matrix;\n"
+            },
+            {
+              "path": "core/fpdftext/cpdf_textpage.cpp",
+              "range": {
+                "startLine": 1313,
+                "startChar": 0,
+                "endLine": 1314,
+                "endChar": 0
+              },
+              "replacement": "    threshold2 *\u003d fabs(text_object-\u003eGetFontSize());\n"
+            }
+          ]
+        }
+      ],
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
