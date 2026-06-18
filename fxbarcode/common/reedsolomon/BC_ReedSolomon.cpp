@@ -36,10 +36,11 @@ CBC_ReedSolomonEncoder::CBC_ReedSolomonEncoder(CBC_ReedSolomonGF256* field)
 
 CBC_ReedSolomonEncoder::~CBC_ReedSolomonEncoder() = default;
 
-CBC_ReedSolomonGF256Poly* CBC_ReedSolomonEncoder::BuildGenerator(
+const CBC_ReedSolomonGF256Poly* CBC_ReedSolomonEncoder::BuildGenerator(
     size_t degree) {
   if (degree >= cached_generators_.size()) {
-    CBC_ReedSolomonGF256Poly* lastGenerator = cached_generators_.back().get();
+    const CBC_ReedSolomonGF256Poly* lastGenerator =
+        cached_generators_.back().get();
     for (size_t d = cached_generators_.size(); d <= degree; ++d) {
       CBC_ReedSolomonGF256Poly temp_poly(field_, {1, field_->Exp(d - 1)});
       auto nextGenerator = lastGenerator->Multiply(&temp_poly);
@@ -64,7 +65,7 @@ bool CBC_ReedSolomonEncoder::Encode(std::vector<int32_t>* toEncode,
     return false;
   }
 
-  CBC_ReedSolomonGF256Poly* generator = BuildGenerator(ecBytes);
+  const CBC_ReedSolomonGF256Poly* generator = BuildGenerator(ecBytes);
   if (!generator) {
     return false;
   }

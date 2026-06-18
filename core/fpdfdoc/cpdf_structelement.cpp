@@ -88,7 +88,13 @@ size_t CPDF_StructElement::CountKids() const {
   return kids_.size();
 }
 
-CPDF_StructElement* CPDF_StructElement::GetKidIfElement(size_t index) const {
+CPDF_StructElement* CPDF_StructElement::GetKidIfElement(size_t index) {
+  return const_cast<CPDF_StructElement*>(
+      static_cast<const CPDF_StructElement*>(this)->GetKidIfElement(index));
+}
+
+const CPDF_StructElement* CPDF_StructElement::GetKidIfElement(
+    size_t index) const {
   return kids_[index].type_ == Kid::kElement ? kids_[index].element_.Get()
                                              : nullptr;
 }

@@ -25,7 +25,7 @@ class CBC_ReedSolomonEncoder {
   bool Encode(std::vector<int32_t>* toEncode, size_t ecBytes);
 
  private:
-  CBC_ReedSolomonGF256Poly* BuildGenerator(size_t degree);
+  const CBC_ReedSolomonGF256Poly* BuildGenerator(size_t degree);
 
   UnownedPtr<CBC_ReedSolomonGF256> const field_;
   std::vector<std::unique_ptr<CBC_ReedSolomonGF256Poly>> cached_generators_;

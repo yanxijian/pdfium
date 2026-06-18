@@ -88,7 +88,7 @@ class CFWL_ComboBox final : public CFWL_Widget {
   void ShowDropDownList();
   void HideDropDownList();
 
-  CFWL_ComboEdit* GetComboEdit() const { return edit_; }
+  const CFWL_ComboEdit* GetComboEdit() const { return edit_; }
 
   void ProcessSelChanged(bool bLButtonUp);
   int32_t GetCurrentSelection() const { return cur_sel_; }

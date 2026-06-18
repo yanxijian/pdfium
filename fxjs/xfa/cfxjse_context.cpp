@@ -169,7 +169,7 @@ std::unique_ptr<CFXJSE_Context> CFXJSE_Context::Create(
   auto context = pdfium::WrapUnique(new CFXJSE_Context(pIsolate, pProxy));
   v8::Local<v8::ObjectTemplate> hObjectTemplate;
   if (pGlobalClass) {
-    CFXJSE_Class* pGlobalClassObj =
+    const CFXJSE_Class* pGlobalClassObj =
         CFXJSE_Class::Create(context.get(), pGlobalClass, true);
     hObjectTemplate =
         pGlobalClassObj->GetTemplate(pIsolate)->InstanceTemplate();
@@ -214,7 +214,8 @@ void CFXJSE_Context::AddClass(std::unique_ptr<CFXJSE_Class> pClass) {
   classes_.push_back(std::move(pClass));
 }
 
-CFXJSE_Class* CFXJSE_Context::GetClassByName(ByteStringView szName) const {
+const CFXJSE_Class* CFXJSE_Context::GetClassByName(
+    ByteStringView szName) const {
   auto pClass = std::ranges::find_if(
       classes_, [szName](const std::unique_ptr<CFXJSE_Class>& item) {
         return item->IsName(szName);

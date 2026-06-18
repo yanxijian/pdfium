@@ -80,7 +80,8 @@ std::unique_ptr<CBC_ReedSolomonGF256Poly> CBC_ReedSolomonGF256Poly::Clone()
 }
 
 std::unique_ptr<CBC_ReedSolomonGF256Poly>
-CBC_ReedSolomonGF256Poly::AddOrSubtract(const CBC_ReedSolomonGF256Poly* other) {
+CBC_ReedSolomonGF256Poly::AddOrSubtract(
+    const CBC_ReedSolomonGF256Poly* other) const {
   if (IsZero()) {
     return other->Clone();
   }
@@ -108,7 +109,7 @@ CBC_ReedSolomonGF256Poly::AddOrSubtract(const CBC_ReedSolomonGF256Poly* other) {
 }
 
 std::unique_ptr<CBC_ReedSolomonGF256Poly> CBC_ReedSolomonGF256Poly::Multiply(
-    const CBC_ReedSolomonGF256Poly* other) {
+    const CBC_ReedSolomonGF256Poly* other) const {
   if (IsZero() || other->IsZero()) {
     return field_->GetZero()->Clone();
   }
@@ -148,7 +149,7 @@ CBC_ReedSolomonGF256Poly::MultiplyByMonomial(int32_t degree,
 }
 
 std::unique_ptr<CBC_ReedSolomonGF256Poly> CBC_ReedSolomonGF256Poly::Divide(
-    const CBC_ReedSolomonGF256Poly* other) {
+    const CBC_ReedSolomonGF256Poly* other) const {
   if (other->IsZero()) {
     return nullptr;
   }

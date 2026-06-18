@@ -27,7 +27,7 @@ class CXFA_ViewLayoutItem final : public CXFA_LayoutItem {
   int32_t GetPageIndex() const;
   CFX_SizeF GetPageSize() const;
   CXFA_Node* GetMasterPage() const;
-  CXFA_Node* GetOldSubform() const { return old_subform_; }
+  const CXFA_Node* GetOldSubform() const { return old_subform_; }
   void SetOldSubform(CXFA_Node* pSubform);
 
  private:

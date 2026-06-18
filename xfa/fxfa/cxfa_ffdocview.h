@@ -67,7 +67,7 @@ class CXFA_FFDocView : public cppgc::GarbageCollected<CXFA_FFDocView> {
   void ResetNode(CXFA_Node* pNode);
   CXFA_Node* GetRootSubform();
   CXFA_FFWidgetHandler* GetWidgetHandler();
-  CXFA_FFWidget* GetFocusWidget() const { return focus_widget_; }
+  const CXFA_FFWidget* GetFocusWidget() const { return focus_widget_; }
   bool SetFocus(CXFA_FFWidget* pNewFocus);
   CXFA_FFWidget* GetWidgetForNode(CXFA_Node* node);
   CXFA_FFWidget* GetWidgetByName(const WideString& wsName,

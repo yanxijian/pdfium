@@ -204,7 +204,7 @@ class CJX_Object : public cppgc::GarbageCollected<CJX_Object>,
 
   void MergeAllData(CXFA_Object* pDstObj);
 
-  CalcData* GetCalcData() const { return calc_data_; }
+  const CalcData* GetCalcData() const { return calc_data_; }
   CalcData* GetOrCreateCalcData(cppgc::Heap* heap);
   void TakeCalcDataFrom(CJX_Object* that);
 
