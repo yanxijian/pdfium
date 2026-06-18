@@ -81,6 +81,23 @@
       "parentUuid": "9256b38d_1821eec4",
       "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc3e9dc7_8a568e1b",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T22:51:22Z",
+      "side": 1,
+      "message": "This is also worth a mention in the CL description.",
+      "revId": "295163bc57371b6eb2369ab457e260b0cad9f3f9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
