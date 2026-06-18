@@ -22,6 +22,30 @@
       },
       "revId": "fe5a5fe03fd6406b232fa2282c4502026630ca8a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e162c989_5ab6e911",
+        "filename": "fpdfsdk/fpdf_flatten.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-18T19:56:51Z",
+      "side": 1,
+      "message": "Done. Moved the empty check into the `if (annot)` block so it only runs after `widget_annots.erase()`.",
+      "parentUuid": "7cf2b715_93a3671f",
+      "range": {
+        "startLine": 368,
+        "startChar": 0,
+        "endLine": 368,
+        "endChar": 0
+      },
+      "revId": "fe5a5fe03fd6406b232fa2282c4502026630ca8a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
