@@ -16,6 +16,40 @@
       "message": "You\u0027ve wanted this for a while.  Here it is.  My pleasure.",
       "revId": "db5498606c1b36fa724ad4a2e4d47006555397b2",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d550e965_ee48ae13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T18:34:03Z",
+      "side": 1,
+      "message": "Wee!",
+      "revId": "db5498606c1b36fa724ad4a2e4d47006555397b2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8a34ed4_7b2422f4",
+        "filename": "core/fxcrt/string_view_template.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T18:34:03Z",
+      "side": 1,
+      "message": "Add a comment to explain why this is separate from the core/fxcrt/fx_extension.h version, so readers don\u0027t have to run git blame and figure it out from this CL\u0027s description.",
+      "revId": "db5498606c1b36fa724ad4a2e4d47006555397b2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
