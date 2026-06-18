@@ -451,8 +451,18 @@ bool CFX_Face::IsBold() const {
 }
 
 ByteString CFX_Face::GetFamilyName() const {
-  const ByteString ft_result(GetRec()->family_name);
+  ByteString ft_result(GetRec()->family_name);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    rust::Str skrifa_result = skrifa_font_->font->family_name();
+    CHECK_EQ(ft_result.IsEmpty(), skrifa_result.empty());
+    if (!ft_result.IsEmpty() && !skrifa_result.empty()) {
+      CHECK_EQ(ft_result, UNSAFE_BUFFERS(ByteString(skrifa_result.data(),
+                                                    skrifa_result.size())));
+    }
+  }
+#endif
   if (skia_typeface_) {
     SkString name;
     skia_typeface_->getFamilyName(&name);
@@ -502,6 +512,12 @@ uint16_t CFX_Face::GetUnitsPerEm() const {
   const uint16_t ft_result =
       pdfium::checked_cast<uint16_t>(GetRec()->units_per_EM);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result, pdfium::checked_cast<uint16_t>(
+                            skrifa_font_->font->units_per_em()));
+  }
+#endif
   if (skia_typeface_) {
     CHECK_EQ(ft_result,
              pdfium::checked_cast<uint16_t>(skia_typeface_->getUnitsPerEm()));
@@ -517,6 +533,12 @@ int CFX_Face::EmAdjust(int value) const {
 int16_t CFX_Face::GetAscender() const {
   const int16_t ft_result = pdfium::checked_cast<int16_t>(GetRec()->ascender);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result,
+             static_cast<int16_t>(std::round(skrifa_font_->font->ascent())));
+  }
+#endif
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
     SkFontMetrics metrics;
@@ -531,6 +553,12 @@ int16_t CFX_Face::GetAscender() const {
 int16_t CFX_Face::GetDescender() const {
   const int16_t ft_result = pdfium::checked_cast<int16_t>(GetRec()->descender);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result,
+             static_cast<int16_t>(std::round(skrifa_font_->font->descent())));
+  }
+#endif
   if (skia_typeface_) {
     SkFont font(skia_typeface_, GetUnitsPerEm());
     SkFontMetrics metrics;
@@ -707,6 +735,11 @@ std::optional<std::array<uint8_t, 2>> CFX_Face::GetOs2Panose() {
 int CFX_Face::GetGlyphCount() const {
   const int ft_result = pdfium::checked_cast<int>(GetRec()->num_glyphs);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    CHECK_EQ(ft_result, static_cast<int>(skrifa_font_->font->num_glyphs()));
+  }
+#endif
   if (skia_typeface_) {
     CHECK_EQ(ft_result, skia_typeface_->countGlyphs());
   }
@@ -1065,6 +1098,30 @@ int CFX_Face::GetCharIndex(uint32_t code) {
 #endif
   const int ft_result = FT_Get_Char_Index(GetRec(), code);
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    int skrifa_result = -1;
+    FT_CharMap charmap = GetRec()->charmap;
+    if (charmap) {
+      if (charmap->encoding == FT_ENCODING_UNICODE) {
+        skrifa_result =
+            static_cast<int>(skrifa_font_->font->unicode_to_gid(code));
+      } else if (skrifa_font_->font->font_type() == skrifa::FaceFormat::Type1 &&
+                 code <= 0xFF) {
+        if (charmap->encoding == FT_ENCODING_ADOBE_CUSTOM ||
+            charmap->encoding == FT_ENCODING_ADOBE_STANDARD ||
+            charmap->encoding == FT_ENCODING_ADOBE_EXPERT ||
+            charmap->encoding == FT_ENCODING_APPLE_ROMAN) {
+          skrifa_result = static_cast<int>(
+              skrifa_font_->font->code_to_gid(static_cast<uint8_t>(code)));
+        }
+      }
+    }
+    if (skrifa_result != -1) {
+      CHECK_EQ(ft_result, skrifa_result);
+    }
+  }
+#endif
   if (skia_typeface_) {
     FT_CharMap charmap = GetRec()->charmap;
     if (charmap && charmap->encoding == FT_ENCODING_UNICODE) {
@@ -1118,6 +1175,17 @@ int CFX_Face::LoadGlyph(uint32_t glyph_index, bool scale) {
 ByteString CFX_Face::GetPostscriptName() {
   const char* ft_result = FT_Get_Postscript_Name(GetRec());
 #if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+#if defined(PDF_ENABLE_FONTATIONS)
+  if (skrifa_font_ && skrifa_font_->font->is_ok()) {
+    rust::Str skrifa_result = skrifa_font_->font->postscript_name();
+    CHECK_EQ(!ft_result, skrifa_result.empty());
+    if (ft_result && !skrifa_result.empty()) {
+      CHECK_EQ(ByteString(ft_result),
+               UNSAFE_BUFFERS(
+                   ByteString(skrifa_result.data(), skrifa_result.size())));
+    }
+  }
+#endif
   if (skia_typeface_) {
     SkString name;
     if (skia_typeface_->getPostScriptName(&name)) {
