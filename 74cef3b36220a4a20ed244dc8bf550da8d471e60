@@ -52,6 +52,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fc33693_a3f6f91b",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 750,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T17:51:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42e1e564_e1db0468",
+      "range": {
+        "startLine": 750,
+        "startChar": 21,
+        "endLine": 750,
+        "endChar": 24
+      },
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27286f5f_0b9278d6",
@@ -103,6 +127,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f2183db_4b5815be",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T17:51:06Z",
+      "side": 1,
+      "message": "Done. Wasn\u0027t trying super hard to catch them all.",
+      "parentUuid": "27286f5f_0b9278d6",
+      "range": {
+        "startLine": 772,
+        "startChar": 31,
+        "endLine": 772,
+        "endChar": 38
+      },
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7dcc3b89_569bd789",
@@ -116,6 +164,30 @@
       "writtenOn": "2026-06-18T00:04:29Z",
       "side": 1,
       "message": "missed one, maybe obj_iter",
+      "range": {
+        "startLine": 884,
+        "startChar": 42,
+        "endLine": 884,
+        "endChar": 48
+      },
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0e43e8a_8e2a4ea4",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 884,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T17:51:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7dcc3b89_569bd789",
       "range": {
         "startLine": 884,
         "startChar": 42,
@@ -273,6 +345,30 @@
           ]
         }
       ],
+      "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33b0844a_86c8157a",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T17:51:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "61a9ecde_37f051b5",
+      "range": {
+        "startLine": 1202,
+        "startChar": 27,
+        "endLine": 1202,
+        "endChar": 30
+      },
       "revId": "74cef3b36220a4a20ed244dc8bf550da8d471e60",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
