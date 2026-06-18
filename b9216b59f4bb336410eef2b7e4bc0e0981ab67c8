@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "257d90ab_549bda12",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-18T20:44:23Z",
+      "side": 1,
+      "message": "I was hoping the compiler would have figured it out and fired a warning, but the `WordPlace` member variable is never read. Can you try removing it?",
+      "parentUuid": "da26bfbf_24f2ab8b",
+      "revId": "b9216b59f4bb336410eef2b7e4bc0e0981ab67c8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a32e4db0_49879d10",
         "filename": "core/fpdfdoc/cpvt_word.h",
         "patchSetId": 2
