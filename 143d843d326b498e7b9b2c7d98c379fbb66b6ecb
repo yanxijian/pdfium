@@ -69,6 +69,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96361384_5e377b04",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4596105
+      },
+      "writtenOn": "2026-06-19T14:29:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "feaa33cb_b43ab1bc",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "762fa94d_e1d640ff",
@@ -86,6 +104,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bac39ce_3dd83d8e",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 4596105
+      },
+      "writtenOn": "2026-06-19T14:29:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "762fa94d_e1d640ff",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "af644599_45032474",
@@ -99,6 +135,24 @@
       "writtenOn": "2026-06-16T13:07:52Z",
       "side": 1,
       "message": "Nit: how about we drop _normal_display? I would say it is pretty much the default (i.e. if there is nothing there it is usually assumed to be _normal_display)",
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "037324fd_0a8379ac",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 4596105
+      },
+      "writtenOn": "2026-06-19T14:29:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af644599_45032474",
       "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -126,6 +180,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb677c39_5fcd35f7",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 4596105
+      },
+      "writtenOn": "2026-06-19T14:29:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceeb1d1a_ff63a0ff",
+      "range": {
+        "startLine": 167,
+        "startChar": 10,
+        "endLine": 167,
+        "endChar": 11
+      },
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ed111a7_1c27c6db",
@@ -139,6 +217,30 @@
       "writtenOn": "2026-06-16T13:07:52Z",
       "side": 1,
       "message": "I also notice a key difference here: in the previous test the flag is set to FPDF_ANNOT_FLAG_NOVIEW directly, however this one seems to add FPDF_ANNOT_FLAG_NOVIEW and FPDF_ANNOT_FLAG_PRINT to the existing flags and then render it.\n\nWould like if the tests have a similar structure.",
+      "range": {
+        "startLine": 180,
+        "startChar": 4,
+        "endLine": 180,
+        "endChar": 60
+      },
+      "revId": "143d843d326b498e7b9b2c7d98c379fbb66b6ecb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d931dfc_0a954ede",
+        "filename": "fpdfsdk/fpdf_flatten_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 4596105
+      },
+      "writtenOn": "2026-06-19T14:29:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ed111a7_1c27c6db",
       "range": {
         "startLine": 180,
         "startChar": 4,
