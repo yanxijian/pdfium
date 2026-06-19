@@ -69,6 +69,24 @@
       "parentUuid": "658dfd26_c4719310",
       "revId": "e3aad02e98dab34307b929b90c7c00c59da0df9c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45bc3e5f_5615d63f",
+        "filename": "xfa/fgas/layout/cfgas_char.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-19T21:35:59Z",
+      "side": 1,
+      "message": "yes, should be correct now!\nDropped the constant and inlined `0x0F` at the use sites. Kept the `kNibbleBits`/`kNibbleMask` cleanup.",
+      "parentUuid": "ac5f3919_a4561f1e",
+      "revId": "e3aad02e98dab34307b929b90c7c00c59da0df9c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
