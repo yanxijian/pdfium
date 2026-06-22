@@ -1,0 +1,187 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "901aefae_d8f15ece",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Either write \"Introduces\" lowercase, or just write \"Introduce a new ...\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22bfcd96_81221eab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Use active voice. \"add Foo() to get foo\".",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 14,
+        "endChar": 19
+      },
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63d72f2f_a68f0953",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "/C",
+      "range": {
+        "startLine": 14,
+        "startChar": 29,
+        "endLine": 14,
+        "endChar": 32
+      },
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad01f3e4_ce3a0b98",
+        "filename": "core/fpdfdoc/cpdf_bookmark.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Style: No capital letters in variable names.",
+      "range": {
+        "startLine": 61,
+        "startChar": 30,
+        "endLine": 61,
+        "endChar": 39
+      },
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a491ce15_08b61d02",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Write the type out. Most readers will not be able to do this type deduction in their head.",
+      "range": {
+        "startLine": 201,
+        "startChar": 2,
+        "endLine": 201,
+        "endChar": 6
+      },
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1465062c_059487ba",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "What about color component values less than 0?",
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9f3e902_007105a8",
+        "filename": "testing/resources/bookmarks_color.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Maybe consistently write 1 operator per line. Space in front of Tj.",
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "753d1649_791f270a",
+        "filename": "testing/resources/bookmarks_color.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "For better test coverage, how about having bookmark nodes with these properties?\n- No /C\n- /C is not an array\n- /C is an array, but with the wrong number of elements\n- /C with 3 elements, but out of range array element value \u003e 1\n- /C with 3 elements, but out of range array element value \u003c 0\n- Perfectly valid /C value",
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb00f763_a15b0836",
+        "filename": "testing/resources/bookmarks_color.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:21:41Z",
+      "side": 1,
+      "message": "Here, line 98, and others - no spaces immediately inside the brackets. i.e. Be consistent with line 40.",
+      "revId": "d912a80ac7ff673cf9c06ccd0e6e1b295f7f15cb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
