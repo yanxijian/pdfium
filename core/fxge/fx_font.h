@@ -10,6 +10,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include <optional>
 #include <vector>
 
 #include "core/fxcrt/bytestring.h"
@@ -83,6 +84,19 @@ FX_RECT GetGlyphsBBox(const std::vector<TextGlyphPos>& glyphs,
 
 ByteString GetNameFromTT(pdfium::span<const uint8_t> name_table, uint32_t name);
 uint32_t GetTTCIndex(pdfium::span<const uint8_t> font_data, size_t font_offset);
+
+struct FontTableLocation {
+  uint32_t offset;
+  uint32_t size;
+};
+
+std::optional<FontTableLocation> FindFontTable(
+    pdfium::span<const uint8_t> table_dir,
+    uint32_t tag);
+
+pdfium::span<const uint8_t> GetFontTable(pdfium::span<const uint8_t> font_data,
+                                         uint32_t tag,
+                                         size_t face_offset);
 
 inline bool FontStyleIsForceBold(uint32_t style) {
   return !!(style & pdfium::kFontStyleForceBold);
