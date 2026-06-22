@@ -11,7 +11,9 @@
 
 #include "core/fpdfapi/parser/cpdf_array.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
+#include "core/fpdfapi/parser/cpdf_number.h"
 #include "core/fpdfapi/parser/cpdf_string.h"
+#include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/dib/fx_dib.h"
 
 CPDF_Bookmark::CPDF_Bookmark() = default;
@@ -50,6 +52,20 @@ CPDF_Dest CPDF_Bookmark::GetDest(CPDF_Document* document) const {
 
 CPDF_Action CPDF_Bookmark::GetAction() const {
   return CPDF_Action(dict_ ? dict_->GetDictFor("A") : nullptr);
+}
+
+std::optional<FX_RGB_STRUCT<float>> CPDF_Bookmark::GetColor() const {
+  if (!dict_) {
+    return std::nullopt;
+  }
+  RetainPtr<const CPDF_Array> RGB_array = dict_->GetArrayFor("C");
+  if (!RGB_array || RGB_array->size() != 3) {
+    return std::nullopt;
+  }
+  float red = RGB_array->GetNumberAt(0)->GetNumber();
+  float green = RGB_array->GetNumberAt(1)->GetNumber();
+  float blue = RGB_array->GetNumberAt(2)->GetNumber();
+  return {{red, green, blue}};
 }
 
 int CPDF_Bookmark::GetCount() const {
