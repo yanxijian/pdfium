@@ -79,6 +79,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a436447d_90f80678",
+        "filename": "core/fpdfdoc/cpdf_bookmark.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-22T19:55:50Z",
+      "side": 1,
+      "message": "Yep mb, forgot c++ existed for a second and decided to do it the struct way (as with public API sometimes).\n\nDone.",
+      "parentUuid": "61665e2a_c5eb97b8",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 0
+      },
+      "revId": "34b253aef30c779880ae6678b993233ab1e3a380",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea0b84da_c7cc7d6a",
@@ -116,6 +140,30 @@
           ]
         }
       ],
+      "revId": "34b253aef30c779880ae6678b993233ab1e3a380",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d27b34e_53e558ec",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-22T19:55:50Z",
+      "side": 1,
+      "message": "Forgot about that, edited now.\n\nBut... I am so confused... where did EXEs come from?",
+      "parentUuid": "ea0b84da_c7cc7d6a",
+      "range": {
+        "startLine": 148,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 67
+      },
       "revId": "34b253aef30c779880ae6678b993233ab1e3a380",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
