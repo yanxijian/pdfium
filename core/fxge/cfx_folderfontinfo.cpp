@@ -96,31 +96,6 @@ ByteString CFX_FolderFontInfo::ReadStringFromFile(FILE* pFile, uint32_t size) {
   return result;
 }
 
-// static
-ByteString CFX_FolderFontInfo::LoadTableFromTT(FILE* pFile,
-                                               const uint8_t* pTables,
-                                               uint32_t nTables,
-                                               uint32_t tag,
-                                               FX_FILESIZE fileSize) {
-  UNSAFE_TODO({
-    for (uint32_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): use actual span.
-      auto p = pdfium::span(pTables + i * 16, 16u);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == tag) {
-        uint32_t offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        uint32_t size = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-        if (offset > std::numeric_limits<uint32_t>::max() - size ||
-            static_cast<FX_FILESIZE>(offset + size) > fileSize ||
-            fseek(pFile, offset, SEEK_SET) < 0) {
-          return ByteString();
-        }
-        return ReadStringFromFile(pFile, size);
-      }
-    }
-  });
-  return ByteString();
-}
-
 CFX_FolderFontInfo::CFX_FolderFontInfo() = default;
 
 CFX_FolderFontInfo::~CFX_FolderFontInfo() = default;
@@ -176,7 +151,6 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
 
   fseek(pFile.get(), 0, SEEK_END);
-
   FX_FILESIZE filesize = ftell(pFile.get());
   fseek(pFile.get(), 0, SEEK_SET);
 
@@ -184,6 +158,7 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   if (fxcrt::spanread(buffer, pFile.get()).size() != sizeof(buffer)) {
     return;
   }
+
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
     ReportFace(path, pFile.get(), filesize, 0);
@@ -223,27 +198,31 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     return;
   }
 
-  uint32_t nTables =
-      fxcrt::GetUInt16MSBFirst(pdfium::as_byte_span(buffer).subspan<4, 2>());
+  uint16_t nTables =
+      fxcrt::GetUInt16MSBFirst(pdfium::span(buffer).subspan<4, 2>());
   ByteString tables = ReadStringFromFile(pFile, nTables * 16);
   if (tables.IsEmpty()) {
     return;
   }
 
-  static constexpr uint32_t kNameTag =
-      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
-  ByteString names = LoadTableFromTT(pFile, tables.unsigned_str(), nTables,
-                                     kNameTag, filesize);
-  if (names.IsEmpty()) {
+  uint32_t name_tag = CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  auto loc = FindFontTable(tables.unsigned_span(), name_tag);
+  if (!loc) {
     return;
   }
 
-  ByteString facename = GetNameFromTT(names.unsigned_span(), 1);
+  auto names_data = FixedSizeDataVector<uint8_t>::Uninit(loc->size);
+  if (fseek(pFile, loc->offset, SEEK_SET) < 0 ||
+      fxcrt::spanread(names_data.span(), pFile).size() != loc->size) {
+    return;
+  }
+
+  ByteString facename = GetNameFromTT(names_data.span(), 1);
   if (facename.IsEmpty()) {
     return;
   }
 
-  ByteString style = GetNameFromTT(names.unsigned_span(), 2);
+  ByteString style = GetNameFromTT(names_data.span(), 2);
   if (style != "Regular") {
     facename += " " + style;
   }
@@ -256,10 +235,18 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
       std::make_unique<FontFaceInfo>(path, facename, tables, offset, filesize);
   static constexpr uint32_t kOs2Tag =
       CFX_FontMapper::MakeTag('O', 'S', '/', '2');
-  ByteString os2 =
-      LoadTableFromTT(pFile, tables.unsigned_str(), nTables, kOs2Tag, filesize);
-  if (os2.GetLength() >= 86) {
-    pdfium::span<const uint8_t> p = os2.unsigned_span().subspan(78u);
+  auto os2_loc = FindFontTable(tables.unsigned_span(), kOs2Tag);
+  FixedSizeDataVector<uint8_t> os2_data;
+  if (os2_loc && os2_loc->size >= 86 &&
+      os2_loc->offset + os2_loc->size <= filesize) {
+    os2_data = FixedSizeDataVector<uint8_t>::Uninit(os2_loc->size);
+    if (fseek(pFile, os2_loc->offset, SEEK_SET) < 0 ||
+        fxcrt::spanread(os2_data.span(), pFile).size() != os2_loc->size) {
+      os2_data = FixedSizeDataVector<uint8_t>();
+    }
+  }
+  if (os2_data.size() >= 86) {
+    pdfium::span<const uint8_t> p = os2_data.span().subspan(78u);
     // `codepages` corresponds to OS/2 table ulCodePageRange1.
     // See https://learn.microsoft.com/en-us/typography/opentype/spec/os2
     uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
@@ -330,11 +317,15 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
   }
   static constexpr uint32_t kMaxpTag =
       CFX_FontMapper::MakeTag('m', 'a', 'x', 'p');
-  ByteString maxp = LoadTableFromTT(pFile, tables.unsigned_str(), nTables,
-                                    kMaxpTag, filesize);
-  if (maxp.GetLength() >= 6) {
-    pdfium::span<const uint8_t> p = maxp.unsigned_span().subspan(4u);
-    pInfo->glyph_count_ = fxcrt::GetUInt16MSBFirst(p.first<2u>());
+  auto maxp_loc = FindFontTable(tables.unsigned_span(), kMaxpTag);
+  if (maxp_loc && maxp_loc->size >= 6 &&
+      maxp_loc->offset + maxp_loc->size <= filesize) {
+    auto maxp_data = FixedSizeDataVector<uint8_t>::Uninit(maxp_loc->size);
+    if (fseek(pFile, maxp_loc->offset, SEEK_SET) >= 0 &&
+        fxcrt::spanread(maxp_data.span(), pFile).size() == maxp_loc->size) {
+      pInfo->glyph_count_ =
+          fxcrt::GetUInt16MSBFirst(maxp_data.span().subspan<4u, 2u>());
+    }
   }
   mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FX_CharsetFlag::kANSI;
@@ -440,6 +431,7 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   }
 
   const FontFaceInfo* font = static_cast<FontFaceInfo*>(hFont);
+
   uint32_t datasize = 0;
   uint32_t offset = 0;
   if (table == SystemFontInfoIface::kTableNone) {
@@ -447,15 +439,10 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   } else if (table == SystemFontInfoIface::kTableTTCF) {
     datasize = font->font_offset_ ? font->file_size_ : 0;
   } else {
-    size_t nTables = font->font_tables_.GetLength() / 16;
-    for (size_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): iterate over span.
-      pdfium::span<const uint8_t> p =
-          font->font_tables_.unsigned_span().subspan(i * 16);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == table) {
-        offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        datasize = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-      }
+    auto loc = FindFontTable(font->font_tables_.unsigned_span(), table);
+    if (loc) {
+      datasize = loc->size;
+      offset = loc->offset;
     }
   }
 
