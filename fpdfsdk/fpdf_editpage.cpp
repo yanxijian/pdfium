@@ -51,6 +51,10 @@
 
 namespace {
 
+constexpr int kMinutesPerHour = 60;
+constexpr int kHoursPerDay = 24;
+constexpr int kMinutesPerDay = kMinutesPerHour * kHoursPerDay;
+
 static_assert(FPDF_PAGEOBJ_TEXT ==
                   static_cast<int>(CPDF_PageObject::Type::kText),
               "FPDF_PAGEOBJ_TEXT/CPDF_PageObject::TEXT mismatch");
@@ -171,6 +175,51 @@ ParamsAndObject SetParamValueHelper(FPDF_DOCUMENT document,
   return {params, page_obj};
 }
 
+int64_t DaysSinceEpoch(const tm& time) {
+  int year = time.tm_year + 1900;
+  const int month = time.tm_mon + 1;
+  const int day = time.tm_mday;
+  year -= month <= 2 ? 1 : 0;
+  const int era = (year >= 0 ? year : year - 399) / 400;
+  const unsigned year_of_era = static_cast<unsigned>(year - era * 400);
+  const unsigned month_of_year =
+      static_cast<unsigned>(month > 2 ? month - 3 : month + 9);
+  const unsigned day_of_year =
+      (153 * month_of_year + 2) / 5 + static_cast<unsigned>(day) - 1;
+  const unsigned day_of_era =
+      year_of_era * 365 + year_of_era / 4 - year_of_era / 100 + day_of_year;
+  return era * 146097 + static_cast<int>(day_of_era) - 719468;
+}
+
+int TimeZoneOffsetInMinutes(const tm& local_time, const tm& utc_time) {
+  const int64_t day_offset =
+      DaysSinceEpoch(local_time) - DaysSinceEpoch(utc_time);
+  return static_cast<int>(day_offset * kMinutesPerDay +
+                          (local_time.tm_hour - utc_time.tm_hour) *
+                              kMinutesPerHour +
+                          local_time.tm_min - utc_time.tm_min);
+}
+
+ByteString FormatPDFDate(time_t current_time, tm local_time) {
+  tm* utc_time = gmtime(&current_time);
+  if (!utc_time) {
+    return ByteString::Format("D:%04d%02d%02d%02d%02d%02d",
+                              local_time.tm_year + 1900, local_time.tm_mon + 1,
+                              local_time.tm_mday, local_time.tm_hour,
+                              local_time.tm_min, local_time.tm_sec);
+  }
+
+  const int offset_minutes = TimeZoneOffsetInMinutes(local_time, *utc_time);
+  const int abs_offset_minutes =
+      offset_minutes < 0 ? -offset_minutes : offset_minutes;
+  return ByteString::Format(
+      "D:%04d%02d%02d%02d%02d%02d%c%02d'%02d'", local_time.tm_year + 1900,
+      local_time.tm_mon + 1, local_time.tm_mday, local_time.tm_hour,
+      local_time.tm_min, local_time.tm_sec, offset_minutes < 0 ? '-' : '+',
+      abs_offset_minutes / kMinutesPerHour,
+      abs_offset_minutes % kMinutesPerHour);
+}
+
 }  // namespace
 
 FPDF_EXPORT FPDF_DOCUMENT FPDF_CALLCONV FPDF_CreateNewDocument() {
@@ -185,9 +234,7 @@ FPDF_EXPORT FPDF_DOCUMENT FPDF_CALLCONV FPDF_CreateNewDocument() {
     if (FXSYS_time(&currentTime) != -1) {
       tm* pTM = FXSYS_localtime(&currentTime);
       if (pTM) {
-        DateStr = ByteString::Format(
-            "D:%04d%02d%02d%02d%02d%02d", pTM->tm_year + 1900, pTM->tm_mon + 1,
-            pTM->tm_mday, pTM->tm_hour, pTM->tm_min, pTM->tm_sec);
+        DateStr = FormatPDFDate(currentTime, *pTM);
       }
     }
   }
