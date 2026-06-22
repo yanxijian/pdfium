@@ -52,6 +52,20 @@ CPDF_Action CPDF_Bookmark::GetAction() const {
   return CPDF_Action(dict_ ? dict_->GetDictFor("A") : nullptr);
 }
 
+ColorReturn CPDF_Bookmark::GetColor() const {
+  if (!dict_) {
+    return {false, {0.0f, 0.0f, 0.0f}};
+  }
+  CPDF_Array RGB_array = dict_->GetArrayFor("C");
+  if (RGB_array.size() != 3) {
+    return {false, {0.0f, 0.0f, 0.0f}};
+  }
+  float red = RGB_array.GetNumberAt(0).GetFloat();
+  float green = RGB_array.GetNumberAt(1).GetFloat();
+  float blue = RGB_array.GetNumberAt(2).GetFloat();
+  return {true, {red, green, blue}};
+}
+
 int CPDF_Bookmark::GetCount() const {
   return dict_->GetIntegerFor("Count");
 }
