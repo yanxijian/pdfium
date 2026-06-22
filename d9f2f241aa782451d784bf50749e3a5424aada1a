@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90bd14c1_4b815da0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T22:26:31Z",
+      "side": 1,
+      "message": "Maybe.  Didn\u0027t see an open on for Chrome, only V8, filed one for PDFium",
+      "parentUuid": "14a9be5a_af6e7179",
+      "revId": "d9f2f241aa782451d784bf50749e3a5424aada1a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "200efd04_81e4dcaf",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-22T21:07:20Z",
       "side": 1,
       "message": "Maybe a slightly more descriptive name like \"src_remainder_buf_\"?",
+      "range": {
+        "startLine": 133,
+        "startChar": 30,
+        "endLine": 133,
+        "endChar": 38
+      },
+      "revId": "d9f2f241aa782451d784bf50749e3a5424aada1a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01717917_96bcc7fa",
+        "filename": "core/fpdfapi/page/cpdf_dib.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T22:26:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "200efd04_81e4dcaf",
       "range": {
         "startLine": 133,
         "startChar": 30,
