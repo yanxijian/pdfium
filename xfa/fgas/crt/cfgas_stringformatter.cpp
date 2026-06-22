@@ -1359,17 +1359,20 @@ bool CFGAS_StringFormatter::ParseNum(LocaleMgrIface* pLocaleMgr,
         ccf--;
         break;
       case 'E': {
-        iExponent = 0;
+        pdfium::CheckedNumeric<int32_t> safeExponent = 0;
         bool bExpSign = false;
+        pdfium::CheckedNumeric<int32_t> safeMultiplier = 1;
         while (cc < spSrcNum.size()) {
           if (spSrcNum[cc] == 'E' || spSrcNum[cc] == 'e') {
             break;
           }
           if (FXSYS_IsDecimalDigit(spSrcNum[cc])) {
-            if (iExponent > std::numeric_limits<int>::max() / 10) {
+            int32_t digit = FXSYS_DecimalCharToInt(spSrcNum[cc]);
+            safeExponent += safeMultiplier * digit;
+            safeMultiplier *= 10;
+            if (!safeExponent.IsValid() || !safeMultiplier.IsValid()) {
               return false;
             }
-            iExponent = iExponent + FXSYS_DecimalCharToInt(spSrcNum[cc]) * 10;
             cc--;
             continue;
           }
@@ -1388,6 +1391,10 @@ bool CFGAS_StringFormatter::ParseNum(LocaleMgrIface* pLocaleMgr,
           return false;
         }
         cc--;
+        if (!safeExponent.IsValid()) {
+          return false;
+        }
+        iExponent = safeExponent.ValueOrDie();
         iExponent = bExpSign ? -iExponent : iExponent;
         ccf--;
         break;
