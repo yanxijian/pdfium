@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d1c55f9_5fa34503",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1394,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T21:11:01Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by autoreview issue finding: This check is redundant because `safeExponent` is initialized to 0 (which is valid), and any mutations to it inside the loop immediately return `false` if it becomes invalid. You can safely remove lines 1394-1396 and directly assign the value on line 1397.",
+      "range": {
+        "startLine": 1394,
+        "startChar": 0,
+        "endLine": 1394,
+        "endChar": 0
+      },
+      "revId": "5314f3e35dc9b938a0d6ffc5b7c805027d4348ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
