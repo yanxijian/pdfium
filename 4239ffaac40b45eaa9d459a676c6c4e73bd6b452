@@ -1,0 +1,333 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b544b4ea_00c56c83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "Thanks for taking this on. Mostly questions about how to re-organize your work for modularization.",
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bd6bc2e_1bae9558",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "nit: blank line after this header but not before to group c/c++ includes into sections.",
+      "fixSuggestions": [
+        {
+          "fixId": "a2055419_c2acc723",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 6,
+                "startChar": 0,
+                "endLine": 7,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b685908d_25364d04",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure we\u0027ve got a mechanism to set fake local time for other tests ... see fake_time_test.cpp. Maybe this can be moved there or otherwise re-used.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 19
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "667a734f_0b38f8eb",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "#include \"testing/fake_time_test.h\"\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 77,
+                "startChar": 0,
+                "endLine": 95,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 404,
+                "startChar": 0,
+                "endLine": 406,
+                "endChar": 0
+              },
+              "replacement": "  // Set fake time to 2020-04-23 10:35:21 UTC+07:30\n  pdfium::FakeTimeScope time_scope(1587611121, 2020, 4, 23, 10, 35, 21);\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 407,
+                "startChar": 0,
+                "endLine": 409,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81656bfa_58dfc475",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "I didn\u0027t see where 7 extra bytes were introduced prior to these size recalculations.",
+      "range": {
+        "startLine": 293,
+        "startChar": 0,
+        "endLine": 293,
+        "endChar": 28
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "168a3e80_c9aa414f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 293,
+                "startChar": 0,
+                "endLine": 294,
+                "endChar": 0
+              },
+              "replacement": "    \"0000000206 00000 n\\r\\n\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbca5bf4_781fe3cc",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "Use fxcrt::AutoRestorer here if possible.",
+      "range": {
+        "startLine": 407,
+        "startChar": 0,
+        "endLine": 407,
+        "endChar": 32
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "afa36a11_aabd0bdd",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "#include \"core/fxcrt/scoped_time_functions.h\"\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 404,
+                "startChar": 0,
+                "endLine": 406,
+                "endChar": 0
+              },
+              "replacement": "  fxcrt::ScopedTimeFunction time_scope(FakeTime);\n  fxcrt::ScopedLocaltimeFunction localtime_scope(FakeLocaltime);\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+              "range": {
+                "startLine": 407,
+                "startChar": 0,
+                "endLine": 409,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bf0f0fd_ce3b63e3",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "Because `local_time` and `utc_time` represent the exact same moment in time, their difference is bounded by the maximum timezone offsets (which range from -12 to +14 hours). This means the two timestamps will only ever be at most 1 day apart.\n\nWe don\u0027t need a full epoch conversion to find the difference in days. We can just compare `tm_mday`. If the difference is `\u003e 1` or `\u003c -1`, we know it wrapped around a month or year boundary and can safely map it to `-1` or `1`.\n\nYou can drop `DaysSinceEpoch()` entirely and simplify the calculation to:\n\n```cpp\nint TimeZoneOffsetInMinutes(const tm\u0026 local_time, const tm\u0026 utc_time) {\n  int day_offset \u003d local_time.tm_mday - utc_time.tm_mday;\n  if (day_offset \u003e 1) {\n    day_offset \u003d -1;\n  } else if (day_offset \u003c -1) {\n    day_offset \u003d 1;\n  }\n\n  return day_offset * kMinutesPerDay +\n         (local_time.tm_hour - utc_time.tm_hour) * kMinutesPerHour +\n         (local_time.tm_min - utc_time.tm_min);\n}\n```",
+      "range": {
+        "startLine": 178,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 0
+      },
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "849cd73b_8fcdf8bf",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T16:40:20Z",
+      "side": 1,
+      "message": "Maybe this should go into fx_extension.{h,cpp} as FXSYS_TimeZoneOffsetMinutes() instead of here.",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 71
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8276dc03_5db4f872",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_editpage.cpp",
+              "range": {
+                "startLine": 54,
+                "startChar": 0,
+                "endLine": 58,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "fpdfsdk/fpdf_editpage.cpp",
+              "range": {
+                "startLine": 178,
+                "startChar": 0,
+                "endLine": 203,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "fpdfsdk/fpdf_editpage.cpp",
+              "range": {
+                "startLine": 212,
+                "startChar": 0,
+                "endLine": 213,
+                "endChar": 0
+              },
+              "replacement": "  const int offset_minutes \u003d FXSYS_TimeZoneOffsetInMinutes(local_time, *utc_time);\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_editpage.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  constexpr int kMinutesPerHour \u003d 60;\n"
+            }
+          ]
+        }
+      ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
