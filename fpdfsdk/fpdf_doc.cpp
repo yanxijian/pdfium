@@ -191,6 +191,26 @@ FPDFBookmark_GetAction(FPDF_BOOKMARK bookmark) {
   return FPDFActionFromCPDFDictionary(cBookmark.GetAction().GetDict());
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFBookmark_GetColor(FPDF_BOOKMARK bookmark, float* R, float* G, float* B) {
+  if (!bookmark || !R || !G || !B) {
+    return false;
+  }
+  CPDF_Bookmark cpdf_bookmark(
+      pdfium::WrapRetain(CPDFDictionaryFromFPDFBookmark(bookmark)));
+  ColorReturn ret = cpdf_bookmark.GetColor();
+  if (!ret.success) {
+    return false;
+  }
+  if (ret.color.red > 1 || ret.color.green > 1 || ret.color.blue > 1) {
+    return false;
+  }
+  *R = ret.color.red;
+  *G = ret.color.green;
+  *B = ret.color.blue;
+  return true;
+}
+
 FPDF_EXPORT unsigned long FPDF_CALLCONV FPDFAction_GetType(FPDF_ACTION action) {
   if (!action) {
     return PDFACTION_UNSUPPORTED;
