@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "98943436_17e13a87",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:42:21Z",
+      "side": 1,
+      "message": "Add Bug:",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0aaf11a7_a09aa548",
         "filename": "core/fxge/cfx_face.cpp",
         "patchSetId": 12
@@ -37,6 +54,29 @@
       "writtenOn": "2026-06-22T23:39:27Z",
       "side": 1,
       "message": "Move into anonymous namespace.",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca93be18_f1688574",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 1392,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:42:21Z",
+      "side": 1,
+      "message": "Is this needed? What build config cares if the parameter is unused?",
+      "range": {
+        "startLine": 1392,
+        "startChar": 4,
+        "endLine": 1392,
+        "endChar": 21
+      },
       "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
