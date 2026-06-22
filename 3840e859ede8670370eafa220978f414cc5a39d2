@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46f48200_e6fc4322",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T17:43:33Z",
+      "side": 1,
+      "message": "The previous logic using `LoadTableFromTT()` validated that `offset` and `size` were within the bounds of `filesize` before attempting to allocate memory or read from the file. You should add a similar bounds check here to avoid potentially allocating a huge amount of memory for `names_data` if `loc-\u003esize` is maliciously crafted, and to prevent integer overflow.\n\nSomething like:\n```cpp\nif (loc-\u003eoffset \u003e filesize || loc-\u003esize \u003e filesize - loc-\u003eoffset) {\n  return;\n}\n```",
+      "range": {
+        "startLine": 214,
+        "startChar": 0,
+        "endLine": 214,
+        "endChar": 0
+      },
+      "revId": "3840e859ede8670370eafa220978f414cc5a39d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d027d633_0d65a911",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T17:43:33Z",
+      "side": 1,
+      "message": "There is a potential integer overflow here because `os2_loc-\u003eoffset` and `os2_loc-\u003esize` are both `uint32_t`. If their sum exceeds `UINT32_MAX`, it will wrap around to a small value, bypassing the `filesize` check.\n\nConsider rewriting this to avoid overflow:\n```cpp\nif (os2_loc \u0026\u0026 os2_loc-\u003esize \u003c\u003d filesize \u0026\u0026 os2_loc-\u003eoffset \u003c\u003d filesize - os2_loc-\u003esize) {\n```",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 242,
+        "endChar": 0
+      },
+      "revId": "3840e859ede8670370eafa220978f414cc5a39d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98b500cd_bc89a0ec",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T17:43:33Z",
+      "side": 1,
+      "message": "Similar to `os2_loc` above, this can overflow and bypass the `filesize` check. Please use a safe integer addition or rearranged check.",
+      "range": {
+        "startLine": 318,
+        "startChar": 0,
+        "endLine": 318,
+        "endChar": 0
+      },
+      "revId": "3840e859ede8670370eafa220978f414cc5a39d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4c12d6c_b1ba3a6c",
+        "filename": "core/fxge/fx_font.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-22T17:43:33Z",
+      "side": 1,
+      "message": "If `face_offset` is very large, `face_offset + 12` could overflow `size_t` and wrap around, bypassing this check. \n\nConsider using:\n```cpp\nif (face_offset \u003e font_data.size() || font_data.size() - face_offset \u003c 12) {\n```",
+      "range": {
+        "startLine": 186,
+        "startChar": 0,
+        "endLine": 186,
+        "endChar": 0
+      },
+      "revId": "3840e859ede8670370eafa220978f414cc5a39d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
