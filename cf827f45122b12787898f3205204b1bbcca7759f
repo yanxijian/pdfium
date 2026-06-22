@@ -35,6 +35,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e359ad8_13ede73f",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "151da2d4_b09472f2",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "66462ed3_3dca1ec1",
@@ -48,6 +66,30 @@
       "writtenOn": "2026-06-17T01:13:56Z",
       "side": 1,
       "message": "Needs updating since the parameter name changed.",
+      "range": {
+        "startLine": 1127,
+        "startChar": 23,
+        "endLine": 1127,
+        "endChar": 33
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4507ba8_aa0a9e28",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 1127,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "66462ed3_3dca1ec1",
       "range": {
         "startLine": 1127,
         "startChar": 23,
@@ -75,6 +117,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddf07d90_06983457",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 732,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "401dae62_21ca67df",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5ed96ca7_98006104",
@@ -88,6 +148,30 @@
       "writtenOn": "2026-06-17T01:13:56Z",
       "side": 1,
       "message": "style",
+      "range": {
+        "startLine": 749,
+        "startChar": 27,
+        "endLine": 749,
+        "endChar": 32
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "148cd687_488b88f7",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 749,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ed96ca7_98006104",
       "range": {
         "startLine": 749,
         "startChar": 27,
@@ -144,6 +228,54 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "80246599_40cc0640",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "The values don\u0027t necessarily matter. Will change to bool is_ltr",
+      "parentUuid": "60ce027a_b8254331",
+      "range": {
+        "startLine": 15,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 50
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd571dce_4c014576",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e5e8b58e_5c8e1530",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b2774be5_2b791551",
@@ -157,6 +289,24 @@
       "writtenOn": "2026-06-17T01:13:56Z",
       "side": 1,
       "message": "Would it be more consistent if this CL always used `is_rtl` or `is_ltr`? I feel I have to always be alert to the actual boolean. See the other comment in `CPVT_WordInfo`, but if `CPVT_WordInfo` stores a bool, then I would suggest consistently using that indicator everywhere else in this CL.",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5478e3a5_2dc636a1",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "changed all to is_rtl, an respectivly !is_rtl",
+      "parentUuid": "b2774be5_2b791551",
       "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -178,6 +328,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "74818fe9_c9deab7d",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "346e4a37_e49e9899",
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5e86adda_7244bea5",
@@ -191,6 +359,30 @@
       "writtenOn": "2026-06-17T01:13:56Z",
       "side": 1,
       "message": "Can probably just compare directly: `ptNew !\u003d ptOld`. I guess this is really a comment about line 711.",
+      "range": {
+        "startLine": 730,
+        "startChar": 12,
+        "endLine": 730,
+        "endChar": 52
+      },
+      "revId": "cf827f45122b12787898f3205204b1bbcca7759f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72583f30_22023ddb",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-22T23:42:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5e86adda_7244bea5",
       "range": {
         "startLine": 730,
         "startChar": 12,
