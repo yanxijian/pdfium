@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "36428e0c_927377cd",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:26:30Z",
+      "side": 1,
+      "message": "No longer used?",
+      "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3c11abc4_dda21beb",
         "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
         "patchSetId": 2
@@ -19,6 +36,29 @@
         "startChar": 40,
         "endLine": 1362,
         "endChar": 52
+      },
+      "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ce58cdc_d2c7aafd",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1364,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:26:30Z",
+      "side": 1,
+      "message": "style x2",
+      "range": {
+        "startLine": 1364,
+        "startChar": 40,
+        "endLine": 1364,
+        "endChar": 54
       },
       "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
