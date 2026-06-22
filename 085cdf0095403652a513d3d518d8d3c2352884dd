@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0f54b0f_927f0adc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "wrap",
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a08471cd_6c7a6adc",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Was fine as a constexpr value?",
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f832ff0f_6c90a050",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Can\u0027t figure out what this is without looking it up. Same for other FindFontTable() callers.",
+      "range": {
+        "startLine": 209,
+        "startChar": 2,
+        "endLine": 209,
+        "endChar": 6
+      },
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce55d667_e2b69d56",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Looks like lines 214-222. Refactor into helper?",
+      "range": {
+        "startLine": 249,
+        "startChar": 0,
+        "endLine": 254,
+        "endChar": 76
+      },
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2975641_24d24f8a",
+        "filename": "core/fxge/fx_font.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Might as well update C++ style since it\u0027s now in a different file and looks like new code.",
+      "range": {
+        "startLine": 171,
+        "startChar": 9,
+        "endLine": 171,
+        "endChar": 16
+      },
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71cd1631_8a1f871a",
+        "filename": "core/fxge/fx_font.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Has no unit test coverage.",
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5b991b7_87288d8e",
+        "filename": "core/fxge/fx_font.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T22:44:06Z",
+      "side": 1,
+      "message": "Only called from unit tests?",
+      "revId": "085cdf0095403652a513d3d518d8d3c2352884dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
