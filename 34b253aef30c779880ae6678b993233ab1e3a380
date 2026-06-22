@@ -190,6 +190,30 @@
       },
       "revId": "34b253aef30c779880ae6678b993233ab1e3a380",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "444310fd_77b0f8b9",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-22T20:07:39Z",
+      "side": 1,
+      "message": "... Right... I saw nothing and 100% NOT a suggested edit that mentions \"EXE being an example of an application type\"... Yeah... I saw nothing i just... was multitasking with something about windows so... somehow thought about exe ... don\u0027t worry about it :)",
+      "parentUuid": "5e704ce6_b4f2395f",
+      "range": {
+        "startLine": 148,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 67
+      },
+      "revId": "34b253aef30c779880ae6678b993233ab1e3a380",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
