@@ -34,11 +34,14 @@ class CPVT_Word {
   void set_location(const CFX_PointF& location) { location_ = location; }
   float width() const { return width_; }
   float font_size() const { return font_size_; }
+  bool is_rtl() const { return is_rtl_; }
+  void set_is_rtl(bool is_rtl) { is_rtl_ = is_rtl; }
   float ascent() const { return ascent_; }
   float descent() const { return descent_; }
 
   float AscentY() const { return location_.y + ascent_; }
   float DescentY() const { return location_.y + descent_; }
+  float GetCaretX() const;
 
  private:
   uint16_t word_ = 0;
@@ -49,6 +52,7 @@ class CPVT_Word {
   float width_ = 0.0f;
   int32_t font_index_ = -1;
   float font_size_ = 0.0f;
+  bool is_rtl_ = false;
 };
 
 #endif  // CORE_FPDFDOC_CPVT_WORD_H_

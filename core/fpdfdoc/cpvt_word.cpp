@@ -26,3 +26,7 @@ CPVT_Word::CPVT_Word(uint16_t word,
 CPVT_Word::CPVT_Word(const CPVT_Word&) = default;
 CPVT_Word& CPVT_Word::operator=(const CPVT_Word&) = default;
 CPVT_Word::~CPVT_Word() = default;
+
+float CPVT_Word::GetCaretX() const {
+  return is_rtl_ ? location_.x : location_.x + width_;
+}

@@ -14,7 +14,8 @@ CPVT_WordInfo::CPVT_WordInfo()
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(-1) {}
+      nFontIndex(-1),
+      is_rtl(false) {}
 
 CPVT_WordInfo::CPVT_WordInfo(uint16_t word,
                              FX_Charset charset,
@@ -24,7 +25,8 @@ CPVT_WordInfo::CPVT_WordInfo(uint16_t word,
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(fontIndex) {}
+      nFontIndex(fontIndex),
+      is_rtl(false) {}
 
 CPVT_WordInfo::CPVT_WordInfo(const CPVT_WordInfo& word)
     : Word(0),
@@ -32,7 +34,8 @@ CPVT_WordInfo::CPVT_WordInfo(const CPVT_WordInfo& word)
       fWordX(0.0f),
       fWordY(0.0f),
       fWordTail(0.0f),
-      nFontIndex(-1) {
+      nFontIndex(-1),
+      is_rtl(false) {
   operator=(word);
 }
 
@@ -49,5 +52,6 @@ CPVT_WordInfo& CPVT_WordInfo::operator=(const CPVT_WordInfo& word) {
   fWordX = word.fWordX;
   fWordY = word.fWordY;
   fWordTail = word.fWordTail;
+  is_rtl = word.is_rtl;
   return *this;
 }
