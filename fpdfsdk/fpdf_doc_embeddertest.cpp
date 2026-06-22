@@ -603,6 +603,50 @@ TEST_F(FPDFDocEmbedderTest, FindBookmarks) {
   EXPECT_FALSE(FPDFBookmark_Find(document(), bad_title.get()));
 }
 
+TEST_F(FPDFDocEmbedderTest, FindBookmarksWithColor) {
+  ASSERT_TRUE(OpenDocument("bookmarks_color.pdf"));
+
+  float red = 100;
+  float green = 100;
+  float blue = 100;
+
+  ScopedFPDFWideString title = GetFPDFWideString(L"A Good Beginning");
+  FPDF_BOOKMARK bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  ASSERT_TRUE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  EXPECT_FLOAT_EQ(red, 1.0f);
+  EXPECT_FLOAT_EQ(green, 1.0f);
+  EXPECT_FLOAT_EQ(blue, 1.0f);
+
+  title = GetFPDFWideString(L"Open Middle");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  ASSERT_TRUE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  EXPECT_FLOAT_EQ(red, 0.0f);
+  EXPECT_FLOAT_EQ(green, 0.0f);
+  EXPECT_FLOAT_EQ(blue, 0.0f);
+
+  title = GetFPDFWideString(L"Open Middle Descendant");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  ASSERT_TRUE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  EXPECT_FLOAT_EQ(red, 0.111f);
+  EXPECT_FLOAT_EQ(green, 0.222f);
+  EXPECT_FLOAT_EQ(blue, 0.333f);
+
+  title = GetFPDFWideString(L"A Good Closed Ending");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  // Fails as it has no Color array (C).
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+
+  title = GetFPDFWideString(L"A Good Closed Ending Descendant 2");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  // Fails as the values for R, G and B are all > 1.
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+}
+
 // Check circular bookmarks will not cause infinite loop.
 TEST_F(FPDFDocEmbedderTest, FindBookmarksBug420) {
   // Open a file with circular bookmarks.
