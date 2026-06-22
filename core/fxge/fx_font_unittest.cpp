@@ -4,6 +4,7 @@
 
 #include <string>
 
+#include "core/fxcrt/byteorder.h"
 #include "core/fxcrt/check.h"
 #include "core/fxge/cfx_folderfontinfo.h"
 #include "core/fxge/cfx_fontmapper.h"
@@ -11,6 +12,33 @@
 #include "core/fxge/fx_font.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "testing/utils/path_service.h"
+
+namespace {
+
+pdfium::span<const uint8_t> GetFontTable(pdfium::span<const uint8_t> font_data,
+                                         uint32_t tag,
+                                         size_t face_offset) {
+  if (face_offset > font_data.size() || font_data.size() - face_offset < 12) {
+    return {};
+  }
+  auto face_data = font_data.subspan(face_offset);
+  uint16_t nTables = fxcrt::GetUInt16MSBFirst(face_data.subspan<4, 2>());
+  if (face_data.size() < 12u + nTables * 16u) {
+    return {};
+  }
+  auto table_dir = face_data.subspan(12u, nTables * 16u);
+  std::optional<FontTableLocation> loc = FindFontTableLocation(table_dir, tag);
+  if (!loc) {
+    return {};
+  }
+  if (loc->offset > font_data.size() ||
+      loc->size > font_data.size() - loc->offset) {
+    return {};
+  }
+  return font_data.subspan(loc->offset, loc->size);
+}
+
+}  // namespace
 
 TEST(FXFontTest, UnicodeFromAdobeName) {
   EXPECT_EQ(static_cast<wchar_t>(0x0000), UnicodeFromAdobeName("nonesuch"));
@@ -52,4 +80,92 @@ TEST(FXFontTest, ReadFontNameFromMicrosoftEntries) {
 
   ASSERT_EQ(1u, font_mapper.GetFaceSize());
   ASSERT_EQ("Test", font_mapper.GetFaceName(0));
+}
+
+TEST(FXFontTest, GetFontTable) {
+  // Mock font data with 2 tables
+  // Header: 0x00010000, 2 tables, searchRange=16, entrySelector=1, rangeShift=0
+  // Table 1: 'head', checksum=0, offset=44, length=10
+  // Table 2: 'name', checksum=0, offset=54, length=20
+  // Total size = 12 + 2*16 + 10 + 20 = 74 bytes
+
+  std::vector<uint8_t> mock_font = {
+      // Header
+      0x00, 0x01, 0x00, 0x00,  // scaler type
+      0x00, 0x02,              // numTables = 2
+      0x00, 0x10,              // searchRange = 16
+      0x00, 0x01,              // entrySelector = 1
+      0x00, 0x00,              // rangeShift = 0
+
+      // Table Directory Entry 1 ('head')
+      'h', 'e', 'a', 'd', 0x00, 0x00, 0x00, 0x00,  // checksum
+      0x00, 0x00, 0x00, 0x2C,                      // offset = 44
+      0x00, 0x00, 0x00, 0x0A,                      // length = 10
+
+      // Table Directory Entry 2 ('name')
+      'n', 'a', 'm', 'e', 0x00, 0x00, 0x00, 0x00,  // checksum
+      0x00, 0x00, 0x00, 0x36,                      // offset = 54
+      0x00, 0x00, 0x00, 0x14,                      // length = 20
+
+      // Table 1 data ('head')
+      0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
+
+      // Table 2 data ('name')
+      0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1C,
+      0x1D, 0x1E, 0x1F, 0x20, 0x21, 0x22, 0x23, 0x24};
+
+  pdfium::span<const uint8_t> font_span(mock_font);
+
+  // Test finding 'head'
+  uint32_t head_tag = CFX_FontMapper::MakeTag('h', 'e', 'a', 'd');
+  auto head_table = GetFontTable(font_span, head_tag, 0);
+  EXPECT_EQ(10u, head_table.size());
+  EXPECT_EQ(0x01, head_table[0]);
+  EXPECT_EQ(0x0A, head_table[9]);
+
+  // Test finding 'name'
+  uint32_t name_tag = CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  auto name_table = GetFontTable(font_span, name_tag, 0);
+  EXPECT_EQ(20u, name_table.size());
+  EXPECT_EQ(0x11, name_table[0]);
+  EXPECT_EQ(0x24, name_table[19]);
+
+  // Test not finding 'gasp'
+  uint32_t gasp_tag = CFX_FontMapper::MakeTag('g', 'a', 's', 'p');
+  auto gasp_table = GetFontTable(font_span, gasp_tag, 0);
+  EXPECT_TRUE(gasp_table.empty());
+
+  // Test invalid data (too short)
+  auto short_table = GetFontTable(font_span.first(10u), head_tag, 0);
+  EXPECT_TRUE(short_table.empty());
+
+  // Test invalid data (truncated directory)
+  auto trunc_table = GetFontTable(font_span.first(20u), head_tag, 0);
+  EXPECT_TRUE(trunc_table.empty());
+}
+
+TEST(FXFontTest, GetCodePageRangeFromOS2) {
+  // OS/2 table version 1+ must be at least 86 bytes to contain codepage ranges
+  std::vector<uint8_t> short_os2(85);
+  EXPECT_EQ(0u, GetCodePageRangeFromOS2(short_os2));
+
+  std::vector<uint8_t> mock_os2(86);
+  // ulCodePageRange1 is at offset 78 (4 bytes)
+  mock_os2[78] = 0x12;
+  mock_os2[79] = 0x34;
+  mock_os2[80] = 0x56;
+  mock_os2[81] = 0x78;
+  EXPECT_EQ(0x12345678u, GetCodePageRangeFromOS2(mock_os2));
+}
+
+TEST(FXFontTest, GetGlyphCountFromMaxp) {
+  // maxp table must be at least 6 bytes to contain glyph count
+  std::vector<uint8_t> short_maxp(5);
+  EXPECT_EQ(0u, GetGlyphCountFromMaxp(short_maxp));
+
+  std::vector<uint8_t> mock_maxp(6);
+  // numGlyphs is at offset 4 (2 bytes)
+  mock_maxp[4] = 0x12;
+  mock_maxp[5] = 0x34;
+  EXPECT_EQ(0x1234u, GetGlyphCountFromMaxp(mock_maxp));
 }
