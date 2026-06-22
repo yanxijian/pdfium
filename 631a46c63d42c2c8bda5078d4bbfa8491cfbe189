@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0aaf11a7_a09aa548",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:39:27Z",
+      "side": 1,
+      "message": "Assign in the default case instead?",
+      "range": {
+        "startLine": 369,
+        "startChar": 29,
+        "endLine": 369,
+        "endChar": 35
+      },
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68570fd1_f4e2509e",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:39:27Z",
+      "side": 1,
+      "message": "Move into anonymous namespace.",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28a21aa6_38aca1cb",
+        "filename": "core/fxge/cfx_face.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:39:27Z",
+      "side": 1,
+      "message": "Just leave this out and avoid struggling with the auto-formatter.",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 77
+      },
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50d2a084_d7572289",
+        "filename": "core/fxge/skrifa/src/outlines.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:39:27Z",
+      "side": 1,
+      "message": "Can this just take `bytes` as 1 argument like fx_skrifa_unittest.cpp?",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d8feb2d_561130d2",
+        "filename": "core/fxge/skrifa/src/outlines.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-22T23:39:27Z",
+      "side": 1,
+      "message": "Can this be: `std::string name(...);` ?",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
