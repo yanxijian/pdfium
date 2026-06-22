@@ -176,7 +176,6 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
 
   fseek(pFile.get(), 0, SEEK_END);
-
   FX_FILESIZE filesize = ftell(pFile.get());
   fseek(pFile.get(), 0, SEEK_SET);
 
@@ -184,6 +183,7 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   if (fxcrt::spanread(buffer, pFile.get()).size() != sizeof(buffer)) {
     return;
   }
+
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
     ReportFace(path, pFile.get(), filesize, 0);
@@ -223,27 +223,31 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     return;
   }
 
-  uint32_t nTables =
-      fxcrt::GetUInt16MSBFirst(pdfium::as_byte_span(buffer).subspan<4, 2>());
+  uint16_t nTables =
+      fxcrt::GetUInt16MSBFirst(pdfium::span(buffer).subspan<4, 2>());
   ByteString tables = ReadStringFromFile(pFile, nTables * 16);
   if (tables.IsEmpty()) {
     return;
   }
 
-  static constexpr uint32_t kNameTag =
-      CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
-  ByteString names = LoadTableFromTT(pFile, tables.unsigned_str(), nTables,
-                                     kNameTag, filesize);
-  if (names.IsEmpty()) {
+  uint32_t name_tag = CFX_FontMapper::MakeTag('n', 'a', 'm', 'e');
+  auto loc = FindFontTable(tables.unsigned_span(), name_tag);
+  if (!loc) {
     return;
   }
 
-  ByteString facename = GetNameFromTT(names.unsigned_span(), 1);
+  auto names_data = FixedSizeDataVector<uint8_t>::Uninit(loc->size);
+  if (fseek(pFile, loc->offset, SEEK_SET) < 0 ||
+      fxcrt::spanread(names_data.span(), pFile).size() != loc->size) {
+    return;
+  }
+
+  ByteString facename = GetNameFromTT(names_data.span(), 1);
   if (facename.IsEmpty()) {
     return;
   }
 
-  ByteString style = GetNameFromTT(names.unsigned_span(), 2);
+  ByteString style = GetNameFromTT(names_data.span(), 2);
   if (style != "Regular") {
     facename += " " + style;
   }
@@ -440,6 +444,7 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   }
 
   const FontFaceInfo* font = static_cast<FontFaceInfo*>(hFont);
+
   uint32_t datasize = 0;
   uint32_t offset = 0;
   if (table == SystemFontInfoIface::kTableNone) {
@@ -447,15 +452,10 @@ size_t CFX_FolderFontInfo::GetFontData(void* hFont,
   } else if (table == SystemFontInfoIface::kTableTTCF) {
     datasize = font->font_offset_ ? font->file_size_ : 0;
   } else {
-    size_t nTables = font->font_tables_.GetLength() / 16;
-    for (size_t i = 0; i < nTables; i++) {
-      // TODO(tsepez): iterate over span.
-      pdfium::span<const uint8_t> p =
-          font->font_tables_.unsigned_span().subspan(i * 16);
-      if (fxcrt::GetUInt32MSBFirst(p.first<4u>()) == table) {
-        offset = fxcrt::GetUInt32MSBFirst(p.subspan<8u, 4u>());
-        datasize = fxcrt::GetUInt32MSBFirst(p.subspan<12u, 4u>());
-      }
+    auto loc = FindFontTable(font->font_tables_.unsigned_span(), table);
+    if (loc) {
+      datasize = loc->size;
+      offset = loc->offset;
     }
   }
 
