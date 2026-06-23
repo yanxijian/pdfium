@@ -37,6 +37,7 @@
 #include "core/fpdfdoc/cpvt_fontmap.h"
 #include "core/fpdfdoc/cpvt_variabletext.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fxcrt/fx_string_wrappers.h"
 #include "core/fxcrt/notreached.h"
 #include "core/fxge/cfx_renderdevice.h"
@@ -307,10 +308,13 @@ bool ValidateOrCreateFontResources(CPDF_Document* doc,
   return true;
 }
 
+// `use_continuous_formatting`: When true, attempts to group consecutive words
+// on the same line into a single text rendering string. Reduces AP stream
+// size but is disabled for RTL words where positioning is required.
 ByteString GenerateEditAP(IPVT_FontMap* font_map,
                           CPVT_VariableText::Iterator* vt_iterator,
                           const CFX_PointF& offset,
-                          bool continuous,
+                          bool use_continuous_formatting,
                           uint16_t sub_word) {
   fxcrt::ostringstream edit_stream;
   fxcrt::ostringstream line_stream;
@@ -322,7 +326,15 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
   vt_iterator->SetAt(0);
   while (vt_iterator->NextWord()) {
     CPVT_WordPlace place = vt_iterator->GetWordPlace();
-    if (continuous) {
+    CPVT_Word word;
+    bool has_word = vt_iterator->GetWord(word);
+
+    bool use_continuous_formatting_for_word = use_continuous_formatting;
+    if (use_continuous_formatting_for_word && has_word && word.is_rtl()) {
+      use_continuous_formatting_for_word = false;
+    }
+
+    if (use_continuous_formatting_for_word) {
       if (place.LineCmp(oldplace) != 0) {
         if (!words.IsEmpty()) {
           line_stream << GetWordRenderString(words.AsStringView());
@@ -330,8 +342,7 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
           line_stream.str("");
           words.clear();
         }
-        CPVT_Word word;
-        if (vt_iterator->GetWord(word)) {
+        if (has_word) {
           new_point = CFX_PointF(word.location().x + offset.x,
                                  word.location().y + offset.y);
         } else {
@@ -345,8 +356,7 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
           old_point = new_point;
         }
       }
-      CPVT_Word word;
-      if (vt_iterator->GetWord(word)) {
+      if (has_word) {
         if (word.font_index() != current_font_index) {
           if (!words.IsEmpty()) {
             line_stream << GetWordRenderString(words.AsStringView());
@@ -361,8 +371,14 @@ ByteString GenerateEditAP(IPVT_FontMap* font_map,
       }
       oldplace = place;
     } else {
-      CPVT_Word word;
-      if (vt_iterator->GetWord(word)) {
+      if (!words.IsEmpty()) {
+        line_stream << GetWordRenderString(words.AsStringView());
+        edit_stream << line_stream.str();
+        line_stream.str("");
+        words.clear();
+      }
+
+      if (has_word) {
         new_point = CFX_PointF(word.location().x + offset.x,
                                word.location().y + offset.y);
         if (new_point != old_point) {
@@ -1109,7 +1125,7 @@ bool GenerateFreeTextAP(CPDF_Document* doc, CPDF_Dictionary* annot_dict) {
   CFX_PointF offset(0.0f, (content_rect.Height() - body_rect.Height()) / 2.0f);
   const ByteString body =
       GenerateEditAP(vt.GetProvider()->GetFontMap(), vt.GetIterator(), offset,
-                     /*continuous=*/true, /*sub_word=*/0);
+                     /*use_continuous_formatting=*/true, /*sub_word=*/0);
   if (body.GetLength() > 0) {
     appearance_stream << "/Tx BMC\n" << "q\n";
     if (content_rect.Width() > body_rect.Width() ||
