@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad671381_cc52bb16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T23:17:04Z",
+      "side": 1,
+      "message": "Usually backticks wrap references to code, so readers can tell it\u0027s not a normal word. Whereas filenames, e.g. foo.cpp or bar.py, are sufficiently distinct that readers can tell what they are.",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 49
+      },
+      "revId": "d25a2ddcf1073c2c226935604e8734fec768379d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bc2cae3_f9a755a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T23:17:04Z",
+      "side": 1,
+      "message": "Thanks for splitting up your CL more, but usually it\u0027s better to send CLs in a chain out for review in order. It\u0027s still \"your turn\" on the parent CL.",
+      "revId": "d25a2ddcf1073c2c226935604e8734fec768379d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
