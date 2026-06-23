@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "513ad56a_7c822dfc",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T20:56:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "42540728_dde35880",
+      "revId": "0fd3ec23684489f1de3aa8bdea1274d336310b27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7541e45b_5acba7f3",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-23T20:44:53Z",
       "side": 1,
       "message": "Also mention reducing GetCaretX() calls by reusing the results in the CL description.",
+      "revId": "0fd3ec23684489f1de3aa8bdea1274d336310b27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "218d706d_58b95cfb",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1230,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T20:56:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7541e45b_5acba7f3",
       "revId": "0fd3ec23684489f1de3aa8bdea1274d336310b27",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
