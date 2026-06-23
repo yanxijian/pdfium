@@ -15,6 +15,7 @@
 #include "core/fpdfapi/render/cpdf_renderoptions.h"
 #include "core/fpdfapi/render/cpdf_textrenderer.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
 #include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/check.h"
@@ -91,6 +92,10 @@ void CPWL_EditImpl::Iterator::SetAt(const CPVT_WordPlace& place) {
 
 const CPVT_WordPlace& CPWL_EditImpl::Iterator::GetAt() const {
   return vt_iterator_->GetWordPlace();
+}
+
+float CPWL_EditImpl::Iterator::GetLineCaretX(const CPVT_Line& line) {
+  return vt_iterator_->GetLineCaretX(line);
 }
 
 class CPWL_EditImpl::Provider final : public CPVT_VariableText::Provider {
@@ -664,9 +669,10 @@ void CPWL_EditImpl::DrawEdit(CFX_RenderDevice* pDevice,
                             CFX_FillRenderOptions::WindingOptions());
         }
       }
-      if (bContinuous) {
-        if (place.LineCmp(oldplace) != 0 || word.font_index() != nFontIndex ||
-            crOldFill != crCurFill) {
+      int32_t font_index = word.font_index();
+      if (bContinuous && !word.is_rtl()) {
+        if (sTextBuf.IsEmpty() || place.LineCmp(oldplace) != 0 ||
+            font_index != nFontIndex || crOldFill != crCurFill) {
           if (!sTextBuf.IsEmpty()) {
             DrawTextString(pDevice,
                            CFX_PointF(ptBT.x + ptOffset.x, ptBT.y + ptOffset.y),
@@ -674,20 +680,25 @@ void CPWL_EditImpl::DrawEdit(CFX_RenderDevice* pDevice,
                            mtUser2Device, sTextBuf, crOldFill);
             sTextBuf.clear();
           }
-          nFontIndex = word.font_index();
+          nFontIndex = font_index;
           ptBT = word.location();
           crOldFill = crCurFill;
         }
-        sTextBuf += GetPDFWordString(word.font_index(), word.word(), SubWord);
+        sTextBuf += GetPDFWordString(font_index, word.word(), SubWord);
       } else {
+        if (!sTextBuf.IsEmpty()) {
+          DrawTextString(pDevice,
+                         CFX_PointF(ptBT.x + ptOffset.x, ptBT.y + ptOffset.y),
+                         font_map->GetPDFFont(nFontIndex).Get(), fFontSize,
+                         mtUser2Device, sTextBuf, crOldFill);
+          sTextBuf.clear();
+        }
         DrawTextString(
             pDevice,
             CFX_PointF(word.location().x + ptOffset.x,
                        word.location().y + ptOffset.y),
-            font_map->GetPDFFont(word.font_index()).Get(), fFontSize,
-            mtUser2Device,
-            GetPDFWordString(word.font_index(), word.word(), SubWord),
-            crCurFill);
+            font_map->GetPDFFont(font_index).Get(), fFontSize, mtUser2Device,
+            GetPDFWordString(font_index, word.word(), SubWord), crCurFill);
       }
       oldplace = place;
     }
@@ -1230,7 +1241,7 @@ void CPWL_EditImpl::ScrollToCaret() {
     ptFoot.x = ptHead.x;
     ptFoot.y = word.DescentY();
   } else if (pIterator->GetLine(line)) {
-    ptHead.x = line.ptLine.x;
+    ptHead.x = pIterator->GetLineCaretX(line);
     ptHead.y = line.ptLine.y + line.fLineAscent;
     ptFoot.x = ptHead.x;
     ptFoot.y = line.ptLine.y + line.fLineDescent;
@@ -1398,7 +1409,7 @@ void CPWL_EditImpl::SetCaretInfo() {
         ptFoot.x = ptHead.x;
         ptFoot.y = word.DescentY();
       } else if (pIterator->GetLine(line)) {
-        ptHead.x = line.ptLine.x;
+        ptHead.x = pIterator->GetLineCaretX(line);
         ptHead.y = line.ptLine.y + line.fLineAscent;
         ptFoot.x = ptHead.x;
         ptFoot.y = line.ptLine.y + line.fLineDescent;
