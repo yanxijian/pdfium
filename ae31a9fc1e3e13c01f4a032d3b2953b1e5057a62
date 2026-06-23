@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b00cbf1f_97f066a1",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b6fe9657_2a389187",
+      "range": {
+        "startLine": 329,
+        "startChar": 14,
+        "endLine": 329,
+        "endChar": 23
+      },
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c196002_c4ed9f49",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-23T00:04:39Z",
       "side": 1,
       "message": "Considering `word` just got constructed, and this is the only set_is_rtl() caller, how about just add 1 more parameter to the CPVT_Word constructor instead?",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d45a8a10_db4ee488",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c196002_c4ed9f49",
       "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "831f51e7_a45df52c",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fed88a3e_46569caa",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60fb667c_0b116e3c",
@@ -71,6 +131,24 @@
       "writtenOn": "2026-06-23T00:04:39Z",
       "side": 1,
       "message": "BTW, this is actually dead code. Just like CPVT_Word needed some cleanup, so does CPVT_WordInfo.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc34dfa8_20fbc6b5",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60fb667c_0b116e3c",
       "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -92,6 +170,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe17922b_58842e64",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d515687d_fc5009b2",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8937f8f2_2f3809c9",
@@ -105,6 +201,24 @@
       "writtenOn": "2026-06-23T00:04:39Z",
       "side": 1,
       "message": "Since this variable is immediately used on the next line, and only used there, just inline it.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "056edcd0_26e31549",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8937f8f2_2f3809c9",
       "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -132,6 +246,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2045ddf3_b8f6bca3",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 1245,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8cc1f4f3_b101f20c",
+      "range": {
+        "startLine": 1245,
+        "startChar": 15,
+        "endLine": 1245,
+        "endChar": 32
+      },
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bda461af_5c05ef2e",
@@ -145,6 +283,24 @@
       "writtenOn": "2026-06-23T00:04:39Z",
       "side": 1,
       "message": "Then match lines 1243-1245. No need for a local variable.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a13ddf1_01319b1a",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 1248,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T01:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bda461af_5c05ef2e",
       "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
