@@ -63,6 +63,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea8e9f27_422e0810",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5bd6bc2e_1bae9558",
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b685908d_25364d04",
@@ -134,6 +152,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "58233b48_4443534a",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done. Reused pdfium::FakeTimeScope from testing/fake_time_test.h and removed the local FakeTime/FakeLocaltime helpers from this test.",
+      "parentUuid": "b685908d_25364d04",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 19
+      },
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "81656bfa_58dfc475",
@@ -171,6 +213,30 @@
           ]
         }
       ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f89c133_7e37c75a",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "81656bfa_58dfc475",
+      "range": {
+        "startLine": 293,
+        "startChar": 0,
+        "endLine": 293,
+        "endChar": 28
+      },
       "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -236,6 +302,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "414e0d9e_458a1559",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done. Added scoped time-function helpers that use fxcrt::AutoRestorer internally, and updated the test to use them so the hooks are restored automatically.",
+      "parentUuid": "bbca5bf4_781fe3cc",
+      "range": {
+        "startLine": 407,
+        "startChar": 0,
+        "endLine": 407,
+        "endChar": 32
+      },
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0bf0f0fd_ce3b63e3",
@@ -249,6 +339,30 @@
       "writtenOn": "2026-06-22T16:40:20Z",
       "side": 1,
       "message": "Because `local_time` and `utc_time` represent the exact same moment in time, their difference is bounded by the maximum timezone offsets (which range from -12 to +14 hours). This means the two timestamps will only ever be at most 1 day apart.\n\nWe don\u0027t need a full epoch conversion to find the difference in days. We can just compare `tm_mday`. If the difference is `\u003e 1` or `\u003c -1`, we know it wrapped around a month or year boundary and can safely map it to `-1` or `1`.\n\nYou can drop `DaysSinceEpoch()` entirely and simplify the calculation to:\n\n```cpp\nint TimeZoneOffsetInMinutes(const tm\u0026 local_time, const tm\u0026 utc_time) {\n  int day_offset \u003d local_time.tm_mday - utc_time.tm_mday;\n  if (day_offset \u003e 1) {\n    day_offset \u003d -1;\n  } else if (day_offset \u003c -1) {\n    day_offset \u003d 1;\n  }\n\n  return day_offset * kMinutesPerDay +\n         (local_time.tm_hour - utc_time.tm_hour) * kMinutesPerHour +\n         (local_time.tm_min - utc_time.tm_min);\n}\n```",
+      "range": {
+        "startLine": 178,
+        "startChar": 0,
+        "endLine": 178,
+        "endChar": 0
+      },
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1423c559_3c5037d6",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done. Removed `DaysSinceEpoch()` and simplified the calculation to use the bounded `tm_mday` difference with month/year wrap handling.",
+      "parentUuid": "0bf0f0fd_ce3b63e3",
       "range": {
         "startLine": 178,
         "startChar": 0,
@@ -326,6 +440,30 @@
           ]
         }
       ],
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e69dd66_8e47428a",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-23T15:05:05Z",
+      "side": 1,
+      "message": "Done. Moved the calculation to `FXSYS_TimeZoneOffsetInMinutes()` in `fx_extension.{h,cpp}` and added focused unit coverage there.",
+      "parentUuid": "849cd73b_8fcdf8bf",
+      "range": {
+        "startLine": 194,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 71
+      },
       "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
