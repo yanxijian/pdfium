@@ -16,6 +16,24 @@
       "message": "Preserve comment.",
       "revId": "75ea0a73e1cb08beabb2800b0ba3f5c931d2cdef",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdd18887_8ab65b4f",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T16:07:47Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "6f6a8dcd_2e4bbf15",
+      "revId": "75ea0a73e1cb08beabb2800b0ba3f5c931d2cdef",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
