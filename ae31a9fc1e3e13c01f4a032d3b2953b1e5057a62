@@ -136,6 +136,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1303cddd_b8a321f5",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T23:23:30Z",
+      "side": 1,
+      "message": "There is not enough test coverage. My initial variabletext_unittest.cpp did not check for caret positioning.",
+      "parentUuid": "19ecb63f_245368ed",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60fb667c_0b116e3c",
@@ -185,6 +203,24 @@
       "side": 1,
       "message": "Thanks for doing some cleanup here. Was hoping most of this can be prepended in a separate CL.",
       "parentUuid": "bc34dfa8_20fbc6b5",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb591464_9d718db3",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T23:23:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aaea8298_523b1d0c",
       "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
