@@ -14,6 +14,7 @@
 #include "constants/ascii.h"
 #include "core/fpdfapi/font/cpdf_font.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/fx_safe_types.h"
@@ -673,14 +674,14 @@ void CPWL_Edit::GetCaretInfo(CFX_PointF* ptHead, CFX_PointF* ptFoot) const {
   CPVT_Word word;
   CPVT_Line line;
   if (pIterator->GetWord(word)) {
-    ptHead->x = word.location().x + word.width();
+    ptHead->x = word.GetCaretX();
     ptHead->y = word.AscentY();
-    ptFoot->x = word.location().x + word.width();
+    ptFoot->x = ptHead->x;
     ptFoot->y = word.DescentY();
   } else if (pIterator->GetLine(line)) {
-    ptHead->x = line.ptLine.x;
+    ptHead->x = pIterator->GetLineCaretX(line);
     ptHead->y = line.ptLine.y + line.fLineAscent;
-    ptFoot->x = line.ptLine.x;
+    ptFoot->x = ptHead->x;
     ptFoot->y = line.ptLine.y + line.fLineDescent;
   }
 }
