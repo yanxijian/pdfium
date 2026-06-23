@@ -152,6 +152,51 @@ TEST(fxcrt, FXSYSToUTF16BE) {
   EXPECT_THAT(result, ElementsAre('D', '8', '4', '0', 'D', 'C', '3', 'E'));
 }
 
+TEST(fxcrt, FXSYSTimeZoneOffsetInMinutes) {
+  tm local_time = {};
+  tm utc_time = {};
+
+  local_time.tm_mday = 23;
+  local_time.tm_hour = 10;
+  local_time.tm_min = 35;
+  utc_time.tm_mday = 23;
+  utc_time.tm_hour = 3;
+  utc_time.tm_min = 5;
+  EXPECT_EQ(450, FXSYS_TimeZoneOffsetInMinutes(local_time, utc_time));
+
+  local_time.tm_mday = 22;
+  local_time.tm_hour = 23;
+  local_time.tm_min = 5;
+  utc_time.tm_mday = 23;
+  utc_time.tm_hour = 3;
+  utc_time.tm_min = 5;
+  EXPECT_EQ(-240, FXSYS_TimeZoneOffsetInMinutes(local_time, utc_time));
+
+  local_time.tm_mday = 24;
+  local_time.tm_hour = 7;
+  local_time.tm_min = 5;
+  utc_time.tm_mday = 23;
+  utc_time.tm_hour = 17;
+  utc_time.tm_min = 5;
+  EXPECT_EQ(840, FXSYS_TimeZoneOffsetInMinutes(local_time, utc_time));
+
+  local_time.tm_mday = 1;
+  local_time.tm_hour = 7;
+  local_time.tm_min = 5;
+  utc_time.tm_mday = 31;
+  utc_time.tm_hour = 17;
+  utc_time.tm_min = 5;
+  EXPECT_EQ(840, FXSYS_TimeZoneOffsetInMinutes(local_time, utc_time));
+
+  local_time.tm_mday = 31;
+  local_time.tm_hour = 23;
+  local_time.tm_min = 5;
+  utc_time.tm_mday = 1;
+  utc_time.tm_hour = 3;
+  utc_time.tm_min = 5;
+  EXPECT_EQ(-240, FXSYS_TimeZoneOffsetInMinutes(local_time, utc_time));
+}
+
 TEST(fxcrt, FXSYSwcstof) {
   size_t used_len = 0;
   EXPECT_FLOAT_EQ(-12.0f, FXSYS_wcstof(L"-12", &used_len));
