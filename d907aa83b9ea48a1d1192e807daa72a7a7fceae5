@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a099e286_a7e2089c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 59
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T17:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2493ac64_039afb26",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 12
+      },
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "830e7d3f_602b66ae",
@@ -41,6 +65,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b56caf1_bf974589",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 59
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T17:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "830e7d3f_602b66ae",
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9fef5132_5fe59b8f",
@@ -54,6 +96,24 @@
       "writtenOn": "2026-06-23T17:32:51Z",
       "side": 1,
       "message": "Just merge this with line 20.",
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c879f46_60274bdc",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 59
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T17:44:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9fef5132_5fe59b8f",
       "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
