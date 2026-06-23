@@ -176,6 +176,11 @@ class CFX_Face final : public Retainable, public Observable {
 
   bool IsTricky() const;
   void AdjustVariationParams(int glyph_index, int dest_width, int weight);
+#if defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
+  void CheckGlyphBBox(uint32_t glyph_index,
+                      const FX_RECT& ft_result,
+                      int em) const;
+#endif
 
   pdfium::span<const FT_CharMap> GetCharMaps() const;
 

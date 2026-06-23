@@ -243,9 +243,6 @@ RetainPtr<CPDF_Font> LoadCompositeFont(CPDF_Document* doc,
 
   auto char_codes_and_indices =
       font->GetCharCodesAndIndices(pdfium::kMaximumSupplementaryCodePoint);
-  if (char_codes_and_indices.empty()) {
-    return nullptr;
-  }
 
   const ByteString name = BaseFontNameForType(font.get(), font_type);
   RetainPtr<CPDF_Dictionary> font_dict =
