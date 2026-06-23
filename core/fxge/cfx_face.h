@@ -204,6 +204,8 @@ class CFX_Face final : public Retainable, public Observable {
 #endif  // defined(PDF_USE_SKIA)
 #if defined(PDF_ENABLE_FONTATIONS)
   std::unique_ptr<SkrifaFontHolder> const skrifa_font_;
+  uint32_t loaded_glyph_index_ = 0;
+  bool loaded_glyph_is_scaled_ = false;
 #endif  // defined(PDF_ENABLE_FONTATIONS)
 };
 
