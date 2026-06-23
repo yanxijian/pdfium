@@ -1,0 +1,129 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c196002_c4ed9f49",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "Considering `word` just got constructed, and this is the only set_is_rtl() caller, how about just add 1 more parameter to the CPVT_Word constructor instead?",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fed88a3e_46569caa",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "I would recommend adding this as a straight-forward getter, without RTL support first, to reduce the size of this CL.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60fb667c_0b116e3c",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "BTW, this is actually dead code. Just like CPVT_Word needed some cleanup, so does CPVT_WordInfo.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d515687d_fc5009b2",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "This pre-existing code implements a copy constructor in a strange way. In modern C++, one would just use `\u003d default;` instead. Same for `operator\u003d` below.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8937f8f2_2f3809c9",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "Since this variable is immediately used on the next line, and only used there, just inline it.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cc1f4f3_b101f20c",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 1245,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "Just reuse `ptHead.x` instead of calling GetCaretX() twice. This pattern repeats in several places.",
+      "range": {
+        "startLine": 1245,
+        "startChar": 15,
+        "endLine": 1245,
+        "endChar": 32
+      },
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bda461af_5c05ef2e",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 1248,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:04:39Z",
+      "side": 1,
+      "message": "Then match lines 1243-1245. No need for a local variable.",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
