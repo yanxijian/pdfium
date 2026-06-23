@@ -18,6 +18,46 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0730856b_a92e46a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6715
+      },
+      "writtenOn": "2026-06-23T06:57:26Z",
+      "side": 1,
+      "message": "LGTM, with Lei\u0027s feedback addressed. One question on the wrapper type below.",
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ec5f163_b879808d",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 6715
+      },
+      "writtenOn": "2026-06-23T06:57:26Z",
+      "side": 1,
+      "message": "No objections to using a wrapper type, but would it be enought to use a typedef to `rust::Box\u003cskrifa::SkrifaFont`?",
+      "range": {
+        "startLine": 298,
+        "startChar": 0,
+        "endLine": 298,
+        "endChar": 25
+      },
+      "revId": "631a46c63d42c2c8bda5078d4bbfa8491cfbe189",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0aaf11a7_a09aa548",
