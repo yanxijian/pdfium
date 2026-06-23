@@ -1,0 +1,143 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41a41fdb_a50b9530",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T15:47:08Z",
+      "side": 1,
+      "message": "The folks on Lord Howe Island will appreciate this :) .",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 13,
+        "endChar": 66
+      },
+      "revId": "ac7d49c29a3a68a45f55448a1dbd74ba159d5aba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea55c312_37f663b5",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T15:47:08Z",
+      "side": 1,
+      "message": "If you were so inclined, `using fxcrt::ScopedLocalTimeFunction;` since the namespace here is to avoid linker conflicts, but this would be the only such name in pdfium. Same for the other one.",
+      "fixSuggestions": [
+        {
+          "fixId": "253635ad_002021ad",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcrt/fx_extension.h",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "using fxcrt::ScopedLocaltimeFunction;\n\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ac7d49c29a3a68a45f55448a1dbd74ba159d5aba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "070e60d6_c65ba4af",
+        "filename": "core/fxcrt/fx_extension_unittest.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T15:47:08Z",
+      "side": 1,
+      "message": "you can likely write these using designated initializers, e.g.\n```\nconst tm local_time \u003d {\n  .tm_mday \u003d 23,\n  .tm_hour \u003d 10,\n  .tm_min \u003d 35.\n};\n\nThen surround each test case with \n{ \n}\nto re-declare and avoid assignments.",
+      "range": {
+        "startLine": 156,
+        "startChar": 20,
+        "endLine": 161,
+        "endChar": 25
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9401ad18_2519ec9a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcrt/fx_extension_unittest.cpp",
+              "range": {
+                "startLine": 156,
+                "startChar": 0,
+                "endLine": 165,
+                "endChar": 0
+              },
+              "replacement": "  tm local_time \u003d {.tm_min \u003d 35, .tm_hour \u003d 10, .tm_mday \u003d 23};\n  tm utc_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 3, .tm_mday \u003d 23};\n"
+            },
+            {
+              "path": "core/fxcrt/fx_extension_unittest.cpp",
+              "range": {
+                "startLine": 167,
+                "startChar": 0,
+                "endLine": 173,
+                "endChar": 0
+              },
+              "replacement": "  local_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 23, .tm_mday \u003d 22};\n  utc_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 3, .tm_mday \u003d 23};\n"
+            },
+            {
+              "path": "core/fxcrt/fx_extension_unittest.cpp",
+              "range": {
+                "startLine": 175,
+                "startChar": 0,
+                "endLine": 181,
+                "endChar": 0
+              },
+              "replacement": "  local_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 7, .tm_mday \u003d 24};\n  utc_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 17, .tm_mday \u003d 23};\n"
+            },
+            {
+              "path": "core/fxcrt/fx_extension_unittest.cpp",
+              "range": {
+                "startLine": 183,
+                "startChar": 0,
+                "endLine": 189,
+                "endChar": 0
+              },
+              "replacement": "  local_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 7, .tm_mday \u003d 1};\n  utc_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 17, .tm_mday \u003d 31};\n"
+            },
+            {
+              "path": "core/fxcrt/fx_extension_unittest.cpp",
+              "range": {
+                "startLine": 191,
+                "startChar": 0,
+                "endLine": 197,
+                "endChar": 0
+              },
+              "replacement": "  local_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 23, .tm_mday \u003d 31};\n  utc_time \u003d {.tm_min \u003d 5, .tm_hour \u003d 3, .tm_mday \u003d 1};\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ac7d49c29a3a68a45f55448a1dbd74ba159d5aba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
