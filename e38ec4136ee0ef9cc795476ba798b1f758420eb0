@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3deabb99_d8ecce63",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 18
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T20:17:22Z",
+      "side": 1,
+      "message": "singular, also line 11.",
+      "range": {
+        "startLine": 9,
+        "startChar": 49,
+        "endLine": 9,
+        "endChar": 58
+      },
+      "revId": "e38ec4136ee0ef9cc795476ba798b1f758420eb0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97b5b188_b711395f",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T20:17:22Z",
+      "side": 1,
+      "message": "Could have remained as kFoo.",
+      "range": {
+        "startLine": 225,
+        "startChar": 21,
+        "endLine": 225,
+        "endChar": 29
+      },
+      "revId": "e38ec4136ee0ef9cc795476ba798b1f758420eb0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
