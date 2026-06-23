@@ -603,6 +603,67 @@ TEST_F(FPDFDocEmbedderTest, FindBookmarks) {
   EXPECT_FALSE(FPDFBookmark_Find(document(), bad_title.get()));
 }
 
+TEST_F(FPDFDocEmbedderTest, FindBookmarksWithColor) {
+  ASSERT_TRUE(OpenDocument("bookmarks_color.pdf"));
+
+  float red = 100;
+  float green = 100;
+  float blue = 100;
+
+  ScopedFPDFWideString title = GetFPDFWideString(L"A Good Beginning");
+  FPDF_BOOKMARK bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  // Should be unchanged as /C doesn't exist.
+  EXPECT_FLOAT_EQ(red, 100);
+  EXPECT_FLOAT_EQ(green, 100);
+  EXPECT_FLOAT_EQ(blue, 100);
+
+  title = GetFPDFWideString(L"Open Middle");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  // Should be unchanged as /C isn't an array here.
+  EXPECT_FLOAT_EQ(red, 100);
+  EXPECT_FLOAT_EQ(green, 100);
+  EXPECT_FLOAT_EQ(blue, 100);
+
+  title = GetFPDFWideString(L"Open Middle Descendant");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  // Should be unchanged as /C doesn't have the expected 3 elements here.
+  EXPECT_FLOAT_EQ(red, 100);
+  EXPECT_FLOAT_EQ(green, 100);
+  EXPECT_FLOAT_EQ(blue, 100);
+
+  title = GetFPDFWideString(L"A Good Closed Ending");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  // Should be unchanged as /C has an element that is greater than 1.
+  EXPECT_FLOAT_EQ(red, 100);
+  EXPECT_FLOAT_EQ(green, 100);
+  EXPECT_FLOAT_EQ(blue, 100);
+
+  title = GetFPDFWideString(L"A Good Closed Ending Descendant");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_FALSE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  // Should be unchanged as /C has an element that is less than 0.
+  EXPECT_FLOAT_EQ(red, 100);
+  EXPECT_FLOAT_EQ(green, 100);
+  EXPECT_FLOAT_EQ(blue, 100);
+
+  title = GetFPDFWideString(L"A Good Closed Ending Descendant 2");
+  bookmark = FPDFBookmark_Find(document(), title.get());
+  ASSERT_TRUE(bookmark);
+  EXPECT_TRUE(FPDFBookmark_GetColor(bookmark, &red, &green, &blue));
+  EXPECT_FLOAT_EQ(red, 0.1);
+  EXPECT_FLOAT_EQ(green, 0.2);
+  EXPECT_FLOAT_EQ(blue, 0.3);
+}
+
 // Check circular bookmarks will not cause infinite loop.
 TEST_F(FPDFDocEmbedderTest, FindBookmarksBug420) {
   // Open a file with circular bookmarks.
