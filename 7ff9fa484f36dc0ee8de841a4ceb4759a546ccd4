@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "389e797c_0181193e",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T00:05:35Z",
+      "side": 1,
+      "message": "Used at 1583.",
+      "parentUuid": "36428e0c_927377cd",
+      "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3c11abc4_dda21beb",
@@ -41,6 +59,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64f6b6ab_7133403c",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1362,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T00:05:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3c11abc4_dda21beb",
+      "range": {
+        "startLine": 1362,
+        "startChar": 40,
+        "endLine": 1362,
+        "endChar": 52
+      },
+      "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ce58cdc_d2c7aafd",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-06-22T23:26:30Z",
       "side": 1,
       "message": "style x2",
+      "range": {
+        "startLine": 1364,
+        "startChar": 40,
+        "endLine": 1364,
+        "endChar": 54
+      },
+      "revId": "7ff9fa484f36dc0ee8de841a4ceb4759a546ccd4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6be3ea2e_2ada9275",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1364,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T00:05:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ce58cdc_d2c7aafd",
       "range": {
         "startLine": 1364,
         "startChar": 40,
