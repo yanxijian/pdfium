@@ -130,13 +130,13 @@ void CFX_FolderFontInfo::AddPath(const ByteString& path) {
 }
 
 void CFX_FolderFontInfo::EnumFontList(CFX_FontMapper* pMapper) {
-  mapper_ = pMapper;
   for (const auto& path : path_list_) {
-    ScanPath(path);
+    ScanPath(pMapper, path);
   }
 }
 
-void CFX_FolderFontInfo::ScanPath(const ByteString& path) {
+void CFX_FolderFontInfo::ScanPath(CFX_FontMapper* pMapper,
+                                  const ByteString& path) {
   std::unique_ptr<FX_Folder> handle = FX_Folder::OpenFolder(path);
   if (!handle) {
     return;
@@ -165,11 +165,12 @@ void CFX_FolderFontInfo::ScanPath(const ByteString& path) {
 #endif
 
     fullpath += filename;
-    bFolder ? ScanPath(fullpath) : ScanFile(fullpath);
+    bFolder ? ScanPath(pMapper, fullpath) : ScanFile(pMapper, fullpath);
   }
 }
 
-void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
+void CFX_FolderFontInfo::ScanFile(CFX_FontMapper* pMapper,
+                                  const ByteString& path) {
   std::unique_ptr<FILE, FxFileCloser> pFile(fopen(path.c_str(), "rb"));
   if (!pFile) {
     return;
@@ -186,7 +187,7 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
-    ReportFace(path, pFile.get(), filesize, 0);
+    ReportFace(pMapper, path, pFile.get(), filesize, 0);
     return;
   }
 
@@ -205,12 +206,13 @@ void CFX_FolderFontInfo::ScanFile(const ByteString& path) {
   }
 
   for (uint32_t i = 0; i < nFaces; i++) {
-    ReportFace(path, pFile.get(), filesize,
+    ReportFace(pMapper, path, pFile.get(), filesize,
                fxcrt::GetUInt32MSBFirst(offsets.subspan(i * 4).first<4u>()));
   }
 }
 
-void CFX_FolderFontInfo::ReportFace(const ByteString& path,
+void CFX_FolderFontInfo::ReportFace(CFX_FontMapper* pMapper,
+                                    const ByteString& path,
                                     FILE* pFile,
                                     FX_FILESIZE filesize,
                                     uint32_t offset) {
@@ -264,67 +266,67 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     // See https://learn.microsoft.com/en-us/typography/opentype/spec/os2
     uint32_t codepages = fxcrt::GetUInt32MSBFirst(p.first<4u>());
     if (codepages & (1U << 1)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_EasternEuropean);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_EasternEuropean);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_EasternEuropean;
     }
     if (codepages & (1U << 2)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Cyrillic);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Cyrillic);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Cyrillic;
     }
     if (codepages & (1U << 3)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Greek);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Greek);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Greek;
     }
     if (codepages & (1U << 4)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Turkish);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Turkish);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Turkish;
     }
     if (codepages & (1U << 5)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Hebrew);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Hebrew);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Hebrew;
     }
     if (codepages & (1U << 6)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Arabic);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Arabic);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Arabic;
     }
     if (codepages & (1U << 7)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Baltic);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Baltic);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Baltic;
     }
     if (codepages & (1U << 8)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kMSWin_Vietnamese);
+      pMapper->AddInstalledFont(facename, FX_Charset::kMSWin_Vietnamese);
       pInfo->charsets_ |= FX_CharsetFlag::kMSWin_Vietnamese;
     }
     if (codepages & (1U << 16)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kThai);
+      pMapper->AddInstalledFont(facename, FX_Charset::kThai);
       pInfo->charsets_ |= FX_CharsetFlag::kThai;
     }
     if (codepages & (1U << 17)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kShiftJIS);
+      pMapper->AddInstalledFont(facename, FX_Charset::kShiftJIS);
       pInfo->charsets_ |= FX_CharsetFlag::kShiftJIS;
     }
     if (codepages & (1U << 18)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
+      pMapper->AddInstalledFont(facename, FX_Charset::kChineseSimplified);
       pInfo->charsets_ |= FX_CharsetFlag::kChineseSimplified;
     }
     if (codepages & (1U << 19)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kHangul);
+      pMapper->AddInstalledFont(facename, FX_Charset::kHangul);
       pInfo->charsets_ |= FX_CharsetFlag::kHangul;
     }
     if (codepages & (1U << 20)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
+      pMapper->AddInstalledFont(facename, FX_Charset::kChineseTraditional);
       pInfo->charsets_ |= FX_CharsetFlag::kChineseTraditional;
     }
     if (codepages & (1U << 21)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kJohab);
+      pMapper->AddInstalledFont(facename, FX_Charset::kJohab);
       pInfo->charsets_ |= FX_CharsetFlag::kJohab;
     }
     if (codepages & (1U << 30)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kOEM);
+      pMapper->AddInstalledFont(facename, FX_Charset::kOEM);
       pInfo->charsets_ |= FX_CharsetFlag::kOEM;
     }
     if (codepages & (1U << 31)) {
-      mapper_->AddInstalledFont(facename, FX_Charset::kSymbol);
+      pMapper->AddInstalledFont(facename, FX_Charset::kSymbol);
       pInfo->charsets_ |= FX_CharsetFlag::kSymbol;
     }
   }
@@ -336,7 +338,7 @@ void CFX_FolderFontInfo::ReportFace(const ByteString& path,
     pdfium::span<const uint8_t> p = maxp.unsigned_span().subspan(4u);
     pInfo->glyph_count_ = fxcrt::GetUInt16MSBFirst(p.first<2u>());
   }
-  mapper_->AddInstalledFont(facename, FX_Charset::kANSI);
+  pMapper->AddInstalledFont(facename, FX_Charset::kANSI);
   pInfo->charsets_ |= FX_CharsetFlag::kANSI;
   pInfo->styles_ = 0;
   if (style.Contains("Bold")) {
@@ -419,7 +421,8 @@ void* CFX_FolderFontInfo::FindFont(int weight,
   return nullptr;
 }
 
-void* CFX_FolderFontInfo::MapFont(int weight,
+void* CFX_FolderFontInfo::MapFont(CFX_FontMapper* pMapper,
+                                  int weight,
                                   bool italic,
                                   FX_Charset charset,
                                   int pitch_family,

@@ -79,7 +79,8 @@ class CFX_ExternalFontInfo final : public SystemFontInfoIface {
     }
   }
 
-  void* MapFont(int weight,
+  void* MapFont(CFX_FontMapper* pMapper,
+                int weight,
                 bool bItalic,
                 FX_Charset charset,
                 int pitch_family,
@@ -217,7 +218,8 @@ static void* DefaultMapFont(struct _FPDF_SYSFONTINFO* pThis,
                             const char* family,
                             FPDF_BOOL* /*exact*/) {
   auto* pDefault = static_cast<FPDF_SYSFONTINFO_DEFAULT*>(pThis);
-  return pDefault->font_info_->MapFont(weight, !!use_italic,
+  auto* pMapper = CFX_GEModule::Get()->GetFontMgr()->GetBuiltinMapper();
+  return pDefault->font_info_->MapFont(pMapper, weight, !!use_italic,
                                        FX_GetCharsetFromInt(charset),
                                        pitch_family, family);
 }
