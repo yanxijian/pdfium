@@ -171,6 +171,28 @@ ParamsAndObject SetParamValueHelper(FPDF_DOCUMENT document,
   return {params, page_obj};
 }
 
+ByteString FormatPDFDate(time_t current_time, tm local_time) {
+  tm* utc_time = gmtime(&current_time);
+  if (!utc_time) {
+    return ByteString::Format("D:%04d%02d%02d%02d%02d%02d",
+                              local_time.tm_year + 1900, local_time.tm_mon + 1,
+                              local_time.tm_mday, local_time.tm_hour,
+                              local_time.tm_min, local_time.tm_sec);
+  }
+
+  constexpr int kMinutesPerHour = 60;
+  const int offset_minutes =
+      FXSYS_TimeZoneOffsetInMinutes(local_time, *utc_time);
+  const int abs_offset_minutes =
+      offset_minutes < 0 ? -offset_minutes : offset_minutes;
+  return ByteString::Format(
+      "D:%04d%02d%02d%02d%02d%02d%c%02d'%02d'", local_time.tm_year + 1900,
+      local_time.tm_mon + 1, local_time.tm_mday, local_time.tm_hour,
+      local_time.tm_min, local_time.tm_sec, offset_minutes < 0 ? '-' : '+',
+      abs_offset_minutes / kMinutesPerHour,
+      abs_offset_minutes % kMinutesPerHour);
+}
+
 }  // namespace
 
 FPDF_EXPORT FPDF_DOCUMENT FPDF_CALLCONV FPDF_CreateNewDocument() {
@@ -185,9 +207,7 @@ FPDF_EXPORT FPDF_DOCUMENT FPDF_CALLCONV FPDF_CreateNewDocument() {
     if (FXSYS_time(&currentTime) != -1) {
       tm* pTM = FXSYS_localtime(&currentTime);
       if (pTM) {
-        DateStr = ByteString::Format(
-            "D:%04d%02d%02d%02d%02d%02d", pTM->tm_year + 1900, pTM->tm_mon + 1,
-            pTM->tm_mday, pTM->tm_hour, pTM->tm_min, pTM->tm_sec);
+        DateStr = FormatPDFDate(currentTime, *pTM);
       }
     }
   }
