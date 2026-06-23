@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "c4c2cd90_f23de637",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T23:30:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad671381_cc52bb16",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 49
+      },
+      "revId": "d25a2ddcf1073c2c226935604e8734fec768379d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "0bc2cae3_f9a755a2",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-23T23:17:04Z",
       "side": 1,
       "message": "Thanks for splitting up your CL more, but usually it\u0027s better to send CLs in a chain out for review in order. It\u0027s still \"your turn\" on the parent CL.",
+      "revId": "d25a2ddcf1073c2c226935604e8734fec768379d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbc3b1fb_83c0fa3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T23:30:55Z",
+      "side": 1,
+      "message": "Yes, sorry, I meant to only add you as reviewer and not pass the potato to you, just wanted you to see that I was splitting up the CL regarding the visual rendering aspect",
+      "parentUuid": "0bc2cae3_f9a755a2",
       "revId": "d25a2ddcf1073c2c226935604e8734fec768379d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
