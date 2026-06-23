@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c0c905a_cc219482",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T20:18:28Z",
+      "side": 1,
+      "message": "moved cleanup to this CL, 149790 only has addition of is_rtl",
+      "revId": "5186d428a817936df69d674381ec7a9b1e19f7c0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
