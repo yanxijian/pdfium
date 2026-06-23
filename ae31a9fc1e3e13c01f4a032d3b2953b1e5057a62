@@ -120,6 +120,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "19ecb63f_245368ed",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T01:20:14Z",
+      "side": 1,
+      "message": "1. Was hoping this can be prepended in a different CL as well, regardless of the next bullet point.\n\n2. Patchset 10 implemented GetCaretX() as: `return is_rtl_ ? location_.x : location_.x + width_;`, whereas patchset 12 implements it as `return location_.x + width_;`. Even though the implementation changed, all the tests still passed.\n\nDoes that mean:\n\na. Patchset 10 was doing unnecessary work?\n\nor\n\nb. There is not enough test coverage?\n\nor\n\nc. Something else?",
+      "parentUuid": "831f51e7_a45df52c",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60fb667c_0b116e3c",
         "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
         "patchSetId": 10
