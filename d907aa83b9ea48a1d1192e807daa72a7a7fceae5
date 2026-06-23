@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2493ac64_039afb26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 59
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T17:32:51Z",
+      "side": 1,
+      "message": "Same comment as other CLs. Not sure why Regular words in the middle of a sentence gets capitalized.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 12
+      },
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "830e7d3f_602b66ae",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 59
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T17:32:51Z",
+      "side": 1,
+      "message": "Put a newline above, and balance it out with a newline after line 16.",
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fef5132_5fe59b8f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 59
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T17:32:51Z",
+      "side": 1,
+      "message": "Just merge this with line 20.",
+      "revId": "d907aa83b9ea48a1d1192e807daa72a7a7fceae5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
