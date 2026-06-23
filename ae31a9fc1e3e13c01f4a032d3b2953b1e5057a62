@@ -155,6 +155,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aaea8298_523b1d0c",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T01:13:49Z",
+      "side": 1,
+      "message": "Thanks for doing some cleanup here. Was hoping most of this can be prepended in a separate CL.",
+      "parentUuid": "bc34dfa8_20fbc6b5",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d515687d_fc5009b2",
         "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
         "patchSetId": 10

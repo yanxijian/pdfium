@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "654cd450_c8fe66dd",
+        "filename": "core/fpdfdoc/cpvt_wordinfo.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T01:13:49Z",
+      "side": 1,
+      "message": "Where the \"implementation\" stays in the .cpp file.",
+      "range": {
+        "startLine": 16,
+        "startChar": 42,
+        "endLine": 16,
+        "endChar": 53
+      },
+      "revId": "af8d44b03e1ac87755b7d1ec2b8e09f9182282fc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
