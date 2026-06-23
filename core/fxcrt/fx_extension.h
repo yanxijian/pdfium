@@ -12,6 +12,7 @@
 #include <time.h>
 #include <wctype.h>
 
+#include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/widestring.h"
 
@@ -152,5 +153,36 @@ void FXSYS_SetLocaltimeFunction(struct tm* (*func)(const time_t*));
 // Replacements for time/localtime that respect overrides.
 time_t FXSYS_time(time_t* tloc);
 struct tm* FXSYS_localtime(const time_t* tp);
+
+int FXSYS_TimeZoneOffsetInMinutes(const tm& local_time, const tm& utc_time);
+
+namespace fxcrt {
+
+using TimeFunction = time_t (*)();
+using LocaltimeFunction = struct tm* (*)(const time_t*);
+
+class ScopedTimeFunction {
+ public:
+  FX_STACK_ALLOCATED();
+
+  explicit ScopedTimeFunction(TimeFunction func);
+  ~ScopedTimeFunction();
+
+ private:
+  AutoRestorer<TimeFunction> restorer_;
+};
+
+class ScopedLocaltimeFunction {
+ public:
+  FX_STACK_ALLOCATED();
+
+  explicit ScopedLocaltimeFunction(LocaltimeFunction func);
+  ~ScopedLocaltimeFunction();
+
+ private:
+  AutoRestorer<LocaltimeFunction> restorer_;
+};
+
+}  // namespace fxcrt
 
 #endif  // CORE_FXCRT_FX_EXTENSION_H_
