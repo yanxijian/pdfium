@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e3e67ba_dc8f145a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T18:02:13Z",
+      "side": 1,
+      "message": "This CL doesn\u0027t remove any #defines though.",
+      "revId": "a3f13214ed55408152563da961b123aeed0358d5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
