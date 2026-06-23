@@ -16,6 +16,63 @@
       "message": "Since these scoper classes are only used in tests, can they move into testing/utils/ instead?",
       "revId": "745777d8582673c286f7613c64a3547a189bf830",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e54b55b2_2c997410",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T18:21:00Z",
+      "side": 1,
+      "message": "Take a const-ref?",
+      "range": {
+        "startLine": 174,
+        "startChar": 46,
+        "endLine": 174,
+        "endChar": 48
+      },
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c27902ec_391545b0",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T18:21:00Z",
+      "side": 1,
+      "message": "Just use abs()?",
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d406abee_b68a767b",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T18:21:00Z",
+      "side": 1,
+      "message": "Instead of repeating line 177 with the timezone offset, how about just use the same string and then append the TZ offset here?",
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
