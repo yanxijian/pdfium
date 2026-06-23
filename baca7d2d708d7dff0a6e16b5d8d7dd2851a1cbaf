@@ -33,6 +33,24 @@
       "message": "This can live inside brotli_decoder.cpp in an anonymous namespace. No need to expose it in the header if it is not used anywhere else.",
       "revId": "baca7d2d708d7dff0a6e16b5d8d7dd2851a1cbaf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b892839d_e41bfa3f",
+        "filename": "core/fxcodec/brotli/brotli_decoder.h",
+        "patchSetId": 57
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T05:10:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fdfb233_b32272b6",
+      "revId": "baca7d2d708d7dff0a6e16b5d8d7dd2851a1cbaf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
