@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42540728_dde35880",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T20:27:20Z",
+      "side": 1,
+      "message": "AscentY() and DescentY() are very similar, but they do not have the \"Get\" prefix. Omit that for consistency?",
+      "revId": "0fd3ec23684489f1de3aa8bdea1274d336310b27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
