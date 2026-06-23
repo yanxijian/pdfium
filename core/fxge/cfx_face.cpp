@@ -773,6 +773,8 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
     int dest_width,
     FontAntiAliasingMode anti_alias,
     const CFX_SubstFont* subst_font) {
+  // TODO(https://crbug.com/42271123): Implement glyph rendering in
+  // Skia/Fontations.
   FT_Matrix ft_matrix;
   ft_matrix.xx = matrix.a / 64 * 65536;
   ft_matrix.xy = matrix.c / 64 * 65536;
@@ -1290,10 +1292,14 @@ std::vector<CharCodeAndIndex> CFX_Face::GetCharCodesAndIndices(
 }
 
 CFX_Face::CharMap CFX_Face::GetCurrentCharMap() const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return GetRec()->charmap;
 }
 
 std::optional<fxge::FontEncoding> CFX_Face::GetCurrentCharMapEncoding() const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   if (!GetRec()->charmap) {
     return std::nullopt;
   }
@@ -1301,29 +1307,41 @@ std::optional<fxge::FontEncoding> CFX_Face::GetCurrentCharMapEncoding() const {
 }
 
 CFX_Face::CharMapId CFX_Face::GetCharMapIdByIndex(size_t index) const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return {.platform_id = GetCharMapPlatformIdByIndex(index),
           .encoding_id = GetCharMapEncodingIdByIndex(index)};
 }
 
 int CFX_Face::GetCharMapPlatformIdByIndex(size_t index) const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return GetCharMaps()[index]->platform_id;
 }
 
 int CFX_Face::GetCharMapEncodingIdByIndex(size_t index) const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return GetCharMaps()[index]->encoding_id;
 }
 
 fxge::FontEncoding CFX_Face::GetCharMapEncodingByIndex(size_t index) const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return ToFontEncoding(GetCharMaps()[index]->encoding);
 }
 
 size_t CFX_Face::GetCharMapCount() const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   return GetRec()->charmaps
              ? pdfium::checked_cast<size_t>(GetRec()->num_charmaps)
              : 0;
 }
 
 pdfium::span<const FT_CharMap> CFX_Face::GetCharMaps() const {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   size_t count = GetCharMapCount();
   if (count == 0) {
     return {};
@@ -1333,16 +1351,22 @@ pdfium::span<const FT_CharMap> CFX_Face::GetCharMaps() const {
 }
 
 void CFX_Face::SetCharMap(CharMap map) {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   FT_Set_Charmap(GetRec(), static_cast<FT_CharMap>(map));
 }
 
 void CFX_Face::SetCharMapByIndex(size_t index) {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   CHECK_LT(index, GetCharMapCount());
   // SAFETY: required from library as enforced by check above.
   SetCharMap(UNSAFE_BUFFERS(GetRec()->charmaps[index]));
 }
 
 bool CFX_Face::SelectCharMap(fxge::FontEncoding encoding) {
+  // TODO(https://crbug.com/42271123): Implement charmap management in
+  // Skia/Fontations.
   FT_Error error = FT_Select_Charmap(GetRec(), ToFTEncoding(encoding));
   return !error;
 }
@@ -1415,6 +1439,8 @@ CFX_Face::~CFX_Face() = default;
 void CFX_Face::AdjustVariationParams(int glyph_index,
                                      int dest_width,
                                      int weight) {
+  // TODO(https://crbug.com/42271123): Implement variation parameters adjustment
+  // in Skia/Fontations.
   DCHECK_GE(dest_width, 0);
 
   FT_FaceRec* rec = GetRec();
