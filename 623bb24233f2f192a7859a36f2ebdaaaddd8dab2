@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff41c9b2_0cc329e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T17:54:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f30c99d2_2fb08dec",
+      "range": {
+        "startLine": 13,
+        "startChar": 17,
+        "endLine": 13,
+        "endChar": 21
+      },
+      "revId": "623bb24233f2f192a7859a36f2ebdaaaddd8dab2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "78f77e38_22d0f46c",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-06-23T17:41:03Z",
       "side": 1,
       "message": "Maybe if the bookmarks had names like \"No Color\", that would provide better documentation of what their color characteristics are.",
+      "range": {
+        "startLine": 613,
+        "startChar": 51,
+        "endLine": 613,
+        "endChar": 67
+      },
+      "revId": "623bb24233f2f192a7859a36f2ebdaaaddd8dab2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10cbdc36_4330b0cd",
+        "filename": "fpdfsdk/fpdf_doc_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 613,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-23T17:54:28Z",
+      "side": 1,
+      "message": "Done, and now that they are self-documenting, removed the additional comments as well.",
+      "parentUuid": "78f77e38_22d0f46c",
       "range": {
         "startLine": 613,
         "startChar": 51,
