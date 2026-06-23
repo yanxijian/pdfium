@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d63f61b0_6b6c1168",
+        "filename": "core/fxge/fx_font_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T16:29:08Z",
+      "side": 1,
+      "message": "This helper duplicates logic found in non-test code (`cfx_folderfontinfo.cpp`):\\n1. Parsing `nTables` from the font header.\\n2. Checking table payload bounds against the data size (similar to `DataVectorAtLocation`).\\n\\nSince `CFX_FolderFontInfo` streams the font file from disk rather than loading it entirely into a memory span, we cannot easily share a common `GetFontTable` helper. However, we can avoid this duplication entirely by deleting this helper and testing `FindFontTableLocation` directly.",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 0
+      },
+      "revId": "52c03b62c4a26e687efc0af5365a627a170feaec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9941569_110873c7",
+        "filename": "core/fxge/fx_font_unittest.cpp",
+        "patchSetId": 17
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T16:29:08Z",
+      "side": 1,
+      "message": "If we drop the `GetFontTable` helper, we can simplify this test to evaluate `FindFontTableLocation` directly. We only need to pass a mock table directory array rather than a full TTF header:\\n\\n```cpp\\nTEST(FXFontTest, FindFontTableLocation) {\\n  std::vector\u003cuint8_t\u003e table_dir \u003d {\\n      // Table Directory Entry 1 (\u0027head\u0027)\\n      \u0027h\u0027, \u0027e\u0027, \u0027a\u0027, \u0027d\u0027, 0x00, 0x00, 0x00, 0x00,  // checksum\\n      0x00, 0x00, 0x00, 0x2C,                      // offset \u003d 44\\n      0x00, 0x00, 0x00, 0x0A,                      // length \u003d 10\\n\\n      // Table Directory Entry 2 (\u0027name\u0027)\\n      \u0027n\u0027, \u0027a\u0027, \u0027m\u0027, \u0027e\u0027, 0x00, 0x00, 0x00, 0x00,  // checksum\\n      0x00, 0x00, 0x00, 0x36,                      // offset \u003d 54\\n      0x00, 0x00, 0x00, 0x14,                      // length \u003d 20\\n  };\\n\\n  uint32_t head_tag \u003d CFX_FontMapper::MakeTag(\u0027h\u0027, \u0027e\u0027, \u0027a\u0027, \u0027d\u0027);\\n  std::optional\u003cFontTableLocation\u003e head_loc \u003d FindFontTableLocation(table_dir, head_tag);\\n  ASSERT_TRUE(head_loc.has_value());\\n  EXPECT_EQ(44u, head_loc-\u003eoffset);\\n  EXPECT_EQ(10u, head_loc-\u003esize);\\n\\n  // Add similar tests for the \u0027name\u0027 tag, \u0027gasp\u0027 tag (not found), and a truncated `table_dir` span.\\n}\\n```",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 0
+      },
+      "revId": "52c03b62c4a26e687efc0af5365a627a170feaec",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
