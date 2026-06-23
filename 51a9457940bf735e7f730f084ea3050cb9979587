@@ -138,6 +138,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4da653c2_988b3832",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 50
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T01:55:18Z",
+      "side": 1,
+      "message": "If the Flate code uses a 1 GB limit, then why not use that here as well? Why set the limit so low?",
+      "parentUuid": "b5ac88af_76cc63fc",
+      "revId": "51a9457940bf735e7f730f084ea3050cb9979587",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "095f03e5_be3d5fe3",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 50
