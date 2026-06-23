@@ -77,26 +77,31 @@ TEST_F(CPVT_VariableTextTest, LTRTextLayout) {
   CPVT_Word word;
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('h', word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x + word.width());
   float first_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('e', word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x + word.width());
   float second_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('l', word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x + word.width());
   float third_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('l', word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x + word.width());
   float fourth_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('o', word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x + word.width());
   float fifth_x = word.location().x;
 
   EXPECT_FALSE(it->NextWord());
@@ -126,30 +131,31 @@ TEST_F(CPVT_VariableTextTest, RTLTextLayout) {
   CPVT_Word word;
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05E9, word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x);
   float first_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05DC, word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x);
   float second_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05D5, word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x);
   float third_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05DD, word.word());
+  EXPECT_EQ(word.CaretX(), word.location().x);
   float fourth_x = word.location().x;
 
   EXPECT_FALSE(it->NextWord());
 
-  // TODO(crbug.com/40115028): This should be in RTL order. Currently, it falls
-  // back to LTR, so coordinates increase from left to right. Once RTL is
-  // supported, the first logical character should have the largest X
-  // coordinate, and this test case should use EXPECT_GT instead.
-  EXPECT_LT(first_x, second_x);
-  EXPECT_LT(second_x, third_x);
-  EXPECT_LT(third_x, fourth_x);
+  // The first logical character has the largest X coordinate.
+  EXPECT_GT(first_x, second_x);
+  EXPECT_GT(second_x, third_x);
+  EXPECT_GT(third_x, fourth_x);
 }
