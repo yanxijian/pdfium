@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7f00248_4a36a052",
+        "filename": "core/fxge/skrifa/src/outlines.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T17:35:06Z",
+      "side": 1,
+      "message": "Same as line 40. Another time...",
+      "revId": "9f7cfd7777b8afb805b1e0d0cc945eb2a7d57d5f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
