@@ -156,6 +156,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c45f0140_1fee3fd7",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T23:45:53Z",
+      "side": 1,
+      "message": "While it\u0027s good to have unit test coverage, it is still unclear how changing the CaretX() behavior affects the overall text rendering.",
+      "parentUuid": "1303cddd_b8a321f5",
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60fb667c_0b116e3c",
         "filename": "core/fpdfdoc/cpvt_wordinfo.cpp",
         "patchSetId": 10
