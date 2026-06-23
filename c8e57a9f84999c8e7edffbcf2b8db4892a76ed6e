@@ -16,6 +16,24 @@
       "message": "One more nit: How about putting this above AscentY(), since most people think of \"x/y\" coordinates. As such, the x-coordinate getters should come before the y-coordinate getters.",
       "revId": "c8e57a9f84999c8e7edffbcf2b8db4892a76ed6e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51edf387_b8a01b92",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-23T21:12:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95ebf93b_cc1117b9",
+      "revId": "c8e57a9f84999c8e7edffbcf2b8db4892a76ed6e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
