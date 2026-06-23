@@ -83,6 +83,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a8032ff5_237d2f0d",
+        "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T18:16:28Z",
+      "side": 1,
+      "message": "Still need to swap the 2 lines so the C headers are grouped together.",
+      "parentUuid": "ea8e9f27_422e0810",
+      "revId": "4239ffaac40b45eaa9d459a676c6c4e73bd6b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b685908d_25364d04",
         "filename": "fpdfsdk/fpdf_edit_embeddertest.cpp",
         "patchSetId": 2
