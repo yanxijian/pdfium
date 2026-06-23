@@ -29,13 +29,13 @@ CPDF_StockFontArray::~CPDF_StockFontArray() {
 
 RetainPtr<CPDF_Font> CPDF_StockFontArray::GetFont(
     CFX_FontMapper::StandardFont index) const {
-  CHECK_LT(index, std::size(stock_fonts_));
-  return stock_fonts_[index];
+  CHECK_LT(static_cast<size_t>(index), std::size(stock_fonts_));
+  return stock_fonts_[static_cast<size_t>(index)];
 }
 
 void CPDF_StockFontArray::SetFont(CFX_FontMapper::StandardFont index,
                                   RetainPtr<CPDF_Font> font) {
-  if (index < std::size(stock_fonts_)) {
-    stock_fonts_[index] = std::move(font);
+  if (static_cast<size_t>(index) < std::size(stock_fonts_)) {
+    stock_fonts_[static_cast<size_t>(index)] = std::move(font);
   }
 }
