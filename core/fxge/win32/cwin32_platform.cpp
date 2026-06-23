@@ -511,8 +511,3 @@ CWin32Platform::CreateDefaultSystemFontInfo() {
   return fallback_info;
 }
 
-// static
-std::unique_ptr<CFX_GEModule::PlatformIface>
-CFX_GEModule::PlatformIface::Create() {
-  return std::make_unique<CWin32Platform>();
-}

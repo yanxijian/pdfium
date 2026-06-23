@@ -186,3 +186,9 @@ void CFX_Font::ReleasePlatformResource() {
     platform_font_ = nullptr;
   }
 }
+
+// static
+std::unique_ptr<CFX_GEModule::PlatformIface>
+CFX_GEModule::PlatformIface::Create() {
+  return std::make_unique<CApplePlatform>();
+}

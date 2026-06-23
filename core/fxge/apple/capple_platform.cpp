@@ -173,8 +173,3 @@ void* CApplePlatform::CreatePlatformFont(
   return quartz_2d_.CreateFont(font_span);
 }
 
-// static
-std::unique_ptr<CFX_GEModule::PlatformIface>
-CFX_GEModule::PlatformIface::Create() {
-  return std::make_unique<CApplePlatform>();
-}
