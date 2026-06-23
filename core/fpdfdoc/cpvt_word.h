@@ -39,6 +39,7 @@ class CPVT_Word {
 
   float AscentY() const { return location_.y + ascent_; }
   float DescentY() const { return location_.y + descent_; }
+  float GetCaretX() const { return location_.x + width_; }
 
  private:
   uint16_t word_ = 0;
