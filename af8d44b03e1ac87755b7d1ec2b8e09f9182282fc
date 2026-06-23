@@ -22,6 +22,23 @@
       },
       "revId": "af8d44b03e1ac87755b7d1ec2b8e09f9182282fc",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c51f27d_fca1d66e",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 686,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T01:29:52Z",
+      "side": 1,
+      "message": "I noticed patchset 11 made this change and a similar change in fpdfsdk/pwl/cpwl_edit_impl.cpp. I\u0027ve been advocating for making this CL smaller and reducing the size of the diff, but this is going in the other direction and making the CL larger. So, how about also doing this in another CL? Can append to this CL since this change does not affect this CL too much either way.",
+      "revId": "af8d44b03e1ac87755b7d1ec2b8e09f9182282fc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
