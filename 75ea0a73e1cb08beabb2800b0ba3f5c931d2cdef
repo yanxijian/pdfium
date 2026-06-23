@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2350671d_631c1ce5",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T16:19:46Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "565e1b46_a8e4d56e",
+      "revId": "75ea0a73e1cb08beabb2800b0ba3f5c931d2cdef",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9e3ffbb_c74f3272",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-22T22:44:06Z",
       "side": 0,
       "message": "Did you want to fulfill this in FindFontTable()?",
+      "revId": "75ea0a73e1cb08beabb2800b0ba3f5c931d2cdef",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "debed5c9_bc169b2a",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 452,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-23T16:19:46Z",
+      "side": 0,
+      "message": "moved comment.",
+      "parentUuid": "a9e3ffbb_c74f3272",
       "revId": "75ea0a73e1cb08beabb2800b0ba3f5c931d2cdef",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
