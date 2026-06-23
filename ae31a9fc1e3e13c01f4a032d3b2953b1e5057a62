@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b6fe9657_2a389187",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-23T00:22:02Z",
+      "side": 1,
+      "message": "Since there are no other CVPT_Word variables in this function, this can probably keep the \"word\" name and avoid the renaming churn.",
+      "range": {
+        "startLine": 329,
+        "startChar": 14,
+        "endLine": 329,
+        "endChar": 23
+      },
+      "revId": "ae31a9fc1e3e13c01f4a032d3b2953b1e5057a62",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6c196002_c4ed9f49",
         "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
         "patchSetId": 10
