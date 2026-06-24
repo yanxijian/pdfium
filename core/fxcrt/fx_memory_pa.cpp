@@ -44,7 +44,7 @@ void* Alloc(size_t num_members, size_t member_size) {
 
   return GetGeneralPartitionAllocator()
       .root()
-      ->AllocInline<partition_alloc::AllocFlags::kReturnNull>(
+      ->Alloc<partition_alloc::AllocFlags::kReturnNull>(
           total.ValueOrDie(), "GeneralPartition");
 }
 
@@ -57,7 +57,7 @@ void* Calloc(size_t num_members, size_t member_size) {
 
   return GetGeneralPartitionAllocator()
       .root()
-      ->AllocInline<partition_alloc::AllocFlags::kReturnNull |
+      ->Alloc<partition_alloc::AllocFlags::kReturnNull |
                     partition_alloc::AllocFlags::kZeroFill>(total.ValueOrDie(),
                                                             "GeneralPartition");
 }
@@ -98,7 +98,7 @@ void* StringAlloc(size_t num_members, size_t member_size) {
 
   return GetStringPartitionAllocator()
       .root()
-      ->AllocInline<partition_alloc::AllocFlags::kReturnNull>(
+      ->Alloc<partition_alloc::AllocFlags::kReturnNull>(
           total.ValueOrDie(), "StringPartition");
 }
 
