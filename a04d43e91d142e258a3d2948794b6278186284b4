@@ -3,6 +3,46 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2b9c87f6_e455f374",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T23:26:42Z",
+      "side": 1,
+      "message": "Not GetCanonicalFontName() call before using `base_font_name` here? Or inline GetCanonicalFontName() call here.",
+      "range": {
+        "startLine": 255,
+        "startChar": 41,
+        "endLine": 255,
+        "endChar": 55
+      },
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be4236ee_96a076fe",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T23:26:42Z",
+      "side": 1,
+      "message": "Maybe merge into line 297?",
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "178494fc_7afe4ad7",
         "filename": "core/fxge/cfx_standardfont.cpp",
         "patchSetId": 20
