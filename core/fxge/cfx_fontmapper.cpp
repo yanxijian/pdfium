@@ -25,12 +25,33 @@
 #include "core/fxge/cfx_fontmgr.h"
 #include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_substfont.h"
+#include "core/fxge/fontdata/chromefontdata/chromefontdata.h"
 #include "core/fxge/fx_font.h"
 #include "core/fxge/systemfontinfo_iface.h"
 
 namespace {
 
+constexpr std::array<pdfium::span<const uint8_t>,
+                     CFX_StandardFont::kNumStandardFonts>
+    kFoxitFonts = {{
+        kFoxitFixedFontData,
+        kFoxitFixedBoldFontData,
+        kFoxitFixedBoldItalicFontData,
+        kFoxitFixedItalicFontData,
+        kFoxitSansFontData,
+        kFoxitSansBoldFontData,
+        kFoxitSansBoldItalicFontData,
+        kFoxitSansItalicFontData,
+        kFoxitSerifFontData,
+        kFoxitSerifBoldFontData,
+        kFoxitSerifBoldItalicFontData,
+        kFoxitSerifItalicFontData,
+        kFoxitSymbolFontData,
+        kFoxitDingbatsFontData,
+    }};
 
+constexpr pdfium::span<const uint8_t> kGenericSansFont = kFoxitSansMMFontData;
+constexpr pdfium::span<const uint8_t> kGenericSerifFont = kFoxitSerifMMFontData;
 
 struct AltFontFamily {
   const char* font_name_;    // Raw, POD struct.
@@ -411,12 +432,10 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
     CFX_SubstFont* subst_font) {
   if (base_font < CFX_StandardFont::kNumStandardFonts) {
     if (!standard_faces_[base_font]) {
-      CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
-      standard_faces_[base_font] =
-          CFX_Face::New(nullptr,
-                        pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            font_mgr->GetStandardFont(base_font)),
-                        0);
+      standard_faces_[base_font] = CFX_Face::New(
+          nullptr,
+          pdfium::MakeRetain<CFX_ReadOnlySpanStream>(kFoxitFonts[base_font]),
+          0);
     }
     return standard_faces_[base_font];
   }
@@ -429,23 +448,17 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
   if (FontFamilyIsRoman(pitch_family)) {
     subst_font->UseChromeSerif();
     if (!generic_serif_face_) {
-      CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
-      generic_serif_face_ =
-          CFX_Face::New(nullptr,
-                        pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            font_mgr->GetGenericSerifFont()),
-                        0);
+      generic_serif_face_ = CFX_Face::New(
+          nullptr,
+          pdfium::MakeRetain<CFX_ReadOnlySpanStream>(kGenericSerifFont), 0);
     }
     return generic_serif_face_;
   }
   subst_font->family_ = "Chrome Sans";
   if (!generic_sans_face_) {
-    CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
-    generic_sans_face_ =
-        CFX_Face::New(nullptr,
-                      pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                          font_mgr->GetGenericSansFont()),
-                      0);
+    generic_sans_face_ = CFX_Face::New(
+        nullptr, pdfium::MakeRetain<CFX_ReadOnlySpanStream>(kGenericSansFont),
+        0);
   }
   return generic_sans_face_;
 }
@@ -791,9 +804,8 @@ RetainPtr<CFX_Face> CFX_FontMapper::GetCachedTTCFace(void* font_handle,
                                                      size_t data_size) {
   CHECK_GE(ttc_size, data_size);
   uint32_t checksum = GetChecksumFromTT(font_handle);
-  CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
-  RetainPtr<CFX_FontMgr::FontCacheEntry> cache_entry =
-      font_mgr->GetTTCFontCacheEntry(ttc_size, checksum);
+  RetainPtr<FontCacheEntry> cache_entry =
+      GetTTCFontCacheEntry(ttc_size, checksum);
   if (!cache_entry) {
     auto font_data = FixedSizeDataVector<uint8_t>::Uninit(ttc_size);
     size_t size = font_info_->GetFontData(
@@ -802,8 +814,8 @@ RetainPtr<CFX_Face> CFX_FontMapper::GetCachedTTCFace(void* font_handle,
       return nullptr;
     }
 
-    cache_entry = font_mgr->AddTTCFontCacheEntry(ttc_size, checksum,
-                                                 std::move(font_data));
+    cache_entry =
+        AddTTCFontCacheEntry(ttc_size, checksum, std::move(font_data));
   }
   CHECK_EQ(ttc_size, cache_entry->FontStream()->span().size());
   size_t font_offset = ttc_size - data_size;
@@ -828,9 +840,8 @@ RetainPtr<CFX_Face> CFX_FontMapper::GetCachedFace(void* font_handle,
                                                   int weight,
                                                   bool is_italic,
                                                   size_t data_size) {
-  CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
-  RetainPtr<CFX_FontMgr::FontCacheEntry> cache_entry =
-      font_mgr->GetFontCacheEntry(subst_name, weight, is_italic);
+  RetainPtr<FontCacheEntry> cache_entry =
+      GetFontCacheEntry(subst_name, weight, is_italic);
   if (!cache_entry) {
     auto font_data = FixedSizeDataVector<uint8_t>::Uninit(data_size);
     size_t size = font_info_->GetFontData(
@@ -839,8 +850,8 @@ RetainPtr<CFX_Face> CFX_FontMapper::GetCachedFace(void* font_handle,
       return nullptr;
     }
 
-    cache_entry = font_mgr->AddFontCacheEntry(subst_name, weight, is_italic,
-                                              std::move(font_data));
+    cache_entry =
+        AddFontCacheEntry(subst_name, weight, is_italic, std::move(font_data));
   }
   RetainPtr<CFX_Face> face(cache_entry->GetFace(0));
   if (face) {
@@ -856,4 +867,55 @@ RetainPtr<CFX_Face> CFX_FontMapper::GetCachedFace(void* font_handle,
   return face;
 }
 
+CFX_FontMapper::FontCacheEntry::FontCacheEntry(
+    FixedSizeDataVector<uint8_t>&& data)
+    : font_stream_(pdfium::MakeRetain<CFX_ReadOnlyFixedSizeDataVectorStream>(
+          std::move(data))) {}
 
+CFX_FontMapper::FontCacheEntry::~FontCacheEntry() = default;
+
+void CFX_FontMapper::FontCacheEntry::SetFace(uint32_t face_index,
+                                             CFX_Face* face) {
+  CHECK_LT(face_index, std::size(ttc_faces_));
+  ttc_faces_[face_index].Reset(face);
+}
+
+CFX_Face* CFX_FontMapper::FontCacheEntry::GetFace(uint32_t face_index) const {
+  CHECK_LT(face_index, std::size(ttc_faces_));
+  return ttc_faces_[face_index].Get();
+}
+
+RetainPtr<CFX_FontMapper::FontCacheEntry> CFX_FontMapper::GetFontCacheEntry(
+    const ByteString& face_name,
+    int weight,
+    bool italic) {
+  auto it = face_map_.find({face_name, weight, italic});
+  return it != face_map_.end() ? pdfium::WrapRetain(it->second.Get()) : nullptr;
+}
+
+RetainPtr<CFX_FontMapper::FontCacheEntry> CFX_FontMapper::AddFontCacheEntry(
+    const ByteString& face_name,
+    int weight,
+    bool italic,
+    FixedSizeDataVector<uint8_t> data) {
+  auto cache_entry = pdfium::MakeRetain<FontCacheEntry>(std::move(data));
+  face_map_[{face_name, weight, italic}].Reset(cache_entry.Get());
+  return cache_entry;
+}
+
+RetainPtr<CFX_FontMapper::FontCacheEntry> CFX_FontMapper::GetTTCFontCacheEntry(
+    size_t ttc_size,
+    uint32_t checksum) {
+  auto it = ttc_face_map_.find({ttc_size, checksum});
+  return it != ttc_face_map_.end() ? pdfium::WrapRetain(it->second.Get())
+                                   : nullptr;
+}
+
+RetainPtr<CFX_FontMapper::FontCacheEntry> CFX_FontMapper::AddTTCFontCacheEntry(
+    size_t ttc_size,
+    uint32_t checksum,
+    FixedSizeDataVector<uint8_t> data) {
+  auto new_entry = pdfium::MakeRetain<FontCacheEntry>(std::move(data));
+  ttc_face_map_[{ttc_size, checksum}].Reset(new_entry.Get());
+  return new_entry;
+}
