@@ -12,6 +12,7 @@
 
 #include "constants/form_fields.h"
 #include "core/fpdfapi/page/cpdf_annotcontext.h"
+#include "core/fpdfapi/page/cpdf_occontext.h"
 #include "core/fpdfapi/page/cpdf_page.h"
 #include "core/fpdfapi/parser/cpdf_array.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
@@ -577,4 +578,49 @@ FPDF_GetPageLabel(FPDF_DOCUMENT document,
   // SAFETY: required from caller.
   return Utf16EncodeMaybeCopyAndReturnLength(
       str.value(), UNSAFE_BUFFERS(SpanFromFPDFApiArgs(buffer, buflen)));
+}
+
+FPDF_EXPORT unsigned long FPDF_CALLCONV
+FPDF_GetOCGCount(FPDF_DOCUMENT document) {
+  if (!document) {
+    return 0;
+  }
+
+  CPDF_Document* doc = CPDFDocumentFromFPDFDocument(document);
+  RetainPtr<CPDF_OCContext> oc_context =
+      pdfium::MakeRetain<CPDF_OCContext>(doc, CPDF_OCContext::kView);
+  return oc_context->GetOCGNames().size();
+}
+
+FPDF_EXPORT unsigned long FPDF_CALLCONV FPDF_GetOCGName(FPDF_DOCUMENT document,
+                                                        int index,
+                                                        void* buffer,
+                                                        unsigned long buflen) {
+  // Implicitly checks document as well as other downstream failures (such as no
+  // OCG entries). Since the function returns 0 no valid value of index would
+  // pass this check if there are downstream failures.
+  if (index < 0 || index >= static_cast<int>(FPDF_GetOCGCount(document))) {
+    return 0;
+  }
+
+  CPDF_Document* doc = CPDFDocumentFromFPDFDocument(document);
+  RetainPtr<CPDF_OCContext> oc_context =
+      pdfium::MakeRetain<CPDF_OCContext>(doc, CPDF_OCContext::kView);
+  WideString name = fxcrt::WideString::FromUTF8(
+      ByteStringView(oc_context->GetOCGNames()[index]));
+  // SAFETY: required from caller.
+  return Utf16EncodeMaybeCopyAndReturnLength(
+      name, UNSAFE_BUFFERS(SpanFromFPDFApiArgs(buffer, buflen)));
+}
+
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_GetOCGVisible(FPDF_DOCUMENT document,
+                                                       FPDF_BYTESTRING name) {
+  if (!document) {
+    return false;
+  }
+
+  CPDF_Document* doc = CPDFDocumentFromFPDFDocument(document);
+  RetainPtr<CPDF_OCContext> oc_context =
+      pdfium::MakeRetain<CPDF_OCContext>(doc, CPDF_OCContext::kView);
+  return oc_context->GetOCGVisible(oc_context->GetOCGByName(name));
 }
