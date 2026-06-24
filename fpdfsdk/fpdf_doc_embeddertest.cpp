@@ -973,3 +973,20 @@ TEST_F(FPDFDocEmbedderTest, GetXFALinks) {
   // Test passes if it doesn't crash. See https://crbug.com/840922
 }
 #endif  // PDF_ENABLE_XFA
+
+TEST_F(FPDFDocEmbedderTest, OCGTest) {
+  ASSERT_TRUE(OpenDocument("bug_40162073.pdf"));
+  ASSERT_EQ(2u, FPDF_GetOCGCount(document()));
+  unsigned short buf[128];
+
+  // 20 + 2 (null terminator)
+  EXPECT_EQ(22u, FPDF_GetOCGName(document(), 0, buf, 128));
+  ASSERT_EQ(L"default on", GetPlatformWString(buf));
+
+  // 22 + 2 (null terminator)
+  EXPECT_EQ(24u, FPDF_GetOCGName(document(), 1, buf, 128));
+  ASSERT_EQ(L"default off", GetPlatformWString(buf));
+
+  EXPECT_TRUE(FPDF_GetOCGVisible(document(), "default on"));
+  EXPECT_FALSE(FPDF_GetOCGVisible(document(), "default off"));
+}
