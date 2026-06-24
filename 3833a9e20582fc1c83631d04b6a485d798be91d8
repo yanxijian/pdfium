@@ -16,6 +16,24 @@
       "message": "Can a separate CL first do this mass rename?",
       "revId": "3833a9e20582fc1c83631d04b6a485d798be91d8",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bfd3070_0c2cda39",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T22:53:16Z",
+      "side": 1,
+      "message": "mass rename as follow-up",
+      "parentUuid": "1e6bbae7_886c103f",
+      "revId": "3833a9e20582fc1c83631d04b6a485d798be91d8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
