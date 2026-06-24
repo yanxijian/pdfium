@@ -1,0 +1,86 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38a0c49c_77548084",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 62
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T18:50:51Z",
+      "side": 1,
+      "message": "if we make auto next_out \u003d span(decoded_buffer).subspan(total_out), we can avoid the decoded_buffer.size() - total_out calculation, instead relying on next_out.size().  That way, the two can\u0027t get out of sync with each other in the future.",
+      "range": {
+        "startLine": 51,
+        "startChar": 2,
+        "endLine": 51,
+        "endChar": 61
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "7c5befd8_efe93831",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 51,
+                "startChar": 0,
+                "endLine": 53,
+                "endChar": 0
+              },
+              "replacement": "    auto output_span \u003d pdfium::span(decoded_buffer).subspan(total_out);\n    size_t available_out \u003d output_span.size();\n    uint8_t* next_out \u003d output_span.data();\n"
+            }
+          ]
+        }
+      ],
+      "revId": "70119ad20e377bfa266cc8279951d331a37dbe0e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c29ed195_9a8715f6",
+        "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
+        "patchSetId": 62
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T18:50:51Z",
+      "side": 1,
+      "message": "nit: can avoid std::min here as we checked N/2 above.",
+      "range": {
+        "startLine": 59,
+        "startChar": 10,
+        "endLine": 60,
+        "endChar": 59
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "02fd4455_f68517c9",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_decoder.cpp",
+              "range": {
+                "startLine": 59,
+                "startChar": 0,
+                "endLine": 61,
+                "endChar": 0
+              },
+              "replacement": "          (static_cast\u003cuint32_t\u003e(decoded_buffer.size()) * 2 \u003c\n           static_cast\u003cuint32_t\u003e(kMaxDecodeBytes))\n              ? static_cast\u003cuint32_t\u003e(decoded_buffer.size()) * 2\n              : static_cast\u003cuint32_t\u003e(kMaxDecodeBytes);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "70119ad20e377bfa266cc8279951d331a37dbe0e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
