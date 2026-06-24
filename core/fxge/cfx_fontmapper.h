@@ -18,15 +18,13 @@
 #include "build/build_config.h"
 #include "core/fxcrt/bytestring.h"
 #include "core/fxcrt/cfx_read_only_container_stream.h"
+#include "core/fxcrt/fixed_size_data_vector.h"
 #include "core/fxcrt/fx_codepage_forward.h"
 #include "core/fxcrt/observed_ptr.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_face.h"
 #include "core/fxge/cfx_standardfont.h"
 
-#ifdef PDF_ENABLE_XFA
-#include "core/fxcrt/fixed_size_data_vector.h"
-#endif
 
 class CFX_SubstFont;
 class SystemFontInfoIface;
@@ -53,7 +51,6 @@ class CFX_FontMapper {
 
   CFX_FontMapper();
   ~CFX_FontMapper();
-
   static constexpr uint32_t MakeTag(char c1, char c2, char c3, char c4) {
     return static_cast<uint8_t>(c1) << 24 | static_cast<uint8_t>(c2) << 16 |
            static_cast<uint8_t>(c3) << 8 | static_cast<uint8_t>(c4);
