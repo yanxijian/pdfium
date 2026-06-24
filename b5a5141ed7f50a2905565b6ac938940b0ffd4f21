@@ -16,6 +16,40 @@
       "message": "Thanks for the review. I addressed all comments in the latest patchset. PTAL when you have a chance.",
       "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "142587e2_ef6fc709",
+        "filename": "core/fxcrt/fx_extension.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T17:31:25Z",
+      "side": 1,
+      "message": "These used useful in the header in the earlier patchset. They improve readability.",
+      "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a12de55_5f569ca2",
+        "filename": "testing/utils/scoped_time_overrides.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T17:31:25Z",
+      "side": 1,
+      "message": "Only used in the .cc file, unless fx_extension.h defines TimeFunction/LocaltimeFunction.",
+      "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
