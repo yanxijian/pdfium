@@ -42,6 +42,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "77ecdf06_7eff6c8b",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Nope we don\u0027t want to push back the strings in that case. Added the check.\n\nFWIW: /Name is mandatory per spec so valid PDFs should be fine, but adding the check just in case.",
+      "parentUuid": "4445f825_b37bacc5",
+      "range": {
+        "startLine": 201,
+        "startChar": 36,
+        "endLine": 201,
+        "endChar": 52
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15fad076_c538753a",
@@ -65,6 +89,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0954b35b_c8f73f67",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15fad076_c538753a",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 14
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "90429e9b_95867e8d",
@@ -78,6 +126,30 @@
       "writtenOn": "2026-06-24T19:07:22Z",
       "side": 1,
       "message": "null return on not found?",
+      "range": {
+        "startLine": 227,
+        "startChar": 9,
+        "endLine": 227,
+        "endChar": 20
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "815f503a_d18a3c09",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "The variable used to take care of that as if nothing was found it would return nullptr because it was initialized to that on 215, but after directly returning at 223 the variable isn\u0027t needed. edited.",
+      "parentUuid": "90429e9b_95867e8d",
       "range": {
         "startLine": 227,
         "startChar": 9,
@@ -125,6 +197,30 @@
           ]
         }
       ],
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df1c7801_f2805cfd",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "This is 83 cols so CL format wraps it.",
+      "parentUuid": "61fe9fe0_6c463155",
+      "range": {
+        "startLine": 584,
+        "startChar": 0,
+        "endLine": 584,
+        "endChar": 16
+      },
       "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -180,6 +276,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0599da98_39594e13",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1da11231_6c501e15",
+      "range": {
+        "startLine": 589,
+        "startChar": 23,
+        "endLine": 589,
+        "endChar": 51
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a9a5a28_c4705c2a",
@@ -193,6 +313,30 @@
       "writtenOn": "2026-06-24T19:07:22Z",
       "side": 1,
       "message": "uint32_t isn\u0027t always unsigned long.",
+      "range": {
+        "startLine": 592,
+        "startChar": 21,
+        "endLine": 592,
+        "endChar": 29
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2039496_cc255b71",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 592,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a9a5a28_c4705c2a",
       "range": {
         "startLine": 592,
         "startChar": 21,
@@ -244,6 +388,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4da539a4_03521a83",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d874c9bf_c4958ab6",
+      "range": {
+        "startLine": 595,
+        "startChar": 70,
+        "endLine": 595,
+        "endChar": 78
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0aa987d7_f04d27f0",
@@ -257,6 +425,30 @@
       "writtenOn": "2026-06-24T19:07:22Z",
       "side": 1,
       "message": "again, line break.",
+      "range": {
+        "startLine": 444,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 16
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "424779be_cf601ae2",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "This wraps to 83, hence CL format adds in the break.",
+      "parentUuid": "0aa987d7_f04d27f0",
       "range": {
         "startLine": 444,
         "startChar": 0,
@@ -290,6 +482,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a09444ee_521b048d",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3728fe97_c4291f60",
+      "range": {
+        "startLine": 450,
+        "startChar": 4,
+        "endLine": 457,
+        "endChar": 16
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "36aa5c8b_2bb027e4",
@@ -303,6 +519,30 @@
       "writtenOn": "2026-06-24T19:07:22Z",
       "side": 1,
       "message": "formatting.",
+      "range": {
+        "startLine": 470,
+        "startChar": 33,
+        "endLine": 470,
+        "endChar": 37
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e877abb9_01959056",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T19:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36aa5c8b_2bb027e4",
       "range": {
         "startLine": 470,
         "startChar": 33,
