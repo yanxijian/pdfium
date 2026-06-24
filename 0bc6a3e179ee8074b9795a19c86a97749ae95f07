@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9640f3ee_e9bbb70f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T00:07:49Z",
+      "side": 1,
+      "message": "Can this CL stand up on its own as-is and pass trybots? Either way, I\u0027m concerned:\n\n- Yes: If all these non-refactoring changes trigger little/no test failures, then that is a sign that the code has insufficient test coverage.\n- No: Then the CL can\u0027t land as-is.",
+      "revId": "0bc6a3e179ee8074b9795a19c86a97749ae95f07",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
