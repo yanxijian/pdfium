@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85d3f3d2_8b092db8",
+        "filename": "core/fpdfapi/font/cpdf_stockfontarray.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:50Z",
+      "side": 1,
+      "message": "The commit message calls `CFX_StandardFont::ID` a \"scoped enum\", but it is actually unscoped (`enum ID : uint8_t`). Because of this, the `static_cast\u003csize_t\u003e` here isn\u0027t strictly necessary for array indexing (it would implicitly convert), though it is harmless and required for the `CHECK_LT` above.",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 0
+      },
+      "revId": "486e5f54f1b7a843fea9d62285c1ed0a54a13608",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50e45136_c1ebf673",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 543,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:50Z",
+      "side": 1,
+      "message": "This completely ignores the returned `std::optional\u003cID\u003e` and only relies on the side effect of mutating `family` to the canonical name. This isn\u0027t a new bug (the old code did this too), but it highlights why the `GetStandardFontName` name is confusing.",
+      "range": {
+        "startLine": 543,
+        "startChar": 0,
+        "endLine": 543,
+        "endChar": 0
+      },
+      "revId": "486e5f54f1b7a843fea9d62285c1ed0a54a13608",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4ec387c_fe8d5ee8",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:50Z",
+      "side": 1,
+      "message": "Consider renaming this to something like `ResolveStandardFontAlias` or `CanonicalizeStandardFontName`. The current name implies a simple getter, but it actually takes an alias, mutates the string to the canonical name if found, and returns the ID.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 0
+      },
+      "revId": "486e5f54f1b7a843fea9d62285c1ed0a54a13608",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8216c84d_1647c595",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:50Z",
+      "side": 1,
+      "message": "Since this returns `std::optional\u003cID\u003e`, `GetStandardFontId` or `FindStandardFontId` might be a more accurate name than `...Index`.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 0
+      },
+      "revId": "486e5f54f1b7a843fea9d62285c1ed0a54a13608",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
