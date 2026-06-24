@@ -241,7 +241,7 @@ bool CPDF_Font::ShouldApplyGlyphSpacingHeuristic(
   ByteString base_font_name = GetBaseFontName();
   base_font_name.MakeLower();
 
-  std::optional<CFX_StandardFont::StandardFont> standard_font_name =
+  std::optional<CFX_StandardFont::Index> standard_font_name =
       CFX_StandardFont::GetStandardFontIndex(base_font_name);
   if (standard_font_name.has_value()) {
     return false;
@@ -278,7 +278,7 @@ int CPDF_Font::GetStringWidth(ByteStringView pString) {
 RetainPtr<CPDF_Font> CPDF_Font::GetStockFont(CPDF_Document* doc,
                                              ByteStringView name) {
   ByteString fontname(name);
-  std::optional<CFX_StandardFont::StandardFont> font_id =
+  std::optional<CFX_StandardFont::Index> font_id =
       CFX_StandardFont::GetStandardFontIndex(fontname);
   if (!font_id.has_value()) {
     return nullptr;

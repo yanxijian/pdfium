@@ -60,7 +60,7 @@ constexpr std::array<const char*, CFX_StandardFont::kNumStandardFonts>
 
 struct AltFontName {
   const char* name_;  // Raw, POD struct.
-  CFX_StandardFont::StandardFont index_;
+  CFX_StandardFont::Index index_;
 };
 
 constexpr AltFontName kAltFontNames[] = {
@@ -163,13 +163,13 @@ bool CFX_StandardFont::IsStandardFontName(const ByteString& name) {
 }
 
 // static
-bool CFX_StandardFont::IsSymbolicFont(StandardFont font) {
+bool CFX_StandardFont::IsSymbolicFont(Index font) {
   return font == CFX_StandardFont::kSymbol ||
          font == CFX_StandardFont::kDingbats;
 }
 
 // static
-bool CFX_StandardFont::IsFixedFont(StandardFont font) {
+bool CFX_StandardFont::IsFixedFont(Index font) {
   return font == CFX_StandardFont::kCourier ||
          font == CFX_StandardFont::kCourierBold ||
          font == CFX_StandardFont::kCourierBoldOblique ||
@@ -177,8 +177,8 @@ bool CFX_StandardFont::IsFixedFont(StandardFont font) {
 }
 
 // static
-std::optional<CFX_StandardFont::StandardFont>
-CFX_StandardFont::GetStandardFontIndex(const ByteString& name) {
+std::optional<CFX_StandardFont::Index> CFX_StandardFont::GetStandardFontIndex(
+    const ByteString& name) {
   const auto* end = std::end(kAltFontNames);
   const auto* found =
       std::lower_bound(std::begin(kAltFontNames), end, name.c_str(),
@@ -192,12 +192,12 @@ CFX_StandardFont::GetStandardFontIndex(const ByteString& name) {
 }
 
 // static
-ByteString CFX_StandardFont::GetCanonicalFontName(StandardFont font) {
+ByteString CFX_StandardFont::GetCanonicalFontName(Index font) {
   return kBase14FontNames[static_cast<size_t>(font)];
 }
 
 // static
-pdfium::span<const uint8_t> CFX_StandardFont::GetFontData(StandardFont font) {
+pdfium::span<const uint8_t> CFX_StandardFont::GetFontData(Index font) {
   return kFoxitFonts[static_cast<size_t>(font)];
 }
 
