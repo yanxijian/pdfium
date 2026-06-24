@@ -16,6 +16,23 @@
       "message": "Merge conflict again",
       "revId": "3bcb29f78f1108245dd2786541d51305e24a33d9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b96d5341_9cfc9533",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 31
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T18:37:48Z",
+      "side": 1,
+      "message": "PTAL when free. Thanks!",
+      "revId": "3bcb29f78f1108245dd2786541d51305e24a33d9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
