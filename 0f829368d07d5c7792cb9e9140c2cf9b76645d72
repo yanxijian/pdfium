@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e22ad96a_9b6c3f0e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-24T07:18:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52e7e6e3_89953c03",
+      "revId": "0f829368d07d5c7792cb9e9140c2cf9b76645d72",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a54c5fdc_136ec109",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-06-24T02:09:14Z",
       "side": 1,
       "message": "Call Clear()?",
+      "revId": "0f829368d07d5c7792cb9e9140c2cf9b76645d72",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5654121d_aac20d4e",
+        "filename": "xfa/fgas/crt/cfgas_stringformatter.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1080,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-24T07:18:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a54c5fdc_136ec109",
       "revId": "0f829368d07d5c7792cb9e9140c2cf9b76645d72",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
