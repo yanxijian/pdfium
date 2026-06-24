@@ -39,49 +39,10 @@ class SkTypeface;
 
 class CFX_FontMgr {
  public:
-  class FontCacheEntry final : public Retainable, public Observable {
-   public:
-    CONSTRUCT_VIA_MAKE_RETAIN;
-
-    RetainPtr<CFX_ReadOnlyFixedSizeDataVectorStream> FontStream() {
-      return font_stream_;
-    }
-    void SetFace(uint32_t face_index, CFX_Face* face);
-    CFX_Face* GetFace(uint32_t face_index) const;
-
-   private:
-    explicit FontCacheEntry(FixedSizeDataVector<uint8_t>&& data);
-    ~FontCacheEntry() override;
-
-    const RetainPtr<CFX_ReadOnlyFixedSizeDataVectorStream> font_stream_;
-    std::array<ObservedPtr<CFX_Face>, 16> ttc_faces_;
-  };
-
-  // `index` must be less than `CFX_FontMapper::kNumStandardFonts`.
-  static pdfium::span<const uint8_t> GetStandardFont(size_t index);
-  static pdfium::span<const uint8_t> GetGenericSansFont();
-  static pdfium::span<const uint8_t> GetGenericSerifFont();
-
   enum class FontBackend { kFreeType, kFontations };  // Currently skia-only.
 
   explicit CFX_FontMgr(FontBackend backend);
   ~CFX_FontMgr();
-
-  RetainPtr<FontCacheEntry> GetFontCacheEntry(const ByteString& face_name,
-                                              int weight,
-                                              bool italic);
-  RetainPtr<FontCacheEntry> AddFontCacheEntry(
-      const ByteString& face_name,
-      int weight,
-      bool italic,
-      FixedSizeDataVector<uint8_t> data);
-
-  RetainPtr<FontCacheEntry> GetTTCFontCacheEntry(size_t ttc_size,
-                                                 uint32_t checksum);
-  RetainPtr<FontCacheEntry> AddTTCFontCacheEntry(
-      size_t ttc_size,
-      uint32_t checksum,
-      FixedSizeDataVector<uint8_t> data);
 
   RetainPtr<CFX_GlyphCache> GetGlyphCache(const CFX_Font* font);
 
@@ -100,9 +61,6 @@ class CFX_FontMgr {
 #endif
 
  private:
-  using NameWeightItalic = std::tuple<ByteString, int, bool>;
-  using SizeChecksum = std::tuple<size_t, uint32_t>;
-
   // Must come before |builtin_mapper_| and |face_map_|.
   ScopedFXFTLibraryRec const ft_library_;
 #if defined(PDF_USE_SKIA)
@@ -111,8 +69,6 @@ class CFX_FontMgr {
   sk_sp<SkFontMgr> skia_fontmgr_fallback_;
 #endif
   std::unique_ptr<CFX_FontMapper> builtin_mapper_;
-  std::map<NameWeightItalic, ObservedPtr<FontCacheEntry>> face_map_;
-  std::map<SizeChecksum, ObservedPtr<FontCacheEntry>> ttc_face_map_;
   std::map<CFX_Face*, ObservedPtr<CFX_GlyphCache>> glyph_cache_map_;
   const bool ft_library_supports_hinting_;
 };
