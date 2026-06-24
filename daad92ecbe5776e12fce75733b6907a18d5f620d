@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ada6400_d2182c47",
+        "filename": "core/fxge/cfx_standardfont.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T18:15:57Z",
+      "side": 1,
+      "message": "If the return type is changed to `ByteStringView` in a follow-up, this will also need to be updated.",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 155,
+        "endChar": 0
+      },
+      "revId": "daad92ecbe5776e12fce75733b6907a18d5f620d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9834461d_69d7bb1f",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T18:15:57Z",
+      "side": 1,
+      "message": "As a follow-up out of scope for this change, consider returning `ByteStringView` instead of `ByteString`. `kBase14FontNames` contains string literals, so returning a `ByteString` performs unnecessary memory allocations.\n\nThis is especially relevant in `CFX_FontMapper::FindSubstFace()` where it\u0027s called in a loop.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "daad92ecbe5776e12fce75733b6907a18d5f620d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
