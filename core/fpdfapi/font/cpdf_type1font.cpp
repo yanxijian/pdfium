@@ -16,7 +16,6 @@
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/fx_system.h"
 #include "core/fxcrt/span_util.h"
-#include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_standardfont.h"
 #include "core/fxge/fx_font.h"
@@ -85,10 +84,12 @@ CPDF_Type1Font* CPDF_Type1Font::AsType1Font() {
 }
 
 bool CPDF_Type1Font::Load() {
-  base14_font_ = CFX_StandardFont::GetStandardFontName(&base_font_name_);
+  base14_font_ = CFX_StandardFont::GetStandardFontIndex(base_font_name_);
   if (!IsBase14Font()) {
     return LoadCommon();
   }
+  base_font_name_ =
+      CFX_StandardFont::GetCanonicalFontName(base14_font_.value());
 
   RetainPtr<const CPDF_Dictionary> font_desc =
       font_dict_->GetDictFor("FontDescriptor");
