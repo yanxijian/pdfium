@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd3a1dea_9ac7ca60",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-24T14:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "590b6205_b9c6a73f",
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e54b55b2_2c997410",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-23T18:21:00Z",
       "side": 1,
       "message": "Take a const-ref?",
+      "range": {
+        "startLine": 174,
+        "startChar": 46,
+        "endLine": 174,
+        "endChar": 48
+      },
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82576933_af63656c",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-24T14:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e54b55b2_2c997410",
       "range": {
         "startLine": 174,
         "startChar": 46,
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "621a1e44_13857e1f",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-24T14:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c27902ec_391545b0",
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d406abee_b68a767b",
@@ -71,6 +131,24 @@
       "writtenOn": "2026-06-23T18:21:00Z",
       "side": 1,
       "message": "Instead of repeating line 177 with the timezone offset, how about just use the same string and then append the TZ offset here?",
+      "revId": "745777d8582673c286f7613c64a3547a189bf830",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baf92490_b7f3279b",
+        "filename": "fpdfsdk/fpdf_editpage.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-24T14:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d406abee_b68a767b",
       "revId": "745777d8582673c286f7613c64a3547a189bf830",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
