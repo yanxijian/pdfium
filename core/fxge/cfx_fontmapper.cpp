@@ -411,11 +411,10 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
     CFX_SubstFont* subst_font) {
   if (base_font < CFX_StandardFont::kNumStandardFonts) {
     if (!standard_faces_[base_font]) {
-      CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
       standard_faces_[base_font] =
           CFX_Face::New(nullptr,
                         pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            font_mgr->GetStandardFont(base_font)),
+                            CFX_StandardFont::GetStandardFont(base_font)),
                         0);
     }
     return standard_faces_[base_font];
@@ -429,22 +428,20 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
   if (FontFamilyIsRoman(pitch_family)) {
     subst_font->UseChromeSerif();
     if (!generic_serif_face_) {
-      CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
       generic_serif_face_ =
           CFX_Face::New(nullptr,
                         pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            font_mgr->GetGenericSerifFont()),
+                            CFX_StandardFont::GetGenericSerifFont()),
                         0);
     }
     return generic_serif_face_;
   }
   subst_font->family_ = "Chrome Sans";
   if (!generic_sans_face_) {
-    CFX_FontMgr* font_mgr = CFX_GEModule::Get()->GetFontMgr();
     generic_sans_face_ =
         CFX_Face::New(nullptr,
                       pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                          font_mgr->GetGenericSansFont()),
+                          CFX_StandardFont::GetGenericSansFont()),
                       0);
   }
   return generic_sans_face_;
