@@ -16,7 +16,6 @@
 #include "core/fxge/cfx_font.h"
 #include "core/fxge/cfx_fontmapper.h"
 #include "core/fxge/cfx_glyphcache.h"
-#include "core/fxge/cfx_standardfont.h"
 
 #include "core/fxge/fx_font.h"
 #include "core/fxge/systemfontinfo_iface.h"
