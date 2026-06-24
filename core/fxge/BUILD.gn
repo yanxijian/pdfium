@@ -104,6 +104,8 @@ source_set("fxge") {
     "fx_font.cpp",
     "fx_font.h",
     "fx_fontencoding.h",
+    "fx_standardfonts.cpp",
+    "fx_standardfonts.h",
     "renderdevicedriver_iface.cpp",
     "renderdevicedriver_iface.h",
     "systemfontinfo_iface.h",
