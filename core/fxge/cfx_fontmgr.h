@@ -56,7 +56,7 @@ class CFX_FontMgr {
 #endif
 
  private:
-  // Must come before |builtin_mapper_| and |face_map_|.
+  // Must come before |builtin_mapper_|.
   ScopedFXFTLibraryRec const ft_library_;
 #if defined(PDF_USE_SKIA)
   const FontBackend font_backend_;

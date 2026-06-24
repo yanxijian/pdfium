@@ -22,6 +22,7 @@
 #include "core/fxcrt/fx_memory.h"
 #include "core/fxcrt/unowned_ptr.h"
 #include "core/fxcrt/unowned_ptr_exclusion.h"
+#include "core/fxge/cfx_standardfont.h"
 #include "core/fxge/cfx_substfont.h"
 #include "core/fxge/fontdata/chromefontdata/chromefontdata.h"
 #include "core/fxge/fx_font.h"
@@ -274,7 +275,11 @@ ByteString GetSubstName(const ByteString& name, bool is_truetype) {
     subst_name.Remove(' ');
   }
   MaybeRemoveSubsettedFontPrefix(subst_name);
-  CFX_StandardFont::GetStandardFontName(&subst_name);
+  std::optional<CFX_StandardFont::Index> std_font =
+      CFX_StandardFont::GetStandardFontIndex(subst_name);
+  if (std_font) {
+    subst_name = CFX_StandardFont::GetCanonicalFontName(*std_font);
+  }
   return subst_name;
 }
 
@@ -550,22 +555,26 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
   ByteString style;
   bool has_comma = false;
   bool has_hyphen = false;
+  std::optional<CFX_StandardFont::Index> std_font;
   {
     std::optional<size_t> pos = subst_name.Find(",");
     if (pos.has_value()) {
       family = subst_name.First(pos.value());
-      CFX_StandardFont::GetStandardFontName(&family);
+      std_font = CFX_StandardFont::GetStandardFontIndex(family);
+      if (std_font) {
+        family = CFX_StandardFont::GetCanonicalFontName(*std_font);
+      }
       style = subst_name.Substr(pos.value() + 1);
       has_comma = true;
     } else {
       family = subst_name;
+      std_font = CFX_StandardFont::GetStandardFontIndex(family);
     }
   }
-  for (; base_font < CFX_StandardFont::kSymbol; base_font++) {
-    if (family == CFX_StandardFont::GetCanonicalFontName(
-                      static_cast<CFX_StandardFont::StandardFont>(base_font))) {
-      break;
-    }
+  if (std_font.has_value() && std_font.value() < CFX_StandardFont::kSymbol) {
+    base_font = std_font.value();
+  } else {
+    base_font = CFX_StandardFont::kSymbol;
   }
   int pitch_family;
   uint32_t nStyle;
@@ -663,7 +672,7 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
     if (base_font < CFX_StandardFont::kNumStandardFonts) {
       base_font = AdjustBaseFontForStyle(base_font, nStyle);
       family = CFX_StandardFont::GetCanonicalFontName(
-          static_cast<CFX_StandardFont::StandardFont>(base_font));
+          static_cast<CFX_StandardFont::Index>(base_font));
     }
   } else if (FontStyleIsItalic(flags)) {
     is_italic = true;
