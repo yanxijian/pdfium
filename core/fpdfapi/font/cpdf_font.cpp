@@ -32,6 +32,7 @@
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/stl_util.h"
 #include "core/fxge/cfx_fontmapper.h"
+#include "core/fxge/cfx_standardfont.h"
 #include "core/fxge/cfx_substfont.h"
 #include "core/fxge/fx_font.h"
 #include "core/fxge/fx_fontencoding.h"
@@ -241,8 +242,8 @@ bool CPDF_Font::ShouldApplyGlyphSpacingHeuristic(
   ByteString base_font_name = GetBaseFontName();
   base_font_name.MakeLower();
 
-  auto standard_font_name =
-      CFX_FontMapper::GetStandardFontName(&base_font_name);
+  std::optional<CFX_StandardFont::Index> standard_font_name =
+      CFX_StandardFont::GetStandardFontIndex(base_font_name);
   if (standard_font_name.has_value()) {
     return false;
   }
@@ -278,11 +279,12 @@ int CPDF_Font::GetStringWidth(ByteStringView pString) {
 RetainPtr<CPDF_Font> CPDF_Font::GetStockFont(CPDF_Document* doc,
                                              ByteStringView name) {
   ByteString fontname(name);
-  std::optional<CFX_FontMapper::StandardFont> font_id =
-      CFX_FontMapper::GetStandardFontName(&fontname);
+  std::optional<CFX_StandardFont::Index> font_id =
+      CFX_StandardFont::GetStandardFontIndex(fontname);
   if (!font_id.has_value()) {
     return nullptr;
   }
+  fontname = CFX_StandardFont::GetCanonicalFontName(font_id.value());
 
   auto* font_globals = CPDF_FontGlobals::GetInstance();
   RetainPtr<CPDF_Font> font = font_globals->Find(doc, font_id.value());
