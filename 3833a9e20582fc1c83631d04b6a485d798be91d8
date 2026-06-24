@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e6bbae7_886c103f",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 17
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T21:20:32Z",
+      "side": 1,
+      "message": "Can a separate CL first do this mass rename?",
+      "revId": "3833a9e20582fc1c83631d04b6a485d798be91d8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
