@@ -158,19 +158,36 @@ constexpr AltFontName kAltFontNames[] = {
 }  // namespace
 
 // static
+bool CFX_StandardFont::IsStandardFontName(const ByteString& name) {
+  return pdfium::Contains(kBase14FontNames, name);
+}
+
+// static
+bool CFX_StandardFont::IsSymbolicFont(StandardFont font) {
+  return font == CFX_StandardFont::kSymbol ||
+         font == CFX_StandardFont::kDingbats;
+}
+
+// static
+bool CFX_StandardFont::IsFixedFont(StandardFont font) {
+  return font == CFX_StandardFont::kCourier ||
+         font == CFX_StandardFont::kCourierBold ||
+         font == CFX_StandardFont::kCourierBoldOblique ||
+         font == CFX_StandardFont::kCourierOblique;
+}
+
+// static
 std::optional<CFX_StandardFont::StandardFont>
-CFX_StandardFont::GetStandardFontName(ByteString* name) {
+CFX_StandardFont::GetStandardFontIndex(const ByteString& name) {
   const auto* end = std::end(kAltFontNames);
   const auto* found =
-      std::lower_bound(std::begin(kAltFontNames), end, name->c_str(),
+      std::lower_bound(std::begin(kAltFontNames), end, name.c_str(),
                        [](const AltFontName& element, const char* name) {
                          return FXSYS_stricmp(element.name_, name) < 0;
                        });
-  if (found == end || FXSYS_stricmp(found->name_, name->c_str())) {
+  if (found == end || FXSYS_stricmp(found->name_, name.c_str())) {
     return std::nullopt;
   }
-
-  *name = kBase14FontNames[static_cast<size_t>(found->index_)];
   return found->index_;
 }
 
@@ -180,33 +197,16 @@ ByteString CFX_StandardFont::GetCanonicalFontName(StandardFont font) {
 }
 
 // static
-bool CFX_StandardFont::IsStandardFontName(const ByteString& name) {
-  return pdfium::Contains(kBase14FontNames, name);
+pdfium::span<const uint8_t> CFX_StandardFont::GetFontData(StandardFont font) {
+  return kFoxitFonts[static_cast<size_t>(font)];
 }
 
 // static
-bool CFX_StandardFont::IsSymbolicFont(StandardFont font) {
-  return font == StandardFont::kSymbol || font == StandardFont::kDingbats;
-}
-
-// static
-bool CFX_StandardFont::IsFixedFont(StandardFont font) {
-  return font == StandardFont::kCourier || font == StandardFont::kCourierBold ||
-         font == StandardFont::kCourierBoldOblique ||
-         font == StandardFont::kCourierOblique;
-}
-
-// static
-pdfium::span<const uint8_t> CFX_StandardFont::GetStandardFont(size_t index) {
-  return kFoxitFonts[index];
-}
-
-// static
-pdfium::span<const uint8_t> CFX_StandardFont::GetGenericSansFont() {
+pdfium::span<const uint8_t> CFX_StandardFont::GetGenericSansFontData() {
   return kGenericSansFont;
 }
 
 // static
-pdfium::span<const uint8_t> CFX_StandardFont::GetGenericSerifFont() {
+pdfium::span<const uint8_t> CFX_StandardFont::GetGenericSerifFontData() {
   return kGenericSerifFont;
 }
