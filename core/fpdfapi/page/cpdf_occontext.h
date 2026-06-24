@@ -9,6 +9,7 @@
 
 #include <functional>
 #include <map>
+#include <vector>
 
 #include "core/fxcrt/bytestring.h"
 #include "core/fxcrt/retain_ptr.h"
@@ -27,6 +28,9 @@ class CPDF_OCContext final : public Retainable {
 
   bool CheckOCGDictVisible(const CPDF_Dictionary* pOCGDict) const;
   bool CheckPageObjectVisible(const CPDF_PageObject* pObj) const;
+  bool GetOCGVisible(const CPDF_Dictionary* pOCGDict) const;
+  std::vector<fxcrt::ByteString> GetOCGNames() const;
+  RetainPtr<const CPDF_Dictionary> GetOCGByName(fxcrt::ByteString name) const;
 
  private:
   CPDF_OCContext(CPDF_Document* doc, UsageType eUsageType);
@@ -35,7 +39,6 @@ class CPDF_OCContext final : public Retainable {
   bool LoadOCGStateFromConfig(ByteStringView config,
                               const CPDF_Dictionary* pOCGDict) const;
   bool LoadOCGState(const CPDF_Dictionary* pOCGDict) const;
-  bool GetOCGVisible(const CPDF_Dictionary* pOCGDict) const;
   bool GetOCGVE(const CPDF_Array* pExpression, int nLevel) const;
   bool LoadOCMDState(const CPDF_Dictionary* pOCMDDict) const;
 
