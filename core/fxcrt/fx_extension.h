@@ -146,11 +146,14 @@ bool FXSYS_SafeLT(const T& lhs, const T& rhs) {
 }
 
 // Override time/localtime functions for test consistency.
-void FXSYS_SetTimeFunction(time_t (*func)());
-void FXSYS_SetLocaltimeFunction(struct tm* (*func)(const time_t*));
+auto FXSYS_SetTimeFunction(time_t (*func)()) -> time_t (*)();
+auto FXSYS_SetLocaltimeFunction(struct tm* (*func)(const time_t*))
+    -> struct tm* (*)(const time_t*);
 
 // Replacements for time/localtime that respect overrides.
 time_t FXSYS_time(time_t* tloc);
 struct tm* FXSYS_localtime(const time_t* tp);
+
+int FXSYS_TimeZoneOffsetInMinutes(const tm& local_time, const tm& utc_time);
 
 #endif  // CORE_FXCRT_FX_EXTENSION_H_
