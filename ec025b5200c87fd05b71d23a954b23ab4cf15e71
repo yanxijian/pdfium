@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67acfcb1_aaa15950",
+        "filename": "core/fxge/cfx_fontmapper_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T20:19:48Z",
+      "side": 0,
+      "message": "Uh, sure, I guess cfx_fontmapper_unittest.cpp can get some participation points.",
+      "revId": "ec025b5200c87fd05b71d23a954b23ab4cf15e71",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
