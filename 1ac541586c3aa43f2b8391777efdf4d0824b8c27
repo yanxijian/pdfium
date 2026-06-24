@@ -41,6 +41,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "853ce3a6_f61528a3",
+        "filename": "core/fxcodec/gif/cfx_gif.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-24T23:29:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45e1ed58_9885c3cf",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 6
+      },
+      "revId": "1ac541586c3aa43f2b8391777efdf4d0824b8c27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c67a7c72_60aa2e11",
@@ -54,6 +78,24 @@
       "writtenOn": "2026-06-23T20:57:33Z",
       "side": 1,
       "message": "How about adding a helper function to convert `signature` to `std::optional\u003cGifSignature\u003e` instead?",
+      "revId": "1ac541586c3aa43f2b8391777efdf4d0824b8c27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3235515f_c3ac30fb",
+        "filename": "core/fxcodec/gif/cfx_gifcontext.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-24T23:29:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c67a7c72_60aa2e11",
       "revId": "1ac541586c3aa43f2b8391777efdf4d0824b8c27",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
