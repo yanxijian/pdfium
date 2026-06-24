@@ -10,10 +10,11 @@
 #include <optional>
 
 #include "core/fxcrt/bytestring.h"
+#include "core/fxcrt/span.h"
 
 class CFX_StandardFont {
  public:
-  enum StandardFont : uint8_t {
+  enum Index : uint8_t {
     kCourier = 0,
     kCourierBold,
     kCourierBoldOblique,
@@ -32,11 +33,16 @@ class CFX_StandardFont {
   };
   static constexpr int kNumStandardFonts = 14;
 
-  static std::optional<StandardFont> GetStandardFontName(ByteString* name);
-  static ByteString GetCanonicalFontName(StandardFont font);
   static bool IsStandardFontName(const ByteString& name);
-  static bool IsSymbolicFont(StandardFont font);
-  static bool IsFixedFont(StandardFont font);
+  static bool IsSymbolicFont(Index font);
+  static bool IsFixedFont(Index font);
+
+  static std::optional<Index> GetStandardFontIndex(const ByteString& name);
+  static ByteString GetCanonicalFontName(Index font);
+
+  static pdfium::span<const uint8_t> GetFontData(Index font);
+  static pdfium::span<const uint8_t> GetGenericSansFontData();
+  static pdfium::span<const uint8_t> GetGenericSerifFontData();
 };
 
 #endif  // CORE_FXGE_CFX_STANDARDFONT_H_
