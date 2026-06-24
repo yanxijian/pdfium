@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea5a17a0_fee60b4a",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:17Z",
+      "side": 1,
+      "message": "Since `CFX_GEModule::Get()-\u003eGetFontMgr()` was removed, you can likely remove this include as well.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 0
+      },
+      "revId": "c8aa9bdf74bd086f2de525e4870304cbac265f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4aa2a1f1_a4e301d5",
+        "filename": "core/fxge/cfx_fontmapper.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:17Z",
+      "side": 1,
+      "message": "Since `FixedSizeDataVector` is used by value in `AddFontCacheEntry` and `AddTTCFontCacheEntry`, and we no longer include `cfx_fontmgr.h` which previously provided it transitively, we should explicitly include `\"core/fxcrt/fixed_size_data_vector.h\"` here.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 0
+      },
+      "revId": "c8aa9bdf74bd086f2de525e4870304cbac265f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e17ebab4_e8e59fd6",
+        "filename": "core/fxge/cfx_fontmgr.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:17Z",
+      "side": 1,
+      "message": "With `kFoxitFonts` and `FontCacheEntry` moved, several includes appear to be unused now: `\u003carray\u003e`, `\u003citerator\u003e`, `\u003cutility\u003e`, `\"core/fxcrt/check_op.h\"`, `\"core/fxcrt/fixed_size_data_vector.h\"`, and `\"core/fxge/cfx_standardfont.h\"`.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 0
+      },
+      "revId": "c8aa9bdf74bd086f2de525e4870304cbac265f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3e474c9_576e22fc",
+        "filename": "core/fxge/cfx_fontmgr.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:33:17Z",
+      "side": 1,
+      "message": "With `FontCacheEntry` and its maps moved, you can remove several unused includes from this file: `\u003carray\u003e`, `\u003ctuple\u003e`, `\"core/fxcrt/bytestring.h\"`, `\"core/fxcrt/cfx_read_only_container_stream.h\"`, and `\"core/fxcrt/fixed_size_data_vector.h\"`.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 0
+      },
+      "revId": "c8aa9bdf74bd086f2de525e4870304cbac265f06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
