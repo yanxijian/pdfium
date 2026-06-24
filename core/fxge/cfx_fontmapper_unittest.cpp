@@ -12,6 +12,7 @@
 #include "core/fxcrt/fx_codepage.h"
 #include "core/fxcrt/unowned_ptr.h"
 #include "core/fxge/cfx_gemodule.h"
+#include "core/fxge/cfx_standardfonts.h"
 #include "core/fxge/cfx_substfont.h"
 #include "core/fxge/systemfontinfo_iface.h"
 #include "testing/gmock/include/gmock/gmock.h"
@@ -83,25 +84,25 @@ class CFXFontMapperSystemFontInfoTest : public testing::Test {
 char g_maybe_changes = '\xff';
 
 TEST(CFXFontMapperTest, IsStandardFontName) {
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Courier"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Courier-Bold"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Courier-BoldOblique"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Courier-Oblique"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Helvetica"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Helvetica-Bold"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Helvetica-BoldOblique"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Helvetica-Oblique"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Times-Roman"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Times-Bold"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Times-BoldItalic"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Times-Italic"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("Symbol"));
-  EXPECT_TRUE(CFX_FontMapper::IsStandardFontName("ZapfDingbats"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Courier"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Courier-Bold"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Courier-BoldOblique"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Courier-Oblique"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Helvetica"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Helvetica-Bold"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Helvetica-BoldOblique"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Helvetica-Oblique"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Times-Roman"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Times-Bold"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Times-BoldItalic"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Times-Italic"));
+  EXPECT_TRUE(fxge::IsStandardFontName("Symbol"));
+  EXPECT_TRUE(fxge::IsStandardFontName("ZapfDingbats"));
 
-  EXPECT_FALSE(CFX_FontMapper::IsStandardFontName("Courie"));
-  EXPECT_FALSE(CFX_FontMapper::IsStandardFontName("Courier-"));
-  EXPECT_FALSE(CFX_FontMapper::IsStandardFontName("Helvetica+Bold"));
-  EXPECT_FALSE(CFX_FontMapper::IsStandardFontName("YapfDingbats"));
+  EXPECT_FALSE(fxge::IsStandardFontName("Courie"));
+  EXPECT_FALSE(fxge::IsStandardFontName("Courier-"));
+  EXPECT_FALSE(fxge::IsStandardFontName("Helvetica+Bold"));
+  EXPECT_FALSE(fxge::IsStandardFontName("YapfDingbats"));
 }
 
 TEST(CFXFontMapperTest, MakeTag) {

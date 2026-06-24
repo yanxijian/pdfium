@@ -58,6 +58,8 @@ source_set("fxge") {
     "cfx_path.h",
     "cfx_renderdevice.cpp",
     "cfx_renderdevice.h",
+    "cfx_standardfonts.cpp",
+    "cfx_standardfonts.h",
     "cfx_substfont.cpp",
     "cfx_substfont.h",
     "cfx_textrenderoptions.h",
