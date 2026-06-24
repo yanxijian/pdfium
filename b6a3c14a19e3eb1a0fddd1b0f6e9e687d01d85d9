@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6b354040_86e1bb45",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T21:20:24Z",
+      "side": 1,
+      "message": "Can this move straight into cfx_standardfont.cpp, instead of moving it here and immediately moving it again?",
+      "revId": "b6a3c14a19e3eb1a0fddd1b0f6e9e687d01d85d9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c528465d_f54540aa",
         "filename": "core/fxge/cfx_fontmgr.h",
         "patchSetId": 6
