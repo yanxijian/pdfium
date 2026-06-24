@@ -1,0 +1,316 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4445f825_b37bacc5",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "do we want to push blank strings if there isn\u0027t this key?",
+      "range": {
+        "startLine": 201,
+        "startChar": 36,
+        "endLine": 201,
+        "endChar": 52
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "14766e03_0641b739",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfapi/page/cpdf_occontext.cpp",
+              "range": {
+                "startLine": 201,
+                "startChar": 0,
+                "endLine": 202,
+                "endChar": 0
+              },
+              "replacement": "      ByteString name \u003d ocg_dict-\u003eGetByteStringFor(\"Name\");\n      if (!name.IsEmpty()) {\n        ocg_names.push_back(name);\n      }\n"
+            }
+          ]
+        }
+      ],
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15fad076_c538753a",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "just return here?",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 14
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90429e9b_95867e8d",
+        "filename": "core/fpdfapi/page/cpdf_occontext.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "null return on not found?",
+      "range": {
+        "startLine": 227,
+        "startChar": 9,
+        "endLine": 227,
+        "endChar": 20
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61fe9fe0_6c463155",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "nit: no line breaking before.",
+      "range": {
+        "startLine": 584,
+        "startChar": 0,
+        "endLine": 584,
+        "endChar": 16
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "921d119b_6889a9d9",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_doc.cpp",
+              "range": {
+                "startLine": 583,
+                "startChar": 0,
+                "endLine": 585,
+                "endChar": 0
+              },
+              "replacement": "FPDF_EXPORT unsigned long FPDF_CALLCONV FPDF_GetOCGCount(FPDF_DOCUMENT document) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1da11231_6c501e15",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "this handles null, maybe convert first then check in case this someday does more checking besides straight cast?",
+      "range": {
+        "startLine": 589,
+        "startChar": 23,
+        "endLine": 589,
+        "endChar": 51
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b6d34947_aee49fd2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_doc.cpp",
+              "range": {
+                "startLine": 585,
+                "startChar": 0,
+                "endLine": 586,
+                "endChar": 0
+              },
+              "replacement": "  CPDF_Document* doc \u003d CPDFDocumentFromFPDFDocument(document);\n  if (!doc) {\n"
+            },
+            {
+              "path": "fpdfsdk/fpdf_doc.cpp",
+              "range": {
+                "startLine": 589,
+                "startChar": 0,
+                "endLine": 590,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a9a5a28_c4705c2a",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 592,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "uint32_t isn\u0027t always unsigned long.",
+      "range": {
+        "startLine": 592,
+        "startChar": 21,
+        "endLine": 592,
+        "endChar": 29
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d874c9bf_c4958ab6",
+        "filename": "fpdfsdk/fpdf_doc.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 595,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "Check for null documents maybe rather than relying on downstrea.",
+      "range": {
+        "startLine": 595,
+        "startChar": 70,
+        "endLine": 595,
+        "endChar": 78
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8760bccc_303e139f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "fpdfsdk/fpdf_doc.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  if (!document) {\n    return 0;\n  }\n"
+            }
+          ]
+        }
+      ],
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0aa987d7_f04d27f0",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "again, line break.",
+      "range": {
+        "startLine": 444,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 16
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3728fe97_c4291f60",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "watch formatting.",
+      "range": {
+        "startLine": 450,
+        "startChar": 4,
+        "endLine": 457,
+        "endChar": 16
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36aa5c8b_2bb027e4",
+        "filename": "public/fpdf_doc.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-24T19:07:22Z",
+      "side": 1,
+      "message": "formatting.",
+      "range": {
+        "startLine": 470,
+        "startChar": 33,
+        "endLine": 470,
+        "endChar": 37
+      },
+      "revId": "cc286b296a9baf2df4f0775512ec75b9631600d1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
