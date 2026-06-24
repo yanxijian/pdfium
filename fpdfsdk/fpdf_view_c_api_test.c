@@ -284,6 +284,9 @@ int CheckPDFiumCApi() {
     CHK(FPDFText_SetPositions);
     CHK(FPDFText_SetText);
     CHK(FPDF_CreateNewDocument);
+    CHK(FPDF_GetOCGCount);
+    CHK(FPDF_GetOCGName);
+    CHK(FPDF_GetOCGVisible);
     CHK(FPDF_MovePages);
 
     // fpdf_ext.h
