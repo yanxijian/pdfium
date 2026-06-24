@@ -186,6 +186,47 @@ bool CPDF_OCContext::GetOCGVisible(const CPDF_Dictionary* pOCGDict) const {
   return bState;
 }
 
+std::vector<fxcrt::ByteString> CPDF_OCContext::GetOCGNames() const {
+  RetainPtr<const CPDF_Dictionary> ocp_properties_dict =
+      document_->GetRoot()->GetDictFor("OCProperties");
+  if (!ocp_properties_dict) {
+    return {};
+  }
+
+  std::vector<fxcrt::ByteString> ocg_names;
+  const CPDF_Array* ocg_array = ocp_properties_dict->GetArrayFor("OCGs");
+  for (size_t i = 0; i < ocg_array->size(); ++i) {
+    const CPDF_Dictionary* ocg_dict = ocg_array->GetDictAt(i);
+    if (ocg_dict && ocg_dict->GetByteStringFor("Type") == "OCG") {
+      ocg_names.push_back(ocg_dict->GetByteStringFor("Name"));
+    }
+  }
+  return ocg_names;
+}
+
+RetainPtr<const CPDF_Dictionary> CPDF_OCContext::GetOCGByName(
+    fxcrt::ByteString name) const {
+  RetainPtr<const CPDF_Dictionary> ocp_properties_dict =
+      document_->GetRoot()->GetDictFor("OCProperties");
+  if (!ocp_properties_dict) {
+    return nullptr;
+  }
+
+  RetainPtr<const CPDF_Dictionary> queried_ocg = nullptr;
+  const CPDF_Array* ocg_array = ocp_properties_dict->GetArrayFor("OCGs");
+  for (size_t i = 0; i < ocg_array->size(); ++i) {
+    const CPDF_Dictionary* ocg_dict = ocg_array->GetDictAt(i);
+    if (ocg_dict && ocg_dict->GetByteStringFor("Type") == "OCG") {
+      ByteString ocg_name = ocg_dict->GetByteStringFor("Name");
+      if (name == ocg_name.c_str()) {
+        queried_ocg = RetainPtr(ocg_dict);
+        break;
+      }
+    }
+  }
+  return queried_ocg;
+}
+
 bool CPDF_OCContext::CheckPageObjectVisible(const CPDF_PageObject* pObj) const {
   const CPDF_ContentMarks* pMarks = pObj->GetContentMarks();
   for (size_t i = 0; i < pMarks->CountItems(); ++i) {

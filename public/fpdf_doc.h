@@ -431,6 +431,49 @@ FPDF_GetPageLabel(FPDF_DOCUMENT document,
                   void* buffer,
                   unsigned long buflen);
 
+// Experimental API.
+// Function: FPDF_GetOCGCount
+//          Get the number of Optional Content Groups (OCGs) in the document.
+// Parameters:
+//          document    -   Handle to the document. Returned by
+//          FPDF_LoadDocument().
+// Return value:
+//          The number of OCGs in the document, or 0 if |document| is invalid
+//          or has no OCGs.
+FPDF_EXPORT unsigned long FPDF_CALLCONV
+FPDF_GetOCGCount(FPDF_DOCUMENT document);
+
+// Experimental API.
+// Function: FPDF_GetOCGName
+//          Get the name of the OCG at the given index.
+// Parameters:
+//          document    -   Handle to the document. Returned by
+//          FPDF_LoadDocument(). index       -   Zero-based index of the OCG.
+//          Must be less than the
+//                          value returned by FPDF_GetOCGCount().
+//          buffer      -   Buffer to receive the name, in UTF-16LE. Can be
+//                          NULL if |buflen| is 0.
+//          buflen      -   Length of |buffer|, in bytes.
+// Return value:
+//          The number of bytes needed to store the name. Returns 0 if
+//          |document| is invalid or |index| is out of range.
+FPDF_EXPORT unsigned long FPDF_CALLCONV FPDF_GetOCGName(FPDF_DOCUMENT document,
+                                                        int index,
+                                                        void* buffer,
+                                                        unsigned long buflen);
+
+// Experimental API.
+// Function: FPDF_GetOCGVisible
+//          Get the current visibility state of the OCG with the given name.
+// Parameters:
+//          document    -   Handle to the document. Returned by
+//          FPDF_LoadDocument(). name        -   The OCG name, encoded in UTF-8.
+// Return value:
+//          True if the OCG is currently visible. False if it is hidden, or if
+//          |document| is invalid or |name| does not match any OCG.
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_GetOCGVisible(FPDF_DOCUMENT document,
+                                                       FPDF_BYTESTRING name);
+
 #ifdef __cplusplus
 }  // extern "C"
 #endif  // __cplusplus
