@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11e00b64_325a10e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-24T18:15:59Z",
+      "side": 1,
+      "message": "Hey guys, decided to add a CL to add support for querying the names of and the visibility of OCGs. So far this only adds a few APIs which were requested by the initial CL, however more can be perhaps added in future in terms of write support perhaps. Thanks!",
+      "revId": "2b87b8857e5ca3af3bbe1b8be326bd6d04a2b452",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
