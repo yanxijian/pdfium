@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7755b914_c21f35b3",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-24T22:31:07Z",
+      "side": 0,
+      "message": "Was hard to see in the grandparent CL. OK.",
+      "revId": "246cc41685fd9359d9ad53746d208add53f5a0f5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
