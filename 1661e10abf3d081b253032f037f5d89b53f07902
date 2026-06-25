@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ccf5fe33_8b6719d7",
+        "filename": "core/fpdfdoc/cpvt_word.h",
+        "patchSetId": 29
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T18:42:43Z",
+      "side": 1,
+      "message": "This has no caller. With some of the changes from earlier patchsets reverted, it looks like this CL should just focus on CPVT_Section::OutputLines(). All the `core/fpdfdoc/cpvt_word*` changes are not needed just yet.",
+      "revId": "1661e10abf3d081b253032f037f5d89b53f07902",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

@@ -52,6 +52,24 @@
       "parentUuid": "8116ae58_0aec8c7c",
       "revId": "0bc6a3e179ee8074b9795a19c86a97749ae95f07",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20119ea6_208fa3d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T18:42:43Z",
+      "side": 1,
+      "message": "Mention why the PNG files are changing in the CL description.",
+      "parentUuid": "82537864_ed0fa714",
+      "revId": "0bc6a3e179ee8074b9795a19c86a97749ae95f07",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
