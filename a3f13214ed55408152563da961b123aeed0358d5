@@ -16,6 +16,24 @@
       "message": "This CL doesn\u0027t remove any #defines though.",
       "revId": "a3f13214ed55408152563da961b123aeed0358d5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27b2d74e_1c410a5f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3600789
+      },
+      "writtenOn": "2026-06-25T21:53:46Z",
+      "side": 1,
+      "message": "edited commit message",
+      "parentUuid": "6e3e67ba_dc8f145a",
+      "revId": "a3f13214ed55408152563da961b123aeed0358d5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
