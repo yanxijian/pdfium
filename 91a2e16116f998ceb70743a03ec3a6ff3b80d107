@@ -16,6 +16,23 @@
       "message": "Roll d3 on Gerrit-surfaced reviewers -\u003e Tom to review, please.",
       "revId": "91a2e16116f998ceb70743a03ec3a6ff3b80d107",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3be75e8_73f2d369",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T15:39:35Z",
+      "side": 1,
+      "message": "Lei for +2 owners",
+      "revId": "91a2e16116f998ceb70743a03ec3a6ff3b80d107",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
