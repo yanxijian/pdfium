@@ -46,6 +46,7 @@
 #include "third_party/skia/include/core/SkFont.h"         // nogncheck
 #include "third_party/skia/include/core/SkFontMetrics.h"  // nogncheck
 #include "third_party/skia/include/core/SkFontTypes.h"    // nogncheck
+#include "third_party/skia/include/core/SkPath.h"         // nogncheck
 #include "third_party/skia/include/core/SkRect.h"         // nogncheck
 #endif
 
@@ -512,8 +513,13 @@ ByteString CFX_Face::GetFamilyName() const {
     rust::Str skrifa_result = skrifa_font_->font->family_name();
     CHECK_EQ(ft_result.IsEmpty(), skrifa_result.empty());
     if (!ft_result.IsEmpty() && !skrifa_result.empty()) {
-      CHECK_EQ(ft_result, UNSAFE_BUFFERS(ByteString(skrifa_result.data(),
-                                                    skrifa_result.size())));
+      ByteString skrifa_bs = UNSAFE_BUFFERS(
+          ByteString(skrifa_result.data(), skrifa_result.size()));
+      ByteString ft_clean = ft_result;
+      ByteString skrifa_clean = skrifa_bs;
+      MaybeRemoveSubsettedFontPrefix(ft_clean);
+      MaybeRemoveSubsettedFontPrefix(skrifa_clean);
+      CHECK_EQ(ft_clean, skrifa_clean);
     }
   }
 #endif
@@ -1348,23 +1354,36 @@ FX_RECT CFX_Face::GetGlyphBBox(uint32_t glyph_index) {
                           NormalizeFontMetric(bbox.y_max, upem),
                           NormalizeFontMetric(bbox.x_max, upem),
                           NormalizeFontMetric(bbox.y_min, upem));
-    // TODO(tsepez): verify results.
+    CHECK_EQ(ft_result, skrifa_result);
   }
 #endif  // defined(PDF_ENABLE_FONTATIONS)
   if (skia_typeface_) {
     SkFont font(skia_typeface_, upem);
     font.setHinting(SkFontHinting::kNone);
     uint16_t skia_glyph_index = static_cast<uint16_t>(glyph_index);
-    SkRect bounds = font.getBounds(skia_glyph_index, nullptr);
 
-    CHECK_EQ(ft_result.left,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fLeft), upem));
-    CHECK_EQ(ft_result.top,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fTop), upem));
-    CHECK_EQ(ft_result.right,
-             NormalizeFontMetric(static_cast<int32_t>(bounds.fRight), upem));
-    CHECK_EQ(ft_result.bottom,
-             NormalizeFontMetric(static_cast<int32_t>(-bounds.fBottom), upem));
+    std::optional<SkPath> path = font.getPath(skia_glyph_index);
+    int skia_left = 0;
+    int skia_top = 0;
+    int skia_right = 0;
+    int skia_bottom = 0;
+    SkRect path_bounds = SkRect::MakeEmpty();
+    if (path.has_value()) {
+      path_bounds = path->getBounds();
+      skia_left = NormalizeFontMetric(
+          static_cast<int32_t>(std::round(path_bounds.fLeft)), upem);
+      skia_top = NormalizeFontMetric(
+          static_cast<int32_t>(std::round(-path_bounds.fTop)), upem);
+      skia_right = NormalizeFontMetric(
+          static_cast<int32_t>(std::round(path_bounds.fRight)), upem);
+      skia_bottom = NormalizeFontMetric(
+          static_cast<int32_t>(std::round(-path_bounds.fBottom)), upem);
+    }
+
+    CHECK_EQ(ft_result.left, skia_left);
+    CHECK_EQ(ft_result.top, skia_top);
+    CHECK_EQ(ft_result.right, skia_right);
+    CHECK_EQ(ft_result.bottom, skia_bottom);
   }
 #endif  // defined(PDF_ENABLE_SKIA_TYPEFACE_CHECKS)
   return ft_result;
