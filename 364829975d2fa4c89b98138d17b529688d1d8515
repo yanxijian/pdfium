@@ -152,6 +152,24 @@
       "parentUuid": "363e4f2e_0cf3ff4a",
       "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c2ea7b2_c3f7825c",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T18:34:32Z",
+      "side": 1,
+      "message": "Actually, core/fxge/cfx_standardfont.cpp:17 \n\nstatic_assert(CFX_StandardFont::kLast + 1 \u003d\u003d\n                  CFX_StandardFont::kNumStandardFonts,\n              \"StandardFont enum count mismatch\");",
+      "parentUuid": "fbcccc23_c12e31a2",
+      "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
