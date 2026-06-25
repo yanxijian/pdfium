@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd706daa_925c810a",
+        "filename": "xfa/fwl/cfwl_widget.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T20:51:27Z",
+      "side": 1,
+      "message": "nit: this could now be called SetStyles()",
+      "range": {
+        "startLine": 155,
+        "startChar": 7,
+        "endLine": 155,
+        "endChar": 14
+      },
+      "revId": "4cfdfaa53c7687cb5d774c229d248622d52b2ac5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
