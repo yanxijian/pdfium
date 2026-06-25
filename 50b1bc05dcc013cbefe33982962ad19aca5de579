@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54137e7d_11be6685",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T00:48:40Z",
+      "side": 1,
+      "message": "I believe it does not go out of range, but maybe this should have a check to make sure it\u0027s casting to a valid enum value.",
+      "revId": "50b1bc05dcc013cbefe33982962ad19aca5de579",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
