@@ -23,6 +23,7 @@
 #include "core/fxcrt/fx_memory.h"
 #include "core/fxcrt/unowned_ptr.h"
 #include "core/fxcrt/unowned_ptr_exclusion.h"
+#include "core/fxge/cfx_standardfont.h"
 #include "core/fxge/cfx_substfont.h"
 #include "core/fxge/fx_font.h"
 #include "core/fxge/systemfontinfo_iface.h"
@@ -182,7 +183,7 @@ bool CheckSupportThirdPartFont(const ByteString& name, int* pitch_family) {
   return true;
 }
 
-uint32_t GetStyleFromBaseFont(int base_font) {
+uint32_t GetStyleFromBaseFont(CFX_StandardFont::Index base_font) {
   int pos = base_font % 4;
   uint32_t style = pdfium::kFontStyleNormal;
   if (pos == 1 || pos == 2) {
@@ -194,7 +195,7 @@ uint32_t GetStyleFromBaseFont(int base_font) {
   return style;
 }
 
-int GetPitchFamilyFromBaseFont(int base_font) {
+int GetPitchFamilyFromBaseFont(CFX_StandardFont::Index base_font) {
   if (base_font < 4) {
     return pdfium::kFontPitchFamilyFixed;
   }
@@ -218,27 +219,30 @@ int GetPitchFamilyFromFlags(uint32_t flags) {
   return pitch_family;
 }
 
-int AdjustBaseFontForStyle(int base_font, uint32_t style) {
+CFX_StandardFont::Index AdjustBaseFontForStyle(
+    CFX_StandardFont::Index base_font,
+    uint32_t style) {
   if (!style || (base_font % 4)) {
     return base_font;
   }
-
+  int base_int = base_font;
   if (FontStyleIsForceBold(style) && FontStyleIsItalic(style)) {
-    base_font += 2;
+    base_int += 2;
   } else if (FontStyleIsForceBold(style)) {
-    base_font += 1;
+    base_int += 1;
   } else if (FontStyleIsItalic(style)) {
-    base_font += 3;
+    base_int += 3;
   }
-  return base_font;
+  return static_cast<CFX_StandardFont::Index>(base_int);
 }
 
-FX_Charset GetCharset(FX_CodePage code_page, int base_font, uint32_t flags) {
+FX_Charset GetCharset(FX_CodePage code_page,
+                      std::optional<CFX_StandardFont::Index> base_font,
+                      uint32_t flags) {
   if (code_page != FX_CodePage::kDefANSI) {
     return FX_GetCharsetFromCodePage(code_page);
   }
-  if (FontStyleIsSymbolic(flags) &&
-      base_font == CFX_StandardFont::kNumStandardFonts) {
+  if (FontStyleIsSymbolic(flags) && !base_font.has_value()) {
     return FX_Charset::kSymbol;
   }
   return FX_Charset::kANSI;
@@ -252,7 +256,11 @@ ByteString GetSubstName(const ByteString& name, bool is_truetype) {
     subst_name.Remove(' ');
   }
   MaybeRemoveSubsettedFontPrefix(subst_name);
-  CFX_StandardFont::GetStandardFontName(&subst_name);
+  std::optional<CFX_StandardFont::Index> std_font =
+      CFX_StandardFont::GetStandardFontIndex(subst_name);
+  if (std_font) {
+    subst_name = CFX_StandardFont::GetCanonicalFontName(*std_font);
+  }
   return subst_name;
 }
 
@@ -401,20 +409,21 @@ ByteString CFX_FontMapper::MatchInstalledFonts(const ByteString& norm_name) {
 }
 
 RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
-    int base_font,
+    std::optional<CFX_StandardFont::Index> base_font,
     int weight,
     int italic_angle,
     int pitch_family,
     CFX_SubstFont* subst_font) {
-  if (base_font < CFX_StandardFont::kNumStandardFonts) {
-    if (!standard_faces_[base_font]) {
-      standard_faces_[base_font] =
+  if (base_font.has_value()) {
+    CFX_StandardFont::Index index = *base_font;
+    if (!standard_faces_[index]) {
+      standard_faces_[index] =
           CFX_Face::New(nullptr,
                         pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            CFX_StandardFont::GetStandardFont(base_font)),
+                            CFX_StandardFont::GetFontData(index)),
                         0);
     }
-    return standard_faces_[base_font];
+    return standard_faces_[index];
   }
 
   subst_font->SetIsBuiltInGenericFont();
@@ -428,7 +437,7 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
       generic_serif_face_ =
           CFX_Face::New(nullptr,
                         pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                            CFX_StandardFont::GetGenericSerifFont()),
+                            CFX_StandardFont::GetGenericSerifFontData()),
                         0);
     }
     return generic_serif_face_;
@@ -438,7 +447,7 @@ RetainPtr<CFX_Face> CFX_FontMapper::UseInternalSubst(
     generic_sans_face_ =
         CFX_Face::New(nullptr,
                       pdfium::MakeRetain<CFX_ReadOnlySpanStream>(
-                          CFX_StandardFont::GetGenericSansFont()),
+                          CFX_StandardFont::GetGenericSansFontData()),
                       0);
   }
   return generic_sans_face_;
@@ -528,36 +537,36 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
     return UseInternalSubst(CFX_StandardFont::kDingbats, weight, italic_angle,
                             0, subst_font);
   }
-  int base_font = 0;
+  std::optional<CFX_StandardFont::Index> base_font;
   ByteString family;
   ByteString style;
   bool has_comma = false;
   bool has_hyphen = false;
+  std::optional<CFX_StandardFont::Index> std_font;
   {
     std::optional<size_t> pos = subst_name.Find(",");
     if (pos.has_value()) {
       family = subst_name.First(pos.value());
-      CFX_StandardFont::GetStandardFontName(&family);
+      std_font = CFX_StandardFont::GetStandardFontIndex(family);
+      if (std_font) {
+        family = CFX_StandardFont::GetCanonicalFontName(*std_font);
+      }
       style = subst_name.Substr(pos.value() + 1);
       has_comma = true;
     } else {
       family = subst_name;
-    }
-  }
-  for (; base_font < CFX_StandardFont::kSymbol; base_font++) {
-    if (family == CFX_StandardFont::GetCanonicalFontName(
-                      static_cast<CFX_StandardFont::StandardFont>(base_font))) {
-      break;
+      std_font = CFX_StandardFont::GetStandardFontIndex(family);
     }
   }
   int pitch_family;
   uint32_t nStyle;
   bool is_style_available = false;
-  if (base_font < CFX_StandardFont::kSymbol) {
-    nStyle = GetStyleFromBaseFont(base_font);
-    pitch_family = GetPitchFamilyFromBaseFont(base_font);
+  if (std_font.has_value() && std_font.value() < CFX_StandardFont::kSymbol) {
+    base_font = std_font.value();
+    nStyle = GetStyleFromBaseFont(*base_font);
+    pitch_family = GetPitchFamilyFromBaseFont(*base_font);
   } else {
-    base_font = CFX_StandardFont::kNumStandardFonts;
+    base_font = std::nullopt;
     nStyle = pdfium::kFontStyleNormal;
     if (!has_comma) {
       std::optional<size_t> pos = family.ReverseFind('-');
@@ -586,7 +595,7 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
 
   if (ParseStyles(style, &is_style_available, &weight, &nStyle)) {
     family = subst_name;
-    base_font = CFX_StandardFont::kNumStandardFonts;
+    base_font = std::nullopt;
   }
 
   if (!font_info_) {
@@ -608,7 +617,7 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
       (!has_comma && (!has_hyphen || (has_hyphen && !is_style_available)))) {
     match = MatchInstalledFonts(TT_NormalizeName(subst_name));
   }
-  if (match.IsEmpty() && base_font >= CFX_StandardFont::kNumStandardFonts) {
+  if (match.IsEmpty() && !base_font.has_value()) {
     if (!is_cjk) {
       if (!CheckSupportThirdPartFont(family, &pitch_family)) {
         is_italic = italic_angle != 0;
@@ -639,14 +648,13 @@ RetainPtr<CFX_Face> CFX_FontMapper::FindSubstFace(const ByteString& name,
     }
   }
 
-  if (!match.IsEmpty() || base_font < CFX_StandardFont::kNumStandardFonts) {
+  if (!match.IsEmpty() || base_font.has_value()) {
     if (!match.IsEmpty()) {
       family = match;
     }
-    if (base_font < CFX_StandardFont::kNumStandardFonts) {
-      base_font = AdjustBaseFontForStyle(base_font, nStyle);
-      family = CFX_StandardFont::GetCanonicalFontName(
-          static_cast<CFX_StandardFont::StandardFont>(base_font));
+    if (base_font.has_value()) {
+      base_font = AdjustBaseFontForStyle(*base_font, nStyle);
+      family = CFX_StandardFont::GetCanonicalFontName(*base_font);
     }
   } else if (FontStyleIsItalic(flags)) {
     is_italic = true;
