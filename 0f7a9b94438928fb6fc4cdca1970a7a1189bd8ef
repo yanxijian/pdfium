@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1259025f_e29659b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 23
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-25T00:39:32Z",
+      "side": 1,
+      "message": "GetLineCaretX() moved to caret calculation CL",
+      "parentUuid": "ded8e9c4_9fd720df",
+      "range": {
+        "startLine": 11,
+        "startChar": 45,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "0f7a9b94438928fb6fc4cdca1970a7a1189bd8ef",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74e0472a_e99e8844",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-23T23:45:53Z",
       "side": 1,
       "message": "1. This could have been in the previous CL, but that landed already...\n2. Line 79 has `EXPECT_EQ(expected, actual);` so this should pass in the arguments in a consistent manner and not flip them.\n3. It is difficult to see the test expectations are correct. If one expands out CaretX() without latest RTL changes, this expands out to `EXPECT_EQ(word.location().x + word.width(), word.location().x + word.width());`, which is not helpful because the 2 sides are essentially the same. It would be better to use the actual values.",
+      "revId": "0f7a9b94438928fb6fc4cdca1970a7a1189bd8ef",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48c93905_4b9bb80d",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 23
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-25T00:39:32Z",
+      "side": 1,
+      "message": "Addressed in caret calculation CL",
+      "parentUuid": "74e0472a_e99e8844",
       "revId": "0f7a9b94438928fb6fc4cdca1970a7a1189bd8ef",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
