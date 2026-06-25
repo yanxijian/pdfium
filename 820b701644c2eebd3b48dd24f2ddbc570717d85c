@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "471a1c72_1399c575",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T21:52:32Z",
+      "side": 1,
+      "message": "... and rename to SetStyles().",
+      "revId": "820b701644c2eebd3b48dd24f2ddbc570717d85c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
