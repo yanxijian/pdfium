@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42b668ec_1d06f5c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8946
+      },
+      "writtenOn": "2026-06-25T05:37:04Z",
+      "side": 1,
+      "message": "Roll d3 on Gerrit-surfaced reviewers -\u003e Tom to review, please.",
+      "revId": "91a2e16116f998ceb70743a03ec3a6ff3b80d107",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
