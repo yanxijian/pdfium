@@ -48,6 +48,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fb10eb3_f059b380",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T00:25:41Z",
+      "side": 1,
+      "message": "Oh, I read line 246 wrong. I was expected the opposite conditional there.",
+      "parentUuid": "87fff9e9_341e0204",
+      "range": {
+        "startLine": 255,
+        "startChar": 41,
+        "endLine": 255,
+        "endChar": 55
+      },
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "be4236ee_96a076fe",
