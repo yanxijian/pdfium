@@ -16,6 +16,24 @@
       "message": "It turns out IsBase14Font() internally does this too. So this code expands out to:\n\n```\nif (base14_font_.has_value()) {\n   ... GetCanonicalFontName(base14_font_.value());\n}\nif (!base14_font_.has_value()) {\n   return LoadCommon();\n}\n```\n\nMaybe just switch out the IsBase14Font() call and keep the early return?",
       "revId": "a40e6d13e0a42a17c7ba215307612e11c4836e59",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a5b970d_6c5c48bf",
+        "filename": "core/fpdfapi/font/cpdf_type1font.cpp",
+        "patchSetId": 26
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T00:31:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e716914_75fdeb4d",
+      "revId": "a40e6d13e0a42a17c7ba215307612e11c4836e59",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
