@@ -16,6 +16,58 @@
       "message": "Thanks for the suggestion. I moved TimeFunction and LocaltimeFunction back to fx_extension.h for readability and updated the scoped test helpers accordingly. PTAL when you have a chance.",
       "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e11249_3248c27c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T17:57:28Z",
+      "side": 1,
+      "message": "Sure. Just one more round of minor adjustments.",
+      "parentUuid": "098a57f6_4f217d13",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c407ce2_222eec2b",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T17:57:28Z",
+      "side": 1,
+      "message": "Maybe put these closer to line 152, where they are used?",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9515d3f7_b4024468",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T17:57:28Z",
+      "side": 1,
+      "message": "Document the return value.",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
