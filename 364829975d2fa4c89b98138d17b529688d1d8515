@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "598c0619_abf4d39d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T17:50:11Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 33
+      },
+      "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "91a95dc4_c5f356b0",
@@ -14,6 +37,23 @@
       "writtenOn": "2026-06-25T17:03:26Z",
       "side": 1,
       "message": "Lei, Pls. verify latest fix is OK.",
+      "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec21345d_4c780bc1",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T17:50:11Z",
+      "side": 1,
+      "message": "Not used?",
       "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
