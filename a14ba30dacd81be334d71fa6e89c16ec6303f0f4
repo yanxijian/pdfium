@@ -33,6 +33,24 @@
       "message": "No longer needed. It now starts out as std::nullopt.",
       "revId": "a14ba30dacd81be334d71fa6e89c16ec6303f0f4",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44d0f738_66d14f23",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T20:15:40Z",
+      "side": 1,
+      "message": "Done.  Moved decls closer to time of first use to make this more obvious.",
+      "parentUuid": "6f2a1294_4c51fd12",
+      "revId": "a14ba30dacd81be334d71fa6e89c16ec6303f0f4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
