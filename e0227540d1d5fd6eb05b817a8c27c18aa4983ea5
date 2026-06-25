@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "098a57f6_4f217d13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-25T14:04:27Z",
+      "side": 1,
+      "message": "Thanks for the suggestion. I moved TimeFunction and LocaltimeFunction back to fx_extension.h for readability and updated the scoped test helpers accordingly. PTAL when you have a chance.",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

@@ -35,6 +35,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "863efb2b_203ef967",
+        "filename": "core/fxcrt/fx_extension.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-25T14:04:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "142587e2_ef6fc709",
+      "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5a12de55_5f569ca2",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-06-24T17:31:25Z",
       "side": 1,
       "message": "Only used in the .cc file, unless fx_extension.h defines TimeFunction/LocaltimeFunction.",
+      "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65a56d00_a6096779",
+        "filename": "testing/utils/scoped_time_overrides.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-25T14:04:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a12de55_5f569ca2",
       "revId": "b5a5141ed7f50a2905565b6ac938940b0ffd4f21",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
