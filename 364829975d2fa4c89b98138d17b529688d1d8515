@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "c3da6027_5eef589a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T17:52:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "598c0619_abf4d39d",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 33
+      },
+      "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "91a95dc4_c5f356b0",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 5
@@ -54,6 +78,24 @@
       "writtenOn": "2026-06-25T17:50:11Z",
       "side": 1,
       "message": "Not used?",
+      "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "288a1f9e_0c1ca917",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T17:52:16Z",
+      "side": 1,
+      "message": "used at 546.",
+      "parentUuid": "ec21345d_4c780bc1",
       "revId": "364829975d2fa4c89b98138d17b529688d1d8515",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
