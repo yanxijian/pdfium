@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "87fff9e9_341e0204",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T00:14:40Z",
+      "side": 1,
+      "message": "Here is a place the split makes sense.  If it is a standard font, the name is updated, but a value is returned, and we return out of here not using the name again at 247.  Otherwise, it was not a standard font, and the name is not altered as a side-effect. In which case we use the non-adjusted name",
+      "parentUuid": "2b9c87f6_e455f374",
+      "range": {
+        "startLine": 255,
+        "startChar": 41,
+        "endLine": 255,
+        "endChar": 55
+      },
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "be4236ee_96a076fe",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-24T23:26:42Z",
       "side": 1,
       "message": "Maybe merge into line 297?",
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18a53867_c3e0977e",
+        "filename": "core/fpdfapi/font/cpdf_font.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T00:14:40Z",
+      "side": 1,
+      "message": "for the sake of update, and since I seemed to have lost one already, keep here.",
+      "parentUuid": "be4236ee_96a076fe",
       "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -60,6 +102,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "f4e8a910_93a8a6ef",
+        "filename": "core/fxge/cfx_standardfont.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T00:14:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "178494fc_7afe4ad7",
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "91764345_4bb52af2",
         "filename": "core/fxge/cfx_standardfont.h",
         "patchSetId": 20
@@ -71,6 +131,24 @@
       "writtenOn": "2026-06-24T23:17:59Z",
       "side": 1,
       "message": "Wishing there was less churn here, but ok.",
+      "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ecb5c48_f2f54f5e",
+        "filename": "core/fxge/cfx_standardfont.h",
+        "patchSetId": 20
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-25T00:14:40Z",
+      "side": 1,
+      "message": "I put these in order of .cpp after trying to minimize .cpp diff.",
+      "parentUuid": "91764345_4bb52af2",
       "revId": "a04d43e91d142e258a3d2948794b6278186284b4",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
