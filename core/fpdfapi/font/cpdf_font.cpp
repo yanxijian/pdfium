@@ -8,6 +8,7 @@
 
 #include <algorithm>
 #include <array>
+#include <iostream>
 #include <memory>
 #include <utility>
 #include <vector>
@@ -189,6 +190,7 @@ void CPDF_Font::LoadFontDescriptor(const CPDF_Dictionary* font_desc) {
 }
 
 void CPDF_Font::CheckFontMetrics() {
+  std::cerr << "Entering CheckFontMetrics" << std::endl;
   if (font_bbox_.top == 0 && font_bbox_.bottom == 0 && font_bbox_.left == 0 &&
       font_bbox_.right == 0) {
     RetainPtr<CFX_Face> face = font_.GetFace();
@@ -227,6 +229,7 @@ void CPDF_Font::CheckFontMetrics() {
     rect = GetCharBBox('g');
     descent_ = rect.bottom == rect.top ? font_bbox_.bottom : rect.bottom;
   }
+  std::cerr << "Leaving CheckFontMetrics" << std::endl;
 }
 
 bool CPDF_Font::ShouldApplyGlyphSpacingHeuristic(
@@ -277,6 +280,7 @@ int CPDF_Font::GetStringWidth(ByteStringView pString) {
 // static
 RetainPtr<CPDF_Font> CPDF_Font::GetStockFont(CPDF_Document* doc,
                                              ByteStringView name) {
+  std::cerr << "Entering GetStockFont: " << name << std::endl;
   ByteString fontname(name);
   std::optional<CFX_StandardFont::Index> font_id =
       CFX_StandardFont::GetStandardFontIndex(fontname);
@@ -306,6 +310,7 @@ RetainPtr<CPDF_Font> CPDF_Font::GetStockFont(CPDF_Document* doc,
 RetainPtr<CPDF_Font> CPDF_Font::Create(CPDF_Document* doc,
                                        RetainPtr<CPDF_Dictionary> font_dict,
                                        FormFactoryIface* pFactory) {
+  std::cerr << "Entering CPDF_Font::Create" << std::endl;
   ByteString type = font_dict->GetByteStringFor("Subtype");
   RetainPtr<CPDF_Font> font;
   if (type == "TrueType") {

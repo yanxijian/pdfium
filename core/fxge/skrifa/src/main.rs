@@ -16,6 +16,7 @@ use read_fonts::{
         type1::Type1Font,
     },
     types::GlyphId,
+    FontRead,
 };
 use skrifa::{
     charmap::Charmap,
@@ -185,8 +186,9 @@ impl<'a> Sfnt<'a> {
         let get_name = |id| font.localized_strings(id).english_or_first().map(|s| s.to_string());
         let ps_name = get_name(StringId::POSTSCRIPT_NAME);
         let family_name =
-            get_name(StringId::FAMILY_NAME).or_else(|| get_name(StringId::TYPOGRAPHIC_FAMILY_NAME));
-        let style_name = get_name(StringId::SUBFAMILY_NAME);
+            get_name(StringId::TYPOGRAPHIC_FAMILY_NAME).or_else(|| get_name(StringId::FAMILY_NAME));
+        let style_name = get_name(StringId::TYPOGRAPHIC_SUBFAMILY_NAME)
+            .or_else(|| get_name(StringId::SUBFAMILY_NAME));
         let glyph_names = font.glyph_names();
         let charmap = font.charmap();
         let outlines = font.outline_glyphs();
@@ -210,6 +212,7 @@ pub struct CffFont<'a> {
     encoding: Option<CffEncoding<'a>>,
     unicode_cmap: Option<PsCharmap>,
     subfonts: Vec<Option<CffSubfont>>,
+    cid_count: Option<u32>,
 }
 
 pub fn new_font<'a>(data: &'a [u8], index: u32) -> Box<SkrifaFont<'a>> {
@@ -217,6 +220,19 @@ pub fn new_font<'a>(data: &'a [u8], index: u32) -> Box<SkrifaFont<'a>> {
         return Box::new(SkrifaFont::Sfnt(sfnt));
     }
     let font = if let Ok(cff) = CffFontRef::new(data, index, None) {
+        let mut cid_count = None;
+        if let Ok(cff_v1) = read_fonts::ps::cff::v1::Cff::read(data.into()) {
+            if let Ok(top_dict_data) = cff_v1.top_dicts().get(0) {
+                for entry in
+                    read_fonts::ps::cff::dict::entries(top_dict_data, None).filter_map(|e| e.ok())
+                {
+                    if let read_fonts::ps::cff::dict::Entry::CidCount(count) = entry {
+                        cid_count = Some(count as u32);
+                        break;
+                    }
+                }
+            }
+        }
         let meta = cff.metadata();
         let charset = cff.charset();
         let encoding = cff.encoding();
@@ -228,7 +244,15 @@ pub fn new_font<'a>(data: &'a [u8], index: u32) -> Box<SkrifaFont<'a>> {
         } else {
             None
         };
-        SkrifaFont::Cff(CffFont { font: cff, meta, charset, encoding, unicode_cmap, subfonts })
+        SkrifaFont::Cff(CffFont {
+            font: cff,
+            meta,
+            charset,
+            encoding,
+            unicode_cmap,
+            subfonts,
+            cid_count,
+        })
     } else if let Ok(type1) = Type1Font::new(data) {
         SkrifaFont::Type1(type1)
     } else {
@@ -238,6 +262,21 @@ pub fn new_font<'a>(data: &'a [u8], index: u32) -> Box<SkrifaFont<'a>> {
 }
 
 impl SkrifaFont<'_> {
+    fn map_gid(&self, gid: u32) -> Option<u32> {
+        match self {
+            Self::Cff(cff) => {
+                if cff.font.is_cid() {
+                    let charset = cff.charset.as_ref()?;
+                    let actual_gid = charset.glyph_id(Sid::new(gid as u16)).ok()?;
+                    Some(actual_gid.to_u32())
+                } else {
+                    Some(gid)
+                }
+            }
+            _ => Some(gid),
+        }
+    }
+
     fn is_ok(&self) -> bool {
         !matches!(self, Self::Error)
     }
@@ -269,7 +308,13 @@ impl SkrifaFont<'_> {
             Self::Sfnt(sfnt) => sfnt.family_name.as_deref().unwrap_or_default(),
             Self::Type1(type1) => type1.family_name().unwrap_or_default(),
             Self::Cff(cff) => {
-                cff.meta.as_ref().and_then(|meta| meta.family_name()).unwrap_or_default()
+                let name =
+                    cff.meta.as_ref().and_then(|meta| meta.family_name()).unwrap_or_default();
+                if name.is_empty() {
+                    self.postscript_name()
+                } else {
+                    name
+                }
             }
             Self::Error => "",
         }
@@ -308,7 +353,7 @@ impl SkrifaFont<'_> {
         match self {
             Self::Sfnt(sfnt) => sfnt.metrics.glyph_count as u32,
             Self::Type1(type1) => type1.num_glyphs(),
-            Self::Cff(cff) => cff.font.num_glyphs(),
+            Self::Cff(cff) => cff.cid_count.unwrap_or_else(|| cff.font.num_glyphs()),
             Self::Error => 0,
         }
     }
@@ -393,23 +438,48 @@ impl SkrifaFont<'_> {
         match self {
             Self::Sfnt(sfnt) => sfnt.outlines.get(GlyphId::new(gid)).is_some(),
             Self::Type1(type1) => gid < type1.num_glyphs(),
-            Self::Cff(cff) => gid < cff.font.num_glyphs(),
+            Self::Cff(cff) => self
+                .map_gid(gid)
+                .map(|mapped_gid| mapped_gid < cff.font.num_glyphs())
+                .unwrap_or(false),
             Self::Error => false,
         }
     }
 
     fn get_glyph_bounds(&self, gid: u32) -> BoundingBox {
-        let Self::Sfnt(sfnt) = self else {
-            return BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 };
-        };
-        let glyph_metrics = GlyphMetrics::new(&sfnt.font, Size::unscaled(), LocationRef::default());
-        if let Some(bbox) = glyph_metrics.bounds(GlyphId::new(gid)) {
-            return BoundingBox {
-                x_min: bbox.x_min,
-                y_min: bbox.y_min,
-                x_max: bbox.x_max,
-                y_max: bbox.y_max,
-            };
+        match self {
+            Self::Sfnt(sfnt) => {
+                let glyph_metrics =
+                    GlyphMetrics::new(&sfnt.font, Size::unscaled(), LocationRef::default());
+                if let Some(bbox) = glyph_metrics.bounds(GlyphId::new(gid)) {
+                    return BoundingBox {
+                        x_min: bbox.x_min,
+                        y_min: bbox.y_min,
+                        x_max: bbox.x_max,
+                        y_max: bbox.y_max,
+                    };
+                }
+            }
+            Self::Cff(_) | Self::Type1(_) => {
+                let mut outline =
+                    Outline { verbs: Vec::new(), points: Vec::new(), advance_width: 0.0 };
+                if self.unscaled_outline(gid, &mut outline) {
+                    if !outline.points.is_empty() {
+                        let mut x_min = f32::MAX;
+                        let mut y_min = f32::MAX;
+                        let mut x_max = f32::MIN;
+                        let mut y_max = f32::MIN;
+                        for p in &outline.points {
+                            x_min = x_min.min(p.x);
+                            y_min = y_min.min(p.y);
+                            x_max = x_max.max(p.x);
+                            y_max = y_max.max(p.y);
+                        }
+                        return BoundingBox { x_min, y_min, x_max, y_max };
+                    }
+                }
+            }
+            _ => {}
         }
         BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 }
     }
@@ -433,7 +503,8 @@ impl SkrifaFont<'_> {
             }
             Self::Type1(type1) => type1.draw(gid.into(), ppem, outline).ok()??,
             Self::Cff(cff) => {
-                let gid = GlyphId::new(gid);
+                let mapped_gid = self.map_gid(gid)?;
+                let gid = GlyphId::new(mapped_gid);
                 let subfont = cff.subfonts.get(cff.font.subfont_index(gid)? as usize)?.as_ref()?;
                 cff.font.draw(subfont, gid, &[], ppem, outline).ok()??
             }
@@ -525,33 +596,64 @@ impl SkrifaFont<'_> {
     }
 
     fn name_index(&self, name: &str) -> u32 {
+        eprintln!(
+            "Rust name_index: name='{}', variant={}",
+            name,
+            match self {
+                Self::Sfnt(_) => "Sfnt",
+                Self::Type1(_) => "Type1",
+                Self::Cff(_) => "Cff",
+                Self::Error => "Error",
+            }
+        );
         match self {
-            Self::Sfnt(sfnt) => sfnt
-                .glyph_names
-                .iter()
-                .find(|(_id, n)| n.as_str() == name)
-                .map(|(id, _n)| id.to_u32())
-                .unwrap_or_default(),
+            Self::Sfnt(sfnt) => {
+                let res = sfnt
+                    .glyph_names
+                    .iter()
+                    .find(|(_id, n)| n.as_str() == name)
+                    .map(|(id, _n)| id.to_u32())
+                    .unwrap_or_default();
+                eprintln!("Rust name_index (Sfnt): res={}", res);
+                res
+            }
+            Self::Cff(cff) => {
+                let res = if let Some(charset) = cff.charset.as_ref() {
+                    charset
+                        .iter()
+                        .find(|(_gid, sid)| {
+                            if let Some(name_bytes) = cff.font.string(*sid) {
+                                if let Ok(name_str) = core::str::from_utf8(name_bytes) {
+                                    return name_str == name;
+                                }
+                            }
+                            false
+                        })
+                        .map(|(gid, _sid)| gid.to_u32())
+                        .unwrap_or_default()
+                } else {
+                    0
+                };
+                eprintln!("Rust name_index (Cff): res={}", res);
+                res
+            }
+            Self::Type1(type1) => {
+                let mut res = 0;
+                for i in 0..type1.num_glyphs() {
+                    if type1.glyph_name(i.into()).map(|n| n == name).unwrap_or(false) {
+                        res = i;
+                        break;
+                    }
+                }
+                eprintln!("Rust name_index (Type1): res={}", res);
+                res
+            }
             _ => 0,
         }
     }
 
     fn glyph_bounds(&self, glyph_index: u32) -> BoundingBox {
-        let mut bbox = BoundingBox { x_min: 0.0, y_min: 0.0, x_max: 0.0, y_max: 0.0 };
-        if let Self::Sfnt(sfnt) = self {
-            let metrics = skrifa::metrics::GlyphMetrics::new(
-                &sfnt.font,
-                skrifa::instance::Size::unscaled(),
-                skrifa::instance::LocationRef::default(),
-            );
-            if let Some(b) = metrics.bounds(skrifa::GlyphId::new(glyph_index)) {
-                bbox.x_min = b.x_min;
-                bbox.y_min = b.y_min;
-                bbox.x_max = b.x_max;
-                bbox.y_max = b.y_max;
-            }
-        }
-        bbox
+        self.get_glyph_bounds(glyph_index)
     }
 
     fn is_fixed_pitch(&self) -> bool {
@@ -636,23 +738,30 @@ impl SkrifaFont<'_> {
         };
         let charmap = sfnt.font.charmap();
         if charmap.has_map() {
+            let mut has_any = false;
             for (char_code, glyph_id) in charmap.mappings() {
+                has_any = true;
                 if char_code > max_char {
                     break;
                 }
                 results.push(CharCodeAndIndex { char_code, glyph_index: glyph_id.to_u32() });
+            }
+            if !has_any && results.is_empty() {
+                results.push(CharCodeAndIndex { char_code: 0, glyph_index: 0 });
             }
             return results;
         }
 
         use read_fonts::TableProvider;
         if let Ok(cmap) = sfnt.font.cmap() {
+            let mut has_any = false;
             for record in cmap.encoding_records() {
                 if let Ok(read_fonts::tables::cmap::CmapSubtable::Format0(format0)) =
                     record.subtable(cmap.offset_data())
                 {
                     for (code, &gid) in format0.glyph_id_array().iter().enumerate() {
                         if gid != 0 {
+                            has_any = true;
                             let char_code = code as u32;
                             if char_code <= max_char {
                                 results
@@ -660,12 +769,16 @@ impl SkrifaFont<'_> {
                             }
                         }
                     }
+                    if !has_any && results.is_empty() {
+                        results.push(CharCodeAndIndex { char_code: 0, glyph_index: 0 });
+                    }
                     return results;
                 }
             }
 
             if let Some((_, _, subtable)) = cmap.best_subtable() {
                 for (char_code, glyph_id) in subtable.iter() {
+                    has_any = true;
                     if char_code > max_char {
                         continue;
                     }
@@ -674,6 +787,9 @@ impl SkrifaFont<'_> {
                 results.sort_by_key(|r| r.char_code);
                 if let Some(pos) = results.iter().position(|r| r.char_code > max_char) {
                     results.truncate(pos);
+                }
+                if !has_any && results.is_empty() {
+                    results.push(CharCodeAndIndex { char_code: 0, glyph_index: 0 });
                 }
                 return results;
             }

@@ -8,6 +8,7 @@
 
 #include <algorithm>
 #include <array>
+#include <iostream>
 #include <iterator>
 #include <utility>
 
@@ -84,6 +85,7 @@ CPDF_Type1Font* CPDF_Type1Font::AsType1Font() {
 }
 
 bool CPDF_Type1Font::Load() {
+  std::cerr << "Entering CPDF_Type1Font::Load" << std::endl;
   base14_font_ = CFX_StandardFont::GetStandardFontIndex(base_font_name_);
   if (!base14_font_.has_value()) {
     return LoadCommon();

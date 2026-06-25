@@ -6,6 +6,7 @@
 
 #include "core/fpdfapi/edit/cpdf_pagecontentgenerator.h"
 
+#include <iostream>
 #include <map>
 #include <memory>
 #include <optional>
@@ -942,6 +943,7 @@ ByteString CPDF_PageContentGenerator::GetOrCreateDefaultGraphics() const {
 // TJ sets the actual text, <####...> is used when specifying charcodes.
 void CPDF_PageContentGenerator::ProcessText(fxcrt::ostringstream* buf,
                                             CPDF_TextObject* pTextObj) {
+  std::cerr << "ProcessText: start" << std::endl;
   ProcessGraphics(buf, pTextObj);
   *buf << "BT ";
 
@@ -998,10 +1000,12 @@ void CPDF_PageContentGenerator::ProcessText(fxcrt::ostringstream* buf,
   WriteFloat(*buf, pTextObj->GetFontSize()) << " Tf ";
   *buf << static_cast<int>(pTextObj->GetTextRenderMode()) << " Tr ";
 
+  std::cerr << "ProcessText: before loop" << std::endl;
   *buf << "[";
   ByteString text;
   for (auto [char_code, char_kerning] :
        fxcrt::Zip(pTextObj->GetCharCodes(), pTextObj->GetCharKernings())) {
+    std::cerr << "ProcessText: char=" << char_code << std::endl;
     font->AppendChar(&text, char_code);
     if (char_kerning != 0) {
       *buf << PDF_HexEncodeString(text.AsStringView()) << " ";
@@ -1009,9 +1013,12 @@ void CPDF_PageContentGenerator::ProcessText(fxcrt::ostringstream* buf,
       WriteFloat(*buf, char_kerning) << " ";
     }
   }
+  std::cerr << "ProcessText: after loop" << std::endl;
   if (!text.IsEmpty()) {
     *buf << PDF_HexEncodeString(text.AsStringView());
   }
   *buf << "] TJ ET";
+  std::cerr << "ProcessText: before EndProcessGraphics" << std::endl;
   EndProcessGraphics(*buf);
+  std::cerr << "ProcessText: end" << std::endl;
 }

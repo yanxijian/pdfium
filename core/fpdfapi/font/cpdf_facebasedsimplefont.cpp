@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <array>
+#include <iostream>
 #include <utility>
 
 #include "core/fpdfapi/parser/cpdf_array.h"
@@ -142,27 +143,36 @@ FX_RECT CPDF_FaceBasedSimpleFont::GetCharBBox(uint32_t charcode) {
 }
 
 bool CPDF_FaceBasedSimpleFont::LoadCommon() {
+  std::cerr << "Entering CPDF_FaceBasedSimpleFont::LoadCommon" << std::endl;
   RetainPtr<const CPDF_Dictionary> font_desc =
       font_dict_->GetDictFor("FontDescriptor");
   if (font_desc) {
+    std::cerr << "LoadCommon: loading font descriptor" << std::endl;
     LoadFontDescriptor(font_desc.Get());
   }
+  std::cerr << "LoadCommon: loading char widths" << std::endl;
   LoadCharWidths(font_desc.Get());
   if (font_file_) {
+    std::cerr << "LoadCommon: font_file_ is present" << std::endl;
     MaybeRemoveSubsettedFontPrefix(base_font_name_);
   } else {
+    std::cerr << "LoadCommon: loading subst font" << std::endl;
     LoadSubstFont();
   }
   if (!FontStyleIsSymbolic(flags_)) {
     base_encoding_ = FontEncoding::kStandard;
   }
+  std::cerr << "LoadCommon: loading PDF encoding" << std::endl;
   LoadPDFEncoding(!!font_file_, font_.IsTTFont());
+  std::cerr << "LoadCommon: loading glyph map" << std::endl;
   LoadGlyphMap();
   char_names_.clear();
   if (!HasFace()) {
+    std::cerr << "LoadCommon: no face" << std::endl;
     return true;
   }
 
+  std::cerr << "LoadCommon: face present, checking all caps" << std::endl;
   if (FontStyleIsAllCaps(flags_)) {
     static const auto kLowercases =
         std::to_array<std::pair<const uint8_t, const uint8_t>>(
@@ -181,7 +191,9 @@ bool CPDF_FaceBasedSimpleFont::LoadCommon() {
       }
     }
   }
+  std::cerr << "LoadCommon: calling CheckFontMetrics" << std::endl;
   CheckFontMetrics();
+  std::cerr << "LoadCommon: returning true" << std::endl;
   return true;
 }
 
