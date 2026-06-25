@@ -77,26 +77,31 @@ TEST_F(CPVT_VariableTextTest, LTRTextLayout) {
   CPVT_Word word;
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('h', word.word());
+  EXPECT_FLOAT_EQ(0.1f, word.CaretX());
   float first_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('e', word.word());
+  EXPECT_FLOAT_EQ(0.2f, word.CaretX());
   float second_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('l', word.word());
+  EXPECT_FLOAT_EQ(0.3f, word.CaretX());
   float third_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('l', word.word());
+  EXPECT_FLOAT_EQ(0.4f, word.CaretX());
   float fourth_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ('o', word.word());
+  EXPECT_FLOAT_EQ(0.5f, word.CaretX());
   float fifth_x = word.location().x;
 
   EXPECT_FALSE(it->NextWord());
@@ -126,21 +131,25 @@ TEST_F(CPVT_VariableTextTest, RTLTextLayout) {
   CPVT_Word word;
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05E9, word.word());
+  EXPECT_FLOAT_EQ(0.3f, word.CaretX());
   float first_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05DC, word.word());
+  EXPECT_FLOAT_EQ(0.2f, word.CaretX());
   float second_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05D5, word.word());
+  EXPECT_FLOAT_EQ(0.1f, word.CaretX());
   float third_x = word.location().x;
 
   ASSERT_TRUE(it->NextWord());
   ASSERT_TRUE(it->GetWord(word));
   EXPECT_EQ(0x05DD, word.word());
+  EXPECT_FLOAT_EQ(0.0f, word.CaretX());
   float fourth_x = word.location().x;
 
   EXPECT_FALSE(it->NextWord());
