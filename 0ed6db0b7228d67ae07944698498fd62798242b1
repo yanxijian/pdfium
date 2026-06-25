@@ -16,6 +16,23 @@
       "message": "ps3 that is",
       "revId": "0ed6db0b7228d67ae07944698498fd62798242b1",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fb90eab_45c96d48",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-25T01:17:15Z",
+      "side": 1,
+      "message": "Doesn\u0027t this always end up being 0 now, since IsStylableBaseFont() says the only valid values are 0, 4, and 8?",
+      "revId": "0ed6db0b7228d67ae07944698498fd62798242b1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
