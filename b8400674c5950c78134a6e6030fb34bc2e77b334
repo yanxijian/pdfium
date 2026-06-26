@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0ff71d2_da350467",
+        "filename": "core/fxcodec/fx_codec.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:55:59Z",
+      "side": 0,
+      "message": "Preserve blank line.",
+      "revId": "b8400674c5950c78134a6e6030fb34bc2e77b334",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
