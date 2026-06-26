@@ -34,6 +34,24 @@
       "parentUuid": "57c3ffcd_9793dee8",
       "revId": "7fee6f853464826ae6f1f6235237031db193d093",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8708349f_3a93cf38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 42
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:20:20Z",
+      "side": 1,
+      "message": "understood, will wait for rest of cl\u0027s to be in good shape",
+      "parentUuid": "e23eab48_7b11da01",
+      "revId": "7fee6f853464826ae6f1f6235237031db193d093",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
