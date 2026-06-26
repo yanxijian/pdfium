@@ -53,6 +53,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "68b63a25_715d2e77",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-26T17:29:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c407ce2_222eec2b",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9515d3f7_b4024468",
@@ -66,6 +84,24 @@
       "writtenOn": "2026-06-25T17:57:28Z",
       "side": 1,
       "message": "Document the return value.",
+      "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6255266a_7eb3ee3c",
+        "filename": "core/fxcrt/fx_extension.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4140855
+      },
+      "writtenOn": "2026-06-26T17:29:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9515d3f7_b4024468",
       "revId": "e0227540d1d5fd6eb05b817a8c27c18aa4983ea5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
