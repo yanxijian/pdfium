@@ -70,6 +70,30 @@
       },
       "revId": "3b97dee7f730314faed5052c9d6ffba2d32c6c27",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3b64c5e_f50503e8",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 31
+      },
+      "lineNbr": 721,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T21:09:18Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "2d4e93b3_1a9d7869",
+      "range": {
+        "startLine": 719,
+        "startChar": 0,
+        "endLine": 721,
+        "endChar": 51
+      },
+      "revId": "3b97dee7f730314faed5052c9d6ffba2d32c6c27",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
