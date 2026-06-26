@@ -195,6 +195,9 @@ struct Options {
 #endif  // PDF_ENABLE_V8
   bool pages = false;
   bool md5 = false;
+#ifdef PDF_ENABLE_BROTLI
+  bool enable_brotli = false;
+#endif  // PDF_ENABLE_BROTLI
 #ifdef ENABLE_CALLGRIND
   bool callgrind_delimiters = false;
 #endif
@@ -594,6 +597,10 @@ bool ParseCommandLine(const std::vector<std::string>& args,
     } else if (cur_arg == "--callgrind-delim") {
       options->callgrind_delimiters = true;
 #endif
+#ifdef PDF_ENABLE_BROTLI
+    } else if (cur_arg == "--enable-brotli") {
+      options->enable_brotli = true;
+#endif  // PDF_ENABLE_BROTLI
 #if defined(__APPLE__) || (defined(__linux__) && !defined(__ANDROID__))
     } else if (cur_arg == "--no-system-fonts") {
       options->linux_no_system_fonts = true;
@@ -1660,6 +1667,10 @@ void Processor::ProcessPdf(const std::string& name,
   // |doc| must outlive |form_callbacks.loaded_pages|.
   ScopedFPDFDocument doc;
 
+#ifdef PDF_ENABLE_BROTLI
+  FPDF_SetBrotliDecodeEnabled(options().enable_brotli);
+#endif  // PDF_ENABLE_BROTLI
+
   const char* password =
       options().password.empty() ? nullptr : options().password.c_str();
   bool is_linearized = false;
@@ -1909,6 +1920,10 @@ constexpr char kUsageString[] =
     "  --disable-xfa          - do not process XFA forms\n"
 #endif  // PDF_ENABLE_XFA
 #endif  // PDF_ENABLE_V8
+#ifdef PDF_ENABLE_BROTLI
+    "  --enable-brotli   - Enable support for the experimental PDF 2.0 "
+    "/BrotliDecode filter.\n"
+#endif  // PDF_ENABLE_BROTLI
 #ifdef ENABLE_CALLGRIND
     "  --callgrind-delim      - delimit interesting section when using "
     "callgrind\n"
