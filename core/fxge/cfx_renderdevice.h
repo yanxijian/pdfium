@@ -87,6 +87,11 @@ class CFX_RenderDevice final {
       RetainPtr<CFX_DIBitmap> bitmap);
   static std::unique_ptr<CFX_RenderDevice>
   CreateForNewBitmap(int width, int height, FXDIB_Format format);
+  static std::unique_ptr<CFX_RenderDevice> CreateForNewBitmapWithBackdrop(
+      int width,
+      int height,
+      FXDIB_Format format,
+      RetainPtr<CFX_DIBitmap> backdrop);
 #if BUILDFLAG(IS_WIN)
   static std::unique_ptr<CFX_RenderDevice> CreateForWindowsDC(
       HDC hDC,
