@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6fce4f9_6902a0e8",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:16:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "94b2aed1_15a777f4",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fae6e808_7637fcb6",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-26T19:04:32Z",
       "side": 1,
       "message": "This is conflating `use_continuous_formatting`, which is the value that the caller is passing in, with `use_continuous_formatting_for_word`, which is what actually happens within GenerateEditAP(), based on `use_continuous_formatting`.",
+      "range": {
+        "startLine": 312,
+        "startChar": 57,
+        "endLine": 313,
+        "endChar": 68
+      },
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "870b8895_caf2756c",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:16:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fae6e808_7637fcb6",
       "range": {
         "startLine": 312,
         "startChar": 57,
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6837cb83_f544f91a",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:16:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3cd9b0cf_f0194f12",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f66ebc93_24e36c1a",
@@ -75,6 +135,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44c33f2f_da5bdd3f",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:16:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f66ebc93_24e36c1a",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f342f637_25a7658b",
@@ -88,6 +166,24 @@
       "writtenOn": "2026-06-26T19:04:32Z",
       "side": 1,
       "message": "Prepend a CL to do this refactoring for both this file and core/fpdfdoc/cpdf_generateap.cpp. Can also include the line 677 change in that refactoring CL. Same for all the font_index refactoring changes.",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd537dd9_af440f80",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T23:16:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f342f637_25a7658b",
       "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
