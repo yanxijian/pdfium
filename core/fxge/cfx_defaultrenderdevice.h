@@ -46,11 +46,13 @@ class CFX_DefaultRenderDevice final : public CFX_RenderDevice {
                   bool bGroupKnockout);
 
 #if defined(PDF_USE_AGG)
+  // Implemented in agg/cfx_agg_devicedriver.cpp
   bool AttachAggImpl(RetainPtr<CFX_DIBitmap> pBitmap,
                      bool bRgbByteOrder,
                      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
                      bool bGroupKnockout);
 
+  // Implemented in agg/cfx_agg_devicedriver.cpp
   bool CreateAgg(int width,
                  int height,
                  FXDIB_Format format,
@@ -58,11 +60,13 @@ class CFX_DefaultRenderDevice final : public CFX_RenderDevice {
 #endif
 
 #if defined(PDF_USE_SKIA)
+  // Implemented in skia/fx_skia_device.cpp
   bool AttachSkiaImpl(RetainPtr<CFX_DIBitmap> pBitmap,
                       bool bRgbByteOrder,
                       RetainPtr<CFX_DIBitmap> pBackdropBitmap,
                       bool bGroupKnockout);
 
+  // Implemented in skia/fx_skia_device.cpp
   bool CreateSkia(int width,
                   int height,
                   FXDIB_Format format,
