@@ -12,6 +12,7 @@
 #include "core/fpdfdoc/cpvt_variabletext.h"
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fxcrt/check.h"
+#include "core/fxcrt/fx_bidi.h"
 #include "core/fxcrt/stl_util.h"
 
 namespace {
@@ -716,14 +717,39 @@ CPVT_FloatRect CPVT_Section::OutputLines(const CPVT_FloatRect& rect) const {
       fPosY += pLine->line_info_.fLineAscent;
       pLine->line_info_.fLineX = fPosX - fMinX;
       pLine->line_info_.fLineY = fPosY - fMinY;
+      WideString line_str;
       for (int32_t w = pLine->line_info_.nBeginWordIndex;
            w <= pLine->line_info_.nEndWordIndex; w++) {
         if (fxcrt::IndexInBounds(word_array_, w)) {
-          CPVT_WordInfo* pWord = word_array_[w].get();
-          pWord->fWordX = fPosX - fMinX;
-          pWord->fWordY = fPosY - fMinY;
+          line_str += word_array_[w]->Word;
+        }
+      }
 
-          fPosX += vt_->GetWordWidth(*pWord);
+      CFX_BidiString bidi(line_str);
+      const bool is_overall_direction_right =
+          bidi.OverallDirection() == CFX_BidiChar::Direction::kRight;
+
+      for (const auto& segment : bidi) {
+        bool is_rtl =
+            (segment.direction == CFX_BidiChar::Direction::kRight ||
+             (segment.direction == CFX_BidiChar::Direction::kNeutral &&
+              is_overall_direction_right));
+
+        int32_t start =
+            is_rtl ? segment.start + segment.count - 1 : segment.start;
+        int32_t end =
+            is_rtl ? segment.start - 1 : segment.start + segment.count;
+        int32_t step = is_rtl ? -1 : 1;
+
+        for (int32_t i = start; i != end; i += step) {
+          int32_t w = pLine->line_info_.nBeginWordIndex + i;
+          if (fxcrt::IndexInBounds(word_array_, w)) {
+            CPVT_WordInfo* word_info = word_array_[w].get();
+            word_info->fWordX = fPosX - fMinX;
+            word_info->fWordY = fPosY - fMinY;
+            word_info->is_rtl = is_rtl;
+            fPosX += vt_->GetWordWidth(*word_info);
+          }
         }
       }
       fPosY -= pLine->line_info_.fLineDescent;
