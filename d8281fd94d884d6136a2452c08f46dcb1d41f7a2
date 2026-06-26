@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "62572644_d30a4a57",
+        "filename": "core/fxge/win32/ctext_only_printer_driver.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T22:19:05Z",
+      "side": 1,
+      "message": "meh.  This is more obviously a stub this way ...",
+      "parentUuid": "dd6101de_a45902e0",
+      "range": {
+        "startLine": 89,
+        "startChar": 23,
+        "endLine": 89,
+        "endChar": 39
+      },
+      "revId": "d8281fd94d884d6136a2452c08f46dcb1d41f7a2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b883c396_f4ff8137",
         "filename": "core/fxge/win32/ctext_only_printer_driver.h",
         "patchSetId": 5
