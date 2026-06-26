@@ -1,6 +1,75 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad66466a_9947f2e9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:29:48Z",
+      "side": 1,
+      "message": "super-nit: comma before and",
+      "range": {
+        "startLine": 15,
+        "startChar": 20,
+        "endLine": 15,
+        "endChar": 23
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff1ee331_0d152745",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:29:48Z",
+      "side": 1,
+      "message": "nit: might just say global boolean and omit name as that level of detail not strictly required.",
+      "range": {
+        "startLine": 14,
+        "startChar": 57,
+        "endLine": 15,
+        "endChar": 20
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73310cea_e5ac74cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:29:48Z",
+      "side": 1,
+      "message": "nit: this last part isn\u0027t needed.",
+      "range": {
+        "startLine": 16,
+        "startChar": 59,
+        "endLine": 17,
+        "endChar": 24
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "b111ab8e_50c8f7f1",
@@ -14,6 +83,23 @@
       "writtenOn": "2026-06-26T05:38:44Z",
       "side": 1,
       "message": "Slightly after we land this, we need an update to pdfium_test so that people can enable Brotli for testing. Working on it.",
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a24f2522_df158ffa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 34
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:29:48Z",
+      "side": 1,
+      "message": "Maybe just some suggestions to tighten up the commit message otherwise great.",
       "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
