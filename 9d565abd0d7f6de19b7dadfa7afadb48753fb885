@@ -47,6 +47,54 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "101b85f2_b1c7cc11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-26T16:40:33Z",
+      "side": 1,
+      "message": "Mb, forgot grammar 2 weeks after the SAT 😊",
+      "parentUuid": "ad66466a_9947f2e9",
+      "range": {
+        "startLine": 15,
+        "startChar": 20,
+        "endLine": 15,
+        "endChar": 23
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2654bba5_bf6597cc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-26T16:40:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ff1ee331_0d152745",
+      "range": {
+        "startLine": 14,
+        "startChar": 57,
+        "endLine": 15,
+        "endChar": 20
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "73310cea_e5ac74cd",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-06-26T16:29:48Z",
       "side": 1,
       "message": "nit: this last part isn\u0027t needed.",
+      "range": {
+        "startLine": 16,
+        "startChar": 59,
+        "endLine": 17,
+        "endChar": 24
+      },
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1be948bf_c983bf16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 34
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-26T16:40:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "73310cea_e5ac74cd",
       "range": {
         "startLine": 16,
         "startChar": 59,
