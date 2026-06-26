@@ -1727,4 +1727,49 @@ bool CFX_RenderDevice::InitWithWindowsDevice(
   SetDeviceDriver(std::move(driver));
   return true;
 }
+
+// static
+std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForWindowsDC(
+    HDC hDC,
+    CFX_PSFontTracker* ps_font_tracker) {
+  auto device = std::make_unique<CFX_RenderDevice>();
+  if (!device->InitWithWindowsDevice(hDC, ps_font_tracker)) {
+    return nullptr;
+  }
+  return device;
+}
+#endif
+
+// static
+std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForBitmap(
+    RetainPtr<CFX_DIBitmap> bitmap) {
+  auto device = std::make_unique<CFX_RenderDevice>();
+  if (!device->Attach(std::move(bitmap))) {
+    return nullptr;
+  }
+  return device;
+}
+
+// static
+std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForNewBitmap(
+    int width,
+    int height,
+    FXDIB_Format format) {
+  auto device = std::make_unique<CFX_RenderDevice>();
+  if (!device->Create(width, height, format)) {
+    return nullptr;
+  }
+  return device;
+}
+
+#if defined(PDF_USE_SKIA)
+// static
+std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForSkiaCanvas(
+    SkCanvas& canvas) {
+  auto device = std::make_unique<CFX_RenderDevice>();
+  if (!device->AttachCanvas(canvas)) {
+    return nullptr;
+  }
+  return device;
+}
 #endif
