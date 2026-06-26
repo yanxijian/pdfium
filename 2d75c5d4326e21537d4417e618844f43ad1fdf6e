@@ -50,6 +50,107 @@
       ],
       "revId": "2d75c5d4326e21537d4417e618844f43ad1fdf6e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35d75162_63c4195a",
+        "filename": "testing/pdfium_test.cc",
+        "patchSetId": 5
+      },
+      "lineNbr": 1963,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:23:32Z",
+      "side": 1,
+      "message": "nit: there\u0027s probably also another follow-up CL for eager folks to alphabetize these flags, even at the cost of duplicate ifdefs.",
+      "range": {
+        "startLine": 1863,
+        "startChar": 1,
+        "endLine": 1963,
+        "endChar": 0
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "a63a1eb0_b057f2b4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1863,
+                "startChar": 0,
+                "endLine": 1877,
+                "endChar": 0
+              },
+              "replacement": "    \"  --annot                - write annotation info \u003cpdf-name\u003e.\u003cpage-number\u003e.annot.txt\\n\"\n#ifdef V8_USE_EXTERNAL_STARTUP_DATA\n    \"  --bin-dir\u003d\u003cpath\u003e       - override path to v8 external data\\n\"\n#endif  // V8_USE_EXTERNAL_STARTUP_DATA\n#ifdef ENABLE_CALLGRIND\n    \"  --callgrind-delim      - delimit interesting section when using \"\n    \"callgrind\\n\"\n#endif\n    \"  --croscore-font-names  - use Croscore font names\\n\"\n#ifdef PDF_ENABLE_V8\n    \"  --disable-javascript   - do not execute JS in PDF files\\n\"\n#ifdef PDF_ENABLE_XFA\n    \"  --disable-xfa          - do not process XFA forms\\n\"\n#endif  // PDF_ENABLE_XFA\n#endif  // PDF_ENABLE_V8\n#ifdef PDF_ENABLE_BROTLI\n    \"  --enable-brotli        - Enable support for the experimental PDF 2.0 \"\n    \"/BrotliDecode filter.\\n\"\n#endif  // PDF_ENABLE_BROTLI\n"
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1878,
+                "startChar": 0,
+                "endLine": 1879,
+                "endChar": 0
+              },
+              "replacement": "    \"  --font-dir\u003d\u003cpath\u003e      - override path to external fonts\\n\"\n    \"  --forced-color         - render in forced color mode\\n\"\n#if defined(PDF_ENABLE_SKIA)\n    \"  --fontations           - Use fontations back-end library\\n\"\n#endif  // defined(PDF_ENABLE_SKIA)\n"
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1880,
+                "startChar": 0,
+                "endLine": 1882,
+                "endChar": 0
+              },
+              "replacement": "    \"  --grayscale            - render grayscale output\\n\"\n#ifdef PDF_ENABLE_V8\n    \"  --js-flags\u003d\u003cflags\u003e     - additional flags to pass to V8\\n\"\n#endif  // PDF_ENABLE_V8\n    \"  --lcd-text             - render text optimized for LCD displays\\n\"\n    \"  --limit-cache          - render limiting image cache size\\n\"\n    \"  --md5                  - write output image paths and their md5 hashes to stdout.\\n\"\n    \"  --mem-document         - load document with FPDF_LoadMemDocument()\\n\"\n    \"  --no-nativetext        - render without using the native text output\\n\"\n"
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "    \"  --no-smoothtext        - render disabling text anti-aliasing\\n\"\n#if defined(__APPLE__) || (defined(__linux__) \u0026\u0026 !defined(__ANDROID__))\n    \"  --no-system-fonts      - do not use system fonts, overrides --font-dir\\n\"\n#endif\n    \"  --pages\u003d\u003cnumber\u003e(-\u003cnumber\u003e) - only render the given 0-based page(s)\\n\"\n    \"  --password\u003d\u003csecret\u003e    - password to decrypt the PDF with\\n\"\n    \"  --png                  - write page images \u003cpdf-name\u003e.\u003cpage-number\u003e.png\\n\"\n    \"  --ppm                  - write page images \u003cpdf-name\u003e.\u003cpage-number\u003e.ppm\\n\"\n    \"  --printing             - render as if for printing\\n\"\n    \"  --render-oneshot       - render image without using progressive \"\n    \"renderer\\n\"\n#if defined(PDF_ENABLE_SKIA)\n    \"  --render-premultiplied - render image using premultiplied alpha when \"\n    \"the renderer is Skia\\n\"\n#endif  // defined(PDF_ENABLE_SKIA)\n    \"  --render-repeats\u003d\u003cn\u003e   - render PDF n times; useful for benchmarking\\n\"\n"
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1898,
+                "startChar": 0,
+                "endLine": 1899,
+                "endChar": 0
+              },
+              "replacement": "    \"  --scale\u003d\u003cnumber\u003e       - scale output size by number (e.g. 0.5)\\n\"\n    \"  --send-events          - send input described by .evt file\\n\"\n    \"  --show-config          - print build options and exit\\n\"\n    \"  --show-metadata        - print the file metadata\\n\"\n    \"  --show-pageinfo        - print information about pages\\n\"\n    \"  --show-structure       - print the structure elements from the \"\n    \"document\\n\"\n#ifdef PDF_ENABLE_SKIA\n    \"  --skp                  - write page images \u003cpdf-name\u003e.\u003cpage-number\u003e.skp\\n\"\n#endif  // PDF_ENABLE_SKIA\n    \"  --time\u003d\u003cnumber\u003e        - Seconds since the epoch to set system time.\\n\"\n    \"  --txt                  - write page text in UTF32-LE \u003cpdf-name\u003e.\u003cpage-number\u003e.txt\\n\"\n#ifdef _WIN32\n    \"  --bmp                  - write page images \u003cpdf-name\u003e.\u003cpage-number\u003e.bmp\\n\"\n    \"  --emf                  - write page meta files \u003cpdf-name\u003e.\u003cpage-number\u003e.emf\\n\"\n    \"  --ps2                  - write page raw PostScript (Lvl 2) \"\n    \"\u003cpdf-name\u003e.\u003cpage-number\u003e.ps\\n\"\n    \"  --ps3                  - write page raw PostScript (Lvl 3) \"\n    \"\u003cpdf-name\u003e.\u003cpage-number\u003e.ps\\n\"\n    \"  --ps3-type42           - write page raw PostScript (Lvl 3 with Type 42 fonts) \"\n    \"\u003cpdf-name\u003e.\u003cpage-number\u003e.ps\\n\"\n#endif\n#if defined(PDF_ENABLE_SKIA) \u0026\u0026 defined(_WIN32)\n    \"  --xps                  - write page images \u003cpdf-name\u003e.\u003cpage-number\u003e.xps\\n\"\n#endif\n"
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1905,
+                "startChar": 0,
+                "endLine": 1908,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "testing/pdfium_test.cc",
+              "range": {
+                "startLine": 1915,
+                "startChar": 0,
+                "endLine": 1962,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "2d75c5d4326e21537d4417e618844f43ad1fdf6e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
