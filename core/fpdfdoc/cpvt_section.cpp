@@ -8,10 +8,12 @@
 
 #include <algorithm>
 #include <array>
+#include <memory>
 
 #include "core/fpdfdoc/cpvt_variabletext.h"
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fxcrt/check.h"
+#include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/stl_util.h"
 
 namespace {
@@ -714,15 +716,12 @@ CPVT_FloatRect CPVT_Section::OutputLines(const CPVT_FloatRect& rect) const {
     fPosY += line->line_info_.fLineAscent;
     line->line_info_.fLineX = fPosX - fMinX;
     line->line_info_.fLineY = fPosY - fMinY;
-    for (int32_t w = line->line_info_.nBeginWordIndex;
-         w <= line->line_info_.nEndWordIndex; w++) {
-      if (fxcrt::IndexInBounds(word_array_, w)) {
-        CPVT_WordInfo* pWord = word_array_[w].get();
-        pWord->fWordX = fPosX - fMinX;
-        pWord->fWordY = fPosY - fMinY;
-
-        fPosX += vt_->GetWordWidth(*pWord);
-      }
+    pdfium::span<const std::unique_ptr<CPVT_WordInfo>> words = GetWordRangeSpan(
+        line->line_info_.nBeginWordIndex, line->line_info_.nEndWordIndex + 1);
+    for (const std::unique_ptr<CPVT_WordInfo>& word : words) {
+      word->fWordX = fPosX - fMinX;
+      word->fWordY = fPosY - fMinY;
+      fPosX += vt_->GetWordWidth(*word);
     }
     fPosY -= line->line_info_.fLineDescent;
   }
@@ -756,6 +755,15 @@ CPVT_Section::WordRangeIterators CPVT_Section::GetWordRangeIterators(
     return {word_array_.end(), word_array_.end()};
   }
   return {word_array_.begin() + begin_index, word_array_.begin() + end_index};
+}
+
+pdfium::span<const std::unique_ptr<CPVT_WordInfo>>
+CPVT_Section::GetWordRangeSpan(int32_t begin_index, int32_t end_index) const {
+  WordRangeIterators range = GetWordRangeIterators(begin_index, end_index);
+  // SAFETY: GetWordRangeIterators() above returns valid iterators or
+  // `word_array_.end()`.
+  return UNSAFE_BUFFERS(pdfium::span<const std::unique_ptr<CPVT_WordInfo>>(
+      std::to_address(range.begin), std::to_address(range.end)));
 }
 
 void CPVT_Section::ClearWords(const CPVT_WordRange& PlaceRange) {
