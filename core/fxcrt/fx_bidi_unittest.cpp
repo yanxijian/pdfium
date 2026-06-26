@@ -110,6 +110,8 @@ TEST(fxcrt, BidiCharLeftLeftWeakRight) {
   EXPECT_EQ(3u, info.start);
   EXPECT_EQ(4u, info.count);
 
+  // Note: GetSegmentInfo() only returns segments that are finalized,
+  // we need to call EndChar() to finalize the last segment.
   EXPECT_TRUE(bidi.EndChar());
   info = bidi.GetSegmentInfo();
   EXPECT_EQ(CFX_BidiChar::Direction::kRight, info.direction);
