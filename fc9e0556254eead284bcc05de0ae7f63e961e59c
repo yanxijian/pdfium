@@ -1,0 +1,147 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c08c5b8d_4c4428d2",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 760,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:45:28Z",
+      "side": 1,
+      "message": "I suppose we could clamp end to size, and then clamp begin to end and avoid the branch?",
+      "range": {
+        "startLine": 756,
+        "startChar": 1,
+        "endLine": 760,
+        "endChar": 3
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9ff2cb8e_39a12f5e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfdoc/cpvt_section.cpp",
+              "range": {
+                "startLine": 756,
+                "startChar": 0,
+                "endLine": 759,
+                "endChar": 0
+              },
+              "replacement": "  int32_t clamped_begin \u003d std::clamp(begin_index, 0, size);\n  int32_t clamped_end \u003d std::clamp(end_index, 0, size);\n  if (clamped_begin \u003e clamped_end) {\n"
+            },
+            {
+              "path": "core/fpdfdoc/cpvt_section.cpp",
+              "range": {
+                "startLine": 761,
+                "startChar": 0,
+                "endLine": 762,
+                "endChar": 0
+              },
+              "replacement": "  return {word_array_.begin() + clamped_begin,\n          word_array_.begin() + clamped_end};\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fc9e0556254eead284bcc05de0ae7f63e961e59c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "237fdf3e_76a66db1",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:45:28Z",
+      "side": 1,
+      "message": "smells like unsafe buffers.  foo, vector iterator arithmetic not caught.",
+      "range": {
+        "startLine": 761,
+        "startChar": 8,
+        "endLine": 761,
+        "endChar": 77
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "e5e20b21_f69a005d",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfdoc/cpvt_section.cpp",
+              "range": {
+                "startLine": 761,
+                "startChar": 0,
+                "endLine": 762,
+                "endChar": 0
+              },
+              "replacement": "  return {word_array_.begin() + begin_index,\n          word_array_.begin() + end_index};\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fc9e0556254eead284bcc05de0ae7f63e961e59c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cc19543_5c3dc63d",
+        "filename": "core/fpdfdoc/cpvt_section.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:45:28Z",
+      "side": 1,
+      "message": "nit: maybe WordRangeIteratorPair",
+      "range": {
+        "startLine": 76,
+        "startChar": 26,
+        "endLine": 76,
+        "endChar": 27
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "a88bfe2b_587df7b2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfdoc/cpvt_section.h",
+              "range": {
+                "startLine": 76,
+                "startChar": 0,
+                "endLine": 77,
+                "endChar": 0
+              },
+              "replacement": "  struct WordRange {\n"
+            },
+            {
+              "path": "core/fpdfdoc/cpvt_section.h",
+              "range": {
+                "startLine": 96,
+                "startChar": 0,
+                "endLine": 98,
+                "endChar": 0
+              },
+              "replacement": "  WordRange GetWordRangeIterators(int32_t begin_index,\n                                  int32_t end_index) const;\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fc9e0556254eead284bcc05de0ae7f63e961e59c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
