@@ -71,7 +71,11 @@
 
 #if BUILDFLAG(IS_WIN)
 #include "core/fpdfapi/render/cpdf_progressiverenderer.h"
-#include "core/fpdfapi/render/cpdf_windowsrenderdevice.h"
+#include "core/fxcodec/basic/basicmodule.h"
+#include "core/fxcodec/fax/faxmodule.h"
+#include "core/fxcodec/flate/flatemodule.h"
+#include "core/fxcodec/jpeg/jpegmodule.h"
+#include "core/fxge/cfx_windowsrenderdevice.h"
 #include "public/fpdf_edit.h"
 
 #if defined(PDF_USE_SKIA)
@@ -232,6 +236,10 @@ FPDF_InitLibraryWithConfig(const FPDF_LIBRARY_CONFIG* config) {
 
   CFX_GEModule::Create(config ? config->m_pUserFontPaths : nullptr,
                        renderer_type, backend);
+
+#if BUILDFLAG(IS_WIN)
+  CFX_GEModule::Get()->SetEncoderIface(&kEncoderIface);
+#endif
 
   pdfium::InitializePageModule();
 
@@ -509,6 +517,10 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_GetPageBoundingBox(FPDF_PAGE page,
 #if BUILDFLAG(IS_WIN)
 namespace {
 
+constexpr EncoderIface kEncoderIface = {
+    BasicModule::A85Encode, FaxModule::FaxEncode, FlateModule::Encode,
+    JpegModule::JpegEncode, BasicModule::RunLengthEncode};
+
 constexpr float kEpsilonSize = 0.01f;
 
 bool IsPageTooSmall(const CPDF_Page* page) {
@@ -627,7 +639,7 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_RenderPage(HDC dc,
   const bool bHasMask = pPage->HasImageMask() && !bNewBitmap;
   auto* render_data = CPDF_DocRenderData::FromDocument(pPage->GetDocument());
   if (!bNewBitmap && !bHasMask) {
-    context->device_ = std::make_unique<CPDF_WindowsRenderDevice>(
+    context->device_ = std::make_unique<CFX_WindowsRenderDevice>(
         dc, render_data->GetPSFontTracker());
     CPDFSDK_RenderPageWithContext(context, pPage, start_x, start_y, size_x,
                                   size_y, rotate, flags,
@@ -660,7 +672,7 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_RenderPage(HDC dc,
                                 /*pause=*/nullptr);
 
   if (!bHasMask) {
-    CPDF_WindowsRenderDevice win_dc(dc, render_data->GetPSFontTracker());
+    CFX_WindowsRenderDevice win_dc(dc, render_data->GetPSFontTracker());
     bool bitsStretched = false;
     if (win_dc.GetDeviceType() == DeviceType::kPrinter) {
       auto dest_bitmap = pdfium::MakeRetain<CFX_DIBitmap>();
@@ -697,7 +709,7 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_RenderPage(HDC dc,
   owned_context = std::make_unique<CPDF_PageRenderContext>();
   context = owned_context.get();
   pPage->SetRenderContext(std::move(owned_context));
-  context->device_ = std::make_unique<CPDF_WindowsRenderDevice>(
+  context->device_ = std::make_unique<CFX_WindowsRenderDevice>(
       dc, render_data->GetPSFontTracker());
   context->options_ = std::make_unique<CPDF_RenderOptions>();
   context->options_->GetOptions().bBreakForMasks = true;
