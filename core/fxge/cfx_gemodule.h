@@ -21,6 +21,10 @@
 
 class SystemFontInfoIface;
 
+#if BUILDFLAG(IS_WIN)
+struct EncoderIface;
+#endif
+
 class CFX_GEModule {
  public:
   class PlatformIface {
@@ -60,6 +64,13 @@ class CFX_GEModule {
   PlatformIface* GetPlatform() const { return platform_.get(); }
   const char** GetUserFontPaths() const { return user_font_paths_; }
 
+#if BUILDFLAG(IS_WIN)
+  void SetEncoderIface(const EncoderIface* encoders) {
+    encoder_iface_ = encoders;
+  }
+  const EncoderIface* GetEncoderIface() const { return encoder_iface_; }
+#endif
+
 #if defined(PDF_USE_SKIA)
   // Runtime check to see if Skia is the renderer variant in use.
   bool UseSkiaRenderer() const { return renderer_type_ == RendererType::kSkia; }
@@ -78,6 +89,10 @@ class CFX_GEModule {
 
   // Exclude because taken from public API.
   UNOWNED_PTR_EXCLUSION const char** const user_font_paths_;
+
+#if BUILDFLAG(IS_WIN)
+  const EncoderIface* encoder_iface_ = nullptr;
+#endif
 };
 
 #endif  // CORE_FXGE_CFX_GEMODULE_H_
