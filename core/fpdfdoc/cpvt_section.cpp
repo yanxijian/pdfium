@@ -733,28 +733,32 @@ CPVT_FloatRect CPVT_Section::OutputLines(const CPVT_FloatRect& rect) const {
 }
 
 void CPVT_Section::ClearLeftWords(int32_t word_index) {
-  for (int32_t i = word_index; i >= 0; i--) {
-    if (fxcrt::IndexInBounds(word_array_, i)) {
-      word_array_.erase(word_array_.begin() + i);
-    }
-  }
+  WordRangeIterators range = GetWordRangeIterators(0, word_index + 1);
+  word_array_.erase(range.begin, range.end);
 }
 
 void CPVT_Section::ClearRightWords(int32_t word_index) {
-  int32_t sz = fxcrt::CollectionSize<int32_t>(word_array_);
-  for (int32_t i = sz - 1; i > word_index; i--) {
-    if (fxcrt::IndexInBounds(word_array_, i)) {
-      word_array_.erase(word_array_.begin() + i);
-    }
-  }
+  WordRangeIterators range =
+      GetWordRangeIterators(word_index + 1, GetWordArraySize());
+  word_array_.erase(range.begin, range.end);
 }
 
 void CPVT_Section::ClearMidWords(int32_t begin_index, int32_t end_index) {
-  for (int32_t i = end_index; i > begin_index; i--) {
-    if (fxcrt::IndexInBounds(word_array_, i)) {
-      word_array_.erase(word_array_.begin() + i);
-    }
+  WordRangeIterators range =
+      GetWordRangeIterators(begin_index + 1, end_index + 1);
+  word_array_.erase(range.begin, range.end);
+}
+
+CPVT_Section::WordRangeIterators CPVT_Section::GetWordRangeIterators(
+    int32_t begin_index,
+    int32_t end_index) const {
+  int32_t size = fxcrt::CollectionSize<int32_t>(word_array_);
+  begin_index = std::clamp(begin_index, 0, size);
+  end_index = std::clamp(end_index, 0, size);
+  if (begin_index > end_index) {
+    return {word_array_.end(), word_array_.end()};
   }
+  return {word_array_.begin() + begin_index, word_array_.begin() + end_index};
 }
 
 void CPVT_Section::ClearWords(const CPVT_WordRange& PlaceRange) {
