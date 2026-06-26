@@ -1,0 +1,68 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6046ff4e_6a436f22",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:48:00Z",
+      "side": 1,
+      "message": "nit: works",
+      "range": {
+        "startLine": 9,
+        "startChar": 50,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "6ab13ff2f85a54f7cc122786b9db832ad83a3a0d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b58887a0_5436990c",
+        "filename": "core/fpdfdoc/BUILD.gn",
+        "patchSetId": 5
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T16:48:00Z",
+      "side": 1,
+      "message": "maybe cpvt_stub_provider for entropy.",
+      "range": {
+        "startLine": 114,
+        "startChar": 5,
+        "endLine": 114,
+        "endChar": 18
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b8ea5530_e66ab604",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfdoc/BUILD.gn",
+              "range": {
+                "startLine": 114,
+                "startChar": 0,
+                "endLine": 116,
+                "endChar": 0
+              },
+              "replacement": "    \"cpvt_stub_provider.cpp\",\n    \"cpvt_stub_provider.h\",\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6ab13ff2f85a54f7cc122786b9db832ad83a3a0d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
