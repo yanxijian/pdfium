@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e97284b_d256b6f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-26T17:42:04Z",
+      "side": 1,
+      "message": "Ping (also is someone rolling deps right now?)",
+      "revId": "daa7ba802abaadbc4f0cb0c62dc07b0201bbe313",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
