@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d74ec1a_1c2247e2",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 41
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T21:45:36Z",
+      "side": 1,
+      "message": "Let\u0027s change the parameter to `CPVT_WordInfo\u0026` and adjust the function and callers to work with that. `const std::unique_ptr\u003cCPVT_WordInfo\u003e\u0026` reads weird because it has `const` yet is modifiable.",
+      "range": {
+        "startLine": 734,
+        "startChar": 29,
+        "endLine": 734,
+        "endChar": 66
+      },
+      "revId": "f123c0dc6375ce982efd5ba6c5b7e9e8154499dd",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
