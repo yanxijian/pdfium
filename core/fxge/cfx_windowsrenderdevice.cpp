@@ -8,6 +8,8 @@
 
 #include <memory>
 
+#include "core/fxge/cfx_gemodule.h"
+
 #include "core/fxge/renderdevicedriver_iface.h"
 #include "core/fxge/win32/cgdi_display_driver.h"
 #include "core/fxge/win32/cgdi_printer_driver.h"
@@ -49,9 +51,9 @@ WindowsPrintMode g_pdfium_print_mode = WindowsPrintMode::kEmf;
 
 CFX_WindowsRenderDevice::CFX_WindowsRenderDevice(
     HDC hDC,
-    CFX_PSFontTracker* ps_font_tracker,
-    const EncoderIface* encoder_iface) {
-  SetDeviceDriver(CreateDriver(hDC, ps_font_tracker, encoder_iface));
+    CFX_PSFontTracker* ps_font_tracker) {
+  SetDeviceDriver(CreateDriver(hDC, ps_font_tracker,
+                               CFX_GEModule::Get()->GetEncoderIface()));
 }
 
 CFX_WindowsRenderDevice::~CFX_WindowsRenderDevice() = default;
