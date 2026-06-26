@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a101039_b757b61f",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:34:48Z",
+      "side": 0,
+      "message": "Still in use?",
+      "revId": "5d917ded82ed0ff828203719817d6ceaf8910965",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1878e4e_a7dcaaba",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:34:48Z",
+      "side": 0,
+      "message": "Avoid random newline changes. If desired, do this in the earlier cleanup CL that touched this file.",
+      "revId": "5d917ded82ed0ff828203719817d6ceaf8910965",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
