@@ -16,6 +16,11 @@
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/win32/cwin32_platform.h"
 
+// static
+std::unique_ptr<CGdiDisplayDriver> CGdiDisplayDriver::Create(HDC hDC) {
+  return std::make_unique<CGdiDisplayDriver>(hDC);
+}
+
 CGdiDisplayDriver::CGdiDisplayDriver(HDC hDC)
     : CGdiDeviceDriver(hDC, DeviceType::kDisplay) {
   auto* pPlatform =

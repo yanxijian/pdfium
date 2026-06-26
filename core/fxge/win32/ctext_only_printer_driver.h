@@ -14,6 +14,8 @@
 
 class CTextOnlyPrinterDriver final : public RenderDeviceDriverIface {
  public:
+  static std::unique_ptr<CTextOnlyPrinterDriver> Create(HDC hDC);
+
   explicit CTextOnlyPrinterDriver(HDC hDC);
   ~CTextOnlyPrinterDriver() override;
 

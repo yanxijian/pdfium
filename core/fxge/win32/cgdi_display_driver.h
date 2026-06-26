@@ -21,6 +21,8 @@ struct FX_RECT;
 
 class CGdiDisplayDriver final : public CGdiDeviceDriver {
  public:
+  static std::unique_ptr<CGdiDisplayDriver> Create(HDC hDC);
+
   explicit CGdiDisplayDriver(HDC hDC);
   ~CGdiDisplayDriver() override;
 

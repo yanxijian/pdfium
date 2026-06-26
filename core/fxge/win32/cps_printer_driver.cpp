@@ -45,6 +45,16 @@ CFX_PSRenderer::RenderingLevel RenderingLevelFromWindowsPrintMode(
 
 }  // namespace
 
+// static
+std::unique_ptr<CPSPrinterDriver> CPSPrinterDriver::Create(
+    HDC hDC,
+    WindowsPrintMode mode,
+    CFX_PSFontTracker* ps_font_tracker,
+    const EncoderIface* encoder_iface) {
+  return std::make_unique<CPSPrinterDriver>(hDC, mode, ps_font_tracker,
+                                            encoder_iface);
+}
+
 CPSPrinterDriver::CPSPrinterDriver(HDC hDC,
                                    WindowsPrintMode mode,
                                    CFX_PSFontTracker* ps_font_tracker,

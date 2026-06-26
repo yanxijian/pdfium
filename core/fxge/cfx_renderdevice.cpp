@@ -1690,12 +1690,12 @@ std::unique_ptr<RenderDeviceDriverIface> CreateDriver(
                     device_type == DT_RASPRINTER || device_type == DT_PLOTTER;
 
   if (!is_printer) {
-    return std::make_unique<CGdiDisplayDriver>(hDC);
+    return CGdiDisplayDriver::Create(hDC);
   }
 
   WindowsPrintMode print_mode = CFX_GEModule::Get()->GetPrintMode();
   if (print_mode == WindowsPrintMode::kTextOnly) {
-    return std::make_unique<CTextOnlyPrinterDriver>(hDC);
+    return CTextOnlyPrinterDriver::Create(hDC);
   }
 
   if (print_mode == WindowsPrintMode::kPostScript2 ||
@@ -1704,11 +1704,11 @@ std::unique_ptr<RenderDeviceDriverIface> CreateDriver(
       print_mode == WindowsPrintMode::kPostScript2PassThrough ||
       print_mode == WindowsPrintMode::kPostScript3PassThrough ||
       print_mode == WindowsPrintMode::kPostScript3Type42PassThrough) {
-    return std::make_unique<CPSPrinterDriver>(hDC, print_mode, ps_font_tracker,
-                                              encoder_iface);
+    return CPSPrinterDriver::Create(hDC, print_mode, ps_font_tracker,
+                                    encoder_iface);
   }
 
-  return std::make_unique<CGdiPrinterDriver>(hDC);
+  return CGdiPrinterDriver::Create(hDC);
 }
 
 }  // namespace

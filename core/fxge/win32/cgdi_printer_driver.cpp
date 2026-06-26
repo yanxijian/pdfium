@@ -24,6 +24,11 @@
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/text_char_pos.h"
 
+// static
+std::unique_ptr<CGdiPrinterDriver> CGdiPrinterDriver::Create(HDC hDC) {
+  return std::make_unique<CGdiPrinterDriver>(hDC);
+}
+
 CGdiPrinterDriver::CGdiPrinterDriver(HDC hDC)
     : CGdiDeviceDriver(hDC, DeviceType::kPrinter),
       horz_size_(::GetDeviceCaps(dc_handle_, HORZSIZE)),

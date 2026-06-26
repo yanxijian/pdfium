@@ -20,6 +20,12 @@ class CFX_PSFontTracker;
 
 class CPSPrinterDriver final : public RenderDeviceDriverIface {
  public:
+  static std::unique_ptr<CPSPrinterDriver> Create(
+      HDC hDC,
+      WindowsPrintMode mode,
+      CFX_PSFontTracker* ps_font_tracker,
+      const EncoderIface* encoder_iface);
+
   CPSPrinterDriver(HDC hDC,
                    WindowsPrintMode mode,
                    CFX_PSFontTracker* ps_font_tracker,

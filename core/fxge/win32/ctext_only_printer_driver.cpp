@@ -19,6 +19,12 @@
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/text_char_pos.h"
 
+// static
+std::unique_ptr<CTextOnlyPrinterDriver> CTextOnlyPrinterDriver::Create(
+    HDC hDC) {
+  return std::make_unique<CTextOnlyPrinterDriver>(hDC);
+}
+
 CTextOnlyPrinterDriver::CTextOnlyPrinterDriver(HDC hDC)
     : dc_handle_(hDC),
       width_(INT_MAX),

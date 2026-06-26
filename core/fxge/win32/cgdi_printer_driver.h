@@ -15,6 +15,8 @@
 
 class CGdiPrinterDriver final : public CGdiDeviceDriver {
  public:
+  static std::unique_ptr<CGdiPrinterDriver> Create(HDC hDC);
+
   explicit CGdiPrinterDriver(HDC hDC);
   ~CGdiPrinterDriver() override;
 

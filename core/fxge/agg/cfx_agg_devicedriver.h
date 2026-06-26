@@ -32,6 +32,12 @@ class rasterizer_scanline_aa;
 
 class CFX_AggDeviceDriver final : public RenderDeviceDriverIface {
  public:
+  static std::unique_ptr<CFX_AggDeviceDriver> Create(
+      RetainPtr<CFX_DIBitmap> pBitmap,
+      bool bRgbByteOrder,
+      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+      bool bGroupKnockout);
+
   CFX_AggDeviceDriver(RetainPtr<CFX_DIBitmap> pBitmap,
                       bool bRgbByteOrder,
                       RetainPtr<CFX_DIBitmap> pBackdropBitmap,
