@@ -50,6 +50,24 @@
       "message": "Need to run `git cl format` and let it do its thing.",
       "revId": "91a2e16116f998ceb70743a03ec3a6ff3b80d107",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e46d56ef_097bebac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8946
+      },
+      "writtenOn": "2026-06-26T06:27:40Z",
+      "side": 1,
+      "message": "Sorry, this was uploaded from a Chromium checkout and I didn\u0027t realize `git cl format` was being inhibited by `third_party/.clang-format-ignore`. Fixed in patchset 2.",
+      "parentUuid": "934a7d91_87371fa0",
+      "revId": "91a2e16116f998ceb70743a03ec3a6ff3b80d107",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
