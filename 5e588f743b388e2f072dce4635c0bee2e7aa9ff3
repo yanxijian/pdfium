@@ -34,6 +34,24 @@
       "parentUuid": "4bb566b5_984df02d",
       "revId": "5e588f743b388e2f072dce4635c0bee2e7aa9ff3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df439f5a_87d08fc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:28:35Z",
+      "side": 1,
+      "message": "CL description still should mention where this is used to give (future) readers context.",
+      "parentUuid": "64aa9bf8_95a49a8e",
+      "revId": "5e588f743b388e2f072dce4635c0bee2e7aa9ff3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
