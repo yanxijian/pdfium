@@ -5,6 +5,7 @@
 #ifndef CORE_FXGE_WIN32_CTEXT_ONLY_PRINTER_DRIVER_H_
 #define CORE_FXGE_WIN32_CTEXT_ONLY_PRINTER_DRIVER_H_
 
+#include <limits.h>
 #include <stdint.h>
 #include <windows.h>
 
@@ -72,13 +73,13 @@ class CTextOnlyPrinterDriver final : public RenderDeviceDriverIface {
   bool MultiplyAlphaMask(RetainPtr<const CFX_DIBitmap> mask) override;
 
   HDC dc_handle_;
-  const int width_;
-  const int height_;
+  const int width_ = INT_MAX;
+  const int height_ = INT_MAX;
   int bits_per_pixel_;
-  const int horz_size_;
-  const int vert_size_;
-  float origin_y_;
-  bool set_origin_;
+  const int horz_size_ = INT_MAX;
+  const int vert_size_ = INT_MAX;
+  float origin_y_ = 0.0f;
+  bool set_origin_ = false;
 };
 
 #endif  // CORE_FXGE_WIN32_CTEXT_ONLY_PRINTER_DRIVER_H_

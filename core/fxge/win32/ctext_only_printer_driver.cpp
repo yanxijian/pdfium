@@ -4,7 +4,6 @@
 
 #include "core/fxge/win32/ctext_only_printer_driver.h"
 
-#include <limits.h>
 #include <stddef.h>
 
 #include <algorithm>
@@ -28,14 +27,7 @@ std::unique_ptr<CTextOnlyPrinterDriver> CTextOnlyPrinterDriver::Create(
 
 CTextOnlyPrinterDriver::CTextOnlyPrinterDriver(HDC hDC)
     : dc_handle_(hDC),
-      width_(INT_MAX),
-      height_(INT_MAX),
-      horz_size_(INT_MAX),
-      vert_size_(INT_MAX),
-      origin_y_(0.0f),
-      set_origin_(false) {
-  bits_per_pixel_ = ::GetDeviceCaps(dc_handle_, BITSPIXEL);
-}
+      bits_per_pixel_(::GetDeviceCaps(dc_handle_, BITSPIXEL)) {}
 
 CTextOnlyPrinterDriver::~CTextOnlyPrinterDriver() = default;
 
