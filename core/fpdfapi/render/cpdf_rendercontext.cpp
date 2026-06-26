@@ -47,9 +47,11 @@ void CPDF_RenderContext::GetBackgroundToDevice(
 void CPDF_RenderContext::GetBackgroundToBitmap(RetainPtr<CFX_DIBitmap> bitmap,
                                                const CPDF_PageObject* object,
                                                const CFX_Matrix& matrix) {
-  CFX_RenderDevice device;
-  device.Attach(std::move(bitmap));
-  GetBackgroundToDevice(&device, object, /*options=*/nullptr, matrix);
+  auto device = CFX_RenderDevice::CreateForBitmap(std::move(bitmap));
+  if (!device) {
+    return;
+  }
+  GetBackgroundToDevice(device.get(), object, /*options=*/nullptr, matrix);
 }
 #endif
 
