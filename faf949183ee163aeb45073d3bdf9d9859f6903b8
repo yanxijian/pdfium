@@ -120,6 +120,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4637ed8d_cd9c41bb",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:45:08Z",
+      "side": 1,
+      "message": "There\u0027s still a minor difference in how the two files write the same logic that can be avoided.",
+      "parentUuid": "6837cb83_f544f91a",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f66ebc93_24e36c1a",
         "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
         "patchSetId": 10

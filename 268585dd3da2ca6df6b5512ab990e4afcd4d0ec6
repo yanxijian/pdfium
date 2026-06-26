@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "529a36c9_25ab675b",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:45:08Z",
+      "side": 1,
+      "message": "Why does this logic need to change? Since this CL is working on RTL changes, wouldn\u0027t the this LTR mode path just stay the same?",
+      "range": {
+        "startLine": 659,
+        "startChar": 0,
+        "endLine": 660,
+        "endChar": 61
+      },
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dce1e93f_b2831ccd",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:45:08Z",
+      "side": 1,
+      "message": "Should this make sure GetLine() succeeded before continuing?",
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
