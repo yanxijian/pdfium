@@ -23,6 +23,7 @@
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_graphstatedata.h"
 
 class CFX_DIBBase;

@@ -20,7 +20,6 @@
 #include "core/fxcodec/jpeg/jpegmodule.h"
 #include "core/fxge/cfx_gemodule.h"
 #endif
-
 #if BUILDFLAG(IS_WIN)
 namespace {
 
