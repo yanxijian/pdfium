@@ -662,9 +662,14 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_RenderPage(HDC dc,
                                 /*pause=*/nullptr);
 
   if (!bHasMask) {
-    CFX_RenderDevice win_dc(dc, render_data->GetPSFontTracker());
+    std::unique_ptr<CFX_RenderDevice> win_dc =
+        CFX_RenderDevice::CreateForWindowsDC(dc,
+                                             render_data->GetPSFontTracker());
+    if (!win_dc) {
+      return false;
+    }
     bool bitsStretched = false;
-    if (win_dc.GetDeviceType() == DeviceType::kPrinter) {
+    if (win_dc->GetDeviceType() == DeviceType::kPrinter) {
       auto dest_bitmap = pdfium::MakeRetain<CFX_DIBitmap>();
       if (dest_bitmap->Create(size_x, size_y, FXDIB_Format::kBgrx)) {
         std::ranges::fill(dest_bitmap->GetWritableBuffer().first(
@@ -672,12 +677,12 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDF_RenderPage(HDC dc,
                           -1);
         dest_bitmap->CompositeBitmap(0, 0, size_x, size_y, pBitmap, 0, 0,
                                      BlendMode::kNormal);
-        win_dc.StretchDIBits(std::move(dest_bitmap), 0, 0, size_x, size_y);
+        win_dc->StretchDIBits(std::move(dest_bitmap), 0, 0, size_x, size_y);
         bitsStretched = true;
       }
     }
     if (!bitsStretched) {
-      win_dc.SetDIBits(std::move(pBitmap), 0, 0);
+      win_dc->SetDIBits(std::move(pBitmap), 0, 0);
     }
     return true;
   }
@@ -1017,9 +1022,12 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDFBitmap_FillRect(FPDF_BITMAP bitmap,
   // Let CFX_RenderDevice handle the 8-bit case.
   const int bpp = pBitmap->GetBPP();
   if (bpp == 8) {
-    CFX_RenderDevice device;
-    device.Attach(std::move(pBitmap));
-    return device.FillRect(fill_rect, static_cast<uint32_t>(color));
+    std::unique_ptr<CFX_RenderDevice> device =
+        CFX_RenderDevice::CreateForBitmap(std::move(pBitmap));
+    if (!device) {
+      return false;
+    }
+    return device->FillRect(fill_rect, static_cast<uint32_t>(color));
   }
 
   // Handle filling 24/32-bit bitmaps directly without CFX_RenderDevice.
