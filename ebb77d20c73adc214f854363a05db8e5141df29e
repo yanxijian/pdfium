@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a432a95_d60cad8d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 37
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T18:11:53Z",
+      "side": 1,
+      "message": "Mention CPVT_Section::OutputLines() specifically since the class is fairly big.",
+      "range": {
+        "startLine": 9,
+        "startChar": 54,
+        "endLine": 9,
+        "endChar": 66
+      },
+      "revId": "ebb77d20c73adc214f854363a05db8e5141df29e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fcd163a_b2ec6ce6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 37
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T18:11:53Z",
+      "side": 1,
+      "message": "Since this CL already exists in Gerrit, just link to it so readers can see it. https://pdfium-review.googlesource.com/c/150590",
+      "range": {
+        "startLine": 13,
+        "startChar": 15,
+        "endLine": 13,
+        "endChar": 26
+      },
+      "revId": "ebb77d20c73adc214f854363a05db8e5141df29e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
