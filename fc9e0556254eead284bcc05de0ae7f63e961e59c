@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "700f1327_c9130a55",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 701,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T01:47:15Z",
+      "side": 0,
+      "message": "`s/pLine/line.` No other funny business.",
+      "range": {
+        "startLine": 701,
+        "startChar": 26,
+        "endLine": 701,
+        "endChar": 31
+      },
+      "revId": "fc9e0556254eead284bcc05de0ae7f63e961e59c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
