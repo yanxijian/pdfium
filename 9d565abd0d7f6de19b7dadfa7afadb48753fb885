@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b111ab8e_50c8f7f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 34
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-26T05:38:44Z",
+      "side": 1,
+      "message": "Slightly after we land this, we need an update to pdfium_test so that people can enable Brotli for testing. Working on it.",
+      "revId": "9d565abd0d7f6de19b7dadfa7afadb48753fb885",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
