@@ -16,6 +16,24 @@
       "message": "Hang on, let\u0027s not land this yet.",
       "revId": "7fee6f853464826ae6f1f6235237031db193d093",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e23eab48_7b11da01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 42
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T22:26:17Z",
+      "side": 1,
+      "message": "As discussed offline, this CL chain should to be lined up and landed together to minimize the amount of time PDFium has this temporarily RTL text behavior.",
+      "parentUuid": "57c3ffcd_9793dee8",
+      "revId": "7fee6f853464826ae6f1f6235237031db193d093",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
