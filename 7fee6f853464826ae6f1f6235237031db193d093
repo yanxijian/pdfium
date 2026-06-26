@@ -52,6 +52,29 @@
       "parentUuid": "e23eab48_7b11da01",
       "revId": "7fee6f853464826ae6f1f6235237031db193d093",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25683f7c_f344dcbd",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 42
+      },
+      "lineNbr": 742,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T23:29:35Z",
+      "side": 1,
+      "message": "No longer need to cast now, since https://pdfium-review.googlesource.com/c/151032 landed and changed these fields to size_t.",
+      "range": {
+        "startLine": 741,
+        "startChar": 41,
+        "endLine": 742,
+        "endChar": 75
+      },
+      "revId": "7fee6f853464826ae6f1f6235237031db193d093",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
