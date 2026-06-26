@@ -212,6 +212,9 @@ struct Options {
   int first_page = 0;  // First 0-based page number to renderer.
   int last_page = 0;   // Last 0-based page number to renderer.
   time_t time = -1;
+#ifdef PDF_ENABLE_BROTLI
+  bool enable_brotli = false;
+#endif  // PDF_ENABLE_BROTLI
 };
 
 int PageRenderFlagsFromOptions(const Options& options) {
@@ -770,6 +773,10 @@ bool ParseCommandLine(const std::vector<std::string>& args,
         fprintf(stderr, "Invalid --time argument, must be non-negative\n");
         return false;
       }
+#ifdef PDF_ENABLE_BROTLI
+    } else if (cur_arg == "--enable-brotli") {
+      options->enable_brotli = true;
+#endif  // PDF_ENABLE_BROTLI
     } else if (cur_arg.size() >= 2 && cur_arg[0] == '-' && cur_arg[1] == '-') {
       fprintf(stderr, "Unrecognized argument %s\n", cur_arg.c_str());
       return false;
@@ -1660,6 +1667,10 @@ void Processor::ProcessPdf(const std::string& name,
   // |doc| must outlive |form_callbacks.loaded_pages|.
   ScopedFPDFDocument doc;
 
+#ifdef PDF_ENABLE_BROTLI
+  FPDF_SetBrotliDecodeEnabled(options().enable_brotli);
+#endif  // PDF_ENABLE_BROTLI
+
   const char* password =
       options().password.empty() ? nullptr : options().password.c_str();
   bool is_linearized = false;
@@ -1944,6 +1955,10 @@ constexpr char kUsageString[] =
 #endif  // PDF_ENABLE_SKIA
     "  --md5   - write output image paths and their md5 hashes to stdout.\n"
     "  --time=<number> - Seconds since the epoch to set system time.\n"
+#ifdef PDF_ENABLE_BROTLI
+    "  --enable-brotli   - Enable support for the experimental PDF 2.0 "
+    "/BrotliDecode filter.\n"
+#endif  // PDF_ENABLE_BROTLI
     "";
 
 void SetUpErrorHandling() {
