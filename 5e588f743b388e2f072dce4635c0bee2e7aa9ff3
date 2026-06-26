@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bb566b5_984df02d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T18:23:55Z",
+      "side": 1,
+      "message": "Either this CL needs to mention where the new bool will be used, or it should just be combined into the CL that uses it.",
+      "revId": "5e588f743b388e2f072dce4635c0bee2e7aa9ff3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
