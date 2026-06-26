@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a17fd367_cf02e196",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T22:03:48Z",
+      "side": 1,
+      "message": "Agreed.  We delete in the middle, not starting from the front.",
+      "revId": "0789c1166a1a0ef43d7b060ea865a54931b81a81",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
