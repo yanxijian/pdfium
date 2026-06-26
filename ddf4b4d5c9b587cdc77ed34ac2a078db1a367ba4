@@ -89,6 +89,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fd5a8f05_a321436b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T20:19:30Z",
+      "side": 1,
+      "message": "But the current proposed APIs also gives PDFium embedders the ability to call FPDF_SetBrotliDecodeEnabled() at any time. Do they need this ability?",
+      "parentUuid": "76c0a21f_b4d6a15b",
+      "revId": "ddf4b4d5c9b587cdc77ed34ac2a078db1a367ba4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c8d3675d_9e62426d",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 26
