@@ -16,6 +16,24 @@
       "message": "Document this needs to be called after CFX_GEModule::Create() ?",
       "revId": "ca1b0fd3d51fa6fc07e0042cadae82fa8a8e004e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2eced2f0_ccbf656f",
+        "filename": "core/fxcodec/fx_codec.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T21:50:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26edb2b9_961101d9",
+      "revId": "ca1b0fd3d51fa6fc07e0042cadae82fa8a8e004e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
