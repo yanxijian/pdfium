@@ -653,9 +653,11 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
     CPVT_WordPlace place = pIterator->GetAt();
     CPVT_Word word;
     bool has_word = pIterator->GetWord(word);
+    bool is_rtl = has_word && word.is_rtl();
 
-    if (use_continuous_formatting) {
-      if (place.LineCmp(oldplace) != 0) {
+    if (use_continuous_formatting && !is_rtl) {
+      if (sWords.IsEmpty() || place.LineCmp(oldplace) != 0 ||
+          (has_word && word.font_index() != nCurFontIndex)) {
         if (!sWords.IsEmpty()) {
           sEditStream << GetWordRenderString(sWords.AsStringView());
           sWords.clear();
@@ -695,6 +697,11 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
       }
       oldplace = place;
     } else {
+      if (!sWords.IsEmpty()) {
+        sEditStream << GetWordRenderString(sWords.AsStringView());
+        sWords.clear();
+      }
+
       if (has_word) {
         ptNew = CFX_PointF(word.location().x + ptOffset.x,
                            word.location().y + ptOffset.y);
@@ -713,7 +720,19 @@ ByteString GetEditAppStream(CPWL_EditImpl* pEdit,
         sEditStream << GetWordRenderString(
             pEdit->GetPDFWordString(nCurFontIndex, word.word(), SubWord)
                 .AsStringView());
+      } else {
+        CPVT_Line line;
+        pIterator->GetLine(line);
+        ptNew =
+            CFX_PointF(line.ptLine.x + ptOffset.x, line.ptLine.y + ptOffset.y);
+
+        if (ptNew != ptOld) {
+          WritePoint(sEditStream, {ptNew.x - ptOld.x, ptNew.y - ptOld.y})
+              << " " << kMoveTextPositionOperator << "\n";
+          ptOld = ptNew;
+        }
       }
+      oldplace = place;
     }
   }
 
