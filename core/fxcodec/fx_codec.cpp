@@ -6,6 +6,15 @@
 
 #include "core/fxcodec/fx_codec.h"
 
+#include "core/fxge/cfx_gemodule.h"
+
+#if BUILDFLAG(IS_WIN)
+#include "core/fxcodec/basic/basicmodule.h"
+#include "core/fxcodec/fax/faxmodule.h"
+#include "core/fxcodec/flate/flatemodule.h"
+#include "core/fxcodec/jpeg/jpegmodule.h"
+#endif
+
 #include <utility>
 
 #include "core/fxcrt/numerics/safe_conversions.h"
@@ -49,5 +58,16 @@ void ReverseRGB(pdfium::span<uint8_t> pDestBuf,
     dst_pix.blue = red;
   }
 }
+
+#if BUILDFLAG(IS_WIN)
+void RegisterEncoders() {
+  static constexpr EncoderIface kEncoderIface = {
+      BasicModule::A85Encode, FaxModule::FaxEncode, FlateModule::Encode,
+      JpegModule::JpegEncode, BasicModule::RunLengthEncode};
+  CFX_GEModule::Get()->SetEncoderIface(&kEncoderIface);
+}
+#else
+void RegisterEncoders() {}
+#endif
 
 }  // namespace fxcodec
