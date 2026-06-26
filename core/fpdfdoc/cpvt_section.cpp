@@ -747,6 +747,7 @@ CPVT_FloatRect CPVT_Section::OutputLines(const CPVT_FloatRect& rect) const {
             CPVT_WordInfo* word_info = word_array_[w].get();
             word_info->fWordX = fPosX - fMinX;
             word_info->fWordY = fPosY - fMinY;
+            word_info->is_rtl = is_rtl;
             fPosX += vt_->GetWordWidth(*word_info);
           }
         }
