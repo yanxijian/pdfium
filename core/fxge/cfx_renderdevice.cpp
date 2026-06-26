@@ -50,7 +50,6 @@
 #include "core/fxge/win32/cps_printer_driver.h"
 #include "core/fxge/win32/ctext_only_printer_driver.h"
 
-WindowsPrintMode g_pdfium_print_mode = WindowsPrintMode::kEmf;
 #endif
 
 namespace {
@@ -1692,18 +1691,19 @@ std::unique_ptr<RenderDeviceDriverIface> CreateDriver(
     return std::make_unique<CGdiDisplayDriver>(hDC);
   }
 
-  if (g_pdfium_print_mode == WindowsPrintMode::kTextOnly) {
+  WindowsPrintMode print_mode = CFX_GEModule::Get()->GetPrintMode();
+  if (print_mode == WindowsPrintMode::kTextOnly) {
     return std::make_unique<CTextOnlyPrinterDriver>(hDC);
   }
 
-  if (g_pdfium_print_mode == WindowsPrintMode::kPostScript2 ||
-      g_pdfium_print_mode == WindowsPrintMode::kPostScript3 ||
-      g_pdfium_print_mode == WindowsPrintMode::kPostScript3Type42 ||
-      g_pdfium_print_mode == WindowsPrintMode::kPostScript2PassThrough ||
-      g_pdfium_print_mode == WindowsPrintMode::kPostScript3PassThrough ||
-      g_pdfium_print_mode == WindowsPrintMode::kPostScript3Type42PassThrough) {
-    return std::make_unique<CPSPrinterDriver>(hDC, g_pdfium_print_mode,
-                                              ps_font_tracker, encoder_iface);
+  if (print_mode == WindowsPrintMode::kPostScript2 ||
+      print_mode == WindowsPrintMode::kPostScript3 ||
+      print_mode == WindowsPrintMode::kPostScript3Type42 ||
+      print_mode == WindowsPrintMode::kPostScript2PassThrough ||
+      print_mode == WindowsPrintMode::kPostScript3PassThrough ||
+      print_mode == WindowsPrintMode::kPostScript3Type42PassThrough) {
+    return std::make_unique<CPSPrinterDriver>(hDC, print_mode, ps_font_tracker,
+                                              encoder_iface);
   }
 
   return std::make_unique<CGdiPrinterDriver>(hDC);

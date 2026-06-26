@@ -36,20 +36,6 @@ struct CFX_TextRenderOptions;
 enum class BorderStyle { kSolid, kDash, kBeveled, kInset, kUnderline };
 
 #if BUILDFLAG(IS_WIN)
-enum class WindowsPrintMode {
-  kEmf = 0,
-  kTextOnly = 1,
-  kPostScript2 = 2,
-  kPostScript3 = 3,
-  kPostScript2PassThrough = 4,
-  kPostScript3PassThrough = 5,
-  kEmfImageMasks = 6,
-  kPostScript3Type42 = 7,
-  kPostScript3Type42PassThrough = 8,
-};
-
-extern WindowsPrintMode g_pdfium_print_mode;
-
 class CFX_PSFontTracker;
 #endif
 
