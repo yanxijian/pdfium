@@ -8,25 +8,18 @@
 
 #include <utility>
 
+#include "core/fxcrt/numerics/safe_conversions.h"
+#include "core/fxcrt/span_util.h"
+#include "core/fxcrt/zip.h"
+#include "core/fxge/dib/fx_dib.h"
+
+#if BUILDFLAG(IS_WIN)
 #include "core/fxcodec/basic/basicmodule.h"
 #include "core/fxcodec/fax/faxmodule.h"
 #include "core/fxcodec/flate/flatemodule.h"
 #include "core/fxcodec/jpeg/jpegmodule.h"
-#include "core/fxcrt/numerics/safe_conversions.h"
-#include "core/fxcrt/span_util.h"
-#include "core/fxcrt/zip.h"
 #include "core/fxge/cfx_gemodule.h"
-#include "core/fxge/dib/fx_dib.h"
-
-namespace {
-
-#if BUILDFLAG(IS_WIN)
-constexpr EncoderIface kEncoderIface = {
-    BasicModule::A85Encode, FaxModule::FaxEncode, FlateModule::Encode,
-    JpegModule::JpegEncode, BasicModule::RunLengthEncode};
 #endif
-
-}  // namespace
 
 namespace fxcodec {
 
@@ -65,10 +58,15 @@ void ReverseRGB(pdfium::span<uint8_t> pDestBuf,
   }
 }
 
-void RegisterEncoders() {
 #if BUILDFLAG(IS_WIN)
+void RegisterEncoders() {
+  static constexpr EncoderIface kEncoderIface = {
+      BasicModule::A85Encode, FaxModule::FaxEncode, FlateModule::Encode,
+      JpegModule::JpegEncode, BasicModule::RunLengthEncode};
   CFX_GEModule::Get()->SetEncoderIface(&kEncoderIface);
-#endif
 }
+#else
+void RegisterEncoders() {}
+#endif
 
 }  // namespace fxcodec
