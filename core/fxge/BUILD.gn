@@ -29,8 +29,6 @@ source_set("fxge") {
     "cfx_color.h",
     "cfx_cttgsubtable.cpp",
     "cfx_cttgsubtable.h",
-    "cfx_defaultrenderdevice.cpp",
-    "cfx_defaultrenderdevice.h",
     "cfx_drawutils.cpp",
     "cfx_drawutils.h",
     "cfx_face.cpp",
@@ -190,8 +188,7 @@ source_set("fxge") {
 
   if (is_win) {
     sources += [
-      "cfx_windowsrenderdevice.cpp",
-      "cfx_windowsrenderdevice.h",
+      "cfx_renderdevice_win.cpp",
       "win32/cfx_psfonttracker.cpp",
       "win32/cfx_psfonttracker.h",
       "win32/cfx_psrenderer.cpp",

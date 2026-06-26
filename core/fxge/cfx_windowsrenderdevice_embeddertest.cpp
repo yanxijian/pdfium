@@ -2,14 +2,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "core/fxge/cfx_windowsrenderdevice.h"
-
 #include <windows.h>
 
 #include <memory>
 
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_path.h"
+#include "core/fxge/cfx_renderdevice.h"
 #include "core/fxge/win32/cfx_psfonttracker.h"
 #include "testing/embedder_test.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -28,8 +27,8 @@ class CFXWindowsRenderDeviceTest : public EmbedderTest {
     // Get a device context with Windows GDI.
     dc_handle_ = CreateCompatibleDC(nullptr);
     ASSERT_TRUE(dc_handle_);
-    driver_ = std::make_unique<CFX_WindowsRenderDevice>(
-        dc_handle_, &psfont_tracker_, /*encoder_iface=*/nullptr);
+    driver_ = std::make_unique<CFX_RenderDevice>(dc_handle_, &psfont_tracker_,
+                                                 /*encoder_iface=*/nullptr);
     driver_->SaveState();
   }
 
@@ -43,7 +42,7 @@ class CFXWindowsRenderDeviceTest : public EmbedderTest {
  protected:
   HDC dc_handle_;
   CFX_PSFontTracker psfont_tracker_;
-  std::unique_ptr<CFX_WindowsRenderDevice> driver_;
+  std::unique_ptr<CFX_RenderDevice> driver_;
 };
 
 TEST_F(CFXWindowsRenderDeviceTest, SimpleClipTriangle) {

@@ -2,19 +2,18 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "core/fxge/cfx_defaultrenderdevice.h"
-
 #include "core/fxcrt/fx_coordinates.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_graphstatedata.h"
 #include "core/fxge/cfx_path.h"
+#include "core/fxge/cfx_renderdevice.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/dib/fx_dib.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 TEST(CFXDefaultRenderDeviceTest, GetClipBoxDefault) {
-  CFX_DefaultRenderDevice device;
+  CFX_RenderDevice device;
   ASSERT_TRUE(device.Create(/*width=*/16, /*height=*/16, FXDIB_Format::kBgra));
 
   EXPECT_EQ(FX_RECT(0, 0, 16, 16), device.GetClipBox());
@@ -28,7 +27,7 @@ TEST(CFXDefaultRenderDeviceTest, GetClipBoxPathFill) {
   const CFX_FillRenderOptions fill_options(
       CFX_FillRenderOptions::FillType::kEvenOdd);
 
-  CFX_DefaultRenderDevice device;
+  CFX_RenderDevice device;
   ASSERT_TRUE(device.Create(/*width=*/16, /*height=*/16, FXDIB_Format::kBgra));
 
   CFX_Path path;
@@ -45,7 +44,7 @@ TEST(CFXDefaultRenderDeviceTest, GetClipBoxPathStroke) {
   // Default line width is 1.
   const CFX_GraphStateData graphics_state;
 
-  CFX_DefaultRenderDevice device;
+  CFX_RenderDevice device;
   ASSERT_TRUE(device.Create(/*width=*/16, /*height=*/16, FXDIB_Format::kBgra));
 
   CFX_Path path;
@@ -57,7 +56,7 @@ TEST(CFXDefaultRenderDeviceTest, GetClipBoxPathStroke) {
 }
 
 TEST(CFXDefaultRenderDeviceTest, GetClipBoxRect) {
-  CFX_DefaultRenderDevice device;
+  CFX_RenderDevice device;
   ASSERT_TRUE(device.Create(/*width=*/16, /*height=*/16, FXDIB_Format::kBgra));
 
   EXPECT_TRUE(device.SetClip_Rect({2, 4, 14, 12}));
@@ -66,7 +65,7 @@ TEST(CFXDefaultRenderDeviceTest, GetClipBoxRect) {
 }
 
 TEST(CFXDefaultRenderDeviceTest, GetClipBoxEmpty) {
-  CFX_DefaultRenderDevice device;
+  CFX_RenderDevice device;
   ASSERT_TRUE(device.Create(/*width=*/16, /*height=*/16, FXDIB_Format::kBgra));
 
   EXPECT_TRUE(device.SetClip_Rect({2, 8, 14, 8}));
