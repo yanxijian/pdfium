@@ -16,6 +16,24 @@
       "message": "the kNONE to kNone is dubious given the churn, I\u0027d be willing to live with this forever to avoid touching all those lines.  Lei?  Or a separate mechanical CL to to this one substituion as a prequel.",
       "revId": "7d3428fd9c0e5144dd0f04773c762e6dd36db589",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d87f5792_6645a701",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-26T20:01:15Z",
+      "side": 1,
+      "message": "I\u0027m ok either way. Certainly doing a massive renaming in its own CL will be easier to review.",
+      "parentUuid": "3e682019_b119af60",
+      "revId": "7d3428fd9c0e5144dd0f04773c762e6dd36db589",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
