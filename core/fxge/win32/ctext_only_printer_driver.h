@@ -10,7 +10,7 @@
 
 #include <memory>
 
-#include "core/fxge/cfx_windowsrenderdevice.h"
+#include "core/fxge/cfx_renderdevice.h"
 
 class CTextOnlyPrinterDriver final : public RenderDeviceDriverIface {
  public:
