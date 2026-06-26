@@ -11,28 +11,9 @@
 #include "core/fpdfapi/parser/cpdf_test_document.h"
 #include "core/fpdfdoc/cpvt_fontmap.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/stub_provider.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "testing/gtest/include/gtest/gtest.h"
-
-// A stub that provides fixed font metrics (like a character width of 10)
-// for testing text layout.
-class StubProvider : public CPVT_VariableText::Provider {
- public:
-  explicit StubProvider(IPVT_FontMap* font_map)
-      : CPVT_VariableText::Provider(font_map) {}
-  ~StubProvider() override = default;
-
-  // CPVT_VariableText::Provider:
-  int GetCharWidth(int32_t nFontIndex, uint16_t word) override { return 10; }
-  int32_t GetTypeAscent(int32_t nFontIndex) override { return 10; }
-  int32_t GetTypeDescent(int32_t nFontIndex) override { return -2; }
-  int32_t GetWordFontIndex(uint16_t word,
-                           FX_Charset charset,
-                           int32_t nFontIndex) override {
-    return 0;
-  }
-  int32_t GetDefaultFontIndex() override { return 0; }
-};
 
 class CPVT_VariableTextTest : public testing::Test {
  public:
