@@ -21,7 +21,6 @@
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/zip.h"
 #include "core/fxge/cfx_color.h"
-#include "core/fxge/cfx_defaultrenderdevice.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_font.h"
 #include "core/fxge/cfx_fontmgr.h"
@@ -37,7 +36,11 @@
 #include "core/fxge/text_char_pos.h"
 #include "core/fxge/text_glyph_pos.h"
 
+#if defined(PDF_USE_AGG)
+#include "core/fxge/agg/cfx_agg_devicedriver.h"
+#endif
 #if defined(PDF_USE_SKIA)
+#include "core/fxge/skia/fx_skia_device.h"
 #include "third_party/skia/include/core/SkTypes.h"  // nogncheck
 #endif
 
@@ -829,7 +832,7 @@ bool CFX_RenderDevice::DrawFillStrokePath(
     }
     backdrop->Copy(bitmap);
   }
-  CFX_DefaultRenderDevice bitmap_device;
+  CFX_RenderDevice bitmap_device;
   bitmap_device.AttachWithBackdropAndGroupKnockout(bitmap, std::move(backdrop),
                                                    /*bGroupKnockout=*/true);
 
@@ -1595,4 +1598,71 @@ CFX_RenderDevice::StateRestorer::StateRestorer(CFX_RenderDevice* pDevice)
 
 CFX_RenderDevice::StateRestorer::~StateRestorer() {
   device_->RestoreState(false);
+}
+
+bool CFX_RenderDevice::Attach(RetainPtr<CFX_DIBitmap> pBitmap) {
+  return AttachWithRgbByteOrder(std::move(pBitmap), false);
+}
+
+bool CFX_RenderDevice::AttachWithRgbByteOrder(RetainPtr<CFX_DIBitmap> pBitmap,
+                                              bool bRgbByteOrder) {
+  return AttachImpl(std::move(pBitmap), bRgbByteOrder, nullptr, false);
+}
+
+bool CFX_RenderDevice::AttachWithBackdropAndGroupKnockout(
+    RetainPtr<CFX_DIBitmap> pBitmap,
+    RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+    bool bGroupKnockout) {
+  return AttachImpl(std::move(pBitmap), false, std::move(pBackdropBitmap),
+                    bGroupKnockout);
+}
+
+bool CFX_RenderDevice::AttachImpl(RetainPtr<CFX_DIBitmap> pBitmap,
+                                  bool bRgbByteOrder,
+                                  RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+                                  bool bGroupKnockout) {
+#if defined(PDF_USE_SKIA)
+  if (CFX_GEModule::Get()->UseSkiaRenderer()) {
+    return AttachSkiaImpl(std::move(pBitmap), bRgbByteOrder,
+                          std::move(pBackdropBitmap), bGroupKnockout);
+  }
+#endif
+#if defined(PDF_USE_AGG)
+  return AttachAggImpl(std::move(pBitmap), bRgbByteOrder,
+                       std::move(pBackdropBitmap), bGroupKnockout);
+#else
+  return false;
+#endif
+}
+
+bool CFX_RenderDevice::Create(int width, int height, FXDIB_Format format) {
+  return CreateWithBackdrop(width, height, format, nullptr);
+}
+
+bool CFX_RenderDevice::CreateWithBackdrop(int width,
+                                          int height,
+                                          FXDIB_Format format,
+                                          RetainPtr<CFX_DIBitmap> backdrop) {
+#if defined(PDF_USE_SKIA)
+  if (CFX_GEModule::Get()->UseSkiaRenderer()) {
+    return CreateSkia(width, height, format, backdrop);
+  }
+#endif
+#if defined(PDF_USE_AGG)
+  return CreateAgg(width, height, format, backdrop);
+#else
+  return false;
+#endif
+}
+
+void CFX_RenderDevice::Clear(uint32_t color) {
+#if defined(PDF_USE_SKIA)
+  if (CFX_GEModule::Get()->UseSkiaRenderer()) {
+    static_cast<CFX_SkiaDeviceDriver*>(GetDeviceDriver())->Clear(color);
+    return;
+  }
+#endif
+#if defined(PDF_USE_AGG)
+  static_cast<pdfium::CFX_AggDeviceDriver*>(GetDeviceDriver())->Clear(color);
+#endif
 }
