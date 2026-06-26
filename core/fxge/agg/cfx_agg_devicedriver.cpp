@@ -18,6 +18,7 @@
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/ptr_util.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr_exclusion.h"
 #include "core/fxcrt/zip.h"
@@ -983,6 +984,17 @@ agg::path_storage BuildAggPath(const CFX_Path& path,
 
 }  // namespace
 
+// static
+std::unique_ptr<CFX_AggDeviceDriver> CFX_AggDeviceDriver::Create(
+    RetainPtr<CFX_DIBitmap> pBitmap,
+    bool bRgbByteOrder,
+    RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+    bool bGroupKnockout) {
+  return pdfium::WrapUnique(
+      new CFX_AggDeviceDriver(std::move(pBitmap), bRgbByteOrder,
+                              std::move(pBackdropBitmap), bGroupKnockout));
+}
+
 CFX_AggDeviceDriver::CFX_AggDeviceDriver(
     RetainPtr<CFX_DIBitmap> pBitmap,
     bool bRgbByteOrder,
@@ -1420,7 +1432,7 @@ bool CFX_RenderDevice::AttachAggImpl(RetainPtr<CFX_DIBitmap> pBitmap,
   // Unlike the Skia version, all callers pass in a non-null `pBitmap`.
   CHECK(pBitmap);
   SetBitmap(pBitmap);
-  SetDeviceDriver(std::make_unique<pdfium::CFX_AggDeviceDriver>(
+  SetDeviceDriver(pdfium::CFX_AggDeviceDriver::Create(
       std::move(pBitmap), bRgbByteOrder, std::move(pBackdropBitmap),
       bGroupKnockout));
   return true;
@@ -1436,7 +1448,7 @@ bool CFX_RenderDevice::CreateAgg(int width,
   }
 
   SetBitmap(pBitmap);
-  SetDeviceDriver(std::make_unique<pdfium::CFX_AggDeviceDriver>(
+  SetDeviceDriver(pdfium::CFX_AggDeviceDriver::Create(
       std::move(pBitmap), false, std::move(pBackdropBitmap), false));
   return true;
 }

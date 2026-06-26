@@ -16,6 +16,7 @@
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/fx_system.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/ptr_util.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxge/cfx_fillrenderoptions.h"
 #include "core/fxge/cfx_path.h"
@@ -44,6 +45,16 @@ CFX_PSRenderer::RenderingLevel RenderingLevelFromWindowsPrintMode(
 }
 
 }  // namespace
+
+// static
+std::unique_ptr<CPSPrinterDriver> CPSPrinterDriver::Create(
+    HDC hDC,
+    WindowsPrintMode mode,
+    CFX_PSFontTracker* ps_font_tracker,
+    const EncoderIface* encoder_iface) {
+  return pdfium::WrapUnique(
+      new CPSPrinterDriver(hDC, mode, ps_font_tracker, encoder_iface));
+}
 
 CPSPrinterDriver::CPSPrinterDriver(HDC hDC,
                                    WindowsPrintMode mode,

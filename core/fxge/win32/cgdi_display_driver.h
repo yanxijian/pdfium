@@ -21,10 +21,11 @@ struct FX_RECT;
 
 class CGdiDisplayDriver final : public CGdiDeviceDriver {
  public:
-  explicit CGdiDisplayDriver(HDC hDC);
+  static std::unique_ptr<CGdiDisplayDriver> Create(HDC hDC);
   ~CGdiDisplayDriver() override;
 
  private:
+  explicit CGdiDisplayDriver(HDC hDC);
   // CGdiDisplayDriver:
   bool GetDIBits(RetainPtr<CFX_DIBitmap> bitmap,
                  int left,

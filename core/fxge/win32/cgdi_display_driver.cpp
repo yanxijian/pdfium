@@ -12,9 +12,15 @@
 #include "core/fxcrt/check_op.h"
 #include "core/fxcrt/fx_coordinates.h"
 #include "core/fxcrt/fx_system.h"
+#include "core/fxcrt/ptr_util.h"
 #include "core/fxge/dib/cfx_dibbase.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/win32/cwin32_platform.h"
+
+// static
+std::unique_ptr<CGdiDisplayDriver> CGdiDisplayDriver::Create(HDC hDC) {
+  return pdfium::WrapUnique(new CGdiDisplayDriver(hDC));
+}
 
 CGdiDisplayDriver::CGdiDisplayDriver(HDC hDC)
     : CGdiDeviceDriver(hDC, DeviceType::kDisplay) {

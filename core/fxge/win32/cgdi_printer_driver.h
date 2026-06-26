@@ -15,10 +15,11 @@
 
 class CGdiPrinterDriver final : public CGdiDeviceDriver {
  public:
-  explicit CGdiPrinterDriver(HDC hDC);
+  static std::unique_ptr<CGdiPrinterDriver> Create(HDC hDC);
   ~CGdiPrinterDriver() override;
 
  private:
+  explicit CGdiPrinterDriver(HDC hDC);
   // CGdiPrinterDriver:
   int GetHorzSize() const override;
   int GetVertSize() const override;

@@ -32,10 +32,12 @@ class rasterizer_scanline_aa;
 
 class CFX_AggDeviceDriver final : public RenderDeviceDriverIface {
  public:
-  CFX_AggDeviceDriver(RetainPtr<CFX_DIBitmap> pBitmap,
-                      bool bRgbByteOrder,
-                      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
-                      bool bGroupKnockout);
+  static std::unique_ptr<CFX_AggDeviceDriver> Create(
+      RetainPtr<CFX_DIBitmap> pBitmap,
+      bool bRgbByteOrder,
+      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+      bool bGroupKnockout);
+
   ~CFX_AggDeviceDriver() override;
 
   void InitPlatform();
@@ -108,6 +110,11 @@ class CFX_AggDeviceDriver final : public RenderDeviceDriverIface {
   void Clear(uint32_t color);
 
  private:
+  CFX_AggDeviceDriver(RetainPtr<CFX_DIBitmap> pBitmap,
+                      bool bRgbByteOrder,
+                      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+                      bool bGroupKnockout);
+
   void RenderRasterizer(pdfium::agg::rasterizer_scanline_aa& rasterizer,
                         uint32_t color,
                         bool bFullCover,

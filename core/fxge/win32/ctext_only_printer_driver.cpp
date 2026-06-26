@@ -13,11 +13,18 @@
 #include "core/fxcrt/fx_string.h"
 #include "core/fxcrt/fx_system.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/ptr_util.h"
 #include "core/fxge/cfx_font.h"
 #include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/dib/cfx_dibbase.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
 #include "core/fxge/text_char_pos.h"
+
+// static
+std::unique_ptr<CTextOnlyPrinterDriver> CTextOnlyPrinterDriver::Create(
+    HDC hDC) {
+  return pdfium::WrapUnique(new CTextOnlyPrinterDriver(hDC));
+}
 
 CTextOnlyPrinterDriver::CTextOnlyPrinterDriver(HDC hDC)
     : dc_handle_(hDC),

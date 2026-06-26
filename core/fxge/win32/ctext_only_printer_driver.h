@@ -14,10 +14,11 @@
 
 class CTextOnlyPrinterDriver final : public RenderDeviceDriverIface {
  public:
-  explicit CTextOnlyPrinterDriver(HDC hDC);
+  static std::unique_ptr<CTextOnlyPrinterDriver> Create(HDC hDC);
   ~CTextOnlyPrinterDriver() override;
 
  private:
+  explicit CTextOnlyPrinterDriver(HDC hDC);
   // RenderDeviceDriverIface:
   DeviceType GetDeviceType() const override;
   int GetPixelWidth() const override;
