@@ -45,6 +45,30 @@
       },
       "revId": "48c648e8cf7cadea980f7affcb983620ac156f4a",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c051e8a0_f514aab0",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 39
+      },
+      "lineNbr": 753,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-26T21:36:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "893b77aa_34171fb4",
+      "range": {
+        "startLine": 751,
+        "startChar": 0,
+        "endLine": 753,
+        "endChar": 44
+      },
+      "revId": "48c648e8cf7cadea980f7affcb983620ac156f4a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
