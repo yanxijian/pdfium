@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79eceab5_016c87cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-26T17:13:57Z",
+      "side": 1,
+      "message": "Prequel from another chain of CLs.  You will need to investigate the effects of having this last for the process lifetime vs the library lifetime. I think this is better to be library-lifetime scoped.",
+      "revId": "1c6121a92cdcb993e378dea58ba3f0ed1687d929",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
