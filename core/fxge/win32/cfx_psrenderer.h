@@ -23,6 +23,7 @@
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/unowned_ptr.h"
+#include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_graphstatedata.h"
 
 class CFX_DIBBase;
@@ -36,17 +37,6 @@ struct CFX_FillRenderOptions;
 namespace fxge {
 struct FXDIB_ResampleOptions;
 }
-
-struct EncoderIface {
-  DataVector<uint8_t> (*pA85EncodeFunc)(pdfium::span<const uint8_t> src_span);
-  DataVector<uint8_t> (*pFaxEncodeFunc)(RetainPtr<const CFX_DIBBase> src);
-  DataVector<uint8_t> (*pFlateEncodeFunc)(pdfium::span<const uint8_t> src_span);
-  bool (*pJpegEncodeFunc)(const RetainPtr<const CFX_DIBBase>& pSource,
-                          uint8_t** dest_buf,
-                          size_t* dest_size);
-  DataVector<uint8_t> (*pRunLengthEncodeFunc)(
-      pdfium::span<const uint8_t> src_span);
-};
 
 class CFX_PSRenderer {
  public:
