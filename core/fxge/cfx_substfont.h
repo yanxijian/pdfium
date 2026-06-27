@@ -10,6 +10,8 @@
 #include "core/fxcrt/bytestring.h"
 #include "core/fxcrt/fx_codepage.h"
 
+class CFX_Matrix;
+
 // Represents variations to apply on top of an existing font/face to
 // convert it to render as if it were an alternative font.
 class CFX_SubstFont {
@@ -31,6 +33,28 @@ class CFX_SubstFont {
 
   int GetSkew() const;
   int GetSkewCJK() const;
+
+  // Returns effective skew angle based on style.
+  int GetEffectiveSkew(bool font_style) const;
+
+  // Returns the effective font weight based on style.
+  int GetEffectiveWeight(bool font_style) const;
+
+  // Returns emboldening level for rendering, or negative on failure.
+  int GetEmboldenLevelForRender(bool font_style,
+                                const CFX_Matrix& matrix) const;
+
+  // Returns emboldening level for path loading.
+  int GetEmboldenLevelForLoad(bool font_style) const;
+
+  // Returns estimated stem width.
+  int GetEstimatedStemV() const;
+
+  int GetItalicAngle() const { return italic_angle_; }
+  FX_Charset GetCharset() const { return charset_; }
+  bool IsSymbolic() const { return charset_ == FX_Charset::kSymbol; }
+  bool IsMediumWeight() const { return weight_ >= 500 && weight_ <= 600; }
+  bool IsForceBold() const;
 
   void SetIsBuiltInGenericFont() { flag_mm_ = true; }
   bool IsBuiltInGenericFont() const { return flag_mm_; }
