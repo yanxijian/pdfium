@@ -107,6 +107,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a95e7b78_17aa5051",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-27T06:15:23Z",
+      "side": 1,
+      "message": "On second thought, I think restricting this to a load-time-only initialisation parameter would actually cause a problem.\n\nLet us say person \"x\" is working on PDFs in a hypothetical PDFium-based viewer.\n\nThey are anotating a couple things in another document while crosschecking 2 files and then suddenly a PDF doesn\u0027t load because it is encoded using brotli. Not to worry, they go into settings and turn on BrotliDecode.\n\n1. It is a library initialization parameter: The library then has to be destroyed and created again, thats additional compute cost for the viewer itself and it is possible the user may lose some work and have to reopen their documents again after the viewer restarts, disrupting an active workflow.\n\n2. it is a runtime parameter like this case: The flag is enabled, the viewer goes back and opens the PDF, it opens and they can continue cross checking without having to search again where the initial file they annotated was.\n\nWhile yes in many cases (like in chromium) it only needs to be set on document load, some other embedders may also need it to be set on runtime instead.\n\nThats why i\u0027d think lets leave it as is, let me know if there is anything i\u0027m missisng here or a general better approach.",
+      "parentUuid": "fd5a8f05_a321436b",
+      "revId": "ddf4b4d5c9b587cdc77ed34ac2a078db1a367ba4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c8d3675d_9e62426d",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 26
