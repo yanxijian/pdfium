@@ -150,7 +150,7 @@ uint32_t CFGAS_GEFont::GetFontStyles() const {
   uint32_t dwStyles = 0;
   auto* pSubstFont = font_->GetSubstFont();
   if (pSubstFont) {
-    if (pSubstFont->weight_ == pdfium::kFontWeightBold) {
+    if (pSubstFont->IsForceBold()) {
       dwStyles |= pdfium::kFontStyleForceBold;
     }
   } else {

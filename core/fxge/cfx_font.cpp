@@ -143,8 +143,8 @@ FX_Charset CFX_Font::GetCharSetFromUnicode(uint16_t word) {
 CFX_Font::CFX_Font() = default;
 
 int CFX_Font::GetSubstFontItalicAngle() const {
-  CFX_SubstFont* subst_font = GetSubstFont();
-  return subst_font ? subst_font->italic_angle_ : 0;
+  const CFX_SubstFont* subst_font = GetSubstFont();
+  return subst_font ? subst_font->GetItalicAngle() : 0;
 }
 
 std::vector<CharCodeAndIndex> CFX_Font::GetCharCodesAndIndices(
