@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "960d16de_d8c89204",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2212cbba_3d3a4dc9",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "b7e53239_1c278039",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 15
@@ -31,6 +49,52 @@
       "writtenOn": "2026-06-26T23:21:02Z",
       "side": 1,
       "message": "When you get a chance, thanks.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef6d163b_aacdd0c1",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1668,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "This `static_cast` is unsafe. If `CFX_RenderDevice` was initialized as a Windows device (e.g. via `InitWithWindowsDevice`), `GetDeviceDriver()` will return a Windows driver like `CGdiPrinterDriver` or `CPSPrinterDriver` instead of `CFX_SkiaDeviceDriver`, leading to Undefined Behavior.\n\nConsider adding `virtual void Clear(uint32_t color) {}` to `RenderDeviceDriverIface` and overriding it in the Skia and AGG drivers, or carefully check the device type before casting.",
+      "range": {
+        "startLine": 1668,
+        "startChar": 0,
+        "endLine": 1668,
+        "endChar": 0
+      },
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff106047_6f36ef67",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1673,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Same as above: this downcast is unsafe for Windows devices.",
+      "range": {
+        "startLine": 1673,
+        "startChar": 0,
+        "endLine": 1673,
+        "endChar": 0
+      },
       "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -52,6 +116,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65ecc209_c1e258d4",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1678,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdf16610_2528a345",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c73b0dbc_95729681",
@@ -65,6 +147,24 @@
       "writtenOn": "2026-06-27T00:13:35Z",
       "side": 1,
       "message": "This list changed. @_@ Compare with core/fxge/cfx_windowsrenderdevice.cpp.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7807b1c1_4a8ff71d",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1686,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Yikes. You have better eyes than I. Nice spotting.",
+      "parentUuid": "c73b0dbc_95729681",
       "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -92,6 +192,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc7d13da_ebb2a84c",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1708,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Not sure where this logic came from, reset this code to match cfx_windows...",
+      "parentUuid": "e8f7eb41_d9547ce3",
+      "range": {
+        "startLine": 1693,
+        "startChar": 0,
+        "endLine": 1708,
+        "endChar": 50
+      },
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9bad8a93_b3faeed4",
@@ -105,6 +229,47 @@
       "writtenOn": "2026-06-27T00:13:35Z",
       "side": 1,
       "message": "Never evaluates to true. InitWithWindowsDevice() then doesn\u0027t need to return a bool.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "894bfbb6_09f50591",
+        "filename": "core/fxge/cfx_renderdevice.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 1724,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9bad8a93_b3faeed4",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af07f4a3_82c32d96",
+        "filename": "core/fxge/cfx_renderdevice.h",
+        "patchSetId": 15
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "By removing the `protected:` access specifier above, `SetBitmap`, `SetDeviceDriver`, and `GetDeviceDriver` have been inadvertently exposed as `public` methods.\n\nNow that `CFX_RenderDevice` is `final`, consider moving these down into the `private:` section below to maintain encapsulation.",
+      "range": {
+        "startLine": 252,
+        "startChar": 0,
+        "endLine": 252,
+        "endChar": 0
+      },
       "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -126,6 +291,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "846c00fe_9def0f9d",
+        "filename": "core/fxge/cfx_renderdevice_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "451b4c58_c3de1a46",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d148c21b_82ace9c1",
@@ -143,6 +326,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b04e9c7f_a18acaae",
+        "filename": "core/fxge/win32/cfx_psrenderer.h",
+        "patchSetId": 15
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d148c21b_82ace9c1",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "688a566c_112bc91a",
@@ -156,6 +357,24 @@
       "writtenOn": "2026-06-27T00:06:11Z",
       "side": 1,
       "message": "Not sure what this is for.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1fb46ff_57adefef",
+        "filename": "core/fxge/win32/cps_printer_driver.h",
+        "patchSetId": 15
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-27T18:22:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "688a566c_112bc91a",
       "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
