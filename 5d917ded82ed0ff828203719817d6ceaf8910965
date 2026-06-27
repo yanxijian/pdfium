@@ -36,6 +36,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf487909_ac65d361",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-27T00:33:51Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "0584ef48_5530f402",
+      "revId": "5d917ded82ed0ff828203719817d6ceaf8910965",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1878e4e_a7dcaaba",
@@ -49,6 +67,24 @@
       "writtenOn": "2026-06-26T23:34:48Z",
       "side": 0,
       "message": "Avoid random newline changes. If desired, do this in the earlier cleanup CL that touched this file.",
+      "revId": "5d917ded82ed0ff828203719817d6ceaf8910965",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a7bf8fd_3d937db9",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-27T00:33:51Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "b1878e4e_a7dcaaba",
       "revId": "5d917ded82ed0ff828203719817d6ceaf8910965",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }

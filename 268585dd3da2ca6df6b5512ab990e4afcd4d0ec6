@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36e310bd_a155f416",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-27T00:33:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "529a36c9_25ab675b",
+      "range": {
+        "startLine": 659,
+        "startChar": 0,
+        "endLine": 660,
+        "endChar": 61
+      },
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dce1e93f_b2831ccd",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-26T23:45:08Z",
       "side": 1,
       "message": "Should this make sure GetLine() succeeded before continuing?",
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a886533d_3e6780be",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-27T00:33:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dce1e93f_b2831ccd",
       "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }

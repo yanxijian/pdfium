@@ -136,6 +136,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "abb47c89_19d159c8",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-27T00:33:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4637ed8d_cd9c41bb",
+      "revId": "faf949183ee163aeb45073d3bdf9d9859f6903b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f66ebc93_24e36c1a",
