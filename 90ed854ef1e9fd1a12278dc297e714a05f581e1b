@@ -33,6 +33,57 @@
       "message": "When you get a chance, thanks.",
       "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "451b4c58_c3de1a46",
+        "filename": "core/fxge/cfx_renderdevice_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-27T00:06:11Z",
+      "side": 1,
+      "message": "Move to bottom of list.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d148c21b_82ace9c1",
+        "filename": "core/fxge/win32/cfx_psrenderer.h",
+        "patchSetId": 15
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-27T00:06:11Z",
+      "side": 1,
+      "message": "Not needed? EncoderIface already forward declared.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "688a566c_112bc91a",
+        "filename": "core/fxge/win32/cps_printer_driver.h",
+        "patchSetId": 15
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-27T00:06:11Z",
+      "side": 1,
+      "message": "Not sure what this is for.",
+      "revId": "90ed854ef1e9fd1a12278dc297e714a05f581e1b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
