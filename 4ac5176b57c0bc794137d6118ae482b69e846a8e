@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39221d96_b8aa9bb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-28T17:22:04Z",
+      "side": 1,
+      "message": "Hi guys, small macro replacement for the ISLATINWORD() macro to replace it with a helper. Thanks!",
+      "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
