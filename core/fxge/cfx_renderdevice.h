@@ -39,10 +39,6 @@ class CFX_PSFontTracker;
 class SkCanvas;
 #endif
 
-// Render device. Must be initialized via Attach() or Create() (or
-// InitWithWindowsDevice() on Windows) before use, which installs the
-// appropriate device driver. Until then, class methods are not safe to call,
-// or may return invalid results.
 class CFX_RenderDevice final {
  public:
   class StateRestorer {
@@ -54,37 +50,13 @@ class CFX_RenderDevice final {
     UnownedPtr<CFX_RenderDevice> device_;
   };
 
-  CFX_RenderDevice();
-#if BUILDFLAG(IS_WIN)
-  CFX_RenderDevice(HDC hDC, CFX_PSFontTracker* ps_font_tracker);
-#endif
   ~CFX_RenderDevice();
-
-  bool Attach(RetainPtr<CFX_DIBitmap> pBitmap);
-  bool AttachWithRgbByteOrder(RetainPtr<CFX_DIBitmap> pBitmap,
-                              bool bRgbByteOrder);
-  bool AttachWithBackdropAndGroupKnockout(
-      RetainPtr<CFX_DIBitmap> pBitmap,
-      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
-      bool bGroupKnockout);
-#if defined(PDF_USE_SKIA)
-  [[nodiscard]] bool AttachCanvas(SkCanvas& canvas);
-#endif
-
-  [[nodiscard]] bool Create(int width, int height, FXDIB_Format format);
-  [[nodiscard]] bool CreateWithBackdrop(int width,
-                                        int height,
-                                        FXDIB_Format format,
-                                        RetainPtr<CFX_DIBitmap> backdrop);
 
   void Clear(uint32_t color);
 
-#if BUILDFLAG(IS_WIN)
-  void InitWithWindowsDevice(HDC hDC, CFX_PSFontTracker* ps_font_tracker);
-#endif
-
   static std::unique_ptr<CFX_RenderDevice> CreateForBitmap(
-      RetainPtr<CFX_DIBitmap> bitmap);
+      RetainPtr<CFX_DIBitmap> bitmap,
+      bool rgb_byte_order = false);
 
   static std::unique_ptr<CFX_RenderDevice>
   CreateForBitmapWithBackdropAndGroupKnockout(
@@ -94,6 +66,12 @@ class CFX_RenderDevice final {
 
   static std::unique_ptr<CFX_RenderDevice>
   CreateForNewBitmap(int width, int height, FXDIB_Format format);
+
+  static std::unique_ptr<CFX_RenderDevice> CreateForNewBitmapWithBackdrop(
+      int width,
+      int height,
+      FXDIB_Format format,
+      RetainPtr<CFX_DIBitmap> backdrop);
 
 #if BUILDFLAG(IS_WIN)
   static std::unique_ptr<CFX_RenderDevice> CreateForWindowsDC(
@@ -273,6 +251,28 @@ class CFX_RenderDevice final {
 #endif  // defined(PDF_USE_SKIA)
 
  private:
+  CFX_RenderDevice();
+#if BUILDFLAG(IS_WIN)
+  CFX_RenderDevice(HDC hDC, CFX_PSFontTracker* ps_font_tracker);
+#endif
+
+  bool Attach(RetainPtr<CFX_DIBitmap> pBitmap);
+  bool AttachWithRgbByteOrder(RetainPtr<CFX_DIBitmap> pBitmap,
+                              bool bRgbByteOrder);
+  bool AttachWithBackdropAndGroupKnockout(
+      RetainPtr<CFX_DIBitmap> pBitmap,
+      RetainPtr<CFX_DIBitmap> pBackdropBitmap,
+      bool bGroupKnockout);
+#if defined(PDF_USE_SKIA)
+  [[nodiscard]] bool AttachCanvas(SkCanvas& canvas);
+#endif
+
+  [[nodiscard]] bool Create(int width, int height, FXDIB_Format format);
+  [[nodiscard]] bool CreateWithBackdrop(int width,
+                                        int height,
+                                        FXDIB_Format format,
+                                        RetainPtr<CFX_DIBitmap> backdrop);
+
   void SetBitmap(RetainPtr<CFX_DIBitmap> bitmap);
 
   void SetDeviceDriver(std::unique_ptr<RenderDeviceDriverIface> pDriver);

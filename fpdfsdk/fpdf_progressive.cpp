@@ -76,8 +76,11 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
   }
 #endif
 
-  auto device = std::make_unique<CFX_RenderDevice>();
-  device->AttachWithRgbByteOrder(pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
+  auto device = CFX_RenderDevice::CreateForBitmap(
+      pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
+  if (!device) {
+    return FPDF_RENDER_FAILED;
+  }
   context->device_ = std::move(device);
 
   CPDFSDK_PauseAdapter pause_adapter(pause);
