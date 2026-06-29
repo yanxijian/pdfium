@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d38327a0_2179c992",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-29T12:11:42Z",
+      "side": 1,
+      "message": "Hey guys another public API change this time to add APIs to read strings from File Spec dictionaries. The issue was specific to the \"Desc\" entry, but decided to extend it further to all strings and bytestrings as well. Thanks!",
+      "revId": "bbba5ce134b87ac7efcfafc0986f5d2a4eceb045",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
