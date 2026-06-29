@@ -172,8 +172,14 @@ CFX_Color CFX_Color::operator-(float fColorSub) const {
       sRet.fColor2 = std::max(1.0f - fColorSub, 0.0f);
       sRet.fColor3 = std::max(1.0f - fColorSub, 0.0f);
       break;
-    case CFX_Color::Type::kRGB:
     case CFX_Color::Type::kGray:
+      sRet.fColor1 = std::max(fColor1 - fColorSub, 0.0f);
+      break;
+    case CFX_Color::Type::kRGB:
+      sRet.fColor1 = std::max(fColor1 - fColorSub, 0.0f);
+      sRet.fColor2 = std::max(fColor2 - fColorSub, 0.0f);
+      sRet.fColor3 = std::max(fColor3 - fColorSub, 0.0f);
+      break;
     case CFX_Color::Type::kCMYK:
       sRet.fColor1 = std::max(fColor1 - fColorSub, 0.0f);
       sRet.fColor2 = std::max(fColor2 - fColorSub, 0.0f);
@@ -193,14 +199,19 @@ CFX_Color CFX_Color::operator/(float fColorDivide) const {
       sRet.fColor2 = 1.0f / fColorDivide;
       sRet.fColor3 = 1.0f / fColorDivide;
       break;
-    case CFX_Color::Type::kRGB:
     case CFX_Color::Type::kGray:
+      sRet.fColor1 = fColor1 / fColorDivide;
+      break;
+    case CFX_Color::Type::kRGB:
+      sRet.fColor1 = fColor1 / fColorDivide;
+      sRet.fColor2 = fColor2 / fColorDivide;
+      sRet.fColor3 = fColor3 / fColorDivide;
+      break;
     case CFX_Color::Type::kCMYK:
-      sRet = *this;
-      sRet.fColor1 /= fColorDivide;
-      sRet.fColor2 /= fColorDivide;
-      sRet.fColor3 /= fColorDivide;
-      sRet.fColor4 /= fColorDivide;
+      sRet.fColor1 = fColor1 / fColorDivide;
+      sRet.fColor2 = fColor2 / fColorDivide;
+      sRet.fColor3 = fColor3 / fColorDivide;
+      sRet.fColor4 = fColor4 / fColorDivide;
       break;
   }
   return sRet;
