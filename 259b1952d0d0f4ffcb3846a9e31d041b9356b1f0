@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e54b5531_2f67f8a6",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 818,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-29T18:26:11Z",
+      "side": 1,
+      "message": "The previous code calculated the embolden level using `ft_matrix.xx` and `ft_matrix.xy`, which correctly accounted for any fake italic `skew` that was applied just above. The new `CFX_SubstFont::GetEmboldenLevelForRender` method uses the un-skewed `matrix.a` and `matrix.c` directly, so it will result in a smaller emboldening level when skew is applied.\\n\\nConsider modifying `GetEmboldenLevelForRender` to accept the pre-computed `ft_matrix.xx` and `ft_matrix.xy` (or just the sum of their absolute values) to maintain the original behavior.\\n\\nThere is also a subtle difference in overflow handling here: previously, if the `level` multiplication overflowed, `level.ValueOrDefault(0)` fell back to `0` and rendering continued safely without emboldening. Now, `checked_level.ValueOrDefault(-1)` returns `-1`, which causes `level \u003c 0` to be true and aborts the glyph rendering entirely by returning `nullptr`.",
+      "range": {
+        "startLine": 818,
+        "startChar": 0,
+        "endLine": 818,
+        "endChar": 0
+      },
+      "revId": "259b1952d0d0f4ffcb3846a9e31d041b9356b1f0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
