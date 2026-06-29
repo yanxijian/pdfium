@@ -141,6 +141,18 @@ FPDFAttachment_HasKey(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key) {
   return pParamsDict ? pParamsDict->KeyExist(key) : 0;
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFAttachment_SpecHasKey(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key) {
+  CPDF_Object* file = CPDFObjectFromFPDFAttachment(attachment);
+  if (!file) {
+    return false;
+  }
+
+  CPDF_FileSpec spec(pdfium::WrapRetain(file));
+  RetainPtr<const CPDF_Dictionary> file_spec_dict = spec.GetFileSpecDict();
+  return file_spec_dict ? file_spec_dict->KeyExist(key) : 0;
+}
+
 FPDF_EXPORT FPDF_OBJECT_TYPE FPDF_CALLCONV
 FPDFAttachment_GetValueType(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key) {
   if (!FPDFAttachment_HasKey(attachment, key)) {
@@ -151,6 +163,19 @@ FPDFAttachment_GetValueType(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key) {
       pdfium::WrapRetain(CPDFObjectFromFPDFAttachment(attachment)));
   RetainPtr<const CPDF_Object> pObj = spec.GetParamsDict()->GetObjectFor(key);
   return pObj ? pObj->GetType() : FPDF_OBJECT_UNKNOWN;
+}
+
+FPDF_EXPORT FPDF_OBJECT_TYPE FPDF_CALLCONV
+FPDFAttachment_GetSpecValueType(FPDF_ATTACHMENT attachment,
+                                FPDF_BYTESTRING key) {
+  if (!FPDFAttachment_SpecHasKey(attachment, key)) {
+    return FPDF_OBJECT_UNKNOWN;
+  }
+
+  CPDF_FileSpec spec(
+      pdfium::WrapRetain(CPDFObjectFromFPDFAttachment(attachment)));
+  RetainPtr<const CPDF_Object> obj = spec.GetFileSpecDict()->GetObjectFor(key);
+  return obj ? obj->GetType() : FPDF_OBJECT_UNKNOWN;
 }
 
 FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
@@ -181,6 +206,34 @@ FPDFAttachment_SetStringValue(FPDF_ATTACHMENT attachment,
   return true;
 }
 
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFAttachment_SetSpecStringValue(FPDF_ATTACHMENT attachment,
+                                  FPDF_BYTESTRING key,
+                                  FPDF_WIDESTRING value) {
+  CPDF_Object* file = CPDFObjectFromFPDFAttachment(attachment);
+  if (!file) {
+    return false;
+  }
+
+  CPDF_FileSpec spec(pdfium::WrapRetain(file));
+  RetainPtr<CPDF_Dictionary> file_spec_dict = spec.GetMutableFileSpecDict();
+  if (!file_spec_dict) {
+    return false;
+  }
+
+  // SAFETY: required from caller.
+  ByteString bsValue = UNSAFE_BUFFERS(ByteStringFromFPDFWideString(value));
+  ByteString bsKey = key;
+  if (bsKey == kChecksumKey) {
+    file_spec_dict->SetNewFor<CPDF_String>(
+        bsKey, HexDecode(bsValue.unsigned_span()).data,
+        CPDF_String::DataType::kIsHex);
+  } else {
+    file_spec_dict->SetNewFor<CPDF_String>(bsKey, bsValue);
+  }
+  return true;
+}
+
 FPDF_EXPORT unsigned long FPDF_CALLCONV
 FPDFAttachment_GetStringValue(FPDF_ATTACHMENT attachment,
                               FPDF_BYTESTRING key,
@@ -202,6 +255,46 @@ FPDFAttachment_GetStringValue(FPDF_ATTACHMENT attachment,
 
   ByteStringView key_view(key);
   RetainPtr<const CPDF_Object> object = params->GetObjectFor(key_view);
+  if (!object || (!object->IsString() && !object->IsName())) {
+    // Per API description, return an empty string in these cases.
+    return Utf16EncodeMaybeCopyAndReturnLength(WideString(), buffer_span);
+  }
+
+  if (key_view == kChecksumKey) {
+    RetainPtr<const CPDF_String> string_object = ToString(object);
+    if (string_object && string_object->IsHex()) {
+      ByteString encoded =
+          PDF_HexEncodeString(string_object->GetString().AsStringView());
+      return Utf16EncodeMaybeCopyAndReturnLength(
+          PDF_DecodeText(encoded.unsigned_span()), buffer_span);
+    }
+  }
+
+  return Utf16EncodeMaybeCopyAndReturnLength(object->GetUnicodeText(),
+                                             buffer_span);
+}
+
+FPDF_EXPORT unsigned long FPDF_CALLCONV
+FPDFAttachment_GetSpecStringValue(FPDF_ATTACHMENT attachment,
+                                  FPDF_BYTESTRING key,
+                                  FPDF_WCHAR* buffer,
+                                  unsigned long buflen) {
+  CPDF_Object* file = CPDFObjectFromFPDFAttachment(attachment);
+  if (!file) {
+    return 0;
+  }
+
+  CPDF_FileSpec spec(pdfium::WrapRetain(file));
+  RetainPtr<const CPDF_Dictionary> file_spec_dict = spec.GetFileSpecDict();
+  if (!file_spec_dict) {
+    return 0;
+  }
+
+  // SAFETY: required from caller.
+  auto buffer_span = UNSAFE_BUFFERS(SpanFromFPDFApiArgs(buffer, buflen));
+
+  ByteStringView key_view(key);
+  RetainPtr<const CPDF_Object> object = file_spec_dict->GetObjectFor(key_view);
   if (!object || (!object->IsString() && !object->IsName())) {
     // Per API description, return an empty string in these cases.
     return Utf16EncodeMaybeCopyAndReturnLength(WideString(), buffer_span);
