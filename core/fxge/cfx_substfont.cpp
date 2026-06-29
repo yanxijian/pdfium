@@ -10,6 +10,9 @@
 #include <array>
 #include <limits>
 
+#include "core/fxcrt/numerics/safe_math.h"
+#include "core/fxge/fx_font.h"
+
 namespace {
 
 constexpr auto kWeightPow = std::to_array<const uint8_t>({
@@ -131,4 +134,53 @@ int CFX_SubstFont::GetSkew() const {
 
 int CFX_SubstFont::GetSkewCJK() const {
   return GetSkewFromAngle(italic_cjk_ ? -15 : 0);
+}
+
+int CFX_SubstFont::GetEffectiveSkew(bool font_style) const {
+  return (subst_cjk_ && font_style) ? GetSkewCJK() : GetSkew();
+}
+
+int CFX_SubstFont::GetEffectiveWeight(bool font_style) const {
+  return (subst_cjk_ && font_style) ? weight_cjk_ : weight_;
+}
+
+int CFX_SubstFont::GetEmboldenLevelForRender(bool font_style,
+                                             int32_t ft_matrix_xx,
+                                             int32_t ft_matrix_xy) const {
+  if (flag_mm_) {
+    return 0;
+  }
+  const int weight = GetEffectiveWeight(font_style);
+  if (weight <= 400) {
+    return 0;
+  }
+  const size_t index = static_cast<size_t>((weight - 400) / 10);
+  const int level = GetWeightLevel(index);
+  if (level < 0) {
+    return -1;
+  }
+  pdfium::CheckedNumeric<int> checked_level = level;
+  checked_level =
+      checked_level * (abs(ft_matrix_xx) + abs(ft_matrix_xy)) / 36655;
+  return checked_level.ValueOrDefault(0);
+}
+
+int CFX_SubstFont::GetEmboldenLevelForLoad(bool font_style) const {
+  if (flag_mm_) {
+    return 0;
+  }
+  const int weight = GetEffectiveWeight(font_style);
+  if (weight <= 400) {
+    return 0;
+  }
+  const size_t index = static_cast<size_t>((weight - 400) / 10);
+  return GetWeightLevelForLoad(index);
+}
+
+int CFX_SubstFont::GetEstimatedStemV() const {
+  return weight_ / 5;
+}
+
+bool CFX_SubstFont::IsForceBold() const {
+  return weight_ == pdfium::kFontWeightBold;
 }

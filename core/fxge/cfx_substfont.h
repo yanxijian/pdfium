@@ -32,9 +32,43 @@ class CFX_SubstFont {
   int GetSkew() const;
   int GetSkewCJK() const;
 
+  // Returns effective skew angle based on style.
+  int GetEffectiveSkew(bool font_style) const;
+
+  // Returns the effective font weight based on style.
+  int GetEffectiveWeight(bool font_style) const;
+
+  // Returns emboldening level for rendering, or negative on failure.
+  int GetEmboldenLevelForRender(bool font_style,
+                                int32_t ft_matrix_xx,
+                                int32_t ft_matrix_xy) const;
+
+  // Returns emboldening level for path loading.
+  int GetEmboldenLevelForLoad(bool font_style) const;
+
+  // Returns estimated stem width.
+  int GetEstimatedStemV() const;
+
+  const ByteString& GetFamily() const { return family_; }
+  int GetWeight() const { return weight_; }
+  int GetItalicAngle() const { return italic_angle_; }
+  FX_Charset GetCharset() const { return charset_; }
+  bool IsSymbolic() const { return charset_ == FX_Charset::kSymbol; }
+  bool IsMediumWeight() const { return weight_ >= 500 && weight_ <= 600; }
+  bool IsForceBold() const;
+
+  void SetFamily(const ByteString& family) { family_ = family; }
+  void SetCharset(FX_Charset charset) { charset_ = charset; }
+  void SetWeight(int weight) { weight_ = weight; }
+  void SetItalicAngle(int angle) { italic_angle_ = angle; }
+  void SetWeightCJK(int weight) { weight_cjk_ = weight; }
+  void SetSubstCJK(bool subst) { subst_cjk_ = subst; }
+  void SetItalicCJK(bool italic) { italic_cjk_ = italic; }
+
   void SetIsBuiltInGenericFont() { flag_mm_ = true; }
   bool IsBuiltInGenericFont() const { return flag_mm_; }
 
+ private:
   ByteString family_;
   FX_Charset charset_ = FX_Charset::kANSI;
   int weight_ = 0;
@@ -42,8 +76,6 @@ class CFX_SubstFont {
   int weight_cjk_ = 0;
   bool subst_cjk_ = false;
   bool italic_cjk_ = false;
-
- private:
   bool flag_mm_ = false;
 };
 
