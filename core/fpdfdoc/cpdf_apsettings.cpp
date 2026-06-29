@@ -86,16 +86,15 @@ CFX_Color CPDF_ApSettings::GetOriginalColor(ByteStringView entry) const {
 
   size_t dwCount = pEntry->size();
   if (dwCount == 1) {
-    return CFX_Color(CFX_Color::Type::kGray, pEntry->GetFloatAt(0));
+    return CFX_Color::Gray(pEntry->GetFloatAt(0));
   }
   if (dwCount == 3) {
-    return CFX_Color(CFX_Color::Type::kRGB, pEntry->GetFloatAt(0),
-                     pEntry->GetFloatAt(1), pEntry->GetFloatAt(2));
+    return CFX_Color::RGB(pEntry->GetFloatAt(0), pEntry->GetFloatAt(1),
+                          pEntry->GetFloatAt(2));
   }
   if (dwCount == 4) {
-    return CFX_Color(CFX_Color::Type::kCMYK, pEntry->GetFloatAt(0),
-                     pEntry->GetFloatAt(1), pEntry->GetFloatAt(2),
-                     pEntry->GetFloatAt(3));
+    return CFX_Color::CMYK(pEntry->GetFloatAt(0), pEntry->GetFloatAt(1),
+                           pEntry->GetFloatAt(2), pEntry->GetFloatAt(3));
   }
   return CFX_Color();
 }
