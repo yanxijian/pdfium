@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8f72911_cbc97d12",
+        "filename": "core/fxge/cfx_renderdevice.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-29T22:06:23Z",
+      "side": 0,
+      "message": "Since all external callers are being migrated to the static factory methods, consider moving the constructors and two-stage initialization methods (`Attach`, `Create`, etc.) to the `private:` section to enforce the new initialization pattern.\n\nNote that if you make the constructors private, `std::make_unique\u003cCFX_RenderDevice\u003e(...)` inside the factory methods will fail to compile. You can work around this by using direct allocation, e.g., `pdfium::WrapUnique(new CFX_RenderDevice())` (or `absl::WrapUnique`).",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 0
+      },
+      "revId": "f46ca72acdee3478cde05acca658487476ce2e18",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
