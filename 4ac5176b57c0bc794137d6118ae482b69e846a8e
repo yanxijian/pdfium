@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "d584ab6a_f687afb4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-06-29T17:27:45Z",
+      "side": 1,
+      "message": "grammar",
+      "range": {
+        "startLine": 9,
+        "startChar": 57,
+        "endLine": 9,
+        "endChar": 62
+      },
+      "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "39221d96_b8aa9bb2",
@@ -14,6 +37,69 @@
       "writtenOn": "2026-06-28T17:22:04Z",
       "side": 1,
       "message": "Hi guys, small macro replacement for the ISLATINWORD() macro to replace it with a helper. Thanks!",
+      "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e500352_0b21e684",
+        "filename": "core/fpdfapi/page/cpdf_textobject.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-06-29T17:27:45Z",
+      "side": 1,
+      "message": "Maybe this could be a `constexpr` function since it\u0027s simple comparisons.",
+      "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86af794b_0b2d6587",
+        "filename": "core/fpdfapi/page/cpdf_textobject.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-06-29T17:27:45Z",
+      "side": 1,
+      "message": "Unneeded parantheses.",
+      "range": {
+        "startLine": 22,
+        "startChar": 9,
+        "endLine": 22,
+        "endChar": 10
+      },
+      "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fc28b50_129f59b9",
+        "filename": "core/fpdfapi/page/cpdf_textobject.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-06-29T17:27:45Z",
+      "side": 1,
+      "message": "For consistency with line 118, could make const too.",
+      "range": {
+        "startLine": 96,
+        "startChar": 4,
+        "endLine": 96,
+        "endChar": 8
+      },
       "revId": "4ac5176b57c0bc794137d6118ae482b69e846a8e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
