@@ -99,6 +99,19 @@ void CPVT_VariableText::Iterator::SetAt(const CPVT_WordPlace& place) {
   cur_pos_ = place;
 }
 
+float CPVT_VariableText::Iterator::GetLineCaretX(const CPVT_Line& line) {
+  bool is_rtl = false;
+  CPVT_WordPlace old_place = GetWordPlace();
+  if (NextWord()) {
+    CPVT_Word first_word;
+    if (GetWord(first_word) && first_word.is_rtl()) {
+      is_rtl = true;
+    }
+  }
+  SetAt(old_place);
+  return is_rtl ? line.ptLine.x + line.fLineWidth : line.ptLine.x;
+}
+
 bool CPVT_VariableText::Iterator::NextWord() {
   if (cur_pos_ == vt_->GetEndWordPlace()) {
     return false;
