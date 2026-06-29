@@ -40,7 +40,7 @@ class SkCanvas;
 #endif
 
 // Render device. Must be initialized via Attach() or Create() (or
-// InitWithWindowsDevice() on Windows) before use, which installs the
+// CreateForWindowsDC() on Windows) before use, which installs the
 // appropriate device driver. Until then, class methods are not safe to call,
 // or may return invalid results.
 class CFX_RenderDevice final {
@@ -79,10 +79,6 @@ class CFX_RenderDevice final {
 
   void Clear(uint32_t color);
 
-#if BUILDFLAG(IS_WIN)
-  void InitWithWindowsDevice(HDC hDC, CFX_PSFontTracker* ps_font_tracker);
-#endif
-
   static std::unique_ptr<CFX_RenderDevice> CreateForBitmap(
       RetainPtr<CFX_DIBitmap> bitmap);
 
@@ -94,6 +90,12 @@ class CFX_RenderDevice final {
 
   static std::unique_ptr<CFX_RenderDevice>
   CreateForNewBitmap(int width, int height, FXDIB_Format format);
+
+  static std::unique_ptr<CFX_RenderDevice> CreateForNewBitmapWithBackdrop(
+      int width,
+      int height,
+      FXDIB_Format format,
+      RetainPtr<CFX_DIBitmap> backdrop);
 
 #if BUILDFLAG(IS_WIN)
   static std::unique_ptr<CFX_RenderDevice> CreateForWindowsDC(

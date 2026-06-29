@@ -869,16 +869,19 @@ bool CFX_RenderDevice::DrawFillStrokePath(
     }
     backdrop->Copy(bitmap);
   }
-  CFX_RenderDevice bitmap_device;
-  bitmap_device.AttachWithBackdropAndGroupKnockout(bitmap, std::move(backdrop),
-                                                   /*bGroupKnockout=*/true);
+  std::unique_ptr<CFX_RenderDevice> bitmap_device =
+      CFX_RenderDevice::CreateForBitmapWithBackdropAndGroupKnockout(
+          bitmap, std::move(backdrop), /*group_knockout=*/true);
+  if (!bitmap_device) {
+    return false;
+  }
 
   CFX_Matrix matrix;
   if (pObject2Device) {
     matrix = *pObject2Device;
   }
   matrix.Translate(-rect.left, -rect.top);
-  if (!bitmap_device.GetDeviceDriver()->DrawPath(
+  if (!bitmap_device->GetDeviceDriver()->DrawPath(
           path, &matrix, pGraphState, fill_color, stroke_color, fill_options)) {
     return false;
   }
@@ -1699,25 +1702,15 @@ void CFX_RenderDevice::Clear(uint32_t color) {
 #if BUILDFLAG(IS_WIN)
 CFX_RenderDevice::CFX_RenderDevice(HDC hDC,
                                    CFX_PSFontTracker* ps_font_tracker) {
-  InitWithWindowsDevice(hDC, ps_font_tracker);
-}
-
-void CFX_RenderDevice::InitWithWindowsDevice(
-    HDC hDC,
-    CFX_PSFontTracker* ps_font_tracker) {
   const EncoderIface* encoder_iface = CFX_GEModule::Get()->GetEncoderIface();
-  std::unique_ptr<RenderDeviceDriverIface> driver =
-      CreateDriver(hDC, ps_font_tracker, encoder_iface);
-  SetDeviceDriver(std::move(driver));
+  SetDeviceDriver(CreateDriver(hDC, ps_font_tracker, encoder_iface));
 }
 
 // static
 std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForWindowsDC(
     HDC hDC,
     CFX_PSFontTracker* ps_font_tracker) {
-  auto device = std::make_unique<CFX_RenderDevice>();
-  device->InitWithWindowsDevice(hDC, ps_font_tracker);
-  return device;
+  return std::make_unique<CFX_RenderDevice>(hDC, ps_font_tracker);
 }
 #endif
 
@@ -1752,6 +1745,20 @@ std::unique_ptr<CFX_RenderDevice> CFX_RenderDevice::CreateForNewBitmap(
     FXDIB_Format format) {
   auto device = std::make_unique<CFX_RenderDevice>();
   if (!device->Create(width, height, format)) {
+    return nullptr;
+  }
+  return device;
+}
+
+// static
+std::unique_ptr<CFX_RenderDevice>
+CFX_RenderDevice::CreateForNewBitmapWithBackdrop(
+    int width,
+    int height,
+    FXDIB_Format format,
+    RetainPtr<CFX_DIBitmap> backdrop) {
+  auto device = std::make_unique<CFX_RenderDevice>();
+  if (!device->CreateWithBackdrop(width, height, format, std::move(backdrop))) {
     return nullptr;
   }
   return device;
