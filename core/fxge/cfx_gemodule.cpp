@@ -13,7 +13,23 @@ namespace {
 
 CFX_GEModule* g_GEModule = nullptr;
 
+#if BUILDFLAG(IS_WIN)
+WindowsPrintMode g_print_mode_ = WindowsPrintMode::kEmf;
+#endif
+
 }  // namespace
+
+#if BUILDFLAG(IS_WIN)
+// static
+void SetPrintMode(WindowsPrintMode mode) {
+  g_print_mode = mode;
+}
+
+// static
+WindowsPrintMode CFX_GEModule::GetPrintMode() const {
+  return g_print_mode;
+}
+#endif
 
 // static
 void CFX_GEModule::Create(const char** pUserFontPaths,
