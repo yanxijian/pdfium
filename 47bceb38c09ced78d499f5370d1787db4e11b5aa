@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38a70e28_75bc7cb2",
+        "filename": "core/fxge/cfx_color_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-29T20:23:46Z",
+      "side": 1,
+      "message": "Since `operator\u003d\u003d` was updated to ignore inactive components, consider adding a test case here to explicitly verify that behavior. For example:\n```cpp\n  CFX_Color c4(CFX_Color::Type::kGray, 0.7f, 0.5f, 0.5f, 0.5f);\n  EXPECT_EQ(c3, c4); // Equality should ignore fColor2, fColor3, and fColor4\n```",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 0
+      },
+      "revId": "47bceb38c09ced78d499f5370d1787db4e11b5aa",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
