@@ -16,6 +16,57 @@
       "message": "Section 7.11.3 or 7.11.4 (Table 44, I think) for reference.",
       "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c34b7cb7_376896b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-29T17:02:27Z",
+      "side": 1,
+      "message": "Some more changes to make, making this WIP in the mean time.",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a250a087_572bd64a",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-29T17:02:27Z",
+      "side": 1,
+      "message": "Oops - Hungarian. Marking it as WIP and will patch it tmrw.",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8598dd79_600a28d2",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-29T17:02:27Z",
+      "side": 1,
+      "message": "Some entries are byte string maybe use the dict\u0027s GetBytestringFor() (or there was a method named something similar to that).",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
