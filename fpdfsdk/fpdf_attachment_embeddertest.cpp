@@ -439,3 +439,50 @@ TEST_F(FPDFAttachmentEmbedderTest, GetSubtypeInvalid) {
   EXPECT_EQ(2u * (strlen(kExpectedSubtype) + 1),
             FPDFAttachment_GetSubtype(attachment, nullptr, 10));
 }
+
+TEST_F(FPDFAttachmentEmbedderTest, FileSpecDictHasKey) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments.pdf"));
+  FPDF_ATTACHMENT attachment = FPDFDoc_GetAttachment(document(), 0);
+  ASSERT_TRUE(attachment);
+
+  EXPECT_TRUE(FPDFAttachment_SpecHasKey(attachment, "Desc"));
+  // Also test with a nonexistent key
+  EXPECT_FALSE(FPDFAttachment_SpecHasKey(attachment, "Potato"));
+}
+
+TEST_F(FPDFAttachmentEmbedderTest, GetSpecKeyType) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments.pdf"));
+  FPDF_ATTACHMENT attachment = FPDFDoc_GetAttachment(document(), 0);
+  ASSERT_TRUE(attachment);
+
+  ASSERT_TRUE(FPDFAttachment_SpecHasKey(attachment, "Desc"));
+  EXPECT_EQ(FPDF_OBJECT_STRING,
+            FPDFAttachment_GetSpecValueType(attachment, "Desc"));
+}
+
+TEST_F(FPDFAttachmentEmbedderTest, EditSpecKey) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments.pdf"));
+  FPDF_ATTACHMENT attachment = FPDFDoc_GetAttachment(document(), 0);
+  ASSERT_TRUE(attachment);
+
+  ASSERT_TRUE(FPDFAttachment_SpecHasKey(attachment, "Desc"));
+  std::vector<FPDF_WCHAR> buf(128);
+  // Empty string
+  EXPECT_EQ(2u, FPDFAttachment_GetSpecStringValue(attachment, "Desc",
+                                                  buf.data(), buf.size()));
+
+  ScopedFPDFWideString title = GetFPDFWideString(L"Hello, World!");
+  EXPECT_TRUE(
+      FPDFAttachment_SetSpecStringValue(attachment, "Desc", title.get()));
+
+  EXPECT_EQ(2u * (13 + 1), FPDFAttachment_GetSpecStringValue(
+                               attachment, "Desc", buf.data(), buf.size()));
+  EXPECT_EQ("Hello, World!", GetPlatformString(buf.data()));
+  title = GetFPDFWideString(L"Potato");
+  EXPECT_TRUE(
+      FPDFAttachment_SetSpecStringValue(attachment, "Desc", title.get()));
+
+  EXPECT_EQ(2u * (6 + 1), FPDFAttachment_GetSpecStringValue(
+                              attachment, "Desc", buf.data(), buf.size()));
+  EXPECT_EQ("Potato", GetPlatformString(buf.data()));
+}

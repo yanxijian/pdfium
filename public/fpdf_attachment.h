@@ -74,6 +74,17 @@ FPDFAttachment_GetName(FPDF_ATTACHMENT attachment,
                        unsigned long buflen);
 
 // Experimental API.
+// Check if the file spec dictionary of |attachment| has |key| as a key.
+//
+//   attachment - handle to an attachment.
+//   key        - the key to look for, encoded in UTF-8.
+//
+// Returns true if |key| exists.
+
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFAttachment_SpecHasKey(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key);
+
+// Experimental API.
 // Check if the params dictionary of |attachment| has |key| as a key.
 //
 //   attachment - handle to an attachment.
@@ -95,6 +106,18 @@ FPDF_EXPORT FPDF_OBJECT_TYPE FPDF_CALLCONV
 FPDFAttachment_GetValueType(FPDF_ATTACHMENT attachment, FPDF_BYTESTRING key);
 
 // Experimental API.
+// Get the type of the value corresponding to |key| in the file spec dictionary
+// of the embedded |attachment|.
+//
+//   attachment - handle to an attachment.
+//   key        - the key to look for, encoded in UTF-8.
+//
+// Returns the type of the dictionary value.
+FPDF_EXPORT FPDF_OBJECT_TYPE FPDF_CALLCONV
+FPDFAttachment_GetSpecValueType(FPDF_ATTACHMENT attachment,
+                                FPDF_BYTESTRING key);
+
+// Experimental API.
 // Set the string value corresponding to |key| in the params dictionary of the
 // embedded file |attachment|, overwriting the existing value if any. The value
 // type should be FPDF_OBJECT_STRING after this function call succeeds.
@@ -108,6 +131,21 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
 FPDFAttachment_SetStringValue(FPDF_ATTACHMENT attachment,
                               FPDF_BYTESTRING key,
                               FPDF_WIDESTRING value);
+
+// Experimental API.
+// Set the string value corresponding to |key| in the file spec dictionary of
+// the embedded file |attachment|, overwriting the existing value if any. The
+// value type should be FPDF_OBJECT_STRING after this function call succeeds.
+//
+//   attachment - handle to an attachment.
+//   key        - the key to the dictionary entry, encoded in UTF-8.
+//   value      - the string value to be set, encoded in UTF-16LE.
+//
+// Returns true if successful.
+FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV
+FPDFAttachment_SetSpecStringValue(FPDF_ATTACHMENT attachment,
+                                  FPDF_BYTESTRING key,
+                                  FPDF_WIDESTRING value);
 
 // Experimental API.
 // Get the string value corresponding to |key| in the params dictionary of the
@@ -130,6 +168,26 @@ FPDFAttachment_GetStringValue(FPDF_ATTACHMENT attachment,
                               FPDF_BYTESTRING key,
                               FPDF_WCHAR* buffer,
                               unsigned long buflen);
+
+// Experimental API.
+// Get the string value corresponding to |key| in the file spec dictionary of
+// the embedded file |attachment|. |buffer| is only modified if |buflen| is
+// longer than the length of the string value, if attachment is valid or the key
+// exists in the dictionary. In all 3 of these cases, 0 is returned. Similarly
+// to the above API, 2 is returned if the value in the dictionary is not a
+// string.
+//
+//   attachment - handle to an attachment.
+//   key        - the key to the requested string value, encoded in UTF-8.
+//   buffer     - buffer for holding the string value encoded in UTF-16LE.
+//   buflen     - length of the buffer in bytes.
+//
+// Returns the length of the dictionary value string in bytes.
+FPDF_EXPORT unsigned long FPDF_CALLCONV
+FPDFAttachment_GetSpecStringValue(FPDF_ATTACHMENT attachment,
+                                  FPDF_BYTESTRING key,
+                                  FPDF_WCHAR* buffer,
+                                  unsigned long buflen);
 
 // Experimental API.
 // Set the file data of |attachment|, overwriting the existing file data if any.

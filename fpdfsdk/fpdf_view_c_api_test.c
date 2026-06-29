@@ -110,12 +110,16 @@ int CheckPDFiumCApi() {
     // fpdf_attachment.h
     CHK(FPDFAttachment_GetFile);
     CHK(FPDFAttachment_GetName);
+    CHK(FPDFAttachment_GetSpecStringValue);
+    CHK(FPDFAttachment_GetSpecValueType);
     CHK(FPDFAttachment_GetStringValue);
     CHK(FPDFAttachment_GetSubtype);
     CHK(FPDFAttachment_GetValueType);
     CHK(FPDFAttachment_HasKey);
     CHK(FPDFAttachment_SetFile);
+    CHK(FPDFAttachment_SetSpecStringValue);
     CHK(FPDFAttachment_SetStringValue);
+    CHK(FPDFAttachment_SpecHasKey);
     CHK(FPDFDoc_AddAttachment);
     CHK(FPDFDoc_DeleteAttachment);
     CHK(FPDFDoc_GetAttachment);
