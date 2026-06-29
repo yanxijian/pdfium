@@ -16,6 +16,24 @@
       "message": "Here\u0027s another random newline change that should be avoided in this CL.",
       "revId": "f4426c31e81865a25e24f4d8102538442bb59fb2",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1acf0de5_c5675d9a",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-29T17:13:48Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "4b5d3c04_204511e5",
+      "revId": "f4426c31e81865a25e24f4d8102538442bb59fb2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
