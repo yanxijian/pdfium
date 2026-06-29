@@ -15,6 +15,7 @@
 #include "core/fpdfapi/render/cpdf_renderoptions.h"
 #include "core/fpdfapi/render/cpdf_textrenderer.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
 #include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/check.h"
@@ -91,6 +92,10 @@ void CPWL_EditImpl::Iterator::SetAt(const CPVT_WordPlace& place) {
 
 const CPVT_WordPlace& CPWL_EditImpl::Iterator::GetAt() const {
   return vt_iterator_->GetWordPlace();
+}
+
+float CPWL_EditImpl::Iterator::GetLineCaretX(const CPVT_Line& line) {
+  return vt_iterator_->GetLineCaretX(line);
 }
 
 class CPWL_EditImpl::Provider final : public CPVT_VariableText::Provider {
@@ -1236,7 +1241,7 @@ void CPWL_EditImpl::ScrollToCaret() {
     ptFoot.x = ptHead.x;
     ptFoot.y = word.DescentY();
   } else if (pIterator->GetLine(line)) {
-    ptHead.x = line.ptLine.x;
+    ptHead.x = pIterator->GetLineCaretX(line);
     ptHead.y = line.ptLine.y + line.fLineAscent;
     ptFoot.x = ptHead.x;
     ptFoot.y = line.ptLine.y + line.fLineDescent;
@@ -1404,7 +1409,7 @@ void CPWL_EditImpl::SetCaretInfo() {
         ptFoot.x = ptHead.x;
         ptFoot.y = word.DescentY();
       } else if (pIterator->GetLine(line)) {
-        ptHead.x = line.ptLine.x;
+        ptHead.x = pIterator->GetLineCaretX(line);
         ptHead.y = line.ptLine.y + line.fLineAscent;
         ptFoot.x = ptHead.x;
         ptFoot.y = line.ptLine.y + line.fLineDescent;
