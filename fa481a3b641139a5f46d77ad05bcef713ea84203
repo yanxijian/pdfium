@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93fac6ba_cdc58588",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:48:54Z",
+      "side": 1,
+      "message": "There\u0027s room on the\nprevious line.",
+      "revId": "fa481a3b641139a5f46d77ad05bcef713ea84203",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74b75195_44ebe71d",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:48:54Z",
+      "side": 1,
+      "message": "Can this be simplified as well? Also line 700.",
+      "range": {
+        "startLine": 673,
+        "startChar": 34,
+        "endLine": 673,
+        "endChar": 72
+      },
+      "revId": "fa481a3b641139a5f46d77ad05bcef713ea84203",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
