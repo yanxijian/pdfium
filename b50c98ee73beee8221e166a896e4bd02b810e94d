@@ -34,6 +34,24 @@
       "parentUuid": "5dff797b_2a0987be",
       "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fe222f2_59860b1c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 40
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T11:22:47Z",
+      "side": 1,
+      "message": "Update 2: Found the getters for fonts:\n\n(gemodule\u0027s `GetFontMgr()` with cfx_fontmgr\u0027s `GetFontBackend()`)\n\nand for paths:\ngemodule\u0027s `GetUserFontPaths()`\n\nWill update it to use these instead!",
+      "parentUuid": "7b9f87ff_9f4c19cc",
+      "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
