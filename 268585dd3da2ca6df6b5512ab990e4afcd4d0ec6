@@ -135,6 +135,24 @@
       "parentUuid": "227d7ce4_4cee662c",
       "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97801fa1_32bb3f1d",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:03:19Z",
+      "side": 1,
+      "message": "Part of why I ask is that none of the existing callers CHECK(), so the concern is that there will be cases where the CHECK() does not hold and users will experience a crash due to a CHECK() failure.",
+      "parentUuid": "9f203354_bec84a8d",
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
