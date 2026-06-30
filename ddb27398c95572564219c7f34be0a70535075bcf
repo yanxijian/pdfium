@@ -122,6 +122,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4634c474_600f6c1f",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T20:22:58Z",
+      "side": 1,
+      "message": "Right, and I\u0027m reverting that change to make it GetEffectiveWeight.  Which means I don\u0027t understand the original comment which I parsed as call GetWeight(void) here, but that doesn\u0027t seem to be functionally correct.",
+      "parentUuid": "e7d8d47d_a4a1cb60",
+      "range": {
+        "startLine": 792,
+        "startChar": 40,
+        "endLine": 792,
+        "endChar": 70
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "09ddc551_4333681a",
         "filename": "core/fxge/cfx_face.cpp",
         "patchSetId": 9
