@@ -54,6 +54,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2602774_90040e2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T18:29:24Z",
+      "side": 1,
+      "message": "And just to make it even more complicated, to prevent future breakage, we probably need GetBrotliEnabled() to write \n\n```\nclass BrotliEmbedderTest : public EmbedderTest {\n\n  BrotliEmbedderTest::Setup() {\n    auto* environment \u003d EmbedderTestEnvironment::GetInstance();\n    old_brotli_enabled_ \u003d environment-\u003eGetBrotliEnabled();\n    environment-\u003eTearDown();\n    environment-\u003eSet\n    environment-\u003eSetBrotliEnabled(true);\n    environment-\u003eSetUp();\n  }\n\n  BrotliEmbedderTest::Teardown() {\n    auto* environment \u003d EmbedderTestEnvironment::GetInstance();\n    environment-\u003eTearDown();\n    environment-\u003eSetBrotliEnabled(old_brotli_enabled_);\n    environment-\u003eSetUp();\n  }\n  ...\n  bool old_brotli_enabled_;\n};\n\n```\n\nAnd in case it brotli enabled by default in the future, we likely need NoBrotliEmbedderTest as well, identical but with a (false) call.",
+      "parentUuid": "5a63f7ba_e1d403b0",
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e6174883_6b8fe7c4",
