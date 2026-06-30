@@ -52,6 +52,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbd00889_b1a07518",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T02:48:30Z",
+      "side": 1,
+      "message": "@tsepez@chromium.org If I may add on, the function right above the diff I added follows a similar pattern.",
+      "parentUuid": "92c12b7b_ce1baf29",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a250a087_572bd64a",
