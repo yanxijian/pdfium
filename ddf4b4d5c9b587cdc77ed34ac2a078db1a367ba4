@@ -125,6 +125,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d0e6937_2a57b38c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T05:14:56Z",
+      "side": 1,
+      "message": "If this hypothetical PDFium-based viewer is a good viewer, it would follow best practices and load different PDFs in separate processes. Each process can initialize PDFium differently to their liking.",
+      "parentUuid": "a95e7b78_17aa5051",
+      "revId": "ddf4b4d5c9b587cdc77ed34ac2a078db1a367ba4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c8d3675d_9e62426d",
         "filename": "core/fxcodec/brotli/brotli_decoder.cpp",
         "patchSetId": 26
