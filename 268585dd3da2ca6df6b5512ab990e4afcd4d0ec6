@@ -117,6 +117,24 @@
       "parentUuid": "8728c6ed_97b00e9c",
       "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f203354_bec84a8d",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T18:28:52Z",
+      "side": 1,
+      "message": "Looking at the file some more, it looks like this is copied over from line 670, so this comment is really a critism of the code that existed there. So there are 3 potential ways to handle this:\n\n1. Ignore the return value.\n2. Have conditional behavior based on the return value.\n3. CHECK() the return value.\n\nIf the caller does a CHECK(), that means it is saying the return value will never ever be false. What guarantees that?",
+      "parentUuid": "227d7ce4_4cee662c",
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
