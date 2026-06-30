@@ -41,6 +41,48 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a35fa0a4_e3d0b291",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T21:37:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "12137de3_43643603",
+      "revId": "6c888c330342703416c28f2eee2157e2e7e2cb06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cdeb83e_f4950e0d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T21:37:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3274e0f_9e5d0d44",
+      "range": {
+        "startLine": 11,
+        "startChar": 44,
+        "endLine": 11,
+        "endChar": 54
+      },
+      "revId": "6c888c330342703416c28f2eee2157e2e7e2cb06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92ffb82e_8a54a66f",
@@ -54,6 +96,24 @@
       "writtenOn": "2026-06-30T21:06:17Z",
       "side": 1,
       "message": "More in this file.",
+      "revId": "6c888c330342703416c28f2eee2157e2e7e2cb06",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15494e0f_a12cbcf2",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 665,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T21:37:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92ffb82e_8a54a66f",
       "revId": "6c888c330342703416c28f2eee2157e2e7e2cb06",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
