@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c0a220e_66aae626",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T20:01:51Z",
+      "side": 1,
+      "message": "Similar to comments in prior CLs, it would be prefer to add tests first, or add tests with new code, rather than add tests separately after.",
+      "revId": "17c9b55652af49550d633b8e02f7075af174694a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
