@@ -439,3 +439,27 @@ TEST_F(FPDFAttachmentEmbedderTest, GetSubtypeInvalid) {
   EXPECT_EQ(2u * (strlen(kExpectedSubtype) + 1),
             FPDFAttachment_GetSubtype(attachment, nullptr, 10));
 }
+
+TEST_F(FPDFAttachmentEmbedderTest, EditSpecKey) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments.pdf"));
+  FPDF_ATTACHMENT attachment = FPDFDoc_GetAttachment(document(), 0);
+  ASSERT_TRUE(attachment);
+
+  std::vector<FPDF_WCHAR> buf(128);
+  // Empty string with null terminator (hence 2u).
+  EXPECT_EQ(
+      2u, FPDFAttachment_GetAttachmentDesc(attachment, buf.data(), buf.size()));
+
+  ScopedFPDFWideString title = GetFPDFWideString(L"Hello, World!");
+  EXPECT_TRUE(FPDFAttachment_SetAttachmentDesc(attachment, title.get()));
+
+  EXPECT_EQ(2u * (13 + 1), FPDFAttachment_GetAttachmentDesc(
+                               attachment, buf.data(), buf.size()));
+  EXPECT_EQ("Hello, World!", GetPlatformString(buf.data()));
+  title = GetFPDFWideString(L"Potato");
+  EXPECT_TRUE(FPDFAttachment_SetAttachmentDesc(attachment, title.get()));
+
+  EXPECT_EQ(2u * (6 + 1), FPDFAttachment_GetAttachmentDesc(
+                              attachment, buf.data(), buf.size()));
+  EXPECT_EQ("Potato", GetPlatformString(buf.data()));
+}
