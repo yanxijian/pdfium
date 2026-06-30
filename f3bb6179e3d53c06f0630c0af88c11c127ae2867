@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fee5d6c9_89f77f6e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T22:29:17Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 7,
+        "startChar": 20,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "f3bb6179e3d53c06f0630c0af88c11c127ae2867",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "fc3fc516_a5e434c8",
@@ -14,6 +37,41 @@
       "writtenOn": "2026-06-30T22:18:31Z",
       "side": 1,
       "message": "Follow on from your excellent suggestion in previous cl.",
+      "revId": "f3bb6179e3d53c06f0630c0af88c11c127ae2867",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "513c4fa4_5b203c0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T22:29:17Z",
+      "side": 1,
+      "message": "Hooray for more sensible names.",
+      "parentUuid": "fc3fc516_a5e434c8",
+      "revId": "f3bb6179e3d53c06f0630c0af88c11c127ae2867",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "142158f8_a34d2cc7",
+        "filename": "core/fxge/text_char_pos.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T22:29:17Z",
+      "side": 1,
+      "message": "BTW, structs should then have no trailing underscores in their member variable names. Another CL?",
       "revId": "f3bb6179e3d53c06f0630c0af88c11c127ae2867",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
