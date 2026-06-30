@@ -194,6 +194,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "febe272d_530b81f0",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:17:59Z",
+      "side": 1,
+      "message": "The original code was: `subst_font-\u003eweight_`\n\nThe first patchset I reviewed had `subst_font-\u003eGetEffectiveWeight(font_style)`, but I didn\u0027t think that was the correct replacement. Instead, based on that patchset, I thought `subst_font-\u003eGetWeight()` would have been the correct replacement. I still think that\u0027s the case. See the other AdjustVariationParams() call around line 900.\n\nMoreover, these CLs are quite big and they would be easier to review if they were smaller.",
+      "parentUuid": "612cdf0d_618e5dc7",
+      "range": {
+        "startLine": 792,
+        "startChar": 40,
+        "endLine": 792,
+        "endChar": 70
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "09ddc551_4333681a",
         "filename": "core/fxge/cfx_face.cpp",
         "patchSetId": 9
