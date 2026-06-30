@@ -35,6 +35,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b728dd8_bce56c00",
+        "filename": "core/fpdfapi/render/cpdf_imagerenderer.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T21:15:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77b67aa2_22c27bcd",
+      "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "53881f95_d79b856d",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-06-30T21:02:15Z",
       "side": 1,
       "message": "Needs to UnPreMultiply().",
+      "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2dc374bc_90739cb8",
+        "filename": "fpdfsdk/fpdf_progressive.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T21:15:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53881f95_d79b856d",
       "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
