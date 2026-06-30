@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "588a83bf_51f81cde",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:43:55Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 9
+      },
+      "revId": "9f41aac0536c5764c8b40def3ad70e498061b1f2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a63bd708_f25767af",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:43:55Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 12,
+        "startChar": 19,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "9f41aac0536c5764c8b40def3ad70e498061b1f2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f4356f6_512bb8ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:43:55Z",
+      "side": 1,
+      "message": "1. It may be worth noting that form_textfield_ltr.in and form_textfield_rtl.in are actually identical. The only difference is the .evt files.\n\n2. Why have 2 test PDFs with a single text field each, instead of a single test PDF with 2 text fields? A test could click into the first text field, write LTR text, and then click into the second field and write RTL text. Is this approach not as good for some reason?",
+      "revId": "9f41aac0536c5764c8b40def3ad70e498061b1f2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65b8b5d0_41c5cbe0",
+        "filename": "testing/resources/pixel/form_textfield_ltr.evt",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:43:55Z",
+      "side": 1,
+      "message": "BTW, .evt files can have `# comments`. Please write out what this does.",
+      "revId": "9f41aac0536c5764c8b40def3ad70e498061b1f2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
