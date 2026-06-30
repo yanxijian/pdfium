@@ -16,6 +16,23 @@
       "message": "Something the bot noticed while I was looking for something else ...",
       "revId": "fdd7accf4ed0a4a00751d7bfcbd4a99283fc3031",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd885687_4b137473",
+        "filename": "core/fxcodec/jbig2/jbig2_arith_decoder.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T23:01:20Z",
+      "side": 1,
+      "message": "Should this getter also return uint8_t?",
+      "revId": "fdd7accf4ed0a4a00751d7bfcbd4a99283fc3031",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
