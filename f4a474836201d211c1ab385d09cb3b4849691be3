@@ -24,6 +24,23 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbeffa45_490e0be2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T19:56:27Z",
+      "side": 1,
+      "message": "BTW, in the interest of landing CLs and not having to maintain a long CL chain, I would suggest unchaining this CL and landing it first. It doesn\u0027t depend on its parent CLs and it\u0027s only a refactor.",
+      "revId": "f4a474836201d211c1ab385d09cb3b4849691be3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8bfd9f47_cf5795e8",
