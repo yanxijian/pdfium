@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d358723_dd9f4624",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T20:14:22Z",
+      "side": 1,
+      "message": "I was saying there\u0027s an existing GetWeight(void), not to rename GetEffectiveWeight() to GetWeight(bool). Alternatively, I guess this could make GetWeight(void) private?",
+      "parentUuid": "f63d8cbf_6080aa22",
+      "range": {
+        "startLine": 792,
+        "startChar": 40,
+        "endLine": 792,
+        "endChar": 70
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "09ddc551_4333681a",
         "filename": "core/fxge/cfx_face.cpp",
         "patchSetId": 9
@@ -161,6 +185,24 @@
       "side": 1,
       "message": "Not quite.  Called in tests, but tests always pass false, too.",
       "parentUuid": "e8048ed5_7fa3e689",
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebe724ef_aa9e3d65",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T20:14:22Z",
+      "side": 1,
+      "message": "Yes, but I was ignoring the tests and looking at what is needed in production code first.",
+      "parentUuid": "516f95b7_e4fb4c4b",
       "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
