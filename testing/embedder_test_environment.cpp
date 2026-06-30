@@ -63,6 +63,31 @@ void EmbedderTestEnvironment::SetUp() {
   test_fonts_.InstallFontMapper();
 }
 
+void EmbedderTestEnvironment::SetUpBrotli(bool brotli) {
+  FPDF_LIBRARY_CONFIG config = {
+      .version = 6,
+      .m_pUserFontPaths = test_fonts_.font_paths(),
+
+#ifdef PDF_ENABLE_V8
+      .m_pIsolate = V8TestEnvironment::GetInstance()->isolate(),
+      .m_v8EmbedderSlot = 0,
+      .m_pPlatform = V8TestEnvironment::GetInstance()->platform(),
+#else   // PDF_ENABLE_V8
+      .m_pIsolate = nullptr,
+      .m_v8EmbedderSlot = 0,
+      .m_pPlatform = nullptr,
+#endif  // PDF_ENABLE_V8
+
+      .m_RendererType = renderer_type_,
+      .m_FontLibraryType = fontations_ ? FPDF_FONTBACKENDTYPE_FONTATIONS
+                                       : FPDF_FONTBACKENDTYPE_FREETYPE,
+      .m_BrotliEnabled = brotli};
+
+  FPDF_InitLibraryWithConfig(&config);
+
+  test_fonts_.InstallFontMapper();
+}
+
 void EmbedderTestEnvironment::TearDown() {
   FPDF_DestroyLibrary();
 }
