@@ -1,0 +1,199 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dea48e21_d13d36c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T17:19:20Z",
+      "side": 1,
+      "message": "I\u0027m trying to imagine how to make this more elegant. I think the answer lies in adding state to EmbedderTestEnvironment to track brotli enablement, and adding a method to control this value (on/off).  Then you can have just ordinary embeddertests test the no-brotli case, and the brotliembeddertest overrides setup() amd teardown() to bounce the library calling the new method in-between. See the link I provided below for how some other tests bounce the libraray.\n\nI am very sorry that this is such elaborate plumbing.  But these things always are no fun.",
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6174883_6b8fe7c4",
+        "filename": "core/fxcodec/BUILD.gn",
+        "patchSetId": 43
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T17:19:20Z",
+      "side": 1,
+      "message": "super-nit: If you put a trailing comma here, git cl format will put these one per line.  Generally, we like this because the next time we add something, we dont have to splice the comma on the previous line.",
+      "range": {
+        "startLine": 191,
+        "startChar": 59,
+        "endLine": 191,
+        "endChar": 60
+      },
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26e115d2_da5d7178",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 43
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T17:19:20Z",
+      "side": 1,
+      "message": "Unfortunately, I think we need to come up with a way to bounce the library without resorting to duplicating this code.  Generally, other tests bounce the library via e.g. https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/fpdfsdk/fpdf_sysfontinfo_embeddertest.cpp;drc\u003d75bb8fdc83f77fdf506208bacd1a1c48e16e8c35;l\u003d259",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "3d34ea62_5efdb32a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 15,
+                "startChar": 0,
+                "endLine": 16,
+                "endChar": 0
+              },
+              "replacement": "\nFPDF_LIBRARY_CONFIG GetBaseEmbedderConfig(int version \u003d 6) {\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 17,
+                "startChar": 0,
+                "endLine": 18,
+                "endChar": 0
+              },
+              "replacement": "  return {\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 33,
+                "startChar": 0,
+                "endLine": 34,
+                "endChar": 0
+              },
+              "replacement": "      .m_BrotliEnabled \u003d true,  // Default, can be overridden.\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "}\n\nvoid SetUpBrotli(bool brotli \u003d true, int version \u003d 6) {\n  FPDF_LIBRARY_CONFIG config \u003d GetBaseEmbedderConfig(version);\n  config.m_BrotliEnabled \u003d brotli;\n\n"
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26b9f338_24cd51d9",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 43
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T17:19:20Z",
+      "side": 1,
+      "message": "doesn\u0027t this have to happen before open?",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 16
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "4efa3f8f_8e441dca",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 55,
+                "startChar": 0,
+                "endLine": 56,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "  ASSERT_TRUE(OpenDocument(\"hello_world_brotli.pdf\"));\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5981842_d7806113",
+        "filename": "testing/embedder_test_environment.cpp",
+        "patchSetId": 43
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T17:19:20Z",
+      "side": 1,
+      "message": "nit: maybe call the new method here, too.",
+      "range": {
+        "startLine": 63,
+        "startChar": 2,
+        "endLine": 63,
+        "endChar": 34
+      },
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
