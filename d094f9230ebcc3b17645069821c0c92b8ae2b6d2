@@ -16,6 +16,40 @@
       "message": "Last in chain!",
       "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77b67aa2_22c27bcd",
+        "filename": "core/fpdfapi/render/cpdf_imagerenderer.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:02:15Z",
+      "side": 1,
+      "message": "Since there are no crash reports about this method, I expected the pre-existing CHECK() to hold. As such, does this ever happen? Can this also be a CHECK()?",
+      "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53881f95_d79b856d",
+        "filename": "fpdfsdk/fpdf_progressive.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:02:15Z",
+      "side": 1,
+      "message": "Needs to UnPreMultiply().",
+      "revId": "d094f9230ebcc3b17645069821c0c92b8ae2b6d2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }

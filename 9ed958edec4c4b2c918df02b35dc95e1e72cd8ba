@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1948557_f2054fcf",
+        "filename": "core/fpdfapi/render/cpdf_renderstatus.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 1019,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-06-30T21:02:15Z",
+      "side": 0,
+      "message": "Keep the TODO.",
+      "revId": "9ed958edec4c4b2c918df02b35dc95e1e72cd8ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
