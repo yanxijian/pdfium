@@ -141,6 +141,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f177b6ce_e4ba65d5",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T16:18:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a250a087_572bd64a",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8598dd79_600a28d2",
@@ -154,6 +172,24 @@
       "writtenOn": "2026-06-29T17:02:27Z",
       "side": 1,
       "message": "Some entries are byte string maybe use the dict\u0027s GetBytestringFor() (or there was a method named something similar to that).",
+      "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02dc2ffe_611c6a0e",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T16:18:31Z",
+      "side": 1,
+      "message": "Moot - /Desc only, maybe add the other stuff later",
+      "parentUuid": "8598dd79_600a28d2",
       "revId": "c98259bedf6f055894164c86a67e0967ca0d3e17",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
