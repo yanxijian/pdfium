@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f63d8cbf_6080aa22",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "538a4c4d_df66e5ae",
+      "range": {
+        "startLine": 792,
+        "startChar": 40,
+        "endLine": 792,
+        "endChar": 70
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "09ddc551_4333681a",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-30T03:43:02Z",
       "side": 1,
       "message": "Unnecessary change unless GetSkew() is to be made private?",
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aebb3d6a_0eeff613",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 891,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Made private,",
+      "parentUuid": "09ddc551_4333681a",
       "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -64,6 +106,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9f6720c_61ae012f",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 902,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a4c0a82_48248032",
+      "range": {
+        "startLine": 902,
+        "startChar": 0,
+        "endLine": 902,
+        "endChar": 64
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8048ed5_7fa3e689",
@@ -77,6 +143,24 @@
       "writtenOn": "2026-06-30T03:43:02Z",
       "side": 1,
       "message": "This is the only GetEmboldenLevelForLoad() caller and it passes in false.",
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "516f95b7_e4fb4c4b",
+        "filename": "core/fxge/cfx_face.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Not quite.  Called in tests, but tests always pass false, too.",
+      "parentUuid": "e8048ed5_7fa3e689",
       "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -104,6 +188,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1de8ff4c_db40a834",
+        "filename": "core/fxge/cfx_substfont.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done, requires fx_font.h in header for kConstant",
+      "parentUuid": "d2dd5c52_33641657",
+      "range": {
+        "startLine": 182,
+        "startChar": 0,
+        "endLine": 188,
+        "endChar": 1
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f4dd0999_8ede9c4b",
@@ -117,6 +225,24 @@
       "writtenOn": "2026-06-30T03:43:02Z",
       "side": 1,
       "message": "Some of these can be private now?",
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "748e346d_5a0fbe92",
+        "filename": "core/fxge/cfx_substfont.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4dd0999_8ede9c4b",
       "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -161,6 +287,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34756e3b_700822f3",
+        "filename": "core/fxge/cfx_substfont.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a01446e_9d22ff43",
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54c33b44_daa63eb7",
@@ -174,6 +318,30 @@
       "writtenOn": "2026-06-30T03:43:02Z",
       "side": 1,
       "message": "IsBold?",
+      "range": {
+        "startLine": 58,
+        "startChar": 7,
+        "endLine": 58,
+        "endChar": 18
+      },
+      "revId": "ddb27398c95572564219c7f34be0a70535075bcf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b123577_f0994a02",
+        "filename": "core/fxge/cfx_substfont.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T19:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54c33b44_daa63eb7",
       "range": {
         "startLine": 58,
         "startChar": 7,
