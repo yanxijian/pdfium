@@ -63,6 +63,10 @@ void EmbedderTestEnvironment::SetUp() {
   test_fonts_.InstallFontMapper();
 }
 
+void EmbedderTestEnvironment::InstallFontMapper() {
+  test_fonts_.InstallFontMapper();
+}
+
 void EmbedderTestEnvironment::TearDown() {
   FPDF_DestroyLibrary();
 }
