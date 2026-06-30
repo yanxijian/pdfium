@@ -153,6 +153,24 @@
       "parentUuid": "9f203354_bec84a8d",
       "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edc896f9_33cecce0",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 725,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T23:52:28Z",
+      "side": 1,
+      "message": "Removed CHECK, and wrapped GetLine() in if block for both files. If fails, we just don\u0027t update ptNew.",
+      "parentUuid": "97801fa1_32bb3f1d",
+      "revId": "268585dd3da2ca6df6b5512ab990e4afcd4d0ec6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }

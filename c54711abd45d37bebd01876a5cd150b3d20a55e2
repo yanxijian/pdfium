@@ -16,6 +16,24 @@
       "message": "I see this CL has been trying to apply the same changes to core/fpdfdoc/cpdf_generateap.cpp and fpdfsdk/cpdfsdk_appstream.cpp. Here, this CL added the else-block, but the corresponding code in cpdf_generateap.cpp around line 405 doesn\u0027t have this change. Why is that?",
       "revId": "c54711abd45d37bebd01876a5cd150b3d20a55e2",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4827b8ef_33e17490",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 16
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T23:52:28Z",
+      "side": 1,
+      "message": "Originally added the else block while experimenting to force the coordinate update, I forgot to duplicate/add it to cpdf_generate.cpp. Oversight on my part. Also, moved `oldplace \u003d place` to the end of loop to avoid duplicating in both branches",
+      "parentUuid": "446536bd_65b9392e",
+      "revId": "c54711abd45d37bebd01876a5cd150b3d20a55e2",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
