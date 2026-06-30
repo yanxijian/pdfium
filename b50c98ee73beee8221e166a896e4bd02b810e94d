@@ -16,6 +16,24 @@
       "message": "Ok, somehow fixed it by editing embedder_test_environment and adding a function to which I suppose is *NOT* the right way to fix this. Any ideas that I might have missed?\n\nMaybe a future thing: but it would be so much cleaner if the variables (typeface_, renderer_ etc were not private).\n\nWhile yes, Genmodule was an option, it required adding //skia as a dependency, and as for typeface_ and most importantly `test_fonts_.font_paths()`, I was totally unsure on how to get these.\n\nPlease do let me know if there is a better way to do this as the current approach doesn\u0027t seem right.",
       "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b9f87ff_9f4c19cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 40
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T11:13:49Z",
+      "side": 1,
+      "message": "Update:\n\nI **just** realized `BrotliDecoder::SetBrotliEnabled()` exists.\n\nWhile I could use this directly for the test, it leaves the process of \"testing the library config\" untested.\n\nDo let me know though if this makes more sense.",
+      "parentUuid": "5dff797b_2a0987be",
+      "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
