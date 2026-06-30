@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9afaf70_4add1e96",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T22:01:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "93fac6ba_cdc58588",
+      "revId": "fa481a3b641139a5f46d77ad05bcef713ea84203",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74b75195_44ebe71d",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-30T21:48:54Z",
       "side": 1,
       "message": "Can this be simplified as well? Also line 700.",
+      "range": {
+        "startLine": 673,
+        "startChar": 34,
+        "endLine": 673,
+        "endChar": 72
+      },
+      "revId": "fa481a3b641139a5f46d77ad05bcef713ea84203",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "444d8f74_80734325",
+        "filename": "fpdfsdk/cpdfsdk_appstream.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T22:01:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74b75195_44ebe71d",
       "range": {
         "startLine": 673,
         "startChar": 34,
