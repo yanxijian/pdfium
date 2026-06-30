@@ -33,6 +33,24 @@
       "message": "Should this getter also return uint8_t?",
       "revId": "fdd7accf4ed0a4a00751d7bfcbd4a99283fc3031",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6d16bce_5bee97f7",
+        "filename": "core/fxcodec/jbig2/jbig2_arith_decoder.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T23:08:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd885687_4b137473",
+      "revId": "fdd7accf4ed0a4a00751d7bfcbd4a99283fc3031",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
