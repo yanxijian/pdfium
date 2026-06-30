@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ef2c0dd_5589f1ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T17:42:42Z",
+      "side": 1,
+      "message": "No issue, I actually kinda enjoy it :)\n\nJust so that we\u0027re on the same page, what I understand is:\n\n1. Add a member boolean in the EmbedderTestEnvironment class called brotli_enabled or brotli or something of that sort.\n2. Add another member variable for a version int that is set to a default of 6 (latest)\n3. Have the EmbedderTestEnvironment class use these member variables instead of the hardcoded values.\n4. Update the function in the namespace for the Brotli embedder tests (The setup and teardown thing won\u0027t work because I need to actually pass in arguments into these, which I believe I can\u0027t do using Setup()).\n5. Call the functions as is currently being done.\n6. During the teardown step reset the class variables to their old values.\n\nThis may be slightly different from what you suggested (for instance you mentioned defaulting BrotliEnabled to true, although I think we should set it to false and then override it for the Brotli tests specifically, to make sure that the rest of the tests run in a state similar to the normal config as the rest of PDFium and since BrotliDecode\u0027s finer spec details haven\u0027t quite been confirmed yet.\n\nWill work on implimenting this tmrw, let me know if I misinterpreted something here. Thanks!",
+      "parentUuid": "dea48e21_d13d36c5",
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e6174883_6b8fe7c4",
