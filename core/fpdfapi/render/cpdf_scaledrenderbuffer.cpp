@@ -22,7 +22,6 @@ constexpr size_t kImageSizeLimitBytes = 30 * 1024 * 1024;
 CPDF_ScaledRenderBuffer::CPDF_ScaledRenderBuffer(CFX_RenderDevice* device,
                                                  const FX_RECT& rect)
     : device_(device),
-      bitmap_device_(std::make_unique<CFX_RenderDevice>()),
       rect_(rect) {}
 
 CPDF_ScaledRenderBuffer::~CPDF_ScaledRenderBuffer() = default;
@@ -47,9 +46,12 @@ bool CPDF_ScaledRenderBuffer::Initialize(CPDF_RenderContext* context,
       return false;
     }
 
-    if (pitch_size.value().size <= kImageSizeLimitBytes &&
-        bitmap_device_->Create(width, height, dibFormat)) {
-      break;
+    if (pitch_size.value().size <= kImageSizeLimitBytes) {
+      bitmap_device_ =
+          CFX_RenderDevice::CreateForNewBitmap(width, height, dibFormat);
+      if (bitmap_device_) {
+        break;
+      }
     }
     matrix_.Scale(0.5f, 0.5f);
   }
