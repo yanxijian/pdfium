@@ -439,3 +439,77 @@ TEST_F(FPDFAttachmentEmbedderTest, GetSubtypeInvalid) {
   EXPECT_EQ(2u * (strlen(kExpectedSubtype) + 1),
             FPDFAttachment_GetSubtype(attachment, nullptr, 10));
 }
+
+TEST_F(FPDFAttachmentEmbedderTest, ReadAttachmentDescription) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments_with_desc.pdf"));
+
+  FPDF_ATTACHMENT valid_attachment = FPDFDoc_GetAttachment(document(), 0);
+  FPDF_ATTACHMENT desc_absent = FPDFDoc_GetAttachment(document(), 1);
+  FPDF_ATTACHMENT numeric_desc = FPDFDoc_GetAttachment(document(), 2);
+  FPDF_ATTACHMENT empty_desc = FPDFDoc_GetAttachment(document(), 3);
+  FPDF_ATTACHMENT long_desc = FPDFDoc_GetAttachment(document(), 4);
+  ASSERT_TRUE(valid_attachment);
+  ASSERT_TRUE(desc_absent);
+  ASSERT_TRUE(empty_desc);
+  ASSERT_TRUE(numeric_desc);
+  ASSERT_TRUE(long_desc);
+
+  std::vector<FPDF_WCHAR> buf(128);
+  constexpr char kExpectedValue[] = "Hello, World!";
+  EXPECT_EQ(2u * std::size(kExpectedValue),
+            FPDFAttachment_GetAttachmentDesc(valid_attachment, buf.data(),
+                                             buf.size()));
+  EXPECT_EQ(kExpectedValue, GetPlatformString(buf.data()));
+
+  EXPECT_EQ(2u, FPDFAttachment_GetAttachmentDesc(desc_absent, buf.data(),
+                                                 buf.size()));
+  EXPECT_EQ("", GetPlatformString(buf.data()));
+
+  EXPECT_EQ(2u, FPDFAttachment_GetAttachmentDesc(numeric_desc, buf.data(),
+                                                 buf.size()));
+  EXPECT_EQ("", GetPlatformString(buf.data()));
+
+  EXPECT_EQ(
+      2u, FPDFAttachment_GetAttachmentDesc(empty_desc, buf.data(), buf.size()));
+  EXPECT_EQ("", GetPlatformString(buf.data()));
+
+  // Description is valid, but nothing is inserted into buf, as it is too small.
+  EXPECT_EQ(426u, FPDFAttachment_GetAttachmentDesc(long_desc, buf.data(),
+                                                   buf.size()));
+  EXPECT_EQ("", GetPlatformString(buf.data()));
+}
+
+TEST_F(FPDFAttachmentEmbedderTest, WriteAttachmentDescription) {
+  ASSERT_TRUE(OpenDocument("embedded_attachments_with_desc.pdf"));
+
+  FPDF_ATTACHMENT valid_attachment = FPDFDoc_GetAttachment(document(), 0);
+  FPDF_ATTACHMENT desc_absent = FPDFDoc_GetAttachment(document(), 1);
+  FPDF_ATTACHMENT numeric_desc = FPDFDoc_GetAttachment(document(), 2);
+  ASSERT_TRUE(valid_attachment);
+  ASSERT_TRUE(desc_absent);
+  ASSERT_TRUE(numeric_desc);
+
+  std::vector<FPDF_WCHAR> buf(128);
+  static constexpr wchar_t kTestValue[] = L"Carrot";
+  ScopedFPDFWideString test_value = GetFPDFWideString(kTestValue);
+
+  // If /Desc is not present or a different type, the API still adds/updates it
+  // and writes it to the description.
+  EXPECT_TRUE(
+      FPDFAttachment_SetAttachmentDesc(valid_attachment, test_value.get()));
+  EXPECT_TRUE(FPDFAttachment_SetAttachmentDesc(desc_absent, test_value.get()));
+  EXPECT_TRUE(FPDFAttachment_SetAttachmentDesc(numeric_desc, test_value.get()));
+
+  EXPECT_EQ(2f * sizeof(kTestValue),
+            FPDFAttachment_GetAttachmentDesc(valid_attachment, buf.data(),
+                                             buf.size()));
+  EXPECT_EQ(kTestValue, GetPlatformWString(buf.data()));
+
+  EXPECT_EQ(2f * sizeof(kTestValue), FPDFAttachment_GetAttachmentDesc(
+                                         desc_absent, buf.data(), buf.size()));
+  EXPECT_EQ(kTestValue, GetPlatformWString(buf.data()));
+
+  EXPECT_EQ(2f * sizeof(kTestValue), FPDFAttachment_GetAttachmentDesc(
+                                         numeric_desc, buf.data(), buf.size()));
+  EXPECT_EQ(kTestValue, GetPlatformWString(buf.data()));
+}
