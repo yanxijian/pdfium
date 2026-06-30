@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "fc1121a2_e4441b6c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T20:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97ca82db_c4cc157f",
+      "range": {
+        "startLine": 11,
+        "startChar": 55,
+        "endLine": 11,
+        "endChar": 63
+      },
+      "revId": "f4a474836201d211c1ab385d09cb3b4849691be3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "fbeffa45_490e0be2",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 5
@@ -54,6 +78,24 @@
       "writtenOn": "2026-06-30T19:49:17Z",
       "side": 1,
       "message": "BTW, this can become `new_point \u003d word.location() + offset;`. I see later CLs in the chain copying this existing pattern. It would be better to clean this up earlier in this CL, and then copy the simpler code in the follow-up CLs.",
+      "revId": "f4a474836201d211c1ab385d09cb3b4849691be3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46613f98_f8baa7d9",
+        "filename": "core/fpdfdoc/cpdf_generateap.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-06-30T20:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8bfd9f47_cf5795e8",
       "revId": "f4a474836201d211c1ab385d09cb3b4849691be3",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
