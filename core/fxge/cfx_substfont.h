@@ -25,17 +25,17 @@ class CFX_SubstFont {
   bool IsActualFontLoaded(const ByteString& base_font_name) const;
 
   // Returns effective skew angle based on style.
-  int GetEffectiveSkew(bool font_style) const {
-    return subst_cjk_ && font_style ? GetSkewCJK() : GetSkew();
+  int GetEffectiveSkew(bool is_cid_font) const {
+    return subst_cjk_ && is_cid_font ? GetSkewCJK() : GetSkew();
   }
 
   // Returns the font weight based on style.
-  int GetEffectiveWeight(bool font_style) const {
-    return subst_cjk_ && font_style ? weight_cjk_ : weight_;
+  int GetEffectiveWeight(bool is_cid_font) const {
+    return subst_cjk_ && is_cid_font ? weight_cjk_ : weight_;
   }
 
   // Returns emboldening level for rendering, or negative on failure.
-  int GetEmboldenLevelForRender(bool font_style,
+  int GetEmboldenLevelForRender(bool is_cid_font,
                                 int32_t ft_matrix_xx,
                                 int32_t ft_matrix_xy) const;
 
