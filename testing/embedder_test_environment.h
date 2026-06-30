@@ -22,6 +22,7 @@ class EmbedderTestEnvironment : public testing::Environment {
 
   // testing::Environment:
   void SetUp() override;
+  void InstallFontMapper();
   void TearDown() override;
 
   void AddFlags(int argc, char** argv);
