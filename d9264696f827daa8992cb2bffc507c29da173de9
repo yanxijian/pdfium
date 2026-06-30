@@ -36,6 +36,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a63f7ba_e1d403b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T18:06:21Z",
+      "side": 1,
+      "message": "Almost. I think.  The default values for the new members are brotli_ \u003d false and version_ \u003d 6.  Now we need two new test classes BrotliEmbedderTest and V5Embeddertest, say.  \n\nBrotliEmbedderTest::Setup() {\n     EmbedderTestEnvironment::GetInstance()-\u003eTearDown();\n     EmbedderTestEnvironment::GetInstance()-\u003eSetBrotliEnabled(true);\n     EmbedderTestEnvironment::GetInstance()-\u003eSetUp();\n} \n\nBrotliEmbedderTest::Teardown() {\n    EmbedderTestEnvironment::GetInstance()-\u003eTearDown();\n    EmbedderTestEnvironment::GetInstance()-\u003eSetBrotliEnabled(false);\n    EmbedderTestEnvironment::GetInstance()-\u003eSetUp();\n} \n\nSame idea with EmbedderTestV5 but call some SetVersion(5) method.",
+      "parentUuid": "3ef2c0dd_5589f1ec",
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e6174883_6b8fe7c4",
