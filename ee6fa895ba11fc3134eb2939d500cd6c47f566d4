@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f29a2bec_23639c24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-06-30T20:39:49Z",
+      "side": 1,
+      "message": "So now we call the shorter one whenever there is literal except in tests,\n\n$ git grep -nE \u0027GetEffective\\w*\\(.*(true|false)\u0027\ncore/fxge/cfx_substfont_unittest.cpp:13:  EXPECT_EQ(-21, font.GetEffectiveSkew(/*font_style\u003d*/false));\ncore/fxge/cfx_substfont_unittest.cpp:17:  EXPECT_EQ(-27, font.GetEffectiveSkew(/*font_style\u003d*/true));\ncore/fxge/cfx_substfont_unittest.cpp:26:  EXPECT_EQ(400, font.GetEffectiveWeight(/*font_style\u003d*/false));\ncore/fxge/cfx_substfont_unittest.cpp:27:  EXPECT_EQ(700, font.GetEffectiveWeight(/*font_style\u003d*/true));",
+      "revId": "ee6fa895ba11fc3134eb2939d500cd6c47f566d4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
