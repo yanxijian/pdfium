@@ -52,6 +52,24 @@
       "parentUuid": "7b9f87ff_9f4c19cc",
       "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0daffc7_fe56363c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 40
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-06-30T12:42:47Z",
+      "side": 1,
+      "message": "Update 3: Fixed hopefully :)\n\nThe main issue that I ran into was the private class variables (and methods) of embedder_test_environment. Specifically, needed a way to install the fonts, but the private variable complicated things and led to me having to create a function that the Brotli setup function calls in embedder_test_environment.\n\nAgain let me know if there is a better way to do this or any way to install without having to go via the test environment. Thanks!",
+      "parentUuid": "0fe222f2_59860b1c",
+      "revId": "b50c98ee73beee8221e166a896e4bd02b810e94d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
