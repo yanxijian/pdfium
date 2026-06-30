@@ -767,7 +767,7 @@ int CFX_Face::GetGlyphCount() const {
 
 std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
     uint32_t glyph_index,
-    bool font_style,
+    bool is_cid_font,
     bool is_vertical,
     const CFX_Matrix& matrix,
     int dest_width,
@@ -779,7 +779,7 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
   ft_matrix.yx = matrix.b / 64 * 65536;
   ft_matrix.yy = matrix.d / 64 * 65536;
   if (subst_font) {
-    int skew = subst_font->GetEffectiveSkew(font_style);
+    int skew = subst_font->GetEffectiveSkew(is_cid_font);
     if (skew) {
       if (is_vertical) {
         ft_matrix.yx += ft_matrix.yy * skew / 100;
@@ -789,7 +789,7 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
     }
     if (subst_font->IsBuiltInGenericFont()) {
       AdjustVariationParams(glyph_index, dest_width,
-                            subst_font->GetWeight(font_style));
+                            subst_font->GetWeight(is_cid_font));
     }
   }
 
@@ -817,7 +817,7 @@ std::unique_ptr<CFX_GlyphBitmap> CFX_Face::RenderGlyph(
   auto* glyph = rec->glyph;
   if (subst_font) {
     int level = subst_font->GetEmboldenLevelForRender(
-        font_style, static_cast<int32_t>(ft_matrix.xx),
+        is_cid_font, static_cast<int32_t>(ft_matrix.xx),
         static_cast<int32_t>(ft_matrix.xy));
     if (level < 0) {
       return nullptr;
@@ -888,7 +888,7 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPath(
   FT_Set_Pixel_Sizes(rec, 0, 64);
   FT_Matrix ft_matrix = {65536, 0, 0, 65536};
   if (subst_font) {
-    int skew = subst_font->GetEffectiveSkew(/*font_style=*/false);
+    int skew = subst_font->GetEffectiveSkew(/*is_cid_font=*/false);
     if (skew) {
       if (is_vertical) {
         ft_matrix.yx += ft_matrix.yy * skew / 100;
@@ -898,7 +898,7 @@ std::unique_ptr<CFX_Path> CFX_Face::LoadGlyphPath(
     }
     if (subst_font->IsBuiltInGenericFont()) {
       AdjustVariationParams(glyph_index, dest_width,
-                            subst_font->GetWeight(/*font_style=*/false));
+                            subst_font->GetWeight(/*is_cid_font=*/false));
     }
   }
   ScopedFaceTransform scoped_transform(GetRec(), &ft_matrix);

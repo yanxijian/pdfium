@@ -136,17 +136,13 @@ int CFX_SubstFont::GetSkewCJK() const {
   return GetSkewFromAngle(italic_cjk_ ? -15 : 0);
 }
 
-int CFX_SubstFont::GetEffectiveSkew(bool font_style) const {
-  return (subst_cjk_ && font_style) ? GetSkewCJK() : GetSkew();
-}
-
-int CFX_SubstFont::GetEmboldenLevelForRender(bool font_style,
+int CFX_SubstFont::GetEmboldenLevelForRender(bool is_cid_font,
                                              int32_t ft_matrix_xx,
                                              int32_t ft_matrix_xy) const {
   if (flag_mm_) {
     return 0;
   }
-  const int weight = GetWeight(font_style);
+  const int weight = GetWeight(is_cid_font);
   if (weight <= 400) {
     return 0;
   }
@@ -167,7 +163,7 @@ int CFX_SubstFont::GetEmboldenLevelForLoad() const {
   if (flag_mm_) {
     return 0;
   }
-  const int weight = GetWeight(/*font_style=*/false);
+  const int weight = GetWeight(/*is_cid_font=*/false);
   if (weight <= 400) {
     return 0;
   }
