@@ -55,6 +55,8 @@ RetainPtr<CPDF_Object> CPDF_Object::CloneDirectObject() const {
   return CloneObjectNonCyclic(true);
 }
 
+void CPDF_Object::SharePool(const WeakPtr<ByteStringPool>& pool) {}
+
 RetainPtr<CPDF_Object> CPDF_Object::CloneNonCyclic(
     bool bDirect,
     std::set<const CPDF_Object*>* pVisited) const {

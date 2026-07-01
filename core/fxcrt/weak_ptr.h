@@ -31,8 +31,7 @@ class WeakPtr {
 
   explicit operator bool() const { return handle_ && !!handle_->Get(); }
   bool HasOneRef() const { return handle_ && handle_->HasOneRef(); }
-  T* operator->() { return handle_->Get(); }
-  const T* operator->() const { return handle_->Get(); }
+  T* operator->() const { return handle_ ? handle_->Get() : nullptr; }
   WeakPtr& operator=(const WeakPtr& that) {
     handle_ = that.handle_;
     return *this;

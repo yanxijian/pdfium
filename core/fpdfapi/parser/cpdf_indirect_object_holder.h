@@ -44,15 +44,10 @@ class CPDF_IndirectObjectHolder {
   // but which can intern strings from it. We have a special cast to handle
   // objects that can intern strings from our ByteStringPool.
   template <typename T, typename... Args>
-    requires(CanInternStrings<T>::value)
   RetainPtr<T> New(Args&&... args) {
-    return pdfium::MakeRetain<T>(byte_string_pool_,
-                                 std::forward<Args>(args)...);
-  }
-  template <typename T, typename... Args>
-    requires(!CanInternStrings<T>::value)
-  RetainPtr<T> New(Args&&... args) {
-    return pdfium::MakeRetain<T>(std::forward<Args>(args)...);
+    auto obj = pdfium::MakeRetain<T>(std::forward<Args>(args)...);
+    obj->SharePool(byte_string_pool_);
+    return obj;
   }
 
   // Always Retains |pObj|, returns its new object number.
