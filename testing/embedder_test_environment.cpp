@@ -40,7 +40,7 @@ EmbedderTestEnvironment* EmbedderTestEnvironment::GetInstance() {
 
 void EmbedderTestEnvironment::SetUp() {
   FPDF_LIBRARY_CONFIG config = {
-      .version = 5,
+      .version = version_,
       .m_pUserFontPaths = test_fonts_.font_paths(),
 
 #ifdef PDF_ENABLE_V8
@@ -56,11 +56,23 @@ void EmbedderTestEnvironment::SetUp() {
       .m_RendererType = renderer_type_,
       .m_FontLibraryType = fontations_ ? FPDF_FONTBACKENDTYPE_FONTATIONS
                                        : FPDF_FONTBACKENDTYPE_FREETYPE,
+      .m_BrotliEnabled = brotli_enabled_,
   };
 
   FPDF_InitLibraryWithConfig(&config);
 
   test_fonts_.InstallFontMapper();
+}
+
+void EmbedderTestEnvironment::SetBrotli(bool enabled) {
+  brotli_enabled_ = enabled;
+}
+
+void EmbedderTestEnvironment::SetVersion(int version) {
+  if (version <= 0) {
+    return;
+  }
+  version_ = version;
 }
 
 void EmbedderTestEnvironment::TearDown() {
