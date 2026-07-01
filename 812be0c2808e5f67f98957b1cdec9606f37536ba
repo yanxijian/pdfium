@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "01797d56_e1bbaa8e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:31:11Z",
+      "side": 1,
+      "message": "Ah sorry, LTR test are correct. I meant to add * after writing ltr but forgot to write it.",
+      "parentUuid": "c20f547a_a5875901",
+      "range": {
+        "startLine": 11,
+        "startChar": 28,
+        "endLine": 11,
+        "endChar": 66
+      },
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62c52f55_45d995ee",
@@ -41,6 +65,42 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "77ff954e_914ad95b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:31:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62c52f55_45d995ee",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98ff6201_081c3ea1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:31:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62c52f55_45d995ee",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea9e82ce_c59292f1",
@@ -54,6 +114,42 @@
       "writtenOn": "2026-07-01T22:58:56Z",
       "side": 1,
       "message": "But this CL doesn\u0027t update any of the expectation images.",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8356e23_66601536",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:31:11Z",
+      "side": 1,
+      "message": "They will,",
+      "parentUuid": "ea9e82ce_c59292f1",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18e55a2c_a3b15e3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:31:11Z",
+      "side": 1,
+      "message": "I forgot to upload the images, but the caret fix CL will also have images since the caret would then be correctly positioned (visually).",
+      "parentUuid": "ea9e82ce_c59292f1",
       "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
