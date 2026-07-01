@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c757b86e_8201f117",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T22:45:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01379e16_e8cea3b2",
+      "range": {
+        "startLine": 11,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 54
+      },
+      "revId": "35ffb90784b1444ac9d7981008ecaafd734361af",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cb5270f0_718af374",
@@ -54,6 +78,48 @@
       "writtenOn": "2026-07-01T18:01:39Z",
       "side": 1,
       "message": "go/avoid-we",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 4
+      },
+      "revId": "35ffb90784b1444ac9d7981008ecaafd734361af",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9957968_3dac6c1f",
+        "filename": "testing/resources/pixel/form_textfield_focused_ltr.evt",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T22:45:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb5270f0_718af374",
+      "revId": "35ffb90784b1444ac9d7981008ecaafd734361af",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30e186e8_180c8270",
+        "filename": "testing/resources/pixel/form_textfield_focused_ltr.evt",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T22:45:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df0e6c31_7186d640",
       "range": {
         "startLine": 2,
         "startChar": 2,
