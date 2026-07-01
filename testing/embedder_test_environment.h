@@ -23,6 +23,10 @@ class EmbedderTestEnvironment : public testing::Environment {
   // testing::Environment:
   void SetUp() override;
   void TearDown() override;
+  void SetBrotli(bool enabled) { brotli_enabled_ = enabled; }
+  void SetVersion(int version) { version_ = version; }
+  bool GetBrotli() const { return brotli_enabled_; }
+  int GetVersion() const { return version_; }
 
   void AddFlags(int argc, char** argv);
 
@@ -32,9 +36,11 @@ class EmbedderTestEnvironment : public testing::Environment {
   void AddFlag(const std::string& flag);
   bool CheckFlags();
 
+  int version_ = 6;
   FPDF_RENDERER_TYPE renderer_type_;
   bool fontations_ = false;
   bool write_pngs_ = false;
+  bool brotli_enabled_ = false;
   TestFonts test_fonts_;
 };
 
