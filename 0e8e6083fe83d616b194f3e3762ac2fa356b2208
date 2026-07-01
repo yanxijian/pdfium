@@ -16,6 +16,23 @@
       "message": "That\u0027s really nice.",
       "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c5c1c60_16d50220",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 53
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T18:56:47Z",
+      "side": 1,
+      "message": "Seems like its roll season, the bots are a bit more busy than usual.",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
