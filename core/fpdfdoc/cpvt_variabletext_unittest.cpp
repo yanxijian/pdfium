@@ -140,3 +140,36 @@ TEST_F(CPVT_VariableTextTest, RTLTextLayout) {
   EXPECT_GT(second_x, third_x);
   EXPECT_GT(third_x, fourth_x);
 }
+
+TEST_F(CPVT_VariableTextTest, GetLineCaretX) {
+  CPVT_VariableText vt(provider_.get());
+  vt.SetPlateRect(CFX_FloatRect(0, 0, 100, 100));
+  vt.SetFontSize(10.0f);
+  vt.SetMultiLine(false);
+  vt.SetAutoReturn(false);
+  vt.Initialize();
+
+  CPVT_VariableText::Iterator* it = vt.GetIterator();
+
+  // Test 1: Empty text
+  vt.SetText(L"");
+  vt.RearrangeAll();
+  CPVT_Line line;
+  it->SetAt(CPVT_WordPlace(0, 0, -1));
+  ASSERT_TRUE(it->GetLine(line));
+  EXPECT_FLOAT_EQ(line.ptLine.x, it->GetLineCaretX(line));
+
+  // Test 2: LTR text (Helvetica font, starts with left caret)
+  vt.SetText(L"hello");
+  vt.RearrangeAll();
+  it->SetAt(CPVT_WordPlace(0, 0, -1));
+  ASSERT_TRUE(it->GetLine(line));
+  EXPECT_FLOAT_EQ(line.ptLine.x, it->GetLineCaretX(line));
+
+  // Test 3: RTL text (starts with right caret)
+  vt.SetText(L"\x05E9\x05DC\x05D5\x05DD");
+  vt.RearrangeAll();
+  it->SetAt(CPVT_WordPlace(0, 0, -1));
+  ASSERT_TRUE(it->GetLine(line));
+  EXPECT_FLOAT_EQ(line.ptLine.x + line.fLineWidth, it->GetLineCaretX(line));
+}
