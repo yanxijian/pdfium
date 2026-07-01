@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6079d39_4141bae2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 21
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T23:23:32Z",
+      "side": 1,
+      "message": "Comma after. \"Instead, do foo\" vs. \"Instead do foo\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 33,
+        "endLine": 10,
+        "endChar": 40
+      },
+      "revId": "452a6fceff725d95d46188c906c115f173993ee3",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "064f4919_697a38b3",
