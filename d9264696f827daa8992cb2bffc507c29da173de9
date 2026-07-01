@@ -72,6 +72,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2eb9952_5cfada39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 43
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T04:36:01Z",
+      "side": 1,
+      "message": "Makes sense, although I feel there is a way to consolidate more common logic.\n\nMy reason for feeling so is all set ups follow \n\n1. Get embedder test environment \n2. Get existing vars\n3. Tear down\n4. Set new vars depending on the testcase\n5. Set up\n\nWhy not just use something in the namespace that does this and either\na. Have the setup function call this helper w some hardcoded args.\nb. Call it within the test itself.\n\nAlso FWIW the teardowns are identical so maybe we can create one class which has our needed teardowns and have the others inherit it. Might want to try that.",
+      "parentUuid": "b2602774_90040e2c",
+      "revId": "d9264696f827daa8992cb2bffc507c29da173de9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e6174883_6b8fe7c4",
