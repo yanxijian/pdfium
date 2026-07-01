@@ -86,6 +86,12 @@ CPDF_Stream* CPDF_Stream::AsMutableStream() {
   return this;
 }
 
+void CPDF_Stream::SharePool(const WeakPtr<ByteStringPool>& pool) {
+  if (dict_) {
+    dict_->SharePool(pool);
+  }
+}
+
 void CPDF_Stream::InitStreamFromFile(RetainPtr<IFX_SeekableReadStream> file) {
   const int size = pdfium::checked_cast<int>(file->GetSize());
   data_ = std::move(file);
