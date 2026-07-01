@@ -15,9 +15,7 @@ class CFX_AndroidFontInfo final : public CFX_FolderFontInfo {
   CFX_AndroidFontInfo();
   ~CFX_AndroidFontInfo() override;
 
-  // PRECONDITIONS: `user_paths` must be a null-terminated array of
-  // NUL-terminated strings.
-  UNSAFE_BUFFER_USAGE void Init(const char** user_paths);
+  void Init(pdfium::span<const char* const> user_paths);
 
   // SystemFontInfoIface:
   void* MapFont(CFX_FontMapper* mapper,
