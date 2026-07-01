@@ -1,0 +1,215 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f8b8f72_b46f1b2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 46
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "Great, that\u0027s pretty much what I had in mind.  Now the nits ...",
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0344d4ff_1d41753f",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "nit: ideally, these would be members of the test \"fixture\" class (BrotliV5EmbedderTest, say), as opposed to global variables. Although PDFium can\u0027t run concurrently in a process, its still nice to pretend the tests might parallelize.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17a57b96_2833db3b",
+        "filename": "testing/embedder_test_environment.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "nit: these can both be one-liners in the header.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 11
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66c7aca4_4394670e",
+        "filename": "testing/embedder_test_environment.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "just do it, we might want to see what happens when somebody tries to call us with -1, say.",
+      "range": {
+        "startLine": 72,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 3
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b550ce0_63f8f4fb",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "nit: should be const method as in `bool GetBrotli() const { return ...}`",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9300abcd_f572935f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "testing/embedder_test_environment.h",
+              "range": {
+                "startLine": 28,
+                "startChar": 0,
+                "endLine": 29,
+                "endChar": 0
+              },
+              "replacement": "  bool GetBrotli() const { return brotli_enabled_; }\n"
+            }
+          ]
+        }
+      ],
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1ad38c3_1f32ac56",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "nit: this might go first as it feels like a big deal :) ....",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 19
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f51aea34_4337f503",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T15:26:57Z",
+      "side": 1,
+      "message": "nit: pack bool against other bools above.",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 22
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "97c08b2b_4a3d1007",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "testing/embedder_test_environment.h",
+              "range": {
+                "startLine": 39,
+                "startChar": 0,
+                "endLine": 40,
+                "endChar": 0
+              },
+              "replacement": "  bool brotli_enabled_ \u003d false;\n"
+            },
+            {
+              "path": "testing/embedder_test_environment.h",
+              "range": {
+                "startLine": 41,
+                "startChar": 0,
+                "endLine": 42,
+                "endChar": 0
+              },
+              "replacement": "  FPDF_RENDERER_TYPE renderer_type_;\n"
+            },
+            {
+              "path": "testing/embedder_test_environment.h",
+              "range": {
+                "startLine": 44,
+                "startChar": 0,
+                "endLine": 45,
+                "endChar": 0
+              },
+              "replacement": "  bool write_pngs_ \u003d false;\n"
+            }
+          ]
+        }
+      ],
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
