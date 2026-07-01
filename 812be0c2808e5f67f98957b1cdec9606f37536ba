@@ -1,6 +1,63 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "c20f547a_a5875901",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T22:58:56Z",
+      "side": 1,
+      "message": "Just to clarify, is the LTR test wrong as well? It looks ok to me, but maybe I missed something.",
+      "range": {
+        "startLine": 11,
+        "startChar": 28,
+        "endLine": 11,
+        "endChar": 66
+      },
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62c52f55_45d995ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T22:58:56Z",
+      "side": 1,
+      "message": "These URLs don\u0027t work. Just https://pdfium-review.googlesource.com/c/NNN",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea9e82ce_c59292f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T22:58:56Z",
+      "side": 1,
+      "message": "But this CL doesn\u0027t update any of the expectation images.",
+      "revId": "812be0c2808e5f67f98957b1cdec9606f37536ba",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "80108469_ad402cab",
