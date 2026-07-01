@@ -89,6 +89,7 @@ RetainPtr<CPDF_Object> CPDF_IndirectObjectHolder::ParseIndirectObject(
 uint32_t CPDF_IndirectObjectHolder::AddIndirectObject(
     RetainPtr<CPDF_Object> pObj) {
   CHECK(!pObj->GetObjNum());
+  pObj->SharePool(byte_string_pool_);
   pObj->SetObjNum(++last_obj_num_);
   indirect_objs_[last_obj_num_] = std::move(pObj);
   return last_obj_num_;
@@ -108,6 +109,7 @@ bool CPDF_IndirectObjectHolder::ReplaceIndirectObjectIfHigherGeneration(
     return false;
   }
 
+  pObj->SharePool(byte_string_pool_);
   pObj->SetObjNum(objnum);
   obj_holder = std::move(pObj);
   last_obj_num_ = std::max(last_obj_num_, objnum);

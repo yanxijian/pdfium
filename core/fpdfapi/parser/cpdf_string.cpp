@@ -17,6 +17,13 @@
 
 CPDF_String::CPDF_String() = default;
 
+CPDF_String::CPDF_String(pdfium::span<const uint8_t> data, DataType is_hex)
+    : CPDF_String(nullptr, data, is_hex) {}
+
+CPDF_String::CPDF_String(const ByteString& str) : CPDF_String(nullptr, str) {}
+
+CPDF_String::CPDF_String(WideStringView str) : CPDF_String(nullptr, str) {}
+
 CPDF_String::CPDF_String(WeakPtr<ByteStringPool> pool,
                          pdfium::span<const uint8_t> data,
                          DataType is_hex)
@@ -61,6 +68,12 @@ void CPDF_String::SetString(const ByteString& str) {
 
 CPDF_String* CPDF_String::AsMutableString() {
   return this;
+}
+
+void CPDF_String::SharePool(const WeakPtr<ByteStringPool>& pool) {
+  if (pool) {
+    data_ = pool->Intern(data_);
+  }
 }
 
 WideString CPDF_String::GetUnicodeText() const {
