@@ -50,8 +50,6 @@ class CFX_MacFontInfo final : public CFX_FolderFontInfo {
                 FX_Charset charset,
                 int pitch_family,
                 const ByteString& face) override;
-
-  bool ParseFontCfg(const char** pUserPaths);
 };
 
 constexpr char kJapanGothic[] = "Hiragino Kaku Gothic Pro W6";
@@ -137,18 +135,6 @@ void* CFX_MacFontInfo::MapFont(CFX_FontMapper* mapper,
   return it != font_list_.end() ? it->second.get() : nullptr;
 }
 
-bool CFX_MacFontInfo::ParseFontCfg(const char** pUserPaths) {
-  if (!pUserPaths) {
-    return false;
-  }
-  UNSAFE_TODO({
-    for (const char** pPath = pUserPaths; *pPath; ++pPath) {
-      AddPath(*pPath);
-    }
-  });
-  return true;
-}
-
 }  // namespace
 
 CApplePlatform::CApplePlatform() = default;
@@ -162,7 +148,12 @@ void CApplePlatform::Terminate() {}
 std::unique_ptr<SystemFontInfoIface>
 CApplePlatform::CreateDefaultSystemFontInfo() {
   auto pInfo = std::make_unique<CFX_MacFontInfo>();
-  if (!pInfo->ParseFontCfg(CFX_GEModule::Get()->GetUserFontPaths())) {
+  auto user_paths = CFX_GEModule::Get()->GetUserFontPaths();
+  if (user_paths.has_value()) {
+    for (const char* path : user_paths.value()) {
+      pInfo->AddPath(path);
+    }
+  } else {
     pInfo->AddPath("~/Library/Fonts");
     pInfo->AddPath("/Library/Fonts");
     pInfo->AddPath("/System/Library/Fonts");
