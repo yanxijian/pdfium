@@ -16,6 +16,24 @@
       "message": "It sounds like the goal of GetLineCaretX() is to determine the direction for the current line, but can NextWord() actually move the iterator from the end of the current line to another line?",
       "revId": "c35d500967be37d30e3df3ff21eb3be7bfb2ee80",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09a63706_55eece9a",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-01T23:07:00Z",
+      "side": 1,
+      "message": "set the iterator on that lineplace and fetch the word. Should now only look at first word of \"this\" line.",
+      "parentUuid": "d36f28cc_eaa779f7",
+      "revId": "c35d500967be37d30e3df3ff21eb3be7bfb2ee80",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
