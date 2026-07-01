@@ -37,6 +37,7 @@ class CPDF_Dictionary final : public CPDF_Object {
   Type GetType() const override;
   RetainPtr<CPDF_Object> Clone() const override;
   CPDF_Dictionary* AsMutableDictionary() override;
+  void SharePool(WeakPtr<ByteStringPool> pool) override;
   bool WriteTo(IFX_ArchiveStream* archive,
                const CPDF_Encryptor* encryptor) const override;
 
@@ -89,19 +90,12 @@ class CPDF_Dictionary final : public CPDF_Object {
   // a new object with no previous references, they ensure cycles can not be
   // introduced.
   template <typename T, typename... Args>
-    requires(!CanInternStrings<T>::value)
   RetainPtr<T> SetNewFor(const ByteString& key, Args&&... args) {
     static_assert(!std::is_same<T, CPDF_Stream>::value,
                   "Cannot set a CPDF_Stream directly. Add it indirectly as a "
                   "`CPDF_Reference` instead.");
     return pdfium::WrapRetain(static_cast<T*>(SetForInternal(
         key, pdfium::MakeRetain<T>(std::forward<Args>(args)...))));
-  }
-  template <typename T, typename... Args>
-    requires(CanInternStrings<T>::value)
-  RetainPtr<T> SetNewFor(const ByteString& key, Args&&... args) {
-    return pdfium::WrapRetain(static_cast<T*>(SetForInternal(
-        key, pdfium::MakeRetain<T>(pool_, std::forward<Args>(args)...))));
   }
 
   // If `object` is null, then `key` is erased from the map. Otherwise, takes

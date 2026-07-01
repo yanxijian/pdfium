@@ -47,6 +47,24 @@ CPDF_Dictionary* CPDF_Dictionary::AsMutableDictionary() {
   return this;
 }
 
+void CPDF_Dictionary::SharePool(WeakPtr<ByteStringPool> pool) {
+  if (pool_ == pool) {
+    return;
+  }
+  pool_ = pool;
+  if (!pool_) {
+    return;
+  }
+
+  DictMap old_map = std::move(map_);
+  for (auto& it : old_map) {
+    map_[pool_->Intern(it.first)] = std::move(it.second);
+  }
+  for (auto& it : map_) {
+    it.second->SharePool(pool_);
+  }
+}
+
 RetainPtr<CPDF_Object> CPDF_Dictionary::Clone() const {
   return CloneObjectNonCyclic(false);
 }
@@ -55,7 +73,7 @@ RetainPtr<CPDF_Object> CPDF_Dictionary::CloneNonCyclic(
     bool bDirect,
     std::set<const CPDF_Object*>* pVisited) const {
   pVisited->insert(this);
-  auto pCopy = pdfium::MakeRetain<CPDF_Dictionary>(pool_);
+  auto pCopy = pdfium::MakeRetain<CPDF_Dictionary>();
   CPDF_DictionaryLocker locker(this);
   for (const auto& it : locker) {
     if (!pdfium::Contains(*pVisited, it.second.Get())) {
@@ -285,6 +303,9 @@ CPDF_Object* CPDF_Dictionary::SetForInternal(const ByteString& key,
   CHECK(!pObj->IsStream());
   CPDF_Object* pRet = pObj.Get();
   map_[MaybeIntern(key)] = std::move(pObj);
+  if (pool_) {
+    pRet->SharePool(pool_);
+  }
   return pRet;
 }
 

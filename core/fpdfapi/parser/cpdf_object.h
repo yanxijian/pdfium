@@ -12,8 +12,10 @@
 #include <set>
 #include <type_traits>
 
+#include "core/fxcrt/bytestring_pool.h"
 #include "core/fxcrt/fx_string.h"
 #include "core/fxcrt/retain_ptr.h"
+#include "core/fxcrt/weak_ptr.h"
 
 class CPDF_Array;
 class CPDF_Boolean;
@@ -77,6 +79,7 @@ class CPDF_Object : public Retainable {
   // Create a deep copy of the object except any reference object be
   // copied to the object it points to directly.
   RetainPtr<CPDF_Object> CloneDirectObject() const;
+  virtual void SharePool(WeakPtr<ByteStringPool> pool);
 
   virtual ByteString GetString() const;
   virtual WideString GetUnicodeText() const;
@@ -156,14 +159,6 @@ class CPDF_Object : public Retainable {
 
   uint32_t obj_num_ = 0;
   uint32_t gen_num_ = 0;
-};
-
-template <typename T>
-struct CanInternStrings {
-  static constexpr bool value = std::is_same<T, CPDF_Array>::value ||
-                                std::is_same<T, CPDF_Dictionary>::value ||
-                                std::is_same<T, CPDF_Name>::value ||
-                                std::is_same<T, CPDF_String>::value;
 };
 
 #endif  // CORE_FPDFAPI_PARSER_CPDF_OBJECT_H_

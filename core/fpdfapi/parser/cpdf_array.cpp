@@ -42,6 +42,16 @@ CPDF_Array* CPDF_Array::AsMutableArray() {
   return this;
 }
 
+void CPDF_Array::SharePool(WeakPtr<ByteStringPool> pool) {
+  if (pool_ == pool) {
+    return;
+  }
+  pool_ = pool;
+  for (auto& obj : objects_) {
+    obj->SharePool(pool);
+  }
+}
+
 RetainPtr<CPDF_Object> CPDF_Array::Clone() const {
   return CloneObjectNonCyclic(false);
 }
@@ -253,6 +263,9 @@ CPDF_Object* CPDF_Array::SetAtInternal(size_t index,
 
   CPDF_Object* pRet = pObj.Get();
   objects_[index] = std::move(pObj);
+  if (pool_) {
+    pRet->SharePool(pool_);
+  }
   return pRet;
 }
 
@@ -268,6 +281,9 @@ CPDF_Object* CPDF_Array::InsertAtInternal(size_t index,
 
   CPDF_Object* pRet = pObj.Get();
   objects_.insert(objects_.begin() + index, std::move(pObj));
+  if (pool_) {
+    pRet->SharePool(pool_);
+  }
   return pRet;
 }
 
@@ -278,6 +294,9 @@ CPDF_Object* CPDF_Array::AppendInternal(RetainPtr<CPDF_Object> pObj) {
   CHECK(!pObj->IsStream());
   CPDF_Object* pRet = pObj.Get();
   objects_.push_back(std::move(pObj));
+  if (pool_) {
+    pRet->SharePool(pool_);
+  }
   return pRet;
 }
 

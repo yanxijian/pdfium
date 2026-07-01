@@ -10,6 +10,8 @@
 #include "core/fpdfapi/parser/fpdf_parser_utility.h"
 #include "core/fxcrt/fx_stream.h"
 
+CPDF_Name::CPDF_Name(const ByteString& str) : CPDF_Name(nullptr, str) {}
+
 CPDF_Name::CPDF_Name(WeakPtr<ByteStringPool> pPool, const ByteString& str)
     : name_(str) {
   if (pPool) {
@@ -37,6 +39,12 @@ void CPDF_Name::SetString(const ByteString& str) {
 
 CPDF_Name* CPDF_Name::AsMutableName() {
   return this;
+}
+
+void CPDF_Name::SharePool(WeakPtr<ByteStringPool> pool) {
+  if (pool) {
+    name_ = pool->Intern(name_);
+  }
 }
 
 WideString CPDF_Name::GetUnicodeText() const {
