@@ -23,6 +23,10 @@ class EmbedderTestEnvironment : public testing::Environment {
   // testing::Environment:
   void SetUp() override;
   void TearDown() override;
+  void SetBrotli(bool enabled);
+  void SetVersion(int version);
+  bool GetBrotli() { return brotli_enabled_; }
+  int GetVersion() { return version_; }
 
   void AddFlags(int argc, char** argv);
 
@@ -36,6 +40,8 @@ class EmbedderTestEnvironment : public testing::Environment {
   bool fontations_ = false;
   bool write_pngs_ = false;
   TestFonts test_fonts_;
+  int version_ = 6;
+  bool brotli_enabled_ = false;
 };
 
 #endif  // TESTING_EMBEDDER_TEST_ENVIRONMENT_H_
