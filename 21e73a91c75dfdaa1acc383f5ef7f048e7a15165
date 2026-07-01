@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3a2ccb11_68606a6f",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "Hm, maybe we also move the function in the namespace into one of the classes as well so it can write to member vars and let inheritance take care of the rest.\n\nWill need to edit that locally though.",
+      "parentUuid": "0344d4ff_1d41753f",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "17a57b96_2833db3b",
         "filename": "testing/embedder_test_environment.cpp",
         "patchSetId": 46
@@ -54,6 +78,30 @@
       "writtenOn": "2026-07-01T15:26:57Z",
       "side": 1,
       "message": "nit: these can both be one-liners in the header.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 11
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f4070bf_3dee65d6",
+        "filename": "testing/embedder_test_environment.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17a57b96_2833db3b",
       "range": {
         "startLine": 66,
         "startChar": 0,
@@ -77,6 +125,30 @@
       "writtenOn": "2026-07-01T15:26:57Z",
       "side": 1,
       "message": "just do it, we might want to see what happens when somebody tries to call us with -1, say.",
+      "range": {
+        "startLine": 72,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 3
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8faee60b_5c8e08f5",
+        "filename": "testing/embedder_test_environment.cpp",
+        "patchSetId": 46
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "From the code seems like no real impact vs just 1. Anyway removed.",
+      "parentUuid": "66c7aca4_4394670e",
       "range": {
         "startLine": 72,
         "startChar": 1,
@@ -128,6 +200,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c401999_73217c52",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b550ce0_63f8f4fb",
+      "range": {
+        "startLine": 28,
+        "startChar": 7,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e1ad38c3_1f32ac56",
@@ -141,6 +237,30 @@
       "writtenOn": "2026-07-01T15:26:57Z",
       "side": 1,
       "message": "nit: this might go first as it feels like a big deal :) ....",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 19
+      },
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "137d09c7_150e5c09",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1ad38c3_1f32ac56",
       "range": {
         "startLine": 43,
         "startChar": 0,
@@ -208,6 +328,30 @@
           ]
         }
       ],
+      "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3712c2ba_7034c1a2",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 46
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-01T16:08:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f51aea34_4337f503",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 22
+      },
       "revId": "21e73a91c75dfdaa1acc383f5ef7f048e7a15165",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
