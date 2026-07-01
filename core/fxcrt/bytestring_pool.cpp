@@ -8,6 +8,14 @@
 
 namespace fxcrt {
 
+size_t ByteStringPool::Hash::operator()(ByteStringView view) const {
+  return FX_HashCode_GetA(view);
+}
+
+size_t ByteStringPool::Hash::operator()(const ByteString& str) const {
+  return FX_HashCode_GetA(str.AsStringView());
+}
+
 ByteStringPool::ByteStringPool() = default;
 
 ByteStringPool::~ByteStringPool() = default;
@@ -17,6 +25,17 @@ ByteString ByteStringPool::Intern(const ByteString& str) {
     return str;
   }
   return *pool_.insert(str).first;
+}
+
+ByteString ByteStringPool::Intern(ByteStringView str) {
+  if (str.IsEmpty()) {
+    return ByteString();
+  }
+  auto it = pool_.find(str);
+  if (it != pool_.end()) {
+    return *it;
+  }
+  return *pool_.insert(ByteString(str)).first;
 }
 
 }  // namespace fxcrt

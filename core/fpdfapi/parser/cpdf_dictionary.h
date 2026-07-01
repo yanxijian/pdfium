@@ -90,7 +90,7 @@ class CPDF_Dictionary final : public CPDF_Object {
   // introduced.
   template <typename T, typename... Args>
     requires(!CanInternStrings<T>::value)
-  RetainPtr<T> SetNewFor(const ByteString& key, Args&&... args) {
+  RetainPtr<T> SetNewFor(ByteStringView key, Args&&... args) {
     static_assert(!std::is_same<T, CPDF_Stream>::value,
                   "Cannot set a CPDF_Stream directly. Add it indirectly as a "
                   "`CPDF_Reference` instead.");
@@ -99,30 +99,67 @@ class CPDF_Dictionary final : public CPDF_Object {
   }
   template <typename T, typename... Args>
     requires(CanInternStrings<T>::value)
-  RetainPtr<T> SetNewFor(const ByteString& key, Args&&... args) {
+  RetainPtr<T> SetNewFor(ByteStringView key, Args&&... args) {
     return pdfium::WrapRetain(static_cast<T*>(SetForInternal(
         key, pdfium::MakeRetain<T>(pool_, std::forward<Args>(args)...))));
+  }
+  template <typename T, typename... Args>
+  RetainPtr<T> SetNewFor(const ByteString& key, Args&&... args) {
+    return SetNewFor<T>(key.AsStringView(), std::forward<Args>(args)...);
+  }
+  template <typename T, typename... Args>
+  RetainPtr<T> SetNewFor(const char* key, Args&&... args) {
+    return SetNewFor<T>(ByteStringView(key), std::forward<Args>(args)...);
   }
 
   // If `object` is null, then `key` is erased from the map. Otherwise, takes
   // ownership of `object` and stores in in the map. Invalidates iterators for
   // the element with the key `key`.
   void SetFor(const ByteString& key, RetainPtr<CPDF_Object> object);
+  void SetFor(ByteStringView key, RetainPtr<CPDF_Object> object);
+  void SetFor(const char* key, RetainPtr<CPDF_Object> object) {
+    SetFor(ByteStringView(key), std::move(object));
+  }
   // A stream must be indirect and added as a `CPDF_Reference` instead.
   void SetFor(const ByteString& key, RetainPtr<CPDF_Stream> stream) = delete;
+  void SetFor(ByteStringView key, RetainPtr<CPDF_Stream> stream) = delete;
+  void SetFor(const char* key, RetainPtr<CPDF_Stream> stream) = delete;
 
   // Convenience functions to convert native objects to array form.
-  void SetRectFor(const ByteString& key, const CFX_FloatRect& rect);
-  void SetMatrixFor(const ByteString& key, const CFX_Matrix& matrix);
+  void SetRectFor(ByteStringView key, const CFX_FloatRect& rect);
+  void SetRectFor(const ByteString& key, const CFX_FloatRect& rect) {
+    SetRectFor(key.AsStringView(), rect);
+  }
+  void SetRectFor(const char* key, const CFX_FloatRect& rect) {
+    SetRectFor(ByteStringView(key), rect);
+  }
+  void SetMatrixFor(ByteStringView key, const CFX_Matrix& matrix);
+  void SetMatrixFor(const ByteString& key, const CFX_Matrix& matrix) {
+    SetMatrixFor(key.AsStringView(), matrix);
+  }
+  void SetMatrixFor(const char* key, const CFX_Matrix& matrix) {
+    SetMatrixFor(ByteStringView(key), matrix);
+  }
 
-  void ConvertToIndirectObjectFor(const ByteString& key,
+  void ConvertToIndirectObjectFor(ByteStringView key,
                                   CPDF_IndirectObjectHolder* pHolder);
+  void ConvertToIndirectObjectFor(const ByteString& key,
+                                  CPDF_IndirectObjectHolder* pHolder) {
+    ConvertToIndirectObjectFor(key.AsStringView(), pHolder);
+  }
+  void ConvertToIndirectObjectFor(const char* key,
+                                  CPDF_IndirectObjectHolder* pHolder) {
+    ConvertToIndirectObjectFor(ByteStringView(key), pHolder);
+  }
 
   // Invalidates iterators for the element with the key |key|.
   RetainPtr<CPDF_Object> RemoveFor(ByteStringView key);
 
   // Invalidates iterators for the element with the key |oldkey|.
-  void ReplaceKey(const ByteString& oldkey, const ByteString& newkey);
+  void ReplaceKey(ByteStringView oldkey, ByteStringView newkey);
+  void ReplaceKey(const ByteString& oldkey, const ByteString& newkey) {
+    ReplaceKey(oldkey.AsStringView(), newkey.AsStringView());
+  }
 
   WeakPtr<ByteStringPool> GetByteStringPool() const { return pool_; }
 
@@ -141,10 +178,9 @@ class CPDF_Dictionary final : public CPDF_Object {
   const CPDF_Number* GetNumberForInternal(ByteStringView key) const;
   const CPDF_Stream* GetStreamForInternal(ByteStringView key) const;
   const CPDF_String* GetStringForInternal(ByteStringView key) const;
-  CPDF_Object* SetForInternal(const ByteString& key,
-                              RetainPtr<CPDF_Object> pObj);
+  CPDF_Object* SetForInternal(ByteStringView key, RetainPtr<CPDF_Object> pObj);
 
-  ByteString MaybeIntern(const ByteString& str);
+  ByteString MaybeIntern(ByteStringView str);
   const CPDF_Dictionary* GetDictInternal() const override;
   RetainPtr<CPDF_Object> CloneNonCyclic(
       bool bDirect,

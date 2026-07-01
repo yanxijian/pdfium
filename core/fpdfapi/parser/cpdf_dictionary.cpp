@@ -271,14 +271,19 @@ std::vector<ByteString> CPDF_Dictionary::GetKeys() const {
 
 void CPDF_Dictionary::SetFor(const ByteString& key,
                              RetainPtr<CPDF_Object> object) {
+  (void)SetForInternal(key.AsStringView(), std::move(object));
+}
+
+void CPDF_Dictionary::SetFor(ByteStringView key,
+                             RetainPtr<CPDF_Object> object) {
   (void)SetForInternal(key, std::move(object));
 }
 
-CPDF_Object* CPDF_Dictionary::SetForInternal(const ByteString& key,
+CPDF_Object* CPDF_Dictionary::SetForInternal(ByteStringView key,
                                              RetainPtr<CPDF_Object> pObj) {
   CHECK(!IsLocked());
   if (!pObj) {
-    map_.erase(key);
+    RemoveFor(key);
     return nullptr;
   }
   CHECK(pObj->IsInline());
@@ -289,7 +294,7 @@ CPDF_Object* CPDF_Dictionary::SetForInternal(const ByteString& key,
 }
 
 void CPDF_Dictionary::ConvertToIndirectObjectFor(
-    const ByteString& key,
+    ByteStringView key,
     CPDF_IndirectObjectHolder* pHolder) {
   CHECK(!IsLocked());
   auto it = map_.find(key);
@@ -311,8 +316,7 @@ RetainPtr<CPDF_Object> CPDF_Dictionary::RemoveFor(ByteStringView key) {
   return std::move(node.mapped());
 }
 
-void CPDF_Dictionary::ReplaceKey(const ByteString& oldkey,
-                                 const ByteString& newkey) {
+void CPDF_Dictionary::ReplaceKey(ByteStringView oldkey, ByteStringView newkey) {
   CHECK(!IsLocked());
   auto old_it = map_.find(oldkey);
   if (old_it == map_.end()) {
@@ -328,7 +332,7 @@ void CPDF_Dictionary::ReplaceKey(const ByteString& oldkey,
   map_.erase(old_it);
 }
 
-void CPDF_Dictionary::SetRectFor(const ByteString& key,
+void CPDF_Dictionary::SetRectFor(ByteStringView key,
                                  const CFX_FloatRect& rect) {
   auto pArray = SetNewFor<CPDF_Array>(key);
   pArray->AppendNew<CPDF_Number>(rect.left);
@@ -337,7 +341,7 @@ void CPDF_Dictionary::SetRectFor(const ByteString& key,
   pArray->AppendNew<CPDF_Number>(rect.top);
 }
 
-void CPDF_Dictionary::SetMatrixFor(const ByteString& key,
+void CPDF_Dictionary::SetMatrixFor(ByteStringView key,
                                    const CFX_Matrix& matrix) {
   auto pArray = SetNewFor<CPDF_Array>(key);
   pArray->AppendNew<CPDF_Number>(matrix.a);
@@ -348,8 +352,8 @@ void CPDF_Dictionary::SetMatrixFor(const ByteString& key,
   pArray->AppendNew<CPDF_Number>(matrix.f);
 }
 
-ByteString CPDF_Dictionary::MaybeIntern(const ByteString& str) {
-  return pool_ ? pool_->Intern(str) : str;
+ByteString CPDF_Dictionary::MaybeIntern(ByteStringView str) {
+  return pool_ ? pool_->Intern(str) : ByteString(str);
 }
 
 bool CPDF_Dictionary::WriteTo(IFX_ArchiveStream* archive,

@@ -38,6 +38,17 @@ TEST(ByteStringPool, Basic) {
   EXPECT_TRUE(interned_null2.IsEmpty());
   EXPECT_EQ(goats1.c_str(), interned_goats1.c_str());
   EXPECT_EQ(goats1.c_str(), interned_goats2.c_str());
+
+  // Test ByteStringView heterogeneous lookup.
+  ByteStringView goats_view("goats");
+  ByteString interned_goats_view = pool.Intern(goats_view);
+  EXPECT_EQ(goats1, interned_goats_view);
+  EXPECT_EQ(goats1.c_str(), interned_goats_view.c_str());
+
+  // Test const char* literal interning.
+  ByteString interned_literal = pool.Intern("goats");
+  EXPECT_EQ(goats1, interned_literal);
+  EXPECT_EQ(goats1.c_str(), interned_literal.c_str());
 }
 
 }  // namespace fxcrt
