@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "aa37589a_f0cf682b",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 855,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T21:27:10Z",
+      "side": 1,
+      "message": "\u003e Are you sure this is true if and only if it\u0027s ActualText characters?\n\nIt is a bit confusing and can use some more cleanup later, but yes.\n\n\u003e I looked into uses of kPiece and I can see some other places it is used:\n\u003e \n\u003e 1. I see kPiece used for hyphenated text here: https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d1180;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n\nThis is a read and not a write.\n\n\u003e 2. I see kPiece set for when the unicode got normalized https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d813;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n\nThis writes into `char_list_`.\n\n\u003e I think you\u0027re detecting this https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d1037;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n\nThis writes into `temp_char_list_`, and `temp_char_list_` is never \"cross contaminated\" with elements from `char_list_`.",
+      "parentUuid": "eb33ad20_961d0cf4",
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ef6c825_9a57907f",
         "filename": "core/fpdftext/cpdf_textpage.cpp",
         "patchSetId": 3
@@ -31,6 +49,30 @@
       "writtenOn": "2026-07-01T20:45:06Z",
       "side": 1,
       "message": "What does this is_rtl do? Maybe we want it to be true still so that the selection rectangles work in the rtl way. I\u0027m just guessing though I didn\u0027t dig into what it does.",
+      "range": {
+        "startLine": 858,
+        "startChar": 31,
+        "endLine": 858,
+        "endChar": 47
+      },
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e23848fd_1d781f5f",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T21:27:10Z",
+      "side": 1,
+      "message": "Maybe looking at the \"before\" code in https://pdfium-review.googlesource.com/c/pdfium/+/150190 can help explain what\u0027s going on. This is equivalent to the prior AddCharInfoByLRDirection() code.",
+      "parentUuid": "8ef6c825_9a57907f",
       "range": {
         "startLine": 858,
         "startChar": 31,
