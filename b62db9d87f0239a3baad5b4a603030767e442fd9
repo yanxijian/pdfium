@@ -42,6 +42,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d7d69f5_f144d584",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T20:36:49Z",
+      "side": 1,
+      "message": "I\u0027ll make a pass over the existing build flags as a follow-up.",
+      "parentUuid": "d64a7cbc_9a47c96d",
+      "range": {
+        "startLine": 64,
+        "startChar": 6,
+        "endLine": 64,
+        "endChar": 36
+      },
+      "revId": "b62db9d87f0239a3baad5b4a603030767e442fd9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "21a79eee_08444584",
@@ -79,6 +103,30 @@
           ]
         }
       ],
+      "revId": "b62db9d87f0239a3baad5b4a603030767e442fd9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ceebd40b_8e6fbb15",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T20:36:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "21a79eee_08444584",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 44
+      },
       "revId": "b62db9d87f0239a3baad5b4a603030767e442fd9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
