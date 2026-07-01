@@ -94,7 +94,7 @@ class CFX_LinuxFontInfo final : public CFX_FolderFontInfo {
                 int pitch_family,
                 const ByteString& face) override;
 
-  bool ParseFontCfg(const char** pUserPaths);
+  bool ParseFontCfg(pdfium::span<const char* const> user_paths);
 };
 
 void* CFX_LinuxFontInfo::MapFont(CFX_FontMapper* mapper,
@@ -155,17 +155,14 @@ void* CFX_LinuxFontInfo::MapFont(CFX_FontMapper* mapper,
   return FindFont(weight, bItalic, charset, pitch_family, face, !bCJK);
 }
 
-bool CFX_LinuxFontInfo::ParseFontCfg(const char** pUserPaths) {
-  if (!pUserPaths) {
+bool CFX_LinuxFontInfo::ParseFontCfg(
+    pdfium::span<const char* const> user_paths) {
+  if (user_paths.empty()) {
     return false;
   }
-
-  // SAFETY: nullptr-terminated array required from caller.
-  UNSAFE_BUFFERS({
-    for (const char** pPath = pUserPaths; *pPath; ++pPath) {
-      AddPath(*pPath);
-    }
-  });
+  for (const char* path : user_paths) {
+    AddPath(path);
+  }
   return true;
 }
 

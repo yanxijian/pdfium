@@ -84,7 +84,9 @@ class CFX_GEModule {
 
   CFX_FontMgr* GetFontMgr() const { return font_mgr_.get(); }
   PlatformIface* GetPlatform() const { return platform_.get(); }
-  const char** GetUserFontPaths() const { return user_font_paths_; }
+  pdfium::span<const char* const> GetUserFontPaths() const {
+    return user_font_paths_;
+  }
 
   void SetEncoderIface(const EncoderIface* encoders) {
     encoder_iface_ = encoders;
@@ -112,8 +114,7 @@ class CFX_GEModule {
   std::unique_ptr<PlatformIface> const platform_;  // Must outlive `font_mgr_`.
   std::unique_ptr<CFX_FontMgr> const font_mgr_;
 
-  // Exclude because taken from public API.
-  UNOWNED_PTR_EXCLUSION const char** const user_font_paths_;
+  pdfium::span<const char* const> user_font_paths_;
 
   UnownedPtr<const EncoderIface> encoder_iface_;
 };
