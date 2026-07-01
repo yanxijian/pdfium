@@ -1,0 +1,86 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d64a7cbc_9a47c96d",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T19:56:30Z",
+      "side": 1,
+      "message": "pre-nit: useless comment, maybe say something about omnipresent",
+      "range": {
+        "startLine": 64,
+        "startChar": 6,
+        "endLine": 64,
+        "endChar": 36
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "fd07e1a5_2ed36d0c",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "BUILD.gn",
+              "range": {
+                "startLine": 64,
+                "startChar": 0,
+                "endLine": 65,
+                "endChar": 0
+              },
+              "replacement": "    # Enable warning for narrowing conversions.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "b62db9d87f0239a3baad5b4a603030767e442fd9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21a79eee_08444584",
+        "filename": "BUILD.gn",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-01T19:56:30Z",
+      "side": 1,
+      "message": "nit: comment along lines of # ... - I\u0027m guessing this is style guide, or some other reason.",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 44
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8803a3ef_dd05866e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "BUILD.gn",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "    # Recommended by the C++ team.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "b62db9d87f0239a3baad5b4a603030767e442fd9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
