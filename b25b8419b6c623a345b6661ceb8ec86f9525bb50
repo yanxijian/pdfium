@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24c2210a_a594ffdd",
+        "filename": "core/fxcrt/bytestring_pool.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:07:54Z",
+      "side": 1,
+      "message": "Either mention this change in the CL description, or omit.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 3
+      },
+      "revId": "b25b8419b6c623a345b6661ceb8ec86f9525bb50",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
