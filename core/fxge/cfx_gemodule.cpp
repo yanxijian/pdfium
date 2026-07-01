@@ -17,6 +17,22 @@ CFX_GEModule* g_GEModule = nullptr;
 WindowsPrintMode g_print_mode = WindowsPrintMode::kEmf;
 #endif
 
+pdfium::span<const char* const> MakeUserFontPathsSpan(
+    const char** user_font_paths) {
+  if (!user_font_paths) {
+    return {};
+  }
+  size_t count = 0;
+  // SAFETY: user_font_paths is a null-pointer-terminated array per public API
+  // contract.
+  UNSAFE_BUFFERS({
+    while (user_font_paths[count]) {
+      ++count;
+    }
+    return pdfium::span(user_font_paths, count);
+  });
+}
+
 }  // namespace
 
 #if BUILDFLAG(IS_WIN)
@@ -62,6 +78,6 @@ CFX_GEModule::CFX_GEModule(const char** pUserFontPaths,
     : renderer_type_(renderer_type),
       platform_(PlatformIface::Create()),
       font_mgr_(std::make_unique<CFX_FontMgr>(backend)),
-      user_font_paths_(pUserFontPaths) {}
+      user_font_paths_(MakeUserFontPathsSpan(pUserFontPaths)) {}
 
 CFX_GEModule::~CFX_GEModule() = default;
