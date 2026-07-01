@@ -33,6 +33,143 @@
       "message": "Seems like its roll season, the bots are a bit more busy than usual.",
       "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "309a838b_33492c49",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Default values not needed? Just change the caller on line 24 to explicitly set the arguments.",
+      "range": {
+        "startLine": 13,
+        "startChar": 19,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b8d1f2d_4a79ce47",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Another way to do this is for BrotliEnabledEmbedderTest to provide 2 virtual methods to return these 2 values. Then the subclasses can override and return their preferred values.",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15bf3036_05ca120e",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "In general, SetUp() should call EmbedderTest::SetUp(). As-is, the first test case that runs is missing the EmbedderTest::SetUp() call for sure.",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e332ba5_634c3eb2",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Maybe \"original\" or \"previous\" instead of \"old\".",
+      "range": {
+        "startLine": 35,
+        "startChar": 7,
+        "endLine": 35,
+        "endChar": 10
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9620799a_56710bbe",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Just reuse blank_200x200?",
+      "range": {
+        "startLine": 103,
+        "startChar": 31,
+        "endLine": 103,
+        "endChar": 58
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86a92fd8_d8360cec",
+        "filename": "public/fpdfview.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Maybe \"Boolean to specify whether the experimental PDF 2.0 /BrotliDecode filter is enabled.\"",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ef8c6ff_d4120846",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:35:47Z",
+      "side": 1,
+      "message": "Add a blank line above so these are not grouped with the overrides.",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
