@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb33ad20_961d0cf4",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 855,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-01T20:45:06Z",
+      "side": 1,
+      "message": "Are you sure this is true if and only if it\u0027s ActualText characters?\n\nI looked into uses of kPiece and I can see some other places it is used:\n\n1. I see kPiece used for hyphenated text here: https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d1180;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n2. I see kPiece set for when the unicode got normalized https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d813;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n\nI think you\u0027re detecting this https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d1037;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345\n\nI\u0027m just not sure this condition is strict enough. Should we put in a new type for marked content maybe? I\u0027m not sure what the proper solution would be.",
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ef6c825_9a57907f",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-01T20:45:06Z",
+      "side": 1,
+      "message": "What does this is_rtl do? Maybe we want it to be true still so that the selection rectangles work in the rtl way. I\u0027m just guessing though I didn\u0027t dig into what it does.",
+      "range": {
+        "startLine": 858,
+        "startChar": 31,
+        "endLine": 858,
+        "endChar": 47
+      },
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
