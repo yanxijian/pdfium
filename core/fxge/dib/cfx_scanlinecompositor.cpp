@@ -205,15 +205,11 @@ void CompositeRow_Rgb2Mask(pdfium::span<uint8_t> dest_span,
     std::ranges::fill(dest_span.first(static_cast<size_t>(width)), 0xff);
     return;
   }
-  uint8_t* dest_scan = dest_span.data();
-  const uint8_t* clip_scan = clip_span.data();
-  UNSAFE_TODO({
-    for (int i = 0; i < width; ++i) {
-      *dest_scan = AlphaUnion(*dest_scan, *clip_scan);
-      ++dest_scan;
-      ++clip_scan;
-    }
-  });
+  auto dest_sub = dest_span.first(static_cast<size_t>(width));
+  auto clip_sub = clip_span.first(static_cast<size_t>(width));
+  for (auto [clip, output] : fxcrt::Zip(clip_sub, dest_sub)) {
+    output = AlphaUnion(output, clip);
+  }
 }
 
 bool IsNonSeparableBlendMode(BlendMode mode) {
