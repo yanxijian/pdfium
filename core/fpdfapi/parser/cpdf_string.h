@@ -28,6 +28,7 @@ class CPDF_String final : public CPDF_Object {
   WideString GetUnicodeText() const override;
   void SetString(const ByteString& str) override;
   CPDF_String* AsMutableString() override;
+  void SharePool(const WeakPtr<ByteStringPool>& pool) override;
   bool WriteTo(IFX_ArchiveStream* archive,
                const CPDF_Encryptor* encryptor) const override;
 
@@ -36,6 +37,9 @@ class CPDF_String final : public CPDF_Object {
 
  private:
   CPDF_String();
+  CPDF_String(pdfium::span<const uint8_t> data, DataType is_hex);
+  explicit CPDF_String(const ByteString& str);
+  explicit CPDF_String(WideStringView str);
   CPDF_String(WeakPtr<ByteStringPool> pool,
               pdfium::span<const uint8_t> data,
               DataType is_hex);

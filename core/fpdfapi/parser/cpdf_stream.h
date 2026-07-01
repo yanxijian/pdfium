@@ -31,6 +31,7 @@ class CPDF_Stream final : public CPDF_Object {
   RetainPtr<CPDF_Object> Clone() const override;
   WideString GetUnicodeText() const override;
   CPDF_Stream* AsMutableStream() override;
+  void SharePool(const WeakPtr<ByteStringPool>& pool) override;
   bool WriteTo(IFX_ArchiveStream* archive,
                const CPDF_Encryptor* encryptor) const override;
 
