@@ -51,7 +51,7 @@ class CFX_MacFontInfo final : public CFX_FolderFontInfo {
                 int pitch_family,
                 const ByteString& face) override;
 
-  bool ParseFontCfg(const char** pUserPaths);
+  bool ParseFontCfg(pdfium::span<const char* const> user_paths);
 };
 
 constexpr char kJapanGothic[] = "Hiragino Kaku Gothic Pro W6";
@@ -137,15 +137,13 @@ void* CFX_MacFontInfo::MapFont(CFX_FontMapper* mapper,
   return it != font_list_.end() ? it->second.get() : nullptr;
 }
 
-bool CFX_MacFontInfo::ParseFontCfg(const char** pUserPaths) {
-  if (!pUserPaths) {
+bool CFX_MacFontInfo::ParseFontCfg(pdfium::span<const char* const> user_paths) {
+  if (user_paths.empty()) {
     return false;
   }
-  UNSAFE_TODO({
-    for (const char** pPath = pUserPaths; *pPath; ++pPath) {
-      AddPath(*pPath);
-    }
-  });
+  for (const char* path : user_paths) {
+    AddPath(path);
+  }
   return true;
 }
 

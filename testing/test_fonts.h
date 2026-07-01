@@ -8,12 +8,21 @@
 #include <string>
 #include <vector>
 
+#include "core/fxcrt/span.h"
+
 class TestFonts {
  public:
   TestFonts();
   ~TestFonts();
 
   const char** font_paths() { return font_paths_.data(); }
+  pdfium::span<const char* const> font_span() const {
+    if (font_paths_.empty()) {
+      return {};
+    }
+    // Omit trailing nullptr sentinel from span.
+    return pdfium::span(font_paths_).first(font_paths_.size() - 1);
+  }
   void InstallFontMapper();
 
   static std::string RenameFont(const char* face);
