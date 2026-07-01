@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "938b5651_9e3b8c33",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Use active voice: \"updated CPDF_FileSpec\"",
+      "range": {
+        "startLine": 14,
+        "startChar": 34,
+        "endLine": 14,
+        "endChar": 58
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "6e08e983_8084635a",
@@ -14,6 +37,172 @@
       "writtenOn": "2026-07-01T18:26:42Z",
       "side": 1,
       "message": "Should be updated now to focus on /Desc.",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21ed2843_03e0185d",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "No need to explicitly instantiate a ByteString here.",
+      "range": {
+        "startLine": 241,
+        "startChar": 41,
+        "endLine": 241,
+        "endChar": 51
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b7a2bec_179b3c3a",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Probably the same here.",
+      "range": {
+        "startLine": 264,
+        "startChar": 35,
+        "endLine": 264,
+        "endChar": 49
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5af15939_59a06fd7",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Why allow name objects?",
+      "range": {
+        "startLine": 265,
+        "startChar": 37,
+        "endLine": 265,
+        "endChar": 58
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e81e66b_762bc339",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "If this necessary, or can the next line just call `object-\u003eGetUnicodeText()` directly?",
+      "range": {
+        "startLine": 269,
+        "startChar": 47,
+        "endLine": 269,
+        "endChar": 55
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e4e22d8_4abc85e6",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Should have tests for invalid input parameters as well.",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37883610_59e1f896",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Set `buf` to something else and test it actually got written into with a wide char NUL.",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74df4c49_904173af",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Can pull the string out into a constant and use its length here, and reuse the string on line 458.",
+      "range": {
+        "startLine": 456,
+        "startChar": 18,
+        "endLine": 456,
+        "endChar": 20
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d83469b_2592b6b9",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T19:51:25Z",
+      "side": 1,
+      "message": "Also need to test FPDFAttachment_GetAttachmentDesc() where the buffer is too small to hold the string.",
       "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
