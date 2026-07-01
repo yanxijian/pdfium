@@ -1,6 +1,52 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ec1e5b0_f133ec9e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T23:05:16Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "9d1a606c89a8116e995f093e9041f2bc75f06cd5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2139c049_f1ababe7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T23:05:16Z",
+      "side": 1,
+      "message": "\"logic in\"",
+      "range": {
+        "startLine": 11,
+        "startChar": 47,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "9d1a606c89a8116e995f093e9041f2bc75f06cd5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "96a1bb9f_5663a1f5",
@@ -14,6 +60,29 @@
       "writtenOn": "2026-07-01T22:46:34Z",
       "side": 1,
       "message": "prepended (locally) now, just waiting on bots to finish to upload updated chain dependency",
+      "revId": "9d1a606c89a8116e995f093e9041f2bc75f06cd5",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c43cda7_7e547b0d",
+        "filename": "fpdfsdk/pwl/cpwl_edit_impl.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-01T23:05:16Z",
+      "side": 1,
+      "message": "Similar to one of the other CLs in the chain, why change the LTR code path if the CL is about fixing RTL handling?",
+      "range": {
+        "startLine": 669,
+        "startChar": 12,
+        "endLine": 669,
+        "endChar": 34
+      },
       "revId": "9d1a606c89a8116e995f093e9041f2bc75f06cd5",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
