@@ -4,6 +4,8 @@
 
 #include "testing/pdf_test_environment.h"
 
+#include "core/fxcrt/compiler_specific.h"
+#include "core/fxcrt/span.h"
 #include "core/fxge/cfx_gemodule.h"
 
 PDFTestEnvironment::PDFTestEnvironment() = default;
@@ -12,7 +14,18 @@ PDFTestEnvironment::~PDFTestEnvironment() = default;
 
 // testing::Environment:
 void PDFTestEnvironment::SetUp() {
-  CFX_GEModule::Create(test_fonts_.font_paths(),
+  const char** font_paths = test_fonts_.font_paths();
+  pdfium::span<const char* const> user_font_paths_span;
+  if (font_paths) {
+    size_t count = 0;
+    UNSAFE_BUFFERS({
+      while (font_paths[count]) {
+        ++count;
+      }
+      user_font_paths_span = pdfium::span(font_paths, count);
+    });
+  }
+  CFX_GEModule::Create(user_font_paths_span,
                        CFX_GEModule::RendererType::kDefault,
                        CFX_FontMgr::FontBackend::kFreeType);
 }
