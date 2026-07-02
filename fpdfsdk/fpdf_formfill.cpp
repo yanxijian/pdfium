@@ -14,6 +14,7 @@
 #include "core/fpdfapi/page/cpdf_annotcontext.h"
 #include "core/fpdfapi/page/cpdf_occontext.h"
 #include "core/fpdfapi/page/cpdf_page.h"
+#include "core/fpdfapi/parser/cpdf_array.h"
 #include "core/fpdfapi/parser/cpdf_dictionary.h"
 #include "core/fpdfapi/parser/cpdf_document.h"
 #include "core/fpdfapi/parser/cpdf_stream.h"
@@ -21,6 +22,7 @@
 #include "core/fpdfdoc/cpdf_formcontrol.h"
 #include "core/fpdfdoc/cpdf_formfield.h"
 #include "core/fpdfdoc/cpdf_interactiveform.h"
+#include "core/fxcrt/numerics/safe_conversions.h"
 #include "core/fxge/cfx_gemodule.h"
 #include "core/fxge/cfx_renderdevice.h"
 #include "core/fxge/dib/cfx_dibitmap.h"
@@ -29,6 +31,7 @@
 #include "fpdfsdk/cpdfsdk_helpers.h"
 #include "fpdfsdk/cpdfsdk_interactiveform.h"
 #include "fpdfsdk/cpdfsdk_pageview.h"
+#include "fpdfsdk/cpdfsdk_widget.h"
 #include "public/fpdfview.h"
 
 #ifdef PDF_ENABLE_XFA
@@ -179,6 +182,38 @@ CPDFSDK_PageView* FormHandleToPageView(FPDF_FORMHANDLE hHandle,
   return pFormFillEnv ? pFormFillEnv->GetOrCreatePageView(pPage) : nullptr;
 }
 
+CPDFSDK_Widget* GetFormWidgetAtPoint(FPDF_FORMHANDLE hHandle,
+                                     FPDF_PAGE page,
+                                     double page_x,
+                                     double page_y) {
+  CPDFSDK_PageView* pPageView = FormHandleToPageView(hHandle, page);
+  if (!pPageView) {
+    return nullptr;
+  }
+
+  return pPageView->GetFormWidgetAtPoint(CFX_PointF(
+      static_cast<float>(page_x), static_cast<float>(page_y)));
+}
+
+int GetAnnotIndex(const CPDF_Page* page, const CPDF_Dictionary* annot_dict) {
+  if (!page || !annot_dict) {
+    return -1;
+  }
+
+  RetainPtr<const CPDF_Array> annots = page->GetAnnotsArray();
+  if (!annots) {
+    return -1;
+  }
+
+  CPDF_ArrayLocker locker(annots);
+  for (auto it = locker.begin(); it != locker.end(); ++it) {
+    if ((*it)->GetDirect() == annot_dict) {
+      return pdfium::checked_cast<int>(it - locker.begin());
+    }
+  }
+  return -1;
+}
+
 #if defined(PDF_USE_SKIA)
 using BitmapOrCanvas = std::variant<CFX_DIBitmap*, SkCanvas*>;
 #else
@@ -288,22 +323,9 @@ FPDFPage_HasFormFieldAtPoint(FPDF_FORMHANDLE hHandle,
                              FPDF_PAGE page,
                              double page_x,
                              double page_y) {
-  const CPDF_Page* pPage = CPDFPageFromFPDFPage(page);
-  if (pPage) {
-    CPDFSDK_InteractiveForm* pForm = FormHandleToInteractiveForm(hHandle);
-    if (!pForm) {
-      return -1;
-    }
-
-    const CPDF_InteractiveForm* pPDFForm = pForm->GetInteractiveForm();
-    const CPDF_FormControl* pFormCtrl = pPDFForm->GetControlAtPoint(
-        pPage,
-        CFX_PointF(static_cast<float>(page_x), static_cast<float>(page_y)),
-        nullptr);
-    if (!pFormCtrl) {
-      return -1;
-    }
-    const CPDF_FormField* pFormField = pFormCtrl->GetField();
+  CPDFSDK_Widget* pWidget = GetFormWidgetAtPoint(hHandle, page, page_x, page_y);
+  if (pWidget) {
+    CPDF_FormField* pFormField = pWidget->GetFormField();
     return pFormField ? static_cast<int>(pFormField->GetFieldType()) : -1;
   }
 
@@ -323,22 +345,15 @@ FPDFPage_FormFieldZOrderAtPoint(FPDF_FORMHANDLE hHandle,
                                 FPDF_PAGE page,
                                 double page_x,
                                 double page_y) {
-  CPDFSDK_InteractiveForm* pForm = FormHandleToInteractiveForm(hHandle);
-  if (!pForm) {
+  CPDFSDK_Widget* pWidget = GetFormWidgetAtPoint(hHandle, page, page_x, page_y);
+  if (!pWidget) {
     return -1;
   }
 
-  CPDF_Page* pPage = CPDFPageFromFPDFPage(page);
-  if (!pPage) {
-    return -1;
-  }
-
-  CPDF_InteractiveForm* pPDFForm = pForm->GetInteractiveForm();
-  int z_order = -1;
-  pPDFForm->GetControlAtPoint(
-      pPage, CFX_PointF(static_cast<float>(page_x), static_cast<float>(page_y)),
-      &z_order);
-  return z_order;
+  CPDF_Annot* pAnnot = pWidget->GetPDFAnnot();
+  return pAnnot ? GetAnnotIndex(CPDFPageFromFPDFPage(page),
+                                pAnnot->GetAnnotDict())
+                : -1;
 }
 
 FPDF_EXPORT FPDF_FORMHANDLE FPDF_CALLCONV
