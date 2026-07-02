@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b63b2be8_f322d1d1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-02T18:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "938b5651_9e3b8c33",
+      "range": {
+        "startLine": 14,
+        "startChar": 34,
+        "endLine": 14,
+        "endChar": 58
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "6e08e983_8084635a",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 6
@@ -64,6 +88,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d149859a_9691cda9",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-02T18:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "21ed2843_03e0185d",
+      "range": {
+        "startLine": 241,
+        "startChar": 41,
+        "endLine": 241,
+        "endChar": 51
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6b7a2bec_179b3c3a",
@@ -87,6 +135,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebdb57f0_2eb83915",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-02T18:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6b7a2bec_179b3c3a",
+      "range": {
+        "startLine": 264,
+        "startChar": 35,
+        "endLine": 264,
+        "endChar": 49
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5af15939_59a06fd7",
@@ -100,6 +172,30 @@
       "writtenOn": "2026-07-01T19:51:25Z",
       "side": 1,
       "message": "Why allow name objects?",
+      "range": {
+        "startLine": 265,
+        "startChar": 37,
+        "endLine": 265,
+        "endChar": 58
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19858fc7_ce82ab76",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-02T18:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5af15939_59a06fd7",
       "range": {
         "startLine": 265,
         "startChar": 37,
@@ -147,6 +243,30 @@
       "side": 1,
       "message": "\"Is this necessary\"",
       "parentUuid": "6e81e66b_762bc339",
+      "range": {
+        "startLine": 269,
+        "startChar": 47,
+        "endLine": 269,
+        "endChar": 55
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7fff86b_e55cbc30",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-02T18:09:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e890a751_fda49e5d",
       "range": {
         "startLine": 269,
         "startChar": 47,
