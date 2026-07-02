@@ -22,6 +22,7 @@ class CPDF_AnnotList;
 class CPDF_RenderOptions;
 class CPDFSDK_FormFillEnvironment;
 class CPDFSDK_InteractiveForm;
+class CPDFSDK_Widget;
 
 #ifdef PDF_ENABLE_XFA
 class CPDFXFA_Page;
@@ -52,6 +53,7 @@ class CPDFSDK_PageView final : public CPDF_Page::View {
 
   std::vector<CPDFSDK_Annot*> GetAnnotList() const;
   CPDFSDK_Annot* GetAnnotByDict(const CPDF_Dictionary* dict);
+  CPDFSDK_Widget* GetFormWidgetAtPoint(const CFX_PointF& point);
 
 #ifdef PDF_ENABLE_XFA
   CPDFSDK_Annot* AddAnnotForFFWidget(CXFA_FFWidget* pWidget);

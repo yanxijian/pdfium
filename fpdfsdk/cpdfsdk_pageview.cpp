@@ -24,6 +24,7 @@
 #include "fpdfsdk/cpdfsdk_formfillenvironment.h"
 #include "fpdfsdk/cpdfsdk_helpers.h"
 #include "fpdfsdk/cpdfsdk_interactiveform.h"
+#include "fpdfsdk/cpdfsdk_widget.h"
 
 #ifdef PDF_ENABLE_XFA
 #include "fpdfsdk/fpdfxfa/cpdfxfa_page.h"
@@ -226,6 +227,11 @@ CPDFSDK_Annot* CPDFSDK_PageView::GetAnnotByDict(const CPDF_Dictionary* dict) {
     }
   }
   return nullptr;
+}
+
+CPDFSDK_Widget* CPDFSDK_PageView::GetFormWidgetAtPoint(
+    const CFX_PointF& point) {
+  return ToCPDFSDKWidget(GetFXWidgetAtPoint(point));
 }
 
 #ifdef PDF_ENABLE_XFA
