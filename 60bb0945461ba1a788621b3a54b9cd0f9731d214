@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6d0596d_d6198a04",
+        "filename": "testing/resources/pixel/form_textfield_focused_rtl_expected.pdf.0.png",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-02T00:22:44Z",
+      "side": 1,
+      "message": "The caret moved, but is it in the correct position, or is this still a work in progress? Based on form_textfield_focused_rtl.evt, I intuitively think the caret should be all the way on the left. If this is the case, then please mention the state of the test expectations in the CL description.",
+      "revId": "60bb0945461ba1a788621b3a54b9cd0f9731d214",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
