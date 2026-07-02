@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b589b3c_8e027c24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-02T00:53:54Z",
+      "side": 1,
+      "message": "CLs - no apostrophe.",
+      "range": {
+        "startLine": 15,
+        "startChar": 63,
+        "endLine": 15,
+        "endChar": 67
+      },
+      "revId": "37ee3200a8d51dd054d604760f27ca47642bff1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5cb7e98_083f724a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-02T00:53:54Z",
+      "side": 1,
+      "message": "LGTM once all the test expectations are in place for the various platforms.",
+      "revId": "37ee3200a8d51dd054d604760f27ca47642bff1e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
