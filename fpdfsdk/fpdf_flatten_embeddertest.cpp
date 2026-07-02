@@ -4,6 +4,7 @@
 
 #include "build/build_config.h"
 #include "core/fxge/cfx_renderdevice.h"
+#include "public/fpdf_annot.h"
 #include "public/fpdf_flatten.h"
 #include "public/fpdfview.h"
 #include "testing/embedder_test.h"
@@ -183,4 +184,54 @@ TEST_F(FPDFFlattenEmbedderTest, FlattenSharedWidgetAnnotKeepsAcroForm) {
   ScopedSavedDoc saved_doc = OpenScopedSavedDocument();
   ASSERT_TRUE(saved_doc);
   EXPECT_EQ(FORMTYPE_NONE, FPDF_GetFormType(saved_doc.get()));
+}
+
+TEST_F(FPDFFlattenEmbedderTest, FlattenNoViewAnnotation) {
+  // Test that annotations with NoView flag are skipped during normal display.
+  ASSERT_TRUE(OpenDocument("annotation_stamp_with_ap.pdf"));
+  ScopedPage page = LoadScopedPage(0);
+  ASSERT_TRUE(page);
+
+  const int initial_annot_count = FPDFPage_GetAnnotCount(page.get());
+  ASSERT_GT(initial_annot_count, 0);
+
+  // Set NoView flag on all annotations.
+  for (int i = 0; i < initial_annot_count; ++i) {
+    ScopedFPDFAnnotation annot(FPDFPage_GetAnnot(page.get(), i));
+    ASSERT_TRUE(annot);
+    int flags = FPDFAnnot_GetFlags(annot.get());
+    flags |= FPDF_ANNOT_FLAG_NOVIEW;
+    EXPECT_TRUE(FPDFAnnot_SetFlags(annot.get(), flags));
+  }
+
+  // NoView annotations should be skipped during normal display flattening.
+  EXPECT_EQ(FLATTEN_SUCCESS, FPDFPage_Flatten(page.get(), FLAT_NORMALDISPLAY));
+  ASSERT_TRUE(FPDF_SaveAsCopy(document(), this, 0));
+
+  VerifySavedDocumentWithExpectationSuffix("flatten_noview_annot");
+}
+
+TEST_F(FPDFFlattenEmbedderTest, FlattenNoViewPrintAnnotation) {
+  // Test that NoView+Print annotations are included when flattening for print.
+  ASSERT_TRUE(OpenDocument("annotation_stamp_with_ap.pdf"));
+  ScopedPage page = LoadScopedPage(0);
+  ASSERT_TRUE(page);
+
+  const int initial_annot_count = FPDFPage_GetAnnotCount(page.get());
+  ASSERT_GT(initial_annot_count, 0);
+
+  // Set NoView+Print flags on all annotations.
+  for (int i = 0; i < initial_annot_count; ++i) {
+    ScopedFPDFAnnotation annot(FPDFPage_GetAnnot(page.get(), i));
+    ASSERT_TRUE(annot);
+    int flags = FPDFAnnot_GetFlags(annot.get());
+    flags |= FPDF_ANNOT_FLAG_NOVIEW | FPDF_ANNOT_FLAG_PRINT;
+    EXPECT_TRUE(FPDFAnnot_SetFlags(annot.get(), flags));
+  }
+
+  // NoView+Print annotations should be included when flattening for print.
+  EXPECT_EQ(FLATTEN_SUCCESS, FPDFPage_Flatten(page.get(), FLAT_PRINT));
+  ASSERT_TRUE(FPDF_SaveAsCopy(document(), this, 0));
+
+  VerifySavedDocumentWithExpectationSuffix("flatten_noview_print_annot_print");
 }
