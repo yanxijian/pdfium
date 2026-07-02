@@ -21,6 +21,7 @@
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/stl_util.h"
+#include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 
 namespace {
 
@@ -97,6 +98,15 @@ void CPVT_VariableText::Iterator::SetAt(int32_t nWordIndex) {
 
 void CPVT_VariableText::Iterator::SetAt(const CPVT_WordPlace& place) {
   cur_pos_ = place;
+}
+
+float CPVT_VariableText::Iterator::GetLineCaretX(const CPVT_Line& line) {
+  CPVT_WordPlace old_place = GetWordPlace();
+  absl::Cleanup scoped_set_at = [this, old_place] { SetAt(old_place); };
+  SetAt(line.lineplace);
+  CPVT_Word first_word;
+  bool is_rtl = GetWord(first_word) && first_word.is_rtl();
+  return is_rtl ? line.ptLine.x + line.fLineWidth : line.ptLine.x;
 }
 
 bool CPVT_VariableText::Iterator::NextWord() {
