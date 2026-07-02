@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2d35a3f_dac12168",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-02T00:32:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1dd21acd_8e9d922c",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 3
+      },
+      "revId": "1e10a5f0fcffce3b88693c94a9b1a2ce31b6cb40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "30b9be0d_d8272b4f",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-07-01T23:22:15Z",
       "side": 1,
       "message": "I believe the goal here is to always restore `old_place` before this method returns. Just as std::unique_ptr can guarantee that for deleting an object, absl::Cleanup() can do the same for more arbitrary cleanup tasks. This will be the first absl::Cleanup() usage in PDFium, but I think it should work. There are plenty of examples in Chromium. Care to give this a try?",
+      "revId": "1e10a5f0fcffce3b88693c94a9b1a2ce31b6cb40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9178608c_ad7d03a9",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-02T00:32:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30b9be0d_d8272b4f",
       "revId": "1e10a5f0fcffce3b88693c94a9b1a2ce31b6cb40",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
