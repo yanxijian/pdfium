@@ -1374,6 +1374,24 @@ TEST_F(FPDFFormFillEmbedderTest, Bug1477093) {
 
 #endif  // PDF_ENABLE_V8
 
+TEST_F(FPDFFormFillEmbedderTest, FormTextHitTestNearFieldEdge) {
+  ASSERT_TRUE(OpenDocument("text_form.pdf"));
+  ScopedPage page = LoadScopedPage(0);
+  ASSERT_TRUE(page);
+
+  static constexpr CFX_PointF kPoint(150.0f, 130.5f);
+  EXPECT_EQ(FPDF_FORMFIELD_TEXTFIELD,
+            FPDFPage_HasFormFieldAtPoint(form_handle(), page.get(), kPoint.x,
+                                         kPoint.y));
+  EXPECT_EQ(0, FPDFPage_FormFieldZOrderAtPoint(form_handle(), page.get(),
+                                               kPoint.x, kPoint.y));
+  FORM_OnMouseMove(form_handle(), page.get(), 0, kPoint.x, kPoint.y);
+  EXPECT_TRUE(
+      FORM_OnLButtonDown(form_handle(), page.get(), 0, kPoint.x, kPoint.y));
+  FORM_OnLButtonUp(form_handle(), page.get(), 0, kPoint.x, kPoint.y);
+  FORM_ForceToKillFocus(form_handle());
+}
+
 TEST_F(FPDFFormFillEmbedderTest, FormText) {
   static constexpr char kFocusedTextFormWithAbcPng[] =
       "focused_text_form_with_abc";
