@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb481d43_499505ee",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 14
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Let me know if you\u0027d like me to turn this into a loop, while some inputs are common having a list of attachments makes this less self-documenting imo.",
+      "revId": "92639978bc7f11244fecda0760456e715a9612b8",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

@@ -294,6 +294,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "861dbde3_c6a56d84",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e4e22d8_4abc85e6",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "37883610_59e1f896",
@@ -307,6 +325,24 @@
       "writtenOn": "2026-07-01T19:51:25Z",
       "side": 1,
       "message": "Set `buf` to something else and test it actually got written into with a wide char NUL.",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "953b69f4_6813646f",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37883610_59e1f896",
       "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -334,6 +370,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9266c4b_115b1de6",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74df4c49_904173af",
+      "range": {
+        "startLine": 456,
+        "startChar": 18,
+        "endLine": 456,
+        "endChar": 20
+      },
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d83469b_2592b6b9",
@@ -347,6 +407,24 @@
       "writtenOn": "2026-07-01T19:51:25Z",
       "side": 1,
       "message": "Also need to test FPDFAttachment_GetAttachmentDesc() where the buffer is too small to hold the string.",
+      "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7eb53a51_77d4d3a4",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d83469b_2592b6b9",
       "revId": "0fbf4f54e233399af00a42a3c0ba3c4610aa4cbf",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf41a6ce_48800d31",
+        "filename": "testing/resources/embedded_attachments_with_desc.in",
+        "patchSetId": 13
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T18:40:31Z",
+      "side": 1,
+      "message": "Not sure what to put here, I just left it identical to the first object, let me know if there is a way to generate this or if it could be left as is (I saw some tests use test values though).",
+      "revId": "24d4d729400f03ff3fb4deefea765dca7f59a136",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
