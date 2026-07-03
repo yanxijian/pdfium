@@ -75,6 +75,48 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "efd1a58f_05248d92",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "309a838b_33492c49",
+      "range": {
+        "startLine": 13,
+        "startChar": 19,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04383967_41b0a34b",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b8d1f2d_4a79ce47",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15bf3036_05ca120e",
@@ -92,6 +134,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96ae9000_f9be7368",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15bf3036_05ca120e",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2e332ba5_634c3eb2",
@@ -105,6 +165,30 @@
       "writtenOn": "2026-07-01T19:35:47Z",
       "side": 1,
       "message": "Maybe \"original\" or \"previous\" instead of \"old\".",
+      "range": {
+        "startLine": 35,
+        "startChar": 7,
+        "endLine": 35,
+        "endChar": 10
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eade992d_f612d8c7",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e332ba5_634c3eb2",
       "range": {
         "startLine": 35,
         "startChar": 7,
@@ -138,6 +222,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6aa3e549_3c57791f",
+        "filename": "core/fxcodec/brotli/brotli_embeddertest.cpp",
+        "patchSetId": 53
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9620799a_56710bbe",
+      "range": {
+        "startLine": 103,
+        "startChar": 31,
+        "endLine": 103,
+        "endChar": 58
+      },
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86a92fd8_d8360cec",
@@ -155,6 +263,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "68aad871_a7eb8ac6",
+        "filename": "public/fpdfview.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "86a92fd8_d8360cec",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8ef8c6ff_d4120846",
@@ -168,6 +294,24 @@
       "writtenOn": "2026-07-01T19:35:47Z",
       "side": 1,
       "message": "Add a blank line above so these are not grouped with the overrides.",
+      "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a5588f4_f1995d58",
+        "filename": "testing/embedder_test_environment.h",
+        "patchSetId": 53
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-03T06:39:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ef8c6ff_d4120846",
       "revId": "0e8e6083fe83d616b194f3e3762ac2fa356b2208",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
