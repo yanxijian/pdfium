@@ -476,7 +476,7 @@ CPDF_DIB::LoadState CPDF_DIB::CreateDecoder(uint8_t resolution_levels_to_skip) {
     decoder_ = BasicModule::CreateRunLengthDecoder(
         src_span, GetWidth(), GetHeight(), components_, bpc_);
   } else if (decoder == "DCTDecode") {
-    if (!CreateDCTDecoder(src_span, pParams)) {
+    if (!CreateDCTDecoder(src_span, pParams, resolution_levels_to_skip)) {
       return LoadState::kFail;
     }
   }
@@ -501,11 +501,19 @@ CPDF_DIB::LoadState CPDF_DIB::CreateDecoder(uint8_t resolution_levels_to_skip) {
 }
 
 bool CPDF_DIB::CreateDCTDecoder(pdfium::span<const uint8_t> src_span,
-                                const CPDF_Dictionary* pParams) {
+                                const CPDF_Dictionary* pParams,
+                                uint8_t resolution_levels_to_skip) {
+  // libjpeg can decode directly at 1/2, 1/4, or 1/8 scale via DCT scaling,
+  // which is much cheaper than decoding at full resolution and downscaling
+  // afterwards. Cap at 1/8 (the largest power-of-two scaling libjpeg supports).
+  const uint32_t scale_denom = 1u
+                               << std::min<int>(resolution_levels_to_skip, 3);
   decoder_ = JpegModule::CreateDecoder(
       src_span, GetWidth(), GetHeight(), components_,
-      !pParams || pParams->GetIntegerFor("ColorTransform", 1));
+      !pParams || pParams->GetIntegerFor("ColorTransform", 1), scale_denom);
   if (decoder_) {
+    SetWidth(decoder_->GetWidth());
+    SetHeight(decoder_->GetHeight());
     return true;
   }
 
@@ -527,7 +535,12 @@ bool CPDF_DIB::CreateDCTDecoder(pdfium::span<const uint8_t> src_span,
   if (components_ == static_cast<uint32_t>(info.num_components)) {
     bpc_ = info.bits_per_components;
     decoder_ = JpegModule::CreateDecoder(src_span, GetWidth(), GetHeight(),
-                                         components_, info.color_transform);
+                                         components_, info.color_transform,
+                                         scale_denom);
+    if (decoder_) {
+      SetWidth(decoder_->GetWidth());
+      SetHeight(decoder_->GetHeight());
+    }
     return true;
   }
 
@@ -576,8 +589,13 @@ bool CPDF_DIB::CreateDCTDecoder(pdfium::span<const uint8_t> src_span,
   }
 
   bpc_ = info.bits_per_components;
-  decoder_ = JpegModule::CreateDecoder(src_span, GetWidth(), GetHeight(),
-                                       components_, info.color_transform);
+  decoder_ =
+      JpegModule::CreateDecoder(src_span, GetWidth(), GetHeight(), components_,
+                                info.color_transform, scale_denom);
+  if (decoder_) {
+    SetWidth(decoder_->GetWidth());
+    SetHeight(decoder_->GetHeight());
+  }
   return true;
 }
 
