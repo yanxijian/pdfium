@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2f70715_f962b75c",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-06T23:08:54Z",
+      "side": 1,
+      "message": "Over-parenthesized.",
+      "range": {
+        "startLine": 264,
+        "startChar": 18,
+        "endLine": 264,
+        "endChar": 19
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e5cb42bd_3383ee9f",
@@ -20,6 +43,70 @@
         "endLine": 487,
         "endChar": 70
       },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee2dc1a0_fbba5130",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 487,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-06T23:08:54Z",
+      "side": 1,
+      "message": "Sounds like you want to make more changes here.",
+      "parentUuid": "e5cb42bd_3383ee9f",
+      "range": {
+        "startLine": 486,
+        "startChar": 0,
+        "endLine": 487,
+        "endChar": 70
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dbe4485_f22782e5",
+        "filename": "public/fpdf_attachment.h",
+        "patchSetId": 18
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-06T23:08:54Z",
+      "side": 1,
+      "message": "How about FPDFAttachment_SetDescription, so the API name can avoid having \"Attachment\" twice?",
+      "range": {
+        "startLine": 143,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 32
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b5322d7_230ea353",
+        "filename": "testing/resources/embedded_attachments_with_desc.pdf",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-06T23:08:54Z",
+      "side": 1,
+      "message": "The .pdf file is out of sync with the .in file.",
       "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
