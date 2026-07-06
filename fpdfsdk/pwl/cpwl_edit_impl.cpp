@@ -15,6 +15,7 @@
 #include "core/fpdfapi/render/cpdf_renderoptions.h"
 #include "core/fpdfapi/render/cpdf_textrenderer.h"
 #include "core/fpdfdoc/cpvt_word.h"
+#include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
 #include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/check.h"
@@ -89,12 +90,12 @@ void CPWL_EditImpl::Iterator::SetAt(const CPVT_WordPlace& place) {
   vt_iterator_->SetAt(place);
 }
 
-float CPWL_EditImpl::Iterator::GetLineCaretX(const CPVT_Line& line) {
-  return vt_iterator_->GetLineCaretX(line);
-}
-
 const CPVT_WordPlace& CPWL_EditImpl::Iterator::GetAt() const {
   return vt_iterator_->GetWordPlace();
+}
+
+float CPWL_EditImpl::Iterator::GetLineCaretX(const CPVT_Line& line) {
+  return vt_iterator_->GetLineCaretX(line);
 }
 
 class CPWL_EditImpl::Provider final : public CPVT_VariableText::Provider {
