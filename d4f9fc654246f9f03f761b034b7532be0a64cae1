@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63a2ee9d_e9339276",
+        "filename": "core/fpdfapi/page/cpdf_dib.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-07T14:28:43Z",
+      "side": 1,
+      "message": "similar to here",
+      "revId": "d4f9fc654246f9f03f761b034b7532be0a64cae1",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}

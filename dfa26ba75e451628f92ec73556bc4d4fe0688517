@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f27437d7_4f2f48b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-07T14:28:43Z",
+      "side": 1,
+      "message": "Something I noticed while reading blink code, and I figured why not do it in PDFs as well? Cuts time spent rendering some PDF pages in half (or more), and should never be slower.\n\nThe MCU restriction means it fires less often than desirable, but I don\u0027t see a clean way to prevent that. (And it also matches blink.) I intend to post a comment on https://github.com/libjpeg-turbo/libjpeg-turbo/issues/297 with some ideas to possibly improve this in the future, but none of my ideas is super clean. (Best one I got so far: Optionally have libjpeg-turbo internally decode leftmost 2 MCU colums and bottom-most 2 rows at full resolution and compute a downsampled version from full 8x8 border tiles. Needs an upstream patch, though.)",
+      "revId": "dfa26ba75e451628f92ec73556bc4d4fe0688517",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
