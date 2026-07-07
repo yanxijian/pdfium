@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb12203f_e9deb126",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T18:17:17Z",
+      "side": 1,
+      "message": "Can this be an actual value and not a variable? If one expands out the code, it becomes `EXPECT_FLOAT_EQ(line.ptLine.x, line.ptLine.x);`, which is not a useful test.",
+      "range": {
+        "startLine": 164,
+        "startChar": 18,
+        "endLine": 164,
+        "endChar": 31
+      },
+      "revId": "66c41e9364af52552d20d33f636d6a33369dcf3d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
