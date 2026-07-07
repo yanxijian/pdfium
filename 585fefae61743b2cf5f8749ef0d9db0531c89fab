@@ -1,0 +1,147 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58d8d1ce_445799d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "\"JPEG\" here and below, for consistency with line 9.",
+      "range": {
+        "startLine": 13,
+        "startChar": 5,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce802441_9f7b9ae3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "go/avoid-we",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 2
+      },
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18b5a306_fceaf639",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "\"Blink\"",
+      "range": {
+        "startLine": 27,
+        "startChar": 26,
+        "endLine": 27,
+        "endChar": 31
+      },
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50424f81_ae56c661",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "Reminder to update.",
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dcf89a6_21065b8d",
+        "filename": "core/fpdfapi/page/cpdf_dib.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "Just curious, is this any flavor of libjpeg, or libjpeg-turbo specifically?",
+      "range": {
+        "startLine": 506,
+        "startChar": 5,
+        "endLine": 506,
+        "endChar": 12
+      },
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97bdc7c8_29435eac",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "Would it make sense to fallback to `common_.cinfo.scale_denom` here? Or use `common_.cinfo.scale_denom` if `scale_denom_` is 1?",
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8fd91d7a_e112b764",
+        "filename": "core/fxcodec/jpeg/jpegmodule.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T17:14:57Z",
+      "side": 1,
+      "message": "There\u0027s just 1 more caller to update in core/fpdfapi/page/cpdf_streamparser.cpp, and then there is no need for the default argument.",
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
