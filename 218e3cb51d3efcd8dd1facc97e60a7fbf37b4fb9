@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64d4c5a0_2ece4168",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-07T23:30:58Z",
+      "side": 1,
+      "message": "Thanks! Comments addressed, and made some other changes:\n\n* Added and tweaked a few (D)CHECKs\n* Added tests (with LLM assistance)\n  - unit tests need .pdf files checked in AFAICT, so this adds both .in and corresponding .pdf files\n* Added a few code comments\n* Updated the CL description with things I\u0027ve discovered since (e.g. that we bound by page size dimensions atm, not rendered bitmap size dimensions)\n\nIn addition to the libjpeg-turbo comment, I\u0027ll also add a few attachments and screenshots to the linked tracking bug soon.",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
