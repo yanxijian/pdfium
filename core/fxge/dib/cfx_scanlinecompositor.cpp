@@ -20,6 +20,9 @@
 #include "core/fxge/dib/fx_dib.h"
 
 using fxge::Blend;
+#if defined(PDF_USE_SKIA)
+using fxge::BlendPremul;
+#endif
 using GrayWithAlpha = CFX_ScanlineCompositor::GrayWithAlpha;
 
 namespace {
@@ -663,11 +666,11 @@ void CompositeRowBgra2Bgra(pdfium::span<const FX_BGRA_STRUCT<uint8_t>> src_span,
 // returns true and the caller needs to call one of the
 // CompositePixelBgraPremul2BgraPremul*Blend() functions.
 template <typename DestPixelStruct>
-uint8_t CompositePixelBgraPremul2BgraPremulCommon(
+bool CompositePixelBgraPremul2BgraPremulCommonStart(
     const FX_BGRA_STRUCT<uint8_t>& input,
     DestPixelStruct& output) {
   if (output.alpha != 0) {
-    return true;
+    return input.alpha != 0;
   }
 
   output.blue = input.blue;
@@ -677,30 +680,34 @@ uint8_t CompositePixelBgraPremul2BgraPremulCommon(
   return false;
 }
 
+template <typename T>
+FX_BGR_STRUCT<int> UnPremultiplyBgr(const T& input) {
+  return {.blue = input.blue * 255 / input.alpha,
+          .green = input.green * 255 / input.alpha,
+          .red = input.red * 255 / input.alpha};
+}
+
 template <typename DestPixelStruct>
 void CompositePixelBgraPremul2BgraPremulNonSeparableBlend(
     const FX_BGRA_STRUCT<uint8_t>& input,
     DestPixelStruct& output,
     BlendMode blend_type) {
-  if (!CompositePixelBgraPremul2BgraPremulCommon(input, output)) {
+  if (!CompositePixelBgraPremul2BgraPremulCommonStart(input, output)) {
     return;
   }
 
-  FX_BGRA_STRUCT<uint8_t> input_for_blend;
-  input_for_blend.blue = input.blue * output.alpha / 255;
-  input_for_blend.green = input.green * output.alpha / 255;
-  input_for_blend.red = input.red * output.alpha / 255;
-  DestPixelStruct output_for_blend;
-  output_for_blend.blue = output.blue * input.alpha / 255;
-  output_for_blend.green = output.green * input.alpha / 255;
-  output_for_blend.red = output.red * input.alpha / 255;
+  // Non-separable blend modes (Hue, Saturation, Color, Luminosity) cannot be
+  // easily calculated in premultiplied space. Un-premultiply both source and
+  // destination, blend in non-premultiplied space, and then re-premultiply
+  // the result.
   FX_RGB_STRUCT<int> blended_color =
-      RgbBlend(blend_type, input_for_blend, output_for_blend);
-
+      RgbBlend(blend_type, UnPremultiplyBgr(input), UnPremultiplyBgr(output));
+  const int ratio = input.alpha * output.alpha;
   AlphaMergeToDestPremul(input, output);
-  output.blue += blended_color.blue;
-  output.green += blended_color.green;
-  output.red += blended_color.red;
+  static constexpr int kProductDivisor = 255 * 255;
+  output.blue += blended_color.blue * ratio / kProductDivisor;
+  output.green += blended_color.green * ratio / kProductDivisor;
+  output.red += blended_color.red * ratio / kProductDivisor;
   output.alpha = AlphaUnion(output.alpha, input.alpha);
 }
 
@@ -709,23 +716,16 @@ void CompositePixelBgraPremul2BgraPremulBlend(
     const FX_BGRA_STRUCT<uint8_t>& input,
     DestPixelStruct& output,
     BlendMode blend_type) {
-  if (!CompositePixelBgraPremul2BgraPremulCommon(input, output)) {
+  if (!CompositePixelBgraPremul2BgraPremulCommonStart(input, output)) {
     return;
   }
 
-  FX_BGR_STRUCT<int> blended_color = {
-      .blue = Blend(blend_type, input.blue * output.alpha / 255,
-                    output.blue * input.alpha / 255),
-      .green = Blend(blend_type, input.green * output.alpha / 255,
-                     output.green * input.alpha / 255),
-      .red = Blend(blend_type, input.red * output.alpha / 255,
-                   output.red * input.alpha / 255),
-  };
-
-  AlphaMergeToDestPremul(input, output);
-  output.blue += blended_color.blue;
-  output.green += blended_color.green;
-  output.red += blended_color.red;
+  output.blue = BlendPremul(blend_type, output.blue, output.alpha, input.blue,
+                            input.alpha);
+  output.green = BlendPremul(blend_type, output.green, output.alpha,
+                             input.green, input.alpha);
+  output.red =
+      BlendPremul(blend_type, output.red, output.alpha, input.red, input.alpha);
   output.alpha = AlphaUnion(output.alpha, input.alpha);
 }
 
@@ -733,7 +733,7 @@ template <typename DestPixelStruct>
 void CompositePixelBgraPremul2BgraPremulNoBlend(
     const FX_BGRA_STRUCT<uint8_t>& input,
     DestPixelStruct& output) {
-  if (!CompositePixelBgraPremul2BgraPremulCommon(input, output)) {
+  if (!CompositePixelBgraPremul2BgraPremulCommonStart(input, output)) {
     return;
   }
 
