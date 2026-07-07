@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e5bf7be8_86a0611b",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T04:41:52Z",
+      "side": 1,
+      "message": "https://pdfium-review.googlesource.com/c/pdfium/+/148030 updates CompositePixelBgraPremul2BgraPremulNonSeparableBlend() and other functions such that the outputs are consistent in debug/release modes, and the test expectations change. As such, it is not a refactor.\n\nhttps://ci.chromium.org/ui/p/pdfium/builders/try/linux_skia_msan/7769/overview is a sample failure for patchset 1. Looking at it again, it actually only failed on sanitizer bots, so maybe I can refine the conditional here a little. But then again, I\u0027m too lazy to do that because the `#if` should only exist briefly and be removed soon after when the fix lands.",
+      "parentUuid": "85df78ec_7b470194",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "19a24b9e_7afcfdef",
         "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
         "patchSetId": 2
