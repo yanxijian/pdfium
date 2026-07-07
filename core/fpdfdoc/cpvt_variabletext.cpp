@@ -15,13 +15,13 @@
 #include "core/fpdfdoc/cpvt_word.h"
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
+#include "core/fxcrt/autorestorer.h"
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/fx_codepage.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/stl_util.h"
-
 namespace {
 
 constexpr float kFontScale = 0.001f;
@@ -100,7 +100,14 @@ void CPVT_VariableText::Iterator::SetAt(const CPVT_WordPlace& place) {
 }
 
 float CPVT_VariableText::Iterator::GetLineCaretX(const CPVT_Line& line) {
-  return line.ptLine.x;
+  fxcrt::AutoRestorer<CPVT_WordPlace> scoped_set_at(&cur_pos_);
+  SetAt(line.lineplace);
+  NextWord();
+  CPVT_Word first_word;
+  bool is_rtl = GetWord(first_word) &&
+                GetWordPlace().nLineIndex == line.lineplace.nLineIndex &&
+                first_word.is_rtl();
+  return is_rtl ? line.ptLine.x + line.fLineWidth : line.ptLine.x;
 }
 
 bool CPVT_VariableText::Iterator::NextWord() {
