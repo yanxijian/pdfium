@@ -22,6 +22,30 @@
       },
       "revId": "66c41e9364af52552d20d33f636d6a33369dcf3d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97f125f7_cf23d1c2",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-07T20:05:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb12203f_e9deb126",
+      "range": {
+        "startLine": 164,
+        "startChar": 18,
+        "endLine": 164,
+        "endChar": 31
+      },
+      "revId": "66c41e9364af52552d20d33f636d6a33369dcf3d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
