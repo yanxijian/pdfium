@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b2ffacd_8f5749e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T20:08:37Z",
+      "side": 1,
+      "message": "I left some comments on the next CL in the chain about calling GetLineCaretX() more in this CL.",
+      "revId": "2b04f9a109e580ecf97af3102c089620c3723caf",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
