@@ -102,4 +102,76 @@ int Blend(BlendMode blend_mode, int back_color, int src_color) {
   }
 }
 
+#if defined(PDF_USE_SKIA)
+int BlendPremul(BlendMode blend_type,
+                int back_color,
+                int back_alpha,
+                int src_color,
+                int src_alpha) {
+  // Intentionally using DCHECKs, as BlendPremul() is oftentimes called 3 times
+  // per pixel.
+  DCHECK_GE(back_color, 0);
+  DCHECK_LE(back_color, 255);
+  DCHECK_GE(src_color, 0);
+  DCHECK_LE(src_color, 255);
+
+  int common_part =
+      back_color * (255 - src_alpha) + src_color * (255 - back_alpha);
+  switch (blend_type) {
+    case BlendMode::kMultiply:
+      return (common_part + src_color * back_color) / 255;
+    case BlendMode::kScreen:
+      return Blend(BlendMode::kScreen, back_color, src_color);
+    case BlendMode::kOverlay:
+      return BlendPremul(BlendMode::kHardLight, src_color, src_alpha,
+                         back_color, back_alpha);
+    case BlendMode::kDarken:
+      return (common_part +
+              std::min(src_color * back_alpha, back_color * src_alpha)) /
+             255;
+    case BlendMode::kLighten:
+      return (common_part +
+              std::max(src_color * back_alpha, back_color * src_alpha)) /
+             255;
+    case BlendMode::kColorDodge:
+      if (src_color >= src_alpha) {
+        return (common_part + src_alpha * back_alpha * 255) / 255;
+      }
+      return (common_part + std::min(src_alpha * back_alpha * 255,
+                                     back_color * src_alpha * src_alpha /
+                                         (src_alpha - src_color))) /
+             255;
+    case BlendMode::kColorBurn:
+      if (src_color == 0) {
+        return common_part / 255;
+      }
+
+      // Use int64_t for intermediate calculations to prevent overflow.
+      return static_cast<int>(
+          (common_part + static_cast<int64_t>(src_alpha) * back_alpha * 255 -
+           std::min(static_cast<int64_t>(src_alpha) * back_alpha * 255,
+                    static_cast<int64_t>(src_alpha) * src_alpha *
+                        (back_alpha - back_color) * 255 / src_color)) /
+          255);
+    case BlendMode::kHardLight:
+      if (2 * src_color < src_alpha) {
+        return (common_part + 2 * src_color * back_color) / 255;
+      }
+      return (common_part + src_alpha * back_alpha * 255 -
+              2 * (src_alpha - src_color) * (back_alpha - back_color)) /
+             255;
+    case BlendMode::kDifference:
+      return (common_part +
+              std::abs(back_color * src_alpha - src_color * back_alpha)) /
+             255;
+    case BlendMode::kExclusion:
+      return Blend(BlendMode::kExclusion, back_color, src_color);
+    default:
+      // This function does not handle non-separable blend modes, SoftLight, or
+      // Normal.
+      NOTREACHED();
+  }
+}
+#endif  // defined(PDF_USE_SKIA)
+
 }  // namespace fxge
