@@ -20,6 +20,9 @@
 #include "core/fxge/dib/fx_dib.h"
 
 using fxge::Blend;
+#if defined(PDF_USE_SKIA)
+using fxge::BlendPremul;
+#endif
 using GrayWithAlpha = CFX_ScanlineCompositor::GrayWithAlpha;
 
 namespace {
@@ -149,17 +152,6 @@ void AlphaMergeToDest(const T& input, U& output, uint8_t alpha) {
   output.green = AlphaMerge(output.green, input.green, alpha);
   output.red = AlphaMerge(output.red, input.red, alpha);
 }
-
-#if defined(PDF_USE_SKIA)
-template <typename T, typename U>
-void AlphaMergeToDestPremul(const T& input, U& output) {
-  const int in_alpha = 255 - input.alpha;
-  const int out_alpha = 255 - output.alpha;
-  output.blue = (output.blue * in_alpha + input.blue * out_alpha) / 255;
-  output.green = (output.green * in_alpha + input.green * out_alpha) / 255;
-  output.red = (output.red * in_alpha + input.red * out_alpha) / 255;
-}
-#endif  // defined(PDF_USE_SKIA)
 
 template <typename T, typename U>
 void AlphaMergeToSource(const T& input, U& output, uint8_t alpha) {
@@ -677,6 +669,114 @@ bool CompositePixelBgraPremul2BgraPremulCommon(
   return false;
 }
 
+float GetSatf(float r, float g, float b) {
+  return std::max(r, std::max(g, b)) - std::min(r, std::min(g, b));
+}
+
+float GetLumf(float r, float g, float b) {
+  return r * 0.30f + g * 0.59f + b * 0.11f;
+}
+
+void SetSatf(float* r, float* g, float* b, float s) {
+  float mn = std::min(*r, std::min(*g, *b));
+  float mx = std::max(*r, std::max(*g, *b));
+  float sat = mx - mn;
+  if (sat == 0.0f) {
+    *r = 0.0f;
+    *g = 0.0f;
+    *b = 0.0f;
+  } else {
+    float scale = s / sat;
+    *r = (*r - mn) * scale;
+    *g = (*g - mn) * scale;
+    *b = (*b - mn) * scale;
+  }
+}
+
+void SetLumf(float* r, float* g, float* b, float l_target) {
+  float diff = l_target - GetLumf(*r, *g, *b);
+  *r += diff;
+  *g += diff;
+  *b += diff;
+}
+
+float ClipChannelf(float c,
+                   float l,
+                   bool clip_low,
+                   bool clip_high,
+                   float mn_scale,
+                   float mx_scale) {
+  if (clip_low) {
+    c = l + mn_scale * (c - l);
+  }
+  if (clip_high) {
+    c = l + mx_scale * (c - l);
+  }
+  return std::max(c, 0.0f);
+}
+
+void ClipColorf(float* r, float* g, float* b, float alpha) {
+  float mn = std::min(*r, std::min(*g, *b));
+  float mx = std::max(*r, std::max(*g, *b));
+  float l = GetLumf(*r, *g, *b);
+
+  bool clip_low = (mn < 0.0f) && (l != mn);
+  bool clip_high = (mx > alpha) && (l != mx);
+
+  float mn_scale = clip_low ? (l / (l - mn)) : 0.0f;
+  float mx_scale = clip_high ? ((alpha - l) / (mx - l)) : 0.0f;
+
+  *r = ClipChannelf(*r, l, clip_low, clip_high, mn_scale, mx_scale);
+  *g = ClipChannelf(*g, l, clip_low, clip_high, mn_scale, mx_scale);
+  *b = ClipChannelf(*b, l, clip_low, clip_high, mn_scale, mx_scale);
+}
+
+template <typename T>
+FX_RGB_STRUCT<float> BlendHslc(bool flip,
+                               bool sat,
+                               const FX_BGRA_STRUCT<uint8_t>& src,
+                               const T& dst) {
+  float sa = src.alpha;
+  float da = dst.alpha;
+  float alpha = sa * da / 255.0f;
+
+  float sda_r = src.red * da / 255.0f;
+  float sda_g = src.green * da / 255.0f;
+  float sda_b = src.blue * da / 255.0f;
+
+  float dsa_r = dst.red * sa / 255.0f;
+  float dsa_g = dst.green * sa / 255.0f;
+  float dsa_b = dst.blue * sa / 255.0f;
+
+  float l_r = flip ? dsa_r : sda_r;
+  float l_g = flip ? dsa_g : sda_g;
+  float l_b = flip ? dsa_b : sda_b;
+
+  float r_r = flip ? sda_r : dsa_r;
+  float r_g = flip ? sda_g : dsa_g;
+  float r_b = flip ? sda_b : dsa_b;
+
+  if (sat) {
+    float sat_limit = GetSatf(r_r, r_g, r_b);
+    SetSatf(&l_r, &l_g, &l_b, sat_limit);
+    r_r = dsa_r;
+    r_g = dsa_g;
+    r_b = dsa_b;
+  }
+
+  float lum_limit = GetLumf(r_r, r_g, r_b);
+  SetLumf(&l_r, &l_g, &l_b, lum_limit);
+  ClipColorf(&l_r, &l_g, &l_b, alpha);
+
+  float res_r = l_r + dst.red - dsa_r + src.red - sda_r;
+  float res_g = l_g + dst.green - dsa_g + src.green - sda_g;
+  float res_b = l_b + dst.blue - dsa_b + src.blue - sda_b;
+
+  return {.red = std::clamp(res_r, 0.0f, 255.0f),
+          .green = std::clamp(res_g, 0.0f, 255.0f),
+          .blue = std::clamp(res_b, 0.0f, 255.0f)};
+}
+
 template <typename DestPixelStruct>
 void CompositePixelBgraPremul2BgraPremulNonSeparableBlend(
     const FX_BGRA_STRUCT<uint8_t>& input,
@@ -686,21 +786,27 @@ void CompositePixelBgraPremul2BgraPremulNonSeparableBlend(
     return;
   }
 
-  FX_BGRA_STRUCT<uint8_t> input_for_blend;
-  input_for_blend.blue = input.blue * output.alpha / 255;
-  input_for_blend.green = input.green * output.alpha / 255;
-  input_for_blend.red = input.red * output.alpha / 255;
-  DestPixelStruct output_for_blend;
-  output_for_blend.blue = output.blue * input.alpha / 255;
-  output_for_blend.green = output.green * input.alpha / 255;
-  output_for_blend.red = output.red * input.alpha / 255;
-  FX_RGB_STRUCT<int> blended_color =
-      RgbBlend(blend_type, input_for_blend, output_for_blend);
+  FX_RGB_STRUCT<float> blended_color;
+  switch (blend_type) {
+    case BlendMode::kHue:
+      blended_color = BlendHslc(/*flip=*/false, /*sat=*/true, input, output);
+      break;
+    case BlendMode::kSaturation:
+      blended_color = BlendHslc(/*flip=*/true, /*sat=*/true, input, output);
+      break;
+    case BlendMode::kColor:
+      blended_color = BlendHslc(/*flip=*/false, /*sat=*/false, input, output);
+      break;
+    case BlendMode::kLuminosity:
+      blended_color = BlendHslc(/*flip=*/true, /*sat=*/false, input, output);
+      break;
+    default:
+      NOTREACHED();
+  }
 
-  AlphaMergeToDestPremul(input, output);
-  output.blue += blended_color.blue;
-  output.green += blended_color.green;
-  output.red += blended_color.red;
+  output.blue = static_cast<uint8_t>(blended_color.blue + 0.5f);
+  output.green = static_cast<uint8_t>(blended_color.green + 0.5f);
+  output.red = static_cast<uint8_t>(blended_color.red + 0.5f);
   output.alpha = AlphaUnion(output.alpha, input.alpha);
 }
 
@@ -713,19 +819,12 @@ void CompositePixelBgraPremul2BgraPremulBlend(
     return;
   }
 
-  FX_BGR_STRUCT<int> blended_color = {
-      .blue = Blend(blend_type, input.blue * output.alpha / 255,
-                    output.blue * input.alpha / 255),
-      .green = Blend(blend_type, input.green * output.alpha / 255,
-                     output.green * input.alpha / 255),
-      .red = Blend(blend_type, input.red * output.alpha / 255,
-                   output.red * input.alpha / 255),
-  };
-
-  AlphaMergeToDestPremul(input, output);
-  output.blue += blended_color.blue;
-  output.green += blended_color.green;
-  output.red += blended_color.red;
+  output.blue = BlendPremul(blend_type, output.blue, output.alpha, input.blue,
+                            input.alpha);
+  output.green = BlendPremul(blend_type, output.green, output.alpha,
+                             input.green, input.alpha);
+  output.red =
+      BlendPremul(blend_type, output.red, output.alpha, input.red, input.alpha);
   output.alpha = AlphaUnion(output.alpha, input.alpha);
 }
 
