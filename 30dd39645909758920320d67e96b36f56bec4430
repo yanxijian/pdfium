@@ -81,6 +81,24 @@
       "parentUuid": "8b10cf6d_96884088",
       "revId": "30dd39645909758920320d67e96b36f56bec4430",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "859b910d_4a401686",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 21
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T21:19:27Z",
+      "side": 1,
+      "message": "That depends on knowing the details of the implementation, which can change over time. It would be better to test this corner case.",
+      "parentUuid": "c5dba72b_c10948c2",
+      "revId": "30dd39645909758920320d67e96b36f56bec4430",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
