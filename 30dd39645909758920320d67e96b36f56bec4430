@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0892d8af_80200f13",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 21
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-07T21:17:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a6ec860_324c6607",
+      "range": {
+        "startLine": 158,
+        "startChar": 12,
+        "endLine": 158,
+        "endChar": 36
+      },
+      "revId": "30dd39645909758920320d67e96b36f56bec4430",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b10cf6d_96884088",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-07-07T21:06:59Z",
       "side": 1,
       "message": "Why not do this for \"Test 1\" above as well?",
+      "revId": "30dd39645909758920320d67e96b36f56bec4430",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5dba72b_c10948c2",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 21
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-07T21:17:20Z",
+      "side": 1,
+      "message": "since iterator never advances when text is empty, didn\u0027t necessarily think it was necessary. added in new patch",
+      "parentUuid": "8b10cf6d_96884088",
       "revId": "30dd39645909758920320d67e96b36f56bec4430",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
