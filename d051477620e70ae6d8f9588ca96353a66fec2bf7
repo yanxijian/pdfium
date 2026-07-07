@@ -33,6 +33,24 @@
       "message": "1. Do we add in functionality (NOT to PDFium, rather to the .py scripts in the repo) to make building Brotli based testcases easier in tools (Both for embedders to make testcases as well as for us to generate testcases), or is it not needed?\n\n2. If so (to #1), do I create a new script, or update an existing one?\n\n3. If not (to #1), would it be fine if I could create such a script and upload it on Github or something and share that on the bug thread in case embedders may need it? \n\nThanks!",
       "revId": "d051477620e70ae6d8f9588ca96353a66fec2bf7",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b05d19e_eeefa79b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T18:07:12Z",
+      "side": 1,
+      "message": "If you are thinking of testing/tools/encode_pdf_filter.py, feel free to do that separately.",
+      "parentUuid": "d884f899_5ebd135e",
+      "revId": "d051477620e70ae6d8f9588ca96353a66fec2bf7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
