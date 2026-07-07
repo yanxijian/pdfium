@@ -218,6 +218,8 @@ form_list.pdf * * * *
 form_list1.pdf * * * *
 form_same.pdf mac * * agg
 form_text_sign_url.pdf * * * *
+form_textfield_focused_ltr.in win * * *
+form_textfield_focused_rtl.in win * * *
 format_combo_box.pdf mac * * agg
 format_combo_box.pdf * nov8 * *
 format_custom_format.pdf * nov8 * *
