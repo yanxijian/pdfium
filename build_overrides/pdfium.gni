@@ -9,9 +9,11 @@
 # Default: Use a bundled FreeType.
 pdf_bundle_freetype_override = true
 
-# Build PDFium with experimental Brotli compression support.
-# Default: Brotli support is disabled until PDF 2.0 spec is confirmed.
-pdf_enable_brotli_override = false
+# Build PDFium with experimental Brotli compression support. 
+# Default: Brotli support is compiled in but disabled by default unless the
+# library is specifically loaded with m_BrotliEnabled = true. Brotli support
+# would be enabled by default when the PDF 2.0 spec is confirmed.
+pdf_enable_brotli_override = true
 
 # Build PDFium either with or without v8 support.
 # Default: With V8 support.
