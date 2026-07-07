@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "98dda62a_2670071b",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-07T13:14:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2f70715_f962b75c",
+      "range": {
+        "startLine": 264,
+        "startChar": 18,
+        "endLine": 264,
+        "endChar": 19
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e5cb42bd_3383ee9f",
         "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
         "patchSetId": 18
@@ -71,6 +95,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8244563e_2ba10cdd",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 18
+      },
+      "lineNbr": 487,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-07T13:14:24Z",
+      "side": 1,
+      "message": "Yeah, specifically want to reduce the number of test cases which behave the exact same since in general the SetAttachmentDesc (Renamed to SetDescription) is more leniant since it just adds a key if not present, overwrites if it is and doesn\u0027t have much of a problem about the existing value, so testing empty /Desc or numbers for /Desc just fells redundant.",
+      "parentUuid": "ee2dc1a0_fbba5130",
+      "range": {
+        "startLine": 486,
+        "startChar": 0,
+        "endLine": 487,
+        "endChar": 70
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5dbe4485_f22782e5",
@@ -94,6 +142,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcd7c49e_74955f30",
+        "filename": "public/fpdf_attachment.h",
+        "patchSetId": 18
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-07T13:14:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5dbe4485_f22782e5",
+      "range": {
+        "startLine": 143,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 32
+      },
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5b5322d7_230ea353",
@@ -107,6 +179,24 @@
       "writtenOn": "2026-07-06T23:08:54Z",
       "side": 1,
       "message": "The .pdf file is out of sync with the .in file.",
+      "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34771d57_0df73786",
+        "filename": "testing/resources/embedded_attachments_with_desc.pdf",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-07T13:14:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5b5322d7_230ea353",
       "revId": "7994f521236cec039d6d7d7b6f4ba93fadef93ad",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
