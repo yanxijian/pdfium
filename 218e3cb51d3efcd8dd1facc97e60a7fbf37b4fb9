@@ -33,6 +33,103 @@
       "message": "Oh, ps: Is it possible to add UMA metrics to pdfium, to get an idea of how often this is hit? (No problem if not, just curious.)",
       "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8795edfb_e8f371ce",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "Can this check the exact width? Also check height?",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d40b1ac7_64b3889d",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "Check exact dimensions as well?",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d75b5dd_81dd1bd5",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "Check exact dimension and also height.",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cd1d106_da93169f",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "Use active voice and put variable names in backticks.",
+      "range": {
+        "startLine": 301,
+        "startChar": 5,
+        "endLine": 301,
+        "endChar": 43
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ad66b81_4c47806a",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "More backticks here and line 333.",
+      "range": {
+        "startLine": 311,
+        "startChar": 57,
+        "endLine": 311,
+        "endChar": 70
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }

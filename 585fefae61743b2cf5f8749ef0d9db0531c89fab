@@ -259,6 +259,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0d14ef8_ae486391",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T23:41:56Z",
+      "side": 1,
+      "message": "Got it. It was hard to see that from just looking at the diff.",
+      "parentUuid": "61e1c0e8_88b0cfc3",
+      "revId": "585fefae61743b2cf5f8749ef0d9db0531c89fab",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8fd91d7a_e112b764",
