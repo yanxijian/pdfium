@@ -663,11 +663,11 @@ void CompositeRowBgra2Bgra(pdfium::span<const FX_BGRA_STRUCT<uint8_t>> src_span,
 // returns true and the caller needs to call one of the
 // CompositePixelBgraPremul2BgraPremul*Blend() functions.
 template <typename DestPixelStruct>
-uint8_t CompositePixelBgraPremul2BgraPremulCommon(
+bool CompositePixelBgraPremul2BgraPremulCommon(
     const FX_BGRA_STRUCT<uint8_t>& input,
     DestPixelStruct& output) {
   if (output.alpha != 0) {
-    return true;
+    return input.alpha != 0;
   }
 
   output.blue = input.blue;
