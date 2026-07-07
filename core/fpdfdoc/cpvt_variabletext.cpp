@@ -15,12 +15,14 @@
 #include "core/fpdfdoc/cpvt_word.h"
 #include "core/fpdfdoc/cpvt_wordinfo.h"
 #include "core/fpdfdoc/ipvt_fontmap.h"
+
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/fx_codepage.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/stl_util.h"
+#include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 
 namespace {
 
@@ -100,7 +102,16 @@ void CPVT_VariableText::Iterator::SetAt(const CPVT_WordPlace& place) {
 }
 
 float CPVT_VariableText::Iterator::GetLineCaretX(const CPVT_Line& line) {
-  return line.ptLine.x;
+  absl::Cleanup scoped_set_at = [this, old_place = GetWordPlace()] {
+    SetAt(old_place);
+  };
+  SetAt(line.lineplace);
+  NextWord();
+  CPVT_Word first_word;
+  bool is_rtl = GetWord(first_word) &&
+                GetWordPlace().nLineIndex == line.lineplace.nLineIndex &&
+                first_word.is_rtl();
+  return is_rtl ? line.ptLine.x + line.fLineWidth : line.ptLine.x;
 }
 
 bool CPVT_VariableText::Iterator::NextWord() {
