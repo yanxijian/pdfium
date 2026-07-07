@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c5edce4_ef9030fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T22:59:56Z",
+      "side": 1,
+      "message": "Since this CL added new tests, I think this is the culprit for the failures later in the CL chain. Let\u0027s just suppress them since the GDI rendering is blank and that is just how it is.",
+      "revId": "da6b70c35120017b6c2cd0d10b6ed4589d8c6408",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
