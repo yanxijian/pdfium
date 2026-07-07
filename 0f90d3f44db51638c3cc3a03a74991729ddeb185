@@ -34,6 +34,24 @@
       "parentUuid": "4212f465_15e09858",
       "revId": "0f90d3f44db51638c3cc3a03a74991729ddeb185",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08199693_652dce23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-07T20:23:22Z",
+      "side": 1,
+      "message": "This will likely increase the binary size for other PDFium embedders for code they are not even going to use yet.\n\nChromium already uses Brotli, so the binary size increase there is negligible.",
+      "parentUuid": "4526e88c_bf4e0a0b",
+      "revId": "0f90d3f44db51638c3cc3a03a74991729ddeb185",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
