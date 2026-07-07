@@ -16,6 +16,24 @@
       "message": "Let\u0027s wait a bit for this feature to bake before enabling by default.",
       "revId": "0f90d3f44db51638c3cc3a03a74991729ddeb185",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4526e88c_bf4e0a0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-07T18:09:32Z",
+      "side": 1,
+      "message": "This enables build by default, the feature itself is still guarded by library initialization, and if we are overriding to true in chromium curious why not here?",
+      "parentUuid": "4212f465_15e09858",
+      "revId": "0f90d3f44db51638c3cc3a03a74991729ddeb185",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
