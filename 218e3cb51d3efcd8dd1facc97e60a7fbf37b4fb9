@@ -35,6 +35,23 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "838db6df_0f632705",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "(This test is very similar to the one above, just with jpeg instead of jpeg2000)\n\n(edit: …oh, meant to send this a while ago and didn\u0027t, apologies)",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8795edfb_e8f371ce",
@@ -48,6 +65,24 @@
       "writtenOn": "2026-07-07T23:41:56Z",
       "side": 1,
       "message": "Can this check the exact width? Also check height?",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14e7e8d6_45b6b30c",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8795edfb_e8f371ce",
       "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -69,6 +104,41 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0009b53_2f196cf4",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d40b1ac7_64b3889d",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad36af69_e42a93b1",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "(AFAICT this didn\u0027t have any test coverage before.)\n\n(edit: This one was also meant to go out earlier.)",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1d75b5dd_81dd1bd5",
@@ -82,6 +152,24 @@
       "writtenOn": "2026-07-07T23:41:56Z",
       "side": 1,
       "message": "Check exact dimension and also height.",
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "daba1694_a31c258e",
+        "filename": "core/fpdfapi/page/cpdf_pageimagecache_unittest.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d75b5dd_81dd1bd5",
       "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -109,6 +197,54 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44144600_2b20feb1",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5cd1d106_da93169f",
+      "range": {
+        "startLine": 301,
+        "startChar": 5,
+        "endLine": 301,
+        "endChar": 43
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0e3a2dd_29779a02",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5cd1d106_da93169f",
+      "range": {
+        "startLine": 301,
+        "startChar": 5,
+        "endLine": 301,
+        "endChar": 43
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8ad66b81_4c47806a",
@@ -122,6 +258,54 @@
       "writtenOn": "2026-07-07T23:41:56Z",
       "side": 1,
       "message": "More backticks here and line 333.",
+      "range": {
+        "startLine": 311,
+        "startChar": 57,
+        "endLine": 311,
+        "endChar": 70
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "557af8e6_24d3b105",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ad66b81_4c47806a",
+      "range": {
+        "startLine": 311,
+        "startChar": 57,
+        "endLine": 311,
+        "endChar": 70
+      },
+      "revId": "218e3cb51d3efcd8dd1facc97e60a7fbf37b4fb9",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa94abe4_45dcf32f",
+        "filename": "core/fxcodec/jpeg/jpegmodule.cpp",
+        "patchSetId": 15
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 5475
+      },
+      "writtenOn": "2026-07-08T18:57:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ad66b81_4c47806a",
       "range": {
         "startLine": 311,
         "startChar": 57,
