@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8aef338_2f7f1032",
+        "filename": "testing/SUPPRESSIONS",
+        "patchSetId": 13
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-08T18:38:23Z",
+      "side": 1,
+      "message": "This is the wrong suppression. This means all Windows bots will ignore the test results, but the goal here is to only suppress on Windows GDI bots.",
+      "range": {
+        "startLine": 221,
+        "startChar": 30,
+        "endLine": 221,
+        "endChar": 39
+      },
+      "revId": "f4ea7468770c79eaaacd9b8d0e9c5da48d388f8a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e52d3aa7_64b4e3fe",
+        "filename": "testing/SUPPRESSIONS",
+        "patchSetId": 13
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-08T18:38:23Z",
+      "side": 1,
+      "message": "These are in the wrong section. They should be under the \"GDI\" section, around line 550.",
+      "revId": "f4ea7468770c79eaaacd9b8d0e9c5da48d388f8a",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
