@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7932c119_1218c1ce",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-08T01:01:26Z",
+      "side": 1,
+      "message": "I prepended a CL to do item 1. This CL also no longer has CompositePixelBgraPremul2BgraPremulCommonFinish(), so no more refactoring.",
+      "parentUuid": "754505d2_814733b8",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 41
+      },
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f473b08_31356ee4",
@@ -72,6 +96,30 @@
       "writtenOn": "2026-05-28T20:09:44Z",
       "side": 1,
       "message": "Shouldn\u0027t we keep the pixels premultiplied the whole way through? Unpremultiplying then blending is not efficient and defeats the purpose of premultiplied alpha.\n\nUnPremultiplyBgr() divides by input.alpha then CompositePixelBgraPremul2BgraPremulCommonFinish() multiplies the input.alpha again and this process leaves rounding errors in the middle.",
+      "range": {
+        "startLine": 724,
+        "startChar": 2,
+        "endLine": 730,
+        "endChar": 79
+      },
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e439e3f_e59cc3ad",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-08T01:01:26Z",
+      "side": 1,
+      "message": "I added BlendPremul() and used it as much as possible to avoid the back and forth alpha conversions.",
+      "parentUuid": "152f8d56_7f06e7c0",
       "range": {
         "startLine": 724,
         "startChar": 2,
