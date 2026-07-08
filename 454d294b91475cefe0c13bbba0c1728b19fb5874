@@ -132,6 +132,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "d6c3ada8_2eb43c08",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 730,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-08T01:01:53Z",
+      "side": 1,
+      "message": "And then optimized that, and then went... nah.",
+      "parentUuid": "5e439e3f_e59cc3ad",
+      "range": {
+        "startLine": 724,
+        "startChar": 2,
+        "endLine": 730,
+        "endChar": 79
+      },
+      "revId": "454d294b91475cefe0c13bbba0c1728b19fb5874",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "8e121833_f550dd38",
         "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
         "patchSetId": 4
