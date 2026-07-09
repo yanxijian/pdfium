@@ -16,6 +16,24 @@
       "message": "Nevermind, now the pixel tests fail.",
       "revId": "e8c194ce512dfecf28ad68e9dc4ed1a0d4aaca3c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09b8fefd_022dc9e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-09T18:12:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84473d26_f4409652",
+      "revId": "e8c194ce512dfecf28ad68e9dc4ed1a0d4aaca3c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
