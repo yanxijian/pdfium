@@ -395,10 +395,7 @@ void CFX_FontMapper::LoadInstalledFonts() {
     return;
   }
 
-  if (!skip_font_enumeration_) {
-    font_info_->EnumFontList(this);
-  }
-  list_loaded_ = true;
+  list_loaded_ = font_info_->EnumFontList(this) || skip_font_enumeration_;
 }
 
 ByteString CFX_FontMapper::MatchInstalledFonts(const ByteString& norm_name) {

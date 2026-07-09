@@ -51,8 +51,8 @@ class SystemFontInfoWrapper : public SystemFontInfoIface {
       : impl_(std::move(impl)) {}
   ~SystemFontInfoWrapper() override { CHECK(active_fonts_.empty()); }
 
-  void EnumFontList(CFX_FontMapper* pMapper) override {
-    impl_->EnumFontList(pMapper);
+  bool EnumFontList(CFX_FontMapper* pMapper) override {
+    return impl_->EnumFontList(pMapper);
   }
   void* MapFont(CFX_FontMapper* mapper,
                 int weight,
