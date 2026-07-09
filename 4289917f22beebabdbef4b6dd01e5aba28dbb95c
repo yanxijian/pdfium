@@ -33,6 +33,24 @@
       "message": "Might want to check for BGRA too and static_assert in the else case just to be sure since this function is generic on the DestPixelStruct.",
       "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4886efd1_f9a7b6fa",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-09T22:58:15Z",
+      "side": 1,
+      "message": "I think you meant RGBA, since the tests uses `FXDIB_Format::kBgraPremul`. I actually suspect the RGBA path is dead code, so let me try to remove that as a follow-up CL.",
+      "parentUuid": "ba70ab71_56f6b63a",
+      "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
