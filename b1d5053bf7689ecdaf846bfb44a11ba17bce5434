@@ -16,6 +16,24 @@
       "message": "No need to resize. Just keep the larger size and pass in a smaller size to FPDFAttachment_GetDescription() instead of `buf.size()`.",
       "revId": "b1d5053bf7689ecdaf846bfb44a11ba17bce5434",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8945d610_96029d5e",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 21
+      },
+      "lineNbr": 463,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-09T05:18:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2998b00e_7457dabd",
+      "revId": "b1d5053bf7689ecdaf846bfb44a11ba17bce5434",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
