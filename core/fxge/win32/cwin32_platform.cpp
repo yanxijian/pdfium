@@ -112,7 +112,7 @@ class CFX_Win32FontInfo final : public SystemFontInfoIface {
   ~CFX_Win32FontInfo() override;
 
   // SystemFontInfoIface:
-  void EnumFontList(CFX_FontMapper* pMapper) override;
+  bool EnumFontList(CFX_FontMapper* pMapper) override;
   void* MapFont(CFX_FontMapper* mapper,
                 int weight,
                 bool bItalic,
@@ -217,7 +217,7 @@ void CFX_Win32FontInfo::AddInstalledFont(CFX_FontMapper* mapper,
   last_family = name;
 }
 
-void CFX_Win32FontInfo::EnumFontList(CFX_FontMapper* pMapper) {
+bool CFX_Win32FontInfo::EnumFontList(CFX_FontMapper* pMapper) {
   FontEnumCallbackArg arg = {this, pMapper, ByteString()};
   LOGFONTA lf = {};  // Aggregate initialization.
   static_assert(std::is_aggregate_v<decltype(lf)>);
@@ -227,6 +227,7 @@ void CFX_Win32FontInfo::EnumFontList(CFX_FontMapper* pMapper) {
   EnumFontFamiliesExA(dc_handle_, &lf,
                       reinterpret_cast<FONTENUMPROCA>(FontEnumCallback),
                       reinterpret_cast<LPARAM>(&arg), 0);
+  return true;
 }
 
 ByteString CFX_Win32FontInfo::FindFont(CFX_FontMapper* mapper,
