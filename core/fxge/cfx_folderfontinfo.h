@@ -28,7 +28,7 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
   void AddPath(const ByteString& path);
 
   // SystemFontInfoIface:
-  void EnumFontList(CFX_FontMapper* pMapper) override;
+  bool EnumFontList(CFX_FontMapper* pMapper) override;
   void* MapFont(CFX_FontMapper* mapper,
                 int weight,
                 bool italic,
@@ -80,8 +80,8 @@ class CFX_FolderFontInfo : public SystemFontInfoIface {
                              const ByteString& family,
                              bool must_match_name) const;
 
-  void ScanPath(CFX_FontMapper* mapper, const ByteString& path);
-  void ScanFile(CFX_FontMapper* mapper, const ByteString& path);
+  bool ScanPath(CFX_FontMapper* mapper, const ByteString& path);
+  bool ScanFile(CFX_FontMapper* mapper, const ByteString& path);
   void ReportFace(CFX_FontMapper* mapper,
                   const ByteString& path,
                   FILE* pFile,
