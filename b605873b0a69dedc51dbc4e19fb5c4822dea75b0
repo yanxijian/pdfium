@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29e6594a_d258b92e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-09T19:24:14Z",
+      "side": 1,
+      "message": "I would be ok with just landing the fix first by itself and add a test for it later.",
+      "revId": "b605873b0a69dedc51dbc4e19fb5c4822dea75b0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90d07c6c_280ac14a",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1020,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-09T19:24:14Z",
+      "side": 1,
+      "message": "Use a constant instead of using the same literal value everywhere.",
+      "range": {
+        "startLine": 1020,
+        "startChar": 18,
+        "endLine": 1020,
+        "endChar": 21
+      },
+      "revId": "b605873b0a69dedc51dbc4e19fb5c4822dea75b0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
