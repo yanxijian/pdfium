@@ -125,6 +125,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "25dee8af_4f669c17",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-09T22:34:19Z",
+      "side": 1,
+      "message": "Looks like https://pdfium-review.googlesource.com/c/pdfium/+/151711 is now the one that removes the ifdefs.",
+      "parentUuid": "e5bf7be8_86a0611b",
+      "revId": "a1d489d78bf3ac6913ba6ab04caaaeed9b47db40",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19a24b9e_7afcfdef",
