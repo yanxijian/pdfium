@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df671a4f_a23c1bbd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8751
+      },
+      "writtenOn": "2026-07-09T19:46:32Z",
+      "side": 1,
+      "message": "The commit description calls iOS officially unsupported. Do you have a pointer if that is stated anywhere in documentation?\nSearching https://chromium.googlesource.com/chromium/src/+/main/docs/ios/build_instructions.md for \"unsupported\" did not yield any results. PDFium\u0027s Readme mentions big-endian platforms being kind of unsupported, but not iOS.",
+      "revId": "a9768c56c1771ebed15b66904c8e923d5de0b4aa",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
