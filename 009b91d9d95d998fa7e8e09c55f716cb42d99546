@@ -16,6 +16,24 @@
       "message": "BTW, the PDFium into Chromium DEPS roll is now failing [2] and it\u0027s due to this CL according to my local bisect. Not sure why this is happening, but I\u0027m trying to see if it can be fixed without reverting.\n\n[2] https://chromium-review.googlesource.com/c/8067704",
       "revId": "009b91d9d95d998fa7e8e09c55f716cb42d99546",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48f3a76d_c6e950aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-09T00:23:45Z",
+      "side": 1,
+      "message": "Will fix in crrev.com/c/8067502.",
+      "parentUuid": "dfc71cbc_43ae5b4a",
+      "revId": "009b91d9d95d998fa7e8e09c55f716cb42d99546",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
