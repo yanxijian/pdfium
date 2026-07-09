@@ -2159,3 +2159,15 @@ TEST_F(FPDFViewEmbedderTest, DocumentVersionInCatalog) {
   EXPECT_TRUE(FPDF_GetFileVersion(document(), &version));
   EXPECT_EQ(16, version);
 }
+
+TEST_F(FPDFViewEmbedderTest, IccGradientBanding) {
+  ASSERT_TRUE(OpenDocument("bug_532617608.pdf"));
+  ScopedPage page = LoadScopedPage(0);
+  ASSERT_TRUE(page);
+  ScopedFPDFBitmap bitmap = RenderLoadedPage(page.get());
+  ASSERT_TRUE(bitmap);
+
+  // TODO(crbug.com/532617608): The expectation image needs to be updated to not
+  // have banding when the issue is resolved.
+  CompareBitmapWithExpectationSuffix(bitmap.get(), "bug_532617608");
+}
