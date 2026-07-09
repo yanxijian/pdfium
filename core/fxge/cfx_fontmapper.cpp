@@ -394,10 +394,11 @@ void CFX_FontMapper::LoadInstalledFonts() {
   if (!font_info_ || list_loaded_) {
     return;
   }
-
   if (!skip_font_enumeration_) {
     font_info_->EnumFontList(this);
   }
+  // Always set the list_loaded_ bool to true despite failure to prevent
+  // repeated calling.
   list_loaded_ = true;
 }
 
