@@ -1012,23 +1012,28 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
     return;
   }
 
-  // |nMaxColors| will not overflow since |nComponents| is limited in size.
+  // nMaxColors can't overflow as the variable is only used when
+  // nComponents <= 3. This leads to a maximum possible value of 256^3. While
+  // this is less than INT32_MAX, FX_SAFE_INT32 is used as an additional safety
+  // measure.
+
   const uint32_t nComponents = ComponentCount();
   DCHECK(fxcodec::IccTransform::IsValidIccComponents(nComponents));
-  int nMaxColors = 1;
-  for (uint32_t i = 0; i < nComponents; i++) {
-    nMaxColors *= 52;
-  }
+  FX_SAFE_INT32 nMaxColors = 1;
+  constexpr int kNumQuantizedLevels = 256;
 
   bool bTranslate = nComponents > 3;
   if (!bTranslate) {
+    for (uint32_t i = 0; i < nComponents; i++) {
+      nMaxColors *= kNumQuantizedLevels;
+    }
     FX_SAFE_INT32 nPixelCount = image_width;
     nPixelCount *= image_height;
     if (nPixelCount.IsValid()) {
-      bTranslate = nPixelCount.ValueOrDie() < nMaxColors * 3 / 2;
+      bTranslate = nPixelCount.ValueOrDie() < nMaxColors.ValueOrDie() * 3 / 2;
     }
   }
-  if (bTranslate && profile_->IsSupported()) {
+  if (bTranslate) {
     profile_->TranslateScanline(dest_span, src_span, pixels);
     return;
   }
@@ -1036,17 +1041,17 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
     cache_.resize(Fx2DSizeOrDie(nMaxColors, 3));
     DataVector<uint8_t> temp_src(Fx2DSizeOrDie(nMaxColors, nComponents));
     size_t src_index = 0;
-    for (int i = 0; i < nMaxColors; i++) {
+    for (int i = 0; i < nMaxColors.ValueOrDie(); i++) {
       uint32_t color = i;
-      uint32_t order = nMaxColors / 52;
+      uint32_t order = nMaxColors.ValueOrDie() / kNumQuantizedLevels;
       for (uint32_t c = 0; c < nComponents; c++) {
-        temp_src[src_index++] = static_cast<uint8_t>(color / order * 5);
+        temp_src[src_index++] = static_cast<uint8_t>(color / order);
         color %= order;
-        order /= 52;
+        order /= kNumQuantizedLevels;
       }
     }
     if (profile_->IsSupported()) {
-      profile_->TranslateScanline(cache_, temp_src, nMaxColors);
+      profile_->TranslateScanline(cache_, temp_src, nMaxColors.ValueOrDie());
     }
   }
   uint8_t* pDestBuf = dest_span.data();
@@ -1055,7 +1060,7 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
     for (int i = 0; i < pixels; i++) {
       int index = 0;
       for (uint32_t c = 0; c < nComponents; c++) {
-        index = index * 52 + (*pSrcBuf) / 5;
+        index = index * kNumQuantizedLevels + (*pSrcBuf);
         pSrcBuf++;
       }
       index *= 3;
