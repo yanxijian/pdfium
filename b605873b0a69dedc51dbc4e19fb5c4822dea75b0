@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b483f1dc_460e01ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-09T19:36:06Z",
+      "side": 1,
+      "message": "Sounds good, will rebase this on main then after undoing the test changes in this CL. Done.",
+      "parentUuid": "29e6594a_d258b92e",
+      "revId": "b605873b0a69dedc51dbc4e19fb5c4822dea75b0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "90d07c6c_280ac14a",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-07-09T19:24:14Z",
       "side": 1,
       "message": "Use a constant instead of using the same literal value everywhere.",
+      "range": {
+        "startLine": 1020,
+        "startChar": 18,
+        "endLine": 1020,
+        "endChar": 21
+      },
+      "revId": "b605873b0a69dedc51dbc4e19fb5c4822dea75b0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea17e5fa_2a5a77a7",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1020,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-09T19:36:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "90d07c6c_280ac14a",
       "range": {
         "startLine": 1020,
         "startChar": 18,
