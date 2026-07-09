@@ -2166,8 +2166,5 @@ TEST_F(FPDFViewEmbedderTest, IccGradientBanding) {
   ASSERT_TRUE(page);
   ScopedFPDFBitmap bitmap = RenderLoadedPage(page.get());
   ASSERT_TRUE(bitmap);
-
-  // TODO(crbug.com/532617608): The expectation image needs to be updated to not
-  // have banding when the issue is resolved.
   CompareBitmapWithExpectationSuffix(bitmap.get(), "bug_532617608");
 }
