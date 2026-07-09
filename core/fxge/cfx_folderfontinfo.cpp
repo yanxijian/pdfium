@@ -121,23 +121,28 @@ void CFX_FolderFontInfo::AddPath(const ByteString& path) {
   path_list_.push_back(path);
 }
 
-void CFX_FolderFontInfo::EnumFontList(CFX_FontMapper* pMapper) {
+bool CFX_FolderFontInfo::EnumFontList(CFX_FontMapper* pMapper) {
+  bool any_success = false;
   for (const auto& path : path_list_) {
-    ScanPath(pMapper, path);
+    if (ScanPath(pMapper, path)) {
+      any_success = true;
+    }
   }
+  return path_list_.empty() || any_success;
 }
 
-void CFX_FolderFontInfo::ScanPath(CFX_FontMapper* mapper,
+bool CFX_FolderFontInfo::ScanPath(CFX_FontMapper* mapper,
                                   const ByteString& path) {
   std::unique_ptr<FX_Folder> handle = FX_Folder::OpenFolder(path);
   if (!handle) {
-    return;
+    return false;
   }
 
   ByteString filename;
-  bool bFolder;
-  while (handle->GetNextFile(&filename, &bFolder)) {
-    if (bFolder) {
+  bool is_folder;
+  bool success = false;
+  while (handle->GetNextFile(&filename, &is_folder)) {
+    if (is_folder) {
       if (filename == "." || filename == "..") {
         continue;
       }
@@ -157,15 +162,20 @@ void CFX_FolderFontInfo::ScanPath(CFX_FontMapper* mapper,
 #endif
 
     fullpath += filename;
-    bFolder ? ScanPath(mapper, fullpath) : ScanFile(mapper, fullpath);
+    if (folder) {
+      success |= ScanPath(mapper, fullpath);
+    } else {
+      success |= ScanFile(mapper, fullpath);
+    }
   }
+  return success;
 }
 
-void CFX_FolderFontInfo::ScanFile(CFX_FontMapper* mapper,
+bool CFX_FolderFontInfo::ScanFile(CFX_FontMapper* mapper,
                                   const ByteString& path) {
   std::unique_ptr<FILE, FxFileCloser> pFile(fopen(path.c_str(), "rb"));
   if (!pFile) {
-    return;
+    return false;
   }
 
   fseek(pFile.get(), 0, SEEK_END);
@@ -174,13 +184,13 @@ void CFX_FolderFontInfo::ScanFile(CFX_FontMapper* mapper,
 
   uint8_t buffer[12];
   if (fxcrt::spanread(buffer, pFile.get()).size() != sizeof(buffer)) {
-    return;
+    return false;
   }
 
   uint32_t magic = fxcrt::GetUInt32MSBFirst(pdfium::span(buffer).first<4u>());
   if (magic != SystemFontInfoIface::kTableTTCF) {
     ReportFace(mapper, path, pFile.get(), filesize, 0);
-    return;
+    return true;
   }
 
   uint32_t nFaces =
@@ -188,19 +198,20 @@ void CFX_FolderFontInfo::ScanFile(CFX_FontMapper* mapper,
   FX_SAFE_SIZE_T safe_face_bytes = nFaces;
   safe_face_bytes *= 4;
   if (!safe_face_bytes.IsValid()) {
-    return;
+    return false;
   }
 
   auto offsets =
       FixedSizeDataVector<uint8_t>::Uninit(safe_face_bytes.ValueOrDie());
   if (fxcrt::spanread(offsets.span(), pFile.get()).size() != offsets.size()) {
-    return;
+    return false;
   }
 
   for (uint32_t i = 0; i < nFaces; i++) {
     ReportFace(mapper, path, pFile.get(), filesize,
                fxcrt::GetUInt32MSBFirst(offsets.subspan(i * 4).first<4u>()));
   }
+  return true;
 }
 
 void CFX_FolderFontInfo::ReportFace(CFX_FontMapper* mapper,
