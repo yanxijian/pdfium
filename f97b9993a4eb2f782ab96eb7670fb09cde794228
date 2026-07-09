@@ -39,6 +39,30 @@
       },
       "revId": "f97b9993a4eb2f782ab96eb7670fb09cde794228",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e1fc1f9_2cbc7c3d",
+        "filename": "core/fxge/dib/fx_dib.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-09T22:52:47Z",
+      "side": 1,
+      "message": "GN doesn\u0027t understand C++ #if, so `gn check` failed in earlier patchsets. This suppresses those `gn check` failures.",
+      "parentUuid": "cb22e605_3c1f6924",
+      "range": {
+        "startLine": 16,
+        "startChar": 59,
+        "endLine": 16,
+        "endChar": 68
+      },
+      "revId": "f97b9993a4eb2f782ab96eb7670fb09cde794228",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
