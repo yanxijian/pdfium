@@ -25,7 +25,7 @@ class SystemFontInfoIface {
 
   virtual ~SystemFontInfoIface() = default;
 
-  virtual void EnumFontList(CFX_FontMapper* pMapper) = 0;
+  virtual bool EnumFontList(CFX_FontMapper* pMapper) = 0;
   virtual void* MapFont(CFX_FontMapper* mapper,
                         int weight,
                         bool bItalic,
