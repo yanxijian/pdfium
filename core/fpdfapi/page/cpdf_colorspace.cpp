@@ -1017,7 +1017,7 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
   DCHECK(fxcodec::IccTransform::IsValidIccComponents(nComponents));
   int nMaxColors = 1;
   for (uint32_t i = 0; i < nComponents; i++) {
-    nMaxColors *= 52;
+    nMaxColors *= 256;
   }
 
   bool bTranslate = nComponents > 3;
@@ -1038,11 +1038,11 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
     size_t src_index = 0;
     for (int i = 0; i < nMaxColors; i++) {
       uint32_t color = i;
-      uint32_t order = nMaxColors / 52;
+      uint32_t order = nMaxColors / 256;
       for (uint32_t c = 0; c < nComponents; c++) {
         temp_src[src_index++] = static_cast<uint8_t>(color / order * 5);
         color %= order;
-        order /= 52;
+        order /= 256;
       }
     }
     if (profile_->IsSupported()) {
@@ -1055,7 +1055,7 @@ void CPDF_ICCBasedCS::TranslateImageLine(pdfium::span<uint8_t> dest_span,
     for (int i = 0; i < pixels; i++) {
       int index = 0;
       for (uint32_t c = 0; c < nComponents; c++) {
-        index = index * 52 + (*pSrcBuf) / 5;
+        index = index * 256 + (*pSrcBuf);
         pSrcBuf++;
       }
       index *= 3;
