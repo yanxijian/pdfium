@@ -32,7 +32,7 @@ class MockSystemFontInfo : public SystemFontInfoIface {
   ~MockSystemFontInfo() override = default;
 
   // SystemFontInfoIface:
-  MOCK_METHOD(void, EnumFontList, (CFX_FontMapper*), (override));
+  MOCK_METHOD(bool, EnumFontList, (CFX_FontMapper*), (override));
   MOCK_METHOD(void*,
               MapFont,
               (CFX_FontMapper*, int, bool, FX_Charset, int, const ByteString&),
@@ -342,7 +342,8 @@ TEST(CFXFontMapperTest, LoadInstalledFontsCalledOnlyOnce) {
 
   // EnumFontList should be called only once even if LoadInstalledFonts is
   // called multiple times
-  EXPECT_CALL(*mock_font_info, EnumFontList(&font_mapper));
+  EXPECT_CALL(*mock_font_info, EnumFontList(&font_mapper))
+      .WillOnce(testing::Return(true));
   font_mapper.LoadInstalledFonts();
   font_mapper.LoadInstalledFonts();
   font_mapper.LoadInstalledFonts();
