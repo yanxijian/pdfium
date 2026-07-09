@@ -16,6 +16,24 @@
       "message": "In the \"buffer to small\" case, the API needs to return the required buffer size. Then the caller can allocate an appropriately sized buffer and call again.",
       "revId": "e331e19c0e7f46024ce3e513c787c036475fe67d",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1e53ff0_1ee40061",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 22
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-09T18:57:18Z",
+      "side": 1,
+      "message": "Sorry for that, I somehow managed to test for `desc_absent` twice in the process and then not realise this. Should be resolved now.",
+      "parentUuid": "8644797a_f9f6eed5",
+      "revId": "e331e19c0e7f46024ce3e513c787c036475fe67d",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
