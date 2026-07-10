@@ -51,6 +51,24 @@
       "parentUuid": "ba70ab71_56f6b63a",
       "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8cd520c_1c7a3d74",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-10T17:41:06Z",
+      "side": 1,
+      "message": "I meant BGRA, since you\u0027re checking for RGBA and setting BGRA as the default unconditionally its possible someone could make a different swizzling of the channels (like ARGB) and pass it to this function and it would compile but be incorrect logic because the function defaulted to BGRA and it wasn\u0027t the RGBA type.\n\nSo I\u0027m suggesting also checking for the FX_BGRA_STRUCT type and erroring if this function is passed anything other than RGBA or BGRA.\n\nKind of an edge case concern though. It would be nice to remove dead code too.",
+      "parentUuid": "4886efd1_f9a7b6fa",
+      "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
