@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "411e99b3_fabfaf86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-10T23:22:55Z",
+      "side": 1,
+      "message": "Sorry, I don\u0027t have a quick fix and the DEPS roll is stuck.",
+      "revId": "f2ac546aa44b6f46e9851f24a29f2864f49c7009",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
