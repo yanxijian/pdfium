@@ -69,6 +69,24 @@
       "parentUuid": "4886efd1_f9a7b6fa",
       "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f757d49_8fd03c10",
+        "filename": "core/fxge/dib/cfx_scanlinecompositor.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 669,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-10T18:21:59Z",
+      "side": 1,
+      "message": "Whoops, I read your comment wrong the first time around. Done.",
+      "parentUuid": "c8cd520c_1c7a3d74",
+      "revId": "4289917f22beebabdbef4b6dd01e5aba28dbb95c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
