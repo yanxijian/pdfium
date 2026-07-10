@@ -22,6 +22,30 @@
       },
       "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40295197_3926a4e2",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-10T23:31:40Z",
+      "side": 1,
+      "message": "OTOH, the comment on line 1001 seems to be saying the component count is never 4, so this shouldn\u0027t overflow. Nevertheless, it will be better to do this more safely. The comment on line 1015 may need to be adjusted as well.",
+      "parentUuid": "5edfd008_b4045627",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
