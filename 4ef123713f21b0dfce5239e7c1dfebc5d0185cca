@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5edfd008_b4045627",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-07-10T23:21:58Z",
+      "side": 1,
+      "message": "Couldn\u0027t `nMaxColors` overflow if nComponents \u003d\u003d 4, which I believe is possible here:\n\nhttps://source.chromium.org/chromium/_/pdfium/pdfium/+/143618f45906d6248ad00c56adaf32de011a36fa:core/fpdfapi/page/cpdf_colorspace.cpp;l\u003d601;drc\u003d535784726fd6442507bd7398d99cf0b639868202;bpv\u003d0;bpt\u003d0",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
