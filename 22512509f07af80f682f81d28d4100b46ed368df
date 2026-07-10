@@ -16,6 +16,24 @@
       "message": "Consistently use the same hostname as line 9.",
       "revId": "22512509f07af80f682f81d28d4100b46ed368df",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a0f0e33_9f71f270",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-10T22:44:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04276d3c_8eb2098b",
+      "revId": "22512509f07af80f682f81d28d4100b46ed368df",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
