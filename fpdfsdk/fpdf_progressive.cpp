@@ -67,7 +67,6 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
 
   auto owned_context = std::make_unique<CPDF_PageRenderContext>();
   CPDF_PageRenderContext* context = owned_context.get();
-  pPage->SetRenderContext(std::move(owned_context));
   context->return_premultiplied_ = pBitmap->IsPremultiplied();
 
 #if defined(PDF_USE_SKIA)
@@ -88,6 +87,7 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
     return FPDF_RENDER_FAILED;
   }
   context->device_ = std::move(device);
+  pPage->SetRenderContext(std::move(owned_context));
 
   CPDFSDK_PauseAdapter pause_adapter(pause);
   CPDFSDK_RenderPageWithContext(context, pPage, start_x, start_y, size_x,
@@ -102,6 +102,7 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
     }
 #endif  // defined(PDF_USE_SKIA)
 
+    pPage->ClearRenderContext();
     return FPDF_RENDER_FAILED;
   }
 
