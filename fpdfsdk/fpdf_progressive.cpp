@@ -18,6 +18,7 @@
 #include "fpdfsdk/cpdfsdk_helpers.h"
 #include "fpdfsdk/cpdfsdk_pauseadapter.h"
 #include "fpdfsdk/cpdfsdk_renderpage.h"
+#include "fpdfsdk/fpdf_progressive.h"
 #include "public/fpdfview.h"
 
 // These checks are here because core/ and public/ cannot depend on each other.
@@ -33,11 +34,17 @@ static_assert(CPDF_ProgressiveRenderer::kFailed == FPDF_RENDER_FAILED,
 
 namespace {
 
+thread_local bool g_fail_next_render_device_creation_for_testing = false;
+
 int ToFPDFStatus(CPDF_ProgressiveRenderer::Status status) {
   return static_cast<int>(status);
 }
 
 }  // namespace
+
+void FailNextProgressiveRenderDeviceCreationForTesting() {
+  g_fail_next_render_device_creation_for_testing = true;
+}
 
 FPDF_EXPORT int FPDF_CALLCONV
 FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
@@ -67,7 +74,6 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
 
   auto owned_context = std::make_unique<CPDF_PageRenderContext>();
   CPDF_PageRenderContext* context = owned_context.get();
-  pPage->SetRenderContext(std::move(owned_context));
   context->return_premultiplied_ = pBitmap->IsPremultiplied();
 
 #if defined(PDF_USE_SKIA)
@@ -76,8 +82,11 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
   }
 #endif
 
-  auto device = CFX_RenderDevice::CreateForBitmap(
-      pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
+  auto device =
+      std::exchange(g_fail_next_render_device_creation_for_testing, false)
+          ? nullptr
+          : CFX_RenderDevice::CreateForBitmap(
+                pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
   if (!device) {
 #if defined(PDF_USE_SKIA)
     if (CFX_GEModule::Get()->UseSkiaRenderer() &&
@@ -88,6 +97,7 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
     return FPDF_RENDER_FAILED;
   }
   context->device_ = std::move(device);
+  pPage->SetRenderContext(std::move(owned_context));
 
   CPDFSDK_PauseAdapter pause_adapter(pause);
   CPDFSDK_RenderPageWithContext(context, pPage, start_x, start_y, size_x,
@@ -102,6 +112,7 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
     }
 #endif  // defined(PDF_USE_SKIA)
 
+    pPage->ClearRenderContext();
     return FPDF_RENDER_FAILED;
   }
 
