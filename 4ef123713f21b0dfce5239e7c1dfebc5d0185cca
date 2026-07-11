@@ -46,6 +46,30 @@
       },
       "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6728d6b7_d6b95367",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-11T03:33:35Z",
+      "side": 1,
+      "message": "\u003e line 1001 seems to be saying the component count is never 4\n\nIf I understand that correctly it seems to be saying \"The only 4 component color allowed in here are ones without transparency... aka CMYK\".\n\nWill seperate out some of the points so we can decide on how this could be changed.\n\n1. Integer overflows\nAbout int overflows, those would only really apply at n \u003e\u003d 4 (CMYK)\n\nas at n \u003d 3, we have 2^24 \u003c INT32_MAX\nat n \u003d 4 however, we have 2^32 \u003e INT32_MAX (overflow)\n\nbut if we set this to a 64 bit int type, this should fit well within our limits in either value of n.\n\n2. Heap allocation.\nYes I feel this is a pretty big problem because of line 1037. With this one line we are throwing 4GiB * 3 on Heap. Considering some laptops (including the chromebook I have), have less and that even this fills up \u003e70% of the ram on my daily driver it would 100% Cause problems for embedders and users alike.\n\n3. Potential solutions\na. Keep the divided by 5 for 4 channels but not for 3 channels, fixing the issue.\nb. WAI the issue - if we want consistency and wont want it partially fixed it would make more sense to this.\nc. Rewrite the caching behaviour for this to use less cache.\n\n\nI overall feel that the best overall option at this moment is A maybe to refactor this to get to C in the future.",
+      "parentUuid": "40295197_3926a4e2",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
