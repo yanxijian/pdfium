@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c06ac2ce_76399d7e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-11T01:42:59Z",
+      "side": 1,
+      "message": "Aside from not being able to spell, on second look, I decided this is because the Chromium test cases that are having trouble with this CL are feeding PDFium a poor input, where it incorrectly specifies `/Width` and `/Height` and gets away with it because the tests aren\u0027t checking the rendering, and the rendering happens to be correct because the JPEG is all red pixels. Real world PDFs can\u0027t get away with this.\n\nSo I\u0027ll update that PDF instead and maybe reland this CL.",
+      "revId": "fb09d84c50e95b848f75d61a7c3859cf0c32a749",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
