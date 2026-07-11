@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d920bec4_1f6ed046",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 24
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-11T00:13:14Z",
+      "side": 1,
+      "message": "BTW, if this is wrong, then the same code in FPDFAttachment_SetStringValue() may be wrong as well.",
+      "parentUuid": "547532ab_31aa76be",
+      "range": {
+        "startLine": 240,
+        "startChar": 21,
+        "endLine": 240,
+        "endChar": 49
+      },
+      "revId": "e8c45d275ba4f8c9a52aaff9e2825194143f0f17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "933c657c_9f699ef3",
         "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
         "patchSetId": 24
