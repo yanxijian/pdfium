@@ -120,6 +120,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "63af652e_feaab2c9",
+        "filename": "fpdfsdk/fpdf_attachment.cpp",
+        "patchSetId": 24
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-13T15:56:41Z",
+      "side": 1,
+      "message": "Also edited here.",
+      "parentUuid": "2d462bce_fced615f",
+      "range": {
+        "startLine": 240,
+        "startChar": 21,
+        "endLine": 240,
+        "endChar": 49
+      },
+      "revId": "e8c45d275ba4f8c9a52aaff9e2825194143f0f17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "933c657c_9f699ef3",
@@ -137,6 +161,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f858a8b_4c422e39",
+        "filename": "fpdfsdk/fpdf_attachment_embeddertest.cpp",
+        "patchSetId": 24
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-13T15:56:41Z",
+      "side": 1,
+      "message": "Now that the issue in the other file is fixed, going to try über instead of carrot.",
+      "parentUuid": "933c657c_9f699ef3",
+      "revId": "e8c45d275ba4f8c9a52aaff9e2825194143f0f17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a55c23df_716abe5c",
@@ -150,6 +192,30 @@
       "writtenOn": "2026-07-10T23:54:28Z",
       "side": 1,
       "message": "Nit: never hurts to reference where to find it, e.g. ISO 32000-1:2008 section 7.11.3.",
+      "range": {
+        "startLine": 135,
+        "startChar": 57,
+        "endLine": 135,
+        "endChar": 75
+      },
+      "revId": "e8c45d275ba4f8c9a52aaff9e2825194143f0f17",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35376ff0_4526baa0",
+        "filename": "public/fpdf_attachment.h",
+        "patchSetId": 24
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-13T15:56:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a55c23df_716abe5c",
       "range": {
         "startLine": 135,
         "startChar": 57,
