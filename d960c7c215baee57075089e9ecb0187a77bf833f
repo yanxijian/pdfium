@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ba3b174_f176717e",
+        "filename": "testing/pdf_test_environment.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T18:08:30Z",
+      "side": 1,
+      "message": "Nit: this could return the span, but eh, test.",
+      "range": {
+        "startLine": 17,
+        "startChar": 40,
+        "endLine": 17,
+        "endChar": 50
+      },
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
