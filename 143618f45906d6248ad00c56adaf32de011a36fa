@@ -16,6 +16,24 @@
       "message": "This include was added in https://pdfium-review.googlesource.com/c/pdfium/+/150911 and it got accidentally removed in this CL due to a rebase merge conflict",
       "revId": "143618f45906d6248ad00c56adaf32de011a36fa",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9559d30e_206087a2",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 49
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-13T16:41:31Z",
+      "side": 0,
+      "message": "addressed in https://pdfium-review.git.corp.google.com/c/pdfium/+/151850",
+      "parentUuid": "982c94de_d5f890c1",
+      "revId": "143618f45906d6248ad00c56adaf32de011a36fa",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
