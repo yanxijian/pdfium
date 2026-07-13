@@ -22,9 +22,7 @@ class CAndroidPlatform : public CFX_GEModule::PlatformIface {
 
   std::unique_ptr<SystemFontInfoIface> CreateDefaultSystemFontInfo() override {
     auto font_info = std::make_unique<CFX_AndroidFontInfo>();
-    // SAFETY: GetUserFontPaths() must return a null-terminated array of
-    // NUL-terminated strings.
-    UNSAFE_BUFFERS(font_info->Init(CFX_GEModule::Get()->GetUserFontPaths()));
+    font_info->Init(CFX_GEModule::Get()->GetUserFontPaths());
     return font_info;
   }
 };
