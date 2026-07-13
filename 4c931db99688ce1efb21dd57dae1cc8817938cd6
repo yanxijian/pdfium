@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f777fad0_b7b5c510",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T20:21:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71c98e6e_2d5f5d27",
+      "range": {
+        "startLine": 21,
+        "startChar": 63,
+        "endLine": 21,
+        "endChar": 68
+      },
+      "revId": "4c931db99688ce1efb21dd57dae1cc8817938cd6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df99be13_d424d20a",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-07-13T20:13:21Z",
       "side": 1,
       "message": "typo typo",
+      "range": {
+        "startLine": 80,
+        "startChar": 63,
+        "endLine": 80,
+        "endChar": 68
+      },
+      "revId": "4c931db99688ce1efb21dd57dae1cc8817938cd6",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7f88a1a_3fb7600b",
+        "filename": "core/fxge/cfx_gemodule.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T20:21:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df99be13_d424d20a",
       "range": {
         "startLine": 80,
         "startChar": 63,
