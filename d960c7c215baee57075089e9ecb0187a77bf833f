@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c5d4fe9_51caf1b2",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T19:09:17Z",
+      "side": 1,
+      "message": "I though nullopt meant \"use other defaults\" but empty meant \"use none\". Adding comment.",
+      "parentUuid": "1065b635_b3dea858",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 25
+      },
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "79276737_01ac9151",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-07-13T18:21:00Z",
       "side": 1,
       "message": "No longer needed.",
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5448e1d5_c654bb64",
+        "filename": "core/fxge/cfx_gemodule.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T19:09:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "79276737_01ac9151",
       "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b7681d_fd7c6a39",
+        "filename": "core/fxge/cfx_gemodule.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T19:09:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77e8cf0d_838c2b3c",
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "271acf63_e254acc0",
@@ -71,6 +131,30 @@
       "writtenOn": "2026-07-13T18:21:00Z",
       "side": 1,
       "message": "Wrap in backticks.",
+      "range": {
+        "startLine": 244,
+        "startChar": 15,
+        "endLine": 244,
+        "endChar": 31
+      },
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d987e878_61339f36",
+        "filename": "fpdfsdk/fpdf_view.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T19:09:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "271acf63_e254acc0",
       "range": {
         "startLine": 244,
         "startChar": 15,
@@ -117,6 +201,24 @@
       "writtenOn": "2026-07-13T18:21:00Z",
       "side": 1,
       "message": "Consistently add \"SAFETY\" comment.",
+      "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5492a52c_bd6f70d7",
+        "filename": "testing/pdf_test_environment.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T19:09:17Z",
+      "side": 1,
+      "message": "Refactored out of existence.",
+      "parentUuid": "cb98a024_6718f1f1",
       "revId": "d960c7c215baee57075089e9ecb0187a77bf833f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
