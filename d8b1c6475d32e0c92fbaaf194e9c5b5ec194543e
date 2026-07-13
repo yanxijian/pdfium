@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be09114b_4195da5b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-13T23:39:31Z",
+      "side": 1,
+      "message": "Please file a bug report so there is something to reference here.",
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2df75376_413a680c",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-13T23:39:31Z",
+      "side": 1,
+      "message": "Can this and line 99 switch to std::ranges::reverse() ?",
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50387fa0_8e47eef2",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-13T23:39:31Z",
+      "side": 1,
+      "message": "True constants can be kFoo.",
+      "range": {
+        "startLine": 445,
+        "startChar": 16,
+        "endLine": 445,
+        "endChar": 19
+      },
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27e170ba_50b41355",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-13T23:39:31Z",
+      "side": 1,
+      "message": "constexpr",
+      "range": {
+        "startLine": 445,
+        "startChar": 2,
+        "endLine": 445,
+        "endChar": 7
+      },
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
