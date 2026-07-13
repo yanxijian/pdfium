@@ -100,3 +100,10 @@ void CFX_BidiString::SetOverallDirectionRight() {
     overall_direction_ = CFX_BidiChar::Direction::kRight;
   }
 }
+
+void CFX_BidiString::SetOverallDirectionLeft() {
+  if (overall_direction_ != CFX_BidiChar::Direction::kLeft) {
+    std::reverse(order_.begin(), order_.end());
+    overall_direction_ = CFX_BidiChar::Direction::kLeft;
+  }
+}
