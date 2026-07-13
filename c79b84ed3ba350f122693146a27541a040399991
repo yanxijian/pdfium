@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "820c577f_ae754d24",
+        "filename": "core/fxge/android/cfx_androidfontinfo.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-13T18:06:36Z",
+      "side": 1,
+      "message": "Please `#include \"core/fxcrt/span.h\"` since `pdfium::span` is used in the `Init` signature.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 0
+      },
+      "revId": "c79b84ed3ba350f122693146a27541a040399991",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
