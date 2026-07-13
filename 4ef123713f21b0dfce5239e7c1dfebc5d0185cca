@@ -70,6 +70,71 @@
       },
       "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ff54a9b_ffddf762",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-07-13T18:53:36Z",
+      "side": 1,
+      "message": "The line 1001 comment also confused me, but if the component count was never 4, then wouldn\u0027t line 1024 be unnecessary?\n\nHeap allocation will not be an issue, since line 1034 early returns when `nComponents \u003e 3` before resizing the cache (see other comment).\n\nAfter refactoring a bit based on the other comment, we can move the nMaxColors calculation into the `if (!bTranslate)` block. Then the comment at line 1015 can be moved.\n\nAnd to make it even safer, we could use FX_SAFE_INT32?",
+      "parentUuid": "6728d6b7_d6b95367",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbccfa20_8abde853",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 9051
+      },
+      "writtenOn": "2026-07-13T18:53:36Z",
+      "side": 1,
+      "message": "Existing/unrelated: this should always be true given the early return at line 1012. Then, the two if blocks can be turned into if/else.",
+      "range": {
+        "startLine": 1032,
+        "startChar": 16,
+        "endLine": 1032,
+        "endChar": 43
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "2d1b3498_08fd7b25",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fpdfapi/page/cpdf_colorspace.cpp",
+              "range": {
+                "startLine": 1032,
+                "startChar": 0,
+                "endLine": 1033,
+                "endChar": 0
+              },
+              "replacement": "  if (bTranslate) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
