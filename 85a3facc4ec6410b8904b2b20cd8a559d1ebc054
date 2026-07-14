@@ -16,6 +16,23 @@
       "message": "First step to fix one bad pattern.",
       "revId": "85a3facc4ec6410b8904b2b20cd8a559d1ebc054",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "778c999b_9ad3904c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5495
+      },
+      "writtenOn": "2026-07-14T16:41:11Z",
+      "side": 1,
+      "message": "Omer, Arash, thoughts?",
+      "revId": "85a3facc4ec6410b8904b2b20cd8a559d1ebc054",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
