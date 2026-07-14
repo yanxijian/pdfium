@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fa1a683_0c0390f1",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 7
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T17:48:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d118b1d_34fa9e8c",
+      "revId": "2cb707d7be81cfcc5903d103fcc545f9de7431cc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c031ff74_03d15bb4",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-07-14T17:22:59Z",
       "side": 1,
       "message": "Should this be renamed to \"BidiStringSetDirectionRight\" to match the new test\u0027s name?",
+      "range": {
+        "startLine": 488,
+        "startChar": 12,
+        "endLine": 488,
+        "endChar": 29
+      },
+      "revId": "2cb707d7be81cfcc5903d103fcc545f9de7431cc",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1567708c_ad411270",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T17:48:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c031ff74_03d15bb4",
       "range": {
         "startLine": 488,
         "startChar": 12,
