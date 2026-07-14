@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa22cd21_5a571dff",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T17:15:46Z",
+      "side": 1,
+      "message": "Reminder to run `git cl format`.",
+      "revId": "349df7715ae779f31368c831ecc3b0f06849ead0",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
