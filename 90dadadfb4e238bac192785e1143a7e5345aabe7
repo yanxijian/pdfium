@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f2747173_a8441304",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T23:19:12Z",
+      "side": 1,
+      "message": "Whether this CL gets merged with the previous CL is a separate question from what comes after this CL. It\u0027ll be helpful if the commit message can describe what is going to happen. It\u0027ll be doubly helpful to have the next CL chained to this one when it is ready.\n\nI see \"addressing rendering layer in future CL\" but that is a bit vague and I\u0027m hoping it can become more concrete.",
+      "parentUuid": "c344be6e_93991d32",
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e9ff0936_bd771ebc",
         "filename": "core/fxcrt/fx_bidi.cpp",
         "patchSetId": 6
@@ -120,6 +138,30 @@
       "side": 1,
       "message": "CheckAdd for overflow check, if it does, passes -1, \u0026status is set to U_ILLEGAL_ARGUMENT_ERROR since -1 \u003c 0, and then if statement after returns empty vector",
       "parentUuid": "b3db812e_a110251b",
+      "range": {
+        "startLine": 167,
+        "startChar": 51,
+        "endLine": 167,
+        "endChar": 75
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c9fab46_c2a28fca",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T23:19:12Z",
+      "side": 1,
+      "message": "Why not return early directly, instead of depending on ICU functions to detect an error and fail?",
+      "parentUuid": "82b397a2_5eef8c0c",
       "range": {
         "startLine": 167,
         "startChar": 51,
