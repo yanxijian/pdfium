@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fb379c4_0f510afa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7c4fafa_5d69b366",
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f453288b_7df4a548",
@@ -41,6 +59,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b119a3e3_d80ac8e6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f453288b_7df4a548",
+      "range": {
+        "startLine": 10,
+        "startChar": 40,
+        "endLine": 10,
+        "endChar": 53
+      },
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1897c9fb_fdd30e05",
@@ -54,6 +96,30 @@
       "writtenOn": "2026-07-14T17:37:00Z",
       "side": 1,
       "message": "There\u0027s no updates. Only an addition.",
+      "range": {
+        "startLine": 11,
+        "startChar": 30,
+        "endLine": 11,
+        "endChar": 36
+      },
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b060721f_31988a9e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1897c9fb_fdd30e05",
       "range": {
         "startLine": 11,
         "startChar": 30,
@@ -98,6 +164,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a41b6870_0608cbbf",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0251c84c_d299637e",
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "37012dd7_28d39937",
@@ -115,6 +199,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1290cffa_6ef73d67",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37012dd7_28d39937",
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "64590d04_45d16850",
@@ -128,6 +230,24 @@
       "writtenOn": "2026-07-14T17:37:00Z",
       "side": 1,
       "message": "Why not just use `UBIDI_LTR` directly?",
+      "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ae56617_8fe16f7d",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T18:29:57Z",
+      "side": 1,
+      "message": "changed. had seen bidi_line_iterator.cc do something similar",
+      "parentUuid": "64590d04_45d16850",
       "revId": "a3815edf05ad61a86baad20956b8aa324fc93536",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
