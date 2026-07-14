@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d62c224_46be3ea9",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 855,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T22:44:27Z",
+      "side": 1,
+      "message": "I appended https://pdfium-review.googlesource.com/c/152050 to add a new enum value dedicated to /ActualText. Hope that helps.",
+      "parentUuid": "51e73761_f7570688",
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ef6c825_9a57907f",
         "filename": "core/fpdftext/cpdf_textpage.cpp",
         "patchSetId": 3
