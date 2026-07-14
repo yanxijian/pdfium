@@ -187,6 +187,30 @@
       },
       "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3165c09f_d0a1ec7b",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T17:14:09Z",
+      "side": 1,
+      "message": "prepended CL https://pdfium-review.git.corp.google.com/c/pdfium/+/152011",
+      "parentUuid": "1c8e9fa2_f7303028",
+      "range": {
+        "startLine": 445,
+        "startChar": 2,
+        "endLine": 445,
+        "endChar": 7
+      },
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
