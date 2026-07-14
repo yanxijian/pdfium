@@ -12,6 +12,7 @@
 #include <limits>
 
 #include "core/fxcrt/check_op.h"
+#include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/fx_string.h"
 #include "core/fxcrt/fx_unicode.h"
 
@@ -157,3 +158,42 @@ CFX_BidiResolver::CFX_BidiResolver(const WideString& paragraph_text,
 }
 
 CFX_BidiResolver::~CFX_BidiResolver() = default;
+
+
+
+std::vector<CFX_BidiResolver::ResolvedRun>
+CFX_BidiResolver::GetVisualRunsForLine(int line_start,
+                                       int line_length) const {
+  std::vector<ResolvedRun> runs;
+  if (!paragraph_bidi_ || line_length <= 0) {
+    return runs;
+  }
+
+  UErrorCode status = U_ZERO_ERROR;
+  ScopedUBiDi line_bidi(ubidi_openSized(line_length, 0, &status));
+  if (U_FAILURE(status)) {
+    return runs;
+  }
+
+  ubidi_setLine(paragraph_bidi_.get(), line_start,
+                pdfium::CheckAdd(line_start, line_length).ValueOrDefault(-1),
+                line_bidi.get(), &status);
+  if (U_FAILURE(status)) {
+    return runs;
+  }
+
+  int32_t run_count = ubidi_countRuns(line_bidi.get(), &status);
+  if (U_FAILURE(status)) {
+    return runs;
+  }
+
+  for (int32_t i = 0; i < run_count; ++i) {
+    int32_t logical_start = 0;
+    int32_t length = 0;
+    UBiDiDirection dir =
+        ubidi_getVisualRun(line_bidi.get(), i, &logical_start, &length);
+    runs.push_back({logical_start + line_start, length, dir == UBIDI_RTL});
+  }
+
+  return runs;
+}
