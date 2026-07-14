@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "65a4766f_20d09f04",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T23:42:04Z",
+      "side": 1,
+      "message": "This class can stand on its own, but looks awkward because it doesn\u0027t have any methods. Depending on its intended usage, maybe it can have an is_valid() getter so callers can check if initialization succeeded or not. If that existed, then this CL can add more tests and check is_valid(). However, I indirectly asked about this on the next CL, and the latest update on that CL is saying the caller is expected to call GetVisualRunsForLine() and that CL handles initialization failure.\n\nSo if GetVisualRunsForLine() is going to be the only method in this class, then I guess it may be better to merge the two CLs so it can be tested in a meaningful way.\n\nAgain, if there was a CL chained to show usage from production callers, that could help shape what is the best way to implement this class.\n\nFor reference, the \"avoid initialization that can fail if you can\u0027t signal an error.\" part in https://google.github.io/styleguide/cppguide.html#Doing_Work_in_Constructors is what\u0027s on my mind here.",
+      "parentUuid": "3701801f_aa091abd",
+      "range": {
+        "startLine": 13,
+        "startChar": 58,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e4ee6332_8097d229",
         "filename": "core/fxcrt/fx_bidi.cpp",
         "patchSetId": 6
@@ -155,6 +179,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4af009e8_ee7acb34",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T23:42:04Z",
+      "side": 1,
+      "message": "I asked since I wasn\u0027t sure what the answer was. Looking at how ICU is used, it looks like ICU functions will do nothing if the input status is an error. However, since the code above already checked if `status` is a failure, I would have expected the answer here to be \"it\u0027s safe to not reset because ...\".\n\nIf `status` does need to be reset, then it should be done consistently in the next CL. Either way, the ICU usage should be consistent.",
+      "parentUuid": "74d4d2e7_efe06e8d",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b8f8f9b4_ccb2fd2b",
         "filename": "core/fxcrt/fx_bidi.h",
         "patchSetId": 6
@@ -184,6 +226,24 @@
       "side": 1,
       "message": "CFX_BidiResolver is intended to replace the legacy CFX_BidiChar and CFX_BidiString classes in this file. Once done in future CLs, those older classes would be dead code with the possibility of just removing them completely (cpdf_textpage.cpp would need to be looked at and modified respectively), and leaving CFX_BidiResolver by itself in fx_bidi.h/cpp\n\nSo for now, it was added to fx_bidi.h since it is just where bidi logic is found within PDFIum. Am fine to move it to its own file for clarity.",
       "parentUuid": "b8f8f9b4_ccb2fd2b",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aeacb0d6_c81e9a67",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T23:42:04Z",
+      "side": 1,
+      "message": "In that case, you should put the new code in a separate file. Then when cleanup happens, the cleanup CL can just straight-up delete entire files since they only contain dead code. No need to think about which parts of the file to keep.",
+      "parentUuid": "3a159f79_a745bdd2",
       "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
