@@ -5,6 +5,7 @@
 // Original code copyright 2014 Foxit Software Inc. http://www.foxitsoftware.com
 
 #include "core/fxcrt/fx_bidi.h"
+#include <unicode/ubidi.h>
 
 #include <algorithm>
 
@@ -107,3 +108,44 @@ void CFX_BidiString::SetOverallDirectionLeft() {
     overall_direction_ = CFX_BidiChar::Direction::kLeft;
   }
 }
+
+void UBiDiDeleter::operator()(UBiDi* bidi) const {
+  ubidi_close(bidi);
+}
+
+CFX_BidiResolver::CFX_BidiResolver(const WideString& paragraph_text,
+                                   BaseDirection direction) {
+  if (paragraph_text.IsEmpty()) {
+    return;
+  }
+
+  UErrorCode status = U_ZERO_ERROR;
+  paragraph_bidi_.reset(
+      ubidi_openSized(static_cast<int32_t>(paragraph_text.GetLength()), 0,
+                      &status));
+  if (U_FAILURE(status)) {
+    paragraph_bidi_.reset();
+    return;
+  }
+
+  utf16_text_.resize(paragraph_text.GetLength());
+  std::transform(paragraph_text.begin(), paragraph_text.end(),
+                 utf16_text_.begin(),
+                 [](wchar_t c) { return static_cast<char16_t>(c); });
+
+  UBiDiLevel para_level = UBIDI_DEFAULT_LTR;
+  if (direction == BaseDirection::kLeftToRight) {
+    para_level = 0; // UBIDI_LTR
+  } else if (direction == BaseDirection::kRightToLeft) {
+    para_level = 1; // UBIDI_RTL
+  }
+
+  ubidi_setPara(paragraph_bidi_.get(), utf16_text_.data(),
+                static_cast<int32_t>(utf16_text_.size()), para_level, nullptr,
+                &status);
+  if (U_FAILURE(status)) {
+    paragraph_bidi_.reset();
+  }
+}
+
+CFX_BidiResolver::~CFX_BidiResolver() = default;
