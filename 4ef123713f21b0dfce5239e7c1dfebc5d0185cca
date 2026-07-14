@@ -36,6 +36,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "49b63613_542d9a86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-14T17:48:32Z",
+      "side": 1,
+      "message": "Amendment:\n\nAbout multiplying by 5 (which I feel I didn\u0027t talk about enough): \n\n5 is just the step size, 52 is the count of things, they don\u0027t come from a relationship with 255 (as I mentioned earlier, one more needs to be added to account for 0.)\n\n52*5 \u003d 260, but realistically the maximum quantized value is 51 as per that table, so you need to mutiply by 51 (not 52), which gives 255 (which fits in 8 bits).\n\nPS: Sorry for some of the spelling errors here and there my autocorrect seems to be broken.",
+      "parentUuid": "d08e032e_579761f3",
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5edfd008_b4045627",
