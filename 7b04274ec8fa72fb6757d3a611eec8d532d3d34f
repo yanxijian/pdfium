@@ -16,6 +16,24 @@
       "message": "I don\u0027t see a non-test caller for SetOverallDirectionLeft() in this CL chain, so where will it actually be called from?",
       "revId": "7b04274ec8fa72fb6757d3a611eec8d532d3d34f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a19a6dcc_7520b902",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T20:48:16Z",
+      "side": 1,
+      "message": "there isn\u0027t a non-test caller for SetOverallDirectionLeft() yet. I added it for symmetry with the existing SetOverallDirectionRight(). \n\nI had initially tested with these but kept the changes as it could be helpful for future work. Since CFX_BidiResolver will replace CFX_BidiString later on, this addition isn\u0027t necessary.\n\nShould I remove it?",
+      "parentUuid": "bbfb8bb9_f79e242e",
+      "revId": "7b04274ec8fa72fb6757d3a611eec8d532d3d34f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
