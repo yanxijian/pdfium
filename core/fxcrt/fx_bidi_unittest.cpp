@@ -440,6 +440,11 @@ TEST(fxcrt, BidiStringRightLeftWeakLeftRight) {
   EXPECT_EQ(it, bidi.end());
 }
 
+TEST(fxcrt, BidiResolverEmpty) {
+  CFX_BidiResolver resolver(WideString(),
+                            CFX_BidiResolver::BaseDirection::kAuto);
+  // Just proving it doesn't crash or leak memory.
+}
 
 TEST(fxcrt, BidiStringSetDirectionLeft) {
   const wchar_t str[] = {kRightChar, kLeftWeakChar, kLeftChar, kRightChar, 0};
