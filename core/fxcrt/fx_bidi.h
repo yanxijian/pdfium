@@ -56,6 +56,9 @@ class CFX_BidiString {
   // Overall direction is always LEFT or RIGHT, never NEUTRAL.
   CFX_BidiChar::Direction OverallDirection() const;
 
+  // Force the overall direction to be L2R regardless of what was detected.
+  void SetOverallDirectionLeft();
+
   // Force the overall direction to be R2L regardless of what was detected.
   void SetOverallDirectionRight();
 
