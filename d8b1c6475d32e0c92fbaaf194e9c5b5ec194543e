@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13322d5f_d9055bd1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T01:39:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be09114b_4195da5b",
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2df75376_413a680c",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-07-13T23:39:31Z",
       "side": 1,
       "message": "Can this and line 99 switch to std::ranges::reverse() ?",
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "023e482d_76573965",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T01:39:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2df75376_413a680c",
       "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -76,6 +112,54 @@
         "startChar": 2,
         "endLine": 445,
         "endChar": 7
+      },
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a5c9776_cde40683",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T01:39:00Z",
+      "side": 1,
+      "message": "should I prepend a CL where I change the other tests to also use constexpr instead of const?",
+      "parentUuid": "27e170ba_50b41355",
+      "range": {
+        "startLine": 445,
+        "startChar": 2,
+        "endLine": 445,
+        "endChar": 7
+      },
+      "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0e060a6_1a2b9a32",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 445,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T01:39:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "50387fa0_8e47eef2",
+      "range": {
+        "startLine": 445,
+        "startChar": 16,
+        "endLine": 445,
+        "endChar": 19
       },
       "revId": "d8b1c6475d32e0c92fbaaf194e9c5b5ec194543e",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
