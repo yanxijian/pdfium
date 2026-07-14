@@ -54,6 +54,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f088b99d_483eb128",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T17:57:17Z",
+      "side": 1,
+      "message": "Yes, that\u0027s my rough understanding as well.",
+      "parentUuid": "d08e032e_579761f3",
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5edfd008_b4045627",
@@ -173,6 +191,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b12c1d5_4c2615e3",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T17:57:17Z",
+      "side": 1,
+      "message": "Yes, the code is a bit crufty, so the `nComponents \u003e 3` conditional probably never evaluates to true.",
+      "parentUuid": "fc9dddd9_5631e1cc",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bbccfa20_8abde853",
@@ -228,6 +270,30 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "bbccfa20_8abde853",
+      "range": {
+        "startLine": 1032,
+        "startChar": 16,
+        "endLine": 1032,
+        "endChar": 43
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50bc86d2_0fd39d2d",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T17:57:17Z",
+      "side": 1,
+      "message": "How about prepending a CL to do some of the cleanup first, so this CL can focus on the bug fix?",
+      "parentUuid": "c9495537_a7f6c3d9",
       "range": {
         "startLine": 1032,
         "startChar": 16,
