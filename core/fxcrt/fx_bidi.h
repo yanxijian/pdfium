@@ -87,8 +87,17 @@ class CFX_BidiResolver {
     kRightToLeft
   };
 
+  struct ResolvedRun {
+    int32_t start;
+    int32_t length;
+    bool is_rtl;
+  };
+
   CFX_BidiResolver(const WideString& paragraph_text, BaseDirection direction);
   ~CFX_BidiResolver();
+
+  std::vector<ResolvedRun> GetVisualRunsForLine(int32_t line_start,
+                                                int32_t line_length) const;
 
  private:
   std::vector<char16_t> utf16_text_;
