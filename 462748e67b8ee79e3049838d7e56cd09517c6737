@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ee57bbe_a37f6d08",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 49
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T21:54:34Z",
+      "side": 1,
+      "message": "Would you mind writing a documentation comment in the header file to explain what this function does since you\u0027re working on it?",
+      "revId": "462748e67b8ee79e3049838d7e56cd09517c6737",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab11e4c2_47b33ea8",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 49
+      },
+      "lineNbr": 726,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T21:54:34Z",
+      "side": 1,
+      "message": "Google style prefers not using auto so much (this is my most common C++ readability comment). I\u0027d write the type for all of them in this diff (kind of arguable for segment_words since it\u0027s a long type and it\u0027s written out earlier in this function, I wouldn\u0027t mind keeping that one auto).\n\nhttps://google.github.io/styleguide/cppguide.html#Type_deduction",
+      "revId": "462748e67b8ee79e3049838d7e56cd09517c6737",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f7e4f5e_c2065cce",
+        "filename": "core/fpdfdoc/cpvt_section.cpp",
+        "patchSetId": 49
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T21:54:34Z",
+      "side": 1,
+      "message": "It would be better to write out the capture list explicitly. https://google.github.io/styleguide/cppguide.html#Lambda_expressions",
+      "range": {
+        "startLine": 734,
+        "startChar": 26,
+        "endLine": 734,
+        "endChar": 27
+      },
+      "revId": "462748e67b8ee79e3049838d7e56cd09517c6737",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
