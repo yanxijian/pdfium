@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3701801f_aa091abd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "wanted to split up introduction of class here, addition of classes + testing of it, for review of the idea, and then calling it in a later CL that uses this class in cpvt_section. \n\nIs it better to just squash this and the next one into a singular one and get the cpvt_section CL out sooner so it can be seen where it is used?",
+      "parentUuid": "0bf49d25_175094a5",
+      "range": {
+        "startLine": 13,
+        "startChar": 58,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e4ee6332_8097d229",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-07-14T19:24:35Z",
       "side": 1,
       "message": "Newline before to separate system headers from this .cpp file\u0027s header.",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1dedce0_26597c87",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4ee6332_8097d229",
       "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -58,6 +100,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d276b5ab_0e141960",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "Changed utf16_text_ in fx_bidi.h to a std::u16string and use FX_UTF16Encode for conversion from UTF-32 to UTF-16 on Linux/macOS, and copies for Windows",
+      "parentUuid": "31741f10_42a8067f",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3080327c_26d96d96",
@@ -71,6 +131,24 @@
       "writtenOn": "2026-07-14T19:46:42Z",
       "side": 1,
       "message": "Does `status` need to be reset before every call into ICU?",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74d4d2e7_efe06e8d",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3080327c_26d96d96",
       "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -92,6 +170,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a159f79_a745bdd2",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "CFX_BidiResolver is intended to replace the legacy CFX_BidiChar and CFX_BidiString classes in this file. Once done in future CLs, those older classes would be dead code with the possibility of just removing them completely (cpdf_textpage.cpp would need to be looked at and modified respectively), and leaving CFX_BidiResolver by itself in fx_bidi.h/cpp\n\nSo for now, it was added to fx_bidi.h since it is just where bidi logic is found within PDFIum. Am fine to move it to its own file for clarity.",
+      "parentUuid": "b8f8f9b4_ccb2fd2b",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc5ba56a_7bb910ec",
@@ -109,6 +205,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b65814e9_6534fdf9",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "moved to end",
+      "parentUuid": "cc5ba56a_7bb910ec",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5be51f0a_831a580a",
@@ -122,6 +236,24 @@
       "writtenOn": "2026-07-14T19:24:35Z",
       "side": 1,
       "message": "Are there plans to make sure a CFX_BidiResolver that receives an empty string will work, once the class gets some methods?",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c028435_3b7f2786",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T21:43:21Z",
+      "side": 1,
+      "message": "yes, will address in test appended cl",
+      "parentUuid": "5be51f0a_831a580a",
       "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
