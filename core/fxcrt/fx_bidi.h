@@ -59,6 +59,9 @@ class CFX_BidiString {
   // Force the overall direction to be R2L regardless of what was detected.
   void SetOverallDirectionRight();
 
+  // Force the overall direction to be L2R regardless of what was detected.
+  void SetOverallDirectionLeft();
+
   const_iterator begin() const { return order_.begin(); }
   const_iterator end() const { return order_.end(); }
 
