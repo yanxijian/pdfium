@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36abf76f_5b033991",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T22:18:10Z",
+      "side": 1,
+      "message": "Note: the tests made it into https://pdfium-review.googlesource.com/c/pdfium/+/151250",
+      "revId": "5810a9fb168b76cbf7f81615b800e37ceaa579e4",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
