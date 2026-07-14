@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cdc857b_9c745cdd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T21:15:07Z",
+      "side": 1,
+      "message": "No worries.",
+      "parentUuid": "c85d441a_570b6dd3",
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb33ad20_961d0cf4",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "So then what is the explanation for how this detects /ActualText and how it doesn\u0027t detect anything else? My reading of your reply is that none of the things I pointed to are relevant to /ActualText. Except I think maybe https://source.chromium.org/chromium/chromium/src/+/main:third_party/pdfium/core/fpdftext/cpdf_textpage.cpp;l\u003d813;drc\u003d1e585df75166bfc8c28ca434e5afd6d5b1118345 still is relevant and you just said \"This writes into char_list_\" which is what you\u0027re checking here so I don\u0027t understand how that doesn\u0027t make your condition detect something other than /ActualText.\n\nIn fact I haven\u0027t seen a place where /ActualText ends up writing kPiece at all.",
       "parentUuid": "aa37589a_f0cf682b",
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51e73761_f7570688",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 855,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T21:15:07Z",
+      "side": 1,
+      "message": "The 3rd link in this conversation points to CPDF_TextPage::ProcessMarkedContent(), and that method is iterating over a variable called `actual_text`. That is the one to look at. As previously mention, `temp_char_list_` is never cross-contaminated, and this new code iterates over `temp_char_list_`.",
+      "parentUuid": "64ca7776_442c8bbe",
       "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -156,6 +192,30 @@
       "side": 1,
       "message": "It would probably be good to have test coverage that includes those mirror characters in the /ActualText to verify that they don\u0027t get flipped",
       "parentUuid": "1dd3f576_7f9931cb",
+      "range": {
+        "startLine": 858,
+        "startChar": 31,
+        "endLine": 858,
+        "endChar": 47
+      },
+      "revId": "515aae3212b079283c30176d5ec7348ce9de79fb",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5723e7d_288f0988",
+        "filename": "core/fpdftext/cpdf_textpage.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T21:15:07Z",
+      "side": 1,
+      "message": "- I prepended https://pdfium-review.googlesource.com/c/152030 to add some mirror chars to actual_text_rtl.pdf for better test coverage.\n- Feel free to send CLs to add documentation. If the research work already happened, might as well turn into into something more permanent.",
+      "parentUuid": "2183895a_4aa4396f",
       "range": {
         "startLine": 858,
         "startChar": 31,
