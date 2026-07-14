@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a21c5983_fbeb23fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T22:17:20Z",
+      "side": 1,
+      "message": "LGTM just adding some links",
+      "revId": "802019eec861844c9a292e77543fac2f33441f77",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e249574_c2cd2dd8",
+        "filename": "core/fpdfdoc/cpvt_variabletext.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T22:17:20Z",
+      "side": 1,
+      "message": "I was confused why this should be a member of CPVT_VariableText::Iterator and not a member of CPVT_Line. It\u0027s because https://pdfium-review.googlesource.com/c/pdfium/+/150850 made the implementation more complex and this CL was to prepare for that.",
+      "revId": "802019eec861844c9a292e77543fac2f33441f77",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f156b2d6_a9dc6828",
+        "filename": "core/fpdfdoc/cpvt_variabletext_unittest.cpp",
+        "patchSetId": 20
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4336344
+      },
+      "writtenOn": "2026-07-14T22:17:20Z",
+      "side": 1,
+      "message": "Pretty sure these tests were meant to go with https://pdfium-review.googlesource.com/c/pdfium/+/150530",
+      "revId": "802019eec861844c9a292e77543fac2f33441f77",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
