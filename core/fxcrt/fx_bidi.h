@@ -9,6 +9,7 @@
 
 #include <stddef.h>
 
+#include <memory>
 #include <vector>
 
 #include "core/fxcrt/widestring.h"
@@ -69,6 +70,29 @@ class CFX_BidiString {
   const WideString& str_;
   std::vector<CFX_BidiChar::Segment> order_;
   CFX_BidiChar::Direction overall_direction_ = CFX_BidiChar::Direction::kLeft;
+};
+
+struct UBiDi;
+
+struct UBiDiDeleter {
+  void operator()(UBiDi* bidi) const;
+};
+using ScopedUBiDi = std::unique_ptr<UBiDi, UBiDiDeleter>;
+
+class CFX_BidiResolver {
+ public:
+  enum class BaseDirection {
+    kAuto,
+    kLeftToRight,
+    kRightToLeft
+  };
+
+  CFX_BidiResolver(const WideString& paragraph_text, BaseDirection direction);
+  ~CFX_BidiResolver();
+
+ private:
+  std::vector<char16_t> utf16_text_;
+  std::unique_ptr<UBiDi, UBiDiDeleter> paragraph_bidi_;
 };
 
 #endif  // CORE_FXCRT_FX_BIDI_H_
