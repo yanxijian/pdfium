@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bf49d25_175094a5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:24:35Z",
+      "side": 1,
+      "message": "This leaves the majority of the CFX_BidiResolver ctor untested.",
+      "range": {
+        "startLine": 13,
+        "startChar": 58,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4ee6332_8097d229",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:24:35Z",
+      "side": 1,
+      "message": "Newline before to separate system headers from this .cpp file\u0027s header.",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8f8f9b4_ccb2fd2b",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:24:35Z",
+      "side": 1,
+      "message": "How closely related is this to the other classes in this file? Should this go into its own file instead?",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc5ba56a_7bb910ec",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:24:35Z",
+      "side": 1,
+      "message": "If keeping it in this file, then avoid putting this in the middle of existing test cases that are all for CFX_BidiString.",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5be51f0a_831a580a",
+        "filename": "core/fxcrt/fx_bidi_unittest.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:24:35Z",
+      "side": 1,
+      "message": "Are there plans to make sure a CFX_BidiResolver that receives an empty string will work, once the class gets some methods?",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
