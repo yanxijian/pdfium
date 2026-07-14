@@ -1,6 +1,92 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "71f6625f_34797d5f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:39:35Z",
+      "side": 1,
+      "message": "Same question as before - who is going to call GetVisualRunsForLine()?",
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9ff0936_bd771ebc",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:39:35Z",
+      "side": 1,
+      "message": "Should the code using CFX_BidiResolver get some indication that the ctor failed to initialize the ICU code this class uses? Or is returning an empty vector here sufficient? The header doesn\u0027t explain what happens on failure.",
+      "range": {
+        "startLine": 157,
+        "startChar": 6,
+        "endLine": 157,
+        "endChar": 23
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3db812e_a110251b",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:39:35Z",
+      "side": 1,
+      "message": "What happens if this addition triggers an integer overflow?",
+      "range": {
+        "startLine": 167,
+        "startChar": 51,
+        "endLine": 167,
+        "endChar": 75
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d89e61f9_658c1278",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T19:39:35Z",
+      "side": 1,
+      "message": "Chromium just use `int` everywhere. This can probably as well?",
+      "range": {
+        "startLine": 91,
+        "startChar": 4,
+        "endLine": 91,
+        "endChar": 11
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "14463d08_5e562859",
