@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c344be6e_93991d32",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T22:32:18Z",
+      "side": 1,
+      "message": "wanted to split up introduction of class before, addition of classes + testing of it here, for review of the idea, and then calling it in a later CL that modifies cpvt_section. \n\nIs it better to just squash this and the previous one into a singular one and get the cpvt_section CL out sooner so it can be seen where it is used?",
+      "parentUuid": "71f6625f_34797d5f",
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e9ff0936_bd771ebc",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-07-14T19:39:35Z",
       "side": 1,
       "message": "Should the code using CFX_BidiResolver get some indication that the ctor failed to initialize the ICU code this class uses? Or is returning an empty vector here sufficient? The header doesn\u0027t explain what happens on failure.",
+      "range": {
+        "startLine": 157,
+        "startChar": 6,
+        "endLine": 157,
+        "endChar": 23
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fa2206c_89c34819",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T22:32:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9ff0936_bd771ebc",
       "range": {
         "startLine": 157,
         "startChar": 6,
@@ -64,6 +106,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82b397a2_5eef8c0c",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T22:32:18Z",
+      "side": 1,
+      "message": "CheckAdd for overflow check, if it does, passes -1, \u0026status is set to U_ILLEGAL_ARGUMENT_ERROR since -1 \u003c 0, and then if statement after returns empty vector",
+      "parentUuid": "b3db812e_a110251b",
+      "range": {
+        "startLine": 167,
+        "startChar": 51,
+        "endLine": 167,
+        "endChar": 75
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d89e61f9_658c1278",
@@ -77,6 +143,30 @@
       "writtenOn": "2026-07-14T19:39:35Z",
       "side": 1,
       "message": "Chromium just use `int` everywhere. This can probably as well?",
+      "range": {
+        "startLine": 91,
+        "startChar": 4,
+        "endLine": 91,
+        "endChar": 11
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5ed51ba_4ab7ba0f",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-14T22:32:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d89e61f9_658c1278",
       "range": {
         "startLine": 91,
         "startChar": 4,
