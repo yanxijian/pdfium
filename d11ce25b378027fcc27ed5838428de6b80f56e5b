@@ -33,6 +33,88 @@
       "message": "ping Chad, Dominik as I am back.",
       "revId": "d11ce25b378027fcc27ed5838428de6b80f56e5b",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2461b03_a6ad4abd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4773309
+      },
+      "writtenOn": "2026-07-14T17:07:50Z",
+      "side": 1,
+      "message": "One note about caching the tricky bit but otherwise LGTM.",
+      "revId": "d11ce25b378027fcc27ed5838428de6b80f56e5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7179dd6_58d62c57",
+        "filename": "core/fxge/skrifa/src/main.rs",
+        "patchSetId": 10
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 4773309
+      },
+      "writtenOn": "2026-07-14T17:07:50Z",
+      "side": 1,
+      "message": "If this is going to be called often, I\u0027d recommend caching the result when constructing the font. This does a sequence of string comparisons and computes checksums on a few tables so it\u0027s not cheap.",
+      "fixSuggestions": [
+        {
+          "fixId": "7032e93a_b90db3ff",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "    is_tricky: bool,\n"
+            },
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "        let is_tricky \u003d outlines.require_interpreter();\n"
+            },
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "            is_tricky,\n"
+            },
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 320,
+                "startChar": 0,
+                "endLine": 321,
+                "endChar": 0
+              },
+              "replacement": "        sfnt.is_tricky\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d11ce25b378027fcc27ed5838428de6b80f56e5b",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
