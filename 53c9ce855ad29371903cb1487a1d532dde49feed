@@ -1,0 +1,59 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "089602c9_eaa02d4b",
+        "filename": "core/fxge/skrifa/src/main.rs",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 4773309
+      },
+      "writtenOn": "2026-07-14T17:37:26Z",
+      "side": 1,
+      "message": "FreeType ignores the CidCount operator and computes the glyph count for a bare CFF CID-keyed font using the max valid CID from the charset. We could do the same here with something like `let cid_count \u003d charset.iter().filter(|(gid, cid)| gid.to_u32() \u003c charstrings.len()).map(|(_, cid)| cid.to_u16()).max().unwrap_or(0) as u32 + 1;`",
+      "fixSuggestions": [
+        {
+          "fixId": "5f195aaf_48d7ab55",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 224,
+                "startChar": 0,
+                "endLine": 236,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 1,
+                "startChar": 0,
+                "endLine": 1,
+                "endChar": 0
+              },
+              "replacement": "        if cff.is_cid() {\n            if let Some(charset_ref) \u003d charset.as_ref() {\n                let num_charstrings \u003d cff.num_glyphs();\n                cid_count \u003d charset_ref\n                    .iter()\n                    .filter(|(gid, _)| gid.to_u32() \u003c num_charstrings)\n                    .map(|(_, sid)| sid.to_u16())\n                    .max()\n                    .map(|max_cid| max_cid as u32 + 1);\n            }\n        }\n"
+            },
+            {
+              "path": "core/fxge/skrifa/src/main.rs",
+              "range": {
+                "startLine": 255,
+                "startChar": 0,
+                "endLine": 256,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "53c9ce855ad29371903cb1487a1d532dde49feed",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
