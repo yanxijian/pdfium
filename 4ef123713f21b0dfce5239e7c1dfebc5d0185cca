@@ -18,6 +18,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d08e032e_579761f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-14T17:19:02Z",
+      "side": 1,
+      "message": "The number 52 (or 256 in the new version) is used for the number of possible colors (per component).\n\nNow, look at this below table\n```\nQuantized to 5 | In actual values (255)\n       0       |          0\n       1       |          5\n      ...      |         ...\n       51      |         255\n```\n\nIf you count the number of different values for quantized to 5, there are 51-0 \u003d 51 values. But you have to remember to add one as 0 is also included (hence 52).\n\nWhich is where 52 originates from, and why the new version uses 256 (255 - 0 + 1).\n\nFurther, It shouldnt really be multiplied by 5, it\u0027s just the number of states of the quantization, which is then carried forward in later steps (such as order calculation) to find he specific component - first the most significant quantized set, so R (out of 52 in the old version maybe), then G then B each out of 52.\n\nSimilarly it is also used in line 1058 for incrimenting the buffer index.\n\nOn second thought, `kColorMaxValue` should renamed then... Working on it to make it `kNumQuantizedLevels` to be more self documenting. Done.",
+      "parentUuid": "b3287680_2d0c85e2",
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5edfd008_b4045627",
@@ -113,6 +131,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc9dddd9_5631e1cc",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1022,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-14T17:19:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ff54a9b_ffddf762",
+      "range": {
+        "startLine": 1019,
+        "startChar": 0,
+        "endLine": 1022,
+        "endChar": 3
+      },
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bbccfa20_8abde853",
@@ -150,6 +192,30 @@
           ]
         }
       ],
+      "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9495537_a7f6c3d9",
+        "filename": "core/fpdfapi/page/cpdf_colorspace.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 1032,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-14T17:19:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bbccfa20_8abde853",
+      "range": {
+        "startLine": 1032,
+        "startChar": 16,
+        "endLine": 1032,
+        "endChar": 43
+      },
       "revId": "4ef123713f21b0dfce5239e7c1dfebc5d0185cca",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
