@@ -25,10 +25,10 @@
 #include "core/fxcrt/containers/contains.h"
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/fx_extension.h"
-#include "core/fxcrt/fx_random.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/fx_string.h"
 #include "core/fxcrt/numerics/safe_conversions.h"
+#include "core/fxcrt/rand_util.h"
 #include "core/fxcrt/span_util.h"
 #include "core/fxcrt/widetext_buffer.h"
 #include "fxjs/fxv8.h"
@@ -520,8 +520,7 @@ bool IsPartOfNumberW(wchar_t ch) {
 
 ByteString GUIDString(bool bSeparator) {
   std::array<uint8_t, 16> data;
-  FX_Random::Fill(
-      fxcrt::reinterpret_span<uint32_t, uint8_t>(pdfium::span(data)));
+  pdfium::RandBytes(data);
   data[6] = (data[6] & 0x0F) | 0x40;
 
   ByteString bsGUID;
