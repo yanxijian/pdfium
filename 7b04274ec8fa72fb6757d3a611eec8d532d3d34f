@@ -34,6 +34,24 @@
       "parentUuid": "bbfb8bb9_f79e242e",
       "revId": "7b04274ec8fa72fb6757d3a611eec8d532d3d34f",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "993bd9ca_68d50955",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5045
+      },
+      "writtenOn": "2026-07-14T20:57:59Z",
+      "side": 1,
+      "message": "In general, it is not helpful to have code checked in that is never called, since it is effectively dead code. If you know you are not going to use this code, then I would suggest abandoning this CL. If you change your remind, you can always restore this CL.",
+      "parentUuid": "a19a6dcc_7520b902",
+      "revId": "7b04274ec8fa72fb6757d3a611eec8d532d3d34f",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
   ]
 }
