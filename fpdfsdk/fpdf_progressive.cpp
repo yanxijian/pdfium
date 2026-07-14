@@ -18,6 +18,7 @@
 #include "fpdfsdk/cpdfsdk_helpers.h"
 #include "fpdfsdk/cpdfsdk_pauseadapter.h"
 #include "fpdfsdk/cpdfsdk_renderpage.h"
+#include "fpdfsdk/fpdf_progressive.h"
 #include "public/fpdfview.h"
 
 // These checks are here because core/ and public/ cannot depend on each other.
@@ -39,17 +40,18 @@ int ToFPDFStatus(CPDF_ProgressiveRenderer::Status status) {
 
 }  // namespace
 
-FPDF_EXPORT int FPDF_CALLCONV
-FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
-                                           FPDF_PAGE page,
-                                           int start_x,
-                                           int start_y,
-                                           int size_x,
-                                           int size_y,
-                                           int rotate,
-                                           int flags,
-                                           const FPDF_COLORSCHEME* color_scheme,
-                                           IFSDK_PAUSE* pause) {
+int StartProgressiveRenderWithDeviceFactory(
+    FPDF_BITMAP bitmap,
+    FPDF_PAGE page,
+    int start_x,
+    int start_y,
+    int size_x,
+    int size_y,
+    int rotate,
+    int flags,
+    const FPDF_COLORSCHEME* color_scheme,
+    IFSDK_PAUSE* pause,
+    ProgressiveRenderDeviceFactory device_factory) {
   if (!pause || pause->version != 1) {
     return FPDF_RENDER_FAILED;
   }
@@ -67,7 +69,6 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
 
   auto owned_context = std::make_unique<CPDF_PageRenderContext>();
   CPDF_PageRenderContext* context = owned_context.get();
-  pPage->SetRenderContext(std::move(owned_context));
   context->return_premultiplied_ = pBitmap->IsPremultiplied();
 
 #if defined(PDF_USE_SKIA)
@@ -76,8 +77,7 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
   }
 #endif
 
-  auto device = CFX_RenderDevice::CreateForBitmap(
-      pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
+  auto device = device_factory(pBitmap, !!(flags & FPDF_REVERSE_BYTE_ORDER));
   if (!device) {
 #if defined(PDF_USE_SKIA)
     if (CFX_GEModule::Get()->UseSkiaRenderer() &&
@@ -105,6 +105,8 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
     return FPDF_RENDER_FAILED;
   }
 
+  pPage->SetRenderContext(std::move(owned_context));
+
   int status = ToFPDFStatus(context->renderer_->GetStatus());
   if (status == FPDF_RENDER_TOBECONTINUED) {
     // Note that `pBitmap` is always pre-multiplied here, even if a straight
@@ -122,6 +124,22 @@ FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
   }
 #endif  // defined(PDF_USE_SKIA)
   return status;
+}
+
+FPDF_EXPORT int FPDF_CALLCONV
+FPDF_RenderPageBitmapWithColorScheme_Start(FPDF_BITMAP bitmap,
+                                           FPDF_PAGE page,
+                                           int start_x,
+                                           int start_y,
+                                           int size_x,
+                                           int size_y,
+                                           int rotate,
+                                           int flags,
+                                           const FPDF_COLORSCHEME* color_scheme,
+                                           IFSDK_PAUSE* pause) {
+  return StartProgressiveRenderWithDeviceFactory(
+      bitmap, page, start_x, start_y, size_x, size_y, rotate, flags,
+      color_scheme, pause, &CFX_RenderDevice::CreateForBitmap);
 }
 
 FPDF_EXPORT int FPDF_CALLCONV FPDF_RenderPageBitmap_Start(FPDF_BITMAP bitmap,
