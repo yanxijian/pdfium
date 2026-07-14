@@ -96,7 +96,14 @@ CFX_BidiChar::Direction CFX_BidiString::OverallDirection() const {
 
 void CFX_BidiString::SetOverallDirectionRight() {
   if (overall_direction_ != CFX_BidiChar::Direction::kRight) {
-    std::reverse(order_.begin(), order_.end());
+    std::ranges::reverse(order_);
     overall_direction_ = CFX_BidiChar::Direction::kRight;
+  }
+}
+
+void CFX_BidiString::SetOverallDirectionLeft() {
+  if (overall_direction_ != CFX_BidiChar::Direction::kLeft) {
+    std::ranges::reverse(order_);
+    overall_direction_ = CFX_BidiChar::Direction::kLeft;
   }
 }
