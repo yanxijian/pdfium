@@ -489,3 +489,5 @@ TEST(fxcrt, BidiStringReverse) {
   ++it;
   EXPECT_EQ(it, bidi.end());
 }
+
+

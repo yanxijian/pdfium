@@ -6,10 +6,15 @@
 
 #include "core/fxcrt/fx_bidi.h"
 
+#include <unicode/ubidi.h>
+
 #include <algorithm>
+#include <limits>
 
 #include "core/fxcrt/check_op.h"
+#include "core/fxcrt/fx_string.h"
 #include "core/fxcrt/fx_unicode.h"
+#include "core/fxcrt/numerics/safe_math.h"
 
 CFX_BidiChar::CFX_BidiChar()
     : current_segment_({0, 0, Direction::kNeutral}),
@@ -100,3 +105,5 @@ void CFX_BidiString::SetOverallDirectionRight() {
     overall_direction_ = CFX_BidiChar::Direction::kRight;
   }
 }
+
+

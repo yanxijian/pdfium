@@ -9,6 +9,7 @@
 
 #include <stddef.h>
 
+#include <memory>
 #include <vector>
 
 #include "core/fxcrt/widestring.h"
