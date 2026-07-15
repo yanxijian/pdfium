@@ -54,6 +54,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04e2826b_a20e2de5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T06:21:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2747173_a8441304",
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e9ff0936_bd771ebc",
@@ -162,6 +180,30 @@
       "side": 1,
       "message": "Why not return early directly, instead of depending on ICU functions to detect an error and fail?",
       "parentUuid": "82b397a2_5eef8c0c",
+      "range": {
+        "startLine": 167,
+        "startChar": 51,
+        "endLine": 167,
+        "endChar": 75
+      },
+      "revId": "90dadadfb4e238bac192785e1143a7e5345aabe7",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a09408d0_1f23547c",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T06:21:21Z",
+      "side": 1,
+      "message": "Done, verify the addition with pdfium::CheckAdd and return early if an overflow is detected.",
+      "parentUuid": "0c9fab46_c2a28fca",
       "range": {
         "startLine": 167,
         "startChar": 51,

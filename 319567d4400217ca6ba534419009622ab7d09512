@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bec6cbbe_c528b1bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T06:21:21Z",
+      "side": 1,
+      "message": "merged cl\u0027s, now separate file for later deletion of cfx_bidistring and cfx_bidichar, modified description",
+      "revId": "319567d4400217ca6ba534419009622ab7d09512",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    }
+  ]
+}
