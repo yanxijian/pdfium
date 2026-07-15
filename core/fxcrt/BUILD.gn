@@ -75,8 +75,6 @@ source_set("fxcrt") {
     "fx_memory_wrappers.h",
     "fx_number.cpp",
     "fx_number.h",
-    "fx_random.cpp",
-    "fx_random.h",
     "fx_safe_types.h",
     "fx_stream.cpp",
     "fx_stream.h",
@@ -108,6 +106,7 @@ source_set("fxcrt") {
     "observed_ptr.h",
     "pauseindicator_iface.h",
     "ptr_util.h",
+    "rand_util.h",
     "raw_span.h",
     "retain_ptr.h",
     "scoped_set_insertion.h",
@@ -169,6 +168,7 @@ source_set("fxcrt") {
       "fx_folder_posix.cpp",
       "mapped_data_bytes.cpp",
       "mapped_data_bytes.h",
+      "rand_util_posix.cpp",
     ]
   }
   if (is_win) {
@@ -177,6 +177,7 @@ source_set("fxcrt") {
       "cfx_fileaccess_windows.h",
       "code_point_view.cpp",
       "fx_folder_windows.cpp",
+      "rand_util_win.cpp",
       "win/scoped_select_object.h",
       "win/win_util.cc",
       "win/win_util.h",
@@ -237,7 +238,6 @@ pdfium_unittest_source_set("unittests") {
     "fx_memory_unittest.cpp",
     "fx_memory_wrappers_unittest.cpp",
     "fx_number_unittest.cpp",
-    "fx_random_unittest.cpp",
     "fx_safe_types_unittest.cpp",
     "fx_string_unittest.cpp",
     "fx_string_wrappers_unittest.cpp",
@@ -246,6 +246,7 @@ pdfium_unittest_source_set("unittests") {
     "maybe_owned_unittest.cpp",
     "observed_ptr_unittest.cpp",
     "pdfium_span_unittest.cpp",
+    "rand_util_unittest.cpp",
     "retain_ptr_unittest.cpp",
     "scoped_set_insertion_unittest.cpp",
     "shared_copy_on_write_unittest.cpp",

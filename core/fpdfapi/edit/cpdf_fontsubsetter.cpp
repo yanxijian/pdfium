@@ -34,8 +34,8 @@
 #include "core/fxcrt/compiler_specific.h"
 #include "core/fxcrt/data_vector.h"
 #include "core/fxcrt/fx_extension.h"
-#include "core/fxcrt/fx_random.h"
 #include "core/fxcrt/fx_string.h"
+#include "core/fxcrt/rand_util.h"
 #include "core/fxcrt/retain_ptr.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/widestring.h"
@@ -110,7 +110,7 @@ ByteString GenerateFontSubsetName(ByteString base_font_name) {
   subset_font_name.Reserve(kSubsettedFontPrefixLength +
                            base_font_name.GetLength() + 1);
   std::array<uint32_t, kSubsettedFontPrefixLength> random_nums;
-  FX_Random::Fill(random_nums);
+  pdfium::RandBytes(pdfium::as_writable_byte_span(random_nums));
   for (uint32_t num : random_nums) {
     subset_font_name += 'A' + (num % 26);
   }

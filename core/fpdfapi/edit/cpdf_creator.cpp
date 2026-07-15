@@ -31,9 +31,9 @@
 #include "core/fxcrt/containers/contains.h"
 #include "core/fxcrt/fixed_size_data_vector.h"
 #include "core/fxcrt/fx_extension.h"
-#include "core/fxcrt/fx_random.h"
 #include "core/fxcrt/fx_safe_types.h"
 #include "core/fxcrt/mask.h"
+#include "core/fxcrt/rand_util.h"
 #include "core/fxcrt/raw_span.h"
 #include "core/fxcrt/span_util.h"
 #include "core/fxcrt/stl_util.h"
@@ -644,7 +644,7 @@ void CPDF_Creator::InitID() {
     id_array_->Append(pID1->Clone());
   } else {
     std::array<uint32_t, 4> file_id;
-    FX_Random::Fill(file_id);
+    pdfium::RandBytes(pdfium::as_writable_byte_span(file_id));
     id_array_->AppendNew<CPDF_String>(pdfium::as_byte_span(file_id),
                                       CPDF_String::DataType::kIsHex);
   }
@@ -656,7 +656,7 @@ void CPDF_Creator::InitID() {
       return;
     }
     std::array<uint32_t, 4> file_id;
-    FX_Random::Fill(file_id);
+    pdfium::RandBytes(pdfium::as_writable_byte_span(file_id));
     id_array_->AppendNew<CPDF_String>(pdfium::as_byte_span(file_id),
                                       CPDF_String::DataType::kIsHex);
     return;
