@@ -24,6 +24,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcdb040f_525939ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-15T02:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3b9a673_7087f50a",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9f184e4_8e4d5555",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-07-14T20:36:42Z",
       "side": 1,
       "message": "If having an empty `path_list_` really a failure?",
+      "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8112106d_702c42a5",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-15T02:34:54Z",
+      "side": 1,
+      "message": "It shouldn\u0027t be a failure, edited by having the return statement also give true if the path list is empty.",
+      "parentUuid": "d9f184e4_8e4d5555",
       "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
@@ -64,6 +106,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8916ede2_bf7b3d90",
+        "filename": "core/fxge/cfx_folderfontinfo.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-15T02:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "804d0cb1_1e94121a",
+      "range": {
+        "startLine": 142,
+        "startChar": 7,
+        "endLine": 142,
+        "endChar": 13
+      },
+      "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bc03bc9_85cc711c",
@@ -77,6 +143,24 @@
       "writtenOn": "2026-07-14T20:36:42Z",
       "side": 1,
       "message": "This means if EnumFontList() fails, then LoadInstalledFonts() will keep trying on the next call, but that\u0027s not what LoadInstalledFonts() should do.",
+      "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e70d41a1_1e108b31",
+        "filename": "core/fxge/cfx_fontmapper.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 4258968
+      },
+      "writtenOn": "2026-07-15T02:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3bc03bc9_85cc711c",
       "revId": "61b65c651dc2034624c506c0688e9436071a6d60",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     }
