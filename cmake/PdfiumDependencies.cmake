@@ -1,0 +1,95 @@
+# Resolve third-party dependencies for pdfium CMake MVP.
+# Codecs (AGG/lcms/openjpeg) are built from in-tree sources.
+# Infrastructure packages use find_package; Abseil/fast_float may FetchContent.
+
+include(FetchContent)
+
+find_package(ZLIB REQUIRED)
+find_package(JPEG REQUIRED)
+find_package(Freetype REQUIRED)
+find_package(ICU COMPONENTS uc data REQUIRED)
+find_package(harfbuzz CONFIG QUIET)
+if(NOT harfbuzz_FOUND)
+  find_package(PkgConfig QUIET)
+  if(PkgConfig_FOUND)
+    pkg_check_modules(HARFBUZZ REQUIRED IMPORTED_TARGET harfbuzz)
+  endif()
+endif()
+
+# Prefer CONFIG packages from vcpkg; fall back to FetchContent for Abseil.
+find_package(absl CONFIG QUIET)
+if(NOT absl_FOUND)
+  message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp")
+  FetchContent_Declare(
+    abseil
+    GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
+    GIT_TAG 20250127.0
+    GIT_SHALLOW TRUE
+  )
+  set(ABSL_PROPAGATE_CXX_STD ON CACHE BOOL "" FORCE)
+  set(ABSL_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+  set(ABSL_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
+  FetchContent_MakeAvailable(abseil)
+endif()
+
+find_package(FastFloat CONFIG QUIET)
+if(NOT FastFloat_FOUND)
+  find_path(FASTFLOAT_INCLUDE_DIR
+    NAMES fast_float/fast_float.h
+    PATH_SUFFIXES include
+  )
+endif()
+if(NOT FastFloat_FOUND AND NOT FASTFLOAT_INCLUDE_DIR)
+  message(STATUS "fast_float not found; FetchContent fastfloat/fast_float")
+  FetchContent_Declare(
+    fast_float
+    GIT_REPOSITORY https://github.com/fastfloat/fast_float.git
+    GIT_TAG v8.0.2
+    GIT_SHALLOW TRUE
+  )
+  set(FASTFLOAT_TEST OFF CACHE BOOL "" FORCE)
+  FetchContent_MakeAvailable(fast_float)
+  set(FASTFLOAT_INCLUDE_DIR "${fast_float_SOURCE_DIR}/include")
+endif()
+
+# Collect imported targets / include dirs into PDFIUM_EXTERNAL_LIBS.
+set(PDFIUM_EXTERNAL_LIBS
+  ZLIB::ZLIB
+  JPEG::JPEG
+  Freetype::Freetype
+  ICU::uc
+)
+
+if(TARGET ICU::data)
+  list(APPEND PDFIUM_EXTERNAL_LIBS ICU::data)
+endif()
+
+if(TARGET harfbuzz::harfbuzz)
+  list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz::harfbuzz)
+elseif(TARGET PkgConfig::HARFBUZZ)
+  list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ)
+else()
+  message(FATAL_ERROR
+    "HarfBuzz not found. Install harfbuzz (e.g. vcpkg install harfbuzz) "
+    "or ensure pkg-config can find it.")
+endif()
+
+if(TARGET absl::flat_hash_set)
+  list(APPEND PDFIUM_EXTERNAL_LIBS
+    absl::flat_hash_set
+    absl::inlined_vector
+    absl::cleanup
+  )
+elseif(TARGET absl::absl)
+  list(APPEND PDFIUM_EXTERNAL_LIBS absl::absl)
+else()
+  # FetchContent abseil exposes fine-grained targets.
+  list(APPEND PDFIUM_EXTERNAL_LIBS
+    absl::flat_hash_set
+    absl::inlined_vector
+    absl::cleanup
+  )
+endif()
+
+set(PDFIUM_SHIM_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/include_shim")
+set(PDFIUM_FASTFLOAT_INCLUDE_DIR "${FASTFLOAT_INCLUDE_DIR}")
