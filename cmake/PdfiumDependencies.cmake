@@ -17,9 +17,11 @@ if(NOT harfbuzz_FOUND)
 endif()
 
 # Prefer CONFIG packages from vcpkg; fall back to FetchContent for Abseil.
-find_package(absl CONFIG QUIET)
-if(NOT absl_FOUND)
-  message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp")
+# When V8 is enabled with Chromium libc++, force FetchContent Abseil so it is
+# built with the same C++ ABI as pdfium/V8 (vcpkg Abseil is MSVC STL).
+if(PDFIUM_ENABLE_V8)
+  set(CMAKE_DISABLE_FIND_PACKAGE_absl TRUE)
+  message(STATUS "PDFIUM_ENABLE_V8: FetchContent abseil-cpp (match libc++ ABI)")
   FetchContent_Declare(
     abseil
     GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
@@ -30,6 +32,21 @@ if(NOT absl_FOUND)
   set(ABSL_BUILD_TESTING OFF CACHE BOOL "" FORCE)
   set(ABSL_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
   FetchContent_MakeAvailable(abseil)
+else()
+  find_package(absl CONFIG QUIET)
+  if(NOT absl_FOUND)
+    message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp")
+    FetchContent_Declare(
+      abseil
+      GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
+      GIT_TAG 20250127.0
+      GIT_SHALLOW TRUE
+    )
+    set(ABSL_PROPAGATE_CXX_STD ON CACHE BOOL "" FORCE)
+    set(ABSL_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+    set(ABSL_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(abseil)
+  endif()
 endif()
 
 find_package(FastFloat CONFIG QUIET)
@@ -66,6 +83,9 @@ endif()
 
 if(TARGET harfbuzz::harfbuzz)
   list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz::harfbuzz)
+  if(TARGET harfbuzz::harfbuzz-subset)
+    list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz::harfbuzz-subset)
+  endif()
 elseif(TARGET PkgConfig::HARFBUZZ)
   list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ)
 else()
@@ -93,3 +113,8 @@ endif()
 
 set(PDFIUM_SHIM_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/include_shim")
 set(PDFIUM_FASTFLOAT_INCLUDE_DIR "${FASTFLOAT_INCLUDE_DIR}")
+
+if(PDFIUM_ENABLE_V8)
+  include("${CMAKE_CURRENT_LIST_DIR}/FindPdfiumV8.cmake")
+  list(APPEND PDFIUM_EXTERNAL_LIBS pdfium::v8)
+endif()

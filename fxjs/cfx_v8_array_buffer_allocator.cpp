@@ -41,3 +41,11 @@ void CFX_V8ArrayBufferAllocator::Free(void* data, size_t length) {
     wrapped_->Free(data, length);
   }
 }
+
+size_t CFX_V8ArrayBufferAllocator::MaxAllocationSize() const {
+  return v8::ArrayBuffer::kMaxByteLength;
+}
+
+v8::PageAllocator* CFX_V8ArrayBufferAllocator::GetPageAllocator() {
+  return nullptr;
+}

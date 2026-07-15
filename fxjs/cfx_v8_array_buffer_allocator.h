@@ -25,6 +25,10 @@ class CFX_V8ArrayBufferAllocator final : public v8::ArrayBuffer::Allocator {
   void* Allocate(size_t length) override;
   void* AllocateUninitialized(size_t length) override;
   void Free(void* data, size_t length) override;
+  // Provide overrides: with USING_V8_SHARED, dllimport class drops inline
+  // virtual bodies and the linker expects local vtable slots.
+  size_t MaxAllocationSize() const override;
+  v8::PageAllocator* GetPageAllocator() override;
 
  private:
   std::unique_ptr<v8::ArrayBuffer::Allocator> wrapped_;

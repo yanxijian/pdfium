@@ -71,7 +71,8 @@ int main(int argc, const char* argv[]) {
   FPDF_DestroyLibrary();
 
   isolate->Dispose();
-  v8::V8::ShutdownPlatform();
+  v8::V8::Dispose();
+  v8::V8::DisposePlatform();
   delete platform;
 
   return 0;

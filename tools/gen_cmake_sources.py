@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright 2026 The PDFium Authors
 # Helper: emit cmake/PdfiumSources.cmake from known MVP source sets.
-# Regenerates lists for !v8 !xfa AGG system-freetype builds.
+# Regenerates lists for AGG / system-freetype builds (optional V8; no XFA).
 
 from pathlib import Path
 
@@ -28,7 +28,9 @@ def emit(name, files, comment=""):
 
 def main():
     sections = []
-    sections.append("# Generated for CMake MVP (no V8 / no XFA / AGG). Do not hand-edit.")
+    sections.append(
+        "# Generated for CMake MVP (AGG; optional V8; no XFA). Do not hand-edit."
+    )
     sections.append("# Regenerate: python tools/gen_cmake_sources.py")
     sections.append("")
 
@@ -379,9 +381,51 @@ def main():
                 "fxjs/cjs_runtimestub.cpp",
                 "fxjs/ijs_runtime.cpp",
             ],
-            "fxjs stubs",
+            "fxjs stubs (always built)",
         )
     )
+    # Matches fxjs/BUILD.gn sources += when pdf_enable_v8 (no XFA / no gc).
+    fxjs_v8 = [
+        "fxjs/cfx_globaldata.cpp",
+        "fxjs/cfx_isolate_wrapper.cpp",
+        "fxjs/cfx_keyvalue.cpp",
+        "fxjs/cfx_v8_array_buffer_allocator.cpp",
+        "fxjs/cfxjs_engine.cpp",
+        "fxjs/cjs_annot.cpp",
+        "fxjs/cjs_app.cpp",
+        "fxjs/cjs_border.cpp",
+        "fxjs/cjs_color.cpp",
+        "fxjs/cjs_console.cpp",
+        "fxjs/cjs_delaydata.cpp",
+        "fxjs/cjs_display.cpp",
+        "fxjs/cjs_document.cpp",
+        "fxjs/cjs_event.cpp",
+        "fxjs/cjs_event_context.cpp",
+        "fxjs/cjs_field.cpp",
+        "fxjs/cjs_font.cpp",
+        "fxjs/cjs_global.cpp",
+        "fxjs/cjs_globalarrays.cpp",
+        "fxjs/cjs_globalconsts.cpp",
+        "fxjs/cjs_highlight.cpp",
+        "fxjs/cjs_icon.cpp",
+        "fxjs/cjs_object.cpp",
+        "fxjs/cjs_position.cpp",
+        "fxjs/cjs_publicmethods.cpp",
+        "fxjs/cjs_result.cpp",
+        "fxjs/cjs_runtime.cpp",
+        "fxjs/cjs_scalehow.cpp",
+        "fxjs/cjs_scalewhen.cpp",
+        "fxjs/cjs_style.cpp",
+        "fxjs/cjs_timerobj.cpp",
+        "fxjs/cjs_util.cpp",
+        "fxjs/cjs_zoomtype.cpp",
+        "fxjs/fx_date_helpers.cpp",
+        "fxjs/fxv8.cpp",
+        "fxjs/global_timer.cpp",
+        "fxjs/js_define.cpp",
+        "fxjs/js_resources.cpp",
+    ]
+    sections.append(emit("PDFIUM_FXJS_V8_SOURCES", fxjs_v8, "fxjs V8 (no XFA)"))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(sections) + "\n", encoding="utf-8")

@@ -1,4 +1,4 @@
-# Generated for CMake MVP (no V8 / no XFA / AGG). Do not hand-edit.
+# Generated for CMake MVP (AGG; optional V8; no XFA). Do not hand-edit.
 # Regenerate: python tools/gen_cmake_sources.py
 
 # third_party fx_agg
@@ -568,10 +568,52 @@ set(PDFIUM_PWL_SOURCES
   fpdfsdk/pwl/cpwl_wnd.cpp
 )
 
-# fxjs stubs
+# fxjs stubs (always built)
 set(PDFIUM_FXJS_STUB_SOURCES
   fxjs/cjs_event_context_stub.cpp
   fxjs/cjs_runtimestub.cpp
   fxjs/ijs_runtime.cpp
+)
+
+# fxjs V8 (no XFA)
+set(PDFIUM_FXJS_V8_SOURCES
+  fxjs/cfx_globaldata.cpp
+  fxjs/cfx_isolate_wrapper.cpp
+  fxjs/cfx_keyvalue.cpp
+  fxjs/cfx_v8_array_buffer_allocator.cpp
+  fxjs/cfxjs_engine.cpp
+  fxjs/cjs_annot.cpp
+  fxjs/cjs_app.cpp
+  fxjs/cjs_border.cpp
+  fxjs/cjs_color.cpp
+  fxjs/cjs_console.cpp
+  fxjs/cjs_delaydata.cpp
+  fxjs/cjs_display.cpp
+  fxjs/cjs_document.cpp
+  fxjs/cjs_event.cpp
+  fxjs/cjs_event_context.cpp
+  fxjs/cjs_field.cpp
+  fxjs/cjs_font.cpp
+  fxjs/cjs_global.cpp
+  fxjs/cjs_globalarrays.cpp
+  fxjs/cjs_globalconsts.cpp
+  fxjs/cjs_highlight.cpp
+  fxjs/cjs_icon.cpp
+  fxjs/cjs_object.cpp
+  fxjs/cjs_position.cpp
+  fxjs/cjs_publicmethods.cpp
+  fxjs/cjs_result.cpp
+  fxjs/cjs_runtime.cpp
+  fxjs/cjs_scalehow.cpp
+  fxjs/cjs_scalewhen.cpp
+  fxjs/cjs_style.cpp
+  fxjs/cjs_timerobj.cpp
+  fxjs/cjs_util.cpp
+  fxjs/cjs_zoomtype.cpp
+  fxjs/fx_date_helpers.cpp
+  fxjs/fxv8.cpp
+  fxjs/global_timer.cpp
+  fxjs/js_define.cpp
+  fxjs/js_resources.cpp
 )
 

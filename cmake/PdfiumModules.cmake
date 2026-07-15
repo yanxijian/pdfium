@@ -68,7 +68,12 @@ pdfium_add_object(pdfium_fpdftext SOURCES ${PDFIUM_FPDFTEXT_SOURCES})
 pdfium_add_object(pdfium_fpdfsdk SOURCES ${PDFIUM_FPDFSDK_SOURCES})
 pdfium_add_object(pdfium_formfiller SOURCES ${PDFIUM_FORMFILLER_SOURCES})
 pdfium_add_object(pdfium_pwl SOURCES ${PDFIUM_PWL_SOURCES})
-pdfium_add_object(pdfium_fxjs SOURCES ${PDFIUM_FXJS_STUB_SOURCES})
+
+set(_fxjs_sources ${PDFIUM_FXJS_STUB_SOURCES})
+if(PDFIUM_ENABLE_V8)
+  list(APPEND _fxjs_sources ${PDFIUM_FXJS_V8_SOURCES})
+endif()
+pdfium_add_object(pdfium_fxjs SOURCES ${_fxjs_sources})
 
 set(PDFIUM_MODULE_OBJECTS
   $<TARGET_OBJECTS:pdfium_fxcrt>

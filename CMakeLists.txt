@@ -16,11 +16,19 @@ add_subdirectory(third_party)
 # Core / fpdfsdk OBJECT libs
 include("${PDFIUM_CMAKE_DIR}/PdfiumModules.cmake")
 
-add_library(pdfium STATIC
-  ${PDFIUM_THIRD_PARTY_OBJECTS}
-  ${PDFIUM_MODULE_OBJECTS}
-)
+if(PDFIUM_BUILD_SHARED)
+  add_library(pdfium SHARED
+    ${PDFIUM_THIRD_PARTY_OBJECTS}
+    ${PDFIUM_MODULE_OBJECTS}
+  )
+else()
+  add_library(pdfium STATIC
+    ${PDFIUM_THIRD_PARTY_OBJECTS}
+    ${PDFIUM_MODULE_OBJECTS}
+  )
+endif()
 add_library(pdfium::pdfium ALIAS pdfium)
+set_target_properties(pdfium PROPERTIES OUTPUT_NAME pdfium)
 
 target_include_directories(pdfium
   PUBLIC
@@ -39,7 +47,20 @@ target_compile_definitions(pdfium
   PRIVATE ${PDFIUM_PRIVATE_DEFINES}
 )
 
-target_link_libraries(pdfium PUBLIC ${PDFIUM_EXTERNAL_LIBS})
+# Separate exportable deps from FetchContent Abseil / V8 (runtime next to exe).
+set(_pdfium_public_libs)
+set(_pdfium_private_libs)
+foreach(_lib IN LISTS PDFIUM_EXTERNAL_LIBS)
+  if(_lib MATCHES "^absl::" OR _lib STREQUAL "pdfium::v8")
+    list(APPEND _pdfium_private_libs ${_lib})
+  else()
+    list(APPEND _pdfium_public_libs ${_lib})
+  endif()
+endforeach()
+target_link_libraries(pdfium PUBLIC ${_pdfium_public_libs})
+if(_pdfium_private_libs)
+  target_link_libraries(pdfium PRIVATE ${_pdfium_private_libs})
+endif()
 pdfium_apply_platform(pdfium)
 
 # Ensure OBJECT libs build before linking the archive on multi-config generators.
@@ -52,13 +73,22 @@ if(PDFIUM_BUILD_SAMPLES)
 endif()
 
 # ---- Install / export -------------------------------------------------------
-install(TARGETS pdfium
-  EXPORT pdfiumTargets
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-)
+if(PDFIUM_ENABLE_V8)
+  install(TARGETS pdfium
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  )
+else()
+  install(TARGETS pdfium
+    EXPORT pdfiumTargets
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  )
+endif()
 
 install(DIRECTORY public/
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/pdfium/public
@@ -66,27 +96,30 @@ install(DIRECTORY public/
     PATTERN "*.h"
 )
 
-install(EXPORT pdfiumTargets
-  FILE pdfiumTargets.cmake
-  NAMESPACE pdfium::
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
-)
+# FetchContent Abseil (used with V8/libc++) cannot participate in install(EXPORT).
+if(NOT PDFIUM_ENABLE_V8)
+  install(EXPORT pdfiumTargets
+    FILE pdfiumTargets.cmake
+    NAMESPACE pdfium::
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
+  )
 
-include(CMakePackageConfigHelpers)
-configure_package_config_file(
-  "${PDFIUM_CMAKE_DIR}/pdfiumConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfig.cmake"
-  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
-)
+  include(CMakePackageConfigHelpers)
+  configure_package_config_file(
+    "${PDFIUM_CMAKE_DIR}/pdfiumConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfig.cmake"
+    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
+  )
 
-write_basic_package_version_file(
-  "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfigVersion.cmake"
-  VERSION ${PROJECT_VERSION}
-  COMPATIBILITY SameMajorVersion
-)
+  write_basic_package_version_file(
+    "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfigVersion.cmake"
+    VERSION ${PROJECT_VERSION}
+    COMPATIBILITY SameMajorVersion
+  )
 
-install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfigVersion.cmake"
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
-)
+  install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/pdfiumConfigVersion.cmake"
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/pdfium
+  )
+endif()
