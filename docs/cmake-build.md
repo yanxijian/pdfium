@@ -19,17 +19,21 @@ GN / `DEPS` / `BUILD.gn` are unchanged.
 
 ### Windows (vcpkg + Clang-cl)
 
+Prerequisites: Visual Studio C++ tools, LLVM (`clang-cl` on `PATH`), CMake, Ninja, and `VCPKG_ROOT` set to a vcpkg checkout.
+
 ```bat
-vcpkg install zlib libjpeg-turbo freetype icu harfbuzz abseil
-call "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\Build\vcvars64.bat"
-set PATH=C:\Program Files\LLVM\bin;%PATH%
+vcpkg install zlib libjpeg-turbo freetype icu harfbuzz abseil --triplet x64-windows
+rem Open a "x64 Native Tools" / Developer Command Prompt, or run vcvars64.bat from your VS install
 cmake -S . -B out/cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ^
   -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl ^
-  -DCMAKE_TOOLCHAIN_FILE=%VCPKG_ROOT%/scripts/buildsystems/vcpkg.cmake
+  -DCMAKE_TOOLCHAIN_FILE=%VCPKG_ROOT%/scripts/buildsystems/vcpkg.cmake ^
+  -DVCPKG_TARGET_TRIPLET=x64-windows
 cmake --build out/cmake --target pdfium simple_no_v8
 ```
 
 Windows **requires Clang-cl** (upstream PDFium sources use GCC/Clang builtins and inline asm). Stock MSVC `cl.exe` is not supported.
+
+If you use the [pdfium_all](https://github.com/yanxijian/pdfium_all) meta-repo, prefer its `scripts\bootstrap.ps1` / `scripts\build.ps1` (they discover VS via `vswhere` and do not hardcode install paths).
 
 ### Linux
 
