@@ -24,8 +24,8 @@
 #include "core/fxcrt/check.h"
 #include "core/fxcrt/check_op.h"
 #include "core/fxcrt/data_vector.h"
-#include "core/fxcrt/fx_random.h"
 #include "core/fxcrt/notreached.h"
+#include "core/fxcrt/rand_util.h"
 #include "core/fxcrt/span.h"
 #include "core/fxcrt/span_util.h"
 #include "core/fxcrt/stl_util.h"
@@ -586,11 +586,11 @@ void CPDF_SecurityHandler::OnCreate(CPDF_Dictionary* pEncryptDict,
   }
 
   if (revision_ >= 5) {
-    uint32_t random[4];
-    FX_Random::Fill(random);
+    uint8_t random[16];
+    pdfium::RandBytes(random);
     CryptSha2Context sha;
     CryptSha256Start(&sha);
-    CryptSha256Update(&sha, pdfium::as_byte_span(random));
+    CryptSha256Update(&sha, random);
     CryptSha256Finish(&sha, encrypt_key_);
     AES256_SetPassword(pEncryptDict, password);
     AES256_SetPerms(pEncryptDict);
@@ -699,8 +699,7 @@ void CPDF_SecurityHandler::AES256_SetPerms(CPDF_Dictionary* pEncryptDict) {
 
   // In ISO 32000 Supplement for ExtensionLevel 3, Algorithm 3.10 says bytes 12
   // to 15 should be random data.
-  FX_Random::Fill(
-      fxcrt::reinterpret_span<uint32_t>(pdfium::span(buf).subspan<12, 4>()));
+  pdfium::RandBytes(pdfium::span(buf).subspan<12, 4>());
 
   CRYPT_aes_context aes = {};
   CRYPT_AESSetKey(&aes, encrypt_key_);

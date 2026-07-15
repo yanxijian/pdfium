@@ -7,6 +7,10 @@
 
 #include "build/build_config.h"
 
+#if defined(MEMORY_SANITIZER)
+#include <sanitizer/msan_interface.h>
+#endif
+
 // A wrapper around `__has_cpp_attribute`, in case this is seen by
 // a C (not C++) compiler, say.
 #if defined(__has_cpp_attribute)
@@ -195,6 +199,12 @@
 #define ENABLE_IF_ATTR(cond, msg) __attribute__((enable_if(cond, msg)))
 #else
 #define ENABLE_IF_ATTR(cond, msg)
+#endif
+
+#if defined(MEMORY_SANITIZER)
+#define MSAN_UNPOISON(p, size) __msan_unpoison(p, size)
+#else
+#define MSAN_UNPOISON(p, size)
 #endif
 
 #endif  // CORE_FXCRT_COMPILER_SPECIFIC_H_
