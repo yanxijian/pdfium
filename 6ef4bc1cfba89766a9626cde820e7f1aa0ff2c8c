@@ -72,6 +72,30 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3cacf16_cc4647e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T05:31:25Z",
+      "side": 1,
+      "message": "GetVisualRunsForLine() will be the only method in the class, will merge the two CLs. Will append caller and mention in description.",
+      "parentUuid": "65a4766f_20d09f04",
+      "range": {
+        "startLine": 13,
+        "startChar": 58,
+        "endLine": 14,
+        "endChar": 18
+      },
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e4ee6332_8097d229",
@@ -195,6 +219,24 @@
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a29a160_92487192",
+        "filename": "core/fxcrt/fx_bidi.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T05:31:25Z",
+      "side": 1,
+      "message": "The status doesn\u0027t need to be reset before every call. Will make the consistent change in the next CL.",
+      "parentUuid": "4af009e8_ee7acb34",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b8f8f9b4_ccb2fd2b",
@@ -244,6 +286,24 @@
       "side": 1,
       "message": "In that case, you should put the new code in a separate file. Then when cleanup happens, the cleanup CL can just straight-up delete entire files since they only contain dead code. No need to think about which parts of the file to keep.",
       "parentUuid": "3a159f79_a745bdd2",
+      "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
+      "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6a73ce1_b1291289",
+        "filename": "core/fxcrt/fx_bidi.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4893529
+      },
+      "writtenOn": "2026-07-15T05:31:25Z",
+      "side": 1,
+      "message": "Will put in separate file, cfx_bidi_resolver alongside the unit tests which will just be moved (non-existent before but move as in from this patchset).",
+      "parentUuid": "aeacb0d6_c81e9a67",
       "revId": "6ef4bc1cfba89766a9626cde820e7f1aa0ff2c8c",
       "serverId": "fca2d64a-0420-3532-b200-12848c95a47b"
     },
