@@ -18,6 +18,11 @@ include("${PDFIUM_CMAKE_DIR}/PdfiumOptions.cmake")
 include("${PDFIUM_CMAKE_DIR}/PdfiumDependencies.cmake")
 include("${PDFIUM_CMAKE_DIR}/PdfiumPlatform.cmake")
 
+# OBJECT libs must be PIC when linked into libpdfium.so (set before OBJECT targets).
+if(PDFIUM_BUILD_SHARED)
+  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+endif()
+
 # Third-party in-tree OBJECT libs
 add_subdirectory(third_party)
 
