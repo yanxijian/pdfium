@@ -1,8 +1,33 @@
 # Resolve third-party dependencies for pdfium CMake MVP.
 # Codecs (AGG/lcms/openjpeg) are built from in-tree sources.
 # Infrastructure packages use find_package; Abseil/fast_float may FetchContent.
+#
+# VolitionToolchain (product path): PDFIUM_ENABLE_V8=OFF + AbseilPin 20260107.1
+# (MSVC STL /MD). V8 ON still FetchContents Abseil for libc++ ABI (non-product).
 
 include(FetchContent)
+
+set(PDFIUM_ABSEIL_PIN_PREFIX "" CACHE PATH
+  "AbseilPin install prefix (…/prefix/20260107.1). Empty = find_package / FetchContent")
+
+# Sibling default when unset (Codes/AbseilPin next to pdfium_all or pdfium).
+if(NOT PDFIUM_ABSEIL_PIN_PREFIX OR PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
+  foreach(_cand
+      "${CMAKE_SOURCE_DIR}/../AbseilPin/prefix/20260107.1"
+      "${CMAKE_SOURCE_DIR}/../../AbseilPin/prefix/20260107.1")
+    if(EXISTS "${_cand}/lib/cmake/absl/abslConfig.cmake")
+      set(PDFIUM_ABSEIL_PIN_PREFIX "${_cand}" CACHE PATH
+        "AbseilPin install prefix (…/prefix/20260107.1). Empty = find_package / FetchContent"
+        FORCE)
+      message(STATUS "PDFium: auto PDFIUM_ABSEIL_PIN_PREFIX=${PDFIUM_ABSEIL_PIN_PREFIX}")
+      break()
+    endif()
+  endforeach()
+endif()
+
+if(PDFIUM_ABSEIL_PIN_PREFIX AND NOT PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
+  list(PREPEND CMAKE_PREFIX_PATH "${PDFIUM_ABSEIL_PIN_PREFIX}")
+endif()
 
 find_package(ZLIB REQUIRED)
 find_package(JPEG REQUIRED)
@@ -16,16 +41,18 @@ if(NOT harfbuzz_FOUND)
   endif()
 endif()
 
-# Prefer CONFIG packages from vcpkg; fall back to FetchContent for Abseil.
+set(_pdfium_abseil_git_tag "20260107.1")
+
+# Prefer CONFIG packages from vcpkg / AbseilPin; fall back to FetchContent.
 # When V8 is enabled with Chromium libc++, force FetchContent Abseil so it is
-# built with the same C++ ABI as pdfium/V8 (vcpkg Abseil is MSVC STL).
+# built with the same C++ ABI as pdfium/V8 (vcpkg / AbseilPin are MSVC STL).
 if(PDFIUM_ENABLE_V8)
   set(CMAKE_DISABLE_FIND_PACKAGE_absl TRUE)
   message(STATUS "PDFIUM_ENABLE_V8: FetchContent abseil-cpp (match libc++ ABI)")
   FetchContent_Declare(
     abseil
     GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
-    GIT_TAG 20250127.0
+    GIT_TAG ${_pdfium_abseil_git_tag}
     GIT_SHALLOW TRUE
   )
   set(ABSL_PROPAGATE_CXX_STD ON CACHE BOOL "" FORCE)
@@ -35,17 +62,19 @@ if(PDFIUM_ENABLE_V8)
 else()
   find_package(absl CONFIG QUIET)
   if(NOT absl_FOUND)
-    message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp")
+    message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp ${_pdfium_abseil_git_tag}")
     FetchContent_Declare(
       abseil
       GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
-      GIT_TAG 20250127.0
+      GIT_TAG ${_pdfium_abseil_git_tag}
       GIT_SHALLOW TRUE
     )
     set(ABSL_PROPAGATE_CXX_STD ON CACHE BOOL "" FORCE)
     set(ABSL_BUILD_TESTING OFF CACHE BOOL "" FORCE)
     set(ABSL_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(abseil)
+  else()
+    message(STATUS "PDFium: using absl from package (pin/vcpkg)")
   endif()
 endif()
 

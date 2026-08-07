@@ -16,6 +16,9 @@
 #if defined(__asmjs__) || defined(__wasm__)
 // Optimized safe math instructions are incompatible with asmjs.
 #define BASE_HAS_OPTIMIZED_SAFE_MATH (0)
+#elif defined(COMPILER_MSVC) && !defined(__clang__)
+// Stock MSVC has no __builtin_*_overflow; use portable CheckedNumeric fallbacks.
+#define BASE_HAS_OPTIMIZED_SAFE_MATH (0)
 #else
 #include "core/fxcrt/numerics/safe_math_clang_gcc_impl.h"  // IWYU pragma: export
 #define BASE_HAS_OPTIMIZED_SAFE_MATH (1)

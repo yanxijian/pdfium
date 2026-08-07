@@ -27,6 +27,13 @@
 
 #if BUILDFLAG(IS_WIN)
 #include <windows.h>
+// Only undef macros that collide with PDFium method names (not Win32 call sites).
+#ifdef SetForm
+#undef SetForm
+#endif
+#ifdef GetForm
+#undef GetForm
+#endif
 #endif  // BUILDFLAG(IS_WIN)
 
 #ifdef __cplusplus

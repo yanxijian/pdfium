@@ -1,11 +1,18 @@
-# Platform compile options and system libraries for pdfium CMake MVP.
+# Platform compile options — VolitionToolchain aligned (C++20 + MSVC /MD).
 
 function(pdfium_apply_platform target)
   target_compile_features(${target} PUBLIC cxx_std_20)
 
   if(MSVC)
-    target_compile_options(${target} PRIVATE /utf-8 /W3 "/FIwindows.h")
-    target_compile_definitions(${target} PRIVATE NOMINMAX UNICODE _UNICODE _CRT_SECURE_NO_WARNINGS)
+    set_property(TARGET ${target} PROPERTY MSVC_RUNTIME_LIBRARY
+      "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+    target_compile_options(${target} PRIVATE /utf-8 /W3)
+    target_compile_definitions(${target} PRIVATE
+      NOMINMAX
+      UNICODE
+      _UNICODE
+      _CRT_SECURE_NO_WARNINGS
+    )
   else()
     target_compile_options(${target} PRIVATE
       -Wall

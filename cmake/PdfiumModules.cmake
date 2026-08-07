@@ -25,8 +25,11 @@ function(pdfium_add_object name)
   target_compile_features(${name} PRIVATE cxx_std_20)
   target_link_libraries(${name} PRIVATE ${PDFIUM_EXTERNAL_LIBS})
   if(MSVC)
-    target_compile_options(${name} PRIVATE /utf-8 "/FIwindows.h")
-    target_compile_definitions(${name} PRIVATE NOMINMAX UNICODE _UNICODE)
+    set_property(TARGET ${name} PROPERTY MSVC_RUNTIME_LIBRARY
+      "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+    # Prefer source includes over /FIwindows.h so flags match the product shell.
+    target_compile_options(${name} PRIVATE /utf-8 /W3)
+    target_compile_definitions(${name} PRIVATE NOMINMAX UNICODE _UNICODE _CRT_SECURE_NO_WARNINGS)
   endif()
 endfunction()
 

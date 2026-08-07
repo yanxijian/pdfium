@@ -1,6 +1,14 @@
 cmake_minimum_required(VERSION 3.20)
 project(pdfium VERSION 0.0.0 LANGUAGES C CXX)
 
+# VolitionToolchain: match MPS / Volition product shell (C++20, /MD).
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+if(MSVC)
+  set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+endif()
+
 set(PDFIUM_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(PDFIUM_CMAKE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${PDFIUM_CMAKE_DIR}")

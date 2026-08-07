@@ -32,6 +32,9 @@ struct TextCharPos;
 enum class BorderStyle { kSolid, kDash, kBeveled, kInset, kUnderline };
 
 #if BUILDFLAG(IS_WIN)
+// Avoid including <windows.h> here — UNICODE maps SetForm→SetFormW and breaks
+// unrelated pdfium APIs that transitively include this header.
+using HDC = struct HDC__*;
 class CFX_PSFontTracker;
 #endif
 
