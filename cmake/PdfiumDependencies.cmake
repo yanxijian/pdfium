@@ -27,6 +27,10 @@ endif()
 
 if(PDFIUM_ABSEIL_PIN_PREFIX AND NOT PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
   list(PREPEND CMAKE_PREFIX_PATH "${PDFIUM_ABSEIL_PIN_PREFIX}")
+  # vcpkg toolchain often caches absl_DIR to installed/x64-windows; pin must win.
+  set(absl_DIR "${PDFIUM_ABSEIL_PIN_PREFIX}/lib/cmake/absl" CACHE PATH
+    "Abseil CONFIG dir (forced to AbseilPin when PDFIUM_ABSEIL_PIN_PREFIX is set)" FORCE)
+  message(STATUS "PDFium: forcing absl_DIR=${absl_DIR}")
 endif()
 
 find_package(ZLIB REQUIRED)
@@ -62,6 +66,12 @@ if(PDFIUM_ENABLE_V8)
 else()
   find_package(absl CONFIG QUIET)
   if(NOT absl_FOUND)
+    if(PDFIUM_ABSEIL_PIN_PREFIX AND NOT PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
+      message(FATAL_ERROR
+        "PDFIUM_ABSEIL_PIN_PREFIX is set but find_package(absl CONFIG) failed.\n"
+        "  Prefix: ${PDFIUM_ABSEIL_PIN_PREFIX}\n"
+        "  Expected: ${PDFIUM_ABSEIL_PIN_PREFIX}/lib/cmake/absl/abslConfig.cmake")
+    endif()
     message(STATUS "absl CONFIG not found; FetchContent google/abseil-cpp ${_pdfium_abseil_git_tag}")
     FetchContent_Declare(
       abseil
@@ -74,7 +84,11 @@ else()
     set(ABSL_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(abseil)
   else()
-    message(STATUS "PDFium: using absl from package (pin/vcpkg)")
+    if(PDFIUM_ABSEIL_PIN_PREFIX AND NOT PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
+      message(STATUS "PDFium: using AbseilPin absl from ${PDFIUM_ABSEIL_PIN_PREFIX}")
+    else()
+      message(STATUS "PDFium: using absl from package (vcpkg/system)")
+    endif()
   endif()
 endif()
 
