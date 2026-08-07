@@ -126,30 +126,38 @@ if(TARGET ICU::data)
   list(APPEND PDFIUM_EXTERNAL_LIBS ICU::data)
 endif()
 
+# Font subsetting (cpdf_fontsubsetter) needs hb_subset_* from harfbuzz-subset.
+set(_pdfium_hb_subset_found FALSE)
 if(TARGET harfbuzz::harfbuzz)
   list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz::harfbuzz)
   if(TARGET harfbuzz::harfbuzz-subset)
     list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz::harfbuzz-subset)
+    set(_pdfium_hb_subset_found TRUE)
   endif()
 elseif(TARGET PkgConfig::HARFBUZZ)
   list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ)
   if(TARGET PkgConfig::HARFBUZZ_SUBSET)
     list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ_SUBSET)
-  else()
-    # Some distros only expose -lharfbuzz-subset via plain library name.
-    find_library(PDFIUM_HARFBUZZ_SUBSET_LIB NAMES harfbuzz-subset)
-    if(PDFIUM_HARFBUZZ_SUBSET_LIB)
-      list(APPEND PDFIUM_EXTERNAL_LIBS "${PDFIUM_HARFBUZZ_SUBSET_LIB}")
-    else()
-      message(FATAL_ERROR
-        "HarfBuzz found but harfbuzz-subset is missing "
-        "(needed for font subsetting). Install libharfbuzz-dev / harfbuzz.")
-    endif()
+    set(_pdfium_hb_subset_found TRUE)
   endif()
 else()
   message(FATAL_ERROR
     "HarfBuzz not found. Install harfbuzz (e.g. vcpkg install harfbuzz) "
     "or ensure pkg-config can find it.")
+endif()
+if(NOT _pdfium_hb_subset_found)
+  find_library(PDFIUM_HARFBUZZ_SUBSET_LIB
+    NAMES harfbuzz-subset libharfbuzz-subset
+    PATHS /usr/lib /usr/lib/x86_64-linux-gnu /usr/local/lib
+  )
+  if(PDFIUM_HARFBUZZ_SUBSET_LIB)
+    list(APPEND PDFIUM_EXTERNAL_LIBS "${PDFIUM_HARFBUZZ_SUBSET_LIB}")
+    message(STATUS "PDFium: harfbuzz-subset via ${PDFIUM_HARFBUZZ_SUBSET_LIB}")
+  else()
+    # Last resort: plain -l form (works when the .so is on the default linker path).
+    list(APPEND PDFIUM_EXTERNAL_LIBS harfbuzz-subset)
+    message(STATUS "PDFium: harfbuzz-subset via -lharfbuzz-subset")
+  endif()
 endif()
 
 if(TARGET absl::flat_hash_set)
