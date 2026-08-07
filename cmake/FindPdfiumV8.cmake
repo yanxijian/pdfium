@@ -9,7 +9,7 @@
 #        <root>/v8/include/...
 #        <root>/lib/v8.dll.lib + v8_libbase.dll.lib + v8_libplatform.dll.lib
 #        <root>/bin/v8.dll (+ v8_libbase.dll, v8_libplatform.dll, libc++.dll, ...)
-#   B) Legacy static monolith: lib/v8_monolith.(lib|a)
+#   B) Static monolith: lib/v8_monolith.(lib|a)
 #
 # Include path is the parent of `v8/` so `#include "v8/include/v8.h"` works.
 

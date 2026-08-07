@@ -27,7 +27,7 @@ endif()
 
 if(PDFIUM_ABSEIL_PIN_PREFIX AND NOT PDFIUM_ABSEIL_PIN_PREFIX STREQUAL "")
   list(PREPEND CMAKE_PREFIX_PATH "${PDFIUM_ABSEIL_PIN_PREFIX}")
-  # Pin absl_DIR so a previously cached package path does not take precedence.
+  # Force absl_DIR to the AbseilPin prefix ahead of any cached absl_DIR.
   set(absl_DIR "${PDFIUM_ABSEIL_PIN_PREFIX}/lib/cmake/absl" CACHE PATH
     "Abseil CONFIG dir when PDFIUM_ABSEIL_PIN_PREFIX is set" FORCE)
   message(STATUS "PDFium: absl_DIR=${absl_DIR}")
