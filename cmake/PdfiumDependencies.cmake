@@ -41,7 +41,9 @@ find_package(harfbuzz CONFIG QUIET)
 if(NOT harfbuzz_FOUND)
   find_package(PkgConfig QUIET)
   if(PkgConfig_FOUND)
+    # Core + subset (font subsetting APIs used by cpdf_fontsubsetter).
     pkg_check_modules(HARFBUZZ REQUIRED IMPORTED_TARGET harfbuzz)
+    pkg_check_modules(HARFBUZZ_SUBSET QUIET IMPORTED_TARGET harfbuzz-subset)
   endif()
 endif()
 
@@ -131,6 +133,19 @@ if(TARGET harfbuzz::harfbuzz)
   endif()
 elseif(TARGET PkgConfig::HARFBUZZ)
   list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ)
+  if(TARGET PkgConfig::HARFBUZZ_SUBSET)
+    list(APPEND PDFIUM_EXTERNAL_LIBS PkgConfig::HARFBUZZ_SUBSET)
+  else()
+    # Some distros only expose -lharfbuzz-subset via plain library name.
+    find_library(PDFIUM_HARFBUZZ_SUBSET_LIB NAMES harfbuzz-subset)
+    if(PDFIUM_HARFBUZZ_SUBSET_LIB)
+      list(APPEND PDFIUM_EXTERNAL_LIBS "${PDFIUM_HARFBUZZ_SUBSET_LIB}")
+    else()
+      message(FATAL_ERROR
+        "HarfBuzz found but harfbuzz-subset is missing "
+        "(needed for font subsetting). Install libharfbuzz-dev / harfbuzz.")
+    endif()
+  endif()
 else()
   message(FATAL_ERROR
     "HarfBuzz not found. Install harfbuzz (e.g. vcpkg install harfbuzz) "
