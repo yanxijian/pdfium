@@ -7,6 +7,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 if(MSVC)
   set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+  # Chromium/PDFium BUILD.gn suppresses these on Windows; official builds often use
+  # clang-cl, so plain MSVC surfaces truncation / control-flow noise otherwise.
+  # Directory-scoped so in-tree OBJECT libs inherit the flags (not only pdfium).
+  add_compile_options(
+    /MP
+    /wd4267 # size_t -> 32-bit int truncation
+    /wd4244 # int/double -> float truncation
+    /wd4715 # not all control paths return (MSVC misses some unreachable macros)
+    /wd4018 # signed/unsigned mismatch
+    /wd4100 # unreferenced formal parameter
+  )
 endif()
 
 set(PDFIUM_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
